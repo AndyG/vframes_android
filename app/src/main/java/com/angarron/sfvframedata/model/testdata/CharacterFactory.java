@@ -18,8 +18,6 @@ public class CharacterFactory {
     private static final int NAME_MIN_LENGTH = 2;
     private static final int NAME_MAX_LENGTH = 10;
 
-    private static final int NUM_MOVES = 30;
-
     private Random randomGenerator;
 
     public CharacterFactory() {
@@ -34,13 +32,13 @@ public class CharacterFactory {
         this.randomGenerator = randomGenerator;
     }
 
-    private SFCharacter generateCharacter() {
+    public SFCharacter generateCharacter(int numMoves) {
         int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
         String name = RandomStringUtils.random(nameLength);
 
         List<IDisplayableMove> moves = new ArrayList<>();
         MoveFactory moveFactory = new MoveFactory(randomGenerator);
-        for (int i = 0; i < NUM_MOVES; i++) {
+        for (int i = 0; i < numMoves; i++) {
             moves.add(moveFactory.generateMove());
         }
 

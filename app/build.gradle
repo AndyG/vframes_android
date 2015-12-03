@@ -30,4 +30,5 @@ dependencies {
 
     //Third party
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.google.code.gson:gson:2.3'
 }

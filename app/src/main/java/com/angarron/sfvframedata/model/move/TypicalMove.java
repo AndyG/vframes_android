@@ -1,5 +1,7 @@
 package com.angarron.sfvframedata.model.move;
 
+import com.google.gson.JsonObject;
+
 /**
  * Created by andy on 11/30/15
  */
@@ -76,5 +78,11 @@ public class TypicalMove extends BaseDisplayableMove {
         return strength;
     }
 
-    //TODO: write toJSON
+    public int getBlockstunFrames() {
+        return blockstunFrames;
+    }
+
+    public int getHitstunFrames() {
+        return hitstunFrames;
+    }
 }
