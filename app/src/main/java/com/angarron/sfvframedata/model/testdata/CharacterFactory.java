@@ -34,7 +34,7 @@ public class CharacterFactory {
 
     public SFCharacter generateCharacter(int numMoves) {
         int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
-        String name = RandomStringUtils.random(nameLength);
+        String name = RandomStringUtils.randomAlphabetic(nameLength);
 
         List<IDisplayableMove> moves = new ArrayList<>();
         MoveFactory moveFactory = new MoveFactory(randomGenerator);

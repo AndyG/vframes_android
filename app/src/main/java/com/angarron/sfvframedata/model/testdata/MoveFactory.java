@@ -45,10 +45,10 @@ public class MoveFactory {
 
     public TypicalMove generateMove() {
         int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
-        String name = RandomStringUtils.random(nameLength);
+        String name = RandomStringUtils.randomAlphabetic(nameLength);
 
         int labelLength = RandomUtil.getRandomInt(randomGenerator, LABEL_MIN_LENGTH, LABEL_MAX_LENGTH);
-        String label = RandomStringUtils.random(labelLength);
+        String label = RandomStringUtils.randomAlphabetic(labelLength);
 
         MoveType moveType = RandomUtil.getRandomEnumValue(MoveType.class, randomGenerator);
 
