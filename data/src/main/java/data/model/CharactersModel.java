@@ -1,8 +1,9 @@
-package com.angarron.sfvframedata.model;
+package data.model;
 
-import com.angarron.sfvframedata.model.character.SFCharacter;
-import com.angarron.sfvframedata.network.json.character.SFCharacterJsonAdapter;
 import com.google.gson.JsonObject;
+
+import data.json.character.SFCharacterJsonAdapter;
+import data.model.character.SFCharacter;
 
 import java.util.Map;
 

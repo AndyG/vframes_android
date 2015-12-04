@@ -1,13 +1,14 @@
-package com.angarron.sfvframedata.model.testdata;
+package com.agarron.vframestestdata.testdata;
 
-import com.angarron.sfvframedata.model.move.MoveStrength;
-import com.angarron.sfvframedata.model.move.MoveType;
-import com.angarron.sfvframedata.model.move.TypicalMove;
-import com.angarron.sfvframedata.model.testdata.util.RandomUtil;
+import com.agarron.vframestestdata.testdata.util.RandomUtil;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.Random;
+
+import data.model.move.MoveStrength;
+import data.model.move.MoveType;
+import data.model.move.TypicalMove;
 
 /**
  * Created by andy on 11/30/15

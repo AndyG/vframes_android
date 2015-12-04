@@ -1,8 +1,9 @@
-package com.angarron.sfvframedata.model.testdata;
+package com.agarron.vframestestdata.testdata;
 
-import com.angarron.sfvframedata.model.character.SFCharacter;
-import com.angarron.sfvframedata.model.move.IDisplayableMove;
-import com.angarron.sfvframedata.model.testdata.util.RandomUtil;
+import com.agarron.vframestestdata.testdata.util.RandomUtil;
+
+import data.model.character.SFCharacter;
+import data.model.move.IDisplayableMove;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

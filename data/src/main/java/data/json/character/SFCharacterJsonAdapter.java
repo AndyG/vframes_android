@@ -1,17 +1,16 @@
-package com.angarron.sfvframedata.network.json.character;
+package data.json.character;
 
-import com.angarron.sfvframedata.model.character.SFCharacter;
-import com.angarron.sfvframedata.model.move.IDisplayableMove;
-import com.angarron.sfvframedata.network.json.move.MoveJsonAdapter;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import data.json.move.MoveJsonAdapter;
+import data.model.character.SFCharacter;
+import data.model.move.IDisplayableMove;
 
 /**
  * Created by andy on 12/2/15

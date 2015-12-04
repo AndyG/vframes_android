@@ -1,6 +1,4 @@
-package com.angarron.sfvframedata.model.move;
-
-import com.google.gson.JsonObject;
+package data.model.move;
 
 /**
  * Created by andy on 11/30/15

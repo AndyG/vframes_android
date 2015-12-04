@@ -1,12 +1,13 @@
-package com.angarron.sfvframedata.network.json.move;
+package data.json.move;
 
-import com.angarron.sfvframedata.model.move.IDisplayableMove;
-import com.angarron.sfvframedata.model.move.MoveStrength;
-import com.angarron.sfvframedata.model.move.MoveType;
-import com.angarron.sfvframedata.model.move.TypicalMove;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
+
+import data.model.move.IDisplayableMove;
+import data.model.move.MoveStrength;
+import data.model.move.MoveType;
+import data.model.move.TypicalMove;
 
 /**
  * Created by andy on 12/2/15
@@ -17,7 +18,7 @@ public class MoveJsonAdapter {
         JsonObject jsonObject = new JsonObject();
 
         jsonObject.add("name", new JsonPrimitive(move.getName()));
-        jsonObject.add("label", new JsonPrimitive(move.getName()));
+        jsonObject.add("label", new JsonPrimitive(move.getLabel()));
 
         MoveType type = move.getMoveType();
         jsonObject.add("type", new JsonPrimitive(type.toString()));
