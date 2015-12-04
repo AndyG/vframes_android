@@ -1,6 +1,6 @@
-package com.agarron.vframestestdata.testdata;
+package testdata.testdata;
 
-import com.agarron.vframestestdata.testdata.util.RandomUtil;
+import testdata.testdata.util.RandomUtil;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

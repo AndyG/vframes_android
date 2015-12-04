@@ -1,4 +1,4 @@
-package com.agarron.vframestestdata.testdata.util;
+package testdata.testdata.util;
 
 import java.util.Random;
 
