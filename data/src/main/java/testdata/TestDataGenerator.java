@@ -9,6 +9,7 @@ import data.model.character.SFCharacter;
 
 public class TestDataGenerator {
 
+    //TODO: make this accept parameters and write to file instead of print to console
     public static void main(String[] args) {
         JsonObject dataJson = generateRandomData();
         System.out.println(dataJson.toString());
