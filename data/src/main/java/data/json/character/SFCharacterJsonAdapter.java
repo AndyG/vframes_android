@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import data.json.move.MoveJsonAdapter;
+import data.model.*;
 import data.model.character.SFCharacter;
 import data.model.move.IDisplayableMove;
 
@@ -28,7 +29,8 @@ public class SFCharacterJsonAdapter {
     }
 
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
-        String characterName = characterJson.get("characterName").getAsString();
+        String characterNameStr = characterJson.get("characterName").getAsString();
+        CharacterName characterName = CharacterName.fromString(characterNameStr);
 
         List<IDisplayableMove> movesList = new ArrayList<>();
         JsonArray movesJson = characterJson.getAsJsonArray("moves");
@@ -36,6 +38,6 @@ public class SFCharacterJsonAdapter {
             movesList.add(MoveJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
         }
 
-        return new SFCharacter(characterName, movesList);
+        return new SFCharacter(movesList);
     }
 }

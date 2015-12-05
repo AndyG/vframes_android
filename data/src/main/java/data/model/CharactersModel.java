@@ -1,10 +1,7 @@
 package data.model;
 
-import com.google.gson.JsonObject;
-
 import java.util.Map;
 
-import data.json.character.SFCharacterJsonAdapter;
 import data.model.character.SFCharacter;
 
 /**
@@ -12,26 +9,23 @@ import data.model.character.SFCharacter;
  */
 public class CharactersModel {
 
-    public Map<String, SFCharacter> characters;
+    public Map<CharacterName, SFCharacter> characters;
 
     //Map of character name to character data representation.
-    public CharactersModel(Map<String, SFCharacter> characters) {
+    public CharactersModel(Map<CharacterName, SFCharacter> characters) {
+        assertAllCharactersPresent(characters);
         this.characters = characters;
     }
 
-    public Map<String, SFCharacter> getCharacters() {
+    public Map<CharacterName, SFCharacter> getCharacters() {
         return characters;
     }
 
-    public JsonObject toJson() {
-        JsonObject jsonObject = new JsonObject();
-
-        for (Map.Entry<String, SFCharacter> characterEntry : characters.entrySet()) {
-            JsonObject characterJson = SFCharacterJsonAdapter.CharacterToJson(characterEntry.getValue());
-            jsonObject.add(characterEntry.getKey(), characterJson);
+    private void assertAllCharactersPresent(Map<CharacterName, SFCharacter> testCharacterMap) {
+        for (CharacterName characterName : CharacterName.values()) {
+            if (!testCharacterMap.containsKey(characterName)) {
+                throw new IllegalArgumentException("characters map must contain all characters. missing: " + characterName);
+            }
         }
-
-        return jsonObject;
     }
-
 }

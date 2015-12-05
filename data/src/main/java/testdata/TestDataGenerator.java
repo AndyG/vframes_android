@@ -9,7 +9,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import data.model.CharactersModel;
+import data.json.model.CharactersModelJsonAdapter;
+import data.model.*;
 import data.model.character.SFCharacter;
 import testdata.testdata.CharacterFactory;
 
@@ -18,7 +19,7 @@ public class TestDataGenerator {
     //TODO: make this accept parameters and write to file instead of print to console
     public static void main(String[] args) {
         CharactersModel charactersModel = generateRandomData();
-        JsonObject modelJson = charactersModel.toJson();
+        JsonObject modelJson = CharactersModelJsonAdapter.CharactersModelToJson(charactersModel);
 
         if (args.length != 0) {
             String fileName = args[0];
@@ -31,12 +32,12 @@ public class TestDataGenerator {
     }
 
     private static CharactersModel generateRandomData() {
-        Map<String, SFCharacter> charactersMap = new HashMap<>();
+        Map<CharacterName, SFCharacter> charactersMap = new HashMap<>();
 
         CharacterFactory characterFactory = new CharacterFactory();
-        for (int i = 0; i < 16; i++) {
+        for (CharacterName name : CharacterName.values()) {
             SFCharacter character = characterFactory.generateCharacter(5);
-            charactersMap.put(character.getName(), character);
+            charactersMap.put(name, character);
         }
 
         return new CharactersModel(charactersMap);

@@ -27,6 +27,17 @@ public class MoveJsonAdapter {
         return jsonObject;
     }
 
+    public static IDisplayableMove JsonToMove(JsonObject moveJson) {
+        MoveType moveType = MoveType.fromString(moveJson.get("type").getAsString());
+
+        switch (moveType) {
+            case TYPE_1:
+                return constructTypicalMove(moveJson);
+            default:
+                throw new RuntimeException("Invalid move type");
+        }
+    }
+
     private static JsonElement constructMoveDataJSON(IDisplayableMove move) {
         MoveType type = move.getMoveType();
 
@@ -49,17 +60,6 @@ public class MoveJsonAdapter {
 
             default:
                 throw new RuntimeException("Invalid move type: " + type.toString());
-        }
-    }
-
-    public static IDisplayableMove JsonToMove(JsonObject moveJson) {
-        MoveType moveType = MoveType.fromString(moveJson.get("type").getAsString());
-
-        switch (moveType) {
-            case TYPE_1:
-                return constructTypicalMove(moveJson);
-            default:
-                throw new RuntimeException("Invalid move type");
         }
     }
 

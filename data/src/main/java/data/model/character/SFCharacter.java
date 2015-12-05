@@ -1,24 +1,18 @@
 package data.model.character;
 
 
-import data.model.move.IDisplayableMove;
-
 import java.util.List;
+
+import data.model.move.IDisplayableMove;
 
 /**
  * Created by andy on 11/30/15
  */
 public class SFCharacter {
-    private String name;
     private List<IDisplayableMove> moves;
 
-    public SFCharacter(String name, List<IDisplayableMove> moves) {
-        this.name = name;
+    public SFCharacter(List<IDisplayableMove> moves) {
         this.moves = moves;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public List<IDisplayableMove> getMoves() {
