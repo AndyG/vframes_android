@@ -19,6 +19,7 @@ public enum CharacterName {
         return name;
     }
 
+    //TODO: find out if we need this
     public static CharacterName fromString(String characterNameStr) {
         for (CharacterName characterName : values()) {
             if (characterName.name.equals(characterNameStr)) {
