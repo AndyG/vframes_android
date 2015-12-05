@@ -3,7 +3,6 @@ package data.json.character;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,23 +17,18 @@ import data.model.move.IDisplayableMove;
 public class SFCharacterJsonAdapter {
 
     public static JsonObject CharacterToJson(SFCharacter character) {
-        JsonObject characterJson = new JsonObject();
-
-        characterJson.add("name", new JsonPrimitive(character.getName()));
-
         JsonArray movesJson = new JsonArray();
-
         for (IDisplayableMove move : character.getMoves()) {
             movesJson.add(MoveJsonAdapter.MoveToJson(move));
         }
 
+        JsonObject characterJson = new JsonObject();
         characterJson.add("moves", movesJson);
-
         return characterJson;
     }
 
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
-        String characterName = characterJson.get("name").getAsString();
+        String characterName = characterJson.get("characterName").getAsString();
 
         List<IDisplayableMove> movesList = new ArrayList<>();
         JsonArray movesJson = characterJson.getAsJsonArray("moves");
