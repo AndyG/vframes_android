@@ -6,8 +6,10 @@ import com.google.gson.JsonObject;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
-import data.json.character.SFCharacterJsonAdapter;
+import data.model.CharactersModel;
 import data.model.character.SFCharacter;
 import testdata.testdata.CharacterFactory;
 
@@ -15,14 +17,29 @@ public class TestDataGenerator {
 
     //TODO: make this accept parameters and write to file instead of print to console
     public static void main(String[] args) {
-        JsonObject dataJson = generateRandomData();
+        CharactersModel charactersModel = generateRandomData();
+        JsonObject modelJson = charactersModel.toJson();
 
         if (args.length != 0) {
             String fileName = args[0];
-            writeJsonToFile(dataJson, fileName);
+            writeJsonToFile(modelJson, fileName);
+        } else {
+            System.out.println("No file specified in args.");
         }
 
-        System.out.println(dataJson.toString());
+        System.out.println(modelJson.toString());
+    }
+
+    private static CharactersModel generateRandomData() {
+        Map<String, SFCharacter> charactersMap = new HashMap<>();
+
+        CharacterFactory characterFactory = new CharacterFactory();
+        for (int i = 0; i < 16; i++) {
+            SFCharacter character = characterFactory.generateCharacter(5);
+            charactersMap.put(character.getName(), character);
+        }
+
+        return new CharactersModel(charactersMap);
     }
 
     private static void writeJsonToFile(JsonObject dataJson, String fileName) {
@@ -37,18 +54,4 @@ public class TestDataGenerator {
         }
     }
 
-    private static JsonObject generateRandomData() {
-        JsonObject charactersJsonObject = new JsonObject();
-
-        CharacterFactory characterFactory = new CharacterFactory();
-        for (int i = 0; i < 16; i++) {
-            SFCharacter character = characterFactory.generateCharacter(5);
-            JsonObject characterJson = SFCharacterJsonAdapter.CharacterToJson(character);
-            charactersJsonObject.add(character.getName(), characterJson);
-        }
-
-        JsonObject dataJson = new JsonObject();
-        dataJson.add("characters", charactersJsonObject);
-        return dataJson;
-    }
 }

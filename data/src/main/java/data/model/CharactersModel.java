@@ -2,10 +2,10 @@ package data.model;
 
 import com.google.gson.JsonObject;
 
+import java.util.Map;
+
 import data.json.character.SFCharacterJsonAdapter;
 import data.model.character.SFCharacter;
-
-import java.util.Map;
 
 /**
  * Created by andy on 12/2/15
@@ -14,6 +14,7 @@ public class CharactersModel {
 
     public Map<String, SFCharacter> characters;
 
+    //Map of character name to character data representation.
     public CharactersModel(Map<String, SFCharacter> characters) {
         this.characters = characters;
     }
