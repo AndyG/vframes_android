@@ -16,7 +16,7 @@ import testdata.testdata.CharacterFactory;
 
 public class TestDataGenerator {
 
-    //TODO: make this accept parameters and write to file instead of print to console
+    //TODO: use a real parameter parser and consolidate this with TestDataReader
     public static void main(String[] args) {
         CharactersModel charactersModel = generateRandomData();
         JsonObject modelJson = CharactersModelJsonAdapter.CharactersModelToJson(charactersModel);
