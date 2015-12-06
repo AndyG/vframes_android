@@ -1,0 +1,476 @@
+{
+  "nash": {
+    "moves": [
+      {
+        "name": "KjTKSnLW",
+        "label": "LULeA",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 16,
+          "activeFrames": 28,
+          "recoveryFrames": 46,
+          "blockstunFrames": 70,
+          "hitstunFrames": 79,
+          "damage": 692,
+          "stun": 1961,
+          "strength": "heavy"
+        }
+      },
+      {
+        "name": "duJPX",
+        "label": "oQy",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 61,
+          "activeFrames": 37,
+          "recoveryFrames": 85,
+          "blockstunFrames": 41,
+          "hitstunFrames": 56,
+          "damage": 1429,
+          "stun": 1961,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "CcEQMZlHe",
+        "label": "HFQggzXnkp",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 68,
+          "activeFrames": 17,
+          "recoveryFrames": 33,
+          "blockstunFrames": 66,
+          "hitstunFrames": 40,
+          "damage": 1118,
+          "stun": 1691,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "CqGvhtyaiGyTpk",
+        "label": "flnd",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 75,
+          "activeFrames": 93,
+          "recoveryFrames": 60,
+          "blockstunFrames": 37,
+          "hitstunFrames": 82,
+          "damage": 1638,
+          "stun": 1861,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "QATdUs",
+        "label": "JWM",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 68,
+          "activeFrames": 69,
+          "recoveryFrames": 95,
+          "blockstunFrames": 44,
+          "hitstunFrames": 20,
+          "damage": 1143,
+          "stun": 1558,
+          "strength": "medium"
+        }
+      }
+    ]
+  },
+  "birdie": {
+    "moves": [
+      {
+        "name": "fVJmPKtB",
+        "label": "GpJWeEPU",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 82,
+          "activeFrames": 74,
+          "recoveryFrames": 85,
+          "blockstunFrames": 30,
+          "hitstunFrames": 7,
+          "damage": 829,
+          "stun": 184,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "yVMITUYiZwyoyxU",
+        "label": "SxbFAvqZb",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 48,
+          "activeFrames": 30,
+          "recoveryFrames": 29,
+          "blockstunFrames": 73,
+          "hitstunFrames": 23,
+          "damage": 79,
+          "stun": 1140,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "KVSGcYZEh",
+        "label": "CQFLIvFBC",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 70,
+          "activeFrames": 30,
+          "recoveryFrames": 61,
+          "blockstunFrames": 77,
+          "hitstunFrames": 14,
+          "damage": 1158,
+          "stun": 778,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "nwyfYm",
+        "label": "JZhJ",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 27,
+          "activeFrames": 15,
+          "recoveryFrames": 59,
+          "blockstunFrames": 79,
+          "hitstunFrames": 35,
+          "damage": 475,
+          "stun": 597,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "kYQJzlYoIJq",
+        "label": "rYXHIj",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 62,
+          "activeFrames": 10,
+          "recoveryFrames": 9,
+          "blockstunFrames": 7,
+          "hitstunFrames": 60,
+          "damage": 1919,
+          "stun": 1332,
+          "strength": "medium"
+        }
+      }
+    ]
+  },
+  "ryu": {
+    "moves": [
+      {
+        "name": "nrdtYQX",
+        "label": "CmAXB",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 88,
+          "activeFrames": 29,
+          "recoveryFrames": 55,
+          "blockstunFrames": 17,
+          "hitstunFrames": 14,
+          "damage": 73,
+          "stun": 1698,
+          "strength": "heavy"
+        }
+      },
+      {
+        "name": "DLDoGzsdQPwAj",
+        "label": "vFnsmJ",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 6,
+          "activeFrames": 83,
+          "recoveryFrames": 42,
+          "blockstunFrames": 18,
+          "hitstunFrames": 21,
+          "damage": 250,
+          "stun": 190,
+          "strength": "heavy"
+        }
+      },
+      {
+        "name": "azYBhYUyEO",
+        "label": "fSaeFB",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 11,
+          "activeFrames": 12,
+          "recoveryFrames": 29,
+          "blockstunFrames": 40,
+          "hitstunFrames": 86,
+          "damage": 1746,
+          "stun": 509,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "OWTDeQNWjzjI",
+        "label": "Ttl",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 85,
+          "activeFrames": 33,
+          "recoveryFrames": 58,
+          "blockstunFrames": 28,
+          "hitstunFrames": 41,
+          "damage": 1842,
+          "stun": 363,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "FfOKrxJM",
+        "label": "BkJUNuP",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 71,
+          "activeFrames": 18,
+          "recoveryFrames": 15,
+          "blockstunFrames": 56,
+          "hitstunFrames": 97,
+          "damage": 666,
+          "stun": 845,
+          "strength": "heavy"
+        }
+      }
+    ]
+  },
+  "dictator": {
+    "moves": [
+      {
+        "name": "EIIonPzaIk",
+        "label": "dPOQuLHaf",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 75,
+          "activeFrames": 65,
+          "recoveryFrames": 77,
+          "blockstunFrames": 55,
+          "hitstunFrames": 41,
+          "damage": 567,
+          "stun": 1955,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "sqGTuckjZx",
+        "label": "jKuA",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 87,
+          "activeFrames": 71,
+          "recoveryFrames": 42,
+          "blockstunFrames": 32,
+          "hitstunFrames": 42,
+          "damage": 987,
+          "stun": 1427,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "EpUPhO",
+        "label": "rmtcYEoh",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 38,
+          "activeFrames": 28,
+          "recoveryFrames": 70,
+          "blockstunFrames": 34,
+          "hitstunFrames": 27,
+          "damage": 965,
+          "stun": 153,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "BFtdoMMTTzDoQ",
+        "label": "bqaLRYvB",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 92,
+          "activeFrames": 47,
+          "recoveryFrames": 67,
+          "blockstunFrames": 71,
+          "hitstunFrames": 58,
+          "damage": 1298,
+          "stun": 1047,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "DBiStcIkiMDprpW",
+        "label": "AzTxCW",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 90,
+          "activeFrames": 44,
+          "recoveryFrames": 99,
+          "blockstunFrames": 46,
+          "hitstunFrames": 41,
+          "damage": 912,
+          "stun": 994,
+          "strength": "medium"
+        }
+      }
+    ]
+  },
+  "cammy": {
+    "moves": [
+      {
+        "name": "qohrXNAjQRAZP",
+        "label": "SZk",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 54,
+          "activeFrames": 91,
+          "recoveryFrames": 32,
+          "blockstunFrames": 9,
+          "hitstunFrames": 1,
+          "damage": 827,
+          "stun": 1169,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "osYHSxn",
+        "label": "vLSYAgztO",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 56,
+          "activeFrames": 67,
+          "recoveryFrames": 39,
+          "blockstunFrames": 79,
+          "hitstunFrames": 41,
+          "damage": 1743,
+          "stun": 165,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "kVhfEurrQTZPE",
+        "label": "PovainlV",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 12,
+          "activeFrames": 87,
+          "recoveryFrames": 39,
+          "blockstunFrames": 49,
+          "hitstunFrames": 91,
+          "damage": 461,
+          "stun": 1215,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "DrNCSMRDhuZPi",
+        "label": "TNyM",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 11,
+          "activeFrames": 4,
+          "recoveryFrames": 96,
+          "blockstunFrames": 86,
+          "hitstunFrames": 7,
+          "damage": 1779,
+          "stun": 1274,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "GTuOgc",
+        "label": "dcKAYq",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 77,
+          "activeFrames": 92,
+          "recoveryFrames": 100,
+          "blockstunFrames": 88,
+          "hitstunFrames": 18,
+          "damage": 933,
+          "stun": 1122,
+          "strength": "medium"
+        }
+      }
+    ]
+  },
+  "chun": {
+    "moves": [
+      {
+        "name": "ZVfOvKDIDtwc",
+        "label": "JkpRX",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 97,
+          "activeFrames": 62,
+          "recoveryFrames": 29,
+          "blockstunFrames": 53,
+          "hitstunFrames": 44,
+          "damage": 831,
+          "stun": 691,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "QOXWWirMQfky",
+        "label": "LqJGeiJD",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 50,
+          "activeFrames": 61,
+          "recoveryFrames": 70,
+          "blockstunFrames": 91,
+          "hitstunFrames": 70,
+          "damage": 805,
+          "stun": 1482,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "MjKczJiWtE",
+        "label": "YGejcXfAZ",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 27,
+          "activeFrames": 64,
+          "recoveryFrames": 47,
+          "blockstunFrames": 80,
+          "hitstunFrames": 43,
+          "damage": 1562,
+          "stun": 51,
+          "strength": "medium"
+        }
+      },
+      {
+        "name": "ptjga",
+        "label": "KhfIrGtMw",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 96,
+          "activeFrames": 98,
+          "recoveryFrames": 61,
+          "blockstunFrames": 87,
+          "hitstunFrames": 38,
+          "damage": 1609,
+          "stun": 1864,
+          "strength": "light"
+        }
+      },
+      {
+        "name": "tVqmwPylGQxNw",
+        "label": "iIx",
+        "type": "type_1",
+        "data": {
+          "startupFrames": 3,
+          "activeFrames": 86,
+          "recoveryFrames": 96,
+          "blockstunFrames": 27,
+          "hitstunFrames": 95,
+          "damage": 189,
+          "stun": 1465,
+          "strength": "medium"
+        }
+      }
+    ]
+  }
+}

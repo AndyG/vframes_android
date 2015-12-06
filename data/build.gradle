@@ -4,6 +4,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //Commons
+    compile 'org.apache.commons:commons-io:1.3.2'
     compile 'org.apache.commons:commons-lang3:3.0'
 
     //Third party

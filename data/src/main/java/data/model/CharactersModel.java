@@ -7,7 +7,7 @@ import data.model.character.SFCharacter;
 /**
  * Created by andy on 12/2/15
  */
-public class CharactersModel {
+public class CharactersModel implements ICharactersModel {
 
     public Map<CharacterName, SFCharacter> characters;
 
@@ -17,6 +17,7 @@ public class CharactersModel {
         this.characters = characters;
     }
 
+    @Override
     public Map<CharacterName, SFCharacter> getCharacters() {
         return characters;
     }

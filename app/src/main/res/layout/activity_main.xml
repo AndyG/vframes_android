@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <Button
-        android:id="@+id/generateRandomDataButton"
-        android:text="Generate Data"
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="home screen"/>
 
 </LinearLayout>
