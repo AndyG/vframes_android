@@ -2,10 +2,18 @@ package com.angarron.sfvframedata.application;
 
 import android.app.Application;
 
+import com.angarron.sfvframedata.BuildConfig;
 import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.data.IDataSource;
 import com.angarron.sfvframedata.data.IDataModel;
+import com.angarron.sfvframedata.data.NetworkFallbackDataSource;
 import com.angarron.sfvframedata.data.TestDataSource;
+import com.angarron.sfvframedata.network.VFramesRESTApi;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.logging.HttpLoggingInterceptor;
+
+import retrofit.GsonConverterFactory;
+import retrofit.Retrofit;
 
 public class VFramesApplication extends Application {
 
@@ -22,7 +30,8 @@ public class VFramesApplication extends Application {
 
     private void init() {
         //TODO: use real data source for real app
-        dataSource = new TestDataSource(getResources(), R.raw.test_data);
+        VFramesRESTApi restApi = getRestApi();
+        dataSource = new NetworkFallbackDataSource(restApi);
     }
 
     public IDataSource getDataSource() {
@@ -35,5 +44,21 @@ public class VFramesApplication extends Application {
 
     public void setDataModel(IDataModel dataModel) {
         this.dataModel = dataModel;
+    }
+
+    private VFramesRESTApi getRestApi() {
+        OkHttpClient client = new OkHttpClient();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        HttpLoggingInterceptor.Level logLevel = BuildConfig.DEBUG ? HttpLoggingInterceptor.Level.BODY : HttpLoggingInterceptor.Level.NONE;
+        interceptor.setLevel(logLevel);
+        client.interceptors().add(interceptor);
+
+        Retrofit.Builder builder = new Retrofit.Builder()
+            .baseUrl("http://www.agarron.com")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+        return retrofit.create(VFramesRESTApi.class);
     }
 }
