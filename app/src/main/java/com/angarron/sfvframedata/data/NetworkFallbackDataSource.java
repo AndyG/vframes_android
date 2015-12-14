@@ -6,8 +6,8 @@ import com.angarron.sfvframedata.application.VFramesApplication;
 import com.angarron.sfvframedata.network.VFramesRESTApi;
 import com.google.gson.JsonObject;
 
-import data.json.model.CharactersModelJsonAdapter;
-import data.model.CharactersModel;
+import data.json.model.VFramesDataJsonAdapter;
+import data.model.IDataModel;
 import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;
@@ -30,9 +30,9 @@ public class NetworkFallbackDataSource implements IDataSource {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                CharactersModel charactersModel = CharactersModelJsonAdapter.jsonToCharactersModel(response.body());
+                IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(response.body());
                 Log.d(VFramesApplication.APP_LOGGING_TAG, "read characters");
-                listener.onDataReceived(new DataModel(charactersModel));
+                listener.onDataReceived(dataModel);
             }
 
             @Override

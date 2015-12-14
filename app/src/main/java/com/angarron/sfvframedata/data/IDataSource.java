@@ -1,5 +1,7 @@
 package com.angarron.sfvframedata.data;
 
+import data.model.IDataModel;
+
 public interface IDataSource {
 
     enum FetchFailureReason {

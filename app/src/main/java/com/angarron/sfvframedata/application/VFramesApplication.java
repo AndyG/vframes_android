@@ -5,13 +5,13 @@ import android.app.Application;
 import com.angarron.sfvframedata.BuildConfig;
 import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.data.IDataSource;
-import com.angarron.sfvframedata.data.IDataModel;
 import com.angarron.sfvframedata.data.NetworkFallbackDataSource;
 import com.angarron.sfvframedata.data.TestDataSource;
 import com.angarron.sfvframedata.network.VFramesRESTApi;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.logging.HttpLoggingInterceptor;
 
+import data.model.IDataModel;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 
@@ -25,13 +25,17 @@ public class VFramesApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        init();
+        init(true);
     }
 
-    private void init() {
+    private void init(boolean useRealData) {
         //TODO: use real data source for real app
-        VFramesRESTApi restApi = getRestApi();
-        dataSource = new NetworkFallbackDataSource(restApi);
+        if (useRealData) {
+            VFramesRESTApi restApi = getRestApi();
+            dataSource = new NetworkFallbackDataSource(restApi);
+        } else {
+            dataSource = new TestDataSource(getResources(), R.raw.test_data);
+        }
     }
 
     public IDataSource getDataSource() {

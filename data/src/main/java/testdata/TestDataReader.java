@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import data.json.model.CharactersModelJsonAdapter;
-import data.model.CharactersModel;
+import data.json.model.VFramesDataJsonAdapter;
+import data.model.IDataModel;
 
 public class TestDataReader {
 
@@ -24,8 +24,9 @@ public class TestDataReader {
         JsonParser parser = new JsonParser();
         JsonObject jsonData = parser.parse(fileData).getAsJsonObject();
 
-        CharactersModel charactersModel = CharactersModelJsonAdapter.jsonToCharactersModel(jsonData);
-        System.out.println("success loading charactersModel with " + charactersModel.getCharacters().size() + " characters");
+        IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(jsonData);
+        System.out.println("success loading data model version: " + dataModel.getVersion().toString());
+        System.out.println("loaded " + dataModel.getCharactersModel().getCharacters().size() + " characters.");
     }
 
     private static String readFileToString(String fileName)

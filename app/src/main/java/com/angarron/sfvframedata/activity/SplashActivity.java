@@ -8,8 +8,9 @@ import android.widget.Toast;
 
 import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.application.VFramesApplication;
-import com.angarron.sfvframedata.data.IDataModel;
 import com.angarron.sfvframedata.data.IDataSource;
+
+import data.model.IDataModel;
 
 //This activity is meant to be shown while loading data either
 //over the network or from shared preferences.

@@ -9,8 +9,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import data.json.model.CharactersModelJsonAdapter;
-import data.model.*;
+import data.json.model.VFramesDataJsonAdapter;
+import data.model.CharacterName;
+import data.model.CharactersModel;
+import data.model.DataModel;
+import data.model.DataVersion;
+import data.model.ICharactersModel;
+import data.model.IDataModel;
 import data.model.character.SFCharacter;
 import testdata.testdata.CharacterFactory;
 
@@ -18,8 +23,10 @@ public class TestDataGenerator {
 
     //TODO: use a real parameter parser and consolidate this with TestDataReader
     public static void main(String[] args) {
-        CharactersModel charactersModel = generateRandomData();
-        JsonObject modelJson = CharactersModelJsonAdapter.CharactersModelToJson(charactersModel);
+        ICharactersModel charactersModel = generateRandomCharacters();
+        IDataModel.IDataVersion dataVersion = generateRandomVersion();
+        IDataModel dataModel = new DataModel(charactersModel, dataVersion);
+        JsonObject modelJson = VFramesDataJsonAdapter.dataModelToJson(dataModel);
 
         if (args.length != 0) {
             String fileName = args[0];
@@ -31,7 +38,12 @@ public class TestDataGenerator {
         System.out.println(modelJson.toString());
     }
 
-    private static CharactersModel generateRandomData() {
+    private static IDataModel.IDataVersion generateRandomVersion() {
+        //TODO: actually generate random version, no real reason to yet though
+        return new DataVersion(0, 1);
+    }
+
+    private static ICharactersModel generateRandomCharacters() {
         Map<CharacterName, SFCharacter> charactersMap = new HashMap<>();
 
         CharacterFactory characterFactory = new CharacterFactory();

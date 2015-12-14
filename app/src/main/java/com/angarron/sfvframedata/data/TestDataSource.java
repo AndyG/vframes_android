@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 
-import data.json.model.CharactersModelJsonAdapter;
-import data.model.ICharactersModel;
+import data.json.model.VFramesDataJsonAdapter;
+import data.model.IDataModel;
 
 //This implementation of IVFramesDataSource uses test data
 //which is packaged with the app.
@@ -41,9 +41,7 @@ public class TestDataSource implements IDataSource {
 
         JsonParser parser = new JsonParser();
         JsonObject jsonData = parser.parse(dataString).getAsJsonObject();
-        ICharactersModel charactersModel = CharactersModelJsonAdapter.jsonToCharactersModel(jsonData);
-        listener.onDataReceived(new DataModel(charactersModel));
+        IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(jsonData);
+        listener.onDataReceived(dataModel);
     }
-
-
 }
