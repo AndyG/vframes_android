@@ -6,6 +6,6 @@ import retrofit.Call;
 import retrofit.http.GET;
 
 public interface VFramesRESTApi {
-    @GET("/res/vframes_data.json")
+    @GET("/res/vframes/vframes_data.json")
     Call<JsonObject> getData();
 }

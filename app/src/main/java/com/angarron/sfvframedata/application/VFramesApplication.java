@@ -25,7 +25,7 @@ public class VFramesApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        init(true);
+        init(false);
     }
 
     private void init(boolean useRealData) {

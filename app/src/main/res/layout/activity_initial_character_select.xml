@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/GridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        app:rowCount="8"
+        app:columnCount="2"
+         >
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            app:layout_rowWeight="1"
+            app:layout_gravity="center"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardBackgroundColor="#0000FF"
+            card_view:cardElevation="3dp">
+
+            <TextView
+                android:id="@+id/info_text"
+                android:text="Ryu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp"
+            app:layout_rowWeight="1"
+            app:layout_gravity="center"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardBackgroundColor="#0000FF"
+            card_view:cardElevation="3dp">
+
+            <TextView
+                android:id="@+id/info_text2"
+                android:text="Chun-Li"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+
+    </android.support.v7.widget.GridLayout>
+</ScrollView>
