@@ -11,7 +11,7 @@
         <android.support.v7.widget.GridLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/GridLayout1"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:columnCount="2">
 
@@ -20,7 +20,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#ccffff"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -35,7 +36,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#0066ff"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -50,7 +52,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#ccff66"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -65,7 +68,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#800000"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -80,7 +84,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#009900"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -95,7 +100,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#1A1A1A"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -110,7 +116,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#cc0000"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -125,7 +132,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#cc6600"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -140,7 +148,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#3333cc"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -155,7 +164,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#0099ff"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -170,7 +180,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#999966"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -185,7 +196,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#ffff66"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -200,7 +212,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#ffcc99"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -215,7 +228,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#00ff00"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -230,7 +244,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#996633"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
@@ -245,7 +260,8 @@
                 android:layout_height="@dimen/character_card_height"
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardBackgroundColor="#330066"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
