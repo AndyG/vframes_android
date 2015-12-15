@@ -13,7 +13,7 @@
             android:id="@+id/GridLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:columnCount="2">
+            app:columnCount="@integer/num_character_card_columns">
 
             <android.support.v7.widget.CardView
                 android:layout_width="0dp"
