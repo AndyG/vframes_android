@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.activity;
+package com.angarron.sfvframedata.ui.activity;
 
 import android.app.Activity;
 import android.content.Intent;
