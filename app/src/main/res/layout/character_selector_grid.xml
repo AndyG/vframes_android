@@ -32,7 +32,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/ryu_card"/>
 
                     <TextView
                         android:text="@string/ryu_name"
@@ -65,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/chun_card"/>
 
                     <TextView
                         android:text="@string/chun_name"
@@ -98,7 +98,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/cammy_card"/>
 
                     <TextView
                         android:text="@string/cammy_name"
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/birdie_card"/>
 
                     <TextView
                         android:text="@string/birdie_name"
@@ -164,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/dictator_card"/>
 
                     <TextView
                         android:text="@string/dictator_name"
@@ -197,7 +197,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/nash_card"/>
 
                     <TextView
                         android:text="@string/nash_name"
@@ -230,7 +230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/mika_card"/>
 
                     <TextView
                         android:text="@string/mika_name"
@@ -263,7 +263,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/necalli_card"/>
 
                     <TextView
                         android:text="@string/necalli_name"
@@ -296,7 +296,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/claw_card"/>
 
                     <TextView
                         android:text="@string/claw_name"
@@ -362,7 +362,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/karin_card"/>
 
                     <TextView
                         android:text="@string/karin_name"
@@ -395,7 +395,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/zangief_card"/>
 
                     <TextView
                         android:text="@string/zangief_name"
@@ -428,7 +428,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/ken_card"/>
 
                     <TextView
                         android:text="@string/ken_name"
@@ -461,7 +461,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/laura_card"/>
 
                     <TextView
                         android:text="@string/laura_name"
@@ -494,7 +494,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/dhalsim_card"/>
 
                     <TextView
                         android:text="@string/dhalsim_name"
@@ -527,7 +527,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/fang_card"/>
 
                     <TextView
                         android:text="@string/fang_name"
