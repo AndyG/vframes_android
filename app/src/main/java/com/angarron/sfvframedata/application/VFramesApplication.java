@@ -32,7 +32,7 @@ public class VFramesApplication extends Application {
         //TODO: use real data source for real app
         if (useRealData) {
             VFramesRESTApi restApi = getRestApi();
-            dataSource = new NetworkFallbackDataSource(restApi);
+            dataSource = new NetworkFallbackDataSource(restApi, getResources(), R.raw.test_data);
         } else {
             dataSource = new TestDataSource(getResources(), R.raw.test_data);
         }
