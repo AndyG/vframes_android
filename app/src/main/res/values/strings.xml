@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">VFrames</string>
     <string name="action_settings">Settings</string>
+
+    <!--Character Names-->
+    <string name="ryu_name">RYU</string>
+    <string name="chun_name">CHUN-LI</string>
+    <string name="cammy_name">CAMMY</string>
+    <string name="birdie_name">BIRDIE</string>
+    <string name="dictator_name">M. BISON</string>
+    <string name="nash_name">NASH</string>
+    <string name="mika_name">R. MIKA</string>
+    <string name="necalli_name">NECALLI</string>
+    <string name="claw_name">VEGA</string>
+    <string name="rashid_name">RASHID</string>
+    <string name="karin_name">KARIN</string>
+    <string name="ken_name">KEN</string>
+    <string name="laura_name">LAURA</string>
+    <string name="zangief_name">ZANGIEF</string>
+    <string name="dhalsim_name">DHALSIM</string>
+    <string name="fang_name">F.A.N.G</string>
+
 </resources>

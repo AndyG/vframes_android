@@ -21,9 +21,7 @@
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
                 android:clickable="true"
-                android:background="@color/cardview_dark_background"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="@android:color/transparent"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
                 <RelativeLayout
@@ -37,14 +35,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/ryu_name"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/ryu_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -54,38 +55,6 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#0066ff"
-                card_view:cardElevation="@dimen/character_card_elevation">
-
-                                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/rashid_card"/>
-
-                    <TextView
-                        android:text="RASHID"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:background="@color/colorAccent2"
-                        android:layout_alignParentBottom="true"/>
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="@dimen/character_card_height"
-                android:layout_margin="@dimen/character_card_margin"
-                app:layout_columnWeight="1"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#ccff66"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
                 <RelativeLayout
@@ -99,14 +68,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/chun_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/chun_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -116,10 +88,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#800000"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -130,14 +101,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/cammy_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/cammy_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -147,10 +121,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#009900"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -161,14 +134,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/birdie_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/birdie_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -178,10 +154,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#1A1A1A"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -192,14 +167,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/dictator_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/dictator_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -209,10 +187,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#cc0000"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -223,14 +200,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/nash_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/nash_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -240,10 +220,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#cc6600"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -254,14 +233,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/mika_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/mika_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -271,10 +253,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#3333cc"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -285,14 +266,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/necalli_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/necalli_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -302,10 +286,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#0099ff"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -316,14 +299,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/claw_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/claw_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -333,10 +319,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#999966"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -347,14 +332,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/rashid_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/rashid_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -364,10 +352,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#ffff66"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -378,14 +365,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/karin_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/karin_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -395,10 +385,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#ffcc99"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -409,14 +398,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/zangief_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/zangief_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -426,10 +418,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#00ff00"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -440,14 +431,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/ken_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/ken_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -457,10 +451,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#996633"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -471,14 +464,17 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/laura_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/laura_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -488,10 +484,9 @@
                 app:layout_columnWeight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#330066"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                                <RelativeLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -502,14 +497,52 @@
                         android:src="@drawable/rashid_card"/>
 
                     <TextView
-                        android:text="RASHID"
+                        android:text="@string/dhalsim_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:background="@color/colorAccent2"
+                        android:background="@color/dhalsim_accent"
                         android:layout_alignParentBottom="true"/>
 
                 </RelativeLayout>
+
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/character_card_height"
+                android:layout_margin="@dimen/character_card_margin"
+                app:layout_columnWeight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardElevation="@dimen/character_card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_card"/>
+
+                    <TextView
+                        android:text="@string/fang_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="18sp"
+                        android:gravity="end"
+                        android:background="@color/fang_accent"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
         </android.support.v7.widget.GridLayout>
+
 </ScrollView>

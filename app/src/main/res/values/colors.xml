@@ -3,5 +3,23 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorAccent2">#c8ef996a</color>
+
+    <!-- Character Accents -->
+    <color name="ryu_accent">#9474afe6</color>
+    <color name="cammy_accent">#c86aef6c</color>
+    <color name="chun_accent">#c84e51ff</color>
+    <color name="dictator_accent">#c8de2134</color>
+    <color name="nash_accent">#c88dab2b</color>
+    <color name="birdie_accent">#c87b7471</color>
+    <color name="mika_accent">#c893faec</color>
+    <color name="ken_accent">#c8e1483b</color>
+    <color name="necalli_accent">#c893484b</color>
+    <color name="rashid_accent">#c8ef996a</color>
+    <color name="karin_accent">#c8e6d519</color>
+    <color name="claw_accent">#c8aa99e2</color>
+    <color name="laura_accent">#c852f500</color>
+    <color name="dhalsim_accent">#c8d47039</color>
+    <color name="zangief_accent">#c8a3a1a1</color>
+    <color name="fang_accent">#c87c50b7</color>
+
 </resources>
