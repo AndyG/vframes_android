@@ -21,14 +21,30 @@
                 android:layout_margin="@dimen/character_card_margin"
                 app:layout_columnWeight="1"
                 android:clickable="true"
+                android:background="@color/cardview_dark_background"
                 android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardBackgroundColor="#ccffff"
+                card_view:cardBackgroundColor="@android:color/transparent"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Ryu"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -41,10 +57,25 @@
                 card_view:cardBackgroundColor="#0066ff"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Chun-Li"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -57,10 +88,25 @@
                 card_view:cardBackgroundColor="#ccff66"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Nash"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -73,10 +119,25 @@
                 card_view:cardBackgroundColor="#800000"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="M.Bison"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -89,10 +150,25 @@
                 card_view:cardBackgroundColor="#009900"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Cammy"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -105,10 +181,25 @@
                 card_view:cardBackgroundColor="#1A1A1A"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Birdie"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -121,10 +212,25 @@
                 card_view:cardBackgroundColor="#cc0000"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Ken"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -137,10 +243,25 @@
                 card_view:cardBackgroundColor="#cc6600"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Necalli"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -153,10 +274,25 @@
                 card_view:cardBackgroundColor="#3333cc"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Vega"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -169,10 +305,25 @@
                 card_view:cardBackgroundColor="#0099ff"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="R. Mika"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -185,10 +336,25 @@
                 card_view:cardBackgroundColor="#999966"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Rashid"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -201,10 +367,25 @@
                 card_view:cardBackgroundColor="#ffff66"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Karin"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -217,10 +398,25 @@
                 card_view:cardBackgroundColor="#ffcc99"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Zangief"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -233,10 +429,25 @@
                 card_view:cardBackgroundColor="#00ff00"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Laura"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -249,10 +460,25 @@
                 card_view:cardBackgroundColor="#996633"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="Dhalsim"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -265,10 +491,25 @@
                 card_view:cardBackgroundColor="#330066"
                 card_view:cardElevation="@dimen/character_card_elevation">
 
-                <TextView
-                    android:text="F.A.N.G"
+                                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rashid_smaller"/>
+
+                    <TextView
+                        android:text="RASHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:background="@color/colorAccent2"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
         </android.support.v7.widget.GridLayout>
 </ScrollView>
