@@ -7,6 +7,9 @@
     <dimen name="character_card_height">80dp</dimen>
     <dimen name="character_card_margin">10dp</dimen>
     <dimen name="character_card_elevation">5dp</dimen>
+
     <dimen name="character_card_text_padding">10dp</dimen>
+    <dimen name="character_card_text_size">18sp</dimen>
+
     <integer name="num_character_card_columns">2</integer>
 </resources>
