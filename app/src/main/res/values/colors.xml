@@ -5,21 +5,22 @@
     <color name="colorAccent">#FF4081</color>
 
     <!-- Character Accents -->
-    <color name="ryu_accent">#9474afe6</color>
-    <color name="cammy_accent">#c86aef6c</color>
-    <color name="chun_accent">#c84e51ff</color>
-    <color name="dictator_accent">#c8de2134</color>
-    <color name="nash_accent">#c88dab2b</color>
-    <color name="birdie_accent">#c87b7471</color>
-    <color name="mika_accent">#c893faec</color>
-    <color name="ken_accent">#c8e1483b</color>
-    <color name="necalli_accent">#c893484b</color>
-    <color name="rashid_accent">#c8ef996a</color>
-    <color name="karin_accent">#c8e6d519</color>
-    <color name="claw_accent">#c8aa99e2</color>
-    <color name="laura_accent">#c852f500</color>
-    <color name="dhalsim_accent">#c8d47039</color>
-    <color name="zangief_accent">#c8a3a1a1</color>
-    <color name="fang_accent">#c87c50b7</color>
+    <color name="ryu_accent">#cc355547</color>
+    <color name="cammy_accent">#cc1a540a</color>
+    <color name="chun_accent">#cc5b58c7</color>
+    <color name="dictator_accent">#cc200f3c</color>
+    <color name="nash_accent">#cc2f4419</color>
+    <color name="birdie_accent">#cc33261f</color>
+    <color name="mika_accent">#cc0e7a82</color>
+    <color name="ken_accent">#ccc11e10</color>
+    <color name="necalli_accent">#cc2f1629</color>
+    <color name="rashid_accent">#cc461d12</color>
+    <color name="karin_accent">#cc0c81b1</color>
+    <color name="claw_accent">#ccab5c05</color>
+    <color name="laura_accent">#cc205e1f</color>
+    <color name="dhalsim_accent">#cca1141c</color>
+    <color name="zangief_accent">#cc515b53</color>
+    <color name="fang_accent">#cc260793</color>
+    <color name="card_text_color">#ccFFFFFF</color>
 
 </resources>
