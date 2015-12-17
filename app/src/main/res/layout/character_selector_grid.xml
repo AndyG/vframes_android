@@ -95,7 +95,7 @@
 
                     <ImageView
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/ken_card"/>
+                        android:src="@drawable/ken_card" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
