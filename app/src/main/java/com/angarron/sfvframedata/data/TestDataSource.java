@@ -1,6 +1,8 @@
 package com.angarron.sfvframedata.data;
 
 import android.content.res.Resources;
+import android.os.AsyncTask;
+import android.os.Looper;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -12,7 +14,6 @@ import java.io.InputStream;
 import java.io.StringWriter;
 
 import data.json.model.VFramesDataJsonAdapter;
-import data.model.IDataModel;
 
 //This implementation of IVFramesDataSource uses test data
 //which is packaged with the app.
@@ -28,20 +29,33 @@ public class TestDataSource implements IDataSource {
 
     @Override
     public void fetchData(Listener listener) {
-        InputStream inputStream = resources.openRawResource(resourceId);
+        new GetDataTask().execute(listener);
+    }
 
-        StringWriter writer = new StringWriter();
-        try {
-            IOUtils.copy(inputStream, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
-            listener.onDataFetchFailed(FetchFailureReason.READ_FROM_FILE_FAILED);
+    private class GetDataTask extends AsyncTask<Object, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Object... objects) {
+
+            Looper.prepare();
+
+            Listener listener = (Listener) objects[0];
+
+            InputStream inputStream = resources.openRawResource(resourceId);
+
+            StringWriter writer = new StringWriter();
+            try {
+                IOUtils.copy(inputStream, writer);
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+
+            String dataString = writer.toString();
+            JsonParser parser = new JsonParser();
+            JsonObject jsonData = parser.parse(dataString).getAsJsonObject();
+            listener.onDataReceived(VFramesDataJsonAdapter.jsonToDataModel(jsonData));
+            return null;
         }
-        String dataString = writer.toString();
-
-        JsonParser parser = new JsonParser();
-        JsonObject jsonData = parser.parse(dataString).getAsJsonObject();
-        IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(jsonData);
-        listener.onDataReceived(dataModel);
     }
 }
