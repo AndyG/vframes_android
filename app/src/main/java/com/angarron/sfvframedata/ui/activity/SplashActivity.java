@@ -51,7 +51,9 @@ public class SplashActivity extends Activity {
     }
 
     private void launchHomeScreenActivity() {
-        Intent launchHomeScreenIntent = new Intent(this, HomeScreenActivity.class);
+        Intent launchHomeScreenIntent = new Intent(this, CharacterSelectActivity.class);
+        launchHomeScreenIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(launchHomeScreenIntent);
+        finish();
     }
 }

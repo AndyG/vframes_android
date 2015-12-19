@@ -9,7 +9,7 @@
 
         <android.support.v7.widget.GridLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/GridLayout1"
+            android:id="@+id/character_select_gridlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:columnCount="@integer/num_character_card_columns">
