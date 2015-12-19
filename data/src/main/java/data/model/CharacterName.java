@@ -7,6 +7,18 @@ public enum CharacterName {
     BIRDIE("birdie"),
     NASH("nash"),
     CAMMY("cammy");
+    /*,
+    KEN("ken"),
+    MIKA("mika"),
+    NECALLI("necalli"),
+    CLAW("claw"),
+    RASHID("rashid"),
+    KARIN("karin"),
+    LAURA("laura"),
+    DHALSIM("dhalsim"),
+    ZANGIEF("zangief"),
+    FANG("fang");
+    */
 
     private String name;
 

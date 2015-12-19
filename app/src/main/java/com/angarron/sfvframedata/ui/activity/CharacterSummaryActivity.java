@@ -83,7 +83,28 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.drawable.nash_card;
             case CAMMY:
                 return R.drawable.cammy_card;
-
+            /*
+            case KEN:
+                return R.drawable.ken_card;
+            case MIKA:
+                return R.drawable.mika_card;
+            case NECALLI:
+                return R.drawable.necalli_card;
+            case CLAW:
+                return R.drawable.claw_card;
+            case RASHID:
+                return R.drawable.rashid_card;
+            case KARIN:
+                return R.drawable.karin_card;
+            case LAURA:
+                return R.drawable.laura_card;
+            case DHALSIM:
+                return R.drawable.dhalsim_card;
+            case ZANGIEF:
+                return R.drawable.zangief_card;
+            case FANG:
+                return R.drawable.fang_card;
+            */
             default:
                 return -1;
         }
@@ -103,7 +124,28 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.color.nash_accent;
             case CAMMY:
                 return R.color.cammy_accent;
-
+            /*
+            case KEN:
+                return R.color.ken_accent;
+            case MIKA:
+                return R.color.mika_accent;
+            case NECALLI:
+                return R.color.necalli_accent;
+            case CLAW:
+                return R.color.claw_accent;
+            case RASHID:
+                return R.color.rashid_accent;
+            case KARIN:
+                return R.color.karin_accent;
+            case LAURA:
+                return R.color.laura_accent;
+            case DHALSIM:
+                return R.color.dhalsim_accent;
+            case ZANGIEF:
+                return R.color.zangief_accent;
+            case FANG:
+                return R.color.fang_accent;
+            */
             default:
                 return -1;
         }
@@ -123,7 +165,28 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.string.nash_name;
             case CAMMY:
                 return R.string.cammy_name;
-
+            /*
+            case KEN:
+                return R.string.ken_name;
+            case MIKA:
+                return R.string.mika_name;
+            case NECALLI:
+                return R.string.necalli_name;
+            case CLAW:
+                return R.string.claw_name;
+            case RASHID:
+                return R.string.rashid_name;
+            case KARIN:
+                return R.string.karin_name;
+            case LAURA:
+                return R.string.laura_name;
+            case DHALSIM:
+                return R.string.dhalsim_name;
+            case ZANGIEF:
+                return R.string.zangief_name;
+            case FANG:
+                return R.string.fang_name;
+            */
             default:
                 return -1;
         }
