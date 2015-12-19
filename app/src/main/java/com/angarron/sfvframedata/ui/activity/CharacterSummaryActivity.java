@@ -1,11 +1,14 @@
 package com.angarron.sfvframedata.ui.activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.application.VFramesApplication;
@@ -58,6 +61,71 @@ public class CharacterSummaryActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
+            ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
+            summaryCharacterImage.setImageResource(getCharacterDrawableResource());
+            TextView summaryAccentBar = (TextView) findViewById(R.id.summary_accent_bar);
+            summaryAccentBar.setText(getNameResource());
+            summaryAccentBar.setBackgroundResource(getCharacterAccentColor());
+        }
+    }
+
+    private int getCharacterDrawableResource() {
+        switch(targetCharacter) {
+            case RYU:
+                return R.drawable.ryu_card;
+            case CHUN:
+                return R.drawable.chun_card;
+            case DICTATOR:
+                return R.drawable.dictator_card;
+            case BIRDIE:
+                return R.drawable.birdie_card;
+            case NASH:
+                return R.drawable.nash_card;
+            case CAMMY:
+                return R.drawable.cammy_card;
+
+            default:
+                return -1;
+        }
+    }
+
+    private int getCharacterAccentColor() {
+        switch(targetCharacter) {
+            case RYU:
+                return R.color.ryu_accent;
+            case CHUN:
+                return R.color.chun_accent;
+            case DICTATOR:
+                return R.color.dictator_accent;
+            case BIRDIE:
+                return R.color.birdie_accent;
+            case NASH:
+                return R.color.nash_accent;
+            case CAMMY:
+                return R.color.cammy_accent;
+
+            default:
+                return -1;
+        }
+    }
+
+    private int getNameResource() {
+        switch(targetCharacter) {
+            case RYU:
+                return R.string.ryu_name;
+            case CHUN:
+                return R.string.chun_name;
+            case DICTATOR:
+                return R.string.dictator_name;
+            case BIRDIE:
+                return R.string.birdie_name;
+            case NASH:
+                return R.string.nash_name;
+            case CAMMY:
+                return R.string.cammy_name;
+
+            default:
+                return -1;
         }
     }
 }

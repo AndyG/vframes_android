@@ -30,7 +30,7 @@
 
         <activity
             android:name=".ui.activity.CharacterSummaryActivity"
-            android:label="@string/app_name"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
