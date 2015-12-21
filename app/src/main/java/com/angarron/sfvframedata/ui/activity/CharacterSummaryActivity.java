@@ -3,14 +3,23 @@ package com.angarron.sfvframedata.ui.activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
 import com.angarron.sfvframedata.R;
+import com.angarron.sfvframedata.adapter.IMoveListItem;
+import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
 import com.angarron.sfvframedata.application.VFramesApplication;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import data.model.CharacterName;
+import data.model.IDataModel;
+import data.model.move.IDisplayableMove;
 
 //This activity will house a ViewSwitcher which will have
 //move list and frame data for the selected character.
@@ -35,6 +44,27 @@ public class CharacterSummaryActivity extends AppCompatActivity {
 
         //Load the toolbar based on the target character
         setupToolbar();
+        setupRecyclerView();
+    }
+
+    private void setupRecyclerView() {
+        RecyclerView movesRecyclerView = (RecyclerView) findViewById(R.id.moves_recycler_view);
+        movesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        List<IMoveListItem> moveListItems = getMovesAsListItems();
+        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(moveListItems));
+    }
+
+    private List<IMoveListItem> getMovesAsListItems() {
+        List<IDisplayableMove> moves = ((VFramesApplication) getApplication()).getDataModel().getCharactersModel().getCharacters().get(targetCharacter).getMoves();
+        List<IMoveListItem> moveListItems = new ArrayList<>();
+        for (IDisplayableMove move : moves) {
+            moveListItems.add(convertMoveToListItem(moveListItems));
+        }
+        return moveListItems;
+    }
+
+    private IMoveListItem convertMoveToListItem(List<IMoveListItem> moveListItems) {
+        return null;
     }
 
     @Override
