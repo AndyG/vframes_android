@@ -1,6 +1,6 @@
 package com.angarron.sfvframedata.ui.activity;
 
-import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -9,11 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.adapter.IMoveListItem;
 import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
 import com.angarron.sfvframedata.application.VFramesApplication;
 
@@ -102,11 +103,20 @@ public class CharacterSummaryActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
+
             ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
             summaryCharacterImage.setImageResource(getCharacterDrawableResource());
             TextView summaryAccentBar = (TextView) findViewById(R.id.summary_accent_bar);
             summaryAccentBar.setText(getNameResource());
-            summaryAccentBar.setBackgroundResource(getCharacterAccentColor());
+            summaryAccentBar.setBackgroundResource(getTranslucentCharacterAccentColor());
+
+            //Set up status bar color if possible on OS version
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(getCharacterAccentColor());
+            }
         }
     }
 
@@ -146,6 +156,45 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.drawable.fang_card;
             default:
                 throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
+        }
+    }
+
+    private int getTranslucentCharacterAccentColor() {
+        switch(targetCharacter) {
+            case RYU:
+                return R.color.ryu_accent_translucent;
+            case CHUN:
+                return R.color.chun_accent_translucent;
+            case DICTATOR:
+                return R.color.dictator_accent_translucent;
+            case BIRDIE:
+                return R.color.birdie_accent_translucent;
+            case NASH:
+                return R.color.nash_accent_translucent;
+            case CAMMY:
+                return R.color.cammy_accent_translucent;
+            case KEN:
+                return R.color.ken_accent_translucent;
+            case MIKA:
+                return R.color.mika_accent_translucent;
+            case NECALLI:
+                return R.color.necalli_accent_translucent;
+            case CLAW:
+                return R.color.claw_accent_translucent;
+            case RASHID:
+                return R.color.rashid_accent_translucent;
+            case KARIN:
+                return R.color.karin_accent_translucent;
+            case LAURA:
+                return R.color.laura_accent_translucent;
+            case DHALSIM:
+                return R.color.dhalsim_accent_translucent;
+            case ZANGIEF:
+                return R.color.zangief_accent_translucent;
+            case FANG:
+                return R.color.fang_accent_translucent;
+            default:
+                throw new RuntimeException("unable to resolve character accent color: " + targetCharacter);
         }
     }
 
