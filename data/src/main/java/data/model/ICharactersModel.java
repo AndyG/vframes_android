@@ -5,5 +5,5 @@ import java.util.Map;
 import data.model.character.SFCharacter;
 
 public interface ICharactersModel {
-    Map<CharacterName, SFCharacter> getCharacters();
+    Map<CharacterID, SFCharacter> getCharacters();
 }

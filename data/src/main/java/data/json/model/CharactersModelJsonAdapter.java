@@ -12,11 +12,11 @@ import data.model.character.SFCharacter;
 public class CharactersModelJsonAdapter {
 
     public static CharactersModel jsonToCharactersModel(JsonObject jsonObject) {
-        Map<CharacterName, SFCharacter> characterMap = new HashMap<>();
-        for (CharacterName characterName : CharacterName.values()) {
-            JsonObject characterJson = jsonObject.getAsJsonObject(characterName.toString());
+        Map<CharacterID, SFCharacter> characterMap = new HashMap<>();
+        for (CharacterID characterID : CharacterID.values()) {
+            JsonObject characterJson = jsonObject.getAsJsonObject(characterID.toString());
             SFCharacter sfCharacter = SFCharacterJsonAdapter.JsonToCharacter(characterJson);
-            characterMap.put(characterName, sfCharacter);
+            characterMap.put(characterID, sfCharacter);
         }
         return new CharactersModel(characterMap);
     }
@@ -24,7 +24,7 @@ public class CharactersModelJsonAdapter {
     public static JsonObject CharactersModelToJson(ICharactersModel charactersModel) {
         JsonObject jsonObject = new JsonObject();
 
-        for (Map.Entry<CharacterName, SFCharacter> characterEntry : charactersModel.getCharacters().entrySet()) {
+        for (Map.Entry<CharacterID, SFCharacter> characterEntry : charactersModel.getCharacters().entrySet()) {
             JsonObject characterJson = SFCharacterJsonAdapter.CharacterToJson(characterEntry.getValue());
             jsonObject.add(characterEntry.getKey().toString(), characterJson);
         }

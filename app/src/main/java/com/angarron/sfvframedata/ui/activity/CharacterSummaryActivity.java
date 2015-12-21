@@ -14,11 +14,11 @@ import com.angarron.sfvframedata.adapter.IMoveListItem;
 import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
 import com.angarron.sfvframedata.application.VFramesApplication;
 
+import data.model.CharacterID;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-import data.model.CharacterName;
-import data.model.IDataModel;
 import data.model.move.IDisplayableMove;
 
 //This activity will house a ViewSwitcher which will have
@@ -27,7 +27,7 @@ public class CharacterSummaryActivity extends AppCompatActivity {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
 
-    private CharacterName targetCharacter;
+    private CharacterID targetCharacter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class CharacterSummaryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_character_summary);
 
         try {
-            targetCharacter = (CharacterName) getIntent().getSerializableExtra(INTENT_EXTRA_TARGET_CHARACTER);
+            targetCharacter = (CharacterID) getIntent().getSerializableExtra(INTENT_EXTRA_TARGET_CHARACTER);
         } catch (ClassCastException e) {
             Log.e(VFramesApplication.APP_LOGGING_TAG, "failed to parse intent", e);
             finish();
@@ -50,17 +50,21 @@ public class CharacterSummaryActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         RecyclerView movesRecyclerView = (RecyclerView) findViewById(R.id.moves_recycler_view);
         movesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        List<IMoveListItem> moveListItems = getMovesAsListItems();
-        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(moveListItems));
+//        List<IMoveListItem> moveListItems = getMovesAsListItems();
+        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(getMovesAsListItems()));
     }
 
-    private List<IMoveListItem> getMovesAsListItems() {
-        List<IDisplayableMove> moves = ((VFramesApplication) getApplication()).getDataModel().getCharactersModel().getCharacters().get(targetCharacter).getMoves();
-        List<IMoveListItem> moveListItems = new ArrayList<>();
-        for (IDisplayableMove move : moves) {
-            moveListItems.add(convertMoveToListItem(moveListItems));
+//    private List<IMoveListItem> getMovesAsListItems() {
+    private List<String> getMovesAsListItems() {
+        Map<String, List<IDisplayableMove>> moves = ((VFramesApplication) getApplication()).getDataModel().getCharactersModel().getCharacters().get(targetCharacter).getMoves();
+
+//        List<IMoveListItem> moveListItems = new ArrayList<>();
+        List<String> categories = new ArrayList<>();
+        for (String category : moves.keySet()) {
+//            moveListItems.add(convertMoveToListItem(moveListItems));
+            categories.add(category);
         }
-        return moveListItems;
+        return categories;
     }
 
     private IMoveListItem convertMoveToListItem(List<IMoveListItem> moveListItems) {

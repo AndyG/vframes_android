@@ -12,7 +12,7 @@ import android.view.View;
 import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.application.VFramesApplication;
 
-import data.model.CharacterName;
+import data.model.CharacterID;
 
 
 public class CharacterSelectActivity extends AppCompatActivity {
@@ -46,26 +46,26 @@ public class CharacterSelectActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-            CharacterName clickedCharacter;
+            CharacterID clickedCharacter;
 
             switch (view.getId()) {
                 case R.id.birdie_card:
-                    clickedCharacter = CharacterName.BIRDIE;
+                    clickedCharacter = CharacterID.BIRDIE;
                     break;
                 case R.id.cammy_card:
-                    clickedCharacter = CharacterName.CAMMY;
+                    clickedCharacter = CharacterID.CAMMY;
                     break;
                 case R.id.ryu_card:
-                    clickedCharacter = CharacterName.RYU;
+                    clickedCharacter = CharacterID.RYU;
                     break;
                 case R.id.chun_card:
-                    clickedCharacter = CharacterName.CHUN;
+                    clickedCharacter = CharacterID.CHUN;
                     break;
                 case R.id.dictator_card:
-                    clickedCharacter = CharacterName.DICTATOR;
+                    clickedCharacter = CharacterID.DICTATOR;
                     break;
                 case R.id.nash_card:
-                    clickedCharacter = CharacterName.NASH;
+                    clickedCharacter = CharacterID.NASH;
                     break;
                 case R.id.fang_card:
                 case R.id.laura_card:

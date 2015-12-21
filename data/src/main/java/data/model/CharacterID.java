@@ -1,6 +1,6 @@
 package data.model;
 
-public enum CharacterName {
+public enum CharacterID {
     RYU("ryu"),
     CHUN("chun"),
     DICTATOR("dictator"),
@@ -10,7 +10,7 @@ public enum CharacterName {
 
     private String name;
 
-    CharacterName(String name) {
+    CharacterID(String name) {
         this.name = name;
     }
 
@@ -20,10 +20,10 @@ public enum CharacterName {
     }
 
     //TODO: find out if we need this
-    public static CharacterName fromString(String characterNameStr) {
-        for (CharacterName characterName : values()) {
-            if (characterName.name.equals(characterNameStr)) {
-                return characterName;
+    public static CharacterID fromString(String characterNameStr) {
+        for (CharacterID characterID : values()) {
+            if (characterID.name.equals(characterNameStr)) {
+                return characterID;
             }
         }
         throw new IllegalArgumentException("failed to find character matching: " + characterNameStr);

@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import data.json.model.VFramesDataJsonAdapter;
-import data.model.CharacterName;
+import data.model.CharacterID;
 import data.model.CharactersModel;
 import data.model.DataModel;
 import data.model.DataVersion;
@@ -44,10 +44,10 @@ public class TestDataGenerator {
     }
 
     private static ICharactersModel generateRandomCharacters() {
-        Map<CharacterName, SFCharacter> charactersMap = new HashMap<>();
+        Map<CharacterID, SFCharacter> charactersMap = new HashMap<>();
 
         CharacterFactory characterFactory = new CharacterFactory();
-        for (CharacterName name : CharacterName.values()) {
+        for (CharacterID name : CharacterID.values()) {
             SFCharacter character = characterFactory.generateCharacter(5);
             charactersMap.put(name, character);
         }
