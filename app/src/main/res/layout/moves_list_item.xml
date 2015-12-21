@@ -7,6 +7,7 @@
         android:id="@+id/moves_list_item_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50sp"/>
+        android:textSize="50sp"
+        android:textAllCaps="true"/>
 
 </LinearLayout>

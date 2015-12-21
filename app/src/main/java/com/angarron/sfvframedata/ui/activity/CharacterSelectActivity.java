@@ -68,15 +68,35 @@ public class CharacterSelectActivity extends AppCompatActivity {
                     clickedCharacter = CharacterID.NASH;
                     break;
                 case R.id.fang_card:
+                    clickedCharacter = CharacterID.FANG;
+                    break;
                 case R.id.laura_card:
+                    clickedCharacter = CharacterID.LAURA;
+                    break;
                 case R.id.karin_card:
+                    clickedCharacter = CharacterID.KARIN;
+                    break;
                 case R.id.mika_card:
+                    clickedCharacter = CharacterID.MIKA;
+                    break;
                 case R.id.zangief_card:
+                    clickedCharacter = CharacterID.ZANGIEF;
+                    break;
                 case R.id.necalli_card:
+                    clickedCharacter = CharacterID.NECALLI;
+                    break;
                 case R.id.claw_card:
+                    clickedCharacter = CharacterID.CLAW;
+                    break;
                 case R.id.dhalsim_card:
+                    clickedCharacter = CharacterID.DHALSIM;
+                    break;
                 case R.id.ken_card:
+                    clickedCharacter = CharacterID.KEN;
+                    break;
                 case R.id.rashid_card:
+                    clickedCharacter = CharacterID.RASHID;
+                    break;
                 default:
                     Log.e(VFramesApplication.APP_LOGGING_TAG, "clicked invalid character card");
                     return;
