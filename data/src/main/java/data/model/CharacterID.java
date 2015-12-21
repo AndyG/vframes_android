@@ -6,7 +6,17 @@ public enum CharacterID {
     DICTATOR("dictator"),
     BIRDIE("birdie"),
     NASH("nash"),
-    CAMMY("cammy");
+    CAMMY("cammy"),
+    CLAW("claw"),
+    LAURA("laura"),
+    KEN("ken"),
+    NECALLI("necalli"),
+    RASHID("rashid"),
+    MIKA("mika"),
+    ZANGIEF("zangief"),
+    FANG("fang"),
+    DHALSIM("dhalsim"),
+    KARIN("karin");
 
     private String name;
 
