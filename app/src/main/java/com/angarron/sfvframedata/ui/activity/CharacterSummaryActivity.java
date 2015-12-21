@@ -124,7 +124,6 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.drawable.nash_card;
             case CAMMY:
                 return R.drawable.cammy_card;
-            /*
             case KEN:
                 return R.drawable.ken_card;
             case MIKA:
@@ -145,9 +144,8 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.drawable.zangief_card;
             case FANG:
                 return R.drawable.fang_card;
-            */
             default:
-                return -1;
+                throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
         }
     }
 
@@ -165,7 +163,6 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.color.nash_accent;
             case CAMMY:
                 return R.color.cammy_accent;
-            /*
             case KEN:
                 return R.color.ken_accent;
             case MIKA:
@@ -186,9 +183,8 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.color.zangief_accent;
             case FANG:
                 return R.color.fang_accent;
-            */
             default:
-                return -1;
+                throw new RuntimeException("unable to resolve character accent color: " + targetCharacter);
         }
     }
 
@@ -206,7 +202,6 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.string.nash_name;
             case CAMMY:
                 return R.string.cammy_name;
-            /*
             case KEN:
                 return R.string.ken_name;
             case MIKA:
@@ -227,9 +222,8 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 return R.string.zangief_name;
             case FANG:
                 return R.string.fang_name;
-            */
             default:
-                return -1;
+                throw new RuntimeException("unable to resolve character name: " + targetCharacter);
         }
     }
 }

@@ -34,7 +34,7 @@ public class VFramesApplication extends Application {
             VFramesRESTApi restApi = getRestApi();
             dataSource = new NetworkFallbackDataSource(restApi, getResources(), R.raw.test_data);
         } else {
-            dataSource = new TestDataSource(getResources(), R.raw.data_with_categories);
+            dataSource = new TestDataSource(getResources(), R.raw.test_data);
         }
     }
 
