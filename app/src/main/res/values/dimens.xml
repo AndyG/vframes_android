@@ -11,5 +11,8 @@
     <dimen name="character_card_text_padding">10dp</dimen>
     <dimen name="character_card_text_size">18sp</dimen>
 
+    <dimen name="character_summary_text_padding">15dp</dimen>
+    <dimen name="character_summary_text_size">24dp</dimen>
+
     <integer name="num_character_card_columns">2</integer>
 </resources>

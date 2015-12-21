@@ -39,4 +39,16 @@
         <item name="android:layout_alignParentBottom">true</item>
     </style>
 
+    <style name="CharacterSummaryTextStyle">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/character_summary_text_size</item>
+        <item name="android:paddingRight">@dimen/character_summary_text_padding</item>
+        <item name="android:textColor">@color/summary_text_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+
 </resources>
