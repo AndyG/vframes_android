@@ -28,14 +28,4 @@ public enum CharacterID {
     public String toString() {
         return name;
     }
-
-    //TODO: find out if we need this
-    public static CharacterID fromString(String characterNameStr) {
-        for (CharacterID characterID : values()) {
-            if (characterID.name.equals(characterNameStr)) {
-                return characterID;
-            }
-        }
-        throw new IllegalArgumentException("failed to find character matching: " + characterNameStr);
-    }
 }

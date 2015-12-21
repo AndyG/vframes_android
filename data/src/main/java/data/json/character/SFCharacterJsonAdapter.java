@@ -6,13 +6,13 @@ import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import data.json.move.MoveJsonAdapter;
 import data.model.character.SFCharacter;
 import data.model.move.IDisplayableMove;
+import data.model.move.MoveCategory;
 
 /**
  * Created by andy on 12/2/15
@@ -22,10 +22,10 @@ public class SFCharacterJsonAdapter {
     public static JsonObject CharacterToJson(SFCharacter character) {
         JsonObject movesObject = new JsonObject();
 
-        for (String categoryKey : character.getMoves().keySet()) {
+        for (MoveCategory categoryKey : character.getMoves().keySet()) {
             List<IDisplayableMove> category = character.getMoves().get(categoryKey);
             JsonArray categoryArray = moveListToJsonArray(category);
-            movesObject.add(categoryKey, categoryArray);
+            movesObject.add(categoryKey.toString(), categoryArray);
         }
 
         JsonObject characterJson = new JsonObject();
@@ -34,7 +34,7 @@ public class SFCharacterJsonAdapter {
     }
 
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
-        Map<String, List<IDisplayableMove>> moves = new HashMap<>();
+        Map<MoveCategory, List<IDisplayableMove>> moves = new HashMap<>();
         JsonObject movesJson = characterJson.getAsJsonObject("moves");
 
         for (Map.Entry<String, JsonElement> category : movesJson.entrySet()) {
@@ -47,7 +47,7 @@ public class SFCharacterJsonAdapter {
                 movesList.add(MoveJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
             }
 
-            moves.put(categoryKey, movesList);
+            moves.put(MoveCategory.fromString(categoryKey), movesList);
         }
 
         return new SFCharacter(moves);

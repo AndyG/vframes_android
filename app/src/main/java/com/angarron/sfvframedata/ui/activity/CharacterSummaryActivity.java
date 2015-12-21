@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 import data.model.move.IDisplayableMove;
+import data.model.move.MoveCategory;
 
 //This activity will house a ViewSwitcher which will have
 //move list and frame data for the selected character.
@@ -56,19 +57,25 @@ public class CharacterSummaryActivity extends AppCompatActivity {
 
 //    private List<IMoveListItem> getMovesAsListItems() {
     private List<String> getMovesAsListItems() {
-        Map<String, List<IDisplayableMove>> moves = ((VFramesApplication) getApplication()).getDataModel().getCharactersModel().getCharacters().get(targetCharacter).getMoves();
-
-//        List<IMoveListItem> moveListItems = new ArrayList<>();
+        Map<MoveCategory, List<IDisplayableMove>> moves = ((VFramesApplication) getApplication()).getDataModel().getCharactersModel().getCharacters().get(targetCharacter).getMoves();
         List<String> categories = new ArrayList<>();
-        for (String category : moves.keySet()) {
-//            moveListItems.add(convertMoveToListItem(moveListItems));
-            categories.add(category);
+        for (MoveCategory category : moves.keySet()) {
+            categories.add(categoryToString(category));
         }
         return categories;
     }
 
-    private IMoveListItem convertMoveToListItem(List<IMoveListItem> moveListItems) {
-        return null;
+    private String categoryToString(MoveCategory category) {
+        switch (category) {
+            case NORMALS:
+                return getString(R.string.normals_header);
+            case SPECIALS:
+                return getString(R.string.specials_header);
+            case VMOVES:
+                return getString(R.string.vmoves_header);
+            default:
+                throw new RuntimeException("unable to resolve move category to string: " + category);
+        }
     }
 
     @Override

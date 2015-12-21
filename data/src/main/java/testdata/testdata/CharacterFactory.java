@@ -8,13 +8,12 @@ import java.util.Random;
 
 import data.model.character.SFCharacter;
 import data.model.move.IDisplayableMove;
+import data.model.move.MoveCategory;
 
 /**
  * Created by andy on 11/30/15
  */
 public class CharacterFactory {
-
-    private static final String[] categories = {"Normals", "Specials", "V-Moves"};
 
     private Random randomGenerator;
 
@@ -31,15 +30,14 @@ public class CharacterFactory {
     }
 
     public SFCharacter generateCharacter(int numMoves) {
-
-        Map<String, List<IDisplayableMove>> moves = generateMoveset(randomGenerator);
+        Map<MoveCategory, List<IDisplayableMove>> moves = generateMoveset();
         return new SFCharacter(moves);
     }
 
-    private Map<String, List<IDisplayableMove>> generateMoveset(Random randomGenerator) {
-        Map<String, List<IDisplayableMove>> moveList = new HashMap<>();
-        for(String categoryName : categories) {
-            moveList.put(categoryName, generateRandomMoves(5));
+    private Map<MoveCategory, List<IDisplayableMove>> generateMoveset() {
+        Map<MoveCategory, List<IDisplayableMove>> moveList = new HashMap<>();
+        for(MoveCategory category : MoveCategory.values()) {
+            moveList.put(category, generateRandomMoves(5));
         }
         return moveList;
     }

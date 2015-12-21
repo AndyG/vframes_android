@@ -10,12 +10,13 @@ import com.angarron.sfvframedata.R;
 
 import java.util.List;
 
+import data.model.move.MoveCategory;
+
 /**
  * Created by andy on 12/20/15
  */
 public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<IMoveListItem> moveListItems;
     private List<String> categories;
 
 //    public MovesRecyclerViewAdapter(List<IMoveListItem> moveListItems) {
