@@ -21,10 +21,13 @@
     <string name="fang_name">F.A.N.G</string>
 
     <!-- Headers for Move List -->
-    <string name="vmoves_header">V-Moves</string>
-    <string name="specials_header">Specials</string>
-    <string name="normals_header">Normals</string>
+    <string name="normals_header">Normal Attacks</string>
+    <string name="throws_header">Throws</string>
+    <string name="unique_attacks_header">Unique Attacks</string>
+    <string name="specials_header">Special Moves</string>
     <string name="critical_arts_header">Critical Arts</string>
-    <string name="unique_moves_header">Unique Moves</string>
+    <string name="vskill_header">V-Skill</string>
+    <string name="vtrigger_header">V-Trigger</string>
+    <string name="vreversal_header">V-Reversal</string>
 
 </resources>

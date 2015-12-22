@@ -10,13 +10,9 @@ import android.widget.TextView;
 import com.angarron.sfvframedata.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import data.model.character.SFCharacter;
 import data.model.move.IDisplayableMove;
 import data.model.move.MoveCategory;
 
@@ -33,7 +29,9 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     private static MoveCategory[] categoriesOrder = {
             MoveCategory.UNIQUE_MOVES,
             MoveCategory.SPECIALS,
-            MoveCategory.VMOVES,
+            MoveCategory.VSKILL,
+            MoveCategory.VTRIGGER,
+            MoveCategory.VREVERSAL,
             MoveCategory.CRITICAL_ARTS
     };
 
@@ -106,12 +104,16 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 return context.getString(R.string.normals_header);
             case SPECIALS:
                 return context.getString(R.string.specials_header);
-            case VMOVES:
-                return context.getString(R.string.vmoves_header);
+            case VSKILL:
+                return context.getString(R.string.vskill_header);
+            case VTRIGGER:
+                return context.getString(R.string.vtrigger_header);
+            case VREVERSAL:
+                return context.getString(R.string.vreversal_header);
             case CRITICAL_ARTS:
                 return context.getString(R.string.critical_arts_header);
             case UNIQUE_MOVES:
-                return context.getString(R.string.unique_moves_header);
+                return context.getString(R.string.unique_attacks_header);
             default:
                 throw new RuntimeException("Could not resolve header for category: " + moveCategory);
         }

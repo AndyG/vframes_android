@@ -6,7 +6,9 @@ package data.model.move;
 public enum MoveCategory {
     NORMALS("normals"),
     SPECIALS("specials"),
-    VMOVES("vmoves"),
+    VSKILL("vskill"),
+    VTRIGGER("vtrigger"),
+    VREVERSAL("vreversal"),
     CRITICAL_ARTS("critical_arts"),
     UNIQUE_MOVES("unique_moves");
 
@@ -27,8 +29,12 @@ public enum MoveCategory {
                 return NORMALS;
             case "specials":
                 return SPECIALS;
-            case "vmoves":
-                return VMOVES;
+            case "vtrigger":
+                return VTRIGGER;
+            case "vreversal":
+                return VREVERSAL;
+            case "vskill":
+                return VSKILL;
             case "critical_arts":
                 return CRITICAL_ARTS;
             case "unique_moves":
