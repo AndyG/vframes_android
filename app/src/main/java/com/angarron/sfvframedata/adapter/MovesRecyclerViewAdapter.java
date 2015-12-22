@@ -33,7 +33,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             MoveCategory.VSKILL,
             MoveCategory.VTRIGGER,
             MoveCategory.VREVERSAL,
-            MoveCategory.CRITICAL_ARTS,
+            MoveCategory.CRITICAL_ARTS
     };
 
     private Context context;
