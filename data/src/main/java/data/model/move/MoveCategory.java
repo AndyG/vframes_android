@@ -10,7 +10,8 @@ public enum MoveCategory {
     VTRIGGER("vtrigger"),
     VREVERSAL("vreversal"),
     CRITICAL_ARTS("critical_arts"),
-    UNIQUE_MOVES("unique_moves");
+    UNIQUE_MOVES("unique_moves"),
+    THROWS("throws");
 
     private String name;
 
@@ -39,6 +40,8 @@ public enum MoveCategory {
                 return CRITICAL_ARTS;
             case "unique_moves":
                 return UNIQUE_MOVES;
+            case "throws":
+                return THROWS;
             default:
                 throw new RuntimeException("error parsing move category: " + category);
         }

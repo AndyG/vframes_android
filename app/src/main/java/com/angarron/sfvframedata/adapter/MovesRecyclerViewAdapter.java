@@ -28,11 +28,12 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     //Categories which are missing for a particular character will not be displayed.
     private static MoveCategory[] categoriesOrder = {
             MoveCategory.UNIQUE_MOVES,
+            MoveCategory.THROWS,
             MoveCategory.SPECIALS,
             MoveCategory.VSKILL,
             MoveCategory.VTRIGGER,
             MoveCategory.VREVERSAL,
-            MoveCategory.CRITICAL_ARTS
+            MoveCategory.CRITICAL_ARTS,
     };
 
     private Context context;
@@ -114,6 +115,8 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 return context.getString(R.string.critical_arts_header);
             case UNIQUE_MOVES:
                 return context.getString(R.string.unique_attacks_header);
+            case THROWS:
+                return context.getString(R.string.throws_header);
             default:
                 throw new RuntimeException("Could not resolve header for category: " + moveCategory);
         }
