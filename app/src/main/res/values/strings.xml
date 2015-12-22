@@ -2,7 +2,7 @@
     <string name="app_name">VFrames</string>
     <string name="action_settings">Settings</string>
 
-    <!--Character Names-->
+    <!--Character Names -->
     <string name="ryu_name">RYU</string>
     <string name="chun_name">CHUN-LI</string>
     <string name="cammy_name">CAMMY</string>
@@ -19,8 +19,12 @@
     <string name="zangief_name">ZANGIEF</string>
     <string name="dhalsim_name">DHALSIM</string>
     <string name="fang_name">F.A.N.G</string>
+
+    <!-- Headers for Move List -->
     <string name="vmoves_header">V-Moves</string>
     <string name="specials_header">Specials</string>
     <string name="normals_header">Normals</string>
+    <string name="critical_arts_header">Critical Arts</string>
+    <string name="unique_moves_header">Unique Moves</string>
 
 </resources>

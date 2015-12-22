@@ -6,7 +6,9 @@ package data.model.move;
 public enum MoveCategory {
     NORMALS("normals"),
     SPECIALS("specials"),
-    VMOVES("vmoves");
+    VMOVES("vmoves"),
+    CRITICAL_ARTS("critical_arts"),
+    UNIQUE_MOVES("unique_moves");
 
     private String name;
 
@@ -27,6 +29,10 @@ public enum MoveCategory {
                 return SPECIALS;
             case "vmoves":
                 return VMOVES;
+            case "critical_arts":
+                return CRITICAL_ARTS;
+            case "unique_moves":
+                return UNIQUE_MOVES;
             default:
                 throw new RuntimeException("error parsing move category: " + category);
         }

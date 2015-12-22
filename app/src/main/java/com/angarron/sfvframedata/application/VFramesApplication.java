@@ -25,16 +25,16 @@ public class VFramesApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        init(false);
+        init(false, R.raw.test_data);
     }
 
-    private void init(boolean useRealData) {
+    private void init(boolean useRealData, int resourceId) {
         //TODO: use real data source for real app
         if (useRealData) {
             VFramesRESTApi restApi = getRestApi();
-            dataSource = new NetworkFallbackDataSource(restApi, getResources(), R.raw.test_data);
+            dataSource = new NetworkFallbackDataSource(restApi, getResources(), resourceId);
         } else {
-            dataSource = new TestDataSource(getResources(), R.raw.test_data);
+            dataSource = new TestDataSource(getResources(), resourceId);
         }
     }
 

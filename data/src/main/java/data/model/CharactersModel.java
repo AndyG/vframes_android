@@ -22,6 +22,11 @@ public class CharactersModel implements ICharactersModel {
         return characters;
     }
 
+    @Override
+    public SFCharacter getCharacter(CharacterID targetCharacter) {
+        return characters.get(targetCharacter);
+    }
+
     private void assertAllCharactersPresent(Map<CharacterID, SFCharacter> testCharacterMap) {
         for (CharacterID characterID : CharacterID.values()) {
             if (!testCharacterMap.containsKey(characterID)) {

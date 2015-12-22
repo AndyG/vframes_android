@@ -19,10 +19,11 @@ import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
 import com.angarron.sfvframedata.application.VFramesApplication;
 
 import data.model.CharacterID;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import data.model.IDataModel;
+import data.model.character.SFCharacter;
 import data.model.move.IDisplayableMove;
 import data.model.move.MoveCategory;
 
@@ -55,31 +56,14 @@ public class CharacterSummaryActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         RecyclerView movesRecyclerView = (RecyclerView) findViewById(R.id.moves_recycler_view);
         movesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        List<IMoveListItem> moveListItems = getMovesAsListItems();
-        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(getMovesAsListItems()));
+        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(this, getMoves()));
     }
 
-//    private List<IMoveListItem> getMovesAsListItems() {
-    private List<String> getMovesAsListItems() {
-        Map<MoveCategory, List<IDisplayableMove>> moves = ((VFramesApplication) getApplication()).getDataModel().getCharactersModel().getCharacters().get(targetCharacter).getMoves();
-        List<String> categories = new ArrayList<>();
-        for (MoveCategory category : moves.keySet()) {
-            categories.add(categoryToString(category));
-        }
-        return categories;
-    }
-
-    private String categoryToString(MoveCategory category) {
-        switch (category) {
-            case NORMALS:
-                return getString(R.string.normals_header);
-            case SPECIALS:
-                return getString(R.string.specials_header);
-            case VMOVES:
-                return getString(R.string.vmoves_header);
-            default:
-                throw new RuntimeException("unable to resolve move category to string: " + category);
-        }
+    private Map<MoveCategory, List<IDisplayableMove>> getMoves() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        return targetCharacterModel.getMoves();
     }
 
     @Override
@@ -99,7 +83,6 @@ public class CharacterSummaryActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
