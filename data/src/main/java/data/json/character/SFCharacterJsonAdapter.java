@@ -39,7 +39,9 @@ public class SFCharacterJsonAdapter {
 
         for (Map.Entry<String, JsonElement> category : movesJson.entrySet()) {
             String categoryKey = category.getKey();
+            System.out.println("Parsing category: " + categoryKey);
             JsonElement categoryBody = category.getValue();
+            System.out.println(categoryBody.toString());
 
             List<IDisplayableMove> movesList = new ArrayList<>();
             JsonArray categoryJson = categoryBody.getAsJsonArray();

@@ -8,12 +8,14 @@ import java.util.Map;
 import data.json.character.SFCharacterJsonAdapter;
 import data.model.*;
 import data.model.character.SFCharacter;
+import sun.rmi.runtime.Log;
 
 public class CharactersModelJsonAdapter {
 
     public static CharactersModel jsonToCharactersModel(JsonObject jsonObject) {
         Map<CharacterID, SFCharacter> characterMap = new HashMap<>();
         for (CharacterID characterID : CharacterID.values()) {
+            System.out.println("Parsing character : " + characterID.toString());
             JsonObject characterJson = jsonObject.getAsJsonObject(characterID.toString());
             SFCharacter sfCharacter = SFCharacterJsonAdapter.JsonToCharacter(characterJson);
             characterMap.put(characterID, sfCharacter);

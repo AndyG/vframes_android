@@ -48,7 +48,6 @@ public class TestDataSource implements IDataSource {
                 IOUtils.copy(inputStream, writer);
             } catch (IOException e) {
                 e.printStackTrace();
-
             }
 
             String dataString = writer.toString();
