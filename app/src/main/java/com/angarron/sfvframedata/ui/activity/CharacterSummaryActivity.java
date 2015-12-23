@@ -18,13 +18,13 @@ import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
 import com.angarron.sfvframedata.application.VFramesApplication;
 
-import data.model.CharacterID;
 import java.util.List;
 import java.util.Map;
 
+import data.model.CharacterID;
 import data.model.IDataModel;
 import data.model.character.SFCharacter;
-import data.model.move.IDisplayableMove;
+import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
 //This activity will house a ViewSwitcher which will have
@@ -51,19 +51,6 @@ public class CharacterSummaryActivity extends AppCompatActivity {
         //Load the toolbar based on the target character
         setupToolbar();
         setupRecyclerView();
-    }
-
-    private void setupRecyclerView() {
-        RecyclerView movesRecyclerView = (RecyclerView) findViewById(R.id.moves_recycler_view);
-        movesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(this, getMoves()));
-    }
-
-    private Map<MoveCategory, List<IDisplayableMove>> getMoves() {
-        VFramesApplication application = (VFramesApplication) getApplication();
-        IDataModel dataModel = application.getDataModel();
-        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        return targetCharacterModel.getMoves();
     }
 
     @Override
@@ -102,6 +89,20 @@ public class CharacterSummaryActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void setupRecyclerView() {
+        RecyclerView movesRecyclerView = (RecyclerView) findViewById(R.id.moves_recycler_view);
+        movesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(this, getMoves()));
+    }
+
+    private Map<MoveCategory, List<IMoveListMove>> getMoves() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        return targetCharacterModel.getMoveList();
+    }
+
 
     private int getCharacterDrawableResource() {
         switch(targetCharacter) {

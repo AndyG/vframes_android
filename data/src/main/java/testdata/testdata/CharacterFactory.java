@@ -8,6 +8,7 @@ import java.util.Random;
 
 import data.model.character.SFCharacter;
 import data.model.move.IDisplayableMove;
+import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
 /**
@@ -29,9 +30,22 @@ public class CharacterFactory {
         this.randomGenerator = randomGenerator;
     }
 
-    public SFCharacter generateCharacter(int numMoves) {
-        Map<MoveCategory, List<IDisplayableMove>> moves = generateMoveset();
-        return new SFCharacter(moves);
+    public SFCharacter generateCharacter() {
+        Map<MoveCategory, List<IMoveListMove>> moveList = generateMoveList();
+        return new SFCharacter(moveList);
+    }
+
+    private Map<MoveCategory, List<IMoveListMove>> generateMoveList() {
+        Map<MoveCategory, List<IMoveListMove>> moveList = new HashMap<>();
+        MoveFactory moveFactory = new MoveFactory(randomGenerator);
+        for(MoveCategory category : MoveCategory.values()) {
+            List<IMoveListMove> moves = new ArrayList<>();
+            for (int i = 0; i < 3; i++) {
+                moves.add(moveFactory.generateMoveListMove());
+            }
+            moveList.put(category, moves);
+        }
+        return moveList;
     }
 
     private Map<MoveCategory, List<IDisplayableMove>> generateMoveset() {

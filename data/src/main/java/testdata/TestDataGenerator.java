@@ -48,7 +48,7 @@ public class TestDataGenerator {
 
         CharacterFactory characterFactory = new CharacterFactory();
         for (CharacterID name : CharacterID.values()) {
-            SFCharacter character = characterFactory.generateCharacter(5);
+            SFCharacter character = characterFactory.generateCharacter();
             charactersMap.put(name, character);
         }
 

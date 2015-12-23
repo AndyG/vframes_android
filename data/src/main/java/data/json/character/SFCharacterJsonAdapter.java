@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import data.json.move.MoveJsonAdapter;
+import data.json.move.MoveListMoveJsonAdapter;
 import data.model.character.SFCharacter;
-import data.model.move.IDisplayableMove;
+import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
 /**
@@ -22,44 +22,48 @@ public class SFCharacterJsonAdapter {
     public static JsonObject CharacterToJson(SFCharacter character) {
         JsonObject movesObject = new JsonObject();
 
-        for (MoveCategory categoryKey : character.getMoves().keySet()) {
-            List<IDisplayableMove> category = character.getMoves().get(categoryKey);
+        for (MoveCategory categoryKey : character.getMoveList().keySet()) {
+            List<IMoveListMove> category = character.getMoveList().get(categoryKey);
             JsonArray categoryArray = moveListToJsonArray(category);
             movesObject.add(categoryKey.toString(), categoryArray);
         }
 
         JsonObject characterJson = new JsonObject();
-        characterJson.add("moves", movesObject);
+        characterJson.add("move_list", movesObject);
         return characterJson;
     }
 
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
-        Map<MoveCategory, List<IDisplayableMove>> moves = new HashMap<>();
-        JsonObject movesJson = characterJson.getAsJsonObject("moves");
+        JsonObject moveListJson = characterJson.getAsJsonObject("move_list");
+        return new SFCharacter(jsonToMoveList(moveListJson));
+    }
 
-        for (Map.Entry<String, JsonElement> category : movesJson.entrySet()) {
+    private static Map<MoveCategory, List<IMoveListMove>> jsonToMoveList(JsonObject moveListJson) {
+        Map<MoveCategory, List<IMoveListMove>> moveList = new HashMap<>();
+
+        for (Map.Entry<String, JsonElement> category : moveListJson.entrySet()) {
             String categoryKey = category.getKey();
             System.out.println("Parsing category: " + categoryKey);
             JsonElement categoryBody = category.getValue();
             System.out.println(categoryBody.toString());
 
-            List<IDisplayableMove> movesList = new ArrayList<>();
+            List<IMoveListMove> movesList = new ArrayList<>();
             JsonArray categoryJson = categoryBody.getAsJsonArray();
             for (JsonElement moveJson : categoryJson) {
-                movesList.add(MoveJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
+                movesList.add(MoveListMoveJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
             }
 
-            moves.put(MoveCategory.fromString(categoryKey), movesList);
+            moveList.put(MoveCategory.fromString(categoryKey), movesList);
         }
 
-        return new SFCharacter(moves);
+        return moveList;
     }
 
-    private static JsonArray moveListToJsonArray(List<IDisplayableMove> moves) {
+    private static JsonArray moveListToJsonArray(List<IMoveListMove> moves) {
         JsonArray movesJson = new JsonArray();
 
-        for (IDisplayableMove move : moves) {
-            movesJson.add(MoveJsonAdapter.MoveToJson(move));
+        for (IMoveListMove move : moves) {
+            movesJson.add(MoveListMoveJsonAdapter.MoveToJson(move));
         }
 
         return movesJson;

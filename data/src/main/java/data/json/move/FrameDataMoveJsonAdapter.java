@@ -12,7 +12,7 @@ import data.model.move.TypicalMove;
 /**
  * Created by andy on 12/2/15
  */
-public class MoveJsonAdapter {
+public class FrameDataMoveJsonAdapter {
 
     public static JsonObject MoveToJson(IDisplayableMove move) {
         JsonObject jsonObject = new JsonObject();

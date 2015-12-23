@@ -1,14 +1,15 @@
 package testdata.testdata;
 
-import testdata.testdata.util.RandomUtil;
-
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.Random;
 
+import data.model.move.IMoveListMove;
+import data.model.move.MoveListMove;
 import data.model.move.MoveStrength;
 import data.model.move.MoveType;
 import data.model.move.TypicalMove;
+import testdata.testdata.util.RandomUtil;
 
 /**
  * Created by andy on 11/30/15
@@ -65,5 +66,15 @@ public class MoveFactory {
         MoveStrength strength = RandomUtil.getRandomEnumValue(MoveStrength.class, randomGenerator);
 
         return new TypicalMove(name, label, moveType, startupFrames, activeFrames, recoveryFrames, blockstunFrames, hitstunFrames, damageValue, stunValue, strength);
+    }
+
+    public IMoveListMove generateMoveListMove() {
+        int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
+        String name = RandomStringUtils.randomAlphabetic(nameLength);
+        String input = "qcf|+|lp";
+        String pretextId = "id_pretext_test";
+        String posttextId = "id_posttext_test";
+        String descriptionId = "id_description_test";
+        return new MoveListMove(name, input, pretextId, posttextId, descriptionId);
     }
 }

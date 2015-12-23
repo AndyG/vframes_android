@@ -2,6 +2,7 @@ package com.angarron.sfvframedata.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import data.model.move.IDisplayableMove;
+import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
 /**
@@ -39,7 +40,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     private Context context;
     private List<Object> displayList = new ArrayList<>();
 
-    public MovesRecyclerViewAdapter(Context context, Map<MoveCategory, List<IDisplayableMove>> moves) {
+    public MovesRecyclerViewAdapter(Context context, Map<MoveCategory, List<IMoveListMove>> moves) {
         this.context = context;
         setupDisplayList(moves);
     }
@@ -63,8 +64,18 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof MoveItemViewHolder) {
             MoveItemViewHolder moveItemViewHolder = (MoveItemViewHolder) holder;
-            IDisplayableMove move = (IDisplayableMove) displayList.get(position);
-            moveItemViewHolder.label.setText(move.getName());
+            IMoveListMove move = (IMoveListMove) displayList.get(position);
+            moveItemViewHolder.label.setText(move.getNameId());
+            moveItemViewHolder.input.setText(move.getInputString());
+
+            if (!TextUtils.isEmpty(move.getPretextId())) {
+                moveItemViewHolder.pretext.setText(move.getPretextId());
+            }
+
+            if (!TextUtils.isEmpty(move.getPosttextId())) {
+                moveItemViewHolder.posttext.setText(move.getPosttextId());
+            }
+
         } else if (holder instanceof HeaderItemViewHolder) {
             HeaderItemViewHolder headerItemViewHolder = (HeaderItemViewHolder) holder;
             MoveCategory moveCategory = (MoveCategory) displayList.get(position);
@@ -76,7 +87,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     public int getItemViewType(int position) {
         if (displayList.get(position) instanceof MoveCategory) {
             return VIEW_TYPE_HEADER;
-        } else if (displayList.get(position) instanceof IDisplayableMove) {
+        } else if (displayList.get(position) instanceof IMoveListMove) {
             return VIEW_TYPE_MOVE;
         } else {
             throw new RuntimeException("could not resolve Object to category: " + displayList.get(position).getClass().getSimpleName());
@@ -88,11 +99,11 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         return displayList.size();
     }
 
-    private void setupDisplayList(Map<MoveCategory, List<IDisplayableMove>> moves) {
+    private void setupDisplayList(Map<MoveCategory, List<IMoveListMove>> moves) {
         for (MoveCategory category : categoriesOrder) {
             if (moves.containsKey(category) && !moves.get(category).isEmpty()) {
                 displayList.add(category);
-                for (IDisplayableMove move : moves.get(category)) {
+                for (IMoveListMove move : moves.get(category)) {
                     displayList.add(move);
                 }
             }
@@ -136,9 +147,16 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         private TextView label;
 
+        private TextView pretext;
+        private TextView input;
+        private TextView posttext;
+
         public MoveItemViewHolder(View v) {
             super(v);
-            label = (TextView) v.findViewById(R.id.label);
+            label = (TextView) v.findViewById(R.id.name);
+            input = (TextView) v.findViewById(R.id.input);
+            pretext = (TextView) v.findViewById(R.id.pretext);
+            posttext = (TextView) v.findViewById(R.id.posttext);
         }
     }
 }
