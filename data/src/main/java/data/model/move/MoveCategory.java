@@ -10,7 +10,7 @@ public enum MoveCategory {
     VTRIGGER("vtrigger"),
     VREVERSAL("vreversal"),
     CRITICAL_ARTS("critical_arts"),
-    UNIQUE_MOVES("unique_moves"),
+    UNIQUE_MOVES("unique_attacks"),
     THROWS("throws");
 
     private String name;
@@ -38,7 +38,7 @@ public enum MoveCategory {
                 return VSKILL;
             case "critical_arts":
                 return CRITICAL_ARTS;
-            case "unique_moves":
+            case "unique_attacks":
                 return UNIQUE_MOVES;
             case "throws":
                 return THROWS;

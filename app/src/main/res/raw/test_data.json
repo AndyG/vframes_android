@@ -407,7 +407,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Tsumujigari",
             "label": "jQh",
@@ -682,7 +682,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Drill Kick",
             "label": "DKkVkolQBB",
@@ -1077,7 +1077,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Mercury Shard",
             "label": "lOtp",
@@ -1457,7 +1457,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Knee Bullet",
             "label": "pXlCWQ",
@@ -1762,7 +1762,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Tsuitotsuken",
             "label": "jplDFaifQd",
@@ -2127,7 +2127,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Thunder Kick",
             "label": "lhSeja",
@@ -2462,7 +2462,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Head Butt",
             "label": "ArDlJRy",
@@ -2767,7 +2767,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Collarbone Breaker",
             "label": "rHHWffxb",
@@ -3117,7 +3117,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Hell Attack",
             "label": "SjwX",
@@ -3452,7 +3452,7 @@
             }
           }          
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Step Elbow",
             "label": "HAPDOSH",
@@ -3787,7 +3787,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Bull Drop",
             "label": "WlzbLrLZ",
@@ -4137,7 +4137,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Stomp Chop",
             "label": "pWAdbU",
@@ -4517,7 +4517,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Flap Spin",
             "label": "iAhDrTetCg",
@@ -4882,7 +4882,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Knee Bazooka",
             "label": "XQhWD",
@@ -5307,7 +5307,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "Opening Dagger",
             "label": "eVftRzMsDn",
@@ -5897,7 +5897,7 @@
             }
           }
         ],
-        "unique_moves": [
+        "unique_attacks": [
           {
             "name": "aGZEjKrBq",
             "label": "McYW",
