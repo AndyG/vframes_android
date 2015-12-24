@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="num_character_card_columns">4</integer>
+    <dimen name="game_over_height">0dp</dimen>
 </resources>
