@@ -21,6 +21,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial_character_select);
+        verifyDataAvailable();
         setupToolbar();
         setupClickListeners();
     }
@@ -107,4 +108,14 @@ public class CharacterSelectActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    private void verifyDataAvailable() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        if (application.getDataModel() == null) {
+            Intent startSplashIntent = new Intent(this, SplashActivity.class);
+            startActivity(startSplashIntent);
+            finish();
+        }
+    }
+
 }

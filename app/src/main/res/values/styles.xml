@@ -49,13 +49,13 @@
         <item name="android:gravity">end</item>
         <item name="android:layout_alignParentBottom">true</item>
     </style>
-    <style name="CharacterSummaryPageTitleStrip">
-        <item name="android:background">#03222e</item>
+
+    <style name="CharacterSummaryPageTabStrip">
+        <item name="android:background">@color/pager_tab_strip_background</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">#f5f5f5</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textAllCaps">true</item>
     </style>
 
 </resources>

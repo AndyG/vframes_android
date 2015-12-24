@@ -1,8 +1,10 @@
 package com.angarron.sfvframedata.ui.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -52,16 +54,12 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             finish();
         }
 
+        //Verify the data is still available. If not, send to splash screen.
+        verifyDataAvailable();
+
         //Load the toolbar based on the target character
         setupToolbar();
         setupViewPager();
-    }
-
-    private void setupViewPager() {
-        // Instantiate a ViewPager and a PagerAdapter.
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        viewPagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
-        viewPager.setAdapter(viewPagerAdapter);
     }
 
     @Override
@@ -82,6 +80,24 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
         return targetCharacterModel.getMoveList();
+    }
+
+    private void verifyDataAvailable() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        if (application.getDataModel() == null) {
+            Intent startSplashIntent = new Intent(this, SplashActivity.class);
+            startActivity(startSplashIntent);
+            finish();
+        }
+    }
+
+    private void setupViewPager() {
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
+
+        PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_tab_strip);
+        pagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.tab_indicator_color));
     }
 
     private void setupToolbar() {
