@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.angarron.sfvframedata.R;
+import com.angarron.sfvframedata.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -118,13 +119,12 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         }
 
         if (!TextUtils.isEmpty(move.getDescriptionId())) {
-            moveItemViewHolder.description.setText(move.getDescriptionId());
+            moveItemViewHolder.description.setText(StringResolver.getStringId(move.getDescriptionId()));
             moveItemViewHolder.description.setVisibility(View.VISIBLE);
         } else {
             moveItemViewHolder.description.setVisibility(View.GONE);
         }
     }
-
 
     private String getHeaderString(MoveCategory moveCategory) {
         switch (moveCategory) {

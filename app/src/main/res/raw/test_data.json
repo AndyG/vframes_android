@@ -6,135 +6,83 @@
         "critical_arts": [
           {
             "nameID": "Kanzuki-Ryu Hadorokushiki Hasha No Kata",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Kanzuki-Ryu Hokojutsu Sappo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Tenko",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_karin_tenko_posttext"
           },
           {
             "nameID": "Orochi",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Mujinkyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Ressenha",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Senha Kusabi",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Senha Resshu",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Kanzuki-Ryu Guren No Kata",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Ken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Hosho",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Senha",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Chochu",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Hochu",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Resshu",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Kusabi",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Guren Kyoho",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Yashagaeshi",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_yashagaeshi_pretext"
           }
         ],
         "vskill": [
