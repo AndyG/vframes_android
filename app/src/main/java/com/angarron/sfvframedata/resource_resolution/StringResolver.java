@@ -26,6 +26,7 @@ public class StringResolver {
         stringIdMap.put("id_close_to_grounded_opponent", R.string.close_to_grounded_opponent);
         stringIdMap.put("id_close_to_airborne_opponent", R.string.close_to_airborne_opponent);
         stringIdMap.put("id_no_input", R.string.no_input);
+        stringIdMap.put("id_hold_button", R.string.hold_button);
 
         //Karin Movelist
         stringIdMap.put("id_karin_tenko_posttext", R.string.karin_tenko_posttext);
@@ -38,6 +39,12 @@ public class StringResolver {
         stringIdMap.put("id_claw_claw_on_only", R.string.claw_claw_on_only);
         stringIdMap.put("id_claw_claw_off_only", R.string.claw_claw_off_only);
         stringIdMap.put("id_claw_switch", R.string.claw_switch);
+
+        //Chun Movelist
+        stringIdMap.put("id_up_to_three_times", R.string.chun_up_to_three_times);
+
+        //Ken Movelist
+        stringIdMap.put("id_ken_step_kick_hold_buttons", R.string.ken_step_kick_hold_buttons);
     }
 
     public static int getStringId(String key) {

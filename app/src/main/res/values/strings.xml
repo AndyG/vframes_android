@@ -40,6 +40,7 @@
     <string name="close_to_grounded_opponent">Close to Grounded Opponent</string>
     <string name="close_to_airborne_opponent">Close to Airborne Opponent</string>
     <string name="no_input">No Input</string>
+    <string name="hold_button">Hold Button</string>
 
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
@@ -54,5 +55,11 @@
     <string name="claw_claw_on_only">Claw On Only</string>
     <string name="claw_switch">Switch to Claw On/Off</string>
     <string name="during_jump_near_wall">During Jump Near Wall</string>
+
+    <!-- Chun Movelist -->
+    <string name="chun_up_to_three_times">Up to 3 Times</string>
+
+    <!-- Ken Movelist -->
+    <string name="ken_step_kick_hold_buttons">Hold Buttons to Execute A Step Kick</string>
 
 </resources>

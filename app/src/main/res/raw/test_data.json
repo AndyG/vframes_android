@@ -412,185 +412,98 @@
         "critical_arts": [
           {
             "nameID": "Hoyokusen",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Kikoken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Hyakuretsukyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Airborne Hyakuretsukyaku",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Spinning Bird Kick",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }          
         ],
         "vtrigger": [
           {
             "nameID": "Renkiko",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Sohakkei",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Rankyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "LeRLoapN",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "zWyVdSw",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "OZWaQOhLgpgAvau",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "AtwxXmqdIega",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ZDTpobv",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],        
         "throws": [
           {
             "nameID": "Koshuto",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Tenshin Shushu",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Ryuseiraku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Tsuitotsuken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Hakkei",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Senenshu",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Tenkukyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Yokusenkyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Kakurakukyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Yosokyaku",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_jump",
+            "posttextID":"id_up_to_three_times"
           },
           {
             "nameID": "Wall Jump",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_jump_near_wall"
           }
         ]
       }
@@ -600,164 +513,85 @@
         "critical_arts": [
           {
             "nameID": "Guren Enjinkyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Hadoken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Shoryuken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Heat Rush",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Senpu Nataotoshi",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Quick Step",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_ken_step_kick_hold_buttons"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "jFeIpPQMQXhKg",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "tjHurR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "APfYgiWpug",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "SJLxHCO",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ETMtpk",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],        
         "throws": [
           {
             "nameID": "Knee Bash",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Hell Wheel",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Thunder Kick",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_hold_button"
           },
           {
             "nameID": "Thunder Kick (Feint)",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Inazuma Kick",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Chin Buster",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Chin Buster 2nd",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Lion Breaker",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
