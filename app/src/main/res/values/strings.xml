@@ -37,6 +37,9 @@
     <string name="during_forward_jump">During Forward Jump</string>
     <string name="during_guard">During Guard</string>
     <string name="hold_buttons_to_attack">Hold Buttons to Attack</string>
+    <string name="close_to_grounded_opponent">Close to Grounded Opponent</string>
+    <string name="close_to_airborne_opponent">Close to Airborne Opponent</string>
+    <string name="no_input">No Input</string>
 
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>

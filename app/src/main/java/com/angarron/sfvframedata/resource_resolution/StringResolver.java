@@ -23,6 +23,9 @@ public class StringResolver {
         stringIdMap.put("id_during_forward_jump", R.string.during_forward_jump);
         stringIdMap.put("id_during_guard", R.string.during_guard);
         stringIdMap.put("id_hold_buttons_to_attack", R.string.hold_buttons_to_attack);
+        stringIdMap.put("id_close_to_grounded_opponent", R.string.close_to_grounded_opponent);
+        stringIdMap.put("id_close_to_airborne_opponent", R.string.close_to_airborne_opponent);
+        stringIdMap.put("id_no_input", R.string.no_input);
 
         //Karin Movelist
         stringIdMap.put("id_karin_tenko_posttext", R.string.karin_tenko_posttext);
