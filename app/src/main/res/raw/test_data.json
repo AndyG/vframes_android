@@ -203,199 +203,113 @@
         "critical_arts": [
           {
             "nameID": "Bloody Rain",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Flying Barcelona Attack",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Izuna Drop",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_close_to_opponent"
           },
           {
             "nameID": "Grand Izuna Drop",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent",
+            "posttextID":"id_claw_claw_off_only"
           },
           {
             "nameID": "Crimson Terror",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Aurora Spin Edge",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_claw_claw_on_only"
           },
           {
             "nameID": "Switch Claw",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_claw_switch"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Bloody Kiss - Torero",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Bloody Kiss - Rojo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Bloody Kiss - Azul",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           }
         ],
         "vreversal": [
           {
             "nameID": "Backslash",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           },
           {
             "nameID": "Short Backslash",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Matador Turn",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_hold_buttons_to_attack"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "tuclG",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "AypOedpToK",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "aWEfwvesyqaVHtf",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "bbJkxeCySGsVcbv",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "pgzCA",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],        
         "throws": [
           {
             "nameID": "Rainbow Suplex",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Crescent Line",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Stardust Shot",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
+            "input": "qcf|+|lp"          }
         ],
         "unique_attacks": [
           {
             "nameID": "Mercury Shard",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Buster Claw",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_claw_claw_on_only"
           },
           {
             "nameID": "Matador Flash",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_claw_claw_on_only"
           },
           {
             "nameID": "Matador Blitz",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_claw_claw_off_only"
           },
           {
             "nameID": "Wall Jump",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_jump_near_wall"
           }
         ]
       }
