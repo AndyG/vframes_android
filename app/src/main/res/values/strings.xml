@@ -2,6 +2,10 @@
     <string name="app_name">VFrames</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Titles on Character Summary Page -->
+    <string name="moves_list_title">Move List</string>
+    <string name="frame_data_title">Frame Data</string>
+
     <!--Character Names -->
     <string name="ryu_name">RYU</string>
     <string name="chun_name">CHUN-LI</string>

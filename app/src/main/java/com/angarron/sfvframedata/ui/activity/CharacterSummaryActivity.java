@@ -2,10 +2,10 @@ package com.angarron.sfvframedata.ui.activity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -15,8 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
+import com.angarron.sfvframedata.adapter.SummaryPagerAdapter;
 import com.angarron.sfvframedata.application.VFramesApplication;
+import com.angarron.sfvframedata.ui.fragment.MoveListFragment;
 
 import java.util.List;
 import java.util.Map;
@@ -29,11 +30,14 @@ import data.model.move.MoveCategory;
 
 //This activity will house a ViewSwitcher which will have
 //move list and frame data for the selected character.
-public class CharacterSummaryActivity extends AppCompatActivity {
+public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
 
     private CharacterID targetCharacter;
+
+    private ViewPager viewPager;
+    private PagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,14 @@ public class CharacterSummaryActivity extends AppCompatActivity {
 
         //Load the toolbar based on the target character
         setupToolbar();
-        setupRecyclerView();
+        setupViewPager();
+    }
+
+    private void setupViewPager() {
+        // Instantiate a ViewPager and a PagerAdapter.
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
     }
 
     @Override
@@ -63,6 +74,14 @@ public class CharacterSummaryActivity extends AppCompatActivity {
                 Log.e(VFramesApplication.APP_LOGGING_TAG, "invalid menu item clicked: " + item.getItemId());
                 return false;
         }
+    }
+
+    @Override
+    public Map<MoveCategory, List<IMoveListMove>> getMoveList() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        return targetCharacterModel.getMoveList();
     }
 
     private void setupToolbar() {
@@ -89,20 +108,6 @@ public class CharacterSummaryActivity extends AppCompatActivity {
             }
         }
     }
-
-    private void setupRecyclerView() {
-        RecyclerView movesRecyclerView = (RecyclerView) findViewById(R.id.moves_recycler_view);
-        movesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        movesRecyclerView.setAdapter(new MovesRecyclerViewAdapter(this, getMoves()));
-    }
-
-    private Map<MoveCategory, List<IMoveListMove>> getMoves() {
-        VFramesApplication application = (VFramesApplication) getApplication();
-        IDataModel dataModel = application.getDataModel();
-        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        return targetCharacterModel.getMoveList();
-    }
-
 
     private int getCharacterDrawableResource() {
         switch(targetCharacter) {
