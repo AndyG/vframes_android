@@ -90,6 +90,6 @@
 
     <!-- Necalli Movelist -->
     <string name="necalli_vskill_control_distance">Control Distance Using Direction</string>
-    <string name="frame_data_not_available">Frame data will become available as Street Fighter V nears release. Thank you for your patience.</string>
+    <string name="frame_data_not_available">Detailed frame data will become available as Street Fighter V nears release. Thank you for your patience.</string>
 
 </resources>
