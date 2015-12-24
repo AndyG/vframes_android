@@ -602,142 +602,75 @@
           {
             "nameID": "Bolshoi Russian Suplex",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "specials": [
           {
             "nameID": "Screw Pile Driver",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Double Lariat",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Siberian Express",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Borscht Dynamite",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_vertical_or_forward_jump"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Cyclone Lariat",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_hold_buttons_for_special_lariat"
           }
         ],
         "vreversal": [
           {
             "nameID": "Muscle Explosion",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Iron Muscle",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_can_move_forward_while_holding_buttons"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "qOJsdkxjuMFDP",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "qolQvvQdGzmA",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "vZTBMMgAlHyTqx",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "eiIUw",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "TgVyXRhYymBR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],       
         "throws": [
           {
             "nameID": "Atomic Drop",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Captured",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Head Butt",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Knee Hammer",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Flying Body Press",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           }
         ]
       }
@@ -747,164 +680,84 @@
         "critical_arts": [
           {
             "nameID": "Shinku Hadoken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Denjin Hadoken",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_vtrigger"
           }
         ],
         "specials": [
           {
             "nameID": "Hadoken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Shoryuken",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Denjin Renki",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Hashogeki",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Mind's Eye",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "ROauX",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "tLAqsS",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "fwJCvLrntRU",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "entvtmDuFBg",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "oWBjckJHdXJo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],       
         "throws": [
           {
             "nameID": "Shoulder Throw",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Somersault Throw",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Collarbone Breaker",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Solar Plexus Strike",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Axe Kick",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Jodan Nirengeki",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Jodan Sanrengeki",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
@@ -915,149 +768,77 @@
           {
             "nameID": "Ultimate Psycho Crusher",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_can_be_done_in_air"
           }
         ],
         "specials": [
           {
             "nameID": "Psycho Blast",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Double Knee Press",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Head Press",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Somersault Skull Diver",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_after_head_press"
           },
           {
             "nameID": "Devil Reverse",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_before_head_press"
           },
           {
             "nameID": "Psycho Inferno",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Psycho Power",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Psycho Burst",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Psycho Reflect",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_pyscho_reflect_hold_buttons"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "amYXlWtVf",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "CAZqxABMVmPiEXx",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "EEbhPc",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "RTfLbv",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ZJTmpqVrx",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],      
         "throws": [
           {
             "nameID": "Psycho Impact",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Psycho Fall",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Hell Attack",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Psycho Axe",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
@@ -1067,171 +848,90 @@
         "critical_arts": [
           {
             "nameID": "Inazuma Spin Hold",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }          
         ],
         "specials": [
           {
             "nameID": "Bolt Charge",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Split River",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Rodeo Break",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Thunder Clap",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_laura_hold_buttons_to_power_up"
           },
           {
             "nameID": "Sunset Wheel",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Spark Show",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }       
         ],
         "vreversal": [
           {
             "nameID": "Double Slap",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }          
         ],
         "vskill": [
           {
             "nameID": "Volty Line",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Linear Movement - Avante",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Esquiva",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Finta",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_hold_buttons_to_attack"
           }          
-        ],
-        "normals": [
-          {
-            "nameID": "OEOilgEheroEEJo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "FYuBX",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "TgEuHPPNJb",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "rEVJDTtYC",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ZylDnNHuoqJCWte",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],        
         "throws": [
           {
             "nameID": "Seoi Throw",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Pullback Hold",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }          
         ],
         "unique_attacks": [
           {
             "nameID": "Step Elbow",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Twist Barrage",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Dual Crash",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }          
         ]
       }
@@ -1241,171 +941,89 @@
         "critical_arts": [
           {
             "nameID": "Skip to My Chain",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Bull Head",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Bull Horn",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_hold_and_release"
           },
           {
             "nameID": "Hanging Chain",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_birdie_hanging_chain_posttext"
           },
           {
             "nameID": "Killing Head",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Bull Revenger",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Enjoy Time",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Pepper Pot",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Break Time",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Banana Time",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Drink Time",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "psYySsS",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "XEdAR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "LjWQQnTtdPwDpAZ",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "PRkdzyZxQBGy",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "MymEPBIkAzMYr",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],       
         "throws": [
           {
             "nameID": "Bad Skull",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Bad Chain",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Bull Drop",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Bull Charge",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Bull Slider",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Bad Hammer",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
@@ -1416,184 +1034,102 @@
           {
             "nameID": "Peach Assault",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_mika_vskill_increases_power"
           }
         ],
         "specials": [
           {
             "nameID": "Shooting Peach",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Wingless Airplane",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_mika_vskill_increases_power"
           },
           {
             "nameID": "Rainbow Typhoon",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent",
+            "posttextID":"id_mika_vskill_increases_power"
           },
           {
             "nameID": "Brimstone",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent",
+            "posttextID":"id_mika_vskill_increases_power"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Nadeshiko (Above)",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Nadeshiko (Front)",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Nadeshiko (Behind)",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Peach Gator",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Mic Performance",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
-        "normals": [
-          {
-            "nameID": "JqvTNWArQE",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "GumoIGjKZYXFbR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "LfSTzhHHrhlAGN",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "sIgIUS",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "dppRdc",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_mika_hold_buttons_to_power_up_throws"
           }
         ],
         "throws": [
           {
             "nameID": "Daydream Headlock",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Dream Driver",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_crouching_opponent"
           },
           {
             "nameID": "Sell Down",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Stomp Chop",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Divebomb",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Lady Mika",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Passion Press",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Passion Rope Throw (Forward)",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Passion Rope Throw (Backward)",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
@@ -1603,178 +1139,96 @@
         "critical_arts": [
           {
             "nameID": "Altair",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Spinning Mixer",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_rashid_repeat_buttons_to_extend"
           },
           {
             "nameID": "Eagle Spike",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Airborne Eagle Spike",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Whirlwind Shot",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Ysaar",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Sliding Roll",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Front Flip",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           },
           {
             "nameID": "Airborne Eagle Spike",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           },
           {
             "nameID": "Rolling Assault",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           },
           {
             "nameID": "Nail Assault",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           }
-        ],
-        "normals": [
-          {
-            "nameID": "InMcbnVfLZqwXC",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "SiqINRDFvM",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "JQBDkiO",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "jpibtA",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "WHUmGOTldHnGvuB",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],      
         "throws": [
           {
             "nameID": "Rising Glider",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Rising Sun",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Flap Spin",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Beak Assault",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Spinning Mixer",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_run",
+            "posttextID":"id_rashid_repeat_buttons_to_extend"            
           },
           {
             "nameID": "Eagle Spike",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_run"
           },
           {
             "nameID": "Wall Jump",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_jump_near_wall"
           }
         ]
       }
@@ -1784,220 +1238,115 @@
         "critical_arts": [
           {
             "nameID": "Judgment Saber",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "specials": [
           {
             "nameID": "Sonic Boom",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_nash_press_for_second_boom"
           },
           {
             "nameID": "Sonic Scythe",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Moonsault Slash",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Tragedy Assault",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Sonic Move - Hide",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           },
           {
             "nameID": "Sonic Move - Blitz Air",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           },
           {
             "nameID": "Sonic Move - Steel Air",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"            
           }
         ],
         "vreversal": [
           {
             "nameID": "Sonic Move - Avoid",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Bullet Clear",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "CSZOfFqChSuemS",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "GZbZwPCvxplY",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "TbKbRSjwCpBcp",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "pQhYWNZFmMeSyP",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "fqKBy",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],       
         "throws": [
           {
             "nameID": "Dragon Suplex",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Target Down",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Air Jack",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Knee Bazooka",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Jumping Sobat",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Chopping Assault",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Step Kick",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Spinning Back Knuckle",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Side Knee Attack",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Rapid Punch",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Rapid Kick",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Wind Shear",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Down Burst",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Raptor Combination",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
@@ -2007,450 +1356,94 @@
         "critical_arts": [
           {
             "nameID": "Ceremony of Honor",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Soul Offering",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_vtrigger"
           }
         ],
         "specials": [
           {
             "nameID": "The Disc's Guidance",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Raging Light",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Mask of Tlalli",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Valiant Rebellion",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Torrent of Power",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "The Calling",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Culminated Power",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_necalli_vskill_control_distance"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "LTBjyCv",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "TeMTOhGr",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "sCbHzCcc",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "NUVxTuQsVYZJM",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "iXYAdqWk",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],       
         "throws": [
           {
             "nameID": "Soul Sealer",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Soul Discriminator",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Opening Dagger",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Road of the Sun",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Sacrificial Altar",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ]
       }
     },
     "fang": {
       "move_list": {
-        "critical_arts": [
-          {
-            "nameID": "nZuIjFr",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "iknTepviLDluT",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "cqDeyCyncIn",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "hadfpyKtIA",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "SvBtuBQZuvLbAQ",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
-        "specials": [
-          {
-            "nameID": "OcdfcXHFIIuQL",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "MZVUKsOHjfnFq",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "rAFUjkFVlYo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "cdQaRYJ",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "zYRpcOeAKxr",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
-        "vtrigger": [
-          {
-            "nameID": "dXdWgR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "rGKbjyhliftjfmt",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ZApdLuDS",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "HyZumaSEVnuBs",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "sJSifWWIg",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
-        "vreversal": [
-          {
-            "nameID": "HNikNEdlmhdpn",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "iiejFnAgKtSpYw",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "yUEGBDTGK",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "XwXyJ",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "vzrPVjbjP",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
         "vskill": [
           {
-            "nameID": "WYYgmEK",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "CbeJCEFGFGsYR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "MSBzaOzF",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ZQtRo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "zCGlalRlGwK",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "nameID": "Nishodoku",
+            "input": "qcf|+|lp"
           }
-        ],
-        "normals": [
+        ],      
+        "critical_arts": [
           {
-            "nameID": "RRvGxtlLoRhxH",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "TCOlYIMqzZlgbC",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "NHNnivgwvQzbHQx",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "SuuKXytdLeMejP",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "bsSsjqqWJXcFSU",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
-        "throws": [
-          {
-            "nameID": "WtChhtQbc",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "ATpBgtOupiyd",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "IsSAY",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "SPHzjxWPe",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "OCHVvufReAKPo",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
-        "unique_attacks": [
-          {
-            "nameID": "aGZEjKrBq",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "rBMxzhYB",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "yCKgsr",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "zkmIWJzkEuzN",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "oyFMGDsQfZsR",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "nameID": "Flappy Bird?",
+            "input": "qcf|+|lp"
           }
         ]
       }
