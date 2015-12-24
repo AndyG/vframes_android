@@ -30,8 +30,12 @@
     <string name="vtrigger_header">V-Trigger</string>
     <string name="vreversal_header">V-Reversal</string>
 
+    <!-- Move List General Strings -->
+    <string name="close_to_opponent">(Close To Opponent)</string>
+
     <!-- Strings for Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
     <string name="karin_yashagaeshi_pretext">(During Guard)</string>
+    <string name="karin_meioken_posttext">Hold buttons to change properties</string>
 
 </resources>

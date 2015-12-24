@@ -14,8 +14,14 @@ public class StringResolver {
 
     static {
         stringIdMap = new HashMap<>();
+
+        //General Movelist
+        stringIdMap.put("id_close_to_opponent", R.string.close_to_opponent);
+
+        //Karin Movelist
         stringIdMap.put("id_karin_tenko_posttext", R.string.karin_tenko_posttext);
         stringIdMap.put("id_yashagaeshi_pretext", R.string.karin_yashagaeshi_pretext);
+        stringIdMap.put("id_karin_meioken_posttext", R.string.karin_meioken_posttext);
     }
 
     public static int getStringId(String key) {

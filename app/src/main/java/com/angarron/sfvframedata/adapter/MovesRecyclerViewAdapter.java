@@ -105,14 +105,14 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         moveItemViewHolder.input.setText(move.getInputString());
 
         if (!TextUtils.isEmpty(move.getPretextId())) {
-            moveItemViewHolder.pretext.setText(move.getPretextId());
+            moveItemViewHolder.pretext.setText(StringResolver.getStringId(move.getPretextId()));
             moveItemViewHolder.pretext.setVisibility(View.VISIBLE);
         } else {
             moveItemViewHolder.pretext.setVisibility(View.GONE);
         }
 
         if (!TextUtils.isEmpty(move.getPosttextId())) {
-            moveItemViewHolder.posttext.setText(move.getPosttextId());
+            moveItemViewHolder.posttext.setText(StringResolver.getStringId(move.getPosttextId()));
             moveItemViewHolder.posttext.setVisibility(View.VISIBLE);
         } else {
             moveItemViewHolder.posttext.setVisibility(View.GONE);
