@@ -38,7 +38,7 @@ public class StringResolver {
         stringIdMap.put("id_karin_meioken_posttext", R.string.karin_meioken_posttext);
 
         //Dhalsim Movelist
-        stringIdMap.put("id_dhalsim_gale_pretext", R.string.dhalsim_gale_pretext);
+        stringIdMap.put("id_dhalsim_gale_pretext", R.string.during_vertical_or_forward_jump);
 
         //Claw Movelist
         stringIdMap.put("id_claw_claw_on_only", R.string.claw_claw_on_only);

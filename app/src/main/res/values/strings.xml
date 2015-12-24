@@ -33,31 +33,28 @@
     <!-- Move List General Strings -->
     <string name="close_to_opponent">(Close To Opponent)</string>
     <string name="can_be_done_in_air">Can be done in air</string>
-    <string name="during_jump">During Jump</string>
-    <string name="during_forward_jump">During Forward Jump</string>
-    <string name="during_vertical_or_forward_jump">During Vertical or Forward Jump</string>
-    <string name="during_guard">During Guard</string>
+    <string name="during_jump">(During Jump)</string>
+    <string name="during_forward_jump">(During Forward Jump)</string>
+    <string name="during_vertical_or_forward_jump">(During Vertical or Forward Jump)</string>
+    <string name="during_guard">(During Guard)</string>
     <string name="hold_buttons_to_attack">Hold Buttons to Attack</string>
-    <string name="close_to_grounded_opponent">Close to Grounded Opponent</string>
-    <string name="close_to_airborne_opponent">Close to Airborne Opponent</string>
+    <string name="close_to_grounded_opponent">(Close to Grounded Opponent)</string>
+    <string name="close_to_airborne_opponent">(Close to Airborne Opponent)</string>
     <string name="no_input">No Input</string>
     <string name="hold_button">Hold Button</string>
-    <string name="during_jump_near_wall">During Jump Near Wall</string>
-    <string name="during_vtrigger">During VTrigger</string>
+    <string name="during_jump_near_wall">(During Jump Near Wall)</string>
+    <string name="during_vtrigger">(During VTrigger)</string>
     <string name="hold_and_release">Hold And Release</string>
-    <string name="close_to_crouching_opponent">Close to Crouching Opponent</string>
-    <string name="during_run">During Run</string>
+    <string name="close_to_crouching_opponent">(Close to Crouching Opponent)</string>
+    <string name="during_run">(During Run)</string>
 
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
     <string name="karin_meioken_posttext">Hold buttons to change properties</string>
 
-    <!-- Dhalsim Movelist -->
-    <string name="dhalsim_gale_pretext">During Vertical or Forward Jump</string>
-
     <!-- Claw Movelist -->
-    <string name="claw_claw_off_only">Claw Off Only</string>
-    <string name="claw_claw_on_only">Claw On Only</string>
+    <string name="claw_claw_off_only">(Claw Off Only)</string>
+    <string name="claw_claw_on_only">(Claw On Only)</string>
     <string name="claw_switch">Switch to Claw On/Off</string>
 
     <!-- Chun Movelist -->
@@ -72,8 +69,8 @@
 
     <!--Dictator Movelist -->
     <string name="dictator_pyscho_reflect_hold_buttons">Hold Buttons to Throw Back a Projectile</string>
-    <string name="dictator_after_head_press">After Head Press Hits</string>
-    <string name="dictator_before_head_press">Before Head Press Hits</string>
+    <string name="dictator_after_head_press">(After Head Press Hits)</string>
+    <string name="dictator_before_head_press">(Before Head Press Hits)</string>
     <string name="laura_hold_buttons_to_power_up">Hold Buttons to Power Up</string>
     <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Button\nCancel: Press Kick</string>
 

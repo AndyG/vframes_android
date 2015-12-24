@@ -30,12 +30,12 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     //Categories which are missing for a particular character will not be displayed.
     private static MoveCategory[] categoriesOrder = {
             MoveCategory.UNIQUE_MOVES,
-            MoveCategory.THROWS,
             MoveCategory.SPECIALS,
             MoveCategory.VSKILL,
             MoveCategory.VTRIGGER,
             MoveCategory.VREVERSAL,
-            MoveCategory.CRITICAL_ARTS
+            MoveCategory.CRITICAL_ARTS,
+            MoveCategory.THROWS
     };
 
     private Context context;
