@@ -82,7 +82,7 @@
           {
             "nameID": "Yashagaeshi",
             "input": "qcf|+|lp",
-            "pretextID":"id_yashagaeshi_pretext"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
@@ -118,156 +118,82 @@
           {
             "nameID": "Yoga Sunburst",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_can_be_done_in_air"
           }
         ],
         "specials": [
           {
             "nameID": "Yoga Fire",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Yoga Flame",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Yoga Gale",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_dhalsim_gale_pretext"
           },
           {
             "nameID": "Yoga Teleport",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "posttextID":"id_can_be_done_in_air"
           }          
         ],
         "vtrigger": [
           {
             "nameID": "Yoga Burner",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }
         ],
         "vreversal": [
           {
             "nameID": "Yoga Mala",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Yoga Float",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Yoga Float (Airborne)",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_jump"
           }
-        ],
-        "normals": [
-          {
-            "nameID": "PhrHG",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "GzhehVRsmqJPSTk",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "yZvSEZkSpkw",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "cPqrlUdQIDiVN",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          },
-          {
-            "nameID": "oTUXk",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
-          }
-        ],
+        ],        
         "throws": [
           {
             "nameID": "Yoga Rocket",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Yoga Hoop",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Drill Kick",
             "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "pretextID":"id_during_jump"
           },
           {
             "nameID": "Yoga Anvil",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Yoga Upper",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           },
           {
             "nameID": "Divine Kick",
-            "input": "qcf|+|lp",
-            "pretextID":"id_pretext_test",
-            "posttextID":"id_posttext_test",
-            "descriptionID":"id_description_test"
+            "input": "qcf|+|lp"
           }          
         ]
       }
