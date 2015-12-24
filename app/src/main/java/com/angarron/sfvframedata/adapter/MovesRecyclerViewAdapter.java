@@ -63,19 +63,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof MoveItemViewHolder) {
-            MoveItemViewHolder moveItemViewHolder = (MoveItemViewHolder) holder;
-            IMoveListMove move = (IMoveListMove) displayList.get(position);
-            moveItemViewHolder.label.setText(move.getNameId());
-            moveItemViewHolder.input.setText(move.getInputString());
-
-            if (!TextUtils.isEmpty(move.getPretextId())) {
-                moveItemViewHolder.pretext.setText(move.getPretextId());
-            }
-
-            if (!TextUtils.isEmpty(move.getPosttextId())) {
-                moveItemViewHolder.posttext.setText(move.getPosttextId());
-            }
-
+            setupMoveItemViewHolder((MoveItemViewHolder) holder, position);
         } else if (holder instanceof HeaderItemViewHolder) {
             HeaderItemViewHolder headerItemViewHolder = (HeaderItemViewHolder) holder;
             MoveCategory moveCategory = (MoveCategory) displayList.get(position);
@@ -109,6 +97,34 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             }
         }
     }
+
+    private void setupMoveItemViewHolder(MoveItemViewHolder moveItemViewHolder, int position) {
+        IMoveListMove move = (IMoveListMove) displayList.get(position);
+        moveItemViewHolder.label.setText(move.getNameId());
+        moveItemViewHolder.input.setText(move.getInputString());
+
+        if (!TextUtils.isEmpty(move.getPretextId())) {
+            moveItemViewHolder.pretext.setText(move.getPretextId());
+            moveItemViewHolder.pretext.setVisibility(View.VISIBLE);
+        } else {
+            moveItemViewHolder.pretext.setVisibility(View.GONE);
+        }
+
+        if (!TextUtils.isEmpty(move.getPosttextId())) {
+            moveItemViewHolder.posttext.setText(move.getPosttextId());
+            moveItemViewHolder.posttext.setVisibility(View.VISIBLE);
+        } else {
+            moveItemViewHolder.posttext.setVisibility(View.GONE);
+        }
+
+        if (!TextUtils.isEmpty(move.getDescriptionId())) {
+            moveItemViewHolder.description.setText(move.getDescriptionId());
+            moveItemViewHolder.description.setVisibility(View.VISIBLE);
+        } else {
+            moveItemViewHolder.description.setVisibility(View.GONE);
+        }
+    }
+
 
     private String getHeaderString(MoveCategory moveCategory) {
         switch (moveCategory) {
@@ -146,10 +162,11 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     private class MoveItemViewHolder extends RecyclerView.ViewHolder {
 
         private TextView label;
-
         private TextView pretext;
         private TextView input;
         private TextView posttext;
+        private TextView description;
+        private View bottomDivider;
 
         public MoveItemViewHolder(View v) {
             super(v);
@@ -157,6 +174,8 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             input = (TextView) v.findViewById(R.id.input);
             pretext = (TextView) v.findViewById(R.id.pretext);
             posttext = (TextView) v.findViewById(R.id.posttext);
+            description = (TextView) v.findViewById(R.id.description);
+            bottomDivider = v.findViewById(R.id.bottom_divider);
         }
     }
 }

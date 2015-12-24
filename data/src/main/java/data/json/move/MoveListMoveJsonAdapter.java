@@ -21,12 +21,20 @@ public class MoveListMoveJsonAdapter {
     }
 
     public static IMoveListMove JsonToMove(JsonObject moveJson) {
-        String nameId = moveJson.get("nameID").getAsString();
-        String input = moveJson.get("input").getAsString();
-        String pretextId = moveJson.get("pretextID").getAsString();
-        String posttextId = moveJson.get("posttextID").getAsString();
-        String descriptionId = moveJson.get("descriptionID").getAsString();
+        String nameId = getJsonStringValue(moveJson, "nameID");
+        String input = getJsonStringValue(moveJson, "input");
+        String pretextId = getJsonStringValue(moveJson, "pretextID");
+        String posttextId = getJsonStringValue(moveJson, "posttextID");
+        String descriptionId = getJsonStringValue(moveJson, "descriptionID");
 
         return new MoveListMove(nameId, input, pretextId, posttextId, descriptionId);
+    }
+
+    private static String getJsonStringValue(JsonObject jsonObject, String key) {
+        if (jsonObject.has(key)) {
+            return jsonObject.get(key).getAsString();
+        } else {
+            return null;
+        }
     }
 }

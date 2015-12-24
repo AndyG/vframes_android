@@ -43,5 +43,7 @@
     <color name="card_text_color">#ccFFFFFF</color>
     <color name="summary_text_color">#ccFFFFFF</color>
     <color name="move_name_background">#c4c4c4</color>
+    <color name="divider_color">#b7b7b7</color>
+    <color name="description_background">#9cb4dc</color>
 
 </resources>
