@@ -3,13 +3,18 @@ package com.angarron.sfvframedata.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.angarron.sfvframedata.R;
 import com.angarron.sfvframedata.resource_resolution.StringResolver;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,7 +107,13 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     private void setupMoveItemViewHolder(MoveItemViewHolder moveItemViewHolder, int position) {
         IMoveListMove move = (IMoveListMove) displayList.get(position);
         moveItemViewHolder.label.setText(move.getNameId());
-        moveItemViewHolder.input.setText(move.getInputString());
+
+//        List<InputElement> inputElements = parseInput(move.getInputString());
+//        for (InputElement element : inputElements) {
+        moveItemViewHolder.input.removeAllViews();
+        for (int i = 0; i < 3; i++) {
+            moveItemViewHolder.input.addView(getViewForInput());
+        }
 
         if (!TextUtils.isEmpty(move.getPretextId())) {
             moveItemViewHolder.pretext.setText(StringResolver.getStringId(move.getPretextId()));
@@ -125,6 +136,21 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             moveItemViewHolder.description.setVisibility(View.GONE);
         }
     }
+
+    private View getViewForInput() {
+        ImageView imageView = new ImageView(context);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(dpToPixels(40), dpToPixels(40));
+        layoutParams.setMargins(dpToPixels(3), dpToPixels(10), dpToPixels(3), dpToPixels(10));
+        imageView.setLayoutParams(layoutParams);
+        imageView.setBackgroundColor(context.getResources().getColor(R.color.tab_indicator_color));
+        return imageView;
+    }
+
+//    private LinearLayout getInputLayout(String inputString) {
+//        ImageView imageView = new ImageView(context);
+//        imageView.setLayoutParams(new LinearLayout.LayoutParams(dpToPixels(20), dpToPixels(20)));
+//        imageView.setBackgroundColor(context.getResources().getColor(R.color.tab_indicator_color));
+//    }
 
     private String getHeaderString(MoveCategory moveCategory) {
         switch (moveCategory) {
@@ -163,7 +189,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         private TextView label;
         private TextView pretext;
-        private TextView input;
+        private LinearLayout input;
         private TextView posttext;
         private TextView description;
         private View bottomDivider;
@@ -171,11 +197,17 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         public MoveItemViewHolder(View v) {
             super(v);
             label = (TextView) v.findViewById(R.id.name);
-            input = (TextView) v.findViewById(R.id.input);
+            input = (LinearLayout) v.findViewById(R.id.input_container);
             pretext = (TextView) v.findViewById(R.id.pretext);
             posttext = (TextView) v.findViewById(R.id.posttext);
             description = (TextView) v.findViewById(R.id.description);
             bottomDivider = v.findViewById(R.id.bottom_divider);
         }
     }
+
+    //Stolen from http://stackoverflow.com/a/5960030
+    private int dpToPixels(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
+    }
+
 }
