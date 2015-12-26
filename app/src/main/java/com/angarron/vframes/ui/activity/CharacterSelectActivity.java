@@ -1,12 +1,15 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.angarron.vframes.R;
@@ -24,6 +27,33 @@ public class CharacterSelectActivity extends AppCompatActivity {
         verifyDataAvailable();
         setupToolbar();
         setupClickListeners();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_feedback:
+                sendFeedback();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void sendFeedback() {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        String uriText = "mailto:" + Uri.encode(getString(R.string.feedback_email_address)) +
+                "?subject=" + Uri.encode(getString(R.string.feedback_email_subject));
+        Uri uri = Uri.parse(uriText);
+        intent.setData(uri);
+        startActivity(Intent.createChooser(intent, getString(R.string.send_feedback)));
     }
 
     private void setupClickListeners() {
