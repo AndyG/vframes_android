@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Overall App Theme -->
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="off_white">#f5f5f5</color>
 
     <!-- Character Accents Translucent -->
     <color name="ryu_accent_translucent">#cc355547</color>

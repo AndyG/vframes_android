@@ -6,27 +6,27 @@
     <string name="feedback_email_address" translatable="false">vframesapp@gmail.com</string>
     <string name="feedback_email_subject">VFrames Feedback</string>
 
-
     <!-- Titles on Character Summary Page -->
+    <string name="summary_toolbar_title">%1$s Moves</string>
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>
 
     <!--Character Names -->
-    <string name="ryu_name">RYU</string>
-    <string name="chun_name">CHUN-LI</string>
-    <string name="cammy_name">CAMMY</string>
-    <string name="birdie_name">BIRDIE</string>
-    <string name="dictator_name">M. BISON</string>
-    <string name="nash_name">NASH</string>
-    <string name="mika_name">R. MIKA</string>
-    <string name="necalli_name">NECALLI</string>
-    <string name="claw_name">VEGA</string>
-    <string name="rashid_name">RASHID</string>
-    <string name="karin_name">KARIN</string>
-    <string name="ken_name">KEN</string>
-    <string name="laura_name">LAURA</string>
-    <string name="zangief_name">ZANGIEF</string>
-    <string name="dhalsim_name">DHALSIM</string>
+    <string name="ryu_name">Ryu</string>
+    <string name="chun_name">Chun-Li</string>
+    <string name="cammy_name">Cammy</string>
+    <string name="birdie_name">Birdie</string>
+    <string name="dictator_name">M. Bison</string>
+    <string name="nash_name">Nash</string>
+    <string name="mika_name">R. Mika</string>
+    <string name="necalli_name">Necalli</string>
+    <string name="claw_name">Vega</string>
+    <string name="rashid_name">Rashid</string>
+    <string name="karin_name">Karin</string>
+    <string name="ken_name">Ken</string>
+    <string name="laura_name">Laura</string>
+    <string name="zangief_name">Zangief</string>
+    <string name="dhalsim_name">Dhalsim</string>
     <string name="fang_name">F.A.N.G</string>
 
     <!-- Headers for Move List -->

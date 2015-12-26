@@ -30,6 +30,7 @@
 
     <style name="CharacterCardTextStyle">
         <item name="android:textStyle">italic</item>
+        <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/character_card_text_size</item>
         <item name="android:paddingRight">@dimen/character_card_text_padding</item>
         <item name="android:textColor">@color/card_text_color</item>
@@ -41,20 +42,29 @@
 
     <style name="CharacterSummaryTextStyle">
         <item name="android:textStyle">italic</item>
+        <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/character_summary_text_size</item>
         <item name="android:paddingRight">@dimen/character_summary_text_padding</item>
         <item name="android:textColor">@color/summary_text_color</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">end</item>
-        <item name="android:layout_alignParentBottom">true</item>
     </style>
 
     <style name="CharacterSummaryPageTabStrip">
         <item name="android:background">@color/pager_tab_strip_background</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#f5f5f5</item>
+        <item name="android:textColor">@color/off_white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/off_white</item>
+    </style>
+
+    <style name="toolbar_text" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/off_white</item>
         <item name="android:textSize">20sp</item>
     </style>
 

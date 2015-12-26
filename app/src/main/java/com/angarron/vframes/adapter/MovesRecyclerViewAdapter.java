@@ -139,8 +139,8 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     private View getViewForInput() {
         ImageView imageView = new ImageView(context);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(dpToPixels(40), dpToPixels(40));
-        layoutParams.setMargins(dpToPixels(3), dpToPixels(10), dpToPixels(3), dpToPixels(10));
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(dpToPixels(30), dpToPixels(30));
+        layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
         imageView.setLayoutParams(layoutParams);
         imageView.setBackgroundColor(context.getResources().getColor(R.color.tab_indicator_color));
         return imageView;
@@ -192,7 +192,6 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         private LinearLayout input;
         private TextView posttext;
         private TextView description;
-        private View bottomDivider;
 
         public MoveItemViewHolder(View v) {
             super(v);
@@ -201,7 +200,6 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             pretext = (TextView) v.findViewById(R.id.pretext);
             posttext = (TextView) v.findViewById(R.id.posttext);
             description = (TextView) v.findViewById(R.id.description);
-            bottomDivider = v.findViewById(R.id.bottom_divider);
         }
     }
 

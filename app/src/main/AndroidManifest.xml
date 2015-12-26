@@ -30,7 +30,6 @@
 
         <activity
             android:name="com.angarron.vframes.ui.activity.CharacterSummaryActivity"
-            android:label=""
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 

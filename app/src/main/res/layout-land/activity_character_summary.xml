@@ -14,24 +14,6 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextAppearance="@style/toolbar_text"/>
 
-    <RelativeLayout
-        android:id="@+id/toolbar_container"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/summary_image_container_height">
-
-        <ImageView
-            android:id="@+id/summary_character_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:id="@+id/summary_accent_bar"
-            style="@style/CharacterSummaryTextStyle"
-            android:layout_alignParentBottom="true"
-            android:elevation="4dp"/>
-
-    </RelativeLayout>
-
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"

@@ -1,6 +1,7 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -10,6 +11,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +22,7 @@ import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
+import com.angarron.vframes.util.FeedbackUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -63,8 +66,18 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
+            case R.id.action_feedback:
+                FeedbackUtil.sendFeedback(this);
+                return true;
             case android.R.id.home:
                 finish();
                 return true;
@@ -109,20 +122,20 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-            ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
-            summaryCharacterImage.setImageResource(getCharacterDrawableResource());
-            TextView summaryAccentBar = (TextView) findViewById(R.id.summary_accent_bar);
-            summaryAccentBar.setText(getNameResource());
-            summaryAccentBar.setBackgroundResource(getTranslucentCharacterAccentColor());
+            String toolbarTitleFormat = getString(R.string.summary_toolbar_title);
+            String characterName = getString(getNameResource());
+            actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
 
-            //Set up status bar color if possible on OS version
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(getCharacterAccentColor());
+            if (viewExists(R.id.summary_character_image)) {
+                ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
+                summaryCharacterImage.setImageResource(getCharacterDrawableResource());
+                summaryCharacterImage.setScaleType(ImageView.ScaleType.FIT_XY);
             }
         }
+    }
+
+    private boolean viewExists(int viewId) {
+        return findViewById(viewId) != null;
     }
 
     private int getCharacterDrawableResource() {
