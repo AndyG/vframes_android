@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.ui.fragment;
+package com.angarron.vframes.ui.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.adapter.MovesRecyclerViewAdapter;
+import com.angarron.vframes.R;
+import com.angarron.vframes.adapter.MovesRecyclerViewAdapter;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.adapter;
+package com.angarron.vframes.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.resource_resolution.StringResolver;
+import com.angarron.vframes.R;
+import com.angarron.vframes.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;

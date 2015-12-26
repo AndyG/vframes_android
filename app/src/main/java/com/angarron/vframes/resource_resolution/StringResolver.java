@@ -1,6 +1,6 @@
-package com.angarron.sfvframedata.resource_resolution;
+package com.angarron.vframes.resource_resolution;
 
-import com.angarron.sfvframedata.R;
+import com.angarron.vframes.R;
 
 import java.util.HashMap;
 import java.util.Map;

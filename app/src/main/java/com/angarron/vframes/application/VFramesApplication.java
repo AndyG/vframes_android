@@ -1,17 +1,19 @@
-package com.angarron.sfvframedata.application;
+package com.angarron.vframes.application;
 
 import android.app.Application;
 
-import com.angarron.sfvframedata.BuildConfig;
-import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.data.IDataSource;
-import com.angarron.sfvframedata.data.NetworkFallbackDataSource;
-import com.angarron.sfvframedata.data.TestDataSource;
-import com.angarron.sfvframedata.network.VFramesRESTApi;
+import com.angarron.vframes.BuildConfig;
+import com.angarron.vframes.R;
+import com.angarron.vframes.data.IDataSource;
+import com.angarron.vframes.data.NetworkFallbackDataSource;
+import com.angarron.vframes.data.TestDataSource;
+import com.angarron.vframes.network.VFramesRESTApi;
+import com.crashlytics.android.Crashlytics;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.logging.HttpLoggingInterceptor;
 
 import data.model.IDataModel;
+import io.fabric.sdk.android.Fabric;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 
@@ -25,6 +27,8 @@ public class VFramesApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //Crashlytics Integration
+        Fabric.with(this, new Crashlytics());
         init(false, R.raw.test_data);
     }
 

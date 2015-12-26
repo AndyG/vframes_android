@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.angarron.sfvframedata" >
+    package="com.angarron.vframes" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name=".application.VFramesApplication"
+        android:name="com.angarron.vframes.application.VFramesApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         >
 
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="com.angarron.vframes.ui.activity.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -23,17 +23,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.CharacterSelectActivity"
+            android:name="com.angarron.vframes.ui.activity.CharacterSelectActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
         <activity
-            android:name=".ui.activity.CharacterSummaryActivity"
+            android:name="com.angarron.vframes.ui.activity.CharacterSummaryActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
+        <!-- Crashlytics Integration -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="18696c3d4c4fa14de8088de46b473a83891b3153" />
     </application>
 
 </manifest>

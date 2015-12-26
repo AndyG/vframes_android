@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.ui.fragment;
+package com.angarron.vframes.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.angarron.sfvframedata.R;
+import com.angarron.vframes.R;
 
 public class NoFrameDataAvailableFragment extends Fragment {
     @Nullable

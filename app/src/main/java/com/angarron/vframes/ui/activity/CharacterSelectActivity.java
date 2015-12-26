@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.ui.activity;
+package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
-import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.application.VFramesApplication;
+import com.angarron.vframes.R;
+import com.angarron.vframes.application.VFramesApplication;
 
 import data.model.CharacterID;
 

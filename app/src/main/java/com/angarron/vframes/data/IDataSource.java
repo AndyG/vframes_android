@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.data;
+package com.angarron.vframes.data;
 
 import data.model.IDataModel;
 
