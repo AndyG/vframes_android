@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata.network;
+package com.angarron.vframes.network;
 
 import com.google.gson.JsonObject;
 

@@ -1,13 +1,13 @@
-package com.angarron.sfvframedata.adapter;
+package com.angarron.vframes.adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.angarron.sfvframedata.R;
-import com.angarron.sfvframedata.ui.fragment.MoveListFragment;
-import com.angarron.sfvframedata.ui.fragment.NoFrameDataAvailableFragment;
+import com.angarron.vframes.R;
+import com.angarron.vframes.ui.fragment.MoveListFragment;
+import com.angarron.vframes.ui.fragment.NoFrameDataAvailableFragment;
 
 public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
 

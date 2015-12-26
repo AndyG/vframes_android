@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">VFrames</string>
-    <string name="action_settings">Settings</string>
+
+    <!-- Feedback -->
+    <string name="send_feedback">Send Feedback</string>
+    <string name="feedback_email_address" translatable="false">vframesapp@gmail.com</string>
+    <string name="feedback_email_subject">VFrames Feedback</string>
+
 
     <!-- Titles on Character Summary Page -->
     <string name="moves_list_title">Move List</string>

@@ -1,4 +1,4 @@
-package com.angarron.sfvframedata;
+package com.angarron.vframes;
 
 import org.junit.Test;
 

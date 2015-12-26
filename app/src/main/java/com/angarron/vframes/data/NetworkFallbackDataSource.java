@@ -1,10 +1,10 @@
-package com.angarron.sfvframedata.data;
+package com.angarron.vframes.data;
 
 import android.content.res.Resources;
 import android.util.Log;
 
-import com.angarron.sfvframedata.application.VFramesApplication;
-import com.angarron.sfvframedata.network.VFramesRESTApi;
+import com.angarron.vframes.application.VFramesApplication;
+import com.angarron.vframes.network.VFramesRESTApi;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
