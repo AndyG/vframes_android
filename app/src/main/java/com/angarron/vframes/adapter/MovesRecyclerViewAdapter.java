@@ -14,8 +14,6 @@ import android.widget.TextView;
 import com.angarron.vframes.R;
 import com.angarron.vframes.resource_resolution.StringResolver;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -111,7 +109,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 //        List<InputElement> inputElements = parseInput(move.getInputString());
 //        for (InputElement element : inputElements) {
         moveItemViewHolder.input.removeAllViews();
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 3; i++) {
             moveItemViewHolder.input.addView(getViewForInput(i));
         }
 
@@ -139,13 +137,23 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     private View getViewForInput(int i) {
         ImageView imageView = new ImageView(context);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
-        layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
-        imageView.setLayoutParams(layoutParams);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setAdjustViewBounds(true);
         if (i == 0) {
-            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_right));
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(25), 1);
+            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+            imageView.setLayoutParams(layoutParams);
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.down_arrow));
+        } else if (i == 1) {
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(20), 1);
+            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+            imageView.setLayoutParams(layoutParams);
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_plus));
         } else {
-            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_punch));
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(35), 1);
+            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+            imageView.setLayoutParams(layoutParams);
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
         }
         return imageView;
     }
