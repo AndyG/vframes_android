@@ -129,7 +129,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             if (viewExists(R.id.summary_character_image)) {
                 ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
                 summaryCharacterImage.setImageResource(getCharacterDrawableResource());
-                summaryCharacterImage.setScaleType(ImageView.ScaleType.FIT_XY);
             }
         }
     }
