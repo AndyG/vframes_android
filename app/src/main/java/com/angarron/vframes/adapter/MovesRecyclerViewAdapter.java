@@ -139,10 +139,10 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     private View getViewForInput() {
         ImageView imageView = new ImageView(context);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(dpToPixels(30), dpToPixels(30));
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
         layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
         imageView.setLayoutParams(layoutParams);
-        imageView.setBackgroundColor(context.getResources().getColor(R.color.tab_indicator_color));
+        imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_punch));
         return imageView;
     }
 
