@@ -50,7 +50,8 @@
                 android:layout_marginRight="@dimen/input_container_margin_sides"
                 android:layout_marginEnd="@dimen/input_container_margin_sides"
                 android:layout_marginTop="@dimen/input_container_margin_top_bottom"
-                android:layout_marginBottom="@dimen/input_container_margin_top_bottom"/>
+                android:layout_marginBottom="@dimen/input_container_margin_top_bottom"
+                android:gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/posttext"

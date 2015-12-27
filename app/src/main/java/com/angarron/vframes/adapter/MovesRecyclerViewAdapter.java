@@ -111,8 +111,8 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 //        List<InputElement> inputElements = parseInput(move.getInputString());
 //        for (InputElement element : inputElements) {
         moveItemViewHolder.input.removeAllViews();
-        for (int i = 0; i < 3; i++) {
-            moveItemViewHolder.input.addView(getViewForInput());
+        for (int i = 0; i < 8; i++) {
+            moveItemViewHolder.input.addView(getViewForInput(i));
         }
 
         if (!TextUtils.isEmpty(move.getPretextId())) {
@@ -137,12 +137,16 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         }
     }
 
-    private View getViewForInput() {
+    private View getViewForInput(int i) {
         ImageView imageView = new ImageView(context);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
         layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
         imageView.setLayoutParams(layoutParams);
-        imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_punch));
+        if (i == 0) {
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_right));
+        } else {
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_punch));
+        }
         return imageView;
     }
 
