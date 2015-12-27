@@ -1,8 +1,6 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
@@ -13,10 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
@@ -127,8 +123,16 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
 
             if (viewExists(R.id.summary_character_image)) {
-                ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
-                summaryCharacterImage.setImageResource(getCharacterDrawableResource());
+                final ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
+                ViewTreeObserver vto = summaryCharacterImage.getViewTreeObserver();
+                vto.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+                    @Override
+                    public boolean onPreDraw() {
+                        Log.d("findme", "pixels WxH: " + summaryCharacterImage.getMeasuredWidth() + "x" + summaryCharacterImage.getMeasuredHeight());
+                        return true;
+                    }
+                });
+                summaryCharacterImage.setImageResource(getCharacterBannerResource());
             }
         }
     }
@@ -137,40 +141,40 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         return findViewById(viewId) != null;
     }
 
-    private int getCharacterDrawableResource() {
+    private int getCharacterBannerResource() {
         switch(targetCharacter) {
             case RYU:
-                return R.drawable.ryu_card;
+                return R.drawable.ryu_banner;
             case CHUN:
-                return R.drawable.chun_card;
+                return R.drawable.chun_banner;
             case DICTATOR:
-                return R.drawable.dictator_card;
+                return R.drawable.dictator_banner;
             case BIRDIE:
-                return R.drawable.birdie_card;
+                return R.drawable.birdie_banner;
             case NASH:
-                return R.drawable.nash_card;
+                return R.drawable.nash_banner;
             case CAMMY:
-                return R.drawable.cammy_card;
+                return R.drawable.cammy_banner;
             case KEN:
-                return R.drawable.ken_card;
+                return R.drawable.ken_banner;
             case MIKA:
-                return R.drawable.mika_card;
+                return R.drawable.mika_banner;
             case NECALLI:
-                return R.drawable.necalli_card;
+                return R.drawable.necalli_banner;
             case CLAW:
-                return R.drawable.claw_card;
+                return R.drawable.claw_banner;
             case RASHID:
-                return R.drawable.rashid_card;
+                return R.drawable.rashid_banner;
             case KARIN:
-                return R.drawable.karin_card;
+                return R.drawable.karin_banner;
             case LAURA:
-                return R.drawable.laura_card;
+                return R.drawable.laura_banner;
             case DHALSIM:
-                return R.drawable.dhalsim_card;
+                return R.drawable.dhalsim_banner;
             case ZANGIEF:
-                return R.drawable.zangief_card;
+                return R.drawable.zangief_banner;
             case FANG:
-                return R.drawable.fang_card;
+                return R.drawable.fang_banner;
             default:
                 throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
         }
