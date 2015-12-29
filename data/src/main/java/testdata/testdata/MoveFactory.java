@@ -2,8 +2,11 @@ package testdata.testdata;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
+import java.util.List;
 import java.util.Random;
 
+import data.json.InputParser;
+import data.model.input.InputElement;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveListMove;
 import data.model.move.MoveStrength;
@@ -70,11 +73,13 @@ public class MoveFactory {
 
     public IMoveListMove generateMoveListMove() {
         int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
+        InputParser inputParser = new InputParser();
         String name = RandomStringUtils.randomAlphabetic(nameLength);
         String input = "qcf|+|lp";
         String pretextId = "id_pretext_test";
         String posttextId = "id_posttext_test";
         String descriptionId = "id_description_test";
-        return new MoveListMove(name, input, pretextId, posttextId, descriptionId);
+        List<InputElement> inputElementList = inputParser.parseInputString(input);
+        return new MoveListMove(name, pretextId, posttextId, descriptionId, inputElementList);
     }
 }

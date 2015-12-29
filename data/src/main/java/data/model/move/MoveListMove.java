@@ -1,19 +1,24 @@
 package data.model.move;
 
+import java.util.List;
+
+import data.json.InputParser;
+import data.model.input.InputElement;
+
 public class MoveListMove implements IMoveListMove {
 
     private String nameId;
-    private String inputString;
     private String pretextId;
     private String posttextId;
     private String description;
+    private List<InputElement> inputElementList;
 
-    public MoveListMove(String nameId, String inputString, String pretextId, String posttextId, String description) {
+    public MoveListMove(String nameId, String pretextId, String posttextId, String description, List<InputElement> inputElementList) {
         this.nameId = nameId;
-        this.inputString = inputString;
         this.pretextId = pretextId;
         this.posttextId = posttextId;
         this.description = description;
+        this.inputElementList = inputElementList;
     }
 
     @Override
@@ -22,8 +27,8 @@ public class MoveListMove implements IMoveListMove {
     }
 
     @Override
-    public String getInputString() {
-        return inputString;
+    public List<InputElement> getInput() {
+        return inputElementList;
     }
 
     @Override
