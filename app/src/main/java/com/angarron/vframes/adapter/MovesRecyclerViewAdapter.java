@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import data.model.input.InputElement;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
@@ -106,11 +107,10 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         IMoveListMove move = (IMoveListMove) displayList.get(position);
         moveItemViewHolder.label.setText(move.getNameId());
 
-//        List<InputElement> inputElements = parseInput(move.getInputString());
-//        for (InputElement element : inputElements) {
+        List<InputElement> input = move.getInput();
         moveItemViewHolder.input.removeAllViews();
-        for (int i = 0; i < 2; i++) {
-            moveItemViewHolder.input.addView(getViewForInput(i));
+        for (InputElement inputElement : input) {
+            moveItemViewHolder.input.addView(getViewForInputElement(inputElement));
         }
 
         if (!TextUtils.isEmpty(move.getPretextId())) {
@@ -135,34 +135,88 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         }
     }
 
-    private View getViewForInput(int i) {
+    private View getViewForInputElement(InputElement inputElement) {
         ImageView imageView = new ImageView(context);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
-        if (i == 0) {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(30), 1);
-            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
-            imageView.setLayoutParams(layoutParams);
-            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_down));
-//        } else if (i == 1) {
-//            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(20), 1);
-//            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
-//            imageView.setLayoutParams(layoutParams);
-//            imageView.setImageDrawable(context.getResources().getDrawable(FORWARD.drawable.input_icon_right));
-        } else {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(35), 1);
-            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
-            imageView.setLayoutParams(layoutParams);
-            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(30), 1);
+        layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+        imageView.setLayoutParams(layoutParams);
+
+        switch(inputElement) {
+            case LP:
+
+            case MP:
+
+            case HP:
+
+            case LK:
+
+            case MK:
+
+            case HK:
+
+            case PUNCH:
+
+            case KICK:
+
+            case ALL_PUNCHES:
+
+            case ALL_KICKS:
+
+            case UP:
+
+            case UP_FORWARD:
+
+            case FORWARD:
+
+            case DOWN_FORWARD:
+
+            case DOWN:
+
+            case DOWN_BACK:
+
+            case BACK:
+
+            case UP_BACK:
+
+            case QCF:
+
+            case QCB:
+
+            case SRK:
+
+            case SRK_BACK:
+
+            case HCF:
+
+            case HCB:
+
+            case CHARGE_BACK:
+
+            case CHARGE_DOWN:
+
+            case RELEASE_FORWARD:
+
+            case RELEASE_UP:
+
+            case SPD:
+
+            case PLUS:
+
+            case ARROW:
+
+            case OR:
+
+            case NO_INPUT:
+
+            default:
+                //TODO: make this put in a question mark icon
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
         }
         return imageView;
     }
-
-//    private LinearLayout getInputLayout(String inputString) {
-//        ImageView imageView = new ImageView(context);
-//        imageView.setLayoutParams(new LinearLayout.LayoutParams(dpToPixels(20), dpToPixels(20)));
-//        imageView.setBackgroundColor(context.getResources().getColor(FORWARD.color.tab_indicator_color));
-//    }
 
     private String getHeaderString(MoveCategory moveCategory) {
         switch (moveCategory) {
