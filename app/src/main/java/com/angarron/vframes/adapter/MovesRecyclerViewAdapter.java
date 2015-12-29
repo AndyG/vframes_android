@@ -109,7 +109,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 //        List<InputElement> inputElements = parseInput(move.getInputString());
 //        for (InputElement element : inputElements) {
         moveItemViewHolder.input.removeAllViews();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             moveItemViewHolder.input.addView(getViewForInput(i));
         }
 
@@ -140,15 +140,15 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
         if (i == 0) {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(25), 1);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(30), 1);
             layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
             imageView.setLayoutParams(layoutParams);
-            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.down_arrow));
-        } else if (i == 1) {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(20), 1);
-            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
-            imageView.setLayoutParams(layoutParams);
-            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_plus));
+            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_down));
+//        } else if (i == 1) {
+//            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(20), 1);
+//            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+//            imageView.setLayoutParams(layoutParams);
+//            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_right));
         } else {
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(35), 1);
             layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
