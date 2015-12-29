@@ -1441,13 +1441,13 @@
         "vskill": [
           {
             "nameID": "Nishodoku",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           }
         ],      
         "critical_arts": [
           {
             "nameID": "Flappy Bird?",
-            "input": "qcf|+|lp"
+            "input": "NO_INPUT"
           }
         ]
       }
