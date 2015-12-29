@@ -156,7 +156,8 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             case MK:
 
             case HK:
-
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             case PUNCH:
 
             case KICK:
