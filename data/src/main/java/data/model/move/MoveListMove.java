@@ -2,7 +2,6 @@ package data.model.move;
 
 import java.util.List;
 
-import data.json.InputParser;
 import data.model.input.InputElement;
 
 public class MoveListMove implements IMoveListMove {

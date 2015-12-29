@@ -5,8 +5,8 @@ import com.google.gson.JsonPrimitive;
 
 import java.util.List;
 
-import data.json.InputParser;
 import data.model.input.InputElement;
+import data.model.input.InputParser;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveListMove;
 

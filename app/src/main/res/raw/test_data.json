@@ -21,7 +21,7 @@
           },
           {
             "nameID": "Orochi",
-            "input": "QCF|PLUS|KICK|ARROW|D|PLUS|PUNCH"
+            "input": "QCF|PLUS|KICK|ARROW|DOWN|PLUS|PUNCH"
           },
           {
             "nameID": "Mujinkyaku",
@@ -33,11 +33,11 @@
           },
           {
             "nameID": "Senha Kusabi",
-            "input": "QCB|PLUS|PUNCH|ARROW|D|PLUS|KICK"
+            "input": "QCB|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK"
           },
           {
             "nameID": "Senha Resshu",
-            "input": "QCB|PLUS|PUNCH|ARROW|U|PLUS|KICK"
+            "input": "QCB|PLUS|PUNCH|ARROW|UP|PLUS|KICK"
           }
         ],
         "vtrigger": [
@@ -55,23 +55,23 @@
           },
           {
             "nameID": "Guren Senha",
-            "input": "QCF|PLUS|PUNCH|ARROW|U|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH|ARROW|UP|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Chochu",
-            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Hochu",
-            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH|ARROW|D|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Resshu",
-            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH|ARROW|U|PLUS|KICK"
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|UP|PLUS|KICK"
           },
           {
             "nameID": "Guren Kusabi",
-            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH|ARROW|D|PLUS|KICK"
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK"
           },
           {
             "nameID": "Guren Kyoho",
@@ -81,7 +81,7 @@
         "vreversal": [
           {
             "nameID": "Yashagaeshi",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -100,14 +100,14 @@
           },
           {
             "nameID": "Arakuma Inashi",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Tsumujigari",
-            "input": "F|PLUS|MK"
+            "input": "FORWARD|PLUS|MK"
           }
         ]
       }
@@ -150,7 +150,7 @@
         "vreversal": [
           {
             "nameID": "Yoga Mala",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -173,27 +173,27 @@
           },
           {
             "nameID": "Yoga Hoop",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Drill Kick",
-            "input": "D|PLUS|KICK",
+            "input": "DOWN|PLUS|KICK",
             "pretextID":"id_during_jump"
           },
           {
             "nameID": "Yoga Anvil",
-            "input": "B|PLUS|HP"
+            "input": "BACK|PLUS|HP"
           },
           {
             "nameID": "Yoga Upper",
-            "input": "B|PLUS|MP"
+            "input": "BACK|PLUS|MP"
           },
           {
             "nameID": "Divine Kick",
-            "input": "B|PLUS|MK"
+            "input": "BACK|PLUS|MK"
           }          
         ]
       }
@@ -244,7 +244,7 @@
           },
           {
             "nameID": "Bloody Kiss - Rojo",
-            "input": "D|PLUS|HP|PLUS|HK"
+            "input": "DOWN|PLUS|HP|PLUS|HK"
           },
           {
             "nameID": "Bloody Kiss - Azul",
@@ -255,12 +255,12 @@
         "vreversal": [
           {
             "nameID": "Backslash",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           },
           {
             "nameID": "Short Backslash",
-            "input": "F|PLUS|ALL_KICKS",
+            "input": "FORWARD|PLUS|ALL_KICKS",
             "pretextID":"id_during_guard"
           }
         ],
@@ -279,7 +279,7 @@
           },
           {
             "nameID": "Crescent Line",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
@@ -290,11 +290,11 @@
         "unique_attacks": [
           {
             "nameID": "Mercury Shard",
-            "input": "F|PLUS|MK"
+            "input": "FORWARD|PLUS|MK"
           },
           {
             "nameID": "Buster Claw",
-            "input": "DF|PLUS|HP",
+            "input": "DOWN_FORWARD|PLUS|HP",
             "posttextID":"id_claw_claw_on_only"
           },
           {
@@ -309,7 +309,7 @@
           },
           {
             "nameID": "Wall Jump",
-            "input": "UF",
+            "input": "UP_FORWARD",
             "pretextID":"id_during_jump_near_wall"
           }
         ]
@@ -370,7 +370,7 @@
         "vreversal": [
           {
             "nameID": "Strike Back",
-            "input": "F|PLUS|ALL_KICKS",
+            "input": "FORWARD|PLUS|ALL_KICKS",
             "pretextID":"id_during_guard"
           }
         ],
@@ -388,22 +388,22 @@
           },
           {
             "nameID": "Delta Through",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Knee Bullet",
-            "input": "F|PLUS|HK"
+            "input": "FORWARD|PLUS|HK"
           },
           {
             "nameID": "Lift Upper",
-            "input": "B|PLUS|HP"
+            "input": "BACK|PLUS|HP"
           },
           {
             "nameID": "Lift Combination",
-            "input": "B|PLUS|HP|ARROW|HK"
+            "input": "BACK|PLUS|HP|ARROW|HK"
           }
         ]
       }
@@ -444,7 +444,7 @@
         "vreversal": [
           {
             "nameID": "Sohakkei",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -462,7 +462,7 @@
           },
           {
             "nameID": "Tenshin Shushu",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
@@ -474,37 +474,37 @@
         "unique_attacks": [
           {
             "nameID": "Tsuitotsuken",
-            "input": "B|OR|F|PLUS|MP"
+            "input": "BACK|OR|FORWARD|PLUS|MP"
           },
           {
             "nameID": "Hakkei",
-            "input": "B|PLUS|HP"
+            "input": "BACK|PLUS|HP"
           },
           {
             "nameID": "Senenshu",
-            "input": "DF|PLUS|MK"
+            "input": "DOWN_FORWARD|PLUS|MK"
           },
           {
             "nameID": "Tenkukyaku",
-            "input": "B|PLUS|HK"
+            "input": "BACK|PLUS|HK"
           },
           {
             "nameID": "Yokusenkyaku",
-            "input": "F|PLUS|HK"
+            "input": "FORWARD|PLUS|HK"
           },
           {
             "nameID": "Kakurakukyaku",
-            "input": "DF|PLUS|HK"
+            "input": "DOWN_FORWARD|PLUS|HK"
           },
           {
             "nameID": "Yosokyaku",
-            "input": "D|OR|DF|PLUS|MK",
+            "input": "DOWN|OR|DOWN_FORWARD|PLUS|MK",
             "pretextID":"id_during_jump",
             "posttextID":"id_up_to_three_times"
           },
           {
             "nameID": "Wall Jump",
-            "input": "UF",
+            "input": "UP_FORWARD",
             "pretextID":"id_during_jump_near_wall"
           }
         ]
@@ -546,7 +546,7 @@
         "vreversal": [
           {
             "nameID": "Senpu Nataotoshi",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -565,31 +565,31 @@
           },
           {
             "nameID": "Hell Wheel",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Thunder Kick",
-            "input": "F|PLUS|HK"
+            "input": "FORWARD|PLUS|HK"
           },
           {
             "nameID": "Thunder Kick (Feint)",
-            "input": "F|PLUS|HK",
+            "input": "FORWARD|PLUS|HK",
             "posttextID":"id_hold_button"
           },
           {
             "nameID": "Inazuma Kick",
-            "input": "B|PLUS|MK"
+            "input": "BACK|PLUS|MK"
           },
           {
             "nameID": "Chin Buster",
-            "input": "B|PLUS|MP"
+            "input": "BACK|PLUS|MP"
           },
           {
             "nameID": "Chin Buster 2nd",
-            "input": "B|PLUS|MP|ARROW|HP"
+            "input": "BACK|PLUS|MP|ARROW|HP"
           },
           {
             "nameID": "Lion Breaker",
@@ -637,7 +637,7 @@
         "vreversal": [
           {
             "nameID": "Muscle Explosion",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -656,22 +656,22 @@
           },
           {
             "nameID": "Captured",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Head Butt",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Knee Hammer",
-            "input": "F|PLUS|MK"
+            "input": "FORWARD|PLUS|MK"
           },
           {
             "nameID": "Flying Body Press",
-            "input": "D|PLUS|HP",
+            "input": "DOWN|PLUS|HP",
             "pretextID":"id_during_forward_jump"
           }
         ]
@@ -718,7 +718,7 @@
         "vreversal": [
           {
             "nameID": "Hashogeki",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -736,22 +736,22 @@
           },
           {
             "nameID": "Somersault Throw",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Collarbone Breaker",
-            "input": "F|PLUS|MP"
+            "input": "FORWARD|PLUS|MP"
           },
           {
             "nameID": "Solar Plexus Strike",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Axe Kick",
-            "input": "B|PLUS|HK"
+            "input": "BACK|PLUS|HK"
           },
           {
             "nameID": "Jodan Nirengeki",
@@ -810,7 +810,7 @@
         "vreversal": [
           {
             "nameID": "Psycho Burst",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -829,7 +829,7 @@
           },
           {
             "nameID": "Psycho Fall",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
@@ -841,7 +841,7 @@
           },
           {
             "nameID": "Psycho Axe",
-            "input": "DF|PLUS|HP"
+            "input": "DOWN_FORWARD|PLUS|HP"
           }
         ]
       }
@@ -886,7 +886,7 @@
         "vreversal": [
           {
             "nameID": "Double Slap",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }          
         ],
@@ -897,17 +897,17 @@
           },
           {
             "nameID": "Linear Movement - Avante",
-            "input": "F|PLUS|MP|PLUS|MK",
+            "input": "FORWARD|PLUS|MP|PLUS|MK",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Esquiva",
-            "input": "B|PLUS|MP|PLUS|MK",
+            "input": "BACK|PLUS|MP|PLUS|MK",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Finta",
-            "input": "B|PLUS|MP|PLUS|MK|ARROW|MP|PLUS|MK",
+            "input": "BACK|PLUS|MP|PLUS|MK|ARROW|MP|PLUS|MK",
             "posttextID":"id_hold_buttons_to_attack"
           }          
         ],        
@@ -919,18 +919,18 @@
           },
           {
             "nameID": "Pullback Hold",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }          
         ],
         "unique_attacks": [
           {
             "nameID": "Step Elbow",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Twist Barrage",
-            "input": "F|PLUS|HP|ARROW|HP"
+            "input": "FORWARD|PLUS|HP|ARROW|HP"
           },
           {
             "nameID": "Dual Crash",
@@ -981,7 +981,7 @@
         "vreversal": [
           {
             "nameID": "Pepper Pot",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -992,11 +992,11 @@
           },
           {
             "nameID": "Banana Time",
-            "input": "B|PLUS|MP|PLUS|MK"
+            "input": "BACK|PLUS|MP|PLUS|MK"
           },
           {
             "nameID": "Drink Time",
-            "input": "D|PLUS|MP|PLUS|MK"
+            "input": "DOWN|PLUS|MP|PLUS|MK"
           }
         ],       
         "throws": [
@@ -1007,26 +1007,26 @@
           },
           {
             "nameID": "Bad Chain",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Bull Drop",
-            "input": "F|PLUS|HK"
+            "input": "FORWARD|PLUS|HK"
           },
           {
             "nameID": "Bull Charge",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Bull Slider",
-            "input": "DF|PLUS|HP"
+            "input": "DOWN_FORWARD|PLUS|HP"
           },
           {
             "nameID": "Bad Hammer",
-            "input": "D|PLUS|HP|ARROW|HP"
+            "input": "DOWN|PLUS|HP|ARROW|HP"
           }
         ]
       }
@@ -1070,17 +1070,17 @@
           },
           {
             "nameID": "Nadeshiko (Front)",
-            "input": "B|PLUS|HP|PLUS|HK"
+            "input": "BACK|PLUS|HP|PLUS|HK"
           },
           {
             "nameID": "Nadeshiko (Behind)",
-            "input": "F|PLUS|HP|PLUS|HK"
+            "input": "FORWARD|PLUS|HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Peach Gator",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -1104,7 +1104,7 @@
           },
           {
             "nameID": "Sell Down",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
@@ -1115,24 +1115,24 @@
           },
           {
             "nameID": "Divebomb",
-            "input": "D|PLUS|MP",
+            "input": "DOWN|PLUS|MP",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Lady Mika",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Passion Press",
-            "input": "B|OR|F|PLUS|MP"
+            "input": "BACK|OR|FORWARD|PLUS|MP"
           },
           {
             "nameID": "Passion Rope Throw (Forward)",
-            "input": "F|PLUS|MP|ARROW|F|PLUS|MP"
+            "input": "FORWARD|PLUS|MP|ARROW|FORWARD|PLUS|MP"
           },
           {
             "nameID": "Passion Rope Throw (Backward)",
-            "input": "B|PLUS|MP|ARROW|B|PLUS|MP"
+            "input": "BACK|PLUS|MP|ARROW|BACK|PLUS|MP"
           }
         ]
       }
@@ -1174,7 +1174,7 @@
         "vreversal": [
           {
             "nameID": "Sliding Roll",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -1189,11 +1189,11 @@
           },
           {
             "nameID": "Rolling Assault",
-            "input": "D|PLUS|MP|PLUS|MK"
+            "input": "DOWN|PLUS|MP|PLUS|MK"
           },
           {
             "nameID": "Nail Assault",
-            "input": "D|PLUS|MP|PLUS|MK|ARROW|KICK"
+            "input": "DOWN|PLUS|MP|PLUS|MK|ARROW|KICK"
           }
         ],      
         "throws": [
@@ -1204,33 +1204,33 @@
           },
           {
             "nameID": "Rising Sun",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Flap Spin",
-            "input": "F|PLUS|MP"
+            "input": "FORWARD|PLUS|MP"
           },
           {
             "nameID": "Beak Assault",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Spinning Mixer",
-            "input": "F|PLUS|PUNCH",
+            "input": "FORWARD|PLUS|PUNCH",
             "pretextID":"id_during_run",
             "posttextID":"id_rashid_repeat_buttons_to_extend"            
           },
           {
             "nameID": "Eagle Spike",
-            "input": "F|PLUS|KICK",
+            "input": "FORWARD|PLUS|KICK",
             "pretextID":"id_during_run"
           },
           {
             "nameID": "Wall Jump",
-            "input": "UF|OR|DF",
+            "input": "UP_FORWARD|OR|DOWN_FORWARD",
             "pretextID":"id_during_jump_near_wall"
           }
         ]
@@ -1270,17 +1270,17 @@
           },
           {
             "nameID": "Sonic Move - Blitz Air",
-            "input": "B|PLUS|HP|PLUS|HK"
+            "input": "BACK|PLUS|HP|PLUS|HK"
           },
           {
             "nameID": "Sonic Move - Steel Air",
-            "input": "F|PLUS|HP|PLUS|HK"
+            "input": "FORWARD|PLUS|HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Sonic Move - Avoid",
-            "input": "F|PLUS|PUNCH",
+            "input": "FORWARD|PLUS|PUNCH",
             "pretextID":"id_during_guard"
           }
         ],
@@ -1298,7 +1298,7 @@
           },
           {
             "nameID": "Target Down",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
@@ -1310,27 +1310,27 @@
         "unique_attacks": [
           {
             "nameID": "Knee Bazooka",
-            "input": "F|PLUS|LK"
+            "input": "FORWARD|PLUS|LK"
           },
           {
             "nameID": "Jumping Sobat",
-            "input": "F|PLUS|MK"
+            "input": "FORWARD|PLUS|MK"
           },
           {
             "nameID": "Chopping Assault",
-            "input": "F|PLUS|MP"
+            "input": "FORWARD|PLUS|MP"
           },
           {
             "nameID": "Step Kick",
-            "input": "F|PLUS|MK"
+            "input": "FORWARD|PLUS|MK"
           },
           {
             "nameID": "Spinning Back Knuckle",
-            "input": "F|PLUS|HP"
+            "input": "FORWARD|PLUS|HP"
           },
           {
             "nameID": "Side Knee Attack",
-            "input": "B|PLUS|MK"
+            "input": "BACK|PLUS|MK"
           },
           {
             "nameID": "Rapid Punch",
@@ -1346,7 +1346,7 @@
           },
           {
             "nameID": "Down Burst",
-            "input": "D|PLUS|MP|ARROW|F|PLUS|MP"
+            "input": "DOWN|PLUS|MP|ARROW|FORWARD|PLUS|MP"
           },
           {
             "nameID": "Raptor Combination",
@@ -1396,7 +1396,7 @@
         "vreversal": [
           {
             "nameID": "The Calling",
-            "input": "F|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -1415,23 +1415,23 @@
           },
           {
             "nameID": "Soul Discriminator",
-            "input": "B|PLUS|LP|PLUS|LK",
+            "input": "BACK|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Opening Dagger",
-            "input": "DF|PLUS|HP"
+            "input": "DOWN_FORWARD|PLUS|HP"
           },
           {
             "nameID": "Road of the Sun",
-            "input": "D|PLUS|HK",
+            "input": "DOWN|PLUS|HK",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Sacrificial Altar",
-            "input": "MK|ARROW|HK|ARROW|MP|PLUS|MK|OR|B|PLUS|MP|PLUS|MK"
+            "input": "MK|ARROW|HK|ARROW|MP|PLUS|MK|OR|BACK|PLUS|MP|PLUS|MK"
           }
         ]
       }

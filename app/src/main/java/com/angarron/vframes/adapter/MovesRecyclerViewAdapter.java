@@ -148,7 +148,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 //            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(20), 1);
 //            layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
 //            imageView.setLayoutParams(layoutParams);
-//            imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_right));
+//            imageView.setImageDrawable(context.getResources().getDrawable(FORWARD.drawable.input_icon_right));
         } else {
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(35), 1);
             layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
@@ -161,7 +161,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 //    private LinearLayout getInputLayout(String inputString) {
 //        ImageView imageView = new ImageView(context);
 //        imageView.setLayoutParams(new LinearLayout.LayoutParams(dpToPixels(20), dpToPixels(20)));
-//        imageView.setBackgroundColor(context.getResources().getColor(R.color.tab_indicator_color));
+//        imageView.setBackgroundColor(context.getResources().getColor(FORWARD.color.tab_indicator_color));
 //    }
 
     private String getHeaderString(MoveCategory moveCategory) {

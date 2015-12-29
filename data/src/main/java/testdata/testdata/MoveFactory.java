@@ -5,8 +5,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 import java.util.List;
 import java.util.Random;
 
-import data.json.InputParser;
 import data.model.input.InputElement;
+import data.model.input.InputParser;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveListMove;
 import data.model.move.MoveStrength;
