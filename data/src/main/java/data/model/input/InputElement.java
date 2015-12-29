@@ -34,5 +34,7 @@ public enum InputElement {
     RELEASE_UP,
     SPD,
     PLUS,
-    ARROW
+    ARROW,
+    OR,
+    NO_INPUT
 }

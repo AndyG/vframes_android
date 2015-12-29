@@ -42,6 +42,8 @@ public class InputParser {
     private static final String SPD = "SPD";
     private static final String PLUS = "PLUS";
     private static final String ARROW = "ARROW";
+    private static final String OR = "OR";
+    private static final String NO_INPUT = "NO_INPUT";
 
     public List<InputElement> parseInputString(String inputString) {
         List<InputElement> inputSequence = new ArrayList<InputElement>();
@@ -52,73 +54,87 @@ public class InputParser {
         return inputSequence;
     }
 
+    public boolean isEmpty(String s) {
+        s.trim();
+        return s.equals("");
+    }
+
     private InputElement stringToInputElement(String inputString) {
-        switch (inputString) {
-            case LP:
-                return InputElement.LP;
-            case MP:
-                return InputElement.MP;
-            case HP:
-                return InputElement.HP;
-            case LK:
-                return InputElement.LK;
-            case MK:
-                return InputElement.MK;
-            case HK:
-                return InputElement.HK;
-            case PUNCH:
-                return InputElement.PUNCH;
-            case KICK:
-                return InputElement.KICK;
-            case ALL_PUNCHES:
-                return InputElement.ALL_PUNCHES;
-            case ALL_KICKS:
-                return InputElement.ALL_KICKS;
-            case U:
-                return InputElement.U;
-            case UR:
-                return InputElement.UR;
-            case R:
-                return InputElement.R;
-            case DR:
-                return InputElement.DR;
-            case D:
-                return InputElement.D;
-            case DL:
-                return InputElement.DL;
-            case L:
-                return InputElement.L;
-            case UL:
-                return InputElement.UL;
-            case QCF:
-                return InputElement.QCF;
-            case QCB:
-                return InputElement.QCB;
-            case SRK:
-                return InputElement.SRK;
-            case SRK_BACK:
-                return InputElement.SRK_BACK;
-            case HCF:
-                return InputElement.HCF;
-            case HCB:
-                return InputElement.HCB;
-            case CHARGE_BACK:
-                return InputElement.CHARGE_BACK;
-            case CHARGE_DOWN:
-                return InputElement.CHARGE_DOWN;
-            case RELEASE_FORWARD:
-                return InputElement.RELEASE_FORWARD;
-            case RELEASE_UP:
-                return InputElement.RELEASE_UP;
-            case SPD:
-                return InputElement.SPD;
-            case PLUS:
-                return InputElement.PLUS;
-            case ARROW:
-                return InputElement.ARROW;
-            default:
-                System.err.println("Unknown input string: '" + inputString + "'");
-                return null;
+        if(isEmpty(inputString)) {
+            throw new RuntimeException("Empty input string.");
+        }
+        else {
+            switch (inputString) {
+                case LP:
+                    return InputElement.LP;
+                case MP:
+                    return InputElement.MP;
+                case HP:
+                    return InputElement.HP;
+                case LK:
+                    return InputElement.LK;
+                case MK:
+                    return InputElement.MK;
+                case HK:
+                    return InputElement.HK;
+                case PUNCH:
+                    return InputElement.PUNCH;
+                case KICK:
+                    return InputElement.KICK;
+                case ALL_PUNCHES:
+                    return InputElement.ALL_PUNCHES;
+                case ALL_KICKS:
+                    return InputElement.ALL_KICKS;
+                case U:
+                    return InputElement.U;
+                case UR:
+                    return InputElement.UR;
+                case R:
+                    return InputElement.R;
+                case DR:
+                    return InputElement.DR;
+                case D:
+                    return InputElement.D;
+                case DL:
+                    return InputElement.DL;
+                case L:
+                    return InputElement.L;
+                case UL:
+                    return InputElement.UL;
+                case QCF:
+                    return InputElement.QCF;
+                case QCB:
+                    return InputElement.QCB;
+                case SRK:
+                    return InputElement.SRK;
+                case SRK_BACK:
+                    return InputElement.SRK_BACK;
+                case HCF:
+                    return InputElement.HCF;
+                case HCB:
+                    return InputElement.HCB;
+                case CHARGE_BACK:
+                    return InputElement.CHARGE_BACK;
+                case CHARGE_DOWN:
+                    return InputElement.CHARGE_DOWN;
+                case RELEASE_FORWARD:
+                    return InputElement.RELEASE_FORWARD;
+                case RELEASE_UP:
+                    return InputElement.RELEASE_UP;
+                case SPD:
+                    return InputElement.SPD;
+                case PLUS:
+                    return InputElement.PLUS;
+                case ARROW:
+                    return InputElement.ARROW;
+                case OR:
+                    return InputElement.OR;
+                case NO_INPUT:
+                    return InputElement.NO_INPUT;
+                default:
+                    System.err.println("Unknown input string: '" + inputString + "'");
+                    return null;
+            }
         }
     }
 }

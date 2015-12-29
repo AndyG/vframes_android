@@ -6,108 +6,108 @@
         "critical_arts": [
           {
             "nameID": "Kanzuki-Ryu Hadorokushiki Hasha No Kata",
-            "input": "QCF|QCF|PLUS|HP"
+            "input": "QCF|QCF|PLUS|PUNCH"
           }
         ],
         "specials": [
           {
             "nameID": "Kanzuki-Ryu Hokojutsu Sappo",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           },
           {
             "nameID": "Tenko",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|KICK|ARROW|PUNCH",
             "posttextID":"id_karin_tenko_posttext"
           },
           {
             "nameID": "Orochi",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK|ARROW|D|PLUS|PUNCH"
           },
           {
             "nameID": "Mujinkyaku",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|KICK"
           },
           {
             "nameID": "Ressenha",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|PUNCH"
           },
           {
             "nameID": "Senha Kusabi",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|PUNCH|ARROW|D|PLUS|KICK"
           },
           {
             "nameID": "Senha Resshu",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|PUNCH|ARROW|U|PLUS|KICK"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Kanzuki-Ryu Guren No Kata",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           },
           {
             "nameID": "Guren Ken",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Hosho",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|PUNCH"
           },
           {
             "nameID": "Guren Senha",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|U|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Chochu",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Hochu",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH|ARROW|D|PLUS|PUNCH"
           },
           {
             "nameID": "Guren Resshu",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH|ARROW|U|PLUS|KICK"
           },
           {
             "nameID": "Guren Kusabi",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|D|PLUS|PUNCH|ARROW|D|PLUS|KICK"
           },
           {
             "nameID": "Guren Kyoho",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|KICK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Yashagaeshi",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Meioken",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "posttextID":"id_karin_meioken_posttext"
           }
         ],
         "throws": [
           {
             "nameID": "Hajotsui",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Arakuma Inashi",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Tsumujigari",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MK"
           }
         ]
       }
@@ -117,83 +117,83 @@
         "critical_arts": [
           {
             "nameID": "Yoga Sunburst",
-            "input": "qcf|+|lp",
+            "input": "QCF|QCF|PLUS|PUNCH",
             "posttextID":"id_can_be_done_in_air"
           }
         ],
         "specials": [
           {
             "nameID": "Yoga Fire",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Yoga Flame",
-            "input": "qcf|+|lp"
+            "input": "HCB|PLUS|PUNCH"
           },
           {
             "nameID": "Yoga Gale",
-            "input": "qcf|+|lp",
+            "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_dhalsim_gale_pretext"
           },
           {
             "nameID": "Yoga Teleport",
-            "input": "qcf|+|lp",
+            "input": "SRK|OR|SRK_BACK|PLUS|ALL_PUNCHES",
             "posttextID":"id_can_be_done_in_air"
           }          
         ],
         "vtrigger": [
           {
             "nameID": "Yoga Burner",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Yoga Mala",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Yoga Float",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           },
           {
             "nameID": "Yoga Float (Airborne)",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "pretextID":"id_during_jump"
           }
         ],        
         "throws": [
           {
             "nameID": "Yoga Rocket",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Yoga Hoop",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Drill Kick",
-            "input": "qcf|+|lp",
+            "input": "D|PLUS|KICK",
             "pretextID":"id_during_jump"
           },
           {
             "nameID": "Yoga Anvil",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HP"
           },
           {
             "nameID": "Yoga Upper",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MP"
           },
           {
             "nameID": "Divine Kick",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MK"
           }          
         ]
       }
@@ -203,112 +203,113 @@
         "critical_arts": [
           {
             "nameID": "Bloody Rain",
-            "input": "qcf|+|lp"
+            "input": "QCB|QCB|OR|QCF|QCF|PLUS|PUNCH"
           }
         ],
         "specials": [
           {
             "nameID": "Flying Barcelona Attack",
-            "input": "qcf|+|lp"
+            "input": "SRK|OR|SRK_BACK|PLUS|KICK"
           },
           {
             "nameID": "Izuna Drop",
-            "input": "qcf|+|lp",
+            "input": "SRK|OR|SRK_BACK|PLUS|KICK|ARROW|LP|PLUS|LK",
             "posttextID":"id_close_to_opponent"
           },
           {
             "nameID": "Grand Izuna Drop",
-            "input": "qcf|+|lp",
+            "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
             "posttextID":"id_claw_claw_off_only"
           },
           {
             "nameID": "Crimson Terror",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           },
           {
             "nameID": "Aurora Spin Edge",
-            "input": "qcf|+|lp",
+            "input": "QCB|PLUS|PUNCH",
             "posttextID":"id_claw_claw_on_only"
           },
           {
             "nameID": "Switch Claw",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|PUNCH",
             "posttextID":"id_claw_switch"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Bloody Kiss - Torero",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           },
           {
             "nameID": "Bloody Kiss - Rojo",
-            "input": "qcf|+|lp"
+            "input": "D|PLUS|HP|PLUS|HK"
           },
           {
             "nameID": "Bloody Kiss - Azul",
-            "input": "qcf|+|lp",
+            "input": "HP|PLUS|HK",
             "pretextID":"id_during_forward_jump"
           }
         ],
         "vreversal": [
           {
             "nameID": "Backslash",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           },
           {
             "nameID": "Short Backslash",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_KICKS",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Matador Turn",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "pretextID":"id_hold_buttons_to_attack"
           }
         ],        
         "throws": [
           {
             "nameID": "Rainbow Suplex",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Crescent Line",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Stardust Shot",
-            "input": "qcf|+|lp"          }
+            "input": "LP|PLUS|LK",
+            "pretextID": "id_during_jump"}
         ],
         "unique_attacks": [
           {
             "nameID": "Mercury Shard",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MK"
           },
           {
             "nameID": "Buster Claw",
-            "input": "qcf|+|lp",
+            "input": "DF|PLUS|HP",
             "posttextID":"id_claw_claw_on_only"
           },
           {
             "nameID": "Matador Flash",
-            "input": "qcf|+|lp",
+            "input": "HP|ARROW|HP|ARROW|MP|PLUS|MK",
             "posttextID":"id_claw_claw_on_only"
           },
           {
             "nameID": "Matador Blitz",
-            "input": "qcf|+|lp",
+            "input": "MP|ARROW|HK|ARROW|MP|PLUS|MK",
             "posttextID":"id_claw_claw_off_only"
           },
           {
             "nameID": "Wall Jump",
-            "input": "qcf|+|lp",
+            "input": "UF",
             "pretextID":"id_during_jump_near_wall"
           }
         ]
@@ -319,90 +320,90 @@
         "critical_arts": [
           {
             "nameID": "Cross Stinger Assault",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|KICK"
           }
         ],
         "specials": [
           {
             "nameID": "Spiral Arrow",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           },
           {
             "nameID": "Cannon Spike",
-            "input": "qcf|+|lp"
+            "input": "SRK|PLUS|KICK"
           },
           {
             "nameID": "Cannon Strike",
-            "input": "qcf|+|lp",
+            "input": "QCB|PLUS|KICK",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Hooligan Combination",
-            "input": "qcf|+|lp"
+            "input": "HCF|PLUS|PUNCH"
           },
           {
             "nameID": "Lazer Edge Slicer",
-            "input": "qcf|+|lp",
+            "input": "NO_INPUT",
             "pretextID":"id_no_input"
           },
           {
             "nameID": "Fatal Leg Twister",
-            "input": "qcf|+|lp",
+            "input": "HCF|PLUS|PUNCH|ARROW|LP|PLUS|LK",
             "pretextID":"id_close_to_grounded_opponent"
           },
           {
             "nameID": "Cross Scissors Pressure",
-            "input": "qcf|+|lp",
+            "input": "HCF|PLUS|PUNCH|ARROW|LP|PLUS|LK",
             "pretextID":"id_close_to_airborne_opponent"
           },
           {
             "nameID": "Cannon Strike",
-            "input": "qcf|+|lp"
+            "input": "HCF|PLUS|PUNCH|ARROW|KICK"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Delta Drive",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Strike Back",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_KICKS",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Axel Spin Knuckle",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           }
         ],        
         "throws": [
           {
             "nameID": "Gyro Clipper",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Delta Through",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Knee Bullet",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HK"
           },
           {
             "nameID": "Lift Upper",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HP"
           },
           {
             "nameID": "Lift Combination",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HP|ARROW|HK"
           }
         ]
       }
@@ -411,98 +412,99 @@
       "move_list": {
         "critical_arts": [
           {
-            "nameID": "Hoyokusen",
-            "input": "qcf|+|lp"
+            "nameID": "Houyokusen",
+            "input": "QCF|QCF|PLUS|KICK"
           }
         ],
         "specials": [
           {
             "nameID": "Kikoken",
-            "input": "qcf|+|lp"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
           },
           {
             "nameID": "Hyakuretsukyaku",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           },
           {
             "nameID": "Airborne Hyakuretsukyaku",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|KICK",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Spinning Bird Kick",
-            "input": "qcf|+|lp"
+            "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK"
           }          
         ],
         "vtrigger": [
           {
             "nameID": "Renkiko",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Sohakkei",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Rankyaku",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           }
         ],        
         "throws": [
           {
             "nameID": "Koshuto",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Tenshin Shushu",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Ryuseiraku",
-            "input": "qcf|+|lp"
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_during_jump"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Tsuitotsuken",
-            "input": "qcf|+|lp"
+            "input": "B|OR|F|PLUS|MP"
           },
           {
             "nameID": "Hakkei",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HP"
           },
           {
             "nameID": "Senenshu",
-            "input": "qcf|+|lp"
+            "input": "DF|PLUS|MK"
           },
           {
             "nameID": "Tenkukyaku",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HK"
           },
           {
             "nameID": "Yokusenkyaku",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HK"
           },
           {
             "nameID": "Kakurakukyaku",
-            "input": "qcf|+|lp"
+            "input": "DF|PLUS|HK"
           },
           {
             "nameID": "Yosokyaku",
-            "input": "qcf|+|lp",
+            "input": "D|OR|DF|PLUS|MK",
             "pretextID":"id_during_jump",
             "posttextID":"id_up_to_three_times"
           },
           {
             "nameID": "Wall Jump",
-            "input": "qcf|+|lp",
+            "input": "UF",
             "pretextID":"id_during_jump_near_wall"
           }
         ]
@@ -513,85 +515,85 @@
         "critical_arts": [
           {
             "nameID": "Guren Enjinkyaku",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|KICK"
           }
         ],
         "specials": [
           {
             "nameID": "Hadoken",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Shoryuken",
-            "input": "qcf|+|lp"
+            "input": "SRK|PLUS|PUNCH"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|KICK"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
-            "input": "qcf|+|lp",
+            "input": "QCB|PLUS|KICK",
             "pretextID":"id_during_forward_jump"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Heat Rush",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Senpu Nataotoshi",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Quick Step",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "posttextID":"id_ken_step_kick_hold_buttons"
           }
         ],        
         "throws": [
           {
             "nameID": "Knee Bash",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Hell Wheel",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Thunder Kick",
-            "input": "qcf|+|lp",
-            "posttextID":"id_hold_button"
+            "input": "F|PLUS|HK"
           },
           {
             "nameID": "Thunder Kick (Feint)",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HK",
+            "posttextID":"id_hold_button"
           },
           {
             "nameID": "Inazuma Kick",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MK"
           },
           {
             "nameID": "Chin Buster",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MP"
           },
           {
             "nameID": "Chin Buster 2nd",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MP|ARROW|HP"
           },
           {
             "nameID": "Lion Breaker",
-            "input": "qcf|+|lp"
+            "input": "MK|ARROW|HK"
           }
         ]
       }
@@ -601,75 +603,75 @@
         "critical_arts": [
           {
             "nameID": "Bolshoi Russian Suplex",
-            "input": "qcf|+|lp",
+            "input": "SPD|SPD|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "specials": [
           {
             "nameID": "Screw Pile Driver",
-            "input": "qcf|+|lp",
+            "input": "SPD|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Double Lariat",
-            "input": "qcf|+|lp"
+            "input": "ALL_PUNCHES"
           },
           {
             "nameID": "Siberian Express",
-            "input": "qcf|+|lp"
+            "input": "HCB|PLUS|KICK"
           },
           {
             "nameID": "Borscht Dynamite",
-            "input": "qcf|+|lp",
+            "input": "SPD|PLUS|PUNCH",
             "pretextID":"id_during_vertical_or_forward_jump"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Cyclone Lariat",
-            "input": "qcf|+|lp",
+            "input": "HP|PLUS|HK",
             "posttextID":"id_hold_buttons_for_special_lariat"
           }
         ],
         "vreversal": [
           {
             "nameID": "Muscle Explosion",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Iron Muscle",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "posttextID":"id_can_move_forward_while_holding_buttons"
           }
         ],       
         "throws": [
           {
             "nameID": "Atomic Drop",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Captured",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Head Butt",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Knee Hammer",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MK"
           },
           {
             "nameID": "Flying Body Press",
-            "input": "qcf|+|lp",
+            "input": "D|PLUS|HP",
             "pretextID":"id_during_forward_jump"
           }
         ]
@@ -680,84 +682,84 @@
         "critical_arts": [
           {
             "nameID": "Shinku Hadoken",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Denjin Hadoken",
-            "input": "qcf|+|lp",
+            "input": "QCF|QCF|PLUS|PUNCH",
             "pretextID":"id_during_vtrigger"
           }
         ],
         "specials": [
           {
             "nameID": "Hadoken",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Shoryuken",
-            "input": "qcf|+|lp"
+            "input": "SRK|PLUS|PUNCH"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|KICK"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
-            "input": "qcf|+|lp",
+            "input": "QCB|PLUS|KICK",
             "pretextID":"id_during_forward_jump"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Denjin Renki",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Hashogeki",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Mind's Eye",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           }
         ],       
         "throws": [
           {
             "nameID": "Shoulder Throw",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Somersault Throw",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Collarbone Breaker",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MP"
           },
           {
             "nameID": "Solar Plexus Strike",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Axe Kick",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HK"
           },
           {
             "nameID": "Jodan Nirengeki",
-            "input": "qcf|+|lp"
+            "input": "HP|ARROW|HK"
           },
           {
             "nameID": "Jodan Sanrengeki",
-            "input": "qcf|+|lp"
+            "input": "MP|ARROW|HP|ARROW|HK"
           }
         ]
       }
@@ -767,78 +769,79 @@
         "critical_arts": [
           {
             "nameID": "Ultimate Psycho Crusher",
-            "input": "qcf|+|lp",
+            "input": "QCF|QCF|PLUS|PUNCH",
             "posttextID":"id_can_be_done_in_air"
           }
         ],
         "specials": [
           {
             "nameID": "Psycho Blast",
-            "input": "qcf|+|lp"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
           },
           {
             "nameID": "Double Knee Press",
-            "input": "qcf|+|lp"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|KICK"
           },
           {
             "nameID": "Head Press",
-            "input": "qcf|+|lp"
+            "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK"
           },
           {
             "nameID": "Somersault Skull Diver",
-            "input": "qcf|+|lp",
+            "input": "PUNCH",
             "pretextID":"id_after_head_press"
           },
           {
             "nameID": "Devil Reverse",
-            "input": "qcf|+|lp",
+            "input": "PUNCH",
             "pretextID":"id_before_head_press"
           },
           {
             "nameID": "Psycho Inferno",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|PUNCH"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Psycho Power",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Psycho Burst",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Psycho Reflect",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "posttextID":"id_pyscho_reflect_hold_buttons"
           }
         ],      
         "throws": [
           {
             "nameID": "Psycho Impact",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Psycho Fall",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Hell Attack",
-            "input": "qcf|+|lp"
+            "input": "MP|ARROW|MP",
+            "pretextID": "id_during_jump"
           },
           {
             "nameID": "Psycho Axe",
-            "input": "qcf|+|lp"
+            "input": "DF|PLUS|HP"
           }
         ]
       }
@@ -848,90 +851,90 @@
         "critical_arts": [
           {
             "nameID": "Inazuma Spin Hold",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|KICK"
           }          
         ],
         "specials": [
           {
             "nameID": "Bolt Charge",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Split River",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|PUNCH"
           },
           {
             "nameID": "Rodeo Break",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH|ARROW|KICK"
           },
           {
             "nameID": "Thunder Clap",
-            "input": "qcf|+|lp",
+            "input": "QCB|PLUS|PUNCH",
             "posttextID":"id_laura_hold_buttons_to_power_up"
           },
           {
             "nameID": "Sunset Wheel",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|KICK"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Spark Show",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }       
         ],
         "vreversal": [
           {
             "nameID": "Double Slap",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }          
         ],
         "vskill": [
           {
             "nameID": "Volty Line",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           },
           {
             "nameID": "Linear Movement - Avante",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|MP|PLUS|MK",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Esquiva",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|MP|PLUS|MK",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Finta",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|MP|PLUS|MK|ARROW|MP|PLUS|MK",
             "posttextID":"id_hold_buttons_to_attack"
           }          
         ],        
         "throws": [
           {
             "nameID": "Seoi Throw",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Pullback Hold",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }          
         ],
         "unique_attacks": [
           {
             "nameID": "Step Elbow",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Twist Barrage",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP|ARROW|HP"
           },
           {
             "nameID": "Dual Crash",
-            "input": "qcf|+|lp"
+            "input": "MP|ARROW|MK"
           }          
         ]
       }
@@ -941,89 +944,89 @@
         "critical_arts": [
           {
             "nameID": "Skip to My Chain",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|PUNCH"
           }
         ],
         "specials": [
           {
             "nameID": "Bull Head",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Bull Horn",
-            "input": "qcf|+|lp",
+            "input": "PUNCH|OR|KICK",
             "posttextID":"id_hold_and_release"
           },
           {
             "nameID": "Hanging Chain",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|KICK",
             "posttextID":"id_birdie_hanging_chain_posttext"
           },
           {
             "nameID": "Killing Head",
-            "input": "qcf|+|lp",
+            "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Bull Revenger",
-            "input": "qcf|+|lp"
+            "input": "HCB|PLUS|KICK"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Enjoy Time",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Pepper Pot",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Break Time",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           },
           {
             "nameID": "Banana Time",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MP|PLUS|MK"
           },
           {
             "nameID": "Drink Time",
-            "input": "qcf|+|lp"
+            "input": "D|PLUS|MP|PLUS|MK"
           }
         ],       
         "throws": [
           {
             "nameID": "Bad Skull",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Bad Chain",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Bull Drop",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HK"
           },
           {
             "nameID": "Bull Charge",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Bull Slider",
-            "input": "qcf|+|lp"
+            "input": "DF|PLUS|HP"
           },
           {
             "nameID": "Bad Hammer",
-            "input": "qcf|+|lp"
+            "input": "D|PLUS|HP|ARROW|HP"
           }
         ]
       }
@@ -1033,29 +1036,29 @@
         "critical_arts": [
           {
             "nameID": "Peach Assault",
-            "input": "qcf|+|lp",
+            "input": "QCB|QCB|PLUS|PUNCH",
             "posttextID":"id_mika_vskill_increases_power"
           }
         ],
         "specials": [
           {
             "nameID": "Shooting Peach",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Wingless Airplane",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|KICK",
             "posttextID":"id_mika_vskill_increases_power"
           },
           {
             "nameID": "Rainbow Typhoon",
-            "input": "qcf|+|lp",
+            "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
             "posttextID":"id_mika_vskill_increases_power"
           },
           {
             "nameID": "Brimstone",
-            "input": "qcf|+|lp",
+            "input": "HCB|PLUS|KICK",
             "pretextID":"id_close_to_opponent",
             "posttextID":"id_mika_vskill_increases_power"
           }
@@ -1063,73 +1066,73 @@
         "vtrigger": [
           {
             "nameID": "Nadeshiko (Above)",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           },
           {
             "nameID": "Nadeshiko (Front)",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|HP|PLUS|HK"
           },
           {
             "nameID": "Nadeshiko (Behind)",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Peach Gator",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Mic Performance",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "posttextID":"id_mika_hold_buttons_to_power_up_throws"
           }
         ],
         "throws": [
           {
             "nameID": "Daydream Headlock",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Dream Driver",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_crouching_opponent"
           },
           {
             "nameID": "Sell Down",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Stomp Chop",
-            "input": "qcf|+|lp"
+            "input": "LK|ARROW|MP"
           },
           {
             "nameID": "Divebomb",
-            "input": "qcf|+|lp",
+            "input": "D|PLUS|MP",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Lady Mika",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Passion Press",
-            "input": "qcf|+|lp"
+            "input": "B|OR|F|PLUS|MP"
           },
           {
             "nameID": "Passion Rope Throw (Forward)",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MP|ARROW|F|PLUS|MP"
           },
           {
             "nameID": "Passion Rope Throw (Backward)",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MP|ARROW|B|PLUS|MP"
           }
         ]
       }
@@ -1139,95 +1142,95 @@
         "critical_arts": [
           {
             "nameID": "Altair",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|PUNCH"
           }
         ],
         "specials": [
           {
             "nameID": "Spinning Mixer",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|PUNCH",
             "posttextID":"id_rashid_repeat_buttons_to_extend"
           },
           {
             "nameID": "Eagle Spike",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|KICK"
           },
           {
             "nameID": "Airborne Eagle Spike",
-            "input": "qcf|+|lp",
+            "input": "QCB|PLUS|KICK",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Whirlwind Shot",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Ysaar",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Sliding Roll",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Front Flip",
-            "input": "qcf|+|lp"            
+            "input": "MP|PLUS|MK"
           },
           {
             "nameID": "Airborne Eagle Spike",
-            "input": "qcf|+|lp"            
+            "input": "MP|PLUS|MK|ARROW|KICK"
           },
           {
             "nameID": "Rolling Assault",
-            "input": "qcf|+|lp"            
+            "input": "D|PLUS|MP|PLUS|MK"
           },
           {
             "nameID": "Nail Assault",
-            "input": "qcf|+|lp"            
+            "input": "D|PLUS|MP|PLUS|MK|ARROW|KICK"
           }
         ],      
         "throws": [
           {
             "nameID": "Rising Glider",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Rising Sun",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Flap Spin",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MP"
           },
           {
             "nameID": "Beak Assault",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Spinning Mixer",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|PUNCH",
             "pretextID":"id_during_run",
             "posttextID":"id_rashid_repeat_buttons_to_extend"            
           },
           {
             "nameID": "Eagle Spike",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|KICK",
             "pretextID":"id_during_run"
           },
           {
             "nameID": "Wall Jump",
-            "input": "qcf|+|lp",
+            "input": "UF|OR|DF",
             "pretextID":"id_during_jump_near_wall"
           }
         ]
@@ -1238,115 +1241,116 @@
         "critical_arts": [
           {
             "nameID": "Judgment Saber",
-            "input": "qcf|+|lp"
+            "input": "QCB|QCB|PLUS|PUNCH"
           }
         ],
         "specials": [
           {
             "nameID": "Sonic Boom",
-            "input": "qcf|+|lp",
+            "input": "QCF|PLUS|PUNCH",
             "posttextID":"id_nash_press_for_second_boom"
           },
           {
             "nameID": "Sonic Scythe",
-            "input": "qcf|+|lp"
+            "input": "QCB|PLUS|KICK"
           },
           {
             "nameID": "Moonsault Slash",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           },
           {
             "nameID": "Tragedy Assault",
-            "input": "qcf|+|lp"
+            "input": "SRK|PLUS|PUNCH"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Sonic Move - Hide",
-            "input": "qcf|+|lp"            
+            "input": "HP|PLUS|HK"
           },
           {
             "nameID": "Sonic Move - Blitz Air",
-            "input": "qcf|+|lp"            
+            "input": "B|PLUS|HP|PLUS|HK"
           },
           {
             "nameID": "Sonic Move - Steel Air",
-            "input": "qcf|+|lp"            
+            "input": "F|PLUS|HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "Sonic Move - Avoid",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|PUNCH",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Bullet Clear",
-            "input": "qcf|+|lp"
+            "input": "MP|PLUS|MK"
           }
         ],       
         "throws": [
           {
             "nameID": "Dragon Suplex",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Target Down",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Air Jack",
-            "input": "qcf|+|lp"
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_during_jump"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Knee Bazooka",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|LK"
           },
           {
             "nameID": "Jumping Sobat",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MK"
           },
           {
             "nameID": "Chopping Assault",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MP"
           },
           {
             "nameID": "Step Kick",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|MK"
           },
           {
             "nameID": "Spinning Back Knuckle",
-            "input": "qcf|+|lp"
+            "input": "F|PLUS|HP"
           },
           {
             "nameID": "Side Knee Attack",
-            "input": "qcf|+|lp"
+            "input": "B|PLUS|MK"
           },
           {
             "nameID": "Rapid Punch",
-            "input": "qcf|+|lp"
+            "input": "LP|ARROW|MP"
           },
           {
             "nameID": "Rapid Kick",
-            "input": "qcf|+|lp"
+            "input": "LK|ARROW|MK"
           },
           {
             "nameID": "Wind Shear",
-            "input": "qcf|+|lp"
+            "input": "MP|ARROW|LP|ARROW|HP"
           },
           {
             "nameID": "Down Burst",
-            "input": "qcf|+|lp"
+            "input": "D|PLUS|MP|ARROW|F|PLUS|MP"
           },
           {
             "nameID": "Raptor Combination",
-            "input": "qcf|+|lp"
+            "input": "MK|ARROW|HK|ARROW|MK"
           }
         ]
       }
@@ -1356,78 +1360,78 @@
         "critical_arts": [
           {
             "nameID": "Ceremony of Honor",
-            "input": "qcf|+|lp"
+            "input": "QCF|QCF|PLUS|PUNCH"
           },
           {
             "nameID": "Soul Offering",
-            "input": "qcf|+|lp",
+            "input": "QCF|QCF|PLUS|PUNCH",
             "pretextID":"id_during_vtrigger"
           }
         ],
         "specials": [
           {
             "nameID": "The Disc's Guidance",
-            "input": "qcf|+|lp"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
           },
           {
             "nameID": "Raging Light",
-            "input": "qcf|+|lp"
+            "input": "SRK|PLUS|PUNCH"
           },
           {
             "nameID": "Mask of Tlalli",
-            "input": "qcf|+|lp",
+            "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Valiant Rebellion",
-            "input": "qcf|+|lp"
+            "input": "QCF|PLUS|KICK"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Torrent of Power",
-            "input": "qcf|+|lp"
+            "input": "HP|PLUS|HK"
           }
         ],
         "vreversal": [
           {
             "nameID": "The Calling",
-            "input": "qcf|+|lp",
+            "input": "F|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
         "vskill": [
           {
             "nameID": "Culminated Power",
-            "input": "qcf|+|lp",
+            "input": "MP|PLUS|MK",
             "posttextID":"id_necalli_vskill_control_distance"
           }
         ],       
         "throws": [
           {
             "nameID": "Soul Sealer",
-            "input": "qcf|+|lp",
+            "input": "LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Soul Discriminator",
-            "input": "qcf|+|lp",
+            "input": "B|PLUS|LP|PLUS|LK",
             "pretextID":"id_close_to_opponent"
           }
         ],
         "unique_attacks": [
           {
             "nameID": "Opening Dagger",
-            "input": "qcf|+|lp"
+            "input": "DF|PLUS|HP"
           },
           {
             "nameID": "Road of the Sun",
-            "input": "qcf|+|lp",
+            "input": "D|PLUS|HK",
             "pretextID":"id_during_forward_jump"
           },
           {
             "nameID": "Sacrificial Altar",
-            "input": "qcf|+|lp"
+            "input": "MK|ARROW|HK|ARROW|MP|PLUS|MK|OR|B|PLUS|MP|PLUS|MK"
           }
         ]
       }
