@@ -1,6 +1,7 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
@@ -121,6 +122,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             String toolbarTitleFormat = getString(R.string.summary_toolbar_title);
             String characterName = getString(getNameResource());
             actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
+            actionBar.setBackgroundDrawable(getCharacterAccentColorDrawable());
 
             if (viewExists(R.id.summary_character_image)) {
                 final ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
@@ -255,6 +257,45 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                 return R.color.fang_accent;
             default:
                 throw new RuntimeException("unable to resolve character accent color: " + targetCharacter);
+        }
+    }
+
+    private ColorDrawable getCharacterAccentColorDrawable() {
+        switch(targetCharacter) {
+            case RYU:
+                return new ColorDrawable(getResources().getColor(R.color.ryu_accent));
+            case CHUN:
+                return new ColorDrawable(getResources().getColor(R.color.chun_accent));
+            case DICTATOR:
+                return new ColorDrawable(getResources().getColor(R.color.dictator_accent));
+            case BIRDIE:
+                return new ColorDrawable(getResources().getColor(R.color.birdie_accent));
+            case NASH:
+                return new ColorDrawable(getResources().getColor(R.color.nash_accent));
+            case CAMMY:
+                return new ColorDrawable(getResources().getColor(R.color.cammy_accent));
+            case KEN:
+                return new ColorDrawable(getResources().getColor(R.color.ken_accent));
+            case MIKA:
+                return new ColorDrawable(getResources().getColor(R.color.mika_accent));
+            case NECALLI:
+                return new ColorDrawable(getResources().getColor(R.color.necalli_accent));
+            case CLAW:
+                return new ColorDrawable(getResources().getColor(R.color.claw_accent));
+            case RASHID:
+                return new ColorDrawable(getResources().getColor(R.color.rashid_accent));
+            case KARIN:
+                return new ColorDrawable(getResources().getColor(R.color.karin_accent));
+            case LAURA:
+                return new ColorDrawable(getResources().getColor(R.color.laura_accent));
+            case DHALSIM:
+                return new ColorDrawable(getResources().getColor(R.color.dhalsim_accent));
+            case ZANGIEF:
+                return new ColorDrawable(getResources().getColor(R.color.zangief_accent));
+            case FANG:
+                return new ColorDrawable(getResources().getColor(R.color.fang_accent));
+            default:
+                throw new RuntimeException("unable to resolve character accent color drawable: " + targetCharacter);
         }
     }
 
