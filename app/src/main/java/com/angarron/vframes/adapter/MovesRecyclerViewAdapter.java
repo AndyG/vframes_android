@@ -145,73 +145,41 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         imageView.setLayoutParams(layoutParams);
 
         switch(inputElement) {
-            case LP:
-
-            case MP:
-
-            case HP:
-
-            case LK:
-
-            case MK:
-
             case HK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
                 break;
+            case LP:
+            case MP:
+            case HP:
+            case LK:
+            case MK:
             case PUNCH:
-
             case KICK:
-
             case ALL_PUNCHES:
-
             case ALL_KICKS:
-
             case UP:
-
             case UP_FORWARD:
-
             case FORWARD:
-
             case DOWN_FORWARD:
-
             case DOWN:
-
             case DOWN_BACK:
-
             case BACK:
-
             case UP_BACK:
-
             case QCF:
-
             case QCB:
-
             case SRK:
-
             case SRK_BACK:
-
             case HCF:
-
             case HCB:
-
             case CHARGE_BACK:
-
             case CHARGE_DOWN:
-
             case RELEASE_FORWARD:
-
             case RELEASE_UP:
-
             case SPD:
-
             case PLUS:
-
             case ARROW:
-
             case OR:
-
             case NO_INPUT:
-
             default:
                 //TODO: make this put in a question mark icon
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
