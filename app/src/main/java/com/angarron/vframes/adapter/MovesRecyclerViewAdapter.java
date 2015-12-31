@@ -109,7 +109,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         List<InputElement> input = move.getInput();
         moveItemViewHolder.input.removeAllViews();
-        for (int i = 0; i < 8; i++) {
+        for (int i = 6; i < 11; i++) {
             moveItemViewHolder.input.addView(getViewForIndex(i));
         }
 //        for (InputElement inputElement : input) {
@@ -170,8 +170,16 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
                 break;
             case 7:
-            default:
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_forward));
+                break;
+            case 8:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_srk));
+                break;
+            case 9:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcb));
+                break;
+            case 10:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_qcf));
                 break;
         }
         return imageView;
