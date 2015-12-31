@@ -109,9 +109,12 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         List<InputElement> input = move.getInput();
         moveItemViewHolder.input.removeAllViews();
-        for (InputElement inputElement : input) {
-            moveItemViewHolder.input.addView(getViewForInputElement(inputElement));
+        for (int i = 0; i < 8; i++) {
+            moveItemViewHolder.input.addView(getViewForIndex(i));
         }
+//        for (InputElement inputElement : input) {
+//            moveItemViewHolder.input.addView(getViewForInputElement(inputElement));
+//        }
 
         if (!TextUtils.isEmpty(move.getPretextId())) {
             moveItemViewHolder.pretext.setText(StringResolver.getStringId(move.getPretextId()));
@@ -133,6 +136,45 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         } else {
             moveItemViewHolder.description.setVisibility(View.GONE);
         }
+    }
+
+    private View getViewForIndex(int i) {
+        ImageView imageView = new ImageView(context);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setAdjustViewBounds(true);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(35), 1);
+        layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+        imageView.setLayoutParams(layoutParams);
+
+        switch (i) {
+            case 0:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down));
+                break;
+            case 1:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_back));
+                break;
+            case 2:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_back));
+                break;
+            case 3:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_back));
+                break;
+            case 4:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
+                break;
+            case 5:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_forward));
+                break;
+            case 6:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
+                break;
+            case 7:
+            default:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_forward));
+                break;
+        }
+        return imageView;
     }
 
     private View getViewForInputElement(InputElement inputElement) {
@@ -182,7 +224,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             case NO_INPUT:
             default:
                 //TODO: make this put in a question mark icon
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
         }
         return imageView;
     }
