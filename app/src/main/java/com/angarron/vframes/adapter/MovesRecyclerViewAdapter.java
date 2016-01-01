@@ -109,12 +109,10 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         List<InputElement> input = move.getInput();
         moveItemViewHolder.input.removeAllViews();
-        for (int i = 6; i < 11; i++) {
-            moveItemViewHolder.input.addView(getViewForIndex(i));
+
+        for (InputElement inputElement : input) {
+            moveItemViewHolder.input.addView(getViewForInputElement(inputElement));
         }
-//        for (InputElement inputElement : input) {
-//            moveItemViewHolder.input.addView(getViewForInputElement(inputElement));
-//        }
 
         if (!TextUtils.isEmpty(move.getPretextId())) {
             moveItemViewHolder.pretext.setText(StringResolver.getStringId(move.getPretextId()));
@@ -181,6 +179,9 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             case 10:
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_qcf));
                 break;
+            case 11:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_spd));
+                break;
         }
         return imageView;
     }
@@ -190,7 +191,13 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
 
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(30), 1);
+        //TODO: turn size into a dimension resolved at runtime
+        int size = 30;
+        if (inputElement == InputElement.PLUS || inputElement == InputElement.ARROW) {
+            size = 15;
+        }
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(size), 1);
         layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
         imageView.setLayoutParams(layoutParams);
 
@@ -199,40 +206,104 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
                 break;
             case LP:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_lp));
+                break;
             case MP:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_mp));
+                break;
             case HP:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_hp));
+                break;
             case LK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_lk));
+                break;
             case MK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_mk));
+                break;
             case PUNCH:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_generic_punch));
+                break;
             case KICK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_generic_kick));
+                break;
             case ALL_PUNCHES:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             case ALL_KICKS:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             case UP:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
+                break;
             case UP_FORWARD:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_forward));
+                break;
             case FORWARD:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
+                break;
             case DOWN_FORWARD:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_forward));
+                break;
             case DOWN:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down));
+                break;
             case DOWN_BACK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_back));
+                break;
             case BACK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_back));
+                break;
             case UP_BACK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_back));
+                break;
             case QCF:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_qcf));
+                break;
             case QCB:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_qcb));
+                break;
             case SRK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_srk));
+                break;
             case SRK_BACK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_srk_back));
+                break;
             case HCF:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcf));
+                break;
             case HCB:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcb));
+                break;
             case CHARGE_BACK:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             case CHARGE_DOWN:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             case RELEASE_FORWARD:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
+                break;
             case RELEASE_UP:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
+                break;
             case SPD:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_spd));
+                break;
             case PLUS:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_plus));
+                break;
             case ARROW:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_arrow));
+                break;
             case OR:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             case NO_INPUT:
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                break;
             default:
                 //TODO: make this put in a question mark icon
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
         }
         return imageView;
     }
