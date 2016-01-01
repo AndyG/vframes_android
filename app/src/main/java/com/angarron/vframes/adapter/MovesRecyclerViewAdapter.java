@@ -1,6 +1,7 @@
 package com.angarron.vframes.adapter;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.TypedValue;
@@ -188,100 +189,100 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         switch(inputElement) {
             case HK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_hk));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_hk));
                 break;
             case LP:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_lp));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_lp));
                 break;
             case MP:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_mp));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_mp));
                 break;
             case HP:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_hp));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_hp));
                 break;
             case LK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_lk));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_lk));
                 break;
             case MK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_mk));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_mk));
                 break;
             case PUNCH:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_generic_punch));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_generic_punch));
                 break;
             case KICK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_generic_kick));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_generic_kick));
                 break;
             case ALL_PUNCHES:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_all_punches));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_all_punches));
                 break;
             case ALL_KICKS:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_all_kicks));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_all_kicks));
                 break;
             case UP:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_up));
                 break;
             case UP_FORWARD:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_forward));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_up_forward));
                 break;
             case FORWARD:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_forward));
                 break;
             case DOWN_FORWARD:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_forward));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_down_forward));
                 break;
             case DOWN:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_down));
                 break;
             case DOWN_BACK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_back));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_down_back));
                 break;
             case BACK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_back));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_back));
                 break;
             case UP_BACK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_back));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_up_back));
                 break;
             case QCF:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_qcf));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_qcf));
                 break;
             case QCB:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_qcb));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_qcb));
                 break;
             case SRK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_srk));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_srk));
                 break;
             case SRK_BACK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_srk_back));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_srk_back));
                 break;
             case HCF:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcf));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_hcf));
                 break;
             case HCB:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcb));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_hcb));
                 break;
             case CHARGE_BACK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_charge_back));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_charge_back));
                 break;
             case CHARGE_DOWN:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_charge_down));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_charge_down));
                 break;
             case RELEASE_FORWARD:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_forward));
                 break;
             case RELEASE_UP:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_up));
                 break;
             case SPD:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_spd));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_spd));
                 break;
             case PLUS:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_plus));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_plus));
                 break;
             case ARROW:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_arrow));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_arrow));
                 break;
             default:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_unknown));
         }
         return imageView;
     }
