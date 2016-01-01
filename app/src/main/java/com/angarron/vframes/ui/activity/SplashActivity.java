@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.angarron.vframes.R;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.data.IDataSource;
+import com.crashlytics.android.Crashlytics;
 
 import data.model.IDataModel;
 
@@ -44,9 +45,7 @@ public class SplashActivity extends Activity {
 
         @Override
         public void onDataFetchFailed(IDataSource.FetchFailureReason failureReason) {
-            Toast.makeText(SplashActivity.this, "failed to fetch data", Toast.LENGTH_LONG).show();
-            Log.e(VFramesApplication.APP_LOGGING_TAG, "failed to fetch data: " + failureReason);
-            //TODO: log this error to crashlytics
+            throw new RuntimeException("failed to fetch data: " + failureReason);
         }
     }
 

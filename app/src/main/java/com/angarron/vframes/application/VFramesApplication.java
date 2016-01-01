@@ -29,12 +29,13 @@ public class VFramesApplication extends Application {
         super.onCreate();
         //Crashlytics Integration
         Fabric.with(this, new Crashlytics());
+
+        //No need to use data from the network yet.
         init(false, R.raw.test_data);
     }
 
-    private void init(boolean useRealData, int resourceId) {
-        //TODO: use real data source for real app
-        if (useRealData) {
+    private void init(boolean useNetworkData, int resourceId) {
+        if (useNetworkData) {
             VFramesRESTApi restApi = getRestApi();
             dataSource = new NetworkFallbackDataSource(restApi, getResources(), resourceId);
         } else {

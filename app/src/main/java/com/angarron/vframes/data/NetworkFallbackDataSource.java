@@ -43,7 +43,6 @@ public class NetworkFallbackDataSource implements IDataSource {
             @Override
             public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
                 IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(response.body());
-                Log.d(VFramesApplication.APP_LOGGING_TAG, "read characters");
                 listener.onDataReceived(dataModel);
             }
 

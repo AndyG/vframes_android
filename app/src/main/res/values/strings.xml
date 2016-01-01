@@ -61,6 +61,7 @@
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
     <string name="karin_meioken_posttext">Hold buttons to change properties</string>
+    <string name="karin_vskill_description">Destroys projectiles with a palm strike.</string>
 
     <!-- Claw Movelist -->
     <string name="claw_claw_off_only">(Claw Off Only)</string>

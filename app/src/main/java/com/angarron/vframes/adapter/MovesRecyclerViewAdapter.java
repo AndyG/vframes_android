@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -150,13 +151,15 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     private TextView getTextViewForInputElement(InputElement inputElement) {
         TextView textView = new TextView(context);
 
-        //TODO: turn size into a dimension resolved at runtime
-        int textSize = 10;
-
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
         textView.setLayoutParams(layoutParams);
+
+        //I don't know why I have to go this roundabout way of setting the text size,
+        //but nothing else is working properly.
+        int textSize = context.getResources().getInteger(R.integer.input_element_text_size);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+
         textView.setAllCaps(true);
         switch (inputElement) {
             case OR:
@@ -177,13 +180,14 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
 
-        //TODO: turn size into a dimension resolved at runtime
-        int size = 30;
+        int height;
         if (inputElement == InputElement.PLUS || inputElement == InputElement.ARROW) {
-            size = 15;
+            height = context.getResources().getDimensionPixelSize(R.dimen.input_icon_conjunction_height);
+        } else {
+            height = context.getResources().getDimensionPixelSize(R.dimen.input_icon_height);
         }
 
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(size), 1);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, height, 1);
         layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
         imageView.setLayoutParams(layoutParams);
 

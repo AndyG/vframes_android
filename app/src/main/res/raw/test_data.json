@@ -89,7 +89,8 @@
           {
             "nameID": "Meioken",
             "input": "MP|PLUS|MK",
-            "posttextID":"id_karin_meioken_posttext"
+            "posttextID":"id_karin_meioken_posttext",
+            "descriptionID":"id_karin_vskill_description"
           }
         ],
         "throws": [
@@ -133,7 +134,7 @@
           {
             "nameID": "Yoga Gale",
             "input": "HCB|PLUS|PUNCH",
-            "pretextID":"id_dhalsim_gale_pretext"
+            "pretextID":"id_during_vertical_or_forward_jump"
           },
           {
             "nameID": "Yoga Teleport",

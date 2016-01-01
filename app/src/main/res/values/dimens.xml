@@ -17,5 +17,10 @@
     <dimen name="input_container_margin_top_bottom">4dp</dimen>
     <dimen name="summary_image_container_height">125dp</dimen>
 
+    <!-- Input Dimensions -->
+    <dimen name="input_icon_height">30dp</dimen>
+    <dimen name="input_icon_conjunction_height">15dp</dimen>
+    <integer name="input_element_text_size">10</integer>
+
     <integer name="num_character_card_columns">2</integer>
 </resources>

@@ -120,8 +120,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
                     clickedCharacter = CharacterID.RASHID;
                     break;
                 default:
-                    Log.e(VFramesApplication.APP_LOGGING_TAG, "clicked invalid character card");
-                    return;
+                    throw new RuntimeException("clicked invalid character card");
             }
 
             Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
