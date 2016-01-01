@@ -25,7 +25,6 @@ public class StringResolver {
         stringIdMap.put("id_hold_buttons_to_attack", R.string.hold_buttons_to_attack);
         stringIdMap.put("id_close_to_grounded_opponent", R.string.close_to_grounded_opponent);
         stringIdMap.put("id_close_to_airborne_opponent", R.string.close_to_airborne_opponent);
-        stringIdMap.put("id_no_input", R.string.no_input);
         stringIdMap.put("id_hold_button", R.string.hold_button);
         stringIdMap.put("id_during_vertical_or_forward_jump", R.string.during_vertical_or_forward_jump);
         stringIdMap.put("id_during_vtrigger", R.string.during_vtrigger);
@@ -62,6 +61,7 @@ public class StringResolver {
 
         //Laura Movelist
         stringIdMap.put("id_laura_hold_buttons_to_power_up", R.string.laura_hold_buttons_to_power_up);
+        stringIdMap.put("id_after_mp_or_ex_bolt_charge", R.string.laura_after_mp_or_ex_bolt_charge);
 
         //Birdie Movelist
         stringIdMap.put("id_birdie_hanging_chain_posttext", R.string.birdie_hanging_chain_posttext);
@@ -78,6 +78,9 @@ public class StringResolver {
 
         //Necalli Movelist
         stringIdMap.put("id_necalli_vskill_control_distance", R.string.necalli_vskill_control_distance);
+
+        //Cammy Movelist
+        stringIdMap.put("id_during_hooligan_combination", R.string.cammy_during_hooligan);
 
     }
 

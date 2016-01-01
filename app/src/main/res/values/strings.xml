@@ -50,6 +50,7 @@
     <string name="close_to_grounded_opponent">(Close to Grounded Opponent)</string>
     <string name="close_to_airborne_opponent">(Close to Airborne Opponent)</string>
     <string name="no_input">No Input</string>
+    <string name="or">Or</string>
     <string name="hold_button">Hold Button</string>
     <string name="during_jump_near_wall">(During Jump Near Wall)</string>
     <string name="during_vtrigger">(During VTrigger)</string>
@@ -80,7 +81,8 @@
     <string name="dictator_pyscho_reflect_hold_buttons">Hold Buttons to Throw Back a Projectile</string>
     <string name="dictator_after_head_press">(After Head Press Hits)</string>
     <string name="dictator_before_head_press">(Before Head Press Hits)</string>
-    <string name="laura_hold_buttons_to_power_up">Hold Buttons to Power Up</string>
+
+    <!-- Birdie Movelist -->
     <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Button\nCancel: Press Kick</string>
 
     <!-- Mika Movelist -->
@@ -96,5 +98,12 @@
     <!-- Necalli Movelist -->
     <string name="necalli_vskill_control_distance">Control Distance Using Direction</string>
     <string name="frame_data_not_available">Detailed frame data will become available as Street Fighter V nears release. Thank you for your patience.</string>
+
+    <!-- Laura Movelist -->
+    <string name="laura_after_mp_or_ex_bolt_charge">(After MP or EX Bolt Charge)</string>
+    <string name="laura_hold_buttons_to_power_up">Hold Buttons to Power Up</string>
+
+    <!-- Cammy Movelist -->
+    <string name="cammy_during_hooligan">(During Hooligan Combination)</string>
 
 </resources>

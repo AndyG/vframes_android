@@ -344,7 +344,7 @@
           {
             "nameID": "Lazer Edge Slicer",
             "input": "NO_INPUT",
-            "pretextID":"id_no_input"
+            "pretextID":"id_during_hooligan_combination"
           },
           {
             "nameID": "Fatal Leg Twister",
@@ -422,11 +422,11 @@
             "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
           },
           {
-            "nameID": "Hyakuretsukyaku",
+            "nameID": "Lightning Legs",
             "input": "QCF|PLUS|KICK"
           },
           {
-            "nameID": "Airborne Hyakuretsukyaku",
+            "nameID": "Airborne Lightning Legs",
             "input": "QCF|PLUS|KICK",
             "pretextID":"id_during_forward_jump"
           },
@@ -861,11 +861,13 @@
           },
           {
             "nameID": "Split River",
-            "input": "QCF|PLUS|PUNCH|ARROW|PUNCH"
+            "pretextID":"id_after_mp_or_ex_bolt_charge",
+            "input": "PUNCH"
           },
           {
             "nameID": "Rodeo Break",
-            "input": "QCF|PLUS|PUNCH|ARROW|KICK"
+            "pretextID":"id_after_mp_or_ex_bolt_charge",
+            "input": "KICK"
           },
           {
             "nameID": "Thunder Clap",
@@ -1280,7 +1282,7 @@
         "vreversal": [
           {
             "nameID": "Sonic Move - Avoid",
-            "input": "FORWARD|PLUS|PUNCH",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
             "pretextID":"id_during_guard"
           }
         ],
@@ -1431,7 +1433,7 @@
           },
           {
             "nameID": "Sacrificial Altar",
-            "input": "MK|ARROW|HK|ARROW|MP|PLUS|MK|OR|BACK|PLUS|MP|PLUS|MK"
+            "input": "MK|ARROW|HK|ARROW|MP|PLUS|MK"
           }
         ]
       }

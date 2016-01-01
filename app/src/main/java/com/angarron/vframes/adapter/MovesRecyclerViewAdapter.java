@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.angarron.vframes.R;
 import com.angarron.vframes.resource_resolution.StringResolver;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -187,6 +189,42 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     }
 
     private View getViewForInputElement(InputElement inputElement) {
+
+        if (inputElement != InputElement.OR && inputElement != InputElement.NO_INPUT) {
+            return getImageViewForInputElement(inputElement);
+        } else {
+            return getTextViewForInputElement(inputElement);
+        }
+
+
+    }
+
+    private TextView getTextViewForInputElement(InputElement inputElement) {
+        TextView textView = new TextView(context);
+
+        //TODO: turn size into a dimension resolved at runtime
+        int textSize = 10;
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
+        textView.setLayoutParams(layoutParams);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+        textView.setAllCaps(true);
+        switch (inputElement) {
+            case OR:
+                textView.setText(R.string.or);
+                break;
+            case NO_INPUT:
+                textView.setText(R.string.no_input);
+                break;
+            default:
+                textView.setText("???");
+        }
+
+        return textView;
+    }
+
+    private ImageView getImageViewForInputElement(InputElement inputElement) {
         ImageView imageView = new ImageView(context);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
@@ -227,10 +265,10 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_generic_kick));
                 break;
             case ALL_PUNCHES:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_all_punches));
                 break;
             case ALL_KICKS:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_all_kicks));
                 break;
             case UP:
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
@@ -275,10 +313,10 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcb));
                 break;
             case CHARGE_BACK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_charge_back));
                 break;
             case CHARGE_DOWN:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_charge_down));
                 break;
             case RELEASE_FORWARD:
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
@@ -295,14 +333,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             case ARROW:
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_arrow));
                 break;
-            case OR:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
-                break;
-            case NO_INPUT:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
-                break;
             default:
-                //TODO: make this put in a question mark icon
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_unknown));
         }
         return imageView;
