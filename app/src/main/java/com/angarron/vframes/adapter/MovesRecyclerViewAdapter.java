@@ -138,65 +138,12 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         }
     }
 
-    private View getViewForIndex(int i) {
-        ImageView imageView = new ImageView(context);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setAdjustViewBounds(true);
-
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, dpToPixels(35), 1);
-        layoutParams.setMargins(dpToPixels(3), 0, dpToPixels(3), 0);
-        imageView.setLayoutParams(layoutParams);
-
-        switch (i) {
-            case 0:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down));
-                break;
-            case 1:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_back));
-                break;
-            case 2:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_back));
-                break;
-            case 3:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_back));
-                break;
-            case 4:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up));
-                break;
-            case 5:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_up_forward));
-                break;
-            case 6:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_forward));
-                break;
-            case 7:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_down_forward));
-                break;
-            case 8:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_srk));
-                break;
-            case 9:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_hcb));
-                break;
-            case 10:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_qcf));
-                break;
-            case 11:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_direction_spd));
-                break;
-        }
-        return imageView;
-    }
-
     private View getViewForInputElement(InputElement inputElement) {
-
-        if (inputElement != InputElement.OR && inputElement != InputElement.NO_INPUT) {
-            return getImageViewForInputElement(inputElement);
-        } else {
+        if (inputElement == InputElement.OR || inputElement == InputElement.NO_INPUT) {
             return getTextViewForInputElement(inputElement);
+        } else {
+            return getImageViewForInputElement(inputElement);
         }
-
-
     }
 
     private TextView getTextViewForInputElement(InputElement inputElement) {
