@@ -203,7 +203,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
         switch(inputElement) {
             case HK:
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_heavy_kick));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_hk));
                 break;
             case LP:
                 imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.input_icon_lp));
