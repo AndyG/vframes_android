@@ -698,7 +698,8 @@
           },
           {
             "nameID": "Shoryuken",
-            "input": "SRK|PLUS|PUNCH"
+            "input": "SRK|PLUS|PUNCH",
+            "description": "id_ryu_shoryuken_description"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
@@ -713,7 +714,8 @@
         "vtrigger": [
           {
             "nameID": "Denjin Renki",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "description": "id_ryu_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -744,7 +746,8 @@
         "unique_attacks": [
           {
             "nameID": "Collarbone Breaker",
-            "input": "FORWARD|PLUS|MP"
+            "input": "FORWARD|PLUS|MP",
+            "descriptionID": "id_hits_overhead"
           },
           {
             "nameID": "Solar Plexus Strike",

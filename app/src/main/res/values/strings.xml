@@ -58,6 +58,14 @@
     <string name="close_to_crouching_opponent">(Close to Crouching Opponent)</string>
     <string name="during_run">(During Run)</string>
 
+    <!-- Move Descriptions -->
+    <string name="hits_overhead">Hits Overhead</string>
+
+    <!-- Ryu Movelist -->
+    <string name="ryu_shoryuken_description">Startup Invulnerability on MP and EX versions</string>
+    <string name="ryu_vtrigger_description">Powers up specials and gains ability to charge fireballs.</string>
+
+
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
     <string name="karin_meioken_posttext">Hold buttons to change properties</string>

@@ -32,6 +32,11 @@ public class StringResolver {
         stringIdMap.put("id_close_to_crouching_opponent", R.string.close_to_crouching_opponent);
         stringIdMap.put("id_during_run", R.string.during_run);
 
+        //Descriptions
+        stringIdMap.put("id_hits_overhead", R.string.hits_overhead);
+        stringIdMap.put("id_ryu_shoryuken_description", R.string.ryu_shoryuken_description);
+        stringIdMap.put("id_ryu_vtrigger_description", R.string.ryu_vtrigger_description);
+
         //Karin Movelist
         stringIdMap.put("id_karin_tenko_posttext", R.string.karin_tenko_posttext);
         stringIdMap.put("id_karin_meioken_posttext", R.string.karin_meioken_posttext);

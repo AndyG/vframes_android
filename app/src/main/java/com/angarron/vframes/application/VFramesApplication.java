@@ -27,8 +27,11 @@ public class VFramesApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         //Crashlytics Integration
-        Fabric.with(this, new Crashlytics());
+        if (!BuildConfig.DEBUG) {
+            Fabric.with(this, new Crashlytics());
+        }
 
         //No need to use data from the network yet.
         init(false, R.raw.test_data);
