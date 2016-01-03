@@ -1,6 +1,7 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
@@ -115,6 +116,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             String toolbarTitleFormat = getString(R.string.summary_toolbar_title);
             String characterName = getString(getNameResource());
             actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
+            actionBar.setBackgroundDrawable(getCharacterAccentColorDrawable());
 
             if (viewExists(R.id.summary_character_image)) {
                 final ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
