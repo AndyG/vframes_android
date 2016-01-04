@@ -583,11 +583,7 @@
             "nameID": "Thunder Kick",
             "input": "FORWARD|PLUS|HK",
             "descriptionID":"id_ken_thunder_kick_description",
-            "posttextID":"id_hold_button"
-          },
-          {
-            "nameID": "Thunder Kick (Feint)",
-            "input": "FORWARD|PLUS|HK"
+            "posttextID":"id_ken_thunder_kick_posttext"
           },
           {
             "nameID": "Inazuma Kick",
@@ -832,7 +828,7 @@
           {
             "nameID": "Psycho Reflect",
             "input": "MP|PLUS|MK",
-            "posttextID":"id_pyscho_reflect_hold_buttons"
+            "posttextID":"id_psycho_reflect_hold_buttons"
           }
         ],      
         "throws": [

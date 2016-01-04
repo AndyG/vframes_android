@@ -87,6 +87,7 @@
     <!-- Ken Movelist -->
     <string name="ken_vtrigger_description">Moves Ken forward, maintaining pressure or extending a combo. Afterward, Ken\'s special moves are faster and gain better hitboxes.</string>
     <string name="ken_vskill_description">Moves Ken forward. Holding the buttons performs a step kick.</string>
+    <string name="ken_thunder_kick_posttext">Tap to feint, hold to attack</string>
 
     <!-- Zangief Movelist -->
     <string name="zangief_hold_buttons_for_special_lariat">Hold Buttons to Perform Special Lariat</string>

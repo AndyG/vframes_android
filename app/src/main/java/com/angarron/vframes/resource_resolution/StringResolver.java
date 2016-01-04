@@ -60,6 +60,7 @@ public class StringResolver {
         //Ken Movelist
         stringIdMap.put("id_ken_vtrigger_description", R.string.ken_vtrigger_description);
         stringIdMap.put("id_ken_vskill_description", R.string.ken_vskill_description);
+        stringIdMap.put("id_ken_thunder_kick_posttext", R.string.ken_thunder_kick_posttext);
         stringIdMap.put("id_ken_thunder_kick_description", R.string.hits_overhead);
 
         //Zangief Movelist
@@ -69,7 +70,7 @@ public class StringResolver {
         //Dictator Movelist
         stringIdMap.put("id_after_head_press", R.string.dictator_after_head_press);
         stringIdMap.put("id_before_head_press", R.string.dictator_before_head_press);
-        stringIdMap.put("id_pyscho_reflect_hold_buttons", R.string.dictator_pyscho_reflect_hold_buttons);
+        stringIdMap.put("id_psycho_reflect_hold_buttons", R.string.dictator_pyscho_reflect_hold_buttons);
 
         //Laura Movelist
         stringIdMap.put("id_laura_hold_buttons_to_power_up", R.string.laura_hold_buttons_to_power_up);
