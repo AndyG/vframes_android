@@ -92,6 +92,8 @@
     <!-- Zangief Movelist -->
     <string name="zangief_hold_buttons_for_special_lariat">Hold Buttons to Perform Special Lariat</string>
     <string name="zangief_can_move_forward_while_holding_buttons">Can Move Forward While Holding Buttons</string>
+    <string name="zangief_vtrigger_description">Vacuums opponent toward Zangief. By holding the buttons, Zangief will continue attacking and the lariat will gain hitboxes.</string>
+    <string name="zangief_vskill_description">Zangief gains one hit of armor and attacks when the buttons are released.</string>
 
     <!--Dictator Movelist -->
     <string name="dictator_pyscho_reflect_hold_buttons">Hold Buttons to Throw Back a Projectile</string>

@@ -66,6 +66,8 @@ public class StringResolver {
         //Zangief Movelist
         stringIdMap.put("id_hold_buttons_for_special_lariat", R.string.zangief_hold_buttons_for_special_lariat);
         stringIdMap.put("id_can_move_forward_while_holding_buttons", R.string.zangief_can_move_forward_while_holding_buttons);
+        stringIdMap.put("id_zangief_vtrigger_description", R.string.zangief_vtrigger_description);
+        stringIdMap.put("id_zangief_vskill_description", R.string.zangief_vskill_description);
 
         //Dictator Movelist
         stringIdMap.put("id_after_head_press", R.string.dictator_after_head_press);
