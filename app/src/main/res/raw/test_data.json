@@ -439,7 +439,8 @@
         "vtrigger": [
           {
             "nameID": "Renkiko",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_chun_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -452,7 +453,8 @@
         "vskill": [
           {
             "nameID": "Rankyaku",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_chun_vskill_description"
           }
         ],        
         "throws": [
@@ -483,7 +485,8 @@
           },
           {
             "nameID": "Senenshu",
-            "input": "DOWN_FORWARD|PLUS|MK"
+            "input": "DOWN_FORWARD|PLUS|MK",
+            "descriptionID":"id_chun_senenshu_description"
           },
           {
             "nameID": "Tenkukyaku",
@@ -699,7 +702,7 @@
           {
             "nameID": "Shoryuken",
             "input": "SRK|PLUS|PUNCH",
-            "description": "id_ryu_shoryuken_description"
+            "descriptionID": "id_ryu_shoryuken_description"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
@@ -715,7 +718,7 @@
           {
             "nameID": "Denjin Renki",
             "input": "HP|PLUS|HK",
-            "description": "id_ryu_vtrigger_description"
+            "descriptionID": "id_ryu_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -728,7 +731,8 @@
         "vskill": [
           {
             "nameID": "Mind's Eye",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_ryu_vskill_description"
           }
         ],       
         "throws": [
@@ -861,17 +865,20 @@
         "specials": [
           {
             "nameID": "Bolt Charge",
-            "input": "QCF|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID":"id_laura_bolt_charge_description"
           },
           {
             "nameID": "Split River",
-            "pretextID":"id_after_mp_or_ex_bolt_charge",
-            "input": "PUNCH"
+            "pretextID":"id_laura_after_mp_or_ex_bolt_charge",
+            "input": "PUNCH",
+            "descriptionID":"id_laura_split_river_description"
           },
           {
             "nameID": "Rodeo Break",
-            "pretextID":"id_after_mp_or_ex_bolt_charge",
-            "input": "KICK"
+            "pretextID":"id_laura_after_mp_or_ex_bolt_charge",
+            "input": "KICK",
+            "descriptionID":"id_laura_rodeo_break_description"
           },
           {
             "nameID": "Thunder Clap",
@@ -886,7 +893,8 @@
         "vtrigger": [
           {
             "nameID": "Spark Show",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_laura_vtrigger_description"
           }       
         ],
         "vreversal": [
@@ -899,16 +907,19 @@
         "vskill": [
           {
             "nameID": "Volty Line",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_laura_vskill_overhead_description"
           },
           {
             "nameID": "Linear Movement - Avante",
             "input": "FORWARD|PLUS|MP|PLUS|MK",
+            "descriptionID":"id_laura_vskill_avante_description",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Esquiva",
             "input": "BACK|PLUS|MP|PLUS|MK",
+            "descriptionID":"id_laura_vskill_esquiva_description",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
@@ -1377,11 +1388,13 @@
         "specials": [
           {
             "nameID": "The Disc's Guidance",
-            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
+            "descriptionID":"id_necalli_disc_guidance_description"
           },
           {
             "nameID": "Raging Light",
-            "input": "SRK|PLUS|PUNCH"
+            "input": "SRK|PLUS|PUNCH",
+            "descriptionID":"id_necalli_raging_light_description"
           },
           {
             "nameID": "Mask of Tlalli",
@@ -1396,7 +1409,8 @@
         "vtrigger": [
           {
             "nameID": "Torrent of Power",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_necalli_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -1410,7 +1424,8 @@
           {
             "nameID": "Culminated Power",
             "input": "MP|PLUS|MK",
-            "posttextID":"id_necalli_vskill_control_distance"
+            "posttextID":"id_necalli_vskill_control_distance",
+            "descriptionID":"id_necalli_vskill_description"
           }
         ],       
         "throws": [
@@ -1428,7 +1443,8 @@
         "unique_attacks": [
           {
             "nameID": "Opening Dagger",
-            "input": "DOWN_FORWARD|PLUS|HP"
+            "input": "DOWN_FORWARD|PLUS|HP",
+            "descriptionID":"id_necalli_opening_dagger_description"
           },
           {
             "nameID": "Road of the Sun",

@@ -3,6 +3,7 @@ package com.angarron.vframes.ui.activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
@@ -165,6 +166,45 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                 return R.drawable.fang_banner;
             default:
                 throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
+        }
+    }
+
+    private ColorDrawable getCharacterAccentColorDrawable() {
+        switch(targetCharacter) {
+            case RYU:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.ryu_accent));
+            case CHUN:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.chun_accent));
+            case DICTATOR:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.dictator_accent));
+            case BIRDIE:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.birdie_accent));
+            case NASH:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.nash_accent));
+            case CAMMY:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.cammy_accent));
+            case KEN:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.ken_accent));
+            case MIKA:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.mika_accent));
+            case NECALLI:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.necalli_accent));
+            case CLAW:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.claw_accent));
+            case RASHID:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.rashid_accent));
+            case KARIN:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.karin_accent));
+            case LAURA:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.laura_accent));
+            case DHALSIM:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.dhalsim_accent));
+            case ZANGIEF:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.zangief_accent));
+            case FANG:
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.fang_accent));
+            default:
+                throw new RuntimeException("unable to resolve character accent color drawable: " + targetCharacter);
         }
     }
 

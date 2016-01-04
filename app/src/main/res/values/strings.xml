@@ -10,6 +10,7 @@
     <string name="summary_toolbar_title">%1$s Moves</string>
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>
+    <string name="frame_data_not_available">Detailed frame data will become available as Street Fighter V nears release. Thank you for your patience.</string>
 
     <!--Character Names -->
     <string name="ryu_name">Ryu</string>
@@ -59,12 +60,12 @@
     <string name="during_run">(During Run)</string>
 
     <!-- Move Descriptions -->
-    <string name="hits_overhead">Hits Overhead</string>
+    <string name="hits_overhead">Hits overhead.</string>
 
     <!-- Ryu Movelist -->
-    <string name="ryu_shoryuken_description">Startup Invulnerability on MP and EX versions</string>
-    <string name="ryu_vtrigger_description">Powers up specials and gains ability to charge fireballs.</string>
-
+    <string name="ryu_shoryuken_description">Startup invulnerability on MP and EX versions.</string>
+    <string name="ryu_vtrigger_description">Powers up specials and gains ability to charge fireballs. Fully charged fireballs are unblockable.</string>
+    <string name="ryu_vskill_description">Parries an attack and builds some V-meter.</string>
 
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
@@ -78,6 +79,10 @@
 
     <!-- Chun Movelist -->
     <string name="chun_up_to_three_times">Up to 3 Times</string>
+    <string name="chun_vtrigger_description">Adds additional hits to most normals, which extends blockstun and hitstun and introduces new combo possibilities.</string>
+    <string name="chun_vskill_description">A diagonal jump which launches opponents on hit.</string>
+    <string name="chun_senenshu_description">Hits overhead. Leads to combo in V-Trigger.</string>
+    <string name="chun_critical_art_description">Projectile invulnerable.</string>
 
     <!-- Ken Movelist -->
     <string name="ken_step_kick_hold_buttons">Hold Buttons to Execute A Step Kick</string>
@@ -106,11 +111,22 @@
 
     <!-- Necalli Movelist -->
     <string name="necalli_vskill_control_distance">Control Distance Using Direction</string>
-    <string name="frame_data_not_available">Detailed frame data will become available as Street Fighter V nears release. Thank you for your patience.</string>
+    <string name="necalli_disc_guidance_description">Has one hit of armor against projectiles.</string>
+    <string name="necalli_vtrigger_description">Necalli gains improved frame advantage, more range on Raging Light, and no longer requires charge to cancel into Disc\'s Guidance.</string>
+    <string name="necalli_vskill_description">Builds V-Meter on hit.</string>
+    <string name="necalli_opening_dagger_description">Hits overhead. Crush counters.</string>
+    <string name="necalli_raging_light_description">Invulnerability on HP and EX versions.</string>
 
     <!-- Laura Movelist -->
     <string name="laura_after_mp_or_ex_bolt_charge">(After MP or EX Bolt Charge)</string>
     <string name="laura_hold_buttons_to_power_up">Hold Buttons to Power Up</string>
+    <string name="laura_bolt_charge_description">MP and EX versions can be followed up.\nHP version anti-airs.</string>
+    <string name="laura_split_river_description">Leaves Laura behind opponent.</string>
+    <string name="laura_rodeo_break_description">Leaves Laura in front of opponent.</string>
+    <string name="laura_vtrigger_description">Adds stun and damage to Laura\'s attacks. Adds distance to V-Skill dash and increases hitstun and blockstun on V-Skill overhead.</string>
+    <string name="laura_vskill_overhead_description">Hits overhead.</string>
+    <string name="vskill_avante_description">Moves Laura forward.</string>
+    <string name="vskill_esquiva_description">Moves Laura backward. Can be cancelled into forward V-Skill.</string>
 
     <!-- Cammy Movelist -->
     <string name="cammy_during_hooligan">(During Hooligan Combination)</string>
