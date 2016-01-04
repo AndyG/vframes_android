@@ -89,6 +89,10 @@ public class StringResolver {
 
         //Rashid Movelist
         stringIdMap.put("id_rashid_repeat_buttons_to_extend", R.string.rashid_repeat_buttons_to_extend);
+        stringIdMap.put("id_rashid_vtrigger_description", R.string.rashid_vtrigger_description);
+        stringIdMap.put("id_rashid_vskill_divekick_pretext", R.string.rashid_vskill_divekick_pretext);
+        stringIdMap.put("id_rashid_vskill_rollkick_pretext", R.string.rashid_vskill_rollkick_pretext);
+        stringIdMap.put("id_rashid_whirlwind_shot_description", R.string.rashid_whirlwind_shot_description);
 
         //Nash Movelist
         stringIdMap.put("id_nash_press_for_second_boom", R.string.nash_press_for_second_boom);

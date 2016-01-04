@@ -1183,13 +1183,15 @@
           },
           {
             "nameID": "Whirlwind Shot",
-            "input": "QCF|PLUS|KICK"
+            "input": "QCF|PLUS|KICK",
+            "descriptionID":"id_rashid_whirlwind_shot_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Ysaar",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_rashid_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -1206,7 +1208,8 @@
           },
           {
             "nameID": "Airborne Eagle Spike",
-            "input": "MP|PLUS|MK|ARROW|KICK"
+            "pretextID":"id_rashid_vskill_divekick_pretext",
+            "input": "KICK"
           },
           {
             "nameID": "Rolling Assault",
@@ -1214,7 +1217,8 @@
           },
           {
             "nameID": "Nail Assault",
-            "input": "DOWN|PLUS|MP|PLUS|MK|ARROW|KICK"
+            "pretextID":"id_rashid_vskill_rollkick_pretext",
+            "input": "KICK"
           }
         ],      
         "throws": [
