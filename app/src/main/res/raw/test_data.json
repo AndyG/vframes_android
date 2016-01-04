@@ -548,7 +548,8 @@
         "vtrigger": [
           {
             "nameID": "Heat Rush",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_ken_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -562,7 +563,7 @@
           {
             "nameID": "Quick Step",
             "input": "MP|PLUS|MK",
-            "posttextID":"id_ken_step_kick_hold_buttons"
+            "descriptionID":"id_ken_vskill_description"
           }
         ],        
         "throws": [
@@ -580,12 +581,13 @@
         "unique_attacks": [
           {
             "nameID": "Thunder Kick",
-            "input": "FORWARD|PLUS|HK"
+            "input": "FORWARD|PLUS|HK",
+            "descriptionID":"id_ken_thunder_kick_description",
+            "posttextID":"id_hold_button"
           },
           {
             "nameID": "Thunder Kick (Feint)",
-            "input": "FORWARD|PLUS|HK",
-            "posttextID":"id_hold_button"
+            "input": "FORWARD|PLUS|HK"
           },
           {
             "nameID": "Inazuma Kick",

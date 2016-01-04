@@ -58,7 +58,9 @@ public class StringResolver {
         stringIdMap.put("id_chun_critical_art_description", R.string.chun_critical_art_description);
 
         //Ken Movelist
-        stringIdMap.put("id_ken_step_kick_hold_buttons", R.string.ken_step_kick_hold_buttons);
+        stringIdMap.put("id_ken_vtrigger_description", R.string.ken_vtrigger_description);
+        stringIdMap.put("id_ken_vskill_description", R.string.ken_vskill_description);
+        stringIdMap.put("id_ken_thunder_kick_description", R.string.hits_overhead);
 
         //Zangief Movelist
         stringIdMap.put("id_hold_buttons_for_special_lariat", R.string.zangief_hold_buttons_for_special_lariat);

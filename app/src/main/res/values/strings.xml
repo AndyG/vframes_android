@@ -85,7 +85,8 @@
     <string name="chun_critical_art_description">Projectile invulnerable.</string>
 
     <!-- Ken Movelist -->
-    <string name="ken_step_kick_hold_buttons">Hold Buttons to Execute A Step Kick</string>
+    <string name="ken_vtrigger_description">Moves Ken forward, maintaining pressure or extending a combo. Afterward, Ken\'s special moves are faster and gain better hitboxes.</string>
+    <string name="ken_vskill_description">Moves Ken forward. Holding the buttons performs a step kick.</string>
 
     <!-- Zangief Movelist -->
     <string name="zangief_hold_buttons_for_special_lariat">Hold Buttons to Perform Special Lariat</string>
