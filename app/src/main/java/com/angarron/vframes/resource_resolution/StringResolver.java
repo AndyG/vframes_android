@@ -103,6 +103,13 @@ public class StringResolver {
 
         //Cammy Movelist
         stringIdMap.put("id_during_hooligan_combination", R.string.cammy_during_hooligan);
+        stringIdMap.put("id_cammy_vtrigger_description", R.string.cammy_vtrigger_description);
+        stringIdMap.put("id_cammy_vskill_description", R.string.cammy_vskill_description);
+
+        //Dhalsim Movelist
+        stringIdMap.put("id_dhalsim_critical_art_posttext", R.string.dhalsim_critical_art_posttext);
+        stringIdMap.put("id_dhalsim_vtrigger_description", R.string.dhalsim_vtrigger_description);
+        stringIdMap.put("id_dhalsim_vskill_description", R.string.dhalsim_vskill_description);
 
     }
 

@@ -119,7 +119,7 @@
           {
             "nameID": "Yoga Sunburst",
             "input": "QCF|QCF|PLUS|PUNCH",
-            "posttextID":"id_can_be_done_in_air"
+            "posttextID":"id_dhalsim_critical_art_posttext"
           }
         ],
         "specials": [
@@ -145,7 +145,8 @@
         "vtrigger": [
           {
             "nameID": "Yoga Burner",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_dhalsim_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -158,7 +159,8 @@
         "vskill": [
           {
             "nameID": "Yoga Float",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_dhalsim_vskill_description"
           },
           {
             "nameID": "Yoga Float (Airborne)",
@@ -365,7 +367,8 @@
         "vtrigger": [
           {
             "nameID": "Delta Drive",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_cammy_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -378,7 +381,8 @@
         "vskill": [
           {
             "nameID": "Axel Spin Knuckle",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_cammy_vskill_description"
           }
         ],        
         "throws": [

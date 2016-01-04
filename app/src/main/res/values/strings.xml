@@ -130,5 +130,12 @@
 
     <!-- Cammy Movelist -->
     <string name="cammy_during_hooligan">(During Hooligan Combination)</string>
+    <string name="cammy_vtrigger_description">Makes specials faster and safer.</string>
+    <string name="cammy_vskill_description">Moves Cammy forward with projectile invulnerability. Can combo on hit.</string>
+
+    <!-- Dhalsim Movelist -->
+    <string name="dhalsim_critical_art_posttext">Hold button to charge</string>
+    <string name="dhalsim_vtrigger_description">Places fire on the ground that deals damage over time to opponents.</string>
+    <string name="dhalsim_vskill_description">Dhalsim floats. Duration can be shortened by performing an attack.</string>
 
 </resources>
