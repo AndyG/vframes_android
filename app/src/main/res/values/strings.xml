@@ -104,9 +104,11 @@
     <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Button\nCancel: Press Kick</string>
 
     <!-- Mika Movelist -->
-    <string name="mika_vskill_increases_power">VSkill Increases Power</string>
-    <string name="mika_hold_buttons_to_power_up_throws">Hold Buttons to Power Up Throws</string>
-
+    <string name="mika_typhoon_description">Leaves Mika behind the opponent.</string>
+    <string name="mika_brimstone_description">Leaves Mika in front of the opponent.</string>
+    <string name="mika_vtrigger_posttext">Hold buttons to delay Nadeshiko</string>
+    <string name="mika_vskill_posttext">Hold buttons to extend speech</string>
+    <string name="mika_vskill_description">Mika delivers a speech, ending with a mic spike which has a projectile hitbox. The speech powers up command throws more the longer it goes on.</string>
     <!-- Rashid Movelist -->
     <string name="rashid_repeat_buttons_to_extend">Repeat Button Presses to Extend</string>
     <string name="rashid_vtrigger_description">Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.</string>

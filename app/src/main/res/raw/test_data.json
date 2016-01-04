@@ -1057,8 +1057,7 @@
         "critical_arts": [
           {
             "nameID": "Peach Assault",
-            "input": "QCB|QCB|PLUS|PUNCH",
-            "posttextID":"id_mika_vskill_increases_power"
+            "input": "QCB|QCB|PLUS|PUNCH"
           }
         ],
         "specials": [
@@ -1068,34 +1067,36 @@
           },
           {
             "nameID": "Wingless Airplane",
-            "input": "QCF|PLUS|KICK",
-            "posttextID":"id_mika_vskill_increases_power"
+            "input": "QCF|PLUS|KICK"
           },
           {
             "nameID": "Rainbow Typhoon",
             "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
-            "posttextID":"id_mika_vskill_increases_power"
+            "descriptionID":"id_mika_typhoon_description"
           },
           {
             "nameID": "Brimstone",
             "input": "HCB|PLUS|KICK",
             "pretextID":"id_close_to_opponent",
-            "posttextID":"id_mika_vskill_increases_power"
+            "descriptionID":"id_mika_brimstone_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Nadeshiko (Above)",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "posttextID":"id_mika_vtrigger_posttext"
           },
           {
             "nameID": "Nadeshiko (Front)",
-            "input": "BACK|PLUS|HP|PLUS|HK"
+            "input": "BACK|PLUS|HP|PLUS|HK",
+            "posttextID":"id_mika_vtrigger_posttext"
           },
           {
             "nameID": "Nadeshiko (Behind)",
-            "input": "FORWARD|PLUS|HP|PLUS|HK"
+            "input": "FORWARD|PLUS|HP|PLUS|HK",
+            "posttextID":"id_mika_vtrigger_posttext"
           }
         ],
         "vreversal": [
@@ -1109,7 +1110,8 @@
           {
             "nameID": "Mic Performance",
             "input": "MP|PLUS|MK",
-            "posttextID":"id_mika_hold_buttons_to_power_up_throws"
+            "posttextID":"id_mika_vskill_posttext",
+            "descriptionID":"id_mika_vskill_description"
           }
         ],
         "throws": [

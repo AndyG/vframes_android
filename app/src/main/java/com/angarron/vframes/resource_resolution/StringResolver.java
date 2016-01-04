@@ -89,8 +89,11 @@ public class StringResolver {
         stringIdMap.put("id_birdie_hanging_chain_posttext", R.string.birdie_hanging_chain_posttext);
 
         //Mika Movelist
-        stringIdMap.put("id_mika_vskill_increases_power", R.string.mika_vskill_increases_power);
-        stringIdMap.put("id_mika_hold_buttons_to_power_up_throws", R.string.mika_hold_buttons_to_power_up_throws);
+        stringIdMap.put("id_mika_typhoon_description", R.string.mika_typhoon_description);
+        stringIdMap.put("id_mika_brimstone_description", R.string.mika_brimstone_description);
+        stringIdMap.put("id_mika_vtrigger_posttext", R.string.mika_vtrigger_posttext);
+        stringIdMap.put("id_mika_vskill_posttext", R.string.mika_vskill_posttext);
+        stringIdMap.put("id_mika_vskill_description", R.string.mika_vskill_description);
 
         //Rashid Movelist
         stringIdMap.put("id_rashid_repeat_buttons_to_extend", R.string.rashid_repeat_buttons_to_extend);
