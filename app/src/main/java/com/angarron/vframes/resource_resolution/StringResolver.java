@@ -101,6 +101,7 @@ public class StringResolver {
 
         //Nash Movelist
         stringIdMap.put("id_nash_press_for_second_boom", R.string.nash_press_for_second_boom);
+        stringIdMap.put("id_nash_vskill_description", R.string.nash_vskill_description);
 
         //Necalli Movelist
         stringIdMap.put("id_necalli_vskill_control_distance", R.string.necalli_vskill_control_distance);

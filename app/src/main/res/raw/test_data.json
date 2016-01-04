@@ -1312,7 +1312,8 @@
         "vskill": [
           {
             "nameID": "Bullet Clear",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_nash_vskill_description"
           }
         ],       
         "throws": [
@@ -1339,7 +1340,8 @@
           },
           {
             "nameID": "Jumping Sobat",
-            "input": "FORWARD|PLUS|MK"
+            "input": "FORWARD|PLUS|MK",
+            "descriptionID":"id_hits_overhead"
           },
           {
             "nameID": "Chopping Assault",

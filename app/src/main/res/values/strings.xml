@@ -115,7 +115,8 @@
     <string name="rashid_whirlwind_shot_description">HP and EX versions cancel intoV-Skill and affect Rashid\'s trajectory.</string>
 
     <!-- Nash Movelist -->
-    <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second One</string>
+    <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second Projectile</string>
+    <string name="nash_vskill_description">A chop attack which can absorb a projectile, building V-Meter.</string>
 
     <!-- Necalli Movelist -->
     <string name="necalli_vskill_control_distance">Control Distance Using Direction</string>
