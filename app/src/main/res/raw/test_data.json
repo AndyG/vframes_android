@@ -245,16 +245,19 @@
         "vtrigger": [
           {
             "nameID": "Bloody Kiss - Torero",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID": "id_claw_vtrigger_torero_description"
           },
           {
             "nameID": "Bloody Kiss - Rojo",
-            "input": "DOWN|PLUS|HP|PLUS|HK"
+            "input": "DOWN|PLUS|HP|PLUS|HK",
+            "descriptionID": "id_claw_vtrigger_rojo_description"
           },
           {
             "nameID": "Bloody Kiss - Azul",
             "input": "HP|PLUS|HK",
-            "pretextID":"id_during_forward_jump"
+            "pretextID":"id_during_forward_jump",
+            "descriptionID": "id_claw_vtrigger_azul_description"
           }
         ],
         "vreversal": [
@@ -1483,13 +1486,15 @@
         "vskill": [
           {
             "nameID": "Nishodoku",
-            "input": "MP|PLUS|MK"
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_fang_vskill_description"
           }
         ],      
         "critical_arts": [
           {
             "nameID": "Flappy Bird?",
-            "input": "NO_INPUT"
+            "input": "NO_INPUT",
+            "descriptionID":"id_fang_critical_art_description"
           }
         ]
       }

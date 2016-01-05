@@ -77,6 +77,9 @@
     <string name="claw_claw_off_only">(Claw Off Only)</string>
     <string name="claw_claw_on_only">(Claw On Only)</string>
     <string name="claw_switch">Switch to Claw On/Off</string>
+    <string name="claw_vtrigger_torero_description">Throws a rose straight forward. On hit or block, performs a follow-up attack.</string>
+    <string name="claw_vtrigger_rojo_description">Throws a rose at an upward angle. On hit or block, performs a follow-up attack.</string>
+    <string name="claw_vtrigger_azul_description">Throws a rose at a downward angle. On hit or block, performs a follow-up attack.</string>
 
     <!-- Chun Movelist -->
     <string name="chun_up_to_three_times">Up to 3 Times</string>
@@ -114,6 +117,7 @@
     <string name="mika_vtrigger_posttext">Hold buttons to delay Nadeshiko</string>
     <string name="mika_vskill_posttext">Hold buttons to extend speech</string>
     <string name="mika_vskill_description">Mika delivers a speech, ending with a mic spike which has a projectile hitbox. The speech powers up command throws more the longer it goes on.</string>
+
     <!-- Rashid Movelist -->
     <string name="rashid_repeat_buttons_to_extend">Repeat Button Presses to Extend</string>
     <string name="rashid_vtrigger_description">Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.</string>
@@ -153,5 +157,9 @@
     <string name="dhalsim_critical_art_posttext">Hold button to charge</string>
     <string name="dhalsim_vtrigger_description">Places fire on the ground that deals damage over time to opponents.</string>
     <string name="dhalsim_vskill_description">Dhalsim floats. Duration can be shortened by performing an attack.</string>
+
+    <!-- Fang Movelist -->
+    <string name="fang_vskill_description">Shoots a projectile forward that applies poison on hit or block, and causes no hitstun or blockstun.</string>
+    <string name="fang_critical_art_description">He turns into a bird.</string>
 
 </resources>

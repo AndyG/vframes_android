@@ -50,6 +50,9 @@ public class StringResolver {
         stringIdMap.put("id_claw_claw_on_only", R.string.claw_claw_on_only);
         stringIdMap.put("id_claw_claw_off_only", R.string.claw_claw_off_only);
         stringIdMap.put("id_claw_switch", R.string.claw_switch);
+        stringIdMap.put("id_claw_vtrigger_torero_description", R.string.claw_vtrigger_torero_description);
+        stringIdMap.put("id_claw_vtrigger_rojo_description", R.string.claw_vtrigger_rojo_description);
+        stringIdMap.put("id_claw_vtrigger_azul_description", R.string.claw_vtrigger_azul_description);
 
         //Chun Movelist
         stringIdMap.put("id_up_to_three_times", R.string.chun_up_to_three_times);
@@ -129,6 +132,10 @@ public class StringResolver {
         stringIdMap.put("id_dhalsim_critical_art_posttext", R.string.dhalsim_critical_art_posttext);
         stringIdMap.put("id_dhalsim_vtrigger_description", R.string.dhalsim_vtrigger_description);
         stringIdMap.put("id_dhalsim_vskill_description", R.string.dhalsim_vskill_description);
+
+        //Fang Movelist
+        stringIdMap.put("id_fang_vskill_description", R.string.fang_vskill_description);
+        stringIdMap.put("id_fang_critical_art_description", R.string.fang_critical_art_description);
 
     }
 
