@@ -6,11 +6,11 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.util.FeedbackUtil;
@@ -32,7 +32,10 @@ public class CharacterSelectActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_character_select, menu);
+        MenuItem versionItem = menu.findItem(R.id.version_item);
+        String version = String.format(getString(R.string.version_format), BuildConfig.VERSION_NAME);
+        versionItem.setTitle(version);
         return true;
     }
 

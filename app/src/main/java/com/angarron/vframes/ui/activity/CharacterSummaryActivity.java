@@ -61,7 +61,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_summary, menu);
         return true;
     }
 

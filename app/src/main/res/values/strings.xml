@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">VFrames</string>
 
+    <!-- Menu -->
+    <string name="version_format">Version: %1$s</string>
+
     <!-- Feedback -->
     <string name="send_feedback">Send Feedback</string>
     <string name="feedback_email_address" translatable="false">vframesapp@gmail.com</string>
