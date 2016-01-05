@@ -44,6 +44,7 @@ public class StringResolver {
         stringIdMap.put("id_karin_tenko_posttext", R.string.karin_tenko_posttext);
         stringIdMap.put("id_karin_meioken_posttext", R.string.karin_meioken_posttext);
         stringIdMap.put("id_karin_vskill_description", R.string.karin_vskill_description);
+        stringIdMap.put("id_karin_vtrigger_description", R.string.karin_vtrigger_description);
 
         //Claw Movelist
         stringIdMap.put("id_claw_claw_on_only", R.string.claw_claw_on_only);
@@ -72,7 +73,10 @@ public class StringResolver {
         //Dictator Movelist
         stringIdMap.put("id_after_head_press", R.string.dictator_after_head_press);
         stringIdMap.put("id_before_head_press", R.string.dictator_before_head_press);
-        stringIdMap.put("id_psycho_reflect_hold_buttons", R.string.dictator_pyscho_reflect_hold_buttons);
+        stringIdMap.put("id_psycho_reflect_hold_buttons", R.string.dictator_psycho_reflect_hold_buttons);
+        stringIdMap.put("id_devil_reverse_description", R.string.dictator_devil_reverse_description);
+        stringIdMap.put("id_dictator_vskill_description", R.string.dictator_vskill_description);
+        stringIdMap.put("id_dictator_vtrigger_description", R.string.dictator_vtrigger_description);
 
         //Laura Movelist
         stringIdMap.put("id_laura_hold_buttons_to_power_up", R.string.laura_hold_buttons_to_power_up);
@@ -87,6 +91,8 @@ public class StringResolver {
 
         //Birdie Movelist
         stringIdMap.put("id_birdie_hanging_chain_posttext", R.string.birdie_hanging_chain_posttext);
+        stringIdMap.put("id_hits_overhead", R.string.hits_overhead);
+        stringIdMap.put("id_birdie_vtrigger_description", R.string.birdie_vtrigger_description);
 
         //Mika Movelist
         stringIdMap.put("id_mika_typhoon_description", R.string.mika_typhoon_description);

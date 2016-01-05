@@ -43,7 +43,8 @@
         "vtrigger": [
           {
             "nameID": "Kanzuki-Ryu Guren No Kata",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_karin_vtrigger_description"
           },
           {
             "nameID": "Guren Ken",
@@ -108,7 +109,8 @@
         "unique_attacks": [
           {
             "nameID": "Tsumujigari",
-            "input": "FORWARD|PLUS|MK"
+            "input": "FORWARD|PLUS|MK",
+            "descriptionID":"id_hits_overhead"
           }
         ]
       }
@@ -293,7 +295,8 @@
         "unique_attacks": [
           {
             "nameID": "Mercury Shard",
-            "input": "FORWARD|PLUS|MK"
+            "input": "FORWARD|PLUS|MK",
+            "descriptionID":"id_hits_overhead"
           },
           {
             "nameID": "Buster Claw",
@@ -816,7 +819,8 @@
         "vtrigger": [
           {
             "nameID": "Psycho Power",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_dictator_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -830,7 +834,8 @@
           {
             "nameID": "Psycho Reflect",
             "input": "MP|PLUS|MK",
-            "posttextID":"id_psycho_reflect_hold_buttons"
+            //"posttextID":"id_psycho_reflect_hold_buttons"
+            "descriptionID":"id_dictator_vskill_description"
           }
         ],      
         "throws": [
@@ -853,7 +858,8 @@
           },
           {
             "nameID": "Psycho Axe",
-            "input": "DOWN_FORWARD|PLUS|HP"
+            "input": "DOWN_FORWARD|PLUS|HP",
+            "descriptionID":"id_hits_overhead"
           }
         ]
       }
@@ -996,7 +1002,8 @@
         "vtrigger": [
           {
             "nameID": "Enjoy Time",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_birdie_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -1035,7 +1042,8 @@
         "unique_attacks": [
           {
             "nameID": "Bull Drop",
-            "input": "FORWARD|PLUS|HK"
+            "input": "FORWARD|PLUS|HK",
+            "descriptionID":"id_hits_overhead"
           },
           {
             "nameID": "Bull Charge",
