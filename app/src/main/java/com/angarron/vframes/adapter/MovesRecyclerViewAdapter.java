@@ -250,7 +250,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
                 imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_qcf));
                 break;
             case QCB:
-                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_icon_qcb));
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_qcb));
                 break;
             case SRK:
                 imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.input_direction_srk));
