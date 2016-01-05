@@ -30,7 +30,8 @@
 
         <activity
             android:name="com.angarron.vframes.ui.activity.CharacterSummaryActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
         </activity>
 
         <!-- Crashlytics Integration -->
