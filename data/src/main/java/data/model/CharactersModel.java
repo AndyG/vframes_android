@@ -4,9 +4,6 @@ import java.util.Map;
 
 import data.model.character.SFCharacter;
 
-/**
- * Created by andy on 12/2/15
- */
 public class CharactersModel implements ICharactersModel {
 
     public Map<CharacterID, SFCharacter> characters;

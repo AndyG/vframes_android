@@ -1,8 +1,5 @@
 package data.model.input;
 
-/**
- * Created by grinta on 12/18/15.
- */
 public enum InputElement {
     LP,
     MP,

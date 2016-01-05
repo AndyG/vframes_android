@@ -1,8 +1,5 @@
 package data.model.move;
 
-/**
- * Created by andy on 11/30/15
- */
 public interface IDisplayableMove {
 
     int CODE_NOT_APPLICABLE = 1001;

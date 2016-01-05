@@ -11,9 +11,6 @@ import data.model.move.IDisplayableMove;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
-/**
- * Created by andy on 11/30/15
- */
 public class CharacterFactory {
 
     private Random randomGenerator;

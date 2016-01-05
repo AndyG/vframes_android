@@ -9,9 +9,6 @@ import data.model.move.MoveStrength;
 import data.model.move.MoveType;
 import data.model.move.TypicalMove;
 
-/**
- * Created by andy on 12/2/15
- */
 public class FrameDataMoveJsonAdapter {
 
     public static JsonObject MoveToJson(IDisplayableMove move) {

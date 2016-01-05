@@ -14,9 +14,6 @@ import data.model.character.SFCharacter;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
-/**
- * Created by andy on 12/2/15
- */
 public class SFCharacterJsonAdapter {
 
     public static JsonObject CharacterToJson(SFCharacter character) {

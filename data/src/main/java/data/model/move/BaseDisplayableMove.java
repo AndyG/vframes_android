@@ -1,8 +1,5 @@
 package data.model.move;
 
-/**
- * Created by andy on 11/30/15
- */
 public abstract class BaseDisplayableMove implements IDisplayableMove {
 
     private String name;

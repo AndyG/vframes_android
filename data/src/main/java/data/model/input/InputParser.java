@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by grinta on 12/18/15.
- */
 public class InputParser {
 
     private static final String LP = "LP";

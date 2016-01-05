@@ -2,9 +2,6 @@ package testdata.testdata.util;
 
 import java.util.Random;
 
-/**
- * Created by andy on 12/1/15
- */
 public class RandomUtil {
 
     public static int getRandomInt(Random randomGenerator, int rangeStart, int rangeEnd) {

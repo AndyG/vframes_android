@@ -7,9 +7,6 @@ import java.util.Map;
 import data.model.move.IMoveListMove;
 import data.model.move.MoveCategory;
 
-/**
- * Created by andy on 11/30/15
- */
 public class SFCharacter {
 
     private Map<MoveCategory, List<IMoveListMove>> movelist_map;

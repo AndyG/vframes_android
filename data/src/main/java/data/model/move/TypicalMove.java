@@ -1,8 +1,5 @@
 package data.model.move;
 
-/**
- * Created by andy on 11/30/15
- */
 public class TypicalMove extends BaseDisplayableMove {
 
     private int startupFrames;

@@ -1,8 +1,5 @@
 package data.model.move;
 
-/**
- * Created by andy on 12/20/15
- */
 public enum MoveCategory {
     NORMALS("normals"),
     SPECIALS("specials"),

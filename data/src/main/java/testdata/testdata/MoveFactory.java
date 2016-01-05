@@ -14,9 +14,6 @@ import data.model.move.MoveType;
 import data.model.move.TypicalMove;
 import testdata.testdata.util.RandomUtil;
 
-/**
- * Created by andy on 11/30/15
- */
 public class MoveFactory {
 
     private static final int NAME_MIN_LENGTH = 5;
