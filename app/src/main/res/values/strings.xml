@@ -162,7 +162,7 @@
     <string name="dhalsim_vskill_description">Dhalsim floats. Duration can be shortened by performing an attack.</string>
 
     <!-- Fang Movelist -->
-    <string name="fang_vskill_description">Shoots a projectile forward that applies poison on hit or block, and causes no hitstun or blockstun.</string>
+    <string name="fang_vskill_description">Shoots a projectile forward that applies poison if it touches the opponent. This attack causes no hitstun or blockstun.</string>
     <string name="fang_critical_art_description">He turns into a bird.</string>
 
 </resources>
