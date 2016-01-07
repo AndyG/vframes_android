@@ -100,7 +100,7 @@
     <string name="zangief_hold_buttons_for_special_lariat">Hold Buttons to Perform Special Lariat</string>
     <string name="zangief_can_move_forward_while_holding_buttons">Can Move Forward While Holding Buttons</string>
     <string name="zangief_vtrigger_description">Vacuums opponent toward Zangief. By holding the buttons, Zangief will continue attacking and the lariat will gain hitboxes.</string>
-    <string name="zangief_vskill_description">Zangief gains one hit of armor and attacks when the buttons are released.</string>
+    <string name="zangief_vskill_description">Zangief gains one hit of armor (infinite hits in V-Trigger). Zangief attacks when the buttons are released.</string>
 
     <!--Dictator Movelist -->
     <string name="dictator_psycho_reflect_hold_buttons">Hold Buttons to Throw Back a Projectile</string>
@@ -111,7 +111,7 @@
     <string name="dictator_vtrigger_description">Special moves become cancellable into EX moves. Various special move properties change. Dashes gain ability to cross up.</string>
 
     <!-- Birdie Movelist -->
-    <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Button\nCancel: Press Kick</string>
+    <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Kick\nCancel: Press Punch</string>
     <string name="birdie_vtrigger_description">Birdie deals more damage. Special moves become faster, multi-hitting, or gain armor. </string>
 
     <!-- Mika Movelist -->

@@ -34,7 +34,7 @@ public class VFramesApplication extends Application {
         }
 
         //No need to use data from the network yet.
-        init(false, R.raw.test_data);
+        init(false, R.raw.vframes_data);
     }
 
     private void init(boolean useNetworkData, int resourceId) {
