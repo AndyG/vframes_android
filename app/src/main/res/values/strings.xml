@@ -126,7 +126,7 @@
     <string name="rashid_vtrigger_description">Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.</string>
     <string name="rashid_vskill_divekick_pretext">(During Front Flip)</string>
     <string name="rashid_vskill_rollkick_pretext">(During Rolling Assault)</string>
-    <string name="rashid_whirlwind_shot_description">HP and EX versions cancel intoV-Skill and affect Rashid\'s trajectory.</string>
+    <string name="rashid_whirlwind_shot_description">HP and EX versions cancel into V-Skill and affect Rashid\'s trajectory.</string>
 
     <!-- Nash Movelist -->
     <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second Projectile</string>
