@@ -8,7 +8,6 @@ import java.util.Map;
 import data.json.character.SFCharacterJsonAdapter;
 import data.model.*;
 import data.model.character.SFCharacter;
-import sun.rmi.runtime.Log;
 
 public class CharactersModelJsonAdapter {
 
