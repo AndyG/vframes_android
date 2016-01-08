@@ -18,9 +18,11 @@ import android.widget.ImageView;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
+import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.core.internal.models.ThreadData;
 
 import java.util.List;
 import java.util.Map;
@@ -28,10 +30,11 @@ import java.util.Map;
 import data.model.CharacterID;
 import data.model.IDataModel;
 import data.model.character.SFCharacter;
-import data.model.move.IMoveListMove;
+import data.model.move.IFrameDataEntry;
+import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
-public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost {
+public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost, FrameDataFragment.IFrameDataFragmentHost {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
 
@@ -80,11 +83,16 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     }
 
     @Override
-    public Map<MoveCategory, List<IMoveListMove>> getMoveList() {
+    public Map<MoveCategory, List<IMoveListEntry>> getMoveList() {
         VFramesApplication application = (VFramesApplication) getApplication();
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
         return targetCharacterModel.getMoveList();
+    }
+
+    @Override
+    public Map<MoveCategory, List<IFrameDataEntry>> getFrameData() {
+        return null;
     }
 
     private void verifyDataAvailable() {

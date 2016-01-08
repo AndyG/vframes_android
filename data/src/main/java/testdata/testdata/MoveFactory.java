@@ -7,8 +7,8 @@ import java.util.Random;
 
 import data.model.input.InputElement;
 import data.model.input.InputParser;
-import data.model.move.IMoveListMove;
-import data.model.move.MoveListMove;
+import data.model.move.IMoveListEntry;
+import data.model.move.MoveListEntry;
 import data.model.move.MoveStrength;
 import data.model.move.MoveType;
 import data.model.move.TypicalMove;
@@ -68,7 +68,7 @@ public class MoveFactory {
         return new TypicalMove(name, label, moveType, startupFrames, activeFrames, recoveryFrames, blockstunFrames, hitstunFrames, damageValue, stunValue, strength);
     }
 
-    public IMoveListMove generateMoveListMove() {
+    public IMoveListEntry generateMoveListMove() {
         int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
         InputParser inputParser = new InputParser();
         String name = RandomStringUtils.randomAlphabetic(nameLength);
@@ -77,6 +77,6 @@ public class MoveFactory {
         String posttextId = "id_posttext_test";
         String descriptionId = "id_description_test";
         List<InputElement> inputElementList = inputParser.parseInputString(input);
-        return new MoveListMove(name, pretextId, posttextId, descriptionId, inputElementList);
+        return new MoveListEntry(name, pretextId, posttextId, descriptionId, inputElementList);
     }
 }

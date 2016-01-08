@@ -1,6 +1,6 @@
 package data.model.move;
 
-public interface IDisplayableMove {
+public interface IFrameDataEntry {
 
     int CODE_NOT_APPLICABLE = 1001;
 

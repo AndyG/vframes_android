@@ -1,6 +1,6 @@
 package data.model.move;
 
-public abstract class BaseDisplayableMove implements IDisplayableMove {
+public abstract class BaseDisplayableMove implements IFrameDataEntry {
 
     private String name;
     private String label;

@@ -4,14 +4,14 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
-import data.model.move.IDisplayableMove;
+import data.model.move.IFrameDataEntry;
 import data.model.move.MoveStrength;
 import data.model.move.MoveType;
 import data.model.move.TypicalMove;
 
 public class FrameDataMoveJsonAdapter {
 
-    public static JsonObject MoveToJson(IDisplayableMove move) {
+    public static JsonObject MoveToJson(IFrameDataEntry move) {
         JsonObject jsonObject = new JsonObject();
 
         jsonObject.add("name", new JsonPrimitive(move.getName()));
@@ -24,7 +24,7 @@ public class FrameDataMoveJsonAdapter {
         return jsonObject;
     }
 
-    public static IDisplayableMove JsonToMove(JsonObject moveJson) {
+    public static IFrameDataEntry JsonToMove(JsonObject moveJson) {
         MoveType moveType = MoveType.fromString(moveJson.get("type").getAsString());
 
         switch (moveType) {
@@ -35,7 +35,7 @@ public class FrameDataMoveJsonAdapter {
         }
     }
 
-    private static JsonElement constructMoveDataJSON(IDisplayableMove move) {
+    private static JsonElement constructMoveDataJSON(IFrameDataEntry move) {
         MoveType type = move.getMoveType();
 
         switch (type) {
@@ -60,7 +60,7 @@ public class FrameDataMoveJsonAdapter {
         }
     }
 
-    private static IDisplayableMove constructTypicalMove(JsonObject moveJson) {
+    private static IFrameDataEntry constructTypicalMove(JsonObject moveJson) {
         String name = moveJson.get("name").getAsString();
         String label = moveJson.get("label").getAsString();
         MoveType type = MoveType.TYPE_1;

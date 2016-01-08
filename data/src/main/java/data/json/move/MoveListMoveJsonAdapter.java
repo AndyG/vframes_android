@@ -7,12 +7,12 @@ import java.util.List;
 
 import data.model.input.InputElement;
 import data.model.input.InputParser;
-import data.model.move.IMoveListMove;
-import data.model.move.MoveListMove;
+import data.model.move.IMoveListEntry;
+import data.model.move.MoveListEntry;
 
 public class MoveListMoveJsonAdapter {
 
-    public static JsonObject MoveToJson(IMoveListMove move) {
+    public static JsonObject MoveToJson(IMoveListEntry move) {
         JsonObject jsonObject = new JsonObject();
 
         jsonObject.add("nameID", new JsonPrimitive(move.getNameId()));
@@ -24,7 +24,7 @@ public class MoveListMoveJsonAdapter {
         return jsonObject;
     }
 
-    public static IMoveListMove JsonToMove(JsonObject moveJson) {
+    public static IMoveListEntry JsonToMove(JsonObject moveJson) {
         InputParser inputParser = new InputParser();
         String nameId = getJsonStringValue(moveJson, "nameID");
         String input = getJsonStringValue(moveJson, "input");
@@ -33,7 +33,7 @@ public class MoveListMoveJsonAdapter {
         String descriptionId = getJsonStringValue(moveJson, "descriptionID");
         List<InputElement> inputElementList = inputParser.parseInputString(input);
 
-        return new MoveListMove(nameId, pretextId, posttextId, descriptionId, inputElementList);
+        return new MoveListEntry(nameId, pretextId, posttextId, descriptionId, inputElementList);
     }
 
     private static String getJsonStringValue(JsonObject jsonObject, String key) {

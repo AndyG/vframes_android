@@ -15,7 +15,7 @@ import com.angarron.vframes.adapter.MovesRecyclerViewAdapter;
 import java.util.List;
 import java.util.Map;
 
-import data.model.move.IMoveListMove;
+import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class MoveListFragment extends Fragment {
@@ -37,7 +37,7 @@ public class MoveListFragment extends Fragment {
     }
 
     public interface IMoveListFragmentHost {
-        Map<MoveCategory, List<IMoveListMove>> getMoveList();
+        Map<MoveCategory, List<IMoveListEntry>> getMoveList();
     }
 
 }

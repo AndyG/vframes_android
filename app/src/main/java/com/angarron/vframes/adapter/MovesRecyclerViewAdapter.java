@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,14 +15,12 @@ import android.widget.TextView;
 import com.angarron.vframes.R;
 import com.angarron.vframes.resource_resolution.StringResolver;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import data.model.input.InputElement;
-import data.model.move.IMoveListMove;
+import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 /**
@@ -49,7 +46,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     private Context context;
     private List<Object> displayList = new ArrayList<>();
 
-    public MovesRecyclerViewAdapter(Context context, Map<MoveCategory, List<IMoveListMove>> moves) {
+    public MovesRecyclerViewAdapter(Context context, Map<MoveCategory, List<IMoveListEntry>> moves) {
         this.context = context;
         setupDisplayList(moves);
     }
@@ -84,7 +81,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     public int getItemViewType(int position) {
         if (displayList.get(position) instanceof MoveCategory) {
             return VIEW_TYPE_HEADER;
-        } else if (displayList.get(position) instanceof IMoveListMove) {
+        } else if (displayList.get(position) instanceof IMoveListEntry) {
             return VIEW_TYPE_MOVE;
         } else {
             throw new RuntimeException("could not resolve Object to category: " + displayList.get(position).getClass().getSimpleName());
@@ -96,11 +93,11 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         return displayList.size();
     }
 
-    private void setupDisplayList(Map<MoveCategory, List<IMoveListMove>> moves) {
+    private void setupDisplayList(Map<MoveCategory, List<IMoveListEntry>> moves) {
         for (MoveCategory category : categoriesOrder) {
             if (moves.containsKey(category) && !moves.get(category).isEmpty()) {
                 displayList.add(category);
-                for (IMoveListMove move : moves.get(category)) {
+                for (IMoveListEntry move : moves.get(category)) {
                     displayList.add(move);
                 }
             }
@@ -108,7 +105,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
     }
 
     private void setupMoveItemViewHolder(MoveItemViewHolder moveItemViewHolder, int position) {
-        IMoveListMove move = (IMoveListMove) displayList.get(position);
+        IMoveListEntry move = (IMoveListEntry) displayList.get(position);
         moveItemViewHolder.label.setText(move.getNameId());
 
         List<InputElement> input = move.getInput();

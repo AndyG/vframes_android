@@ -4,7 +4,7 @@ import java.util.List;
 
 import data.model.input.InputElement;
 
-public interface IMoveListMove {
+public interface IMoveListEntry {
     String getNameId();
     List<InputElement> getInput();
     String getPretextId();

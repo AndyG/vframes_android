@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.Random;
 
 import data.model.character.SFCharacter;
-import data.model.move.IDisplayableMove;
-import data.model.move.IMoveListMove;
+import data.model.move.IFrameDataEntry;
+import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class CharacterFactory {
@@ -28,15 +28,15 @@ public class CharacterFactory {
     }
 
     public SFCharacter generateCharacter() {
-        Map<MoveCategory, List<IMoveListMove>> moveList = generateMoveList();
+        Map<MoveCategory, List<IMoveListEntry>> moveList = generateMoveList();
         return new SFCharacter(moveList);
     }
 
-    private Map<MoveCategory, List<IMoveListMove>> generateMoveList() {
-        Map<MoveCategory, List<IMoveListMove>> moveList = new HashMap<>();
+    private Map<MoveCategory, List<IMoveListEntry>> generateMoveList() {
+        Map<MoveCategory, List<IMoveListEntry>> moveList = new HashMap<>();
         MoveFactory moveFactory = new MoveFactory(randomGenerator);
         for(MoveCategory category : MoveCategory.values()) {
-            List<IMoveListMove> moves = new ArrayList<>();
+            List<IMoveListEntry> moves = new ArrayList<>();
             for (int i = 0; i < 3; i++) {
                 moves.add(moveFactory.generateMoveListMove());
             }
@@ -45,17 +45,17 @@ public class CharacterFactory {
         return moveList;
     }
 
-    private Map<MoveCategory, List<IDisplayableMove>> generateMoveset() {
-        Map<MoveCategory, List<IDisplayableMove>> moveList = new HashMap<>();
+    private Map<MoveCategory, List<IFrameDataEntry>> generateMoveset() {
+        Map<MoveCategory, List<IFrameDataEntry>> moveList = new HashMap<>();
         for(MoveCategory category : MoveCategory.values()) {
             moveList.put(category, generateRandomMoves(5));
         }
         return moveList;
     }
 
-    private List<IDisplayableMove> generateRandomMoves(int numMoves) {
+    private List<IFrameDataEntry> generateRandomMoves(int numMoves) {
         MoveFactory moveFactory = new MoveFactory(randomGenerator);
-        List<IDisplayableMove> moves = new ArrayList<>();
+        List<IFrameDataEntry> moves = new ArrayList<>();
 
         for (int i = 0; i < numMoves; i++) {
             moves.add(moveFactory.generateMove());

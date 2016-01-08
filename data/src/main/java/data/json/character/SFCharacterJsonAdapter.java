@@ -11,7 +11,7 @@ import java.util.Map;
 
 import data.json.move.MoveListMoveJsonAdapter;
 import data.model.character.SFCharacter;
-import data.model.move.IMoveListMove;
+import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class SFCharacterJsonAdapter {
@@ -20,7 +20,7 @@ public class SFCharacterJsonAdapter {
         JsonObject movesObject = new JsonObject();
 
         for (MoveCategory categoryKey : character.getMoveList().keySet()) {
-            List<IMoveListMove> category = character.getMoveList().get(categoryKey);
+            List<IMoveListEntry> category = character.getMoveList().get(categoryKey);
             JsonArray categoryArray = moveListToJsonArray(category);
             movesObject.add(categoryKey.toString(), categoryArray);
         }
@@ -35,8 +35,8 @@ public class SFCharacterJsonAdapter {
         return new SFCharacter(jsonToMoveList(moveListJson));
     }
 
-    private static Map<MoveCategory, List<IMoveListMove>> jsonToMoveList(JsonObject moveListJson) {
-        Map<MoveCategory, List<IMoveListMove>> moveList = new HashMap<>();
+    private static Map<MoveCategory, List<IMoveListEntry>> jsonToMoveList(JsonObject moveListJson) {
+        Map<MoveCategory, List<IMoveListEntry>> moveList = new HashMap<>();
 
         for (Map.Entry<String, JsonElement> category : moveListJson.entrySet()) {
             String categoryKey = category.getKey();
@@ -44,7 +44,7 @@ public class SFCharacterJsonAdapter {
             JsonElement categoryBody = category.getValue();
             System.out.println(categoryBody.toString());
 
-            List<IMoveListMove> movesList = new ArrayList<>();
+            List<IMoveListEntry> movesList = new ArrayList<>();
             JsonArray categoryJson = categoryBody.getAsJsonArray();
             for (JsonElement moveJson : categoryJson) {
                 movesList.add(MoveListMoveJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
@@ -56,10 +56,10 @@ public class SFCharacterJsonAdapter {
         return moveList;
     }
 
-    private static JsonArray moveListToJsonArray(List<IMoveListMove> moves) {
+    private static JsonArray moveListToJsonArray(List<IMoveListEntry> moves) {
         JsonArray movesJson = new JsonArray();
 
-        for (IMoveListMove move : moves) {
+        for (IMoveListEntry move : moves) {
             movesJson.add(MoveListMoveJsonAdapter.MoveToJson(move));
         }
 

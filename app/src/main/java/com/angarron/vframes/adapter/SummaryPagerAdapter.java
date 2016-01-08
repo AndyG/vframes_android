@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.angarron.vframes.R;
+import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
-import com.angarron.vframes.ui.fragment.NoFrameDataAvailableFragment;
 
 public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -32,7 +32,7 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
             case MOVE_LIST_POSITION:
                 return new MoveListFragment();
             case FRAME_DATA_POSITION:
-                return new NoFrameDataAvailableFragment();
+                return new FrameDataFragment();
             default:
                 throw new RuntimeException("invalid position: " + position);
         }

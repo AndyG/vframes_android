@@ -4,7 +4,7 @@ import java.util.List;
 
 import data.model.input.InputElement;
 
-public class MoveListMove implements IMoveListMove {
+public class MoveListEntry implements IMoveListEntry {
 
     private String nameId;
     private String pretextId;
@@ -12,7 +12,7 @@ public class MoveListMove implements IMoveListMove {
     private String description;
     private List<InputElement> inputElementList;
 
-    public MoveListMove(String nameId, String pretextId, String posttextId, String description, List<InputElement> inputElementList) {
+    public MoveListEntry(String nameId, String pretextId, String posttextId, String description, List<InputElement> inputElementList) {
         this.nameId = nameId;
         this.pretextId = pretextId;
         this.posttextId = posttextId;
