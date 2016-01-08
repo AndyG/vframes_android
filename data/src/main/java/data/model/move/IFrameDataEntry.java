@@ -17,5 +17,4 @@ public interface IFrameDataEntry {
 
     int getDamageValue();
     int getStunValue();
-    MoveStrength getStrength();
 }

@@ -1,6 +1,6 @@
 package data.model.move;
 
-public class TypicalMove extends BaseDisplayableMove {
+public class TypicalFrameDataEntry extends BaseDisplayableMove {
 
     private int startupFrames;
     private int activeFrames;
@@ -12,11 +12,9 @@ public class TypicalMove extends BaseDisplayableMove {
     private int damageValue;
     private int stunValue;
 
-    private MoveStrength strength;
-
-    public TypicalMove (String name, String label, MoveType moveType, int startupFrames,
-                        int activeFrames, int recoveryFrames, int blockstunFrames, int hitstunFrames,
-                        int damageValue, int stunValue, MoveStrength strength) {
+    public TypicalFrameDataEntry(String name, String label, MoveType moveType, int startupFrames,
+                                 int activeFrames, int recoveryFrames, int blockstunFrames, int hitstunFrames,
+                                 int damageValue, int stunValue) {
 
         super(name, label, moveType);
 
@@ -29,8 +27,6 @@ public class TypicalMove extends BaseDisplayableMove {
 
         this.damageValue = damageValue;
         this.stunValue = stunValue;
-
-        this.strength = strength;
     }
 
     @Override
@@ -66,11 +62,6 @@ public class TypicalMove extends BaseDisplayableMove {
     @Override
     public int getStunValue() {
         return stunValue;
-    }
-
-    @Override
-    public MoveStrength getStrength() {
-        return strength;
     }
 
     public int getBlockstunFrames() {

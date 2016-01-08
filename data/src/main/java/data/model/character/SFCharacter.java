@@ -4,18 +4,25 @@ package data.model.character;
 import java.util.List;
 import java.util.Map;
 
+import data.model.move.IFrameDataEntry;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class SFCharacter {
 
-    private Map<MoveCategory, List<IMoveListEntry>> movelist_map;
+    private Map<MoveCategory, List<IMoveListEntry>> moveListMap;
+    private Map<MoveCategory, List<IFrameDataEntry>> frameData;
 
-    public SFCharacter(Map<MoveCategory, List<IMoveListEntry>> movelist_map) {
-        this.movelist_map = movelist_map;
+    public SFCharacter(Map<MoveCategory, List<IMoveListEntry>> moveListMap, Map<MoveCategory, List<IFrameDataEntry>> frameData) {
+        this.moveListMap = moveListMap;
+        this.frameData = frameData;
     }
 
     public Map<MoveCategory, List<IMoveListEntry>> getMoveList() {
-        return movelist_map;
+        return moveListMap;
+    }
+
+    public Map<MoveCategory, List<IFrameDataEntry>> getFrameData() {
+        return frameData;
     }
 }

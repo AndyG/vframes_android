@@ -9,8 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import data.json.move.MoveListMoveJsonAdapter;
+import data.json.move.FrameDataEntryJsonAdapter;
+import data.json.move.MoveListEntryJsonAdapter;
 import data.model.character.SFCharacter;
+import data.model.move.IFrameDataEntry;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
@@ -32,7 +34,12 @@ public class SFCharacterJsonAdapter {
 
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
         JsonObject moveListJson = characterJson.getAsJsonObject("move_list");
-        return new SFCharacter(jsonToMoveList(moveListJson));
+        if (characterJson.has("frame_data")) {
+            JsonObject frameDataJson = characterJson.getAsJsonObject("frame_data");
+            return new SFCharacter(jsonToMoveList(moveListJson), jsonToFrameData(frameDataJson));
+        } else {
+            return new SFCharacter(jsonToMoveList(moveListJson), null);
+        }
     }
 
     private static Map<MoveCategory, List<IMoveListEntry>> jsonToMoveList(JsonObject moveListJson) {
@@ -47,7 +54,7 @@ public class SFCharacterJsonAdapter {
             List<IMoveListEntry> movesList = new ArrayList<>();
             JsonArray categoryJson = categoryBody.getAsJsonArray();
             for (JsonElement moveJson : categoryJson) {
-                movesList.add(MoveListMoveJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
+                movesList.add(MoveListEntryJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
             }
 
             moveList.put(MoveCategory.fromString(categoryKey), movesList);
@@ -56,11 +63,32 @@ public class SFCharacterJsonAdapter {
         return moveList;
     }
 
+    private static Map<MoveCategory, List<IFrameDataEntry>> jsonToFrameData(JsonObject frameDataJson) {
+        Map<MoveCategory, List<IFrameDataEntry>> frameData = new HashMap<>();
+
+        for (Map.Entry<String, JsonElement> category : frameDataJson.entrySet()) {
+            String categoryKey = category.getKey();
+            System.out.println("Parsing category: " + categoryKey);
+            JsonElement categoryBody = category.getValue();
+            System.out.println(categoryBody.toString());
+
+            List<IFrameDataEntry> frameDataEntries = new ArrayList<>();
+            JsonArray categoryJson = categoryBody.getAsJsonArray();
+            for (JsonElement moveJson : categoryJson) {
+                frameDataEntries.add(FrameDataEntryJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
+            }
+
+            frameData.put(MoveCategory.fromString(categoryKey), frameDataEntries);
+        }
+
+        return frameData;
+    }
+
     private static JsonArray moveListToJsonArray(List<IMoveListEntry> moves) {
         JsonArray movesJson = new JsonArray();
 
         for (IMoveListEntry move : moves) {
-            movesJson.add(MoveListMoveJsonAdapter.MoveToJson(move));
+            movesJson.add(MoveListEntryJsonAdapter.MoveToJson(move));
         }
 
         return movesJson;

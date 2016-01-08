@@ -10,7 +10,7 @@ import data.model.input.InputParser;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveListEntry;
 
-public class MoveListMoveJsonAdapter {
+public class MoveListEntryJsonAdapter {
 
     public static JsonObject MoveToJson(IMoveListEntry move) {
         JsonObject jsonObject = new JsonObject();

@@ -113,6 +113,24 @@
             "descriptionID":"id_hits_overhead"
           }
         ]
+      },
+      "frame_data": {
+        "unique_attacks": [
+          {
+            "nameID":"Tsumujigari",
+            "label":"f+MK",
+            "type":"type_0",
+            "data": {
+              "startupFrames": 5,
+              "activeFrames": 3,
+              "recoveryFrames": 8,
+              "blockAdvantage": -5,
+              "hitAdvantage": 8,
+              "damage": 100,
+              "stun": 500
+            }
+          }
+        ]
       }
     },
     "dhalsim": {

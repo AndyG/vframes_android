@@ -13,7 +13,7 @@
     <string name="summary_toolbar_title">%1$s Moves</string>
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>
-    <string name="frame_data_not_available">Detailed frame data will become available as Street Fighter V nears release. Thank you for your patience.</string>
+    <string name="frame_data_not_available">Detailed frame data for this character will become available as Street Fighter V nears release. Thank you for your patience.</string>
 
     <!--Character Names -->
     <string name="ryu_name">Ryu</string>

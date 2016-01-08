@@ -29,7 +29,7 @@ public class CharacterFactory {
 
     public SFCharacter generateCharacter() {
         Map<MoveCategory, List<IMoveListEntry>> moveList = generateMoveList();
-        return new SFCharacter(moveList);
+        return new SFCharacter(moveList, null);
     }
 
     private Map<MoveCategory, List<IMoveListEntry>> generateMoveList() {

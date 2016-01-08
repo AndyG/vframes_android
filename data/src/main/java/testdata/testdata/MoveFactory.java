@@ -9,9 +9,8 @@ import data.model.input.InputElement;
 import data.model.input.InputParser;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveListEntry;
-import data.model.move.MoveStrength;
 import data.model.move.MoveType;
-import data.model.move.TypicalMove;
+import data.model.move.TypicalFrameDataEntry;
 import testdata.testdata.util.RandomUtil;
 
 public class MoveFactory {
@@ -45,7 +44,7 @@ public class MoveFactory {
         this.randomGenerator = randomGenerator;
     }
 
-    public TypicalMove generateMove() {
+    public TypicalFrameDataEntry generateMove() {
         int nameLength = RandomUtil.getRandomInt(randomGenerator, NAME_MIN_LENGTH, NAME_MAX_LENGTH);
         String name = RandomStringUtils.randomAlphabetic(nameLength);
 
@@ -63,9 +62,7 @@ public class MoveFactory {
         int damageValue = RandomUtil.getRandomInt(randomGenerator, DAMAGE_MIN_VALUE, DAMAGE_MAX_VALUE);
         int stunValue = RandomUtil.getRandomInt(randomGenerator, STUN_MIN_VALUE, STUN_MAX_VALUE);
 
-        MoveStrength strength = RandomUtil.getRandomEnumValue(MoveStrength.class, randomGenerator);
-
-        return new TypicalMove(name, label, moveType, startupFrames, activeFrames, recoveryFrames, blockstunFrames, hitstunFrames, damageValue, stunValue, strength);
+        return new TypicalFrameDataEntry(name, label, moveType, startupFrames, activeFrames, recoveryFrames, blockstunFrames, hitstunFrames, damageValue, stunValue);
     }
 
     public IMoveListEntry generateMoveListMove() {

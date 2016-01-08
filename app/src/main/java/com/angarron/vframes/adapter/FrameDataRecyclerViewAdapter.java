@@ -73,10 +73,21 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         return displayList.size();
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        if (displayList.get(position) instanceof MoveCategory) {
+            return VIEW_TYPE_HEADER;
+        } else if (displayList.get(position) instanceof IFrameDataEntry) {
+            //TODO: switch on the entry's type to decide the right view type
+            return VIEW_TYPE_FRAME_DATA_ENTRY;
+        } else {
+            throw new RuntimeException("could not resolve Object to category: " + displayList.get(position).getClass().getSimpleName());
+        }
+    }
+
     private void setupFrameDataItemViewHolder(FrameDataItemViewHolder holder, int position) {
         IFrameDataEntry frameDataEntry = (IFrameDataEntry) displayList.get(position);
-        String moveName = frameDataEntry.getName();
-        holder.moveName.setText(moveName);
+        holder.setupView(frameDataEntry);
     }
 
     private void setupDisplayList(Map<MoveCategory, List<IFrameDataEntry>> frameData) {
@@ -125,11 +136,32 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private class FrameDataItemViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView moveName;
+        private TextView moveLabel;
+        private TextView startupFrames;
+        private TextView activeFrames;
+        private TextView recoveryFrames;
+        private TextView blockAdvantage;
+        private TextView hitAdvantage;
+        private TextView damageValue;
+        private TextView stunValue;
 
-        public FrameDataItemViewHolder(View v) {
+        private FrameDataItemViewHolder(View v) {
             super(v);
-            moveName = (TextView) v.findViewById(R.id.move_name);
+            moveLabel = (TextView) v.findViewById(R.id.move_label);
+        }
+
+        private void setupView(IFrameDataEntry frameDataEntry) {
+            moveLabel.setText(frameDataEntry.getLabel());
+
+            startupFrames.setText(frameDataEntry.getStartupFrames());
+            activeFrames.setText(frameDataEntry.getActiveFrames());
+            recoveryFrames.setText(frameDataEntry.getRecoveryFrames());
+
+            blockAdvantage.setText(frameDataEntry.getBlockAdvantage());
+            hitAdvantage.setText(frameDataEntry.getHitAdvantage());
+
+            damageValue.setText(frameDataEntry.getDamageValue());
+            stunValue.setText(frameDataEntry.getStunValue());
         }
     }
 }

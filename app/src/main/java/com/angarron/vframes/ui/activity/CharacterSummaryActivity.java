@@ -92,7 +92,10 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     @Override
     public Map<MoveCategory, List<IFrameDataEntry>> getFrameData() {
-        return null;
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        return targetCharacterModel.getFrameData();
     }
 
     private void verifyDataAvailable() {
