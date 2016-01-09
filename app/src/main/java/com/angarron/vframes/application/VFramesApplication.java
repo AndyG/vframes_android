@@ -1,6 +1,8 @@
 package com.angarron.vframes.application;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
@@ -20,6 +22,8 @@ import retrofit.Retrofit;
 public class VFramesApplication extends Application {
 
     public static final String APP_LOGGING_TAG = "VFrames";
+    private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
+    private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
 
     private IDataSource dataSource;
     private IDataModel dataModel;
@@ -32,6 +36,13 @@ public class VFramesApplication extends Application {
         if (!BuildConfig.DEBUG) {
             Fabric.with(this, new Crashlytics());
         }
+
+        //SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+        SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+        sharedPreferencesEditor.putInt(APP_LAUNCH_COUNT_KEY, appLaunchCount + 1);
+        sharedPreferencesEditor.apply();
 
         //No need to use data from the network yet.
         init(R.raw.vframes_data);
