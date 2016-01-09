@@ -37,8 +37,6 @@ public class TestDataSource implements IDataSource {
         @Override
         protected Void doInBackground(Object... objects) {
 
-            Looper.prepare();
-
             Listener listener = (Listener) objects[0];
 
             InputStream inputStream = resources.openRawResource(resourceId);

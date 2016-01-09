@@ -410,7 +410,7 @@
           },
           {
             "nameID": "Lift Upper",
-            "input": "BACK|PLUS|HP"
+            "input": "BACK|PLUS|MP"
           },
           {
             "nameID": "Lift Combination",
@@ -512,7 +512,7 @@
           },
           {
             "nameID": "Yosokyaku",
-            "input": "DOWN|OR|DOWN_FORWARD|PLUS|MK",
+            "input": "DOWN|PLUS|MK",
             "pretextID":"id_during_jump",
             "posttextID":"id_up_to_three_times"
           },
@@ -861,8 +861,7 @@
           },
           {
             "nameID": "Psycho Axe",
-            "input": "DOWN_FORWARD|PLUS|HP",
-            "descriptionID":"id_hits_overhead"
+            "input": "DOWN_FORWARD|PLUS|HP"
           }
         ]
       }
@@ -900,7 +899,7 @@
           },
           {
             "nameID": "Sunset Wheel",
-            "input": "QCB|PLUS|KICK"
+            "input": "HCB|PLUS|KICK"
           }
         ],
         "vtrigger": [
@@ -1113,7 +1112,7 @@
         "vreversal": [
           {
             "nameID": "Peach Gator",
-            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_KICKS",
             "pretextID":"id_during_guard"
           }
         ],
@@ -1353,16 +1352,16 @@
           },
           {
             "nameID": "Jumping Sobat",
-            "input": "FORWARD|PLUS|MK",
-            "descriptionID":"id_hits_overhead"
+            "input": "FORWARD|PLUS|MK"
           },
           {
             "nameID": "Chopping Assault",
-            "input": "FORWARD|PLUS|MP"
+            "input": "FORWARD|PLUS|MP",
+            "descriptionID":"id_hits_overhead"
           },
           {
             "nameID": "Step Kick",
-            "input": "FORWARD|PLUS|MK"
+            "input": "FORWARD|PLUS|HK"
           },
           {
             "nameID": "Spinning Back Knuckle",
@@ -1382,7 +1381,7 @@
           },
           {
             "nameID": "Wind Shear",
-            "input": "MP|ARROW|LP|ARROW|HP"
+            "input": "MP|ARROW|LK|ARROW|HP"
           },
           {
             "nameID": "Down Burst",
