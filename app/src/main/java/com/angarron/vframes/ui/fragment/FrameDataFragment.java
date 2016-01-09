@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.FrameDataRecyclerViewAdapter;
@@ -29,10 +30,12 @@ public class FrameDataFragment extends Fragment {
         Map<MoveCategory, List<IFrameDataEntry>> frameData = frameDataFragmentHost.getFrameData();
 
         if (frameData != null) {
-            RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.frame_data_recycler, container, false);
+            LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.frame_data_layout, container, false);
+
+            RecyclerView recyclerView = (RecyclerView) linearLayout.findViewById(R.id.frames_recycler_view);
             recyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
             recyclerView.setAdapter(new FrameDataRecyclerViewAdapter(getContext(), frameData));
-            return recyclerView;
+            return linearLayout;
         } else {
             return inflater.inflate(R.layout.frame_data_upcoming, container, false);
         }

@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Map;
 
 import data.model.move.IFrameDataEntry;
-import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
@@ -50,7 +49,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
                 v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_header, parent, false);
                 return new HeaderItemViewHolder(v);
             case VIEW_TYPE_FRAME_DATA_ENTRY:
-                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.frame_data_item, parent, false);
+                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.frame_data_row_layout, parent, false);
                 return new FrameDataItemViewHolder(v);
             default:
                 throw new RuntimeException("unable to find ViewHolder for view type: " + viewType);
@@ -142,26 +141,33 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         private TextView recoveryFrames;
         private TextView blockAdvantage;
         private TextView hitAdvantage;
-        private TextView damageValue;
-        private TextView stunValue;
+//        private TextView damageValue;
+//        private TextView stunValue;
 
         private FrameDataItemViewHolder(View v) {
             super(v);
-            moveLabel = (TextView) v.findViewById(R.id.move_label);
+            moveLabel = (TextView) v.findViewById(R.id.label_textview);
+
+            startupFrames = (TextView) v.findViewById(R.id.startup_textview);
+            activeFrames = (TextView) v.findViewById(R.id.active_textview);
+            recoveryFrames = (TextView) v.findViewById(R.id.recovery_textview);
+
+            blockAdvantage = (TextView) v.findViewById(R.id.block_advantage_textview);
+            hitAdvantage = (TextView) v.findViewById(R.id.hit_advantage_textview);
         }
 
         private void setupView(IFrameDataEntry frameDataEntry) {
             moveLabel.setText(frameDataEntry.getLabel());
 
-            startupFrames.setText(frameDataEntry.getStartupFrames());
-            activeFrames.setText(frameDataEntry.getActiveFrames());
-            recoveryFrames.setText(frameDataEntry.getRecoveryFrames());
+            startupFrames.setText(String.valueOf(frameDataEntry.getStartupFrames()));
+            activeFrames.setText(String.valueOf(frameDataEntry.getActiveFrames()));
+            recoveryFrames.setText(String.valueOf(frameDataEntry.getRecoveryFrames()));
 
-            blockAdvantage.setText(frameDataEntry.getBlockAdvantage());
-            hitAdvantage.setText(frameDataEntry.getHitAdvantage());
-
-            damageValue.setText(frameDataEntry.getDamageValue());
-            stunValue.setText(frameDataEntry.getStunValue());
+            blockAdvantage.setText(String.valueOf(frameDataEntry.getBlockAdvantage()));
+            hitAdvantage.setText(String.valueOf(frameDataEntry.getHitAdvantage()));
+//
+//            damageValue.setText(frameDataEntry.getDamageValue());
+//            stunValue.setText(frameDataEntry.getStunValue());
         }
     }
 }
