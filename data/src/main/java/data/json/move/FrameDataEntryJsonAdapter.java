@@ -10,6 +10,8 @@ import data.model.move.TypicalFrameDataEntry;
 
 public class FrameDataEntryJsonAdapter {
 
+    private static final int DISPLAY_CODE_MISSING_VALUE = 1001;
+
     public static JsonObject MoveToJson(IFrameDataEntry move) {
         JsonObject jsonObject = new JsonObject();
 
@@ -65,17 +67,33 @@ public class FrameDataEntryJsonAdapter {
 
         JsonObject moveDataJson = moveJson.getAsJsonObject("data");
 
-        int startupFrames = moveDataJson.get("startupFrames").getAsInt();
-        int activeFrames = moveDataJson.get("activeFrames").getAsInt();
-        int recoveryFrames = moveDataJson.get("recoveryFrames").getAsInt();
+        int startupFrames = DISPLAY_CODE_MISSING_VALUE;
+        int activeFrames = DISPLAY_CODE_MISSING_VALUE;
+        int recoveryFrames = DISPLAY_CODE_MISSING_VALUE;
+        int blockAdvantage = DISPLAY_CODE_MISSING_VALUE;
+        int hitAdvantage = DISPLAY_CODE_MISSING_VALUE;
 
-        int blockAdvantage = moveDataJson.get("blockAdvantage").getAsInt();
-        int hitAdvantage = moveDataJson.get("hitAdvantage").getAsInt();
+        if (moveDataJson.has("startupFrames")) {
+            startupFrames = moveDataJson.get("startupFrames").getAsInt();
+        }
 
-        int damageValue = moveDataJson.get("damage").getAsInt();
-        int stunValue = moveDataJson.get("stun").getAsInt();
+        if (moveDataJson.has("activeFrames")) {
+            activeFrames = moveDataJson.get("activeFrames").getAsInt();
+        }
 
-        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, damageValue, stunValue);
+        if (moveDataJson.has("recoveryFrames")) {
+            recoveryFrames = moveDataJson.get("recoveryFrames").getAsInt();
+        }
+
+        if (moveDataJson.has("blockAdvantage")) {
+            blockAdvantage = moveDataJson.get("blockAdvantage").getAsInt();
+        }
+
+        if (moveDataJson.has("hitAdvantage")) {
+            hitAdvantage = moveDataJson.get("hitAdvantage").getAsInt();
+        }
+
+        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, -1, -1);
     }
 
     private static IFrameDataEntry constructTypicalMove(JsonObject moveJson) {

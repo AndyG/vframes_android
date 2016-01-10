@@ -1,7 +1,6 @@
 package com.angarron.vframes.adapter;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
@@ -24,9 +23,15 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
     private static final int VIEW_TYPE_HEADER = 1;
     private static final int VIEW_TYPE_FRAME_DATA_ENTRY = 2;
 
+    private static final int DISPLAY_CODE_MISSING_VALUE = 1001;
+    private static final int DISPLAY_CODE_NOT_APPLICABLE = 1002;
+    private static final int DISPLAY_CODE_KNOCKDOWN = 1003;
+    private static final int DISPLAY_CODE_GUARD_BREAK = 1004;
+
     //This is the order in which moves will be displayed in the frame data UI.
     //Categories which are missing for a particular character will not be displayed.
     private static MoveCategory[] categoriesOrder = {
+            MoveCategory.NORMALS,
             MoveCategory.UNIQUE_MOVES,
             MoveCategory.SPECIALS,
             MoveCategory.VSKILL,
@@ -164,8 +169,6 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         private TextView recoveryFrames;
         private TextView blockAdvantage;
         private TextView hitAdvantage;
-//        private TextView damageValue;
-//        private TextView stunValue;
 
         private FrameDataItemViewHolder(View v) {
             super(v);
@@ -183,21 +186,35 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         private void setupView(IFrameDataEntry frameDataEntry, boolean shade) {
             moveName.setText(frameDataEntry.getDisplayName());
 
-            startupFrames.setText(String.valueOf(frameDataEntry.getStartupFrames()));
-            activeFrames.setText(String.valueOf(frameDataEntry.getActiveFrames()));
-            recoveryFrames.setText(String.valueOf(frameDataEntry.getRecoveryFrames()));
+            startupFrames.setText(getDisplayValue(frameDataEntry.getStartupFrames()));
+            activeFrames.setText(getDisplayValue(frameDataEntry.getActiveFrames()));
+            recoveryFrames.setText(getDisplayValue(frameDataEntry.getRecoveryFrames()));
 
-            blockAdvantage.setText(String.valueOf(frameDataEntry.getBlockAdvantage()));
-            hitAdvantage.setText(String.valueOf(frameDataEntry.getHitAdvantage()));
+            blockAdvantage.setText(getDisplayValue(frameDataEntry.getBlockAdvantage()));
+            hitAdvantage.setText(getDisplayValue(frameDataEntry.getHitAdvantage()));
 
             if (shade) {
                 rowContainer.setBackgroundColor(ContextCompat.getColor(context, R.color.frame_data_row_background_shaded));
             } else {
                 rowContainer.setBackgroundColor(Color.TRANSPARENT);
             }
-//
-//            damageValue.setText(frameDataEntry.getDamageValue());
-//            stunValue.setText(frameDataEntry.getStunValue());
+        }
+
+        //Returns the String that should be displayed for a given
+        //frame data entry. This will be the displayCode itself for a normal integer,
+        //but certain codes will resolve to other Strings.
+        private String getDisplayValue(int displayCode) {
+            switch (displayCode) {
+                case DISPLAY_CODE_MISSING_VALUE:
+                case DISPLAY_CODE_NOT_APPLICABLE:
+                    return context.getString(R.string.frame_data_not_applicable);
+                case DISPLAY_CODE_KNOCKDOWN:
+                    return context.getString(R.string.frame_data_knockdown);
+                case DISPLAY_CODE_GUARD_BREAK:
+                    return context.getString(R.string.frame_data_guard_break);
+                default:
+                    return String.valueOf(displayCode);
+            }
         }
     }
 }

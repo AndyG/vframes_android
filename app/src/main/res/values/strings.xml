@@ -165,4 +165,10 @@
     <string name="fang_vskill_description">Shoots a projectile forward that applies poison if it touches the opponent. This attack causes no hitstun or blockstun.</string>
     <string name="fang_critical_art_description">He turns into a bird.</string>
 
+    <!-- Frame Data Cell Entries-->
+    <string name="frame_data_knockdown">K/D</string>
+    <string name="frame_data_not_applicable">-</string>
+    <string name="frame_data_missing_value">\?</string>
+    <string name="frame_data_guard_break">Guard Break</string>
+
 </resources>
