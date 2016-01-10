@@ -15,7 +15,7 @@
             app:columnCount="@integer/num_character_card_columns">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/ryu_card"
+                android:id="@+id/birdie_card"
                 style="@style/CharacterCard"
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
@@ -26,35 +26,12 @@
 
                     <ImageView
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/ryu_card"/>
+                        android:src="@drawable/birdie_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
-                        android:text="@string/ryu_name"
-                        android:background="@color/ryu_accent_translucent" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/chun_card"
-                style="@style/CharacterCard"
-                android:layout_width="0dp"
-                app:layout_columnWeight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/chun_card"/>
-
-                    <TextView
-                        style="@style/CharacterCardTextStyle"
-                        android:text="@string/chun_name"
-                        android:background="@color/chun_accent_translucent" />
+                        android:text="@string/birdie_name"
+                        android:background="@color/birdie_accent_translucent" />
 
                 </RelativeLayout>
 
@@ -84,6 +61,98 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/chun_card"
+                style="@style/CharacterCard"
+                android:layout_width="0dp"
+                app:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        style="@style/CharacterCardImageStyle"
+                        android:src="@drawable/chun_card"/>
+
+                    <TextView
+                        style="@style/CharacterCardTextStyle"
+                        android:text="@string/chun_name"
+                        android:background="@color/chun_accent_translucent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/dhalsim_card"
+                style="@style/CharacterCard"
+                android:layout_width="0dp"
+                app:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        style="@style/CharacterCardImageStyle"
+                        android:src="@drawable/dhalsim_card"/>
+
+                    <TextView
+                        style="@style/CharacterCardTextStyle"
+                        android:text="@string/dhalsim_name"
+                        android:background="@color/dhalsim_accent_translucent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/fang_card"
+                style="@style/CharacterCard"
+                android:layout_width="0dp"
+                app:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        style="@style/CharacterCardImageStyle"
+                        android:src="@drawable/fang_card"/>
+
+                    <TextView
+                        style="@style/CharacterCardTextStyle"
+                        android:text="@string/fang_name"
+                        android:background="@color/fang_accent_translucent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/karin_card"
+                style="@style/CharacterCard"
+                android:layout_width="0dp"
+                app:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        style="@style/CharacterCardImageStyle"
+                        android:src="@drawable/karin_card"/>
+
+                    <TextView
+                        style="@style/CharacterCardTextStyle"
+                        android:text="@string/karin_name"
+                        android:background="@color/karin_accent_translucent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/ken_card"
                 style="@style/CharacterCard"
                 android:layout_width="0dp"
@@ -101,6 +170,29 @@
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/ken_name"
                         android:background="@color/ken_accent_translucent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/laura_card"
+                style="@style/CharacterCard"
+                android:layout_width="0dp"
+                app:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        style="@style/CharacterCardImageStyle"
+                        android:src="@drawable/laura_card"/>
+
+                    <TextView
+                        style="@style/CharacterCardTextStyle"
+                        android:text="@string/laura_name"
+                        android:background="@color/laura_accent_translucent" />
 
                 </RelativeLayout>
 
@@ -153,29 +245,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/mika_card"
-                style="@style/CharacterCard"
-                android:layout_width="0dp"
-                app:layout_columnWeight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/mika_card"/>
-
-                    <TextView
-                        style="@style/CharacterCardTextStyle"
-                        android:text="@string/mika_name"
-                        android:background="@color/mika_accent_translucent" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
                 android:id="@+id/necalli_card"
                 style="@style/CharacterCard"
                 android:layout_width="0dp"
@@ -199,7 +268,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/claw_card"
+                android:id="@+id/mika_card"
                 style="@style/CharacterCard"
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
@@ -210,12 +279,12 @@
 
                     <ImageView
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/claw_card"/>
+                        android:src="@drawable/mika_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
-                        android:text="@string/claw_name"
-                        android:background="@color/claw_accent_translucent" />
+                        android:text="@string/mika_name"
+                        android:background="@color/mika_accent_translucent" />
 
                 </RelativeLayout>
 
@@ -245,7 +314,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/karin_card"
+                android:id="@+id/ryu_card"
                 style="@style/CharacterCard"
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
@@ -256,12 +325,35 @@
 
                     <ImageView
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/karin_card"/>
+                        android:src="@drawable/ryu_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
-                        android:text="@string/karin_name"
-                        android:background="@color/karin_accent_translucent" />
+                        android:text="@string/ryu_name"
+                        android:background="@color/ryu_accent_translucent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/claw_card"
+                style="@style/CharacterCard"
+                android:layout_width="0dp"
+                app:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        style="@style/CharacterCardImageStyle"
+                        android:src="@drawable/claw_card"/>
+
+                    <TextView
+                        style="@style/CharacterCardTextStyle"
+                        android:text="@string/claw_name"
+                        android:background="@color/claw_accent_translucent" />
 
                 </RelativeLayout>
 
@@ -285,98 +377,6 @@
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/zangief_name"
                         android:background="@color/zangief_accent_translucent" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/birdie_card"
-                style="@style/CharacterCard"
-                android:layout_width="0dp"
-                app:layout_columnWeight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/birdie_card"/>
-
-                    <TextView
-                        style="@style/CharacterCardTextStyle"
-                        android:text="@string/birdie_name"
-                        android:background="@color/birdie_accent_translucent" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/laura_card"
-                style="@style/CharacterCard"
-                android:layout_width="0dp"
-                app:layout_columnWeight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/laura_card"/>
-
-                    <TextView
-                        style="@style/CharacterCardTextStyle"
-                        android:text="@string/laura_name"
-                        android:background="@color/laura_accent_translucent" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/dhalsim_card"
-                style="@style/CharacterCard"
-                android:layout_width="0dp"
-                app:layout_columnWeight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/dhalsim_card"/>
-
-                    <TextView
-                        style="@style/CharacterCardTextStyle"
-                        android:text="@string/dhalsim_name"
-                        android:background="@color/dhalsim_accent_translucent" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/fang_card"
-                style="@style/CharacterCard"
-                android:layout_width="0dp"
-                app:layout_columnWeight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/fang_card"/>
-
-                    <TextView
-                        style="@style/CharacterCardTextStyle"
-                        android:text="@string/fang_name"
-                        android:background="@color/fang_accent_translucent" />
 
                 </RelativeLayout>
 
