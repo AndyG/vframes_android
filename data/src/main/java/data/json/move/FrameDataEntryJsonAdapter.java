@@ -64,6 +64,7 @@ public class FrameDataEntryJsonAdapter {
     private static IFrameDataEntry constructHardCodedFrameDataEntry(JsonObject moveJson) {
         String name = moveJson.get("nameID").getAsString();
         MoveType type = MoveType.TYPE_0;
+        String description = parseDescription(moveJson);
 
         JsonObject moveDataJson = moveJson.getAsJsonObject("data");
 
@@ -93,11 +94,13 @@ public class FrameDataEntryJsonAdapter {
             hitAdvantage = moveDataJson.get("hitAdvantage").getAsInt();
         }
 
-        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, -1, -1);
+        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, -1, -1, description);
     }
 
     private static IFrameDataEntry constructTypicalMove(JsonObject moveJson) {
         String name = moveJson.get("nameID").getAsString();
+        String description = parseDescription(moveJson);
+
         MoveType type = MoveType.TYPE_1;
 
         JsonObject moveDataJson = moveJson.getAsJsonObject("data");
@@ -113,6 +116,14 @@ public class FrameDataEntryJsonAdapter {
         int stunValue = moveDataJson.get("stun").getAsInt();
 
         return new TypicalFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockstunFrames,
-                hitstunFrames, damageValue, stunValue);
+                hitstunFrames, damageValue, stunValue, description);
+    }
+
+    private static String parseDescription(JsonObject moveJson) {
+        String description = null;
+        if (moveJson.has("descriptionID")) {
+            description = moveJson.get("descriptionID").getAsString();
+        }
+        return description;
     }
 }

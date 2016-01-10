@@ -88,6 +88,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/description"
+        android:background="@color/description_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textColor="@color/off_white"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"/>
+
     <View
         android:id="@+id/bottom_divider"
         android:layout_width="match_parent"

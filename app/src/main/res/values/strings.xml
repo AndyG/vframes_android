@@ -128,6 +128,9 @@
     <string name="rashid_vskill_rollkick_pretext">(During Rolling Assault)</string>
     <string name="rashid_whirlwind_shot_description">HP and EX versions cancel into V-Skill and affect Rashid\'s trajectory.</string>
 
+    <!-- Rashid Frame Data -->
+    <string name="rashid_eagle_spike_on_block_description">Advantage on block based on a hit at opponent\'s feet.</string>
+
     <!-- Nash Movelist -->
     <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second Projectile</string>
     <string name="nash_vskill_description">A chop attack which can absorb a projectile, building V-Meter.</string>

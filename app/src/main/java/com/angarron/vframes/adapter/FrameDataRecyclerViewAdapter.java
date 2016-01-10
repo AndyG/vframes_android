@@ -4,12 +4,14 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
+import com.angarron.vframes.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -169,6 +171,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         private TextView recoveryFrames;
         private TextView blockAdvantage;
         private TextView hitAdvantage;
+        private TextView description;
 
         private FrameDataItemViewHolder(View v) {
             super(v);
@@ -181,6 +184,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
             blockAdvantage = (TextView) v.findViewById(R.id.block_advantage_textview);
             hitAdvantage = (TextView) v.findViewById(R.id.hit_advantage_textview);
+
+            description = (TextView) v.findViewById(R.id.description);
         }
 
         private void setupView(IFrameDataEntry frameDataEntry, boolean shade) {
@@ -192,6 +197,13 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
             blockAdvantage.setText(getDisplayValue(frameDataEntry.getBlockAdvantage()));
             hitAdvantage.setText(getDisplayValue(frameDataEntry.getHitAdvantage()));
+
+            if (!TextUtils.isEmpty(frameDataEntry.getDescriptionId())) {
+                description.setText(StringResolver.getStringId(frameDataEntry.getDescriptionId()));
+                description.setVisibility(View.VISIBLE);
+            } else {
+                description.setVisibility(View.GONE);
+            }
 
             if (shade) {
                 rowContainer.setBackgroundColor(ContextCompat.getColor(context, R.color.frame_data_row_background_shaded));

@@ -15,9 +15,11 @@ public class TypicalFrameDataEntry implements IFrameDataEntry {
     private int damageValue;
     private int stunValue;
 
+    private String descriptionId;
+
     public TypicalFrameDataEntry(String name, MoveType moveType, int startupFrames,
                                  int activeFrames, int recoveryFrames, int blockstunFrames, int hitstunFrames,
-                                 int damageValue, int stunValue) {
+                                 int damageValue, int stunValue, String descriptionId) {
 
         this.name = name;
         this.moveType = moveType;
@@ -31,6 +33,8 @@ public class TypicalFrameDataEntry implements IFrameDataEntry {
 
         this.damageValue = damageValue;
         this.stunValue = stunValue;
+
+        this.descriptionId = descriptionId;
     }
 
     @Override
@@ -76,6 +80,11 @@ public class TypicalFrameDataEntry implements IFrameDataEntry {
     @Override
     public int getStunValue() {
         return stunValue;
+    }
+
+    @Override
+    public String getDescriptionId() {
+        return descriptionId;
     }
 
     public int getBlockstunFrames() {

@@ -111,6 +111,9 @@ public class StringResolver {
         stringIdMap.put("id_rashid_vskill_rollkick_pretext", R.string.rashid_vskill_rollkick_pretext);
         stringIdMap.put("id_rashid_whirlwind_shot_description", R.string.rashid_whirlwind_shot_description);
 
+        //Rashid Frame Data
+        stringIdMap.put("id_rashid_eagle_spike_on_block_description", R.string.rashid_eagle_spike_on_block_description);
+
         //Nash Movelist
         stringIdMap.put("id_nash_press_for_second_boom", R.string.nash_press_for_second_boom);
         stringIdMap.put("id_nash_vskill_description", R.string.nash_vskill_description);
