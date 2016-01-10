@@ -1,6 +1,9 @@
 package com.angarron.vframes.adapter;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +66,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         } else if (holder instanceof HeaderItemViewHolder) {
             HeaderItemViewHolder headerItemViewHolder = (HeaderItemViewHolder) holder;
             MoveCategory moveCategory = (MoveCategory) displayList.get(position);
-            headerItemViewHolder.label.setText(getHeaderString(moveCategory));
+            headerItemViewHolder.setupHeader(getHeaderString(moveCategory));
         }
     }
 
@@ -86,7 +89,18 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private void setupFrameDataItemViewHolder(FrameDataItemViewHolder holder, int position) {
         IFrameDataEntry frameDataEntry = (IFrameDataEntry) displayList.get(position);
-        holder.setupView(frameDataEntry);
+        int distanceFromHeader = findDistanceFromHeader(position);
+        boolean shouldShade = (distanceFromHeader % 2 == 1);
+        holder.setupView(frameDataEntry, shouldShade);
+    }
+
+    private int findDistanceFromHeader(int position) {
+        int distanceFromHeader = 0;
+        while(getItemViewType(position) != VIEW_TYPE_HEADER) {
+            position--;
+            distanceFromHeader++;
+        }
+        return distanceFromHeader;
     }
 
     private void setupDisplayList(Map<MoveCategory, List<IFrameDataEntry>> frameData) {
@@ -125,17 +139,26 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private class HeaderItemViewHolder extends RecyclerView.ViewHolder {
 
+        private View rowContainer;
         private TextView label;
 
-        public HeaderItemViewHolder(View v) {
+        private HeaderItemViewHolder(View v) {
             super(v);
+            rowContainer = v;
             label = (TextView) v.findViewById(R.id.label);
+        }
+
+        private void setupHeader(String headerText) {
+            label.setText(headerText);
+            rowContainer.setBackgroundColor(Color.TRANSPARENT);
         }
     }
 
     private class FrameDataItemViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView moveLabel;
+        private View rowContainer;
+
+        private TextView moveName;
         private TextView startupFrames;
         private TextView activeFrames;
         private TextView recoveryFrames;
@@ -146,7 +169,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
         private FrameDataItemViewHolder(View v) {
             super(v);
-            moveLabel = (TextView) v.findViewById(R.id.label_textview);
+            rowContainer = v;
+            moveName = (TextView) v.findViewById(R.id.name_textview);
 
             startupFrames = (TextView) v.findViewById(R.id.startup_textview);
             activeFrames = (TextView) v.findViewById(R.id.active_textview);
@@ -156,8 +180,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
             hitAdvantage = (TextView) v.findViewById(R.id.hit_advantage_textview);
         }
 
-        private void setupView(IFrameDataEntry frameDataEntry) {
-            moveLabel.setText(frameDataEntry.getLabel());
+        private void setupView(IFrameDataEntry frameDataEntry, boolean shade) {
+            moveName.setText(frameDataEntry.getDisplayName());
 
             startupFrames.setText(String.valueOf(frameDataEntry.getStartupFrames()));
             activeFrames.setText(String.valueOf(frameDataEntry.getActiveFrames()));
@@ -165,6 +189,12 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
             blockAdvantage.setText(String.valueOf(frameDataEntry.getBlockAdvantage()));
             hitAdvantage.setText(String.valueOf(frameDataEntry.getHitAdvantage()));
+
+            if (shade) {
+                rowContainer.setBackgroundColor(ContextCompat.getColor(context, R.color.frame_data_row_background_shaded));
+            } else {
+                rowContainer.setBackgroundColor(Color.TRANSPARENT);
+            }
 //
 //            damageValue.setText(frameDataEntry.getDamageValue());
 //            stunValue.setText(frameDataEntry.getStunValue());

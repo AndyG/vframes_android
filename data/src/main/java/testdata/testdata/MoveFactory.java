@@ -49,7 +49,6 @@ public class MoveFactory {
         String name = RandomStringUtils.randomAlphabetic(nameLength);
 
         int labelLength = RandomUtil.getRandomInt(randomGenerator, LABEL_MIN_LENGTH, LABEL_MAX_LENGTH);
-        String label = RandomStringUtils.randomAlphabetic(labelLength);
 
         MoveType moveType = RandomUtil.getRandomEnumValue(MoveType.class, randomGenerator);
 
@@ -62,7 +61,7 @@ public class MoveFactory {
         int damageValue = RandomUtil.getRandomInt(randomGenerator, DAMAGE_MIN_VALUE, DAMAGE_MAX_VALUE);
         int stunValue = RandomUtil.getRandomInt(randomGenerator, STUN_MIN_VALUE, STUN_MAX_VALUE);
 
-        return new TypicalFrameDataEntry(name, label, moveType, startupFrames, activeFrames, recoveryFrames, blockstunFrames, hitstunFrames, damageValue, stunValue);
+        return new TypicalFrameDataEntry(name, moveType, startupFrames, activeFrames, recoveryFrames, blockstunFrames, hitstunFrames, damageValue, stunValue);
     }
 
     public IMoveListEntry generateMoveListMove() {

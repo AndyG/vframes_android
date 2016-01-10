@@ -68,4 +68,13 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="frame_data_header_text_style">
+        <item name="android:textColor">@color/off_white</item>
+        <item name="android:textSize">@dimen/frame_data_header_text_size</item>
+    </style>
+
+    <style name="frame_data_row_text_style">
+        <item name="android:textSize">@dimen/frame_data_row_text_size</item>
+    </style>
+
 </resources>

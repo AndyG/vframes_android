@@ -1,6 +1,9 @@
 package data.model.move;
 
-public class TypicalFrameDataEntry extends BaseDisplayableMove {
+public class TypicalFrameDataEntry implements IFrameDataEntry {
+
+    private String name;
+    private MoveType moveType;
 
     private int startupFrames;
     private int activeFrames;
@@ -12,11 +15,12 @@ public class TypicalFrameDataEntry extends BaseDisplayableMove {
     private int damageValue;
     private int stunValue;
 
-    public TypicalFrameDataEntry(String name, String label, MoveType moveType, int startupFrames,
+    public TypicalFrameDataEntry(String name, MoveType moveType, int startupFrames,
                                  int activeFrames, int recoveryFrames, int blockstunFrames, int hitstunFrames,
                                  int damageValue, int stunValue) {
 
-        super(name, label, moveType);
+        this.name = name;
+        this.moveType = moveType;
 
         this.startupFrames = startupFrames;
         this.activeFrames = activeFrames;
@@ -27,6 +31,16 @@ public class TypicalFrameDataEntry extends BaseDisplayableMove {
 
         this.damageValue = damageValue;
         this.stunValue = stunValue;
+    }
+
+    @Override
+    public String getDisplayName() {
+        return name;
+    }
+
+    @Override
+    public MoveType getMoveType() {
+        return moveType;
     }
 
     @Override

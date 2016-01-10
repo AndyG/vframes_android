@@ -36,4 +36,7 @@
     <integer name="frame_data_block_weight">3</integer>
     <integer name="frame_data_hit_weight">3</integer>
 
+    <dimen name="frame_data_header_text_size">16sp</dimen>
+    <dimen name="frame_data_row_text_size">16sp</dimen>
+
 </resources>

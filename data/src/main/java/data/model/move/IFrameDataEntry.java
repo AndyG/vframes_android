@@ -4,8 +4,7 @@ public interface IFrameDataEntry {
 
     int CODE_NOT_APPLICABLE = 1001;
 
-    String getName();
-    String getLabel();
+    String getDisplayName();
     MoveType getMoveType();
 
     int getStartupFrames();

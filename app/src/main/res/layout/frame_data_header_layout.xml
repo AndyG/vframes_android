@@ -2,7 +2,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/mika_accent">
+    android:background="@color/colorPrimaryDark"
+    android:elevation="2dp">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -10,11 +11,11 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/label_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="@integer/frame_data_label_weight"
             android:gravity="center"
+            style="@style/frame_data_header_text_style"
             android:text="Move"/>
 
         <View
@@ -23,11 +24,11 @@
             android:background="@color/divider_color"/>
 
         <TextView
-            android:id="@+id/startup_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            style="@style/frame_data_header_text_style"
             android:text="S"/>
 
         <View
@@ -36,11 +37,11 @@
             android:background="@color/divider_color"/>
 
         <TextView
-            android:id="@+id/active_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            style="@style/frame_data_header_text_style"
             android:text="A"/>
 
         <View
@@ -49,11 +50,11 @@
             android:background="@color/divider_color"/>
 
         <TextView
-            android:id="@+id/recovery_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            style="@style/frame_data_header_text_style"
             android:text="R"/>
 
         <View
@@ -62,11 +63,11 @@
             android:background="@color/divider_color"/>
 
         <TextView
-            android:id="@+id/block_advantage_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:gravity="center"
+            style="@style/frame_data_header_text_style"
             android:text="On Block"/>
 
         <View
@@ -75,24 +76,13 @@
             android:background="@color/divider_color"/>
 
         <TextView
-            android:id="@+id/hit_advantage_textview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:gravity="center"
+            style="@style/frame_data_header_text_style"
             android:text="On Hit"/>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/divider_color"/>
-
     </LinearLayout>
-
-    <View
-        android:id="@+id/bottom_divider"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/divider_color"/>
 
 </LinearLayout>

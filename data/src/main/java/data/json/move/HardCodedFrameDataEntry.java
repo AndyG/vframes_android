@@ -8,8 +8,7 @@ import data.model.move.MoveType;
  */
 public class HardCodedFrameDataEntry implements IFrameDataEntry {
 
-    private String name;
-    private String label;
+    private String displayName;
     private MoveType type;
     private int startupFrames;
     private int activeFrames;
@@ -19,9 +18,8 @@ public class HardCodedFrameDataEntry implements IFrameDataEntry {
     private int damageValue;
     private int stunValue;
 
-    public HardCodedFrameDataEntry(String name, String label, MoveType type, int startupFrames, int activeFrames, int recoveryFrames, int blockAdvantage, int hitAdvantage, int damageValue, int stunValue) {
-        this.name = name;
-        this.label = label;
+    public HardCodedFrameDataEntry(String displayName, MoveType type, int startupFrames, int activeFrames, int recoveryFrames, int blockAdvantage, int hitAdvantage, int damageValue, int stunValue) {
+        this.displayName = displayName;
         this.type = type;
         this.startupFrames = startupFrames;
         this.activeFrames = activeFrames;
@@ -33,13 +31,8 @@ public class HardCodedFrameDataEntry implements IFrameDataEntry {
     }
 
     @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String getLabel() {
-        return label;
+    public String getDisplayName() {
+        return displayName;
     }
 
     @Override

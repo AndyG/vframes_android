@@ -13,8 +13,7 @@ public class FrameDataEntryJsonAdapter {
     public static JsonObject MoveToJson(IFrameDataEntry move) {
         JsonObject jsonObject = new JsonObject();
 
-        jsonObject.add("name", new JsonPrimitive(move.getName()));
-        jsonObject.add("label", new JsonPrimitive(move.getLabel()));
+        jsonObject.add("name", new JsonPrimitive(move.getDisplayName()));
 
         MoveType type = move.getMoveType();
         jsonObject.add("type", new JsonPrimitive(type.toString()));
@@ -62,7 +61,6 @@ public class FrameDataEntryJsonAdapter {
 
     private static IFrameDataEntry constructHardCodedFrameDataEntry(JsonObject moveJson) {
         String name = moveJson.get("nameID").getAsString();
-        String label = moveJson.get("label").getAsString();
         MoveType type = MoveType.TYPE_0;
 
         JsonObject moveDataJson = moveJson.getAsJsonObject("data");
@@ -77,12 +75,11 @@ public class FrameDataEntryJsonAdapter {
         int damageValue = moveDataJson.get("damage").getAsInt();
         int stunValue = moveDataJson.get("stun").getAsInt();
 
-        return new HardCodedFrameDataEntry(name, label, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, damageValue, stunValue);
+        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, damageValue, stunValue);
     }
 
     private static IFrameDataEntry constructTypicalMove(JsonObject moveJson) {
         String name = moveJson.get("nameID").getAsString();
-        String label = moveJson.get("label").getAsString();
         MoveType type = MoveType.TYPE_1;
 
         JsonObject moveDataJson = moveJson.getAsJsonObject("data");
@@ -97,7 +94,7 @@ public class FrameDataEntryJsonAdapter {
         int damageValue = moveDataJson.get("damage").getAsInt();
         int stunValue = moveDataJson.get("stun").getAsInt();
 
-        return new TypicalFrameDataEntry(name, label, type, startupFrames, activeFrames, recoveryFrames, blockstunFrames,
+        return new TypicalFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockstunFrames,
                 hitstunFrames, damageValue, stunValue);
     }
 }
