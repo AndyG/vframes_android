@@ -81,8 +81,8 @@ public class CharacterSelectActivity extends AppCompatActivity {
 
     private void showReviewRequestDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Your feedback helps us improve VFrames. Let us know what you think on the Google Play Store! \n\n(You won't see this message again)")
-                .setTitle("We want your feedback!");
+        builder.setMessage(R.string.rating_request_message)
+                .setTitle(R.string.rating_request_title);
 
         builder.setPositiveButton("Give Feedback", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
