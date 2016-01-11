@@ -84,13 +84,13 @@ public class CharacterSelectActivity extends AppCompatActivity {
         builder.setMessage(R.string.rating_request_message)
                 .setTitle(R.string.rating_request_title);
 
-        builder.setPositiveButton("Give Feedback", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.rating_request_positive_button, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the Rate button
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
             }
         });
-        builder.setNegativeButton("No Thanks", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.rating_request_negative_button, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User cancelled the dialog
             }
