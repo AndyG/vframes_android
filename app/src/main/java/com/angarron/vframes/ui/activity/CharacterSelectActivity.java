@@ -1,8 +1,13 @@
 package com.angarron.vframes.ui.activity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
@@ -20,10 +25,19 @@ import data.model.CharacterID;
 
 public class CharacterSelectActivity extends AppCompatActivity {
 
+    private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
+    private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
+    private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_select);
+
+        if(shouldShowReviewRequestDialog()) {
+            showReviewRequestDialog();
+        }
+
         verifyDataAvailable();
         setupToolbar();
         setupClickListeners();
@@ -48,6 +62,42 @@ public class CharacterSelectActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private boolean shouldShowReviewRequestDialog() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+        boolean reviewRequestSeen = sharedPreferences.getBoolean(REVIEW_REQUEST_SEEN, false);
+
+        if(appLaunchCount >= 3 && !reviewRequestSeen) {
+            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+            sharedPreferencesEditor.putBoolean(REVIEW_REQUEST_SEEN, true);
+            sharedPreferencesEditor.apply();
+            return true;
+        }
+
+        return false;
+    }
+
+    private void showReviewRequestDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.rating_request_message)
+                .setTitle(R.string.rating_request_title);
+
+        builder.setPositiveButton(R.string.rating_request_positive_button, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked the Rate button
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+            }
+        });
+        builder.setNegativeButton(R.string.rating_request_negative_button, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private void setupClickListeners() {
