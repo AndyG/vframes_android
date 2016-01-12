@@ -1552,6 +1552,425 @@
             "input": "BACK|PLUS|MP|ARROW|BACK|PLUS|MP"
           }
         ]
+      },
+      "frame_data": {
+        "normals": [
+          {
+            "nameID": "s.LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 3,
+              "hitAdvantage": 3,
+              "blockAdvantage": 2
+            }
+          },
+          {
+            "nameID": "s.MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 5,
+              "hitAdvantage": 7,
+              "blockAdvantage": -2
+            }
+          },
+          {
+            "nameID": "s.HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 7,
+              "hitAdvantage": 2,
+              "blockAdvantage": -6
+            }
+          },
+          {
+            "nameID": "s.LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 4,
+              "hitAdvantage": 1,
+              "blockAdvantage": 1
+            }
+          },
+          {
+            "nameID": "s.MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 8,
+              "hitAdvantage": 2,
+              "blockAdvantage": -3
+            }
+          },
+          {
+            "nameID": "s.HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 15,
+              "hitAdvantage": 2,
+              "blockAdvantage": -4
+            }
+          },
+          {
+            "nameID": "c.LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 3,
+              "hitAdvantage": 3,
+              "blockAdvantage": 1
+            }
+          },
+          {
+            "nameID": "c.MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 7,
+              "hitAdvantage": 1,
+              "blockAdvantage": -1
+            }
+          },
+          {
+            "nameID": "c.HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 11,
+              "hitAdvantage": -3,
+              "blockAdvantage": -5
+            }
+          },
+          {
+            "nameID": "c.LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 4,
+              "hitAdvantage": 3,
+              "blockAdvantage": 1
+            }
+          },
+          {
+            "nameID": "c.MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 7,
+              "hitAdvantage": 2,
+              "blockAdvantage": -2
+            }
+          },
+          {
+            "nameID": "c.HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 12,
+              "hitAdvantage": 1003,
+              "blockAdvantage": -12
+            }
+          },
+          {
+            "nameID": "j.LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 3
+            }
+          },
+          {
+            "nameID": "j.MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 6
+            }
+          },
+          {
+            "nameID": "j.HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 8
+            }
+          },
+          {
+            "nameID": "j.LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 4
+            }
+          },
+          {
+            "nameID": "j.MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 6
+            }
+          },
+          {
+            "nameID": "j.HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 7
+            }
+          }
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "LK > MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 4,
+              "hitAdvantage": 1,
+              "blockAdvantage": -5
+            }
+          },
+          {
+            "nameID": "d+MP (in air)",
+            "type": "type_0",
+            "data": {
+              "hitAdvantage": 1003
+            }
+          },
+          {
+            "nameID": "f+HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 10,
+              "hitAdvantage": 1003,
+              "blockAdvantage": 3
+            }
+          },
+          {
+            "nameID": "f+MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 6,
+              "hitAdvantage": 2,
+              "blockAdvantage": -2
+            }
+          },
+          {
+            "nameID": "b+MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 6,
+              "hitAdvantage": 2,
+              "blockAdvantage": -2
+            }
+          },
+          {
+            "nameID": "f+MP > MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 6,
+              "hitAdvantage": 1003
+            }
+          },
+          {
+            "nameID": "f+MP > b+MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 6,
+              "hitAdvantage": 1003
+            }
+          }
+        ],
+        "throws":[
+          {
+            "nameID": "Daydream Headlock",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 5,
+              "hitAdvantage": 1003
+            }
+          },
+          {
+            "nameID": "Dream Driver",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 5,
+              "hitAdvantage": 1003
+            }
+          },
+          {
+            "nameID": "Sell Down",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 5,
+              "hitAdvantage": 1003
+            }
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Heated Mic Performance (level 1)",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 75,
+              "hitAdvantage": 11,
+              "blockAdvantage": 4
+            }
+          }
+        ],
+        "vtrigger": [
+          {
+            "nameID": "Nadeshiko (Above)",
+            "type": "type_0",
+            "data": {
+              "recoveryFrames":74
+            }
+          },
+          {
+            "nameID": "Nadeshiko (Front)",
+            "type": "type_0",
+            "data": {
+              "recoveryFrames":80
+            }
+          },
+          {
+            "nameID": "Nadeshiko (Behind)",
+            "type": "type_0",
+            "data": {
+              "recoveryFrames":80
+            }
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Shooting Peach LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":10,
+              "hitAdvantage":1003,
+              "blockAdvantage":-7
+            }
+          },
+          {
+            "nameID": "Shooting Peach MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":13,
+              "hitAdvantage":1003,
+              "blockAdvantage":-10
+            }
+          },
+          {
+            "nameID": "Shooting Peach HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":20,
+              "hitAdvantage":1003,
+              "blockAdvantage":-11
+            }
+          },
+          {
+            "nameID": "Shooting Peach EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003,
+              "blockAdvantage":-10
+            }
+          },
+          {
+            "nameID": "Wingless Airplane LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Wingless Airplane MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Wingless Airplane HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Wingless Airplane EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Rainbow Typhoon LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Rainbow Typhoon MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Rainbow Typhoon HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Rainbow Typhoon EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Brimstone LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Brimstone MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Brimstone HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Brimstone EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          }
+        ],
+        "critical_arts": [
+          {
+            "nameID": "Peach Assault",
+            "type": "type_0",
+            "data": {
+              "startupFrames":5,
+              "hitAdvantage":1003
+            }
+          }
+        ]
       }
     },
     "rashid": {
