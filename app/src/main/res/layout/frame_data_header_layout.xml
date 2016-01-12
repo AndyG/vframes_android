@@ -6,9 +6,8 @@
     android:elevation="2dp">
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_weight="@integer/frame_data_label_weight"
         android:gravity="center"
         style="@style/frame_data_header_text_style"
         android:text="Move"/>
