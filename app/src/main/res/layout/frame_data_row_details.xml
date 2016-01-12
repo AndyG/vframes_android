@@ -7,8 +7,9 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
         <View
             android:layout_width="1dp"
@@ -82,14 +83,14 @@
 
     </LinearLayout>
 
-    <!--<TextView-->
-        <!--android:id="@+id/description"-->
-        <!--android:background="@color/description_background"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:padding="3dp"-->
-        <!--android:textColor="@color/off_white"-->
-        <!--android:textSize="15sp"-->
-        <!--android:gravity="center_horizontal"/>-->
+    <TextView
+        android:id="@+id/description"
+        android:background="@color/description_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textColor="@color/off_white"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"/>
 
 </LinearLayout>

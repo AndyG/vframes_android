@@ -202,7 +202,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
                 description.setText(StringResolver.getStringId(frameDataEntry.getDescriptionId()));
                 description.setVisibility(View.VISIBLE);
             } else {
-//                description.setVisibility(View.GONE);
+                description.setVisibility(View.GONE);
             }
 
             if (shade) {

@@ -13,7 +13,8 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             style="@style/frame_data_row_text_style"
-            android:gravity="center" />
+            android:gravity="center"
+            android:padding="3dp"/>
 
         <include layout="@layout/frame_data_row_details"
             android:layout_width="match_parent"
