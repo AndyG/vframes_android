@@ -12,16 +12,19 @@
         "specials": [
           {
             "nameID": "Kanzuki-Ryu Hokojutsu Sappo",
-            "input": "QCF|PLUS|KICK"
+            "input": "QCF|PLUS|KICK",
+            "descriptionID": "id_karin_kanzuki_ryu_hokojutsu_sappo_description"
           },
           {
             "nameID": "Tenko",
             "input": "QCF|PLUS|KICK|ARROW|PUNCH",
+            "descriptionID": "id_karin_tenko_description",
             "posttextID":"id_karin_tenko_posttext"
           },
           {
             "nameID": "Orochi",
-            "input": "QCF|PLUS|KICK|ARROW|DOWN|PLUS|PUNCH"
+            "input": "QCF|PLUS|KICK|ARROW|DOWN|PLUS|PUNCH",
+            "descriptionID": "id_karin_orochi_description"
           },
           {
             "nameID": "Mujinkyaku",
@@ -29,15 +32,18 @@
           },
           {
             "nameID": "Ressenha",
-            "input": "QCB|PLUS|PUNCH"
+            "input": "QCB|PLUS|PUNCH",
+            "descriptionID": "id_hits_overhead"
           },
           {
             "nameID": "Senha Kusabi",
-            "input": "QCB|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK"
+            "input": "QCB|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK",
+            "descriptionID": "id_hits_low"
           },
           {
             "nameID": "Senha Resshu",
-            "input": "QCB|PLUS|PUNCH|ARROW|UP|PLUS|KICK"
+            "input": "QCB|PLUS|PUNCH|ARROW|UP|PLUS|KICK",
+            "descriptionID": "id_karin_senha_resshu_description"
           }
         ],
         "vtrigger": [
@@ -127,11 +133,13 @@
         "specials": [
           {
             "nameID": "Yoga Fire",
-            "input": "QCF|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_dhalsim_yoga_fire_description"
           },
           {
             "nameID": "Yoga Flame",
-            "input": "HCB|PLUS|PUNCH"
+            "input": "HCB|PLUS|PUNCH",
+            "descriptionID": "id_dhalsim_yoga_flame_description"
           },
           {
             "nameID": "Yoga Gale",
@@ -140,7 +148,8 @@
           },
           {
             "nameID": "Yoga Teleport",
-            "input": "SRK|OR|SRK_BACK|PLUS|ALL_PUNCHES",
+            "input": "SRK|OR|SRK_BACK|PLUS|ALL_PUNCHES|OR|ALL_KICKS",
+            "descriptionID": "id_dhalsim_yoga_teleport_description",
             "posttextID":"id_can_be_done_in_air"
           }          
         ],
@@ -214,7 +223,8 @@
         "specials": [
           {
             "nameID": "Flying Barcelona Attack",
-            "input": "SRK|OR|SRK_BACK|PLUS|KICK"
+            "input": "SRK|OR|SRK_BACK|PLUS|KICK",
+            "descriptionID": "id_claw_flying_barcelona_attack_description"
           },
           {
             "nameID": "Izuna Drop",
@@ -225,6 +235,7 @@
             "nameID": "Grand Izuna Drop",
             "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
+            "descriptionID": "id_command_grab",
             "posttextID":"id_claw_claw_off_only"
           },
           {
@@ -276,7 +287,8 @@
           {
             "nameID": "Matador Turn",
             "input": "MP|PLUS|MK",
-            "pretextID":"id_hold_buttons_to_attack"
+            "pretextID":"id_hold_buttons_to_attack",
+            "descriptionID": "id_claw_vskill_description"
           }
         ],        
         "throws": [
@@ -335,20 +347,24 @@
         "specials": [
           {
             "nameID": "Spiral Arrow",
-            "input": "QCF|PLUS|KICK"
+            "input": "QCF|PLUS|KICK",
+            "descriptionID": "id_cammy_spiral_arrow_description"
           },
           {
             "nameID": "Cannon Spike",
-            "input": "SRK|PLUS|KICK"
+            "input": "SRK|PLUS|KICK",
+            "descriptionID": "id_cammy_cannon_spike_description"
           },
           {
             "nameID": "Cannon Strike",
             "input": "QCB|PLUS|KICK",
-            "pretextID":"id_during_forward_jump"
+            "pretextID":"id_during_forward_jump",
+            "descriptionID": "id_cammy_cannon_strike_description"
           },
           {
             "nameID": "Hooligan Combination",
-            "input": "HCF|PLUS|PUNCH"
+            "input": "HCF|PLUS|PUNCH",
+            "descriptionID": "id_cammy_hooligan_combination_description"
           },
           {
             "nameID": "Lazer Edge Slicer",
@@ -424,13 +440,15 @@
         "critical_arts": [
           {
             "nameID": "Houyokusen",
-            "input": "QCF|QCF|PLUS|KICK"
+            "input": "QCF|QCF|PLUS|KICK",
+            "descriptionID": "id_chun_critical_art_description"
           }
         ],
         "specials": [
           {
             "nameID": "Kikoken",
-            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
+            "descriptionID": "id_chun_kikoken_description"
           },
           {
             "nameID": "Lightning Legs",
@@ -439,11 +457,13 @@
           {
             "nameID": "Airborne Lightning Legs",
             "input": "QCF|PLUS|KICK",
-            "pretextID":"id_during_forward_jump"
+            "pretextID":"id_during_forward_jump",
+            "descriptionID": "id_chun_airborne_lightning_legs_description"
           },
           {
             "nameID": "Spinning Bird Kick",
-            "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK"
+            "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK",
+            "descriptionID": "id_chun_spinning_bird_kick_description"
           }          
         ],
         "vtrigger": [
@@ -535,20 +555,24 @@
         "specials": [
           {
             "nameID": "Hadoken",
-            "input": "QCF|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_ken_hadoken_description"
           },
           {
             "nameID": "Shoryuken",
-            "input": "SRK|PLUS|PUNCH"
+            "input": "SRK|PLUS|PUNCH",
+            "descriptionID": "id_ken_shoryuken_description"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
-            "input": "QCB|PLUS|KICK"
+            "input": "QCB|PLUS|KICK",
+            "descriptionID": "id_ken_tatsu_description"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
             "input": "QCB|PLUS|KICK",
-            "pretextID":"id_during_forward_jump"
+            "pretextID":"id_during_forward_jump",
+            "descriptionID": "id_ken_airborne_tatsu_description"
           }
         ],
         "vtrigger": [
@@ -631,7 +655,8 @@
           },
           {
             "nameID": "Siberian Express",
-            "input": "HCB|PLUS|KICK"
+            "input": "HCB|PLUS|KICK",
+            "descriptionID": "id_zangief_siberian_express_description"
           },
           {
             "nameID": "Borscht Dynamite",
@@ -707,7 +732,8 @@
         "specials": [
           {
             "nameID": "Hadoken",
-            "input": "QCF|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_ryu_hadoken_description"
           },
           {
             "nameID": "Shoryuken",
@@ -716,7 +742,8 @@
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
-            "input": "QCB|PLUS|KICK"
+            "input": "QCB|PLUS|KICK",
+            "descriptionID": "id_ryu_tatsu_description"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
@@ -794,7 +821,8 @@
         "specials": [
           {
             "nameID": "Psycho Blast",
-            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
+            "descriptionID": "id_dictator_psycho_blast_description"
           },
           {
             "nameID": "Double Knee Press",
@@ -895,11 +923,13 @@
           {
             "nameID": "Thunder Clap",
             "input": "QCB|PLUS|PUNCH",
+            "descriptionID": "id_laura_thunder_clap_description",
             "posttextID":"id_laura_hold_buttons_to_power_up"
           },
           {
             "nameID": "Sunset Wheel",
-            "input": "HCB|PLUS|KICK"
+            "input": "HCB|PLUS|KICK",
+            "descriptionID": "id_command_grab"
           }
         ],
         "vtrigger": [
@@ -979,26 +1009,31 @@
         "specials": [
           {
             "nameID": "Bull Head",
-            "input": "QCF|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_birdie_bull_head_description"
           },
           {
             "nameID": "Bull Horn",
             "input": "PUNCH|OR|KICK",
+            "descriptionID": "id_birdie_bull_horn_description",
             "posttextID":"id_hold_and_release"
           },
           {
             "nameID": "Hanging Chain",
             "input": "QCF|PLUS|KICK",
+            "descriptionID": "id_birdie_hanging_chain_description",
             "posttextID":"id_birdie_hanging_chain_posttext"
           },
           {
             "nameID": "Killing Head",
             "input": "HCB|PLUS|PUNCH",
+            "descriptionID": "id_birdie_killing_head_description",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Bull Revenger",
-            "input": "HCB|PLUS|KICK"
+            "input": "HCB|PLUS|KICK",
+            "descriptionID": "id_birdie_bull_revenger_description"
           }
         ],
         "vtrigger": [
@@ -1073,11 +1108,13 @@
         "specials": [
           {
             "nameID": "Shooting Peach",
-            "input": "QCF|PLUS|PUNCH"
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_mika_shooting_peach_description"
           },
           {
             "nameID": "Wingless Airplane",
-            "input": "QCF|PLUS|KICK"
+            "input": "QCF|PLUS|KICK",
+            "descriptionID": "id_mika_wingless_airplane_description"
           },
           {
             "nameID": "Rainbow Typhoon",
@@ -1182,6 +1219,7 @@
           {
             "nameID": "Spinning Mixer",
             "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_rashid_spinning_mixer_description",
             "posttextID":"id_rashid_repeat_buttons_to_extend"
           },
           {
@@ -1278,18 +1316,21 @@
         "critical_arts": [
           {
             "nameID": "Judgment Saber",
-            "input": "QCB|QCB|PLUS|PUNCH"
+            "input": "QCB|QCB|PLUS|PUNCH",
+            "descriptionID": "id_nash_critical_art_description"
           }
         ],
         "specials": [
           {
             "nameID": "Sonic Boom",
             "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_nash_sonic_boom_description",
             "posttextID":"id_nash_press_for_second_boom"
           },
           {
             "nameID": "Sonic Scythe",
-            "input": "QCB|PLUS|KICK"
+            "input": "QCB|PLUS|KICK",
+            "descriptionID": "id_nash_sonic_scythe_description"
           },
           {
             "nameID": "Moonsault Slash",
@@ -1297,21 +1338,25 @@
           },
           {
             "nameID": "Tragedy Assault",
-            "input": "SRK|PLUS|PUNCH"
+            "input": "SRK|PLUS|PUNCH",
+            "descriptionID": "id_nash_tragedy_assault_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Sonic Move - Hide",
-            "input": "HP|PLUS|HK"
+            "input": "HP|PLUS|HK",
+            "descriptionID": "id_nash_sonic_move_hide_description"
           },
           {
             "nameID": "Sonic Move - Blitz Air",
-            "input": "BACK|PLUS|HP|PLUS|HK"
+            "input": "BACK|PLUS|HP|PLUS|HK",
+            "descriptionID": "id_nash_sonic_move_blitz_air_description"
           },
           {
             "nameID": "Sonic Move - Steel Air",
-            "input": "FORWARD|PLUS|HP|PLUS|HK"
+            "input": "FORWARD|PLUS|HP|PLUS|HK",
+            "descriptionID": "id_nash_sonic_move_steel_air_description"
           }
         ],
         "vreversal": [
@@ -1421,7 +1466,8 @@
           {
             "nameID": "Mask of Tlalli",
             "input": "HCB|PLUS|PUNCH",
-            "pretextID":"id_close_to_opponent"
+            "pretextID":"id_close_to_opponent",
+            "descriptionID": "id_necalli_mask_of_tlalli_description"
           },
           {
             "nameID": "Valiant Rebellion",
