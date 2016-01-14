@@ -1,0 +1,121 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Judgment Saber",
+        "input": "QCB|QCB|PLUS|PUNCH"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Sonic Boom",
+        "input": "QCF|PLUS|PUNCH",
+        "posttextID":"id_nash_press_for_second_boom"
+      },
+      {
+        "nameID": "Sonic Scythe",
+        "input": "QCB|PLUS|KICK"
+      },
+      {
+        "nameID": "Moonsault Slash",
+        "input": "QCF|PLUS|KICK"
+      },
+      {
+        "nameID": "Tragedy Assault",
+        "input": "SRK|PLUS|PUNCH"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Sonic Move - Hide",
+        "input": "HP|PLUS|HK"
+      },
+      {
+        "nameID": "Sonic Move - Blitz Air",
+        "input": "BACK|PLUS|HP|PLUS|HK"
+      },
+      {
+        "nameID": "Sonic Move - Steel Air",
+        "input": "FORWARD|PLUS|HP|PLUS|HK"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Sonic Move - Avoid",
+        "input": "FORWARD|PLUS|ALL_PUNCHES",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Bullet Clear",
+        "input": "MP|PLUS|MK",
+        "descriptionID":"id_nash_vskill_description"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Dragon Suplex",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Target Down",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Air Jack",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_during_jump"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Knee Bazooka",
+        "input": "FORWARD|PLUS|LK"
+      },
+      {
+        "nameID": "Jumping Sobat",
+        "input": "FORWARD|PLUS|MK"
+      },
+      {
+        "nameID": "Chopping Assault",
+        "input": "FORWARD|PLUS|MP",
+        "descriptionID":"id_hits_overhead"
+      },
+      {
+        "nameID": "Step Kick",
+        "input": "FORWARD|PLUS|HK"
+      },
+      {
+        "nameID": "Spinning Back Knuckle",
+        "input": "FORWARD|PLUS|HP"
+      },
+      {
+        "nameID": "Side Knee Attack",
+        "input": "BACK|PLUS|MK"
+      },
+      {
+        "nameID": "Rapid Punch",
+        "input": "LP|ARROW|MP"
+      },
+      {
+        "nameID": "Rapid Kick",
+        "input": "LK|ARROW|MK"
+      },
+      {
+        "nameID": "Wind Shear",
+        "input": "MP|ARROW|LK|ARROW|HP"
+      },
+      {
+        "nameID": "Down Burst",
+        "input": "DOWN|PLUS|MP|ARROW|FORWARD|PLUS|MP"
+      },
+      {
+        "nameID": "Raptor Combination",
+        "input": "MK|ARROW|HK|ARROW|MK"
+      }
+    ]
+  }
+}

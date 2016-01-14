@@ -1,0 +1,88 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Yoga Sunburst",
+        "input": "QCF|QCF|PLUS|PUNCH",
+        "posttextID":"id_dhalsim_critical_art_posttext"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Yoga Fire",
+        "input": "QCF|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Yoga Flame",
+        "input": "HCB|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Yoga Gale",
+        "input": "HCB|PLUS|PUNCH",
+        "pretextID":"id_during_vertical_or_forward_jump"
+      },
+      {
+        "nameID": "Yoga Teleport",
+        "input": "SRK|OR|SRK_BACK|PLUS|ALL_PUNCHES",
+        "posttextID":"id_can_be_done_in_air"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Yoga Burner",
+        "input": "HP|PLUS|HK",
+        "descriptionID":"id_dhalsim_vtrigger_description"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Yoga Mala",
+        "input": "FORWARD|PLUS|ALL_PUNCHES",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Yoga Float",
+        "input": "MP|PLUS|MK",
+        "descriptionID":"id_dhalsim_vskill_description"
+      },
+      {
+        "nameID": "Yoga Float (Airborne)",
+        "input": "MP|PLUS|MK",
+        "pretextID":"id_during_jump"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Yoga Rocket",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Yoga Hoop",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Drill Kick",
+        "input": "DOWN|PLUS|KICK",
+        "pretextID":"id_during_jump"
+      },
+      {
+        "nameID": "Yoga Anvil",
+        "input": "BACK|PLUS|HP"
+      },
+      {
+        "nameID": "Yoga Upper",
+        "input": "BACK|PLUS|MP"
+      },
+      {
+        "nameID": "Divine Kick",
+        "input": "BACK|PLUS|MK"
+      }
+    ]
+  }
+}

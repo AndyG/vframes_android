@@ -1,0 +1,86 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Ceremony of Honor",
+        "input": "QCF|QCF|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Soul Offering",
+        "input": "QCF|QCF|PLUS|PUNCH",
+        "pretextID":"id_during_vtrigger"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "The Disc's Guidance",
+        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
+        "descriptionID":"id_necalli_disc_guidance_description"
+      },
+      {
+        "nameID": "Raging Light",
+        "input": "SRK|PLUS|PUNCH",
+        "descriptionID":"id_necalli_raging_light_description"
+      },
+      {
+        "nameID": "Mask of Tlalli",
+        "input": "HCB|PLUS|PUNCH",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Valiant Rebellion",
+        "input": "QCF|PLUS|KICK"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Torrent of Power",
+        "input": "HP|PLUS|HK",
+        "descriptionID":"id_necalli_vtrigger_description"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "The Calling",
+        "input": "FORWARD|PLUS|ALL_PUNCHES",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Culminated Power",
+        "input": "MP|PLUS|MK",
+        "posttextID":"id_necalli_vskill_control_distance",
+        "descriptionID":"id_necalli_vskill_description"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Soul Sealer",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Soul Discriminator",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Opening Dagger",
+        "input": "DOWN_FORWARD|PLUS|HP",
+        "descriptionID":"id_necalli_opening_dagger_description"
+      },
+      {
+        "nameID": "Road of the Sun",
+        "input": "DOWN|PLUS|HK",
+        "pretextID":"id_during_forward_jump"
+      },
+      {
+        "nameID": "Sacrificial Altar",
+        "input": "MK|ARROW|HK|ARROW|MP|PLUS|MK"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Skip to My Chain",
+        "input": "QCF|QCF|PLUS|PUNCH"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Bull Head",
+        "input": "QCF|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Bull Horn",
+        "input": "PUNCH|OR|KICK",
+        "posttextID":"id_hold_and_release"
+      },
+      {
+        "nameID": "Hanging Chain",
+        "input": "QCF|PLUS|KICK",
+        "posttextID":"id_birdie_hanging_chain_posttext"
+      },
+      {
+        "nameID": "Killing Head",
+        "input": "HCB|PLUS|PUNCH",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Bull Revenger",
+        "input": "HCB|PLUS|KICK"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Enjoy Time",
+        "input": "HP|PLUS|HK",
+        "descriptionID":"id_birdie_vtrigger_description"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Pepper Pot",
+        "input": "FORWARD|PLUS|ALL_PUNCHES",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Break Time",
+        "input": "MP|PLUS|MK"
+      },
+      {
+        "nameID": "Banana Time",
+        "input": "BACK|PLUS|MP|PLUS|MK"
+      },
+      {
+        "nameID": "Drink Time",
+        "input": "DOWN|PLUS|MP|PLUS|MK"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Bad Skull",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Bad Chain",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Bull Drop",
+        "input": "FORWARD|PLUS|HK",
+        "descriptionID":"id_hits_overhead"
+      },
+      {
+        "nameID": "Bull Charge",
+        "input": "FORWARD|PLUS|HP"
+      },
+      {
+        "nameID": "Bull Slider",
+        "input": "DOWN_FORWARD|PLUS|HP"
+      },
+      {
+        "nameID": "Bad Hammer",
+        "input": "DOWN|PLUS|HP|ARROW|HP"
+      }
+    ]
+  }
+}

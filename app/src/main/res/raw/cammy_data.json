@@ -1,0 +1,95 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Cross Stinger Assault",
+        "input": "QCF|QCF|PLUS|KICK"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Spiral Arrow",
+        "input": "QCF|PLUS|KICK"
+      },
+      {
+        "nameID": "Cannon Spike",
+        "input": "SRK|PLUS|KICK"
+      },
+      {
+        "nameID": "Cannon Strike",
+        "input": "QCB|PLUS|KICK",
+        "pretextID":"id_during_forward_jump"
+      },
+      {
+        "nameID": "Hooligan Combination",
+        "input": "HCF|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Lazer Edge Slicer",
+        "input": "NO_INPUT",
+        "pretextID":"id_during_hooligan_combination"
+      },
+      {
+        "nameID": "Fatal Leg Twister",
+        "input": "HCF|PLUS|PUNCH|ARROW|LP|PLUS|LK",
+        "pretextID":"id_close_to_grounded_opponent"
+      },
+      {
+        "nameID": "Cross Scissors Pressure",
+        "input": "HCF|PLUS|PUNCH|ARROW|LP|PLUS|LK",
+        "pretextID":"id_close_to_airborne_opponent"
+      },
+      {
+        "nameID": "Cannon Strike",
+        "input": "HCF|PLUS|PUNCH|ARROW|KICK"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Delta Drive",
+        "input": "HP|PLUS|HK",
+        "descriptionID":"id_cammy_vtrigger_description"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Strike Back",
+        "input": "FORWARD|PLUS|ALL_KICKS",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Axel Spin Knuckle",
+        "input": "MP|PLUS|MK",
+        "descriptionID":"id_cammy_vskill_description"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Gyro Clipper",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Delta Through",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Knee Bullet",
+        "input": "FORWARD|PLUS|HK"
+      },
+      {
+        "nameID": "Lift Upper",
+        "input": "BACK|PLUS|MP"
+      },
+      {
+        "nameID": "Lift Combination",
+        "input": "BACK|PLUS|HP|ARROW|HK"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Peach Assault",
+        "input": "QCB|QCB|PLUS|PUNCH"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Shooting Peach",
+        "input": "QCF|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Wingless Airplane",
+        "input": "QCF|PLUS|KICK"
+      },
+      {
+        "nameID": "Rainbow Typhoon",
+        "input": "HCB|PLUS|PUNCH",
+        "pretextID":"id_close_to_opponent",
+        "descriptionID":"id_mika_typhoon_description"
+      },
+      {
+        "nameID": "Brimstone",
+        "input": "HCB|PLUS|KICK",
+        "pretextID":"id_close_to_opponent",
+        "descriptionID":"id_mika_brimstone_description"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Nadeshiko (Above)",
+        "input": "HP|PLUS|HK",
+        "posttextID":"id_mika_vtrigger_posttext"
+      },
+      {
+        "nameID": "Nadeshiko (Front)",
+        "input": "BACK|PLUS|HP|PLUS|HK",
+        "posttextID":"id_mika_vtrigger_posttext"
+      },
+      {
+        "nameID": "Nadeshiko (Behind)",
+        "input": "FORWARD|PLUS|HP|PLUS|HK",
+        "posttextID":"id_mika_vtrigger_posttext"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Peach Gator",
+        "input": "FORWARD|PLUS|ALL_KICKS",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Mic Performance",
+        "input": "MP|PLUS|MK",
+        "posttextID":"id_mika_vskill_posttext",
+        "descriptionID":"id_mika_vskill_description"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Daydream Headlock",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Dream Driver",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_crouching_opponent"
+      },
+      {
+        "nameID": "Sell Down",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Stomp Chop",
+        "input": "LK|ARROW|MP"
+      },
+      {
+        "nameID": "Divebomb",
+        "input": "DOWN|PLUS|MP",
+        "pretextID":"id_during_forward_jump"
+      },
+      {
+        "nameID": "Lady Mika",
+        "input": "FORWARD|PLUS|HP"
+      },
+      {
+        "nameID": "Passion Press",
+        "input": "BACK|OR|FORWARD|PLUS|MP"
+      },
+      {
+        "nameID": "Passion Rope Throw (Forward)",
+        "input": "FORWARD|PLUS|MP|ARROW|FORWARD|PLUS|MP"
+      },
+      {
+        "nameID": "Passion Rope Throw (Backward)",
+        "input": "BACK|PLUS|MP|ARROW|BACK|PLUS|MP"
+      }
+    ]
+  }
+}

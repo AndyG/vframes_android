@@ -1,0 +1,18 @@
+{
+  "move_list": {
+    "vskill": [
+      {
+        "nameID": "Nishodoku",
+        "input": "MP|PLUS|MK",
+        "descriptionID":"id_fang_vskill_description"
+      }
+    ],
+    "critical_arts": [
+      {
+        "nameID": "Flappy Bird?",
+        "input": "NO_INPUT",
+        "descriptionID":"id_fang_critical_art_description"
+      }
+    ]
+  }
+}

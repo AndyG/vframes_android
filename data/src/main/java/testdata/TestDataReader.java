@@ -25,7 +25,6 @@ public class TestDataReader {
         JsonObject jsonData = parser.parse(fileData).getAsJsonObject();
 
         IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(jsonData);
-        System.out.println("success loading data model version: " + dataModel.getVersion().toString());
         System.out.println("loaded " + dataModel.getCharactersModel().getCharacters().size() + " characters.");
     }
 

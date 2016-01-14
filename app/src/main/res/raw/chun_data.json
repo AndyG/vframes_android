@@ -1,0 +1,105 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Houyokusen",
+        "input": "QCF|QCF|PLUS|KICK"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Kikoken",
+        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Lightning Legs",
+        "input": "QCF|PLUS|KICK"
+      },
+      {
+        "nameID": "Airborne Lightning Legs",
+        "input": "QCF|PLUS|KICK",
+        "pretextID":"id_during_forward_jump"
+      },
+      {
+        "nameID": "Spinning Bird Kick",
+        "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Renkiko",
+        "input": "HP|PLUS|HK",
+        "descriptionID":"id_chun_vtrigger_description"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Sohakkei",
+        "input": "FORWARD|PLUS|ALL_PUNCHES",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Rankyaku",
+        "input": "MP|PLUS|MK",
+        "descriptionID":"id_chun_vskill_description"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Koshuto",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Tenshin Shushu",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Ryuseiraku",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_during_jump"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Tsuitotsuken",
+        "input": "BACK|OR|FORWARD|PLUS|MP"
+      },
+      {
+        "nameID": "Hakkei",
+        "input": "BACK|PLUS|HP"
+      },
+      {
+        "nameID": "Senenshu",
+        "input": "DOWN_FORWARD|PLUS|MK",
+        "descriptionID":"id_chun_senenshu_description"
+      },
+      {
+        "nameID": "Tenkukyaku",
+        "input": "BACK|PLUS|HK"
+      },
+      {
+        "nameID": "Yokusenkyaku",
+        "input": "FORWARD|PLUS|HK"
+      },
+      {
+        "nameID": "Kakurakukyaku",
+        "input": "DOWN_FORWARD|PLUS|HK"
+      },
+      {
+        "nameID": "Yosokyaku",
+        "input": "DOWN|PLUS|MK",
+        "pretextID":"id_during_jump",
+        "posttextID":"id_up_to_three_times"
+      },
+      {
+        "nameID": "Wall Jump",
+        "input": "UP_FORWARD",
+        "pretextID":"id_during_jump_near_wall"
+      }
+    ]
+  }
+}

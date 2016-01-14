@@ -3,16 +3,9 @@ package data.model;
 public class DataModel implements IDataModel {
 
     private ICharactersModel charactersModel;
-    private IDataVersion dataVersion;
 
-    public DataModel(ICharactersModel charactersModel, IDataVersion dataVersion) {
+    public DataModel(ICharactersModel charactersModel) {
         this.charactersModel = charactersModel;
-        this.dataVersion = dataVersion;
-    }
-
-    @Override
-    public IDataVersion getVersion() {
-        return dataVersion;
     }
 
     @Override

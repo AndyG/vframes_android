@@ -1,0 +1,83 @@
+{
+  "move_list": {
+    "critical_arts": [
+      {
+        "nameID": "Ultimate Psycho Crusher",
+        "input": "QCF|QCF|PLUS|PUNCH",
+        "posttextID":"id_can_be_done_in_air"
+      }
+    ],
+    "specials": [
+      {
+        "nameID": "Psycho Blast",
+        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
+      },
+      {
+        "nameID": "Double Knee Press",
+        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|KICK"
+      },
+      {
+        "nameID": "Head Press",
+        "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK"
+      },
+      {
+        "nameID": "Somersault Skull Diver",
+        "input": "PUNCH",
+        "pretextID":"id_after_head_press"
+      },
+      {
+        "nameID": "Devil Reverse",
+        "input": "PUNCH",
+        "pretextID":"id_before_head_press"
+      },
+      {
+        "nameID": "Psycho Inferno",
+        "input": "QCB|PLUS|PUNCH"
+      }
+    ],
+    "vtrigger": [
+      {
+        "nameID": "Psycho Power",
+        "input": "HP|PLUS|HK",
+        "descriptionID":"id_dictator_vtrigger_description"
+      }
+    ],
+    "vreversal": [
+      {
+        "nameID": "Psycho Burst",
+        "input": "FORWARD|PLUS|ALL_PUNCHES",
+        "pretextID":"id_during_guard"
+      }
+    ],
+    "vskill": [
+      {
+        "nameID": "Psycho Reflect",
+        "input": "MP|PLUS|MK",
+        "descriptionID":"id_dictator_vskill_description"
+      }
+    ],
+    "throws": [
+      {
+        "nameID": "Psycho Impact",
+        "input": "LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      },
+      {
+        "nameID": "Psycho Fall",
+        "input": "BACK|PLUS|LP|PLUS|LK",
+        "pretextID":"id_close_to_opponent"
+      }
+    ],
+    "unique_attacks": [
+      {
+        "nameID": "Hell Attack",
+        "input": "MP|ARROW|MP",
+        "pretextID": "id_during_jump"
+      },
+      {
+        "nameID": "Psycho Axe",
+        "input": "DOWN_FORWARD|PLUS|HP"
+      }
+    ]
+  }
+}

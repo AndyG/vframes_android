@@ -2,7 +2,6 @@ package com.angarron.vframes.data;
 
 import android.content.res.Resources;
 import android.os.AsyncTask;
-import android.os.Looper;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -19,12 +18,31 @@ import data.json.model.VFramesDataJsonAdapter;
 //which is packaged with the app.
 public class TestDataSource implements IDataSource {
 
-    private Resources resources;
-    private int resourceId;
+    private static final String[] characterNames = new String[]{
+            "ryu",
+            "chun",
+            "dictator",
+            "birdie",
+            "nash",
+            "cammy",
+            "claw",
+            "laura",
+            "ken",
+            "necalli",
+            "rashid",
+            "mika",
+            "zangief",
+            "fang",
+            "dhalsim",
+            "karin"
+    };
 
-    public TestDataSource(Resources resources, int resourceId) {
+    private Resources resources;
+    private String packageName;
+
+    public TestDataSource(Resources resources, String packageName) {
         this.resources = resources;
-        this.resourceId = resourceId;
+        this.packageName = packageName;
     }
 
     @Override
@@ -39,20 +57,39 @@ public class TestDataSource implements IDataSource {
 
             Listener listener = (Listener) objects[0];
 
-            InputStream inputStream = resources.openRawResource(resourceId);
+            JsonObject jsonData = new JsonObject();
 
-            StringWriter writer = new StringWriter();
-            try {
-                IOUtils.copy(inputStream, writer);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            JsonObject charactersJson = readCharactersJson();
+            jsonData.add("characters", charactersJson);
 
-            String dataString = writer.toString();
-            JsonParser parser = new JsonParser();
-            JsonObject jsonData = parser.parse(dataString).getAsJsonObject();
             listener.onDataReceived(VFramesDataJsonAdapter.jsonToDataModel(jsonData));
             return null;
         }
+    }
+
+    private JsonObject readCharactersJson() {
+        JsonObject charactersJson = new JsonObject();
+
+        for (String characterName : characterNames) {
+            JsonObject characterJson = readCharacterFile(characterName);
+            charactersJson.add(characterName, characterJson);
+        }
+
+        return charactersJson;
+    }
+
+    private JsonObject readCharacterFile(String characterName) {
+        int identifier = resources.getIdentifier(characterName + "_data", "raw", packageName);
+        InputStream inputStream = resources.openRawResource(identifier);
+
+        StringWriter writer = new StringWriter();
+        try {
+            IOUtils.copy(inputStream, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String dataString = writer.toString();
+        return new JsonParser().parse(dataString).getAsJsonObject();
     }
 }
