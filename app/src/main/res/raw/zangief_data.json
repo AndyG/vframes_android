@@ -1,81 +1,82 @@
 {
   "move_list": {
-    "critical_arts": [
-      {
-        "nameID": "Bolshoi Russian Suplex",
-        "input": "SPD|SPD|PLUS|PUNCH",
-        "pretextID":"id_close_to_opponent"
+        "critical_arts": [
+          {
+            "nameID": "Bolshoi Russian Suplex",
+            "input": "SPD|SPD|PLUS|PUNCH",
+            "pretextID":"id_close_to_opponent"
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Screw Pile Driver",
+            "input": "SPD|PLUS|PUNCH",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Double Lariat",
+            "input": "ALL_PUNCHES"
+          },
+          {
+            "nameID": "Siberian Express",
+            "input": "HCB|PLUS|KICK",
+            "descriptionID": "id_zangief_siberian_express_description"
+          },
+          {
+            "nameID": "Borscht Dynamite",
+            "input": "SPD|PLUS|PUNCH",
+            "pretextID":"id_during_vertical_or_forward_jump"
+          }
+        ],
+        "vtrigger": [
+          {
+            "nameID": "Cyclone Lariat",
+            "input": "HP|PLUS|HK",
+            "posttextID":"id_hold_buttons_for_special_lariat",
+            "descriptionID":"id_zangief_vtrigger_description"
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Muscle Explosion",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "pretextID":"id_during_guard"
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Iron Muscle",
+            "input": "MP|PLUS|MK",
+            "posttextID":"id_can_move_forward_while_holding_buttons",
+            "descriptionID":"id_zangief_vskill_description"
+          }
+        ],       
+        "throws": [
+          {
+            "nameID": "Atomic Drop",
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Captured",
+            "input": "BACK|PLUS|LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          }
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "Head Butt",
+            "input": "FORWARD|PLUS|HP"
+          },
+          {
+            "nameID": "Knee Hammer",
+            "input": "FORWARD|PLUS|MK"
+          },
+          {
+            "nameID": "Flying Body Press",
+            "input": "DOWN|PLUS|HP",
+            "pretextID":"id_during_forward_jump"
+          }
+        ]
       }
-    ],
-    "specials": [
-      {
-        "nameID": "Screw Pile Driver",
-        "input": "SPD|PLUS|PUNCH",
-        "pretextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Double Lariat",
-        "input": "ALL_PUNCHES"
-      },
-      {
-        "nameID": "Siberian Express",
-        "input": "HCB|PLUS|KICK"
-      },
-      {
-        "nameID": "Borscht Dynamite",
-        "input": "SPD|PLUS|PUNCH",
-        "pretextID":"id_during_vertical_or_forward_jump"
-      }
-    ],
-    "vtrigger": [
-      {
-        "nameID": "Cyclone Lariat",
-        "input": "HP|PLUS|HK",
-        "posttextID":"id_hold_buttons_for_special_lariat",
-        "descriptionID":"id_zangief_vtrigger_description"
-      }
-    ],
-    "vreversal": [
-      {
-        "nameID": "Muscle Explosion",
-        "input": "FORWARD|PLUS|ALL_PUNCHES",
-        "pretextID":"id_during_guard"
-      }
-    ],
-    "vskill": [
-      {
-        "nameID": "Iron Muscle",
-        "input": "MP|PLUS|MK",
-        "posttextID":"id_can_move_forward_while_holding_buttons",
-        "descriptionID":"id_zangief_vskill_description"
-      }
-    ],
-    "throws": [
-      {
-        "nameID": "Atomic Drop",
-        "input": "LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Captured",
-        "input": "BACK|PLUS|LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      }
-    ],
-    "unique_attacks": [
-      {
-        "nameID": "Head Butt",
-        "input": "FORWARD|PLUS|HP"
-      },
-      {
-        "nameID": "Knee Hammer",
-        "input": "FORWARD|PLUS|MK"
-      },
-      {
-        "nameID": "Flying Body Press",
-        "input": "DOWN|PLUS|HP",
-        "pretextID":"id_during_forward_jump"
-      }
-    ]
-  }
 }

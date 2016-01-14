@@ -5,19 +5,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.angarron.vframes.BuildConfig;
-import com.angarron.vframes.R;
 import com.angarron.vframes.data.IDataSource;
-import com.angarron.vframes.data.NetworkFallbackDataSource;
 import com.angarron.vframes.data.TestDataSource;
-import com.angarron.vframes.network.VFramesRESTApi;
 import com.crashlytics.android.Crashlytics;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.logging.HttpLoggingInterceptor;
 
 import data.model.IDataModel;
 import io.fabric.sdk.android.Fabric;
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
 
 public class VFramesApplication extends Application {
 

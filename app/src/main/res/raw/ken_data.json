@@ -1,86 +1,90 @@
 {
   "move_list": {
-    "critical_arts": [
-      {
-        "nameID": "Guren Enjinkyaku",
-        "input": "QCF|QCF|PLUS|KICK"
+        "critical_arts": [
+          {
+            "nameID": "Guren Enjinkyaku",
+            "input": "QCF|QCF|PLUS|KICK"
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Hadoken",
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_ken_hadoken_description"
+          },
+          {
+            "nameID": "Shoryuken",
+            "input": "SRK|PLUS|PUNCH",
+            "descriptionID": "id_ken_shoryuken_description"
+          },
+          {
+            "nameID": "Tatsumaki Senpukyaku",
+            "input": "QCB|PLUS|KICK",
+            "descriptionID": "id_ken_tatsu_description"
+          },
+          {
+            "nameID": "Airborne Tatsumaki Senpukyaku",
+            "input": "QCB|PLUS|KICK",
+            "pretextID":"id_during_forward_jump",
+            "descriptionID": "id_ken_airborne_tatsu_description"
+          }
+        ],
+        "vtrigger": [
+          {
+            "nameID": "Heat Rush",
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_ken_vtrigger_description"
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Senpu Nataotoshi",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "pretextID":"id_during_guard"
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Quick Step",
+            "input": "MP|PLUS|MK",
+            "descriptionID":"id_ken_vskill_description"
+          }
+        ],        
+        "throws": [
+          {
+            "nameID": "Knee Bash",
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Hell Wheel",
+            "input": "BACK|PLUS|LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          }
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "Thunder Kick",
+            "input": "FORWARD|PLUS|HK",
+            "descriptionID":"id_ken_thunder_kick_description",
+            "posttextID":"id_ken_thunder_kick_posttext"
+          },
+          {
+            "nameID": "Inazuma Kick",
+            "input": "BACK|PLUS|MK"
+          },
+          {
+            "nameID": "Chin Buster",
+            "input": "BACK|PLUS|MP"
+          },
+          {
+            "nameID": "Chin Buster 2nd",
+            "input": "BACK|PLUS|MP|ARROW|HP"
+          },
+          {
+            "nameID": "Lion Breaker",
+            "input": "MK|ARROW|HK"
+          }
+        ]
       }
-    ],
-    "specials": [
-      {
-        "nameID": "Hadoken",
-        "input": "QCF|PLUS|PUNCH"
-      },
-      {
-        "nameID": "Shoryuken",
-        "input": "SRK|PLUS|PUNCH"
-      },
-      {
-        "nameID": "Tatsumaki Senpukyaku",
-        "input": "QCB|PLUS|KICK"
-      },
-      {
-        "nameID": "Airborne Tatsumaki Senpukyaku",
-        "input": "QCB|PLUS|KICK",
-        "pretextID":"id_during_forward_jump"
-      }
-    ],
-    "vtrigger": [
-      {
-        "nameID": "Heat Rush",
-        "input": "HP|PLUS|HK",
-        "descriptionID":"id_ken_vtrigger_description"
-      }
-    ],
-    "vreversal": [
-      {
-        "nameID": "Senpu Nataotoshi",
-        "input": "FORWARD|PLUS|ALL_PUNCHES",
-        "pretextID":"id_during_guard"
-      }
-    ],
-    "vskill": [
-      {
-        "nameID": "Quick Step",
-        "input": "MP|PLUS|MK",
-        "descriptionID":"id_ken_vskill_description"
-      }
-    ],
-    "throws": [
-      {
-        "nameID": "Knee Bash",
-        "input": "LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Hell Wheel",
-        "input": "BACK|PLUS|LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      }
-    ],
-    "unique_attacks": [
-      {
-        "nameID": "Thunder Kick",
-        "input": "FORWARD|PLUS|HK",
-        "descriptionID":"id_ken_thunder_kick_description",
-        "posttextID":"id_ken_thunder_kick_posttext"
-      },
-      {
-        "nameID": "Inazuma Kick",
-        "input": "BACK|PLUS|MK"
-      },
-      {
-        "nameID": "Chin Buster",
-        "input": "BACK|PLUS|MP"
-      },
-      {
-        "nameID": "Chin Buster 2nd",
-        "input": "BACK|PLUS|MP|ARROW|HP"
-      },
-      {
-        "nameID": "Lion Breaker",
-        "input": "MK|ARROW|HK"
-      }
-    ]
-  }
 }

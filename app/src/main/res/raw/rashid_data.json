@@ -1,105 +1,106 @@
 {
   "move_list": {
-    "critical_arts": [
-      {
-        "nameID": "Altair",
-        "input": "QCF|QCF|PLUS|PUNCH"
-      }
-    ],
-    "specials": [
-      {
-        "nameID": "Spinning Mixer",
-        "input": "QCF|PLUS|PUNCH",
-        "posttextID":"id_rashid_repeat_buttons_to_extend"
+        "critical_arts": [
+          {
+            "nameID": "Altair",
+            "input": "QCF|QCF|PLUS|PUNCH"
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Spinning Mixer",
+            "input": "QCF|PLUS|PUNCH",
+            "descriptionID": "id_rashid_spinning_mixer_description",
+            "posttextID":"id_rashid_repeat_buttons_to_extend"
+          },
+          {
+            "nameID": "Eagle Spike",
+            "input": "QCB|PLUS|KICK"
+          },
+          {
+            "nameID": "Airborne Eagle Spike",
+            "input": "QCB|PLUS|KICK",
+            "pretextID":"id_during_forward_jump"
+          },
+          {
+            "nameID": "Whirlwind Shot",
+            "input": "QCF|PLUS|KICK",
+            "descriptionID":"id_rashid_whirlwind_shot_description"
+          }
+        ],
+        "vtrigger": [
+          {
+            "nameID": "Ysaar",
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_rashid_vtrigger_description"
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Sliding Roll",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "pretextID":"id_during_guard"
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Front Flip",
+            "input": "MP|PLUS|MK"
+          },
+          {
+            "nameID": "Airborne Eagle Spike",
+            "pretextID":"id_rashid_vskill_divekick_pretext",
+            "input": "KICK"
+          },
+          {
+            "nameID": "Rolling Assault",
+            "input": "DOWN|PLUS|MP|PLUS|MK"
+          },
+          {
+            "nameID": "Nail Assault",
+            "pretextID":"id_rashid_vskill_rollkick_pretext",
+            "input": "KICK"
+          }
+        ],      
+        "throws": [
+          {
+            "nameID": "Rising Glider",
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Rising Sun",
+            "input": "BACK|PLUS|LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          }
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "Flap Spin",
+            "input": "FORWARD|PLUS|MP"
+          },
+          {
+            "nameID": "Beak Assault",
+            "input": "FORWARD|PLUS|HP"
+          },
+          {
+            "nameID": "Spinning Mixer",
+            "input": "FORWARD|PLUS|PUNCH",
+            "pretextID":"id_during_run",
+            "posttextID":"id_rashid_repeat_buttons_to_extend"            
+          },
+          {
+            "nameID": "Eagle Spike",
+            "input": "FORWARD|PLUS|KICK",
+            "pretextID":"id_during_run"
+          },
+          {
+            "nameID": "Wall Jump",
+            "input": "UP_FORWARD|OR|DOWN_FORWARD",
+            "pretextID":"id_during_jump_near_wall"
+          }
+        ]
       },
-      {
-        "nameID": "Eagle Spike",
-        "input": "QCB|PLUS|KICK"
-      },
-      {
-        "nameID": "Airborne Eagle Spike",
-        "input": "QCB|PLUS|KICK",
-        "pretextID":"id_during_forward_jump"
-      },
-      {
-        "nameID": "Whirlwind Shot",
-        "input": "QCF|PLUS|KICK",
-        "descriptionID":"id_rashid_whirlwind_shot_description"
-      }
-    ],
-    "vtrigger": [
-      {
-        "nameID": "Ysaar",
-        "input": "HP|PLUS|HK",
-        "descriptionID":"id_rashid_vtrigger_description"
-      }
-    ],
-    "vreversal": [
-      {
-        "nameID": "Sliding Roll",
-        "input": "FORWARD|PLUS|ALL_PUNCHES",
-        "pretextID":"id_during_guard"
-      }
-    ],
-    "vskill": [
-      {
-        "nameID": "Front Flip",
-        "input": "MP|PLUS|MK"
-      },
-      {
-        "nameID": "Airborne Eagle Spike",
-        "pretextID":"id_rashid_vskill_divekick_pretext",
-        "input": "KICK"
-      },
-      {
-        "nameID": "Rolling Assault",
-        "input": "DOWN|PLUS|MP|PLUS|MK"
-      },
-      {
-        "nameID": "Nail Assault",
-        "pretextID":"id_rashid_vskill_rollkick_pretext",
-        "input": "KICK"
-      }
-    ],
-    "throws": [
-      {
-        "nameID": "Rising Glider",
-        "input": "LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Rising Sun",
-        "input": "BACK|PLUS|LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      }
-    ],
-    "unique_attacks": [
-      {
-        "nameID": "Flap Spin",
-        "input": "FORWARD|PLUS|MP"
-      },
-      {
-        "nameID": "Beak Assault",
-        "input": "FORWARD|PLUS|HP"
-      },
-      {
-        "nameID": "Spinning Mixer",
-        "input": "FORWARD|PLUS|PUNCH",
-        "pretextID":"id_during_run",
-        "posttextID":"id_rashid_repeat_buttons_to_extend"
-      },
-      {
-        "nameID": "Eagle Spike",
-        "input": "FORWARD|PLUS|KICK",
-        "pretextID":"id_during_run"
-      },
-      {
-        "nameID": "Wall Jump",
-        "input": "UP_FORWARD|OR|DOWN_FORWARD",
-        "pretextID":"id_during_jump_near_wall"
-      }
-    ]
-  },
   "frame_data": {
     "normals": [
       {

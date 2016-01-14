@@ -1,121 +1,124 @@
 {
   "move_list": {
-    "critical_arts": [
-      {
-        "nameID": "Bloody Rain",
-        "input": "QCB|QCB|OR|QCF|QCF|PLUS|PUNCH"
+        "critical_arts": [
+          {
+            "nameID": "Bloody Rain",
+            "input": "QCB|QCB|OR|QCF|QCF|PLUS|PUNCH"
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Flying Barcelona Attack",
+            "input": "SRK|OR|SRK_BACK|PLUS|KICK",
+            "descriptionID": "id_claw_flying_barcelona_attack_description"
+          },
+          {
+            "nameID": "Izuna Drop",
+            "input": "SRK|OR|SRK_BACK|PLUS|KICK|ARROW|LP|PLUS|LK",
+            "posttextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Grand Izuna Drop",
+            "input": "HCB|PLUS|PUNCH",
+            "pretextID":"id_close_to_opponent",
+            "descriptionID": "id_command_grab",
+            "posttextID":"id_claw_claw_off_only"
+          },
+          {
+            "nameID": "Crimson Terror",
+            "input": "QCF|PLUS|KICK"
+          },
+          {
+            "nameID": "Aurora Spin Edge",
+            "input": "QCB|PLUS|PUNCH",
+            "posttextID":"id_claw_claw_on_only"
+          },
+          {
+            "nameID": "Switch Claw",
+            "input": "QCF|PLUS|PUNCH",
+            "posttextID":"id_claw_switch"
+          }
+        ],
+        "vtrigger": [
+          {
+            "nameID": "Bloody Kiss - Torero",
+            "input": "HP|PLUS|HK",
+            "descriptionID": "id_claw_vtrigger_torero_description"
+          },
+          {
+            "nameID": "Bloody Kiss - Rojo",
+            "input": "DOWN|PLUS|HP|PLUS|HK",
+            "descriptionID": "id_claw_vtrigger_rojo_description"
+          },
+          {
+            "nameID": "Bloody Kiss - Azul",
+            "input": "HP|PLUS|HK",
+            "pretextID":"id_during_forward_jump",
+            "descriptionID": "id_claw_vtrigger_azul_description"
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Backslash",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "pretextID":"id_during_guard"
+          },
+          {
+            "nameID": "Short Backslash",
+            "input": "FORWARD|PLUS|ALL_KICKS",
+            "pretextID":"id_during_guard"
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Matador Turn",
+            "input": "MP|PLUS|MK",
+            "pretextID":"id_hold_buttons_to_attack",
+            "descriptionID": "id_claw_vskill_description"
+          }
+        ],        
+        "throws": [
+          {
+            "nameID": "Rainbow Suplex",
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Crescent Line",
+            "input": "BACK|PLUS|LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Stardust Shot",
+            "input": "LP|PLUS|LK",
+            "pretextID": "id_during_jump"}
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "Mercury Shard",
+            "input": "FORWARD|PLUS|MK",
+            "descriptionID":"id_hits_overhead"
+          },
+          {
+            "nameID": "Buster Claw",
+            "input": "DOWN_FORWARD|PLUS|HP",
+            "posttextID":"id_claw_claw_on_only"
+          },
+          {
+            "nameID": "Matador Flash",
+            "input": "HP|ARROW|HP|ARROW|MP|PLUS|MK",
+            "posttextID":"id_claw_claw_on_only"
+          },
+          {
+            "nameID": "Matador Blitz",
+            "input": "MP|ARROW|HK|ARROW|MP|PLUS|MK",
+            "posttextID":"id_claw_claw_off_only"
+          },
+          {
+            "nameID": "Wall Jump",
+            "input": "UP_FORWARD",
+            "pretextID":"id_during_jump_near_wall"
+          }
+        ]
       }
-    ],
-    "specials": [
-      {
-        "nameID": "Flying Barcelona Attack",
-        "input": "SRK|OR|SRK_BACK|PLUS|KICK"
-      },
-      {
-        "nameID": "Izuna Drop",
-        "input": "SRK|OR|SRK_BACK|PLUS|KICK|ARROW|LP|PLUS|LK",
-        "posttextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Grand Izuna Drop",
-        "input": "HCB|PLUS|PUNCH",
-        "pretextID":"id_close_to_opponent",
-        "posttextID":"id_claw_claw_off_only"
-      },
-      {
-        "nameID": "Crimson Terror",
-        "input": "QCF|PLUS|KICK"
-      },
-      {
-        "nameID": "Aurora Spin Edge",
-        "input": "QCB|PLUS|PUNCH",
-        "posttextID":"id_claw_claw_on_only"
-      },
-      {
-        "nameID": "Switch Claw",
-        "input": "QCF|PLUS|PUNCH",
-        "posttextID":"id_claw_switch"
-      }
-    ],
-    "vtrigger": [
-      {
-        "nameID": "Bloody Kiss - Torero",
-        "input": "HP|PLUS|HK",
-        "descriptionID": "id_claw_vtrigger_torero_description"
-      },
-      {
-        "nameID": "Bloody Kiss - Rojo",
-        "input": "DOWN|PLUS|HP|PLUS|HK",
-        "descriptionID": "id_claw_vtrigger_rojo_description"
-      },
-      {
-        "nameID": "Bloody Kiss - Azul",
-        "input": "HP|PLUS|HK",
-        "pretextID":"id_during_forward_jump",
-        "descriptionID": "id_claw_vtrigger_azul_description"
-      }
-    ],
-    "vreversal": [
-      {
-        "nameID": "Backslash",
-        "input": "FORWARD|PLUS|ALL_PUNCHES",
-        "pretextID":"id_during_guard"
-      },
-      {
-        "nameID": "Short Backslash",
-        "input": "FORWARD|PLUS|ALL_KICKS",
-        "pretextID":"id_during_guard"
-      }
-    ],
-    "vskill": [
-      {
-        "nameID": "Matador Turn",
-        "input": "MP|PLUS|MK",
-        "pretextID":"id_hold_buttons_to_attack"
-      }
-    ],
-    "throws": [
-      {
-        "nameID": "Rainbow Suplex",
-        "input": "LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Crescent Line",
-        "input": "BACK|PLUS|LP|PLUS|LK",
-        "pretextID":"id_close_to_opponent"
-      },
-      {
-        "nameID": "Stardust Shot",
-        "input": "LP|PLUS|LK",
-        "pretextID": "id_during_jump"}
-    ],
-    "unique_attacks": [
-      {
-        "nameID": "Mercury Shard",
-        "input": "FORWARD|PLUS|MK",
-        "descriptionID":"id_hits_overhead"
-      },
-      {
-        "nameID": "Buster Claw",
-        "input": "DOWN_FORWARD|PLUS|HP",
-        "posttextID":"id_claw_claw_on_only"
-      },
-      {
-        "nameID": "Matador Flash",
-        "input": "HP|ARROW|HP|ARROW|MP|PLUS|MK",
-        "posttextID":"id_claw_claw_on_only"
-      },
-      {
-        "nameID": "Matador Blitz",
-        "input": "MP|ARROW|HK|ARROW|MP|PLUS|MK",
-        "posttextID":"id_claw_claw_off_only"
-      },
-      {
-        "nameID": "Wall Jump",
-        "input": "UP_FORWARD",
-        "pretextID":"id_during_jump_near_wall"
-      }
-    ]
-  }
 }

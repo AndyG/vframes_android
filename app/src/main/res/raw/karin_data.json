@@ -1,114 +1,120 @@
 {
    "move_list": {
-     "critical_arts": [
-       {
-         "nameID": "Kanzuki-Ryu Hadorokushiki Hasha No Kata",
-         "input": "QCF|QCF|PLUS|PUNCH"
-       }
-     ],
-     "specials": [
-       {
-         "nameID": "Kanzuki-Ryu Hokojutsu Sappo",
-         "input": "QCF|PLUS|KICK"
-       },
-       {
-         "nameID": "Tenko",
-         "input": "QCF|PLUS|KICK|ARROW|PUNCH",
-         "posttextID":"id_karin_tenko_posttext"
-       },
-       {
-         "nameID": "Orochi",
-         "input": "QCF|PLUS|KICK|ARROW|DOWN|PLUS|PUNCH"
-       },
-       {
-         "nameID": "Mujinkyaku",
-         "input": "QCB|PLUS|KICK"
-       },
-       {
-         "nameID": "Ressenha",
-         "input": "QCB|PLUS|PUNCH"
-       },
-       {
-         "nameID": "Senha Kusabi",
-         "input": "QCB|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK"
-       },
-       {
-         "nameID": "Senha Resshu",
-         "input": "QCB|PLUS|PUNCH|ARROW|UP|PLUS|KICK"
-       }
-     ],
-     "vtrigger": [
-       {
-         "nameID": "Kanzuki-Ryu Guren No Kata",
-         "input": "HP|PLUS|HK",
-         "descriptionID":"id_karin_vtrigger_description"
-       },
-       {
-         "nameID": "Guren Ken",
-         "input": "QCF|PLUS|PUNCH"
-       },
-       {
-         "nameID": "Guren Hosho",
-         "input": "QCF|PLUS|PUNCH|ARROW|PUNCH"
-       },
-       {
-         "nameID": "Guren Senha",
-         "input": "QCF|PLUS|PUNCH|ARROW|UP|PLUS|PUNCH"
-       },
-       {
-         "nameID": "Guren Chochu",
-         "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH"
-       },
-       {
-         "nameID": "Guren Hochu",
-         "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH"
-       },
-       {
-         "nameID": "Guren Resshu",
-         "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|UP|PLUS|KICK"
-       },
-       {
-         "nameID": "Guren Kusabi",
-         "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK"
-       },
-       {
-         "nameID": "Guren Kyoho",
-         "input": "QCF|PLUS|PUNCH|ARROW|KICK"
-       }
-     ],
-     "vreversal": [
-       {
-         "nameID": "Yashagaeshi",
-         "input": "FORWARD|PLUS|ALL_PUNCHES",
-         "pretextID":"id_during_guard"
-       }
-     ],
-     "vskill": [
-       {
-         "nameID": "Meioken",
-         "input": "MP|PLUS|MK",
-         "posttextID":"id_karin_meioken_posttext",
-         "descriptionID":"id_karin_vskill_description"
-       }
-     ],
-     "throws": [
-       {
-         "nameID": "Hajotsui",
-         "input": "LP|PLUS|LK",
-         "pretextID":"id_close_to_opponent"
-       },
-       {
-         "nameID": "Arakuma Inashi",
-         "input": "BACK|PLUS|LP|PLUS|LK",
-         "pretextID":"id_close_to_opponent"
-       }
-     ],
-     "unique_attacks": [
-       {
-         "nameID": "Tsumujigari",
-         "input": "FORWARD|PLUS|MK",
-         "descriptionID":"id_hits_overhead"
-       }
-     ]
-   }
+        "critical_arts": [
+          {
+            "nameID": "Kanzuki-Ryu Hadorokushiki Hasha No Kata",
+            "input": "QCF|QCF|PLUS|PUNCH"
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Kanzuki-Ryu Hokojutsu Sappo",
+            "input": "QCF|PLUS|KICK",
+            "descriptionID": "id_karin_kanzuki_ryu_hokojutsu_sappo_description"
+          },
+          {
+            "nameID": "Tenko",
+            "input": "QCF|PLUS|KICK|ARROW|PUNCH",
+            "descriptionID": "id_karin_tenko_description",
+            "posttextID":"id_karin_tenko_posttext"
+          },
+          {
+            "nameID": "Orochi",
+            "input": "QCF|PLUS|KICK|ARROW|DOWN|PLUS|PUNCH",
+            "descriptionID": "id_karin_orochi_description"
+          },
+          {
+            "nameID": "Mujinkyaku",
+            "input": "QCB|PLUS|KICK"
+          },
+          {
+            "nameID": "Ressenha",
+            "input": "QCB|PLUS|PUNCH",
+            "descriptionID": "id_hits_overhead"
+          },
+          {
+            "nameID": "Senha Kusabi",
+            "input": "QCB|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK",
+            "descriptionID": "id_hits_low"
+          },
+          {
+            "nameID": "Senha Resshu",
+            "input": "QCB|PLUS|PUNCH|ARROW|UP|PLUS|KICK",
+            "descriptionID": "id_karin_senha_resshu_description"
+          }
+        ],
+        "vtrigger": [
+          {
+            "nameID": "Kanzuki-Ryu Guren No Kata",
+            "input": "HP|PLUS|HK",
+            "descriptionID":"id_karin_vtrigger_description"
+          },
+          {
+            "nameID": "Guren Ken",
+            "input": "QCF|PLUS|PUNCH"
+          },
+          {
+            "nameID": "Guren Hosho",
+            "input": "QCF|PLUS|PUNCH|ARROW|PUNCH"
+          },
+          {
+            "nameID": "Guren Senha",
+            "input": "QCF|PLUS|PUNCH|ARROW|UP|PLUS|PUNCH"
+          },
+          {
+            "nameID": "Guren Chochu",
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH"
+          },
+          {
+            "nameID": "Guren Hochu",
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH"
+          },
+          {
+            "nameID": "Guren Resshu",
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|UP|PLUS|KICK"
+          },
+          {
+            "nameID": "Guren Kusabi",
+            "input": "QCF|PLUS|PUNCH|ARROW|DOWN|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK"
+          },
+          {
+            "nameID": "Guren Kyoho",
+            "input": "QCF|PLUS|PUNCH|ARROW|KICK"
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Yashagaeshi",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "pretextID":"id_during_guard"
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Meioken",
+            "input": "MP|PLUS|MK",
+            "posttextID":"id_karin_meioken_posttext",
+            "descriptionID":"id_karin_vskill_description"
+          }
+        ],
+        "throws": [
+          {
+            "nameID": "Hajotsui",
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Arakuma Inashi",
+            "input": "BACK|PLUS|LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          }
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "Tsumujigari",
+            "input": "FORWARD|PLUS|MK",
+            "descriptionID":"id_hits_overhead"
+          }
+        ]
+      }
  }
