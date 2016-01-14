@@ -34,15 +34,23 @@ public class StringResolver {
 
         //General Descriptions
         stringIdMap.put("id_hits_overhead", R.string.hits_overhead);
+        stringIdMap.put("id_hits_low", R.string.hits_low);
+        stringIdMap.put("id_command_grab", R.string.command_grab);
 
         //Ryu Movelist
+        stringIdMap.put("id_ryu_hadoken_description", R.string.ryu_hadoken_description);
         stringIdMap.put("id_ryu_shoryuken_description", R.string.ryu_shoryuken_description);
+        stringIdMap.put("id_ryu_tatsu_description", R.string.ryu_tatsu_description);
         stringIdMap.put("id_ryu_vtrigger_description", R.string.ryu_vtrigger_description);
         stringIdMap.put("id_ryu_vskill_description", R.string.ryu_vskill_description);
 
         //Karin Movelist
         stringIdMap.put("id_karin_tenko_posttext", R.string.karin_tenko_posttext);
         stringIdMap.put("id_karin_meioken_posttext", R.string.karin_meioken_posttext);
+        stringIdMap.put("id_karin_kanzuki_ryu_hokojutsu_sappo_description", R.string.karin_kanzuki_ryu_hokojutsu_sappo_description);
+        stringIdMap.put("id_karin_tenko_description", R.string.karin_tenko_description);
+        stringIdMap.put("id_karin_orochi_description", R.string.karin_orochi_description);
+        stringIdMap.put("id_karin_senha_resshu_description", R.string.karin_senha_resshu_description);
         stringIdMap.put("id_karin_vskill_description", R.string.karin_vskill_description);
         stringIdMap.put("id_karin_vtrigger_description", R.string.karin_vtrigger_description);
 
@@ -50,6 +58,8 @@ public class StringResolver {
         stringIdMap.put("id_claw_claw_on_only", R.string.claw_claw_on_only);
         stringIdMap.put("id_claw_claw_off_only", R.string.claw_claw_off_only);
         stringIdMap.put("id_claw_switch", R.string.claw_switch);
+        stringIdMap.put("id_claw_flying_barcelona_attack_description", R.string.claw_flying_barcelona_attack_description);
+        stringIdMap.put("id_claw_vskill_description", R.string.claw_vskill_description);
         stringIdMap.put("id_claw_vtrigger_torero_description", R.string.claw_vtrigger_torero_description);
         stringIdMap.put("id_claw_vtrigger_rojo_description", R.string.claw_vtrigger_rojo_description);
         stringIdMap.put("id_claw_vtrigger_azul_description", R.string.claw_vtrigger_azul_description);
@@ -59,9 +69,16 @@ public class StringResolver {
         stringIdMap.put("id_chun_vtrigger_description", R.string.chun_vtrigger_description);
         stringIdMap.put("id_chun_vskill_description", R.string.chun_vskill_description);
         stringIdMap.put("id_chun_senenshu_description", R.string.chun_senenshu_description);
+        stringIdMap.put("id_chun_kikoken_description", R.string.chun_kikoken_description);
+        stringIdMap.put("id_chun_airborne_lightning_legs_description", R.string.chun_airborne_lightning_legs_description);
+        stringIdMap.put("id_chun_spinning_bird_kick_description", R.string.chun_spinning_bird_kick_description);
         stringIdMap.put("id_chun_critical_art_description", R.string.chun_critical_art_description);
 
         //Ken Movelist
+        stringIdMap.put("id_ken_hadoken_description", R.string.ken_hadoken_description);
+        stringIdMap.put("id_ken_shoryuken_description", R.string.ken_shoryuken_description);
+        stringIdMap.put("id_ken_tatsu_description", R.string.ken_tatsu_description);
+        stringIdMap.put("id_ken_airborne_tatsu_description", R.string.ken_airborne_tatsu_description);
         stringIdMap.put("id_ken_vtrigger_description", R.string.ken_vtrigger_description);
         stringIdMap.put("id_ken_vskill_description", R.string.ken_vskill_description);
         stringIdMap.put("id_ken_thunder_kick_posttext", R.string.ken_thunder_kick_posttext);
@@ -70,6 +87,7 @@ public class StringResolver {
         //Zangief Movelist
         stringIdMap.put("id_hold_buttons_for_special_lariat", R.string.zangief_hold_buttons_for_special_lariat);
         stringIdMap.put("id_can_move_forward_while_holding_buttons", R.string.zangief_can_move_forward_while_holding_buttons);
+        stringIdMap.put("id_zangief_siberian_express_description", R.string.zangief_siberian_express_description);
         stringIdMap.put("id_zangief_vtrigger_description", R.string.zangief_vtrigger_description);
         stringIdMap.put("id_zangief_vskill_description", R.string.zangief_vskill_description);
 
@@ -77,6 +95,7 @@ public class StringResolver {
         stringIdMap.put("id_after_head_press", R.string.dictator_after_head_press);
         stringIdMap.put("id_before_head_press", R.string.dictator_before_head_press);
         stringIdMap.put("id_psycho_reflect_hold_buttons", R.string.dictator_psycho_reflect_hold_buttons);
+        stringIdMap.put("id_dictator_psycho_blast_description", R.string.dictator_psycho_blast_description);
         stringIdMap.put("id_devil_reverse_description", R.string.dictator_devil_reverse_description);
         stringIdMap.put("id_dictator_vskill_description", R.string.dictator_vskill_description);
         stringIdMap.put("id_dictator_vtrigger_description", R.string.dictator_vtrigger_description);
@@ -87,6 +106,7 @@ public class StringResolver {
         stringIdMap.put("id_laura_bolt_charge_description", R.string.laura_bolt_charge_description);
         stringIdMap.put("id_laura_split_river_description", R.string.laura_split_river_description);
         stringIdMap.put("id_laura_rodeo_break_description", R.string.laura_rodeo_break_description);
+        stringIdMap.put("id_laura_thunder_clap_description", R.string.laura_thunder_clap_description);
         stringIdMap.put("id_laura_vtrigger_description", R.string.laura_vtrigger_description);
         stringIdMap.put("id_laura_vskill_overhead_description", R.string.laura_vskill_overhead_description);
         stringIdMap.put("id_laura_vskill_avante_description", R.string.vskill_avante_description);
@@ -94,10 +114,16 @@ public class StringResolver {
 
         //Birdie Movelist
         stringIdMap.put("id_birdie_hanging_chain_posttext", R.string.birdie_hanging_chain_posttext);
-        stringIdMap.put("id_hits_overhead", R.string.hits_overhead);
+        stringIdMap.put("id_birdie_bull_head_description", R.string.birdie_bull_head_description);
+        stringIdMap.put("id_birdie_bull_horn_description", R.string.birdie_bull_horn_description);
+        stringIdMap.put("id_birdie_hanging_chain_description", R.string.birdie_hanging_chain_description);
+        stringIdMap.put("id_birdie_killing_head_description", R.string.birdie_killing_head_description);
+        stringIdMap.put("id_birdie_bull_revenger_description", R.string.birdie_bull_revenger_description);
         stringIdMap.put("id_birdie_vtrigger_description", R.string.birdie_vtrigger_description);
 
         //Mika Movelist
+        stringIdMap.put("id_mika_shooting_peach_description", R.string.mika_shooting_peach_description);
+        stringIdMap.put("id_mika_wingless_airplane_description", R.string.mika_wingless_airplane_description);
         stringIdMap.put("id_mika_typhoon_description", R.string.mika_typhoon_description);
         stringIdMap.put("id_mika_brimstone_description", R.string.mika_brimstone_description);
         stringIdMap.put("id_mika_vtrigger_posttext", R.string.mika_vtrigger_posttext);
@@ -109,6 +135,7 @@ public class StringResolver {
         stringIdMap.put("id_rashid_vtrigger_description", R.string.rashid_vtrigger_description);
         stringIdMap.put("id_rashid_vskill_divekick_pretext", R.string.rashid_vskill_divekick_pretext);
         stringIdMap.put("id_rashid_vskill_rollkick_pretext", R.string.rashid_vskill_rollkick_pretext);
+        stringIdMap.put("id_rashid_spinning_mixer_description", R.string.rashid_spinning_mixer_description);
         stringIdMap.put("id_rashid_whirlwind_shot_description", R.string.rashid_whirlwind_shot_description);
 
         //Rashid Frame Data
@@ -116,23 +143,38 @@ public class StringResolver {
 
         //Nash Movelist
         stringIdMap.put("id_nash_press_for_second_boom", R.string.nash_press_for_second_boom);
+        stringIdMap.put("id_nash_sonic_boom_description", R.string.nash_sonic_boom_description);
+        stringIdMap.put("id_nash_sonic_scythe_description", R.string.nash_sonic_scythe_description);
+        stringIdMap.put("id_nash_tragedy_assault_description", R.string.nash_tragedy_assault_description);
+        stringIdMap.put("id_nash_sonic_move_hide_description", R.string.nash_sonic_move_hide_description);
+        stringIdMap.put("id_nash_sonic_move_blitz_air_description", R.string.nash_sonic_move_blitz_air_description);
+        stringIdMap.put("id_nash_sonic_move_steel_air_description", R.string.nash_sonic_move_steel_air_description);
+        stringIdMap.put("id_nash_critical_art_description", R.string.nash_critical_art_description);
         stringIdMap.put("id_nash_vskill_description", R.string.nash_vskill_description);
 
         //Necalli Movelist
         stringIdMap.put("id_necalli_vskill_control_distance", R.string.necalli_vskill_control_distance);
         stringIdMap.put("id_necalli_disc_guidance_description", R.string.necalli_disc_guidance_description);
         stringIdMap.put("id_necalli_raging_light_description", R.string.necalli_raging_light_description);
+        stringIdMap.put("id_necalli_mask_of_tlalli_description", R.string.necalli_mask_of_tlalli_description);
         stringIdMap.put("id_necalli_vtrigger_description", R.string.necalli_vtrigger_description);
         stringIdMap.put("id_necalli_vskill_description", R.string.necalli_vskill_description);
         stringIdMap.put("id_necalli_opening_dagger_description", R.string.necalli_opening_dagger_description);
 
         //Cammy Movelist
         stringIdMap.put("id_during_hooligan_combination", R.string.cammy_during_hooligan);
+        stringIdMap.put("id_cammy_spiral_arrow_description", R.string.cammy_spiral_arrow_description);
+        stringIdMap.put("id_cammy_cannon_spike_description", R.string.cammy_cannon_spike_description);
+        stringIdMap.put("id_cammy_cannon_strike_description", R.string.cammy_cannon_strike_description);
+        stringIdMap.put("id_cammy_hooligan_combination_description", R.string.cammy_hooligan_combination_description);
         stringIdMap.put("id_cammy_vtrigger_description", R.string.cammy_vtrigger_description);
         stringIdMap.put("id_cammy_vskill_description", R.string.cammy_vskill_description);
 
         //Dhalsim Movelist
         stringIdMap.put("id_dhalsim_critical_art_posttext", R.string.dhalsim_critical_art_posttext);
+        stringIdMap.put("id_dhalsim_yoga_fire_description", R.string.dhalsim_yoga_fire_description);
+        stringIdMap.put("id_dhalsim_yoga_flame_description", R.string.dhalsim_yoga_flame_description);
+        stringIdMap.put("id_dhalsim_yoga_teleport_description", R.string.dhalsim_yoga_teleport_description);
         stringIdMap.put("id_dhalsim_vtrigger_description", R.string.dhalsim_vtrigger_description);
         stringIdMap.put("id_dhalsim_vskill_description", R.string.dhalsim_vskill_description);
 
