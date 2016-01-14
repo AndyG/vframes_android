@@ -139,7 +139,7 @@
     <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Kick\nCancel: Press Punch</string>
     <string name="birdie_bull_head_description">EX version gains armor.</string>
     <string name="birdie_bull_horn_description">Has projectile invulnerability. EX version gains armor.</string>
-    <string name="birdie_hanging_chain_description">Chain goes through projectiles. Strength determines where opponent lands.</string>
+    <string name="birdie_hanging_chain_description">Chain goes through projectiles. Kick strength determines where opponent lands.</string>
     <string name="birdie_killing_head_description">Punch strength determines number of hits.</string>
     <string name="birdie_bull_revenger_description">Has projectile invulnerability.</string>
     <string name="birdie_vtrigger_description">Birdie deals more damage. Special moves become faster, multi-hitting, or gain armor.</string>
@@ -204,7 +204,7 @@
 
     <!-- Dhalsim Movelist -->
     <string name="dhalsim_critical_art_posttext">Hold button to charge</string>
-    <string name="dhalsim_yoga_fire_description">Punch strength determines fire angle.</string>
+    <string name="dhalsim_yoga_fire_description">Punch strength determines fire angle. EX version travels straight forward.</string>
     <string name="dhalsim_yoga_flame_description">EX version launches opponent airborne.</string>
     <string name="dhalsim_yoga_teleport_description">Input direction and type determines teleport location.</string>
     <string name="dhalsim_vtrigger_description">Places fire on the ground that deals damage over time to opponents.</string>
