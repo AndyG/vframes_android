@@ -16,6 +16,7 @@ import com.angarron.vframes.adapter.FrameDataRecyclerViewAdapter;
 import java.util.List;
 import java.util.Map;
 
+import data.model.character.FrameData;
 import data.model.move.IFrameDataEntry;
 import data.model.move.MoveCategory;
 
@@ -27,7 +28,7 @@ public class FrameDataFragment extends Fragment {
 
         Activity hostActivity = getActivity();
         IFrameDataFragmentHost frameDataFragmentHost = (IFrameDataFragmentHost) hostActivity;
-        Map<MoveCategory, List<IFrameDataEntry>> frameData = frameDataFragmentHost.getFrameData();
+        FrameData frameData = frameDataFragmentHost.getFrameData();
 
         if (frameData != null) {
             LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.frame_data_layout, container, false);
@@ -42,6 +43,6 @@ public class FrameDataFragment extends Fragment {
     }
 
     public interface IFrameDataFragmentHost {
-        Map<MoveCategory, List<IFrameDataEntry>> getFrameData();
+        FrameData getFrameData();
     }
 }

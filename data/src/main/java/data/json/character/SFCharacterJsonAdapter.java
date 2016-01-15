@@ -6,11 +6,13 @@ import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import data.json.move.FrameDataEntryJsonAdapter;
 import data.json.move.MoveListEntryJsonAdapter;
+import data.model.character.FrameData;
 import data.model.character.SFCharacter;
 import data.model.move.IFrameDataEntry;
 import data.model.move.IMoveListEntry;
@@ -35,7 +37,7 @@ public class SFCharacterJsonAdapter {
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
         JsonObject moveListJson = characterJson.getAsJsonObject("move_list");
         if (characterJson.has("frame_data")) {
-            JsonObject frameDataJson = characterJson.getAsJsonObject("frame_data");
+            JsonArray frameDataJson = characterJson.getAsJsonArray("frame_data");
             return new SFCharacter(jsonToMoveList(moveListJson), jsonToFrameData(frameDataJson));
         } else {
             return new SFCharacter(jsonToMoveList(moveListJson), null);
@@ -63,10 +65,21 @@ public class SFCharacterJsonAdapter {
         return moveList;
     }
 
-    private static Map<MoveCategory, List<IFrameDataEntry>> jsonToFrameData(JsonObject frameDataJson) {
-        Map<MoveCategory, List<IFrameDataEntry>> frameData = new HashMap<>();
+    private static List<FrameData> jsonToFrameData(JsonArray frameDataArrayJson) {
+        List<FrameData> frameData = new ArrayList<>();
 
-        for (Map.Entry<String, JsonElement> category : frameDataJson.entrySet()) {
+        for (JsonElement frameDataSet : frameDataArrayJson) {
+            frameData.add(parseFrameDataSet(frameDataSet.getAsJsonObject()));
+        }
+
+        return frameData;
+    }
+
+    private static FrameData parseFrameDataSet(JsonObject frameDataJsonObject) {
+
+        Map<MoveCategory, List<IFrameDataEntry>> frameDataSet = new HashMap<>();
+
+        for (Map.Entry<String, JsonElement> category : frameDataJsonObject.entrySet()) {
             String categoryKey = category.getKey();
             System.out.println("Parsing category: " + categoryKey);
             JsonElement categoryBody = category.getValue();
@@ -74,14 +87,15 @@ public class SFCharacterJsonAdapter {
 
             List<IFrameDataEntry> frameDataEntries = new ArrayList<>();
             JsonArray categoryJson = categoryBody.getAsJsonArray();
+
             for (JsonElement moveJson : categoryJson) {
                 frameDataEntries.add(FrameDataEntryJsonAdapter.JsonToMove(moveJson.getAsJsonObject()));
             }
 
-            frameData.put(MoveCategory.fromString(categoryKey), frameDataEntries);
+            frameDataSet.put(MoveCategory.fromString(categoryKey), frameDataEntries);
         }
 
-        return frameData;
+        return new FrameData(frameDataSet);
     }
 
     private static JsonArray moveListToJsonArray(List<IMoveListEntry> moves) {

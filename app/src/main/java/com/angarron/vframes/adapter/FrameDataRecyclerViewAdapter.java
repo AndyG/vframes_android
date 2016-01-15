@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import data.model.character.FrameData;
 import data.model.move.IFrameDataEntry;
 import data.model.move.MoveCategory;
 
@@ -46,7 +47,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
     private Context context;
     private List<Object> displayList = new ArrayList<>();
 
-    public FrameDataRecyclerViewAdapter(Context context, Map<MoveCategory, List<IFrameDataEntry>> frameData) {
+    public FrameDataRecyclerViewAdapter(Context context, FrameData frameData) {
         this.context = context;
         setupDisplayList(frameData);
     }
@@ -110,12 +111,15 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         return distanceFromHeader;
     }
 
-    private void setupDisplayList(Map<MoveCategory, List<IFrameDataEntry>> frameData) {
+    private void setupDisplayList(FrameData frameData) {
         for (MoveCategory category : categoriesOrder) {
-            if (frameData.containsKey(category) && !frameData.get(category).isEmpty()) {
-                displayList.add(category);
-                for (IFrameDataEntry frameDataEntry : frameData.get(category)) {
-                    displayList.add(frameDataEntry);
+            if (frameData.hasCategory(category)) {
+                List<IFrameDataEntry> frameDataEntries = frameData.getFromCategory(category);
+                if (!frameDataEntries.isEmpty()) {
+                    displayList.add(category);
+                    for (IFrameDataEntry frameDataEntry : frameDataEntries) {
+                        displayList.add(frameDataEntry);
+                    }
                 }
             }
         }

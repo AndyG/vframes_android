@@ -101,466 +101,468 @@
           }
         ]
       },
-  "frame_data": {
-    "normals": [
-      {
-        "nameID": "s.LP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 4,
-          "hitAdvantage": 4,
-          "blockAdvantage": 3
+  "frame_data": [
+    {
+      "normals": [
+        {
+          "nameID": "s.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 3
+          }
+        },
+        {
+          "nameID": "s.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 6,
+            "blockAdvantage": 3
+          }
+        },
+        {
+          "nameID": "s.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 2,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "s.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "s.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 16,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "c.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 3,
+            "blockAdvantage": 1
+          }
+        },
+        {
+          "nameID": "c.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 6,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "c.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 2,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "c.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 0,
+            "blockAdvantage": -3
+          }
+        },
+        {
+          "nameID": "c.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -12
+          }
+        },
+        {
+          "nameID": "j.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7
+          }
+        },
+        {
+          "nameID": "j.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8
+          }
         }
-      },
-      {
-        "nameID": "s.MP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 5,
-          "hitAdvantage": 6,
-          "blockAdvantage": 3
+      ],
+      "unique_attacks": [
+        {
+          "nameID": "f+MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "f+HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 23,
+            "hitAdvantage": 0,
+            "blockAdvantage": -6
+          }
+        },
+        {
+          "nameID": "Dash Spinning Mixer",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1
+          }
+        },
+        {
+          "nameID": "Dash Spinning Mixer (Mash level 1)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8
+          }
+        },
+        {
+          "nameID": "Dash Spinning Mixer (Mash level 2)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": -1
+          }
+        },
+        {
+          "nameID": "Dash Eagle Spike",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 13,
+            "hitAdvantage": 1003
+          }
         }
-      },
-      {
-        "nameID": "s.HP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8,
-          "hitAdvantage": 2,
-          "blockAdvantage": 0
+      ],
+      "throws": [
+        {
+          "nameID": "Rising Glider",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Rising Sun",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
         }
-      },
-      {
-        "nameID": "s.LK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 3,
-          "hitAdvantage": 4,
-          "blockAdvantage": 2
+      ],
+      "vtrigger": [
+        {
+          "nameID": "Ysaar",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 15,
+            "hitAdvantage": 1003
+          }
         }
-      },
-      {
-        "nameID": "s.MK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8,
-          "hitAdvantage": 2,
-          "blockAdvantage": -2
+      ],
+      "vskill": [
+        {
+          "nameID": "Airborne Eagle Spike",
+          "type": "type_0",
+          "descriptionID": "id_rashid_eagle_spike_on_block_description",
+          "data": {
+            "startupFrames": 20,
+            "blockAdvantage": -24,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Nail Assault",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "blockAdvantage": -5,
+            "hitAdvantage": 1003
+          }
         }
-      },
-      {
-        "nameID": "s.HK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 16,
-          "hitAdvantage": 2,
-          "blockAdvantage": -2
+      ],
+      "specials": [
+        {
+          "nameID": "Spinning Mixer LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 0,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "Spinning Mixer LP (Mash level 1)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8
+          }
+        },
+        {
+          "nameID": "Spinning Mixer LP (Mash level 2)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -10
+          }
+        },
+        {
+          "nameID": "Spinning Mixer MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -31
+          }
+        },
+        {
+          "nameID": "Spinning Mixer MP (Mash level 1)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Spinning Mixer MP (Mash level 2)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Spinning Mixer HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -36
+          }
+        },
+        {
+          "nameID": "Spinning Mixer HP (Mash level 1)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Spinning Mixer HP (Mash level 2)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Spinning Mixer EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -39
+          }
+        },
+        {
+          "nameID": "Spinning Mixer EX (Mash)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Eagle Spike LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 15,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -20
+          }
+        },
+        {
+          "nameID": "Eagle Spike MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 21,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -20
+          }
+        },
+        {
+          "nameID": "Eagle Spike HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -20
+          }
+        },
+        {
+          "nameID": "Eagle Spike EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 19,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -9
+          }
+        },
+        {
+          "nameID": "Airborne Eagle Spike LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 18,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Airborne Eagle Spike MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 20,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Airborne Eagle Spike HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Airborne Eagle Spike EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 15,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Whirlwind Shot LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 17,
+            "hitAdvantage": -4,
+            "blockAdvantage": -7
+          }
+        },
+        {
+          "nameID": "Whirlwind Shot MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 23,
+            "hitAdvantage": 0,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "Whirlwind Shot HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 34,
+            "hitAdvantage": 4,
+            "blockAdvantage": 1
+          }
+        },
+        {
+          "nameID": "Whirlwind Shot EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 23,
+            "hitAdvantage": 9,
+            "blockAdvantage": 6
+          }
         }
-      },
-      {
-        "nameID": "c.LP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 4,
-          "hitAdvantage": 4,
-          "blockAdvantage": 2
+      ],
+      "critical_arts": [
+        {
+          "nameID": "Altair",
+          "type": "type_0",
+          "data": {
+            "hitAdvantage": 1003,
+            "blockAdvantage": -51
+          }
         }
-      },
-      {
-        "nameID": "c.MP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 7,
-          "hitAdvantage": 3,
-          "blockAdvantage": 1
-        }
-      },
-      {
-        "nameID": "c.HP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 9,
-          "hitAdvantage": 6,
-          "blockAdvantage": -2
-        }
-      },
-      {
-        "nameID": "c.LK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 4,
-          "hitAdvantage": 2,
-          "blockAdvantage": 0
-        }
-      },
-      {
-        "nameID": "c.MK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 6,
-          "hitAdvantage": 0,
-          "blockAdvantage": -3
-        }
-      },
-      {
-        "nameID": "c.HK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 7,
-          "hitAdvantage": 1003,
-          "blockAdvantage": -12
-        }
-      },
-      {
-        "nameID": "j.LP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 4
-        }
-      },
-      {
-        "nameID": "j.MP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 5
-        }
-      },
-      {
-        "nameID": "j.HP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 7
-        }
-      },
-      {
-        "nameID": "j.LK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 4
-        }
-      },
-      {
-        "nameID": "j.MK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 5
-        }
-      },
-      {
-        "nameID": "j.HK",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8
-        }
-      }
-    ],
-    "unique_attacks": [
-      {
-        "nameID": "f+MP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8,
-          "hitAdvantage": 2,
-          "blockAdvantage": -2
-        }
-      },
-      {
-        "nameID": "f+HP",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 23,
-          "hitAdvantage": 0,
-          "blockAdvantage": -6
-        }
-      },
-      {
-        "nameID": "Dash Spinning Mixer",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8,
-          "hitAdvantage": 1
-        }
-      },
-      {
-        "nameID": "Dash Spinning Mixer (Mash level 1)",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8
-        }
-      },
-      {
-        "nameID": "Dash Spinning Mixer (Mash level 2)",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 8,
-          "hitAdvantage": -1
-        }
-      },
-      {
-        "nameID": "Dash Eagle Spike",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 13,
-          "hitAdvantage": 1003
-        }
-      }
-    ],
-    "throws":[
-      {
-        "nameID": "Rising Glider",
-        "type": "type_0",
-        "data": {
-          "startupFrames":5,
-          "hitAdvantage": 1003
-        }
-      },
-      {
-        "nameID": "Rising Sun",
-        "type": "type_0",
-        "data": {
-          "startupFrames":5,
-          "hitAdvantage": 1003
-        }
-      }
-    ],
-    "vtrigger": [
-      {
-        "nameID": "Ysaar",
-        "type": "type_0",
-        "data": {
-          "startupFrames":15,
-          "hitAdvantage":1003
-        }
-      }
-    ],
-    "vskill": [
-      {
-        "nameID": "Airborne Eagle Spike",
-        "type": "type_0",
-        "descriptionID": "id_rashid_eagle_spike_on_block_description",
-        "data": {
-          "startupFrames": 20,
-          "blockAdvantage": -24,
-          "hitAdvantage": 1003
-        }
-      },
-      {
-        "nameID": "Nail Assault",
-        "type": "type_0",
-        "data": {
-          "startupFrames": 7,
-          "blockAdvantage": -5,
-          "hitAdvantage": 1003
-        }
-      }
-    ],
-    "specials": [
-      {
-        "nameID": "Spinning Mixer LP",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":0,
-          "blockAdvantage":-2
-        }
-      },
-      {
-        "nameID": "Spinning Mixer LP (Mash level 1)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8
-        }
-      },
-      {
-        "nameID": "Spinning Mixer LP (Mash level 2)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":1003,
-          "blockAdvantage":-10
-        }
-      },
-      {
-        "nameID": "Spinning Mixer MP",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":1003,
-          "blockAdvantage":-31
-        }
-      },
-      {
-        "nameID": "Spinning Mixer MP (Mash level 1)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Spinning Mixer MP (Mash level 2)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Spinning Mixer HP",
-        "type": "type_0",
-        "data": {
-          "startupFrames":5,
-          "hitAdvantage":1003,
-          "blockAdvantage":-36
-        }
-      },
-      {
-        "nameID": "Spinning Mixer HP (Mash level 1)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":5,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Spinning Mixer HP (Mash level 2)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":5,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Spinning Mixer EX",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":1003,
-          "blockAdvantage":-39
-        }
-      },
-      {
-        "nameID": "Spinning Mixer EX (Mash)",
-        "type": "type_0",
-        "data": {
-          "startupFrames":8,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Eagle Spike LK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":15,
-          "hitAdvantage":1003,
-          "blockAdvantage":-20
-        }
-      },
-      {
-        "nameID": "Eagle Spike MK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":21,
-          "hitAdvantage":1003,
-          "blockAdvantage":-20
-        }
-      },
-      {
-        "nameID": "Eagle Spike HK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":22,
-          "hitAdvantage":1003,
-          "blockAdvantage":-20
-        }
-      },
-      {
-        "nameID": "Eagle Spike EX",
-        "type": "type_0",
-        "data": {
-          "startupFrames":19,
-          "hitAdvantage":1003,
-          "blockAdvantage":-9
-        }
-      },
-      {
-        "nameID": "Airborne Eagle Spike LK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":18,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Airborne Eagle Spike MK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":20,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Airborne Eagle Spike HK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":22,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Airborne Eagle Spike EX",
-        "type": "type_0",
-        "data": {
-          "startupFrames":15,
-          "hitAdvantage":1003
-        }
-      },
-      {
-        "nameID": "Whirlwind Shot LK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":17,
-          "hitAdvantage":-4,
-          "blockAdvantage":-7
-        }
-      },
-      {
-        "nameID": "Whirlwind Shot MK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":23,
-          "hitAdvantage":0,
-          "blockAdvantage":-4
-        }
-      },
-      {
-        "nameID": "Whirlwind Shot HK",
-        "type": "type_0",
-        "data": {
-          "startupFrames":34,
-          "hitAdvantage":4,
-          "blockAdvantage":1
-        }
-      },
-      {
-        "nameID": "Whirlwind Shot EX",
-        "type": "type_0",
-        "data": {
-          "startupFrames":23,
-          "hitAdvantage":9,
-          "blockAdvantage":6
-        }
-      }
-    ],
-    "critical_arts": [
-      {
-        "nameID": "Altair",
-        "type": "type_0",
-        "data": {
-          "hitAdvantage":1003,
-          "blockAdvantage":-51
-        }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }

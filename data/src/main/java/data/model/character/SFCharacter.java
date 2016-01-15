@@ -11,9 +11,9 @@ import data.model.move.MoveCategory;
 public class SFCharacter {
 
     private Map<MoveCategory, List<IMoveListEntry>> moveListMap;
-    private Map<MoveCategory, List<IFrameDataEntry>> frameData;
+    private List<FrameData> frameData;
 
-    public SFCharacter(Map<MoveCategory, List<IMoveListEntry>> moveListMap, Map<MoveCategory, List<IFrameDataEntry>> frameData) {
+    public SFCharacter(Map<MoveCategory, List<IMoveListEntry>> moveListMap, List<FrameData> frameData) {
         this.moveListMap = moveListMap;
         this.frameData = frameData;
     }
@@ -22,7 +22,7 @@ public class SFCharacter {
         return moveListMap;
     }
 
-    public Map<MoveCategory, List<IFrameDataEntry>> getFrameData() {
+    public List<FrameData> getFrameData() {
         return frameData;
     }
 }

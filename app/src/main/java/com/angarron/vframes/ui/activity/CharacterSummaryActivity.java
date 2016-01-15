@@ -3,7 +3,6 @@ package com.angarron.vframes.ui.activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
@@ -23,15 +22,14 @@ import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.core.internal.models.ThreadData;
 
 import java.util.List;
 import java.util.Map;
 
 import data.model.CharacterID;
 import data.model.IDataModel;
+import data.model.character.FrameData;
 import data.model.character.SFCharacter;
-import data.model.move.IFrameDataEntry;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
@@ -116,11 +114,15 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     }
 
     @Override
-    public Map<MoveCategory, List<IFrameDataEntry>> getFrameData() {
+    public FrameData getFrameData() {
         VFramesApplication application = (VFramesApplication) getApplication();
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        return targetCharacterModel.getFrameData();
+        if (!targetCharacterModel.getFrameData().isEmpty()) {
+            return targetCharacterModel.getFrameData().get(0);
+        } else {
+            return null;
+        }
     }
 
     private void verifyDataAvailable() {
