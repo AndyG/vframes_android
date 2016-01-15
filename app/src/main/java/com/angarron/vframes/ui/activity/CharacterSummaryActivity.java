@@ -118,7 +118,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         VFramesApplication application = (VFramesApplication) getApplication();
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        if (!targetCharacterModel.getFrameData().isEmpty()) {
+        if (targetCharacterModel.getFrameData() != null) {
             return targetCharacterModel.getFrameData().get(0);
         } else {
             return null;
@@ -171,7 +171,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     private void setAlternateFrameDataMenuState() {
         if (alternateFrameDataSelected) {
-            alternateFrameDataItem.setIcon(R.drawable.fire_logo);
+            alternateFrameDataItem.setIcon(R.drawable.input_icon_hk);
         } else {
             alternateFrameDataItem.setIcon(R.drawable.logo);
         }
