@@ -4,4 +4,9 @@
         android:id="@+id/action_feedback"
         android:title="@string/send_feedback"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_alternate_frame_data_toggle"
+        android:title="@string/vtrigger_toggle_title"
+        android:icon="@drawable/logo"
+        app:showAsAction="ifRoom"/>
 </menu>

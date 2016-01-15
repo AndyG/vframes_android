@@ -16,6 +16,7 @@
     <string name="rating_request_negative_button">No Thanks</string>
 
     <!-- Titles on Character Summary Page -->
+    <string name="vtrigger_toggle_title">Activate V-Trigger</string>
     <string name="summary_toolbar_title">%1$s Moves</string>
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>

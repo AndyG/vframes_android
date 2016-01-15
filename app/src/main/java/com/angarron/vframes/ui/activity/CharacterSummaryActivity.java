@@ -3,6 +3,7 @@ package com.angarron.vframes.ui.activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
@@ -37,8 +38,12 @@ import data.model.move.MoveCategory;
 public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost, FrameDataFragment.IFrameDataFragmentHost {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
+    private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
 
     private CharacterID targetCharacter;
+    private boolean alternateFrameDataSelected = false;
+
+    private MenuItem alternateFrameDataItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +61,20 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         //Verify the data is still available. If not, send to splash screen.
         verifyDataAvailable();
 
+        if (savedInstanceState != null && savedInstanceState.containsKey(ALTERNATE_FRAME_DATA_SELECTED)) {
+            alternateFrameDataSelected = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED);
+        }
+
         //Load the toolbar based on the target character
         setupToolbar();
         setupViewPager();
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
+        setAlternateFrameDataMenuState();
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
@@ -77,9 +93,18 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             case android.R.id.home:
                 finish();
                 return true;
+            case R.id.action_alternate_frame_data_toggle:
+                toggleFrameData();
+                return true;
             default:
                 throw new RuntimeException("invalid menu item clicked");
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(ALTERNATE_FRAME_DATA_SELECTED, alternateFrameDataSelected);
     }
 
     @Override
@@ -134,6 +159,19 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                 final ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
                 summaryCharacterImage.setImageResource(getCharacterBannerResource());
             }
+        }
+    }
+
+    private void toggleFrameData() {
+        alternateFrameDataSelected = !alternateFrameDataSelected;
+        setAlternateFrameDataMenuState();
+    }
+
+    private void setAlternateFrameDataMenuState() {
+        if (alternateFrameDataSelected) {
+            alternateFrameDataItem.setIcon(R.drawable.fire_logo);
+        } else {
+            alternateFrameDataItem.setIcon(R.drawable.logo);
         }
     }
 
