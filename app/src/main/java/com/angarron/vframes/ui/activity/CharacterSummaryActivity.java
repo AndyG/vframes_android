@@ -119,7 +119,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
         if (targetCharacterModel.getFrameData() != null) {
-            return targetCharacterModel.getFrameData().get(0);
+            //If user has selected to show alternate frame data, we want to return the alternate frame data
+            return targetCharacterModel.getFrameData().get(alternateFrameDataSelected ? 1 : 0);
         } else {
             return null;
         }
@@ -167,13 +168,23 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     private void toggleFrameData() {
         alternateFrameDataSelected = !alternateFrameDataSelected;
         setAlternateFrameDataMenuState();
+        //get reference to frame data fragment and update it with new frame data
     }
 
     private void setAlternateFrameDataMenuState() {
-        if (alternateFrameDataSelected) {
-            alternateFrameDataItem.setIcon(R.drawable.input_icon_hk);
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        List<FrameData> characterFrameData = targetCharacterModel.getFrameData();
+
+        if (characterFrameData != null && characterFrameData.size() > 1) {
+            if (alternateFrameDataSelected) {
+                alternateFrameDataItem.setIcon(R.drawable.input_icon_hk);
+            } else {
+                alternateFrameDataItem.setIcon(R.drawable.logo);
+            }
         } else {
-            alternateFrameDataItem.setIcon(R.drawable.logo);
+            alternateFrameDataItem.setVisible(false);
         }
     }
 
