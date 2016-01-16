@@ -1,6 +1,7 @@
 package com.angarron.vframes.ui.fragment;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,14 +14,26 @@ import android.widget.LinearLayout;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.FrameDataRecyclerViewAdapter;
 
-import java.util.List;
-import java.util.Map;
-
 import data.model.character.FrameData;
-import data.model.move.IFrameDataEntry;
-import data.model.move.MoveCategory;
 
 public class FrameDataFragment extends Fragment {
+
+    private RecyclerView frameDataRecyclerView;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        IFrameDataFragmentHost frameDataFragmentHost = (IFrameDataFragmentHost) context;
+        frameDataFragmentHost.registerFrameDataFragment(this);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        IFrameDataFragmentHost frameDataFragmentHost = (IFrameDataFragmentHost) getActivity();
+        frameDataFragmentHost.unregisterFrameDataFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,16 +46,22 @@ public class FrameDataFragment extends Fragment {
         if (frameData != null) {
             LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.frame_data_layout, container, false);
 
-            RecyclerView recyclerView = (RecyclerView) linearLayout.findViewById(R.id.frames_recycler_view);
-            recyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
-            recyclerView.setAdapter(new FrameDataRecyclerViewAdapter(getContext(), frameData));
+            frameDataRecyclerView = (RecyclerView) linearLayout.findViewById(R.id.frames_recycler_view);
+            frameDataRecyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
+            frameDataRecyclerView.setAdapter(new FrameDataRecyclerViewAdapter(getContext(), frameData));
             return linearLayout;
         } else {
             return inflater.inflate(R.layout.frame_data_upcoming, container, false);
         }
     }
 
+    public void updateFrameData(FrameData frameData) {
+        frameDataRecyclerView.setAdapter(new FrameDataRecyclerViewAdapter(getContext(), frameData));
+    }
+
     public interface IFrameDataFragmentHost {
+        void registerFrameDataFragment(FrameDataFragment frameDataFragment);
+        void unregisterFrameDataFragment();
         FrameData getFrameData();
     }
 }

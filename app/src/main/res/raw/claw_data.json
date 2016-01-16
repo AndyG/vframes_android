@@ -14,8 +14,8 @@
           },
           {
             "nameID": "Izuna Drop",
-            "input": "SRK|OR|SRK_BACK|PLUS|KICK|ARROW|LP|PLUS|LK",
-            "posttextID":"id_close_to_opponent"
+            "pretextID":"id_claw_during_flying_barcelona_attack",
+            "input": "LP|PLUS|LK"
           },
           {
             "nameID": "Grand Izuna Drop",

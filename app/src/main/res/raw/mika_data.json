@@ -98,12 +98,10 @@
             "input": "BACK|OR|FORWARD|PLUS|MP"
           },
           {
-            "nameID": "Passion Rope Throw (Forward)",
-            "input": "FORWARD|PLUS|MP|ARROW|FORWARD|PLUS|MP"
-          },
-          {
-            "nameID": "Passion Rope Throw (Backward)",
-            "input": "BACK|PLUS|MP|ARROW|BACK|PLUS|MP"
+            "nameID": "Passion Rope Throw",
+            "pretextID":"id_mika_passion_rope_throw_pretext",
+            "input": "BACK|OR|FORWARD|PLUS|MP",
+            "posttextID":"id_mika_passion_rope_throw_posttext"
           }
         ]
       },

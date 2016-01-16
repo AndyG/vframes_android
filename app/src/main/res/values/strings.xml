@@ -90,6 +90,7 @@
     <string name="karin_senha_resshu_description">Command grab that misses on crouching opponents.</string>
     <string name="karin_vskill_description">Destroys projectiles with a palm strike.</string>
     <string name="karin_vtrigger_description">Karin gains access to Guren Ken, a new special move with a number of followups.</string>
+    <string name="karin_mujinkyaku_description">LK version: safe on block.\nMK version: does an overhead.\nHK version: frame traps.</string>
 
     <!-- Claw Movelist -->
     <string name="claw_claw_off_only">(Claw Off Only)</string>
@@ -100,6 +101,7 @@
     <string name="claw_vtrigger_torero_description">Throws a rose straight forward. On hit or block, performs a follow-up attack.</string>
     <string name="claw_vtrigger_rojo_description">Throws a rose at an upward angle. On hit or block, performs a follow-up attack.</string>
     <string name="claw_vtrigger_azul_description">Throws a rose at a downward angle. On hit or block, performs a follow-up attack.</string>
+    <string name="claw_during_flying_barcelona_attack">(During Flying Barcelona Attack)</string>
 
     <!-- Chun Movelist -->
     <string name="chun_up_to_three_times">Up to 3 Times</string>
@@ -140,7 +142,7 @@
     <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Kick\nCancel: Press Punch</string>
     <string name="birdie_bull_head_description">EX version gains armor.</string>
     <string name="birdie_bull_horn_description">Has projectile invulnerability. EX version gains armor.</string>
-    <string name="birdie_hanging_chain_description">Chain goes through projectiles. Kick strength determines where opponent lands.</string>
+    <string name="birdie_hanging_chain_description">Chain goes through projectiles.\nLK version: opponent lands close.\nMK version: opponent lands far.\nHK version anti-airs.</string>
     <string name="birdie_killing_head_description">Punch strength determines number of hits.</string>
     <string name="birdie_bull_revenger_description">Has projectile invulnerability.</string>
     <string name="birdie_vtrigger_description">Birdie deals more damage. Special moves become faster, multi-hitting, or gain armor.</string>
@@ -153,6 +155,8 @@
     <string name="mika_vtrigger_posttext">Hold buttons to delay Nadeshiko</string>
     <string name="mika_vskill_posttext">Hold buttons to extend speech</string>
     <string name="mika_vskill_description">Mika delivers a speech, ending with a mic spike which has a projectile hitbox. The speech powers up command throws more the longer it goes on.</string>
+    <string name="mika_passion_rope_throw_pretext">(After Passion Press)</string>
+    <string name="mika_passion_rope_throw_posttext">Input direction determines throw direction</string>
 
     <!-- Rashid Movelist -->
     <string name="rashid_repeat_buttons_to_extend">Repeat Button Presses to Extend</string>
@@ -198,13 +202,15 @@
     <string name="vskill_esquiva_description">Moves Laura backward. Can be cancelled into forward V-Skill.</string>
 
     <!-- Cammy Movelist -->
-    <string name="cammy_during_hooligan">(During Hooligan Combination)</string>
+    <string name="cammy_during_hooligan">(During Hooligan)</string>
     <string name="cammy_spiral_arrow_description">Kick strength determines distance.</string>
     <string name="cammy_cannon_spike_description">Startup invulnerability.</string>
     <string name="cammy_cannon_strike_description">Kick strength determines angle.</string>
     <string name="cammy_hooligan_combination_description">Can travel through opponent. Followups attack towards opponent.</string>
     <string name="cammy_vtrigger_description">Makes specials faster and safer.</string>
     <string name="cammy_vskill_description">Moves Cammy forward with projectile invulnerability. Can combo on hit.</string>
+    <string name="hooligan_close_to_grounded_opponent">(During Hooligan, close to grounded opponent)</string>
+    <string name="hooligan_close_to_airborne_opponent">(During Hooligan, close to airborne opponent)</string>
 
     <!-- Dhalsim Movelist -->
     <string name="dhalsim_critical_art_posttext">Hold button to charge</string>
