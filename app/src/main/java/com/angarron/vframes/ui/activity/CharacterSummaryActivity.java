@@ -171,7 +171,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     private void setAlternateFrameDataMenuState() {
         if (alternateFrameDataSelected) {
-            alternateFrameDataItem.setIcon(R.drawable.input_icon_hk);
+            alternateFrameDataItem.setIcon(R.drawable.fire_logo);
         } else {
             alternateFrameDataItem.setIcon(R.drawable.logo);
         }
