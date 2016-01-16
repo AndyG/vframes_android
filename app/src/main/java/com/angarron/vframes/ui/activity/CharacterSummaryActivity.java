@@ -43,6 +43,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     private MenuItem alternateFrameDataItem;
 
+    private FrameDataFragment frameDataFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,6 +116,16 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     }
 
     @Override
+    public void registerFrameDataFragment(FrameDataFragment frameDataFragment) {
+        this.frameDataFragment = frameDataFragment;
+    }
+
+    @Override
+    public void unregisterFrameDataFragment() {
+        frameDataFragment = null;
+    }
+
+    @Override
     public FrameData getFrameData() {
         VFramesApplication application = (VFramesApplication) getApplication();
         IDataModel dataModel = application.getDataModel();
@@ -169,6 +181,9 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         alternateFrameDataSelected = !alternateFrameDataSelected;
         setAlternateFrameDataMenuState();
         //get reference to frame data fragment and update it with new frame data
+        if (frameDataFragment != null) {
+            frameDataFragment.updateFrameData(getFrameData());
+        }
     }
 
     private void setAlternateFrameDataMenuState() {

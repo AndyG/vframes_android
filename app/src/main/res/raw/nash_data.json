@@ -3,8 +3,7 @@
         "critical_arts": [
           {
             "nameID": "Judgment Saber",
-            "input": "QCB|QCB|PLUS|PUNCH",
-            "descriptionID": "id_nash_critical_art_description"
+            "input": "QCB|QCB|PLUS|PUNCH"
           }
         ],
         "specials": [

@@ -35,17 +35,18 @@
           },
           {
             "nameID": "Fatal Leg Twister",
-            "input": "HCF|PLUS|PUNCH|ARROW|LP|PLUS|LK",
-            "pretextID":"id_close_to_grounded_opponent"
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_grounded_opponent_during_hooligan"
           },
           {
             "nameID": "Cross Scissors Pressure",
-            "input": "HCF|PLUS|PUNCH|ARROW|LP|PLUS|LK",
-            "pretextID":"id_close_to_airborne_opponent"
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_airborne_opponent_during_hooligan"
           },
           {
             "nameID": "Cannon Strike",
-            "input": "HCF|PLUS|PUNCH|ARROW|KICK"
+            "pretextID":"id_during_hooligan_combination",
+            "input": "KICK"
           }
         ],
         "vtrigger": [
@@ -92,7 +93,7 @@
           },
           {
             "nameID": "Lift Combination",
-            "input": "BACK|PLUS|HP|ARROW|HK"
+            "input": "BACK|PLUS|MP|ARROW|HK"
           }
         ]
       }

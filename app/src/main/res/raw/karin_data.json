@@ -25,7 +25,8 @@
           },
           {
             "nameID": "Mujinkyaku",
-            "input": "QCB|PLUS|KICK"
+            "input": "QCB|PLUS|KICK",
+            "descriptionID":"id_karin_mujinkyaku_description"
           },
           {
             "nameID": "Ressenha",

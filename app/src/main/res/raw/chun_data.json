@@ -3,8 +3,7 @@
         "critical_arts": [
           {
             "nameID": "Houyokusen",
-            "input": "QCF|QCF|PLUS|KICK",
-            "descriptionID": "id_chun_critical_art_description"
+            "input": "QCF|QCF|PLUS|KICK"
           }
         ],
         "specials": [

@@ -53,6 +53,7 @@ public class StringResolver {
         stringIdMap.put("id_karin_senha_resshu_description", R.string.karin_senha_resshu_description);
         stringIdMap.put("id_karin_vskill_description", R.string.karin_vskill_description);
         stringIdMap.put("id_karin_vtrigger_description", R.string.karin_vtrigger_description);
+        stringIdMap.put("id_karin_mujinkyaku_description", R.string.karin_mujinkyaku_description);
 
         //Claw Movelist
         stringIdMap.put("id_claw_claw_on_only", R.string.claw_claw_on_only);
@@ -63,6 +64,7 @@ public class StringResolver {
         stringIdMap.put("id_claw_vtrigger_torero_description", R.string.claw_vtrigger_torero_description);
         stringIdMap.put("id_claw_vtrigger_rojo_description", R.string.claw_vtrigger_rojo_description);
         stringIdMap.put("id_claw_vtrigger_azul_description", R.string.claw_vtrigger_azul_description);
+        stringIdMap.put("id_claw_during_flying_barcelona_attack", R.string.claw_during_flying_barcelona_attack);
 
         //Chun Movelist
         stringIdMap.put("id_up_to_three_times", R.string.chun_up_to_three_times);
@@ -129,6 +131,8 @@ public class StringResolver {
         stringIdMap.put("id_mika_vtrigger_posttext", R.string.mika_vtrigger_posttext);
         stringIdMap.put("id_mika_vskill_posttext", R.string.mika_vskill_posttext);
         stringIdMap.put("id_mika_vskill_description", R.string.mika_vskill_description);
+        stringIdMap.put("id_mika_passion_rope_throw_pretext", R.string.mika_passion_rope_throw_pretext);
+        stringIdMap.put("id_mika_passion_rope_throw_posttext", R.string.mika_passion_rope_throw_posttext);
 
         //Rashid Movelist
         stringIdMap.put("id_rashid_repeat_buttons_to_extend", R.string.rashid_repeat_buttons_to_extend);
@@ -169,6 +173,8 @@ public class StringResolver {
         stringIdMap.put("id_cammy_hooligan_combination_description", R.string.cammy_hooligan_combination_description);
         stringIdMap.put("id_cammy_vtrigger_description", R.string.cammy_vtrigger_description);
         stringIdMap.put("id_cammy_vskill_description", R.string.cammy_vskill_description);
+        stringIdMap.put("id_close_to_grounded_opponent_during_hooligan", R.string.hooligan_close_to_grounded_opponent);
+        stringIdMap.put("id_close_to_airborne_opponent_during_hooligan", R.string.hooligan_close_to_airborne_opponent);
 
         //Dhalsim Movelist
         stringIdMap.put("id_dhalsim_critical_art_posttext", R.string.dhalsim_critical_art_posttext);
