@@ -73,6 +73,8 @@ public class FrameDataEntryJsonAdapter {
         int recoveryFrames = DISPLAY_CODE_MISSING_VALUE;
         int blockAdvantage = DISPLAY_CODE_MISSING_VALUE;
         int hitAdvantage = DISPLAY_CODE_MISSING_VALUE;
+        int damageValue = DISPLAY_CODE_MISSING_VALUE;
+        int stunValue = DISPLAY_CODE_MISSING_VALUE;
 
         if (moveDataJson.has("startupFrames")) {
             startupFrames = moveDataJson.get("startupFrames").getAsInt();
@@ -94,7 +96,15 @@ public class FrameDataEntryJsonAdapter {
             hitAdvantage = moveDataJson.get("hitAdvantage").getAsInt();
         }
 
-        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, -1, -1, description);
+        if (moveDataJson.has("damageValue")) {
+            damageValue = moveDataJson.get("damageValue").getAsInt();
+        }
+
+        if (moveDataJson.has("stunValue")) {
+            stunValue = moveDataJson.get("stunValue").getAsInt();
+        }
+
+        return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, damageValue, stunValue, description);
     }
 
     private static IFrameDataEntry constructTypicalMove(JsonObject moveJson) {

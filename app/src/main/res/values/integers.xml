@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="frame_data_damage_weight">3</integer>
+    <integer name="frame_data_stun_weight">3</integer>
+</resources>
