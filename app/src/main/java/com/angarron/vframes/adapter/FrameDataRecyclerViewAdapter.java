@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -175,6 +176,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         private TextView recoveryFrames;
         private TextView blockAdvantage;
         private TextView hitAdvantage;
+        private TextView damageValue;
+        private TextView stunValue;
         private TextView description;
 
         private FrameDataItemViewHolder(View v) {
@@ -189,6 +192,9 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
             blockAdvantage = (TextView) v.findViewById(R.id.block_advantage_textview);
             hitAdvantage = (TextView) v.findViewById(R.id.hit_advantage_textview);
 
+            damageValue = (TextView) v.findViewById(R.id.damage_textview);
+            stunValue = (TextView) v.findViewById(R.id.stun_textview);
+
             description = (TextView) v.findViewById(R.id.description);
         }
 
@@ -201,6 +207,14 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
             blockAdvantage.setText(getDisplayValue(frameDataEntry.getBlockAdvantage()));
             hitAdvantage.setText(getDisplayValue(frameDataEntry.getHitAdvantage()));
+
+            if (damageValue != null) {
+                damageValue.setText(getDisplayValue(frameDataEntry.getDamageValue()));
+            }
+
+            if (stunValue != null) {
+                stunValue.setText(getDisplayValue(frameDataEntry.getStunValue()));
+            }
 
             if (!TextUtils.isEmpty(frameDataEntry.getDescriptionId())) {
                 description.setText(StringResolver.getStringId(frameDataEntry.getDescriptionId()));

@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:elevation="2dp">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="Move"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_startup_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="S"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_active_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="A"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_recovery_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="R"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_block_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="On Block"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_hit_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="On Hit"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_damage_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="Damage"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/frame_data_stun_weight"
+        android:gravity="center"
+        style="@style/frame_data_header_text_style"
+        android:text="Stun"/>
+
+</LinearLayout>
