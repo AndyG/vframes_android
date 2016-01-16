@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
@@ -153,7 +154,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         viewPager.setAdapter(pagerAdapter);
 
         PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_tab_strip);
-        pagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.tab_indicator_color));
+        pagerTabStrip.setTabIndicatorColor(ContextCompat.getColor(this, R.color.tab_indicator_color));
     }
 
     private void setupToolbar() {
@@ -179,11 +180,22 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     private void toggleFrameData() {
         alternateFrameDataSelected = !alternateFrameDataSelected;
+        showAlternateFrameDataToast();
         setAlternateFrameDataMenuState();
         //get reference to frame data fragment and update it with new frame data
         if (frameDataFragment != null) {
             frameDataFragment.updateFrameData(getFrameData());
         }
+    }
+
+    private void showAlternateFrameDataToast() {
+        int stringRes;
+        if (targetCharacter != CharacterID.CLAW) {
+            stringRes = alternateFrameDataSelected ? R.string.showing_trigger_data : R.string.showing_non_trigger_data;
+        } else {
+            stringRes = alternateFrameDataSelected ? R.string.showing_claw_off_data : R.string.showing_claw_on_data;
+        }
+        Toast.makeText(this, stringRes, Toast.LENGTH_SHORT).show();
     }
 
     private void setAlternateFrameDataMenuState() {

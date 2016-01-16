@@ -286,7 +286,7 @@
             }
           },
           {
-            "nameID": "f+MP",
+            "nameID": "Passion Press",
             "type": "type_0",
             "data": {
               "startupFrames": 6,
@@ -295,24 +295,7 @@
             }
           },
           {
-            "nameID": "b+MP",
-            "type": "type_0",
-            "data": {
-              "startupFrames": 6,
-              "hitAdvantage": 2,
-              "blockAdvantage": -2
-            }
-          },
-          {
-            "nameID": "f+MP > MP",
-            "type": "type_0",
-            "data": {
-              "startupFrames": 6,
-              "hitAdvantage": 1003
-            }
-          },
-          {
-            "nameID": "f+MP > b+MP",
+            "nameID": "Passion Press Followup",
             "type": "type_0",
             "data": {
               "startupFrames": 6,
