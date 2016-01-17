@@ -69,7 +69,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
         int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
         boolean reviewRequestSeen = sharedPreferences.getBoolean(REVIEW_REQUEST_SEEN, false);
 
-        if(appLaunchCount >= 3 && !reviewRequestSeen) {
+        if(appLaunchCount >= 5 && !reviewRequestSeen) {
             SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
             sharedPreferencesEditor.putBoolean(REVIEW_REQUEST_SEEN, true);
             sharedPreferencesEditor.apply();
