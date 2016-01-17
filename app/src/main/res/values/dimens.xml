@@ -6,7 +6,6 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!-- Character Select -->
-
     <integer name="num_character_card_columns">2</integer>
 
     <dimen name="character_card_height">80dp</dimen>
@@ -16,7 +15,6 @@
     <dimen name="character_card_text_size">14sp</dimen>
 
     <!-- Character Summary -->
-
     <dimen name="character_summary_text_padding">15dp</dimen>
     <dimen name="character_summary_text_size">24dp</dimen>
     <dimen name="input_container_margin_sides">5dp</dimen>
@@ -37,7 +35,6 @@
     <integer name="frame_data_hit_weight">3</integer>
     <integer name="frame_data_damage_weight">3</integer>
     <integer name="frame_data_stun_weight">3</integer>
-
     <dimen name="frame_data_header_text_size">16sp</dimen>
     <dimen name="frame_data_row_text_size">16sp</dimen>
 
