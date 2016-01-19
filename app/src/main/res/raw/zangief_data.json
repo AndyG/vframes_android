@@ -109,12 +109,12 @@
             "blockAdvantage": -3
           }
         },
-         {
+       {
           "nameID": "s.HP (Full Charge)",
           "type": "type_0",
           "data": {
           }
-        }
+        },
         {
           "nameID": "s.LK",
           "type": "type_0",
