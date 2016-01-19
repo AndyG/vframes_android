@@ -100,5 +100,432 @@
             "input": "MP|ARROW|MK"
           }          
         ]
-      }
+      },
+  "frame_data": [
+    {
+      "normals": [
+        {
+          "nameID": "s.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3,
+            "hitAdvantage": 3,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 4,
+            "blockAdvantage": 3
+          }
+        },
+        {
+          "nameID": "s.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "s.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 3
+          }
+        },
+        {
+          "nameID": "s.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 2,
+            "blockAdvantage": -1
+          }
+        },
+        {
+          "nameID": "s.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 12,
+            "hitAdvantage": 1,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "c.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 3,
+            "blockAdvantage": 1
+          }
+        },
+        {
+          "nameID": "c.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "c.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "c.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 0,
+            "blockAdvantage": -1
+          }
+        },
+        {
+          "nameID": "c.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -8
+          }
+        },
+        {
+          "nameID": "j.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3
+          }
+        },
+        {
+          "nameID": "j.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7
+          }
+        },
+        {
+          "nameID": "j.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        }
+      ],
+      "unique_attacks": [
+        {
+          "nameID": "f+HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 18,
+            "hitAdvantage": 4,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "f+HP > HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -8
+          }
+        },
+        {
+          "nameID": "MP > MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 1,
+            "blockAdvantage": -2
+          }
+        }
+      ],
+      "throws":[
+        {
+          "nameID": "Seoi Throw",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Pullback Hold",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        }
+      ],
+      "vskill": [
+        {
+          "nameID": "Volty Line",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 0,
+            "blockAdvantage": -7
+          }
+        },
+        {
+          "nameID": "Linear Movement Avante",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 21
+          }
+        },
+        {
+          "nameID": "Linear Movement Esquiva",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 26
+          }
+        },
+        {
+          "nameID": "Linear Movement Finta",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 30
+          }
+        }
+      ],
+      "vtrigger": [
+        {
+          "nameID": "Spark Show",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 59
+          }
+        }
+      ],
+      "specials": [
+        {
+            "nameID": "Bolt Charge LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":13,
+              "hitAdvantage":2,
+              "blockAdvantage":-2
+            }
+          },
+          {
+            "nameID": "Bolt Charge MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":15,
+              "hitAdvantage":2,
+              "blockAdvantage":-7
+            }
+          },
+          {
+            "nameID": "Bolt Charge HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":7,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Bolt Charge EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":14,
+              "hitAdvantage":0,
+              "blockAdvantage":-11
+            }
+          },
+          {
+            "nameID": "Thunder Clap LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":19,
+              "hitAdvantage":0,
+              "blockAdvantage":-5
+            }
+          },
+          {
+            "nameID": "Thunder Clap LP (Middle Charge)",
+            "type": "type_0",
+            "data": {
+            }
+          },
+          {
+            "nameID": "Thunder Clap LP (Max Charge)",
+            "type": "type_0",
+            "data": {
+              "startupFrames":70,
+              "hitAdvantage":31,
+              "blockAdvantage":18
+            }
+          },
+          {
+            "nameID": "Thunder Clap MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":19,
+              "hitAdvantage":0,
+              "blockAdvantage":-5
+            }
+          },
+          {
+            "nameID": "Thunder Clap MP (Middle Charge)",
+            "type": "type_0",
+            "data": {
+            }
+          },
+          {
+            "nameID": "Thunder Clap MP (Max Charge)",
+            "type": "type_0",
+            "data": {
+              "startupFrames":70,
+              "hitAdvantage":31,
+              "blockAdvantage":18
+            }
+          },
+          {
+            "nameID": "Thunder Clap HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":19,
+              "hitAdvantage":0,
+              "blockAdvantage":-5
+            }
+          },
+          {
+            "nameID": "Thunder Clap HP (Middle Charge)",
+            "type": "type_0",
+            "data": {
+            }
+          },
+          {
+            "nameID": "Thunder Clap HP (Max Charge)",
+            "type": "type_0",
+            "data": {
+              "startupFrames":70,
+              "hitAdvantage":31,
+              "blockAdvantage":18
+            }
+          },
+          {
+            "nameID": "Thunder Clap EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":17,
+              "hitAdvantage":1003,
+              "blockAdvantage":3
+            }
+          },
+          {
+            "nameID": "Thunder Clap EX (Middle Charge)",
+            "type": "type_0",
+            "data": {
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Thunder Clap EX (Max Charge)",
+            "type": "type_0",
+            "data": {
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Sunset Wheel LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":6,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Sunset Wheel MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":6,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Sunset Wheel HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":6,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Sunset Wheel EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":19,
+              "hitAdvantage":1003
+            }
+          }
+      ],
+      "critical_arts": [
+        {
+          "nameID": "Inazuma Spin Hold",
+          "type": "type_0",
+          "data": {
+            "hitAdvantage":1003
+          }
+        }
+      ]
+    },
+    {
+    "normals": [
+        {
+          "nameID": "placeholder",
+          "type": "type_0",
+          "data": {
+          }
+        }
+      ] 
+    }
+  ]
 }

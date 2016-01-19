@@ -31,6 +31,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
     private static final int DISPLAY_CODE_NOT_APPLICABLE = 1002;
     private static final int DISPLAY_CODE_KNOCKDOWN = 1003;
     private static final int DISPLAY_CODE_GUARD_BREAK = 1004;
+    private static final int DISPLAY_CODE_CRUMPLE = 1005;
 
     //This is the order in which moves will be displayed in the frame data UI.
     //Categories which are missing for a particular character will not be displayed.
@@ -242,6 +243,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
                     return context.getString(R.string.frame_data_knockdown);
                 case DISPLAY_CODE_GUARD_BREAK:
                     return context.getString(R.string.frame_data_guard_break);
+                case DISPLAY_CODE_CRUMPLE:
+                    return context.getString(R.string.frame_data_crumple);
                 default:
                     return String.valueOf(displayCode);
             }

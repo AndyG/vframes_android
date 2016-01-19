@@ -95,8 +95,22 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                 finish();
                 return true;
             case R.id.action_alternate_frame_data_toggle:
-                toggleFrameData();
-                return true;
+                switch (targetCharacter) {
+                    case MIKA:
+                    case DHALSIM:
+                    case RASHID:
+                    case NASH:
+                        throw new RuntimeException("toggled vtrigger for invalid character");
+                    case KEN:
+                        Toast.makeText(this, R.string.ken_vtrigger_framedata_not_ready, Toast.LENGTH_SHORT).show();
+                        return true;
+                    case LAURA:
+                        Toast.makeText(this, R.string.laura_vtrigger_framedata_not_ready, Toast.LENGTH_SHORT).show();
+                        return true;
+                    default:
+                        toggleFrameData();
+                        return true;
+                }
             default:
                 throw new RuntimeException("invalid menu item clicked");
         }

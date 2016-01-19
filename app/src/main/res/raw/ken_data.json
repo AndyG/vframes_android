@@ -86,5 +86,415 @@
             "input": "MK|ARROW|HK"
           }
         ]
-      }
+      },
+  "frame_data": [
+    {
+      "normals": [
+        {
+          "nameID": "s.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 2,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "s.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 5,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "s.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 3,
+            "blockAdvantage": -1
+          }
+        },
+        {
+          "nameID": "s.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "s.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 13,
+            "hitAdvantage": 3,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "c.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 3,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": -4,
+            "blockAdvantage": -9
+          }
+        },
+        {
+          "nameID": "c.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 3,
+            "blockAdvantage": 1
+          }
+        },
+        {
+          "nameID": "c.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 0,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "c.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -12
+          }
+        },
+        {
+          "nameID": "j.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3
+          }
+        },
+        {
+          "nameID": "j.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8
+          }
+        },
+        {
+          "nameID": "j.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6
+          }
+        },
+        {
+          "nameID": "j.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8
+          }
+        }
+      ],
+      "unique_attacks": [
+        {
+          "nameID": "f+HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 23,
+            "hitAdvantage": 0,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "f+HK (Feint)",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 31            
+          }
+        },
+        {
+          "nameID": "b+MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 21,
+            "hitAdvantage": 0,
+            "blockAdvantage": -6
+          }
+        },
+        {
+          "nameID": "b+MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 0,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "b+MP > HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -7
+          }
+        },
+        {
+          "nameID": "MK > HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -6
+          }
+        }
+      ],
+      "throws":[
+        {
+          "nameID": "Knee Bash",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Hell Wheel",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        }
+      ],
+      "vskill": [
+        {
+          "nameID": "Quick Step (Attack)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 24,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -7
+          }
+        }
+      ],
+      "vtrigger": [
+        {
+          "nameID": "Heat Rush",
+          "type": "type_0",
+          "data": {
+          }
+        }
+      ],
+      "specials": [
+        {
+            "nameID": "Hadoken LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":14,
+              "hitAdvantage":-3,
+              "blockAdvantage":-8
+            }
+          },
+          {
+            "nameID": "Hadoken MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":14,
+              "hitAdvantage":-3,
+              "blockAdvantage":-8
+            }
+          },
+          {
+            "nameID": "Hadoken HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":14,
+              "hitAdvantage":-3,
+              "blockAdvantage":-8
+            }
+          },
+          {
+            "nameID": "Hadoken EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":12,
+              "hitAdvantage":3,
+              "blockAdvantage":1
+            }
+          },
+          {
+            "nameID": "Shoryuken LP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":3,
+              "hitAdvantage":1003,
+              "blockAdvantage":-23
+            }
+          },
+          {
+            "nameID": "Shoryuken MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":4,
+              "hitAdvantage":1003,
+              "blockAdvantage":-26
+            }
+          },
+          {
+            "nameID": "Shoryuken HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":4,
+              "hitAdvantage":1003,
+              "blockAdvantage":-34
+            }
+          },
+          {
+            "nameID": "Shoryuken EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":4,
+              "hitAdvantage":1003,
+              "blockAdvantage":-45
+            }
+          },
+          {
+            "nameID": "Tatsu LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":3,
+              "hitAdvantage":1003,
+              "blockAdvantage":-8
+            }
+          },
+          {
+            "nameID": "Tatsu MK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":6,
+              "hitAdvantage":1003,
+              "blockAdvantage":-9
+            }
+          },
+          {
+            "nameID": "Tatsu HK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":16,
+              "hitAdvantage":1003,
+              "blockAdvantage":-42
+            }
+          },
+          {
+            "nameID": "Tatsu EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":8,
+              "hitAdvantage":1003,
+              "blockAdvantage":-59
+            }
+          },
+          {
+            "nameID": "Air Tatsu LK",
+            "type": "type_0",
+            "data": {
+              "startupFrames":9,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Air Tatsu MP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":9,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Air Tatsu HP",
+            "type": "type_0",
+            "data": {
+              "startupFrames":9,
+              "hitAdvantage":1003
+            }
+          },
+          {
+            "nameID": "Air Tatsu EX",
+            "type": "type_0",
+            "data": {
+              "startupFrames":8,
+              "hitAdvantage":1003
+            }
+          }
+      ],
+      "critical_arts": [
+        {
+          "nameID": "Gurin Enjinkyaku",
+          "type": "type_0",
+          "data": {
+            "startupFrames":9,
+            "hitAdvantage":1003,
+            "blockAdvantage":-26
+          }
+        }
+      ]
+    },
+    {
+    "normals": [
+        {
+          "nameID": "placeholder",
+          "type": "type_0",
+          "data": {
+          }
+        }
+      ] 
+    }
+  ]
 }

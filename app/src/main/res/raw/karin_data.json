@@ -127,9 +127,7 @@
           "data": {
             "startupFrames": 4,
             "hitAdvantage": 4,
-            "blockAdvantage": 2,
-            "damage": 30,
-            "stun": 70
+            "blockAdvantage": 2
           }
         },
         {
