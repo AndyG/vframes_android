@@ -206,9 +206,17 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
         if (characterFrameData != null && characterFrameData.size() > 1) {
             if (alternateFrameDataSelected) {
-                alternateFrameDataItem.setIcon(R.drawable.fire_logo);
+                if(targetCharacter == CharacterID.CLAW) {
+                    alternateFrameDataItem.setIcon(R.drawable.claw_off);
+                } else {
+                    alternateFrameDataItem.setIcon(R.drawable.fire_logo);
+                }
             } else {
-                alternateFrameDataItem.setIcon(R.drawable.logo);
+                if(targetCharacter == CharacterID.CLAW) {
+                    alternateFrameDataItem.setIcon(R.drawable.claw_on);
+                } else {
+                    alternateFrameDataItem.setIcon(R.drawable.logo);
+                }
             }
         } else {
             alternateFrameDataItem.setVisible(false);
