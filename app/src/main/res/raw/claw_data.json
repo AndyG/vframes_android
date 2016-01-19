@@ -120,5 +120,769 @@
             "pretextID":"id_during_jump_near_wall"
           }
         ]
-      }
+      },
+  "frame_data": [
+    {
+      "normals": [
+        {
+          "nameID": "s.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 5,
+            "blockAdvantage": 1
+          }
+        },
+        {
+          "nameID": "s.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 6,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "s.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 5,
+            "blockAdvantage": -3
+          }
+        },
+        {
+          "nameID": "s.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 11,
+            "hitAdvantage": 4,
+            "blockAdvantage": -1
+          }
+        },
+        {
+          "nameID": "c.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 5,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 3,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "c.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": -2,
+            "blockAdvantage": -5
+          }
+        },
+        {
+          "nameID": "c.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "c.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 6,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -13
+          }
+        },
+        {
+          "nameID": "j.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7
+          }
+        },
+        {
+          "nameID": "j.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9
+          }
+        }
+      ],
+      "unique_attacks": [
+        {
+          "nameID": "f+MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 0,
+            "blockAdvantage": -6
+          }
+        },
+        {
+          "nameID": "f+HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 13,
+            "hitAdvantage": -5,
+            "blockAdvantage": -14
+          }
+        },
+        {
+          "nameID": "HP > HP > MP+MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -21
+          }
+        }
+      ],
+      "throws":[
+        {
+          "nameID": "Rainbow Suplex",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Crescent Line",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Stardust Shot (in air)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        }
+      ],
+      "vskill": [
+        {
+          "nameID": "Matador Turn",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 1003
+          }
+        }
+      ],
+      "vtrigger": [
+        {
+          "nameID": "Bloody Kiss - Torero",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 25,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "Bloody Kiss - Rojo",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -22
+          }
+        },
+        {
+          "nameID": "Bloody Kiss - Azul",
+          "type": "type_0",
+          "data": {
+            "hitAdvantage": 1003,
+            "blockAdvantage": -2
+          }
+        }
+      ],
+      "specials": [
+        {
+          "nameID": "Flying Barcelona Attack LK",
+          "type": "type_0",
+          "data": {
+
+          }
+        },
+        {
+          "nameID": "Flying Barcelona Attack MK",
+          "type": "type_0",
+          "data": {
+
+          }
+        },
+        {
+          "nameID": "Flying Barcelona Attack HK",
+          "type": "type_0",
+          "data": {
+
+          }
+        },
+        {
+          "nameID": "Flying Barcelona Attack EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9
+          }
+        },
+        {
+          "nameID": "Izuna Drop",
+          "type": "type_0",
+          "data": {
+            "startupFrames":4,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Crimson Terror LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames":8,
+            "hitAdvantage":2,
+            "blockAdvantage":-6
+          }
+        },
+        {
+          "nameID": "Crimson Terror MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames":17,
+            "hitAdvantage":0,
+            "blockAdvantage":-7
+          }
+        },
+        {
+          "nameID": "Crimson Terror HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames":19,
+            "hitAdvantage":1003,
+            "blockAdvantage":-8
+          }
+        },
+        {
+          "nameID": "Crimson Terror EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames":16,
+            "hitAdvantage":1003,
+            "blockAdvantage":-2
+          }
+        },
+        {
+          "nameID": "Aurora Spin Edge LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames":12,
+            "hitAdvantage":1003,
+            "blockAdvantage":-7
+          }
+        },
+        {
+          "nameID": "Aurora Spin Edge MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames":15,
+            "hitAdvantage":1003,
+            "blockAdvantage":-6
+          }
+        },
+        {
+          "nameID": "Aurora Spin Edge HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames":12,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Aurora Spin Edge EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames":12,
+            "hitAdvantage":1003,
+            "blockAdvantage":-3
+          }
+        },
+        {
+          "nameID": "Switch Claw LP",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 23
+          }
+        },
+        {
+          "nameID": "Switch Claw MP",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 23
+          }
+        },
+        {
+          "nameID": "Switch Claw HP",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 23
+          }
+        }
+      ],
+      "critical_arts": [
+        {
+          "nameID": "Bloody Rain",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage":1003
+          }
+        }
+      ]
+    },
+    {
+      "normals": [
+        {
+          "nameID": "s.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 3,
+            "blockAdvantage": 1
+          }
+        },
+        {
+          "nameID": "s.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 4,
+            "blockAdvantage": -4
+          }
+        },
+        {
+          "nameID": "s.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 3,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "s.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 11,
+            "hitAdvantage": 4,
+            "blockAdvantage": -1
+          }
+        },
+        {
+          "nameID": "c.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 4,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 0,
+            "blockAdvantage": -3
+          }
+        },
+        {
+          "nameID": "c.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 4,
+            "blockAdvantage": 0
+          }
+        },
+        {
+          "nameID": "c.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 6,
+            "blockAdvantage": 2
+          }
+        },
+        {
+          "nameID": "c.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -13
+          }
+        },
+        {
+          "nameID": "j.LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 7
+          }
+        },
+        {
+          "nameID": "j.LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 4
+          }
+        },
+        {
+          "nameID": "j.MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5
+          }
+        },
+        {
+          "nameID": "j.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9
+          }
+        }
+      ],
+      "unique_attacks": [
+        {
+          "nameID": "f+MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 0,
+            "blockAdvantage": -6
+          }
+        },
+        {
+          "nameID": "MP > HK > MP+MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 6,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -17
+          }
+        }
+      ],
+      "throws":[
+        {
+          "nameID": "Rainbow Suplex",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Crescent Line",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        },
+        {
+          "nameID": "Stardust Shot (in air)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003
+          }
+        }
+      ],
+      "vskill": [
+        {
+          "nameID": "Matador Turn",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 1003
+          }
+        }
+      ],
+      "vtrigger": [
+        {
+          "nameID": "Bloody Kiss - Torero",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 25,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -2
+          }
+        },
+        {
+          "nameID": "Bloody Kiss - Rojo",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 22,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -22
+          }
+        },
+        {
+          "nameID": "Bloody Kiss - Azul",
+          "type": "type_0",
+          "data": {
+            "hitAdvantage": 1003,
+            "blockAdvantage": -2
+          }
+        }
+      ],
+      "specials": [
+        {
+          "nameID": "Flying Barcelona Attack LK",
+          "type": "type_0",
+          "data": {
+
+          }
+        },
+        {
+          "nameID": "Flying Barcelona Attack MK",
+          "type": "type_0",
+          "data": {
+
+          }
+        },
+        {
+          "nameID": "Flying Barcelona Attack HK",
+          "type": "type_0",
+          "data": {
+
+          }
+        },
+        {
+          "nameID": "Flying Barcelona Attack EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9
+          }
+        },
+        {
+          "nameID": "Izuna Drop",
+          "type": "type_0",
+          "data": {
+            "startupFrames":4,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Crimson Terror LK",
+          "type": "type_0",
+          "data": {
+            "startupFrames":8,
+            "hitAdvantage":2,
+            "blockAdvantage":-6
+          }
+        },
+        {
+          "nameID": "Crimson Terror MK",
+          "type": "type_0",
+          "data": {
+            "startupFrames":17,
+            "hitAdvantage":0,
+            "blockAdvantage":-7
+          }
+        },
+        {
+          "nameID": "Crimson Terror HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames":19,
+            "hitAdvantage":1003,
+            "blockAdvantage":-8
+          }
+        },
+        {
+          "nameID": "Crimson Terror EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames":16,
+            "hitAdvantage":1003,
+            "blockAdvantage":-2
+          }
+        },
+        {
+          "nameID": "Grand Izuna Drop LP",
+          "type": "type_0",
+          "data": {
+            "startupFrames":6,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Grand Izuna Drop MP",
+          "type": "type_0",
+          "data": {
+            "startupFrames":6,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Grand Izuna Drop HP",
+          "type": "type_0",
+          "data": {
+            "startupFrames":6,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Grand Izuna Drop EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames":6,
+            "hitAdvantage":1003
+          }
+        },
+        {
+          "nameID": "Switch Claw LP",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 23
+          }
+        },
+        {
+          "nameID": "Switch Claw MP",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 23
+          }
+        },
+        {
+          "nameID": "Switch Claw HP",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 23
+          }
+        }
+      ],
+      "critical_arts": [
+        {
+          "nameID": "Bloody Rain",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "hitAdvantage":1003
+          }
+        }
+      ]
+    }
+  ]
 }
