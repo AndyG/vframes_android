@@ -222,6 +222,7 @@
 
     <!-- Fang Movelist -->
     <string name="fang_vskill_description">Shoots a projectile forward that applies poison if it touches the opponent. This attack causes no hitstun or blockstun.</string>
+    <string name="fang_vtrigger_description">A poisonous cloud surrounds F.A.N.G. Opponents in the cloud take damage over time.</string>
     <string name="fang_critical_art_description">He turns into a bird.</string>
 
     <!-- Frame Data Cell Entries-->

@@ -186,6 +186,7 @@ public class StringResolver {
 
         //Fang Movelist
         stringIdMap.put("id_fang_vskill_description", R.string.fang_vskill_description);
+        stringIdMap.put("id_fang_vtrigger_description", R.string.fang_vtrigger_description);
         stringIdMap.put("id_fang_critical_art_description", R.string.fang_critical_art_description);
 
     }

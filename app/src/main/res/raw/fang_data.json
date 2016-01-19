@@ -6,7 +6,14 @@
             "input": "MP|PLUS|MK",
             "descriptionID":"id_fang_vskill_description"
           }
-        ],      
+        ],
+        "vtrigger": [
+          {
+            "nameID":"Dokunomu",
+            "input": "HP|PLUS|HK",
+            "descriptionID": "id_fang_vtrigger_description"
+          }
+        ],
         "critical_arts": [
           {
             "nameID": "Flappy Bird?",
