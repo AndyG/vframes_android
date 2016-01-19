@@ -230,4 +230,10 @@
     <string name="frame_data_missing_value">\?</string>
     <string name="frame_data_guard_break">Guard Break</string>
 
+    <!-- Alternate Frame Data Messages -->
+    <string name="showing_trigger_data">Showing V-Trigger Active frame data</string>
+    <string name="showing_non_trigger_data">Showing V-Trigger Inactive frame data</string>
+    <string name="showing_claw_off_data">Showing Claw Off frame data</string>
+    <string name="showing_claw_on_data">Showing Claw Off frame data</string>
+
 </resources>

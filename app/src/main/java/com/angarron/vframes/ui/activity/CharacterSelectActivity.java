@@ -69,7 +69,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
         int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
         boolean reviewRequestSeen = sharedPreferences.getBoolean(REVIEW_REQUEST_SEEN, false);
 
-        if(appLaunchCount >= 3 && !reviewRequestSeen) {
+        if(appLaunchCount >= 5 && !reviewRequestSeen) {
             SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
             sharedPreferencesEditor.putBoolean(REVIEW_REQUEST_SEEN, true);
             sharedPreferencesEditor.apply();
@@ -90,6 +90,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
             }
         });
+
         builder.setNegativeButton(R.string.rating_request_negative_button, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User cancelled the dialog
@@ -97,6 +98,11 @@ public class CharacterSelectActivity extends AppCompatActivity {
         });
 
         AlertDialog dialog = builder.create();
+
+        //Users often immediately touch the screen when they enter the CharacterSelectActivity,
+        //which would result in accidentally dismissing the dialog without reading it.
+        dialog.setCanceledOnTouchOutside(false);
+
         dialog.show();
     }
 
