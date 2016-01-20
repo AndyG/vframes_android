@@ -222,6 +222,7 @@
 
     <!-- Fang Movelist -->
     <string name="fang_vskill_description">Shoots a projectile forward that applies poison if it touches the opponent. This attack causes no hitstun or blockstun.</string>
+    <string name="fang_vtrigger_description">A poisonous cloud surrounds F.A.N.G. Opponents in the cloud take damage over time.</string>
     <string name="fang_critical_art_description">He turns into a bird.</string>
 
     <!-- Frame Data Cell Entries-->
@@ -235,7 +236,7 @@
     <string name="showing_trigger_data">Showing V-Trigger Active frame data</string>
     <string name="showing_non_trigger_data">Showing V-Trigger Inactive frame data</string>
     <string name="showing_claw_off_data">Showing Claw Off frame data</string>
-    <string name="showing_claw_on_data">Showing Claw Off frame data</string>
+    <string name="showing_claw_on_data">Showing Claw On frame data</string>
     <string name="ken_vtrigger_framedata_not_ready">Sorry, Ken\'s V-Trigger frame data is not yet available.</string>
     <string name="laura_vtrigger_framedata_not_ready">Sorry, Laura\'s V-Trigger frame data is not yet available.</string>
 
