@@ -101,7 +101,7 @@
           },
           {
             "nameID": "Buster Claw",
-            "input": "DOWN_FORWARD|PLUS|HP",
+            "input": "FORWARD|PLUS|HP",
             "posttextID":"id_claw_claw_on_only"
           },
           {
