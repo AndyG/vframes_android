@@ -205,21 +205,17 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         List<FrameData> characterFrameData = targetCharacterModel.getFrameData();
 
         if (characterFrameData != null && characterFrameData.size() > 1) {
-            if (alternateFrameDataSelected) {
-                if(targetCharacter == CharacterID.CLAW) {
-                    alternateFrameDataItem.setIcon(R.drawable.claw_off);
-                } else {
-                    alternateFrameDataItem.setIcon(R.drawable.fire_logo);
-                }
-            } else {
-                if(targetCharacter == CharacterID.CLAW) {
-                    alternateFrameDataItem.setIcon(R.drawable.claw_on);
-                } else {
-                    alternateFrameDataItem.setIcon(R.drawable.logo);
-                }
-            }
+            alternateFrameDataItem.setIcon(resolveAlternateFrameDataMenuDrawable());
         } else {
             alternateFrameDataItem.setVisible(false);
+        }
+    }
+
+    private int resolveAlternateFrameDataMenuDrawable() {
+        if(targetCharacter == CharacterID.CLAW) {
+            return alternateFrameDataSelected ? R.drawable.claw_off : R.drawable.claw_on;
+        } else {
+            return alternateFrameDataSelected ? R.drawable.fire_logo : R.drawable.logo;
         }
     }
 
