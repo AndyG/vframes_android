@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
@@ -73,6 +74,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        verifyDataAvailable();
         alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
         setAlternateFrameDataMenuState();
         return super.onPrepareOptionsMenu(menu);
@@ -156,6 +158,12 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     private void verifyDataAvailable() {
         VFramesApplication application = (VFramesApplication) getApplication();
         if (application.getDataModel() == null) {
+
+            //If this is a release build, log this issue to Crashlytics.
+            if (!BuildConfig.DEBUG) {
+                Crashlytics.logException(new Throwable("Sending user to splash screen because data was unavailable"));
+            }
+
             Intent startSplashIntent = new Intent(this, SplashActivity.class);
             startActivity(startSplashIntent);
             finish();
