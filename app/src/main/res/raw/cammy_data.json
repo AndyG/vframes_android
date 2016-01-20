@@ -565,30 +565,18 @@
           "nameID": "Cannon Strike LK",
           "type": "type_0",
           "data": {
-
           }
         },
         {
           "nameID": "Cannon Strike MK",
           "type": "type_0",
           "data": {
-
           }
         },
         {
           "nameID": "Cannon Strike HK",
           "type": "type_0",
           "data": {
-
-          }
-        }
-      ],
-      "critical_arts": [
-        {
-          "nameID": "Cross Stinger Assault",
-          "type": "type_0",
-          "data": {
-            "hitAdvantage":1003
           }
         }
       ]

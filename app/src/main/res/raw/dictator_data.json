@@ -608,17 +608,6 @@
             "blockAdvantage":4
           }
         }
-      ],
-      "critical_arts": [
-        {
-          "nameID": "Ultimate Psycho Crusher",
-          "type": "type_0",
-          "data": {
-            "startupFrames":19,
-            "hitAdvantage":1003,
-            "blockAdvantage":-40
-          }
-        }
       ]
     }
   ]
