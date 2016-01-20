@@ -556,7 +556,7 @@
       ],
       "critical_arts": [
         {
-          "nameID": "Kanzuki-Ryu Hadorokushiki Hasha No Kata",
+          "nameID": "Hasha No Kata",
           "type": "type_0",
           "data": {
             "startupFrames":9,
