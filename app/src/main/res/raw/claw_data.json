@@ -322,7 +322,7 @@
           }
         },
         {
-          "nameID": "Stardust Shot (in air)",
+          "nameID": "Stardust Shot",
           "type": "type_0",
           "data": {
             "startupFrames": 5,
@@ -700,7 +700,7 @@
           }
         },
         {
-          "nameID": "Stardust Shot (in air)",
+          "nameID": "Stardust Shot",
           "type": "type_0",
           "data": {
             "startupFrames": 5,
