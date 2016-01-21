@@ -25,4 +25,14 @@ public class FrameData {
         return categoriesMap.get(category);
     }
 
+    public boolean hasAlternateFrameData() {
+        for (List<IFrameDataEntryHolder> frameDataEntries : categoriesMap.values()) {
+            for (IFrameDataEntryHolder frameDataEntryHolder : frameDataEntries) {
+                if (frameDataEntryHolder.hasAlternate()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

@@ -52,7 +52,9 @@
     <color name="pager_tab_strip_background">#03222e</color>
     <color name="tab_indicator_color">#0fa5de</color>
 
+    <!-- Frame Data Row Background-->
     <color name="frame_data_row_background_shaded">#e1e1e1</color>
-    <color name="frame_data_row_background_unshaded">#FFF</color>
+    <color name="frame_data_row_alternate_background_shaded">#df9898</color>
+    <color name="frame_data_row_alternate_background_unshaded">#ffc4c4</color>
 
 </resources>

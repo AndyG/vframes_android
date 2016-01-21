@@ -18,7 +18,9 @@ import data.model.character.FrameData;
 
 public class FrameDataFragment extends Fragment {
 
+    private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
     private RecyclerView frameDataRecyclerView;
+    private boolean showingAlternateFrameData = false;
 
     @Override
     public void onAttach(Context context) {
@@ -55,8 +57,25 @@ public class FrameDataFragment extends Fragment {
         }
     }
 
-    public void updateFrameData(FrameData frameData) {
-        frameDataRecyclerView.setAdapter(new FrameDataRecyclerViewAdapter(getContext(), frameData));
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(ALTERNATE_FRAME_DATA_SELECTED, showingAlternateFrameData);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            showingAlternateFrameData = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED, false);
+            setShowAlternateFrameData(showingAlternateFrameData);
+        }
+    }
+
+    public void setShowAlternateFrameData(boolean showAlternateFrameData) {
+        this.showingAlternateFrameData = showAlternateFrameData;
+        FrameDataRecyclerViewAdapter frameDataRecyclerViewAdapter = (FrameDataRecyclerViewAdapter) frameDataRecyclerView.getAdapter();
+        frameDataRecyclerViewAdapter.setShowAlternate(showAlternateFrameData);
     }
 
     public interface IFrameDataFragmentHost {

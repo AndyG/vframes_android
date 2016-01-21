@@ -36,7 +36,7 @@ public class SFCharacterJsonAdapter {
     public static SFCharacter JsonToCharacter(JsonObject characterJson) {
         JsonObject moveListJson = characterJson.getAsJsonObject("move_list");
         if (characterJson.has("frame_data")) {
-            JsonArray frameDataJson = characterJson.getAsJsonArray("frame_data");
+            JsonObject frameDataJson = characterJson.getAsJsonObject("frame_data");
             return new SFCharacter(jsonToMoveList(moveListJson), jsonToFrameData(frameDataJson));
         } else {
             return new SFCharacter(jsonToMoveList(moveListJson), null);
@@ -64,18 +64,7 @@ public class SFCharacterJsonAdapter {
         return moveList;
     }
 
-    private static List<FrameData> jsonToFrameData(JsonArray frameDataArrayJson) {
-        List<FrameData> frameData = new ArrayList<>();
-
-        for (JsonElement frameDataSet : frameDataArrayJson) {
-            frameData.add(parseFrameDataSet(frameDataSet.getAsJsonObject()));
-        }
-
-        return frameData;
-    }
-
-    private static FrameData parseFrameDataSet(JsonObject frameDataJsonObject) {
-
+    private static FrameData jsonToFrameData(JsonObject frameDataJsonObject) {
         Map<MoveCategory, List<IFrameDataEntryHolder>> frameDataSet = new HashMap<>();
 
         for (Map.Entry<String, JsonElement> category : frameDataJsonObject.entrySet()) {

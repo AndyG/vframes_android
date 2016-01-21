@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +15,10 @@ import com.angarron.vframes.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import data.model.character.FrameData;
 import data.model.move.IFrameDataEntry;
+import data.model.move.IFrameDataEntryHolder;
 import data.model.move.MoveCategory;
 
 public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
@@ -48,6 +47,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private Context context;
     private List<Object> displayList = new ArrayList<>();
+    private boolean showAlternate = false;
 
     public FrameDataRecyclerViewAdapter(Context context, FrameData frameData) {
         this.context = context;
@@ -89,7 +89,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
     public int getItemViewType(int position) {
         if (displayList.get(position) instanceof MoveCategory) {
             return VIEW_TYPE_HEADER;
-        } else if (displayList.get(position) instanceof IFrameDataEntry) {
+        } else if (displayList.get(position) instanceof IFrameDataEntryHolder) {
             //TODO: switch on the entry's type to decide the right view type
             return VIEW_TYPE_FRAME_DATA_ENTRY;
         } else {
@@ -97,15 +97,43 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         }
     }
 
-    public void tintItems() {
-
+    public void setShowAlternate(boolean showAlternate) {
+        if (this.showAlternate != showAlternate) {
+            this.showAlternate = showAlternate;
+            notifyDataSetChanged();
+        }
     }
 
     private void setupFrameDataItemViewHolder(FrameDataItemViewHolder holder, int position) {
-        IFrameDataEntry frameDataEntry = (IFrameDataEntry) displayList.get(position);
+        IFrameDataEntryHolder frameDataEntryHolder = (IFrameDataEntryHolder) displayList.get(position);
         int distanceFromHeader = findDistanceFromHeader(position);
+
+        boolean showingAlternateEntry = showAlternate && frameDataEntryHolder.hasAlternate();
+
         boolean shouldShade = (distanceFromHeader % 2 == 1);
-        holder.setupView(frameDataEntry, shouldShade);
+        int backgroundColor = resolveBackgroundColor(shouldShade, showingAlternateEntry);
+
+        if (showingAlternateEntry) {
+            holder.setupView(frameDataEntryHolder.getAlternateFrameDataEntry(), backgroundColor);
+        } else {
+            holder.setupView(frameDataEntryHolder.getFrameDataEntry(), backgroundColor);
+        }
+    }
+
+    private int resolveBackgroundColor(boolean shouldShade, boolean showingAlternateEntry) {
+        if (showingAlternateEntry) {
+            if (shouldShade) {
+                return ContextCompat.getColor(context, R.color.frame_data_row_alternate_background_shaded);
+            } else {
+                return ContextCompat.getColor(context, R.color.frame_data_row_alternate_background_unshaded);
+            }
+        } else {
+            if (shouldShade) {
+                return ContextCompat.getColor(context, R.color.frame_data_row_background_shaded);
+            } else {
+                return Color.TRANSPARENT;
+            }
+        }
     }
 
     private int findDistanceFromHeader(int position) {
@@ -120,10 +148,10 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
     private void setupDisplayList(FrameData frameData) {
         for (MoveCategory category : categoriesOrder) {
             if (frameData.hasCategory(category)) {
-                List<IFrameDataEntry> frameDataEntries = frameData.getFromCategory(category);
+                List<IFrameDataEntryHolder> frameDataEntries = frameData.getFromCategory(category);
                 if (!frameDataEntries.isEmpty()) {
                     displayList.add(category);
-                    for (IFrameDataEntry frameDataEntry : frameDataEntries) {
+                    for (IFrameDataEntryHolder frameDataEntry : frameDataEntries) {
                         displayList.add(frameDataEntry);
                     }
                 }
@@ -203,7 +231,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
             description = (TextView) v.findViewById(R.id.description);
         }
 
-        private void setupView(IFrameDataEntry frameDataEntry, boolean shade) {
+        private void setupView(IFrameDataEntry frameDataEntry, int backgroundColor) {
             moveName.setText(frameDataEntry.getDisplayName());
 
             startupFrames.setText(getDisplayValue(frameDataEntry.getStartupFrames()));
@@ -228,11 +256,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
                 description.setVisibility(View.GONE);
             }
 
-            if (shade) {
-                rowContainer.setBackgroundColor(ContextCompat.getColor(context, R.color.frame_data_row_background_shaded));
-            } else {
-                rowContainer.setBackgroundColor(Color.TRANSPARENT);
-            }
+            rowContainer.setBackgroundColor(backgroundColor);
         }
 
         //Returns the String that should be displayed for a given
