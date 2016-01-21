@@ -101,8 +101,7 @@
           }          
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
       "normals": [
         {
           "nameID": "s.LP",
@@ -111,6 +110,9 @@
             "startupFrames": 3,
             "hitAdvantage": 3,
             "blockAdvantage": 2
+          },
+          "alternateData": {
+
           }
         },
         {
@@ -516,16 +518,5 @@
           }
         }
       ]
-    },
-    {
-    "normals": [
-        {
-          "nameID": "placeholder",
-          "type": "type_0",
-          "data": {
-          }
-        }
-      ] 
     }
-  ]
 }

@@ -97,8 +97,7 @@
           }
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
       "normals": [
         {
           "nameID": "s.LP",
@@ -326,12 +325,22 @@
             "startupFrames": 7,
             "hitAdvantage": 1003,
             "blockAdvantage": -12
+          },
+          "alternateData": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -12
           }
         },
         {
           "nameID": "Spiral Arrow MK",
           "type": "type_0",
           "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -15
+          },
+          "alternateData": {
             "startupFrames": 7,
             "hitAdvantage": 1003,
             "blockAdvantage": -15
@@ -344,12 +353,22 @@
             "startupFrames": 7,
             "hitAdvantage": 1003,
             "blockAdvantage": -11
+          },
+          "alternateData": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -11
           }
         },
         {
           "nameID": "Spiral Arrow EX",
           "type": "type_0",
           "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -11
+          },
+          "alternateData": {
             "startupFrames": 7,
             "hitAdvantage": 1003,
             "blockAdvantage": -11
@@ -362,12 +381,22 @@
             "startupFrames": 3,
             "hitAdvantage": 1003,
             "blockAdvantage": -37
+          },
+          "alternateData": {
+            "startupFrames": 3,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -37
           }
         },
         {
           "nameID": "Cannon Spike MK",
           "type": "type_0",
           "data": {
+            "startupFrames": 5,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -37
+          },
+          "alternateData": {
             "startupFrames": 5,
             "hitAdvantage": 1003,
             "blockAdvantage": -37
@@ -380,12 +409,22 @@
             "startupFrames": 6,
             "hitAdvantage": 1003,
             "blockAdvantage": -37
+          },
+          "alternateData": {
+            "startupFrames": 6,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -37
           }
         },
         {
           "nameID": "Cannon Spike EX",
           "type": "type_0",
           "data": {
+            "startupFrames": 3,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -37
+          },
+          "alternateData": {
             "startupFrames": 3,
             "hitAdvantage": 1003,
             "blockAdvantage": -37
@@ -396,6 +435,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 13
+          },
+          "alternateData": {
+            "startupFrames": 13
           }
         },
         {
@@ -403,12 +445,18 @@
           "type": "type_0",
           "data": {
             "startupFrames": 13
+          },
+          "alternateData": {
+            "startupFrames": 13
           }
         },
         {
           "nameID": "Cannon Strike HK",
           "type": "type_0",
           "data": {
+            "startupFrames": 13
+          },
+          "alternateData": {
             "startupFrames": 13
           }
         },
@@ -418,12 +466,19 @@
           "data": {
             "startupFrames": 13,
             "hitAdvantage": 1003
+          },
+          "alternateData": {
+            "startupFrames": 13,
+            "hitAdvantage": 1003
           }
         },
         {
           "nameID": "Hooligan Combination LP",
           "type": "type_0",
           "data": {
+            "recoveryFrames": 39
+          },
+          "alternateData": {
             "recoveryFrames": 39
           }
         },
@@ -432,12 +487,18 @@
           "type": "type_0",
           "data": {
             "recoveryFrames": 39
+          },
+          "alternateData": {
+            "recoveryFrames": 39
           }
         },
         {
           "nameID": "Hooligan Combination HP",
           "type": "type_0",
           "data": {
+            "recoveryFrames": 39
+          },
+          "alternateData": {
             "recoveryFrames": 39
           }
         },
@@ -446,12 +507,19 @@
           "type": "type_0",
           "data": {
             "recoveryFrames": 39
+          },
+          "alternateData": {
+            "recoveryFrames": 39
           }
         },
         {
           "nameID": "Razor Edge Slicer",
           "type": "type_0",
           "data": {
+            "hitAdvantage": 1003,
+            "blockAdvantage": -2
+          },
+          "alternateData": {
             "hitAdvantage": 1003,
             "blockAdvantage": -2
           }
@@ -462,6 +530,10 @@
           "data": {
             "hitAdvantage": 1003,
             "blockAdvantage": 3
+          },
+          "alternateData": {
+            "hitAdvantage": 1003,
+            "blockAdvantage": 3
           }
         },
         {
@@ -469,12 +541,18 @@
           "type": "type_0",
           "data": {
             "hitAdvantage": 1003
+          },
+          "alternateData": {
+            "hitAdvantage": 1003
           }
         },
         {
           "nameID": "Cross Scissors Pressure",
           "type": "type_0",
           "data": {
+            "hitAdvantage": 1003
+          },
+          "alternateData": {
             "hitAdvantage": 1003
           }
         },
@@ -484,12 +562,20 @@
           "data": {
             "startupFrames": 15,
             "hitAdvantage": 1003
+          },
+          "alternateData": {
+            "startupFrames": 15,
+            "hitAdvantage": 1003
           }
         },
         {
           "nameID": "Cannon Strike EX",
           "type": "type_0",
           "data": {
+            "startupFrames": 13,
+            "hitAdvantage": 1003
+          },
+          "alternateData": {
             "startupFrames": 13,
             "hitAdvantage": 1003
           }
@@ -501,85 +587,12 @@
           "type": "type_0",
           "data": {
 
-          }
-        }
-      ]
-    },
-    {
-      "specials": [
-        {
-          "nameID": "Spiral Arrow LK",
-          "type": "type_0",
-          "data": {
-            "startupFrames":7,
-            "hitAdvantage":1003,
-            "blockAdvantage":-13
-          }
-        },
-        {
-          "nameID": "Spiral Arrow MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames":7,
-            "hitAdvantage":1003,
-            "blockAdvantage":-13
-          }
-        },
-        {
-          "nameID": "Spiral Arrow HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames":7,
-            "hitAdvantage":1003,
-            "blockAdvantage":-13
-          }
-        },
-        {
-          "nameID": "Cannon Spike LK",
-          "type": "type_0",
-          "data": {
-            "startupFrames":3,
-            "hitAdvantage":1003,
-            "blockAdvantage":-37
-          }
-        },
-        {
-          "nameID": "Cannon Spike MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames":3,
-            "hitAdvantage":1003,
-            "blockAdvantage":-37
-          }
-        },
-        {
-          "nameID": "Cannon Spike HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames":3,
-            "hitAdvantage":1003,
-            "blockAdvantage":-37
-          }
-        },
-        {
-          "nameID": "Cannon Strike LK",
-          "type": "type_0",
-          "data": {
-          }
-        },
-        {
-          "nameID": "Cannon Strike MK",
-          "type": "type_0",
-          "data": {
-          }
-        },
-        {
-          "nameID": "Cannon Strike HK",
-          "type": "type_0",
-          "data": {
+          },
+          "alternateData": {
+
           }
         }
       ]
     }
-  ]
+
 }

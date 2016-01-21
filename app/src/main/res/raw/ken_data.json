@@ -87,8 +87,7 @@
           }
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
       "normals": [
         {
           "nameID": "s.LP",
@@ -97,6 +96,9 @@
             "startupFrames": 4,
             "hitAdvantage": 4,
             "blockAdvantage": 2
+          },
+          "alternateData": {
+
           }
         },
         {
@@ -255,7 +257,7 @@
           "nameID": "f+HK (Feint)",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 31            
+            "recoveryFrames": 31
           }
         },
         {
@@ -485,16 +487,5 @@
           }
         }
       ]
-    },
-    {
-    "normals": [
-        {
-          "nameID": "placeholder",
-          "type": "type_0",
-          "data": {
-          }
-        }
-      ] 
     }
-  ]
 }

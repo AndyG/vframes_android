@@ -118,8 +118,7 @@
           }
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
       "normals": [
         {
           "nameID": "s.LP",
@@ -566,5 +565,5 @@
         }
       ]
     }
-  ]
+
 }

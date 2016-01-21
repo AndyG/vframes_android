@@ -84,8 +84,7 @@
           }
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
       "normals": [
         {
           "nameID": "s.LP",
@@ -312,6 +311,11 @@
             "startupFrames": 18,
             "hitAdvantage": 1003,
             "blockAdvantage": -6
+          },
+          "alternateData": {
+            "startupFrames": 15,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -6
           }
         },
         {
@@ -319,6 +323,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 21,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -6
+          },
+          "alternateData": {
+            "startupFrames": 17,
             "hitAdvantage": 1003,
             "blockAdvantage": -6
           }
@@ -330,12 +339,22 @@
             "startupFrames": 24,
             "hitAdvantage": 1003,
             "blockAdvantage": -6
+          },
+          "alternateData": {
+            "startupFrames": 21,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -6
           }
         },
         {
           "nameID": "The Disc's Guidance EX",
           "type": "type_0",
           "data": {
+            "startupFrames": 17,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -13
+          },
+          "alternateData": {
             "startupFrames": 17,
             "hitAdvantage": 1003,
             "blockAdvantage": -13
@@ -416,6 +435,11 @@
             "startupFrames": 14,
             "hitAdvantage": 2,
             "blockAdvantage": -4
+          },
+          "alternateData": {
+            "startupFrames": 14,
+            "hitAdvantage": 2,
+            "blockAdvantage": -3
           }
         },
         {
@@ -425,6 +449,11 @@
             "startupFrames": 19,
             "hitAdvantage": 5,
             "blockAdvantage": -2
+          },
+          "alternateData": {
+            "startupFrames": 19,
+            "hitAdvantage": 5,
+            "blockAdvantage": -1
           }
         },
         {
@@ -434,12 +463,22 @@
             "startupFrames": 23,
             "hitAdvantage": 1003,
             "blockAdvantage": 0
+          },
+          "alternateData": {
+            "startupFrames": 23,
+            "hitAdvantage": 1003,
+            "blockAdvantage": 2
           }
         },
         {
           "nameID": "Valiant Rebellion EX",
           "type": "type_0",
           "data": {
+            "startupFrames": 10,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
+          },
+          "alternateData": {
             "startupFrames": 10,
             "hitAdvantage": 2,
             "blockAdvantage": -2
@@ -453,85 +492,7 @@
           "data": {
             "hitAdvantage":1003
           }
-        }
-      ]
-    },
-    {
-    "specials": [
-        {
-          "nameID": "The Disc's Guidance LP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 15,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -6
-          }
         },
-        {
-          "nameID": "The Disc's Guidance MP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 17,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -6
-          }
-        },
-        {
-          "nameID": "The Disc's Guidance HP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 21,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -6
-          }
-        },
-        {
-          "nameID": "The Disc's Guidance EX",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 17,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -13
-          }
-        },               
-        {
-          "nameID": "Valiant Rebellion LK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 14,
-            "hitAdvantage": 2,
-            "blockAdvantage": -3
-          }
-        },
-        {
-          "nameID": "Valiant Rebellion MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 19,
-            "hitAdvantage": 5,
-            "blockAdvantage": -1
-          }
-        },
-        {
-          "nameID": "Valiant Rebellion HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 23,
-            "hitAdvantage": 1003,
-            "blockAdvantage": 2
-          }
-        },
-        {
-          "nameID": "Valiant Rebellion EX",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 10,
-            "hitAdvantage": 2,
-            "blockAdvantage": -2
-          }
-        }
-      ],
-      "critical_arts": [
         {
           "nameID": "Soul Offering",
           "type": "type_0",
@@ -541,5 +502,4 @@
         }
       ]
     }
-  ]
 }

@@ -90,8 +90,7 @@
           }
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
         "normals": [
           {
             "nameID": "s.LP",
@@ -324,6 +323,11 @@
               "startupFrames":14,
               "hitAdvantage":-1,
               "blockAdvantage":-7
+            },
+            "alternateData": {
+              "startupFrames":14,
+              "hitAdvantage":1003,
+              "blockAdvantage":-6
             }
           },
           {
@@ -333,6 +337,11 @@
               "startupFrames":13,
               "hitAdvantage":-2,
               "blockAdvantage":-8
+            },
+            "alternateData": {
+              "startupFrames":13,
+              "hitAdvantage":1003,
+              "blockAdvantage":-7
             }
           },
           {
@@ -342,6 +351,11 @@
               "startupFrames":12,
               "hitAdvantage":-3,
               "blockAdvantage":-9
+            },
+            "alternateData": {
+              "startupFrames":12,
+              "hitAdvantage":1003,
+              "blockAdvantage":-8
             }
           },
           {
@@ -351,6 +365,11 @@
               "startupFrames":11,
               "hitAdvantage":1003,
               "blockAdvantage":-2
+            },
+            "alternateData": {
+              "startupFrames":11,
+              "hitAdvantage":1003,
+              "blockAdvantage":-1
             }
           },
           {
@@ -465,94 +484,15 @@
             "data": {
               "hitAdvantage":1003
             }
-          }
-        ]
-      },
-      {
-        "specials": [
-          {
-            "nameID": "Hadoken LP",
-            "type": "type_0",
-            "data": {
-              "startupFrames":14,
-              "hitAdvantage":1003,
-              "blockAdvantage":-6
-            }
           },
-          {
-            "nameID": "Hadoken MP",
-            "type": "type_0",
-            "data": {
-              "startupFrames":13,
-              "hitAdvantage":1003,
-              "blockAdvantage":-7
-            }
-          },
-          {
-            "nameID": "Hadoken HP",
-            "type": "type_0",
-            "data": {
-              "startupFrames":12,
-              "hitAdvantage":1003,
-              "blockAdvantage":-8
-            }
-          },
-          {
-            "nameID": "Hadoken EX",
-            "type": "type_0",
-            "data": {
-              "startupFrames":11,
-              "hitAdvantage":1003,
-              "blockAdvantage":-1
-            }
-          },
-          {
-            "nameID": "Hadoken LP (Full Charge)",
-            "type": "type_0",
-            "data": {
-              "startupFrames":65,
-              "hitAdvantage":1003,
-              "blockAdvantage":1004
-            }
-          },
-          {
-            "nameID": "Hadoken MP (Full Charge)",
-            "type": "type_0",
-            "data": {
-              "startupFrames":65,
-              "hitAdvantage":1003,
-              "blockAdvantage":1004
-            }
-          },
-          {
-            "nameID": "Hadoken HP (Full Charge)",
-            "type": "type_0",
-            "data": {
-              "startupFrames":65,
-              "hitAdvantage":1003,
-              "blockAdvantage":1004
-            }
-          },
-          {
-            "nameID": "Hadoken EX (Full Charge)",
-            "type": "type_0",
-            "data": {
-              "startupFrames":45,
-              "hitAdvantage":1003,
-              "blockAdvantage":1004
-            }
-          }
-        ],
-        "critical_arts": [
           {
             "nameID": "Denjin Hadoken",
             "type": "type_0",
             "data": {
-              "hitAdvantage":1003,
-              "blockAdvantage":1004
+              "hitAdvantage":1003
             }
           }
         ]
       }
-    ]
+
 }

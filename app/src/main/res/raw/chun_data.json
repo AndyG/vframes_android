@@ -105,8 +105,7 @@
           }
         ]
       },
-  "frame_data": [
-    {
+  "frame_data": {
       "normals": [
         {
           "nameID": "s.LP",
@@ -114,6 +113,11 @@
           "data": {
             "startupFrames": 4,
             "hitAdvantage": 5,
+            "blockAdvantage": 2
+          },
+          "alternateData": {
+            "startupFrames": 4,
+            "hitAdvantage": 6,
             "blockAdvantage": 2
           }
         },
@@ -124,6 +128,11 @@
             "startupFrames": 5,
             "hitAdvantage": 6,
             "blockAdvantage": 3
+          },
+          "alternateData": {
+            "startupFrames": 5,
+            "hitAdvantage": 8,
+            "blockAdvantage": 3
           }
         },
         {
@@ -133,12 +142,22 @@
             "startupFrames": 11,
             "hitAdvantage": 0,
             "blockAdvantage": -3
+          },
+          "alternateData": {
+            "startupFrames": 11,
+            "hitAdvantage": 2,
+            "blockAdvantage": -3
           }
         },
         {
           "nameID": "s.LK",
           "type": "type_0",
           "data": {
+            "startupFrames": 4,
+            "hitAdvantage": 1,
+            "blockAdvantage": -3
+          },
+          "alternateData": {
             "startupFrames": 4,
             "hitAdvantage": 1,
             "blockAdvantage": -3
@@ -151,12 +170,22 @@
             "startupFrames": 8,
             "hitAdvantage": 2,
             "blockAdvantage": -2
+          },
+          "alternateData": {
+            "startupFrames": 8,
+            "hitAdvantage": 4,
+            "blockAdvantage": -2
           }
         },
         {
           "nameID": "s.HK",
           "type": "type_0",
           "data": {
+            "startupFrames": 12,
+            "hitAdvantage": 1,
+            "blockAdvantage": -2
+          },
+          "alternateData": {
             "startupFrames": 12,
             "hitAdvantage": 1,
             "blockAdvantage": -2
@@ -169,12 +198,22 @@
             "startupFrames": 3,
             "hitAdvantage": 5,
             "blockAdvantage": 2
+          },
+          "alternateData": {
+            "startupFrames": 3,
+            "hitAdvantage": 6,
+            "blockAdvantage": 2
           }
         },
         {
           "nameID": "c.MP",
           "type": "type_0",
           "data": {
+            "startupFrames": 10,
+            "hitAdvantage": -2,
+            "blockAdvantage": -8
+          },
+          "alternateData": {
             "startupFrames": 10,
             "hitAdvantage": -2,
             "blockAdvantage": -8
@@ -187,6 +226,11 @@
             "startupFrames": 7,
             "hitAdvantage": -2,
             "blockAdvantage": -5
+          },
+          "alternateData": {
+            "startupFrames": 7,
+            "hitAdvantage": 2,
+            "blockAdvantage": -2
           }
         },
         {
@@ -195,6 +239,11 @@
           "data": {
             "startupFrames": 3,
             "hitAdvantage": 1,
+            "blockAdvantage": -1
+          },
+          "alternateData": {
+            "startupFrames": 3,
+            "hitAdvantage": 3,
             "blockAdvantage": -1
           }
         },
@@ -205,12 +254,22 @@
             "startupFrames": 6,
             "hitAdvantage": 0,
             "blockAdvantage": -2
+          },
+          "alternateData": {
+            "startupFrames": 6,
+            "hitAdvantage": 4,
+            "blockAdvantage": -2
           }
         },
         {
           "nameID": "c.HK",
           "type": "type_0",
           "data": {
+            "startupFrames": 7,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -12
+          },
+          "alternateData": {
             "startupFrames": 7,
             "hitAdvantage": 1003,
             "blockAdvantage": -12
@@ -221,12 +280,18 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3
+          },
+          "alternateData": {
+            "startupFrames": 4
           }
         },
         {
           "nameID": "j.MP",
           "type": "type_0",
           "data": {
+            "startupFrames": 6
+          },
+          "alternateData": {
             "startupFrames": 6
           }
         },
@@ -235,12 +300,18 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6
+          },
+          "alternateData": {
+            "startupFrames": 6
           }
         },
         {
           "nameID": "j.LK",
           "type": "type_0",
           "data": {
+            "startupFrames": 4
+          },
+          "alternateData": {
             "startupFrames": 4
           }
         },
@@ -249,12 +320,18 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6
+          },
+          "alternateData": {
+            "startupFrames": 6
           }
         },
         {
           "nameID": "j.HK",
           "type": "type_0",
           "data": {
+            "startupFrames": 5
+          },
+          "alternateData": {
             "startupFrames": 5
           }
         }
@@ -267,6 +344,11 @@
             "startupFrames": 7,
             "hitAdvantage": 3,
             "blockAdvantage": 0
+          },
+          "alternateData": {
+            "startupFrames": 8,
+            "hitAdvantage": 4,
+            "blockAdvantage": 0
           }
         },
         {
@@ -275,6 +357,11 @@
           "data": {
             "startupFrames": 7,
             "hitAdvantage": 3,
+            "blockAdvantage": 2
+          },
+          "alternateData": {
+            "startupFrames": 7,
+            "hitAdvantage": 6,
             "blockAdvantage": 2
           }
         },
@@ -285,12 +372,22 @@
             "startupFrames": 26,
             "hitAdvantage": 0,
             "blockAdvantage": -2
+          },
+          "alternateData": {
+            "startupFrames": 26,
+            "hitAdvantage": 3,
+            "blockAdvantage": -2
           }
         },
         {
           "nameID": "b+HK",
           "type": "type_0",
           "data": {
+            "startupFrames": 8,
+            "hitAdvantage": 2,
+            "blockAdvantage": 0
+          },
+          "alternateData": {
             "startupFrames": 8,
             "hitAdvantage": 2,
             "blockAdvantage": 0
@@ -303,12 +400,22 @@
             "startupFrames": 18,
             "hitAdvantage": 2,
             "blockAdvantage": -2
+          },
+          "alternateData": {
+            "startupFrames": 18,
+            "hitAdvantage": 3,
+            "blockAdvantage": -2
           }
         },
         {
           "nameID": "df+HK",
           "type": "type_0",
           "data": {
+            "startupFrames": 39,
+            "hitAdvantage": 11,
+            "blockAdvantage": 7
+          },
+          "alternateData": {
             "startupFrames": 39,
             "hitAdvantage": 11,
             "blockAdvantage": 7
@@ -349,6 +456,10 @@
             "startupFrames": 11,
             "hitAdvantage": 1003,
             "blockAdvantage": -24
+          },
+          "alternateData": {
+            "startupFrames": 11,
+            "hitAdvantage": 1003
           }
         }
       ],
@@ -515,226 +626,6 @@
           }
         }
       ]
-    },
-    {
-      "normals": [
-        {
-          "nameID": "s.LP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 4,
-            "hitAdvantage": 6,
-            "blockAdvantage": 2
-          }
-        },
-        {
-          "nameID": "s.MP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 5,
-            "hitAdvantage": 8,
-            "blockAdvantage": 3
-          }
-        },
-        {
-          "nameID": "s.HP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 11,
-            "hitAdvantage": 2,
-            "blockAdvantage": -3
-          }
-        },
-        {
-          "nameID": "s.LK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 4,
-            "hitAdvantage": 1,
-            "blockAdvantage": -3
-          }
-        },
-        {
-          "nameID": "s.MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 8,
-            "hitAdvantage": 4,
-            "blockAdvantage": -2
-          }
-        },
-        {
-          "nameID": "s.HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 12,
-            "hitAdvantage": 1,
-            "blockAdvantage": -2
-          }
-        },
-        {
-          "nameID": "c.LP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 3,
-            "hitAdvantage": 6,
-            "blockAdvantage": 2
-          }
-        },
-        {
-          "nameID": "c.MP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 10,
-            "hitAdvantage": -2,
-            "blockAdvantage": -8
-          }
-        },
-        {
-          "nameID": "c.HP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 7,
-            "hitAdvantage": 2,
-            "blockAdvantage": -2
-          }
-        },
-        {
-          "nameID": "c.LK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 3,
-            "hitAdvantage": 3,
-            "blockAdvantage": -1
-          }
-        },
-        {
-          "nameID": "c.MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 6,
-            "hitAdvantage": 4,
-            "blockAdvantage": -2
-          }
-        },
-        {
-          "nameID": "c.HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 7,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -12
-          }
-        },
-        {
-          "nameID": "j.LP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 4
-          }
-        },
-        {
-          "nameID": "j.MP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 6
-          }
-        },
-        {
-          "nameID": "j.HP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 6
-          }
-        },
-        {
-          "nameID": "j.LK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 4
-          }
-        },
-        {
-          "nameID": "j.MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 6
-          }
-        },
-        {
-          "nameID": "j.HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 5
-          }
-        }
-      ],
-      "unique_attacks": [
-        {
-          "nameID": "b+MP or f+MP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 8,
-            "hitAdvantage": 4,
-            "blockAdvantage": 0
-          }
-        },
-        {
-          "nameID": "b+HP",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 7,
-            "hitAdvantage": 6,
-            "blockAdvantage": 2
-          }
-        },
-        {
-          "nameID": "df+MK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 26,
-            "hitAdvantage": 3,
-            "blockAdvantage": -2
-          }
-        },
-        {
-          "nameID": "b+HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 8,
-            "hitAdvantage": 2,
-            "blockAdvantage": 0
-          }
-        },
-        {
-          "nameID": "f+HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 18,
-            "hitAdvantage": 3,
-            "blockAdvantage": -2
-          }
-        },
-        {
-          "nameID": "df+HK",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 39,
-            "hitAdvantage": 11,
-            "blockAdvantage": 7
-          }
-        }
-      ],
-      "vskill": [
-        {
-          "nameID": "Rankyaku",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 11,
-            "hitAdvantage": 1003
-          }
-        }
-      ]
     }
-  ]
+  
 }
