@@ -533,8 +533,7 @@
             "hitAdvantage": 1003
           },
           "alternateData": {
-            "startupFrames": 15,
-            "hitAdvantage": 1003
+
           }
         },
         {
@@ -545,8 +544,7 @@
             "hitAdvantage": 1003
           },
           "alternateData": {
-            "startupFrames": 13,
-            "hitAdvantage": 1003
+
           }
         }
       ],
@@ -555,9 +553,6 @@
           "nameID": "Cross Stinger Assault",
           "type": "type_0",
           "data": {
-
-          },
-          "alternateData": {
 
           }
         }

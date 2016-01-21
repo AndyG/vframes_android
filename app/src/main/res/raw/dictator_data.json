@@ -289,9 +289,9 @@
             "blockAdvantage":-4
           },
           "alternateData": {
-            "startupFrames":10,
+            "startupFrames":11,
             "hitAdvantage":1003,
-            "blockAdvantage":-4
+            "blockAdvantage":1
           }
         },
         {
@@ -303,9 +303,9 @@
             "blockAdvantage":-1
           },
           "alternateData": {
-            "startupFrames":15,
+            "startupFrames":11,
             "hitAdvantage":1003,
-            "blockAdvantage":-1
+            "blockAdvantage":1
           }
         },
         {
@@ -317,9 +317,9 @@
             "blockAdvantage":2
           },
           "alternateData": {
-            "startupFrames":19,
+            "startupFrames":11,
             "hitAdvantage":1003,
-            "blockAdvantage":2
+            "blockAdvantage":1
           }
         },
         {
@@ -331,9 +331,9 @@
             "blockAdvantage":2
           },
           "alternateData": {
-            "startupFrames":15,
+            "startupFrames":14,
             "hitAdvantage":1003,
-            "blockAdvantage":2
+            "blockAdvantage":0
           }
         },
         {
@@ -345,7 +345,7 @@
             "blockAdvantage":-4
           },
           "alternateData": {
-            "startupFrames":13,
+            "startupFrames":16,
             "hitAdvantage":3,
             "blockAdvantage":-4
           }
@@ -359,7 +359,7 @@
             "blockAdvantage":-3
           },
           "alternateData": {
-            "startupFrames":15,
+            "startupFrames":19,
             "hitAdvantage":3,
             "blockAdvantage":-3
           }
@@ -373,8 +373,8 @@
             "blockAdvantage":-2
           },
           "alternateData": {
-            "startupFrames":19,
-            "hitAdvantage":1,
+            "startupFrames":22,
+            "hitAdvantage":3,
             "blockAdvantage":-2
           }
         },
@@ -387,9 +387,9 @@
             "blockAdvantage":1
           },
           "alternateData": {
-            "startupFrames":12,
+            "startupFrames":13,
             "hitAdvantage":1003,
-            "blockAdvantage":1
+            "blockAdvantage":3
           }
         },
         {
@@ -399,7 +399,9 @@
             "startupFrames":55
           },
           "alternateData": {
-            "startupFrames":55
+            "startupFrames":41,
+            "hitAdvantage":1003,
+            "blockAdvantage":1
           }
         },
         {
@@ -409,7 +411,9 @@
             "startupFrames":55
           },
           "alternateData": {
-            "startupFrames":55
+            "startupFrames":41,
+            "hitAdvantage":1003,
+            "blockAdvantage":1
           }
         },
         {
@@ -419,7 +423,9 @@
             "startupFrames":55
           },
           "alternateData": {
-            "startupFrames":55
+            "startupFrames":41,
+            "hitAdvantage":1003,
+            "blockAdvantage":1
           }
         },
         {
@@ -429,16 +435,14 @@
             "startupFrames":55
           },
           "alternateData": {
-            "startupFrames":55
+            "startupFrames":37,
+            "hitAdvantage":1003,
+            "blockAdvantage":1
           }
         },
         {
           "nameID": "Somersault Skull Diver",
           "type": "type_0",
-          "data": {
-            "startupFrames":5,
-            "hitAdvantage":1003
-          },
           "data": {
             "startupFrames":5,
             "hitAdvantage":1003
@@ -450,11 +454,8 @@
           "data": {
             "startupFrames":15,
             "hitAdvantage":1003
-          },
-          "alternateData": {
-            "startupFrames":15,
-            "hitAdvantage":1003
           }
+
         },
         {
           "nameID": "Psycho Inferno LP",
@@ -467,7 +468,7 @@
           "alternateData": {
             "startupFrames":14,
             "hitAdvantage":1003,
-            "blockAdvantage":-12
+            "blockAdvantage":-5
           }
         },
         {
@@ -479,9 +480,9 @@
             "blockAdvantage":-11
           },
           "alternateData": {
-            "startupFrames":16,
+            "startupFrames":14,
             "hitAdvantage":1003,
-            "blockAdvantage":-11
+            "blockAdvantage":-5
           }
         },
         {
@@ -493,9 +494,9 @@
             "blockAdvantage":-10
           },
           "alternateData": {
-            "startupFrames":18,
+            "startupFrames":14,
             "hitAdvantage":1003,
-            "blockAdvantage":-10
+            "blockAdvantage":-5
           }
         },
         {
@@ -507,9 +508,9 @@
             "blockAdvantage":-1
           },
           "alternateData": {
-            "startupFrames":15,
+            "startupFrames":18,
             "hitAdvantage":1003,
-            "blockAdvantage":-1
+            "blockAdvantage":4
           }
         }
       ]
