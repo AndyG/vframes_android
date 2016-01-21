@@ -327,9 +327,9 @@
             "blockAdvantage": -12
           },
           "alternateData": {
-            "startupFrames": 7,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "startupFrames":7,
+            "hitAdvantage":1003,
+            "blockAdvantage":-13
           }
         },
         {
@@ -341,18 +341,18 @@
             "blockAdvantage": -15
           },
           "alternateData": {
-            "startupFrames": 7,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -15
+            "startupFrames":7,
+            "hitAdvantage":1003,
+            "blockAdvantage":-13
           }
         },
         {
           "nameID": "Spiral Arrow HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 7,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -11
+            "startupFrames":7,
+            "hitAdvantage":1003,
+            "blockAdvantage":-13
           },
           "alternateData": {
             "startupFrames": 7,
@@ -369,9 +369,7 @@
             "blockAdvantage": -11
           },
           "alternateData": {
-            "startupFrames": 7,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -11
+
           }
         },
         {
@@ -397,7 +395,7 @@
             "blockAdvantage": -37
           },
           "alternateData": {
-            "startupFrames": 5,
+            "startupFrames": 3,
             "hitAdvantage": 1003,
             "blockAdvantage": -37
           }
@@ -411,7 +409,7 @@
             "blockAdvantage": -37
           },
           "alternateData": {
-            "startupFrames": 6,
+            "startupFrames": 3,
             "hitAdvantage": 1003,
             "blockAdvantage": -37
           }
@@ -425,9 +423,7 @@
             "blockAdvantage": -37
           },
           "alternateData": {
-            "startupFrames": 3,
-            "hitAdvantage": 1003,
-            "blockAdvantage": -37
+
           }
         },
         {
@@ -437,7 +433,7 @@
             "startupFrames": 13
           },
           "alternateData": {
-            "startupFrames": 13
+
           }
         },
         {
@@ -447,7 +443,7 @@
             "startupFrames": 13
           },
           "alternateData": {
-            "startupFrames": 13
+
           }
         },
         {
@@ -457,7 +453,7 @@
             "startupFrames": 13
           },
           "alternateData": {
-            "startupFrames": 13
+
           }
         },
         {
@@ -468,17 +464,13 @@
             "hitAdvantage": 1003
           },
           "alternateData": {
-            "startupFrames": 13,
-            "hitAdvantage": 1003
+
           }
         },
         {
           "nameID": "Hooligan Combination LP",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 39
-          },
-          "alternateData": {
             "recoveryFrames": 39
           }
         },
@@ -487,18 +479,12 @@
           "type": "type_0",
           "data": {
             "recoveryFrames": 39
-          },
-          "alternateData": {
-            "recoveryFrames": 39
           }
         },
         {
           "nameID": "Hooligan Combination HP",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 39
-          },
-          "alternateData": {
             "recoveryFrames": 39
           }
         },
@@ -507,19 +493,12 @@
           "type": "type_0",
           "data": {
             "recoveryFrames": 39
-          },
-          "alternateData": {
-            "recoveryFrames": 39
           }
         },
         {
           "nameID": "Razor Edge Slicer",
           "type": "type_0",
           "data": {
-            "hitAdvantage": 1003,
-            "blockAdvantage": -2
-          },
-          "alternateData": {
             "hitAdvantage": 1003,
             "blockAdvantage": -2
           }
@@ -530,10 +509,6 @@
           "data": {
             "hitAdvantage": 1003,
             "blockAdvantage": 3
-          },
-          "alternateData": {
-            "hitAdvantage": 1003,
-            "blockAdvantage": 3
           }
         },
         {
@@ -541,18 +516,12 @@
           "type": "type_0",
           "data": {
             "hitAdvantage": 1003
-          },
-          "alternateData": {
-            "hitAdvantage": 1003
           }
         },
         {
           "nameID": "Cross Scissors Pressure",
           "type": "type_0",
           "data": {
-            "hitAdvantage": 1003
-          },
-          "alternateData": {
             "hitAdvantage": 1003
           }
         },
