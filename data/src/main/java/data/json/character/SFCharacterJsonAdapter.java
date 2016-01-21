@@ -6,7 +6,6 @@ import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +13,7 @@ import data.json.move.FrameDataEntryJsonAdapter;
 import data.json.move.MoveListEntryJsonAdapter;
 import data.model.character.FrameData;
 import data.model.character.SFCharacter;
-import data.model.move.IFrameDataEntry;
+import data.model.move.IFrameDataEntryHolder;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
@@ -77,7 +76,7 @@ public class SFCharacterJsonAdapter {
 
     private static FrameData parseFrameDataSet(JsonObject frameDataJsonObject) {
 
-        Map<MoveCategory, List<IFrameDataEntry>> frameDataSet = new HashMap<>();
+        Map<MoveCategory, List<IFrameDataEntryHolder>> frameDataSet = new HashMap<>();
 
         for (Map.Entry<String, JsonElement> category : frameDataJsonObject.entrySet()) {
             String categoryKey = category.getKey();
@@ -85,7 +84,7 @@ public class SFCharacterJsonAdapter {
             JsonElement categoryBody = category.getValue();
             System.out.println(categoryBody.toString());
 
-            List<IFrameDataEntry> frameDataEntries = new ArrayList<>();
+            List<IFrameDataEntryHolder> frameDataEntries = new ArrayList<>();
             JsonArray categoryJson = categoryBody.getAsJsonArray();
 
             for (JsonElement moveJson : categoryJson) {

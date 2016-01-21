@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import data.model.move.IFrameDataEntry;
+import data.model.move.IFrameDataEntryHolder;
 import data.model.move.MoveType;
 import data.model.move.TypicalFrameDataEntry;
 
@@ -24,7 +25,7 @@ public class FrameDataEntryJsonAdapter {
         return jsonObject;
     }
 
-    public static IFrameDataEntry JsonToMove(JsonObject moveJson) {
+    public static IFrameDataEntryHolder JsonToMove(JsonObject moveJson) {
         MoveType moveType = MoveType.fromString(moveJson.get("type").getAsString());
 
         switch (moveType) {
@@ -61,13 +62,24 @@ public class FrameDataEntryJsonAdapter {
         }
     }
 
-    private static IFrameDataEntry constructHardCodedFrameDataEntry(JsonObject moveJson) {
+    private static IFrameDataEntryHolder constructHardCodedFrameDataEntry(JsonObject moveJson) {
         String name = moveJson.get("nameID").getAsString();
         MoveType type = MoveType.TYPE_0;
         String description = parseDescription(moveJson);
 
         JsonObject moveDataJson = moveJson.getAsJsonObject("data");
+        HardCodedFrameDataEntry frameDataEntry = parseHardCodedData(name, type, moveDataJson, description);
 
+        HardCodedFrameDataEntry alternateFrameDataEntry = null;
+        if (moveJson.has("alternateData")) {
+            JsonObject alternateMoveDataJson = moveJson.getAsJsonObject("alternateData");
+            alternateFrameDataEntry = parseHardCodedData(name, type, alternateMoveDataJson, description);
+        }
+
+        return new FrameDataEntryHolder(frameDataEntry, alternateFrameDataEntry);
+    }
+
+    private static HardCodedFrameDataEntry parseHardCodedData(String name, MoveType type, JsonObject moveDataJson, String description) {
         int startupFrames = DISPLAY_CODE_MISSING_VALUE;
         int activeFrames = DISPLAY_CODE_MISSING_VALUE;
         int recoveryFrames = DISPLAY_CODE_MISSING_VALUE;
@@ -107,26 +119,27 @@ public class FrameDataEntryJsonAdapter {
         return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, damageValue, stunValue, description);
     }
 
-    private static IFrameDataEntry constructTypicalMove(JsonObject moveJson) {
-        String name = moveJson.get("nameID").getAsString();
-        String description = parseDescription(moveJson);
-
-        MoveType type = MoveType.TYPE_1;
-
-        JsonObject moveDataJson = moveJson.getAsJsonObject("data");
-
-        int startupFrames = moveDataJson.get("startupFrames").getAsInt();
-        int activeFrames = moveDataJson.get("activeFrames").getAsInt();
-        int recoveryFrames = moveDataJson.get("recoveryFrames").getAsInt();
-
-        int blockstunFrames = moveDataJson.get("blockstunFrames").getAsInt();
-        int hitstunFrames = moveDataJson.get("hitstunFrames").getAsInt();
-
-        int damageValue = moveDataJson.get("damage").getAsInt();
-        int stunValue = moveDataJson.get("stun").getAsInt();
-
-        return new TypicalFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockstunFrames,
-                hitstunFrames, damageValue, stunValue, description);
+    private static IFrameDataEntryHolder constructTypicalMove(JsonObject moveJson) {
+        throw new RuntimeException("constructTypicalMove stub");
+//        String name = moveJson.get("nameID").getAsString();
+//        String description = parseDescription(moveJson);
+//
+//        MoveType type = MoveType.TYPE_1;
+//
+//        JsonObject moveDataJson = moveJson.getAsJsonObject("data");
+//
+//        int startupFrames = moveDataJson.get("startupFrames").getAsInt();
+//        int activeFrames = moveDataJson.get("activeFrames").getAsInt();
+//        int recoveryFrames = moveDataJson.get("recoveryFrames").getAsInt();
+//
+//        int blockstunFrames = moveDataJson.get("blockstunFrames").getAsInt();
+//        int hitstunFrames = moveDataJson.get("hitstunFrames").getAsInt();
+//
+//        int damageValue = moveDataJson.get("damage").getAsInt();
+//        int stunValue = moveDataJson.get("stun").getAsInt();
+//
+//        return new TypicalFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockstunFrames,
+//                hitstunFrames, damageValue, stunValue, description);
     }
 
     private static String parseDescription(JsonObject moveJson) {

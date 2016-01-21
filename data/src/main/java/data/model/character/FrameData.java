@@ -3,7 +3,7 @@ package data.model.character;
 import java.util.List;
 import java.util.Map;
 
-import data.model.move.IFrameDataEntry;
+import data.model.move.IFrameDataEntryHolder;
 import data.model.move.MoveCategory;
 
 /**
@@ -11,9 +11,9 @@ import data.model.move.MoveCategory;
  */
 public class FrameData {
 
-    private Map<MoveCategory, List<IFrameDataEntry>> categoriesMap;
+    private Map<MoveCategory, List<IFrameDataEntryHolder>> categoriesMap;
 
-    public FrameData(Map<MoveCategory, List<IFrameDataEntry>> categoriesMap) {
+    public FrameData(Map<MoveCategory, List<IFrameDataEntryHolder>> categoriesMap) {
         this.categoriesMap = categoriesMap;
     }
 
@@ -21,7 +21,7 @@ public class FrameData {
         return categoriesMap.containsKey(moveCategory);
     }
 
-    public List<IFrameDataEntry> getFromCategory(MoveCategory category) {
+    public List<IFrameDataEntryHolder> getFromCategory(MoveCategory category) {
         return categoriesMap.get(category);
     }
 
