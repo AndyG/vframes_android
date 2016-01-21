@@ -54,7 +54,7 @@
 
     <!-- Frame Data Row Background-->
     <color name="frame_data_row_background_shaded">#e1e1e1</color>
-    <color name="frame_data_row_alternate_background_shaded">#df9898</color>
-    <color name="frame_data_row_alternate_background_unshaded">#ffc4c4</color>
+    <color name="frame_data_row_alternate_background_shaded">#ffe1e1</color>
+    <color name="frame_data_row_alternate_background_unshaded">#ffebeb</color>
 
 </resources>
