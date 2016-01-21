@@ -97,6 +97,10 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         }
     }
 
+    public void tintItems() {
+
+    }
+
     private void setupFrameDataItemViewHolder(FrameDataItemViewHolder holder, int position) {
         IFrameDataEntry frameDataEntry = (IFrameDataEntry) displayList.get(position);
         int distanceFromHeader = findDistanceFromHeader(position);
