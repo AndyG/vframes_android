@@ -58,7 +58,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
         //Postpone the transition to give the header image time to get laid out.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Log.d("findme", "postponeEnterTransition");
             postponeEnterTransition();
         }
 
@@ -225,7 +224,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     private void finishEnterTransition() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Log.d("findme", "startPostponedEnterTransition");
             startPostponedEnterTransition();
         }
     }
