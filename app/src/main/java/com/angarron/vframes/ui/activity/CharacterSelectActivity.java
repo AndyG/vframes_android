@@ -6,14 +6,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Surface;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
@@ -182,9 +186,29 @@ public class CharacterSelectActivity extends AppCompatActivity {
                     throw new RuntimeException("clicked invalid character card");
             }
 
-            Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
-            intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
-            startActivity(intent);
+            if (clickedCharacter == CharacterID.BIRDIE || clickedCharacter == CharacterID.CAMMY) {
+                Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
+                intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
+                View imageViewTransitionSource = null;
+                if (clickedCharacter == CharacterID.BIRDIE) {
+                    imageViewTransitionSource = findViewById(R.id.birdie_image_view);
+                } else {
+                    imageViewTransitionSource = findViewById(R.id.cammy_image_view);
+                }
+
+                Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+                int rotation = display.getRotation();
+                if (rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) {
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(CharacterSelectActivity.this, imageViewTransitionSource, "change_image_transform");
+                    startActivity(intent, options.toBundle());
+                } else {
+                    startActivity(intent);
+                }
+            } else {
+                Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
+                intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
+                startActivity(intent);
+            }
         }
     }
 

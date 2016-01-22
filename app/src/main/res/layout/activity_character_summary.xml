@@ -21,9 +21,10 @@
 
         <ImageView
             android:id="@+id/summary_character_image"
+            android:transitionName="change_image_transform"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerInside"/>
 
         <TextView
             android:id="@+id/summary_accent_bar"

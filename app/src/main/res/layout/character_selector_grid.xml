@@ -20,20 +20,29 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/birdie_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/birdie_card"/>
+                        android:transitionName="change_image_transform"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/face_base"
+                        android:scaleType="centerInside"
+                        android:background="@color/off_white"
+                        android:elevation="5dp"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/birdie_name"
-                        android:background="@color/birdie_accent_translucent" />
+                        android:background="@color/birdie_accent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -43,20 +52,29 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/cammy_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/cammy_card"/>
+                        android:transitionName="change_image_transform"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/face_base"
+                        android:scaleType="centerInside"
+                        android:background="@color/off_white"
+                        android:elevation="5dp"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/cammy_name"
-                        android:background="@color/cammy_accent_translucent" />
+                        android:background="@color/cammy_accent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 

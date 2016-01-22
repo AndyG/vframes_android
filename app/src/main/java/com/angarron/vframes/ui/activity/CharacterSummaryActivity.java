@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -52,6 +53,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_character_summary);
+
+        postponeEnterTransition();
 
         try {
             targetCharacter = (CharacterID) getIntent().getSerializableExtra(INTENT_EXTRA_TARGET_CHARACTER);
@@ -94,7 +97,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                 FeedbackUtil.sendFeedback(this);
                 return true;
             case android.R.id.home:
-                finish();
+                supportFinishAfterTransition();
                 return true;
             case R.id.action_alternate_frame_data_toggle:
                 switch (targetCharacter) {
@@ -150,6 +153,11 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         return targetCharacterModel.getFrameData();
     }
 
+    @Override
+    public void onBackPressed() {
+        supportFinishAfterTransition();
+    }
+
     private void verifyDataAvailable() {
         VFramesApplication application = (VFramesApplication) getApplication();
         if (application.getDataModel() == null) {
@@ -190,7 +198,18 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
             if (viewExists(R.id.summary_character_image)) {
                 final ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
-                summaryCharacterImage.setImageResource(getCharacterBannerResource());
+                ViewTreeObserver viewTreeObserver = summaryCharacterImage.getViewTreeObserver();
+                viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+                    @Override
+                    public boolean onPreDraw() {
+                        summaryCharacterImage.getViewTreeObserver().removeOnPreDrawListener(this);
+                        startPostponedEnterTransition();
+                        return true;
+                    }
+                });
+                summaryCharacterImage.setImageDrawable(getDrawable(R.drawable.face_base));
+            } else {
+                startPostponedEnterTransition();
             }
         }
     }
