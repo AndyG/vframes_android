@@ -14,7 +14,8 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextAppearance="@style/toolbar_text"/>
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="horizontal"
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/summary_image_container_height">
@@ -24,15 +25,11 @@
             android:transitionName="@string/character_select_transition"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerInside"/>
+            android:scaleType="fitStart"/>
 
-        <TextView
-            android:id="@+id/summary_accent_bar"
-            style="@style/CharacterSummaryTextStyle"
-            android:layout_alignParentBottom="true"
-            android:elevation="4dp"/>
+        <!-- TODO: add the other icons here-->
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"

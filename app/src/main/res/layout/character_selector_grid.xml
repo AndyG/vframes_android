@@ -203,7 +203,7 @@
                     <ImageView
                         android:id="@+id/laura_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/face_base" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
