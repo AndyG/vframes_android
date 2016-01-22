@@ -276,37 +276,37 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     private int getCharacterBannerResource() {
         switch(targetCharacter) {
             case RYU:
-                return R.drawable.ryu_banner;
+                return R.drawable.ryu_card;
             case CHUN:
-                return R.drawable.chun_banner;
+                return R.drawable.chun_card;
             case DICTATOR:
-                return R.drawable.dictator_banner;
+                return R.drawable.dictator_card;
             case BIRDIE:
-                return R.drawable.birdie_banner;
+                return R.drawable.birdie_card;
             case NASH:
-                return R.drawable.nash_banner;
+                return R.drawable.nash_card;
             case CAMMY:
-                return R.drawable.cammy_banner;
+                return R.drawable.cammy_card;
             case KEN:
-                return R.drawable.ken_banner;
+                return R.drawable.ken_card;
             case MIKA:
-                return R.drawable.mika_banner;
+                return R.drawable.mika_card;
             case NECALLI:
-                return R.drawable.necalli_banner;
+                return R.drawable.necalli_card;
             case CLAW:
-                return R.drawable.claw_banner;
+                return R.drawable.claw_card;
             case RASHID:
-                return R.drawable.rashid_banner;
+                return R.drawable.rashid_card;
             case KARIN:
-                return R.drawable.karin_banner;
+                return R.drawable.karin_card;
             case LAURA:
-                return R.drawable.laura_banner;
+                return R.drawable.laura_card;
             case DHALSIM:
-                return R.drawable.dhalsim_banner;
+                return R.drawable.dhalsim_card;
             case ZANGIEF:
-                return R.drawable.zangief_banner;
+                return R.drawable.zangief_card;
             case FANG:
-                return R.drawable.fang_banner;
+                return R.drawable.fang_card;
             default:
                 throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
         }

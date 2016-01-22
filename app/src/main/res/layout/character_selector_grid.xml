@@ -128,7 +128,7 @@
                     <ImageView
                         android:id="@+id/fang_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/fang_banner"/>
+                        android:src="@drawable/fang_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -203,7 +203,7 @@
                     <ImageView
                         android:id="@+id/laura_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base" />
+                        android:src="@drawable/laura_card" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
