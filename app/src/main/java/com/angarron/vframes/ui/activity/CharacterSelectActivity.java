@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.ActionBar;
@@ -12,6 +13,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -186,29 +188,72 @@ public class CharacterSelectActivity extends AppCompatActivity {
                     throw new RuntimeException("clicked invalid character card");
             }
 
-            if (clickedCharacter == CharacterID.BIRDIE || clickedCharacter == CharacterID.CAMMY) {
-                Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
-                intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
-                View imageViewTransitionSource = null;
-                if (clickedCharacter == CharacterID.BIRDIE) {
-                    imageViewTransitionSource = findViewById(R.id.birdie_image_view);
-                } else {
-                    imageViewTransitionSource = findViewById(R.id.cammy_image_view);
-                }
+            Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
+            intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
 
-                Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
-                int rotation = display.getRotation();
-                if (rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) {
-                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(CharacterSelectActivity.this, imageViewTransitionSource, "change_image_transform");
-                    startActivity(intent, options.toBundle());
-                } else {
-                    startActivity(intent);
-                }
+            if (shouldAnimateTransition()) {
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(CharacterSelectActivity.this,
+                        getImageViewForCharacter(view, clickedCharacter),
+                        getString(R.string.character_select_transition));
+
+                startActivity(intent, options.toBundle());
             } else {
-                Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
-                intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
                 startActivity(intent);
             }
+        }
+    }
+
+    private boolean shouldAnimateTransition() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            return false;
+        }
+
+        Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+        int rotation = display.getRotation();
+        if (rotation != Surface.ROTATION_0 && rotation != Surface.ROTATION_180) {
+            return false;
+        }
+
+        return true;
+    }
+
+
+    private View getImageViewForCharacter(View view, CharacterID characterID) {
+        switch (characterID) {
+            case RYU:
+                return view.findViewById(R.id.ryu_image_view);
+            case CHUN:
+                return view.findViewById(R.id.chun_image_view);
+            case DICTATOR:
+                return view.findViewById(R.id.dictator_image_view);
+            case BIRDIE:
+                return view.findViewById(R.id.birdie_image_view);
+            case NASH:
+                return view.findViewById(R.id.nash_image_view);
+            case CAMMY:
+                return view.findViewById(R.id.cammy_image_view);
+            case CLAW:
+                return view.findViewById(R.id.claw_image_view);
+            case LAURA:
+                return view.findViewById(R.id.laura_image_view);
+            case KEN:
+                return view.findViewById(R.id.ken_image_view);
+            case NECALLI:
+                return view.findViewById(R.id.necalli_image_view);
+            case RASHID:
+                return view.findViewById(R.id.rashid_image_view);
+            case MIKA:
+                return view.findViewById(R.id.mika_image_view);
+            case ZANGIEF:
+                return view.findViewById(R.id.zangief_image_view);
+            case FANG:
+                return view.findViewById(R.id.fang_image_view);
+            case DHALSIM:
+                return view.findViewById(R.id.dhalsim_image_view);
+            case KARIN:
+                return view.findViewById(R.id.karin_image_view);
+            default:
+                throw new IllegalArgumentException("invalid character clicked: " + characterID.toString());
         }
     }
 

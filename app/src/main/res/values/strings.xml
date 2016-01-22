@@ -240,4 +240,7 @@
     <string name="ken_vtrigger_framedata_not_ready">Sorry, Ken\'s V-Trigger frame data is not yet available.</string>
     <string name="laura_vtrigger_framedata_not_ready">Sorry, Laura\'s V-Trigger frame data is not yet available.</string>
 
+    <!-- Non-translatable Strings -->
+    <string name="character_select_transition">character_select_transition</string>
+
 </resources>

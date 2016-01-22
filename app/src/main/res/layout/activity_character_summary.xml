@@ -21,7 +21,7 @@
 
         <ImageView
             android:id="@+id/summary_character_image"
-            android:transitionName="change_image_transform"
+            android:transitionName="@string/character_select_transition"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerInside"/>

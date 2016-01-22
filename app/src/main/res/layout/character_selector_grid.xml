@@ -28,14 +28,7 @@
                     <ImageView
                         android:id="@+id/birdie_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:transitionName="change_image_transform"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/face_base"
-                        android:scaleType="centerInside"
-                        android:background="@color/off_white"
-                        android:elevation="5dp"/>
+                        android:src="@drawable/face_base" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -60,14 +53,7 @@
                     <ImageView
                         android:id="@+id/cammy_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:transitionName="change_image_transform"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/face_base"
-                        android:scaleType="centerInside"
-                        android:background="@color/off_white"
-                        android:elevation="5dp"/>
+                        android:src="@drawable/face_base" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -84,20 +70,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/chun_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/chun_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/chun_name"
                         android:background="@color/chun_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -107,20 +95,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/dhalsim_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/dhalsim_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/dhalsim_name"
                         android:background="@color/dhalsim_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -130,20 +120,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/fang_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/fang_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/fang_name"
                         android:background="@color/fang_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -153,20 +145,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/karin_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/karin_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/karin_name"
                         android:background="@color/karin_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -176,20 +170,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/ken_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/ken_card" />
+                        android:src="@drawable/face_base" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/ken_name"
                         android:background="@color/ken_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -199,20 +195,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/laura_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/laura_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/laura_name"
                         android:background="@color/laura_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -222,20 +220,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/dictator_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/dictator_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/dictator_name"
                         android:background="@color/dictator_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -245,20 +245,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/nash_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/nash_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/nash_name"
                         android:background="@color/nash_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -268,20 +270,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/necalli_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/necalli_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/necalli_name"
                         android:background="@color/necalli_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -291,20 +295,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/mika_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/mika_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/mika_name"
                         android:background="@color/mika_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -314,20 +320,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/rashid_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/rashid_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/rashid_name"
                         android:background="@color/rashid_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -337,20 +345,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/ryu_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/ryu_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/ryu_name"
                         android:background="@color/ryu_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -360,20 +370,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/claw_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/claw_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/claw_name"
                         android:background="@color/claw_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -383,20 +395,22 @@
                 android:layout_width="0dp"
                 app:layout_columnWeight="1">
 
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/zangief_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/zangief_card"/>
+                        android:src="@drawable/face_base"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/zangief_name"
                         android:background="@color/zangief_accent_translucent" />
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
