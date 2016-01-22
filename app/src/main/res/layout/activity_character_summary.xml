@@ -23,11 +23,15 @@
         <ImageView
             android:id="@+id/summary_character_image"
             android:transitionName="@string/character_select_transition"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:scaleType="fitStart"/>
 
-        <!-- TODO: add the other icons here-->
+        <include layout="@layout/banner_navigation_layout"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
