@@ -26,12 +26,9 @@
     <style name="CharacterCardImageStyle">
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:src">@drawable/face_base</item>
-        <item name="android:scaleType">centerInside</item>
-        <item name="android:background">@color/off_white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
     </style>
 
     <style name="CharacterCardTextStyle">

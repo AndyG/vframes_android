@@ -28,7 +28,7 @@
                     <ImageView
                         android:id="@+id/birdie_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base" />
+                        android:src="@drawable/birdie_card" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -53,7 +53,7 @@
                     <ImageView
                         android:id="@+id/cammy_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base" />
+                        android:src="@drawable/cammy_card" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -78,7 +78,7 @@
                     <ImageView
                         android:id="@+id/chun_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/chun_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -103,7 +103,7 @@
                     <ImageView
                         android:id="@+id/dhalsim_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/dhalsim_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -128,7 +128,7 @@
                     <ImageView
                         android:id="@+id/fang_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/fang_banner"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -153,7 +153,7 @@
                     <ImageView
                         android:id="@+id/karin_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/karin_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -178,7 +178,7 @@
                     <ImageView
                         android:id="@+id/ken_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base" />
+                        android:src="@drawable/ken_card" />
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -228,7 +228,7 @@
                     <ImageView
                         android:id="@+id/dictator_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/dictator_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -253,7 +253,7 @@
                     <ImageView
                         android:id="@+id/nash_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/nash_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -278,7 +278,7 @@
                     <ImageView
                         android:id="@+id/necalli_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/necalli_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -303,7 +303,7 @@
                     <ImageView
                         android:id="@+id/mika_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/mika_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -328,7 +328,7 @@
                     <ImageView
                         android:id="@+id/rashid_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/rashid_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -353,7 +353,7 @@
                     <ImageView
                         android:id="@+id/ryu_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/ryu_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -378,7 +378,7 @@
                     <ImageView
                         android:id="@+id/claw_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/claw_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
@@ -403,7 +403,7 @@
                     <ImageView
                         android:id="@+id/zangief_image_view"
                         style="@style/CharacterCardImageStyle"
-                        android:src="@drawable/face_base"/>
+                        android:src="@drawable/zangief_card"/>
 
                     <TextView
                         style="@style/CharacterCardTextStyle"
