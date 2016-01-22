@@ -212,7 +212,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                         return true;
                     }
                 });
-                summaryCharacterImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.face_base));
+                summaryCharacterImage.setImageResource(getCharacterBannerResource());
             } else {
                 //Even though there is no header image, we still need to call startPostponedEnterTransition()
                 //to finish transitioning to this activity.
@@ -271,6 +271,45 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
     private boolean viewExists(int viewId) {
         return findViewById(viewId) != null;
+    }
+
+    private int getCharacterBannerResource() {
+        switch(targetCharacter) {
+            case RYU:
+                return R.drawable.ryu_banner;
+            case CHUN:
+                return R.drawable.chun_banner;
+            case DICTATOR:
+                return R.drawable.dictator_banner;
+            case BIRDIE:
+                return R.drawable.birdie_banner;
+            case NASH:
+                return R.drawable.nash_banner;
+            case CAMMY:
+                return R.drawable.cammy_banner;
+            case KEN:
+                return R.drawable.ken_banner;
+            case MIKA:
+                return R.drawable.mika_banner;
+            case NECALLI:
+                return R.drawable.necalli_banner;
+            case CLAW:
+                return R.drawable.claw_banner;
+            case RASHID:
+                return R.drawable.rashid_banner;
+            case KARIN:
+                return R.drawable.karin_banner;
+            case LAURA:
+                return R.drawable.laura_banner;
+            case DHALSIM:
+                return R.drawable.dhalsim_banner;
+            case ZANGIEF:
+                return R.drawable.zangief_banner;
+            case FANG:
+                return R.drawable.fang_banner;
+            default:
+                throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
+        }
     }
 
     private ColorDrawable getCharacterAccentColorDrawable() {
