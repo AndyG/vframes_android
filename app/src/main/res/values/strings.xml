@@ -240,6 +240,91 @@
     <string name="ken_vtrigger_framedata_not_ready">Sorry, Ken\'s V-Trigger frame data is not yet available.</string>
     <string name="laura_vtrigger_framedata_not_ready">Sorry, Laura\'s V-Trigger frame data is not yet available.</string>
 
+    <!-- Character Banners -->
+    <string name="health_format">Health: %s</string>
+    <string name="stun_format">Stun: %s</string>
+    <string name="style_format">Style: %s</string>
+
+    <string name="ryu_title">Wandering Warrior</string>
+    <string name="ryu_health">1000</string>
+    <string name="ryu_stun">1000</string>
+    <string name="ryu_style">Ansatsuken</string>
+
+    <string name="chun_title">First Lady</string>
+    <string name="chun_health">950</string>
+    <string name="chun_stun">1000</string>
+    <string name="chun_style">Chinese Martial Arts</string>
+
+    <string name="cammy_title">Blonde Bomber</string>
+    <string name="cammy_health">900</string>
+    <string name="cammy_stun">900</string>
+    <string name="cammy_style">Special Forces Training</string>
+
+    <string name="birdie_title">Punk Foodie</string>
+    <string name="birdie_health">1050</string>
+    <string name="birdie_stun">1000</string>
+    <string name="birdie_style">Bar Room Brawling</string>
+
+    <string name="nash_title">Vengeful Mentor</string>
+    <string name="nash_health">950</string>
+    <string name="nash_stun">950</string>
+    <string name="nash_style">Special Forces Training</string>
+
+    <string name="mika_title">Superstar Peach</string>
+    <string name="mika_health">950</string>
+    <string name="mika_stun">1000</string>
+    <string name="mika_style">Pro Wrestling</string>
+
+    <string name="dhalsim_title">Master Yogi</string>
+    <string name="dhalsim_health">900</string>
+    <string name="dhalsim_stun">950</string>
+    <string name="dhalsim_style">Esoteric Yoga</string>
+
+    <string name="claw_title">Scarlet Matador</string>
+    <string name="claw_health">1000</string>
+    <string name="claw_stun">950</string>
+    <string name="claw_style">Spanish Ninjutsu</string>
+
+    <string name="dictator_title">Psycho Dictator</string>
+    <string name="dictator_health">1000</string>
+    <string name="dictator_stun">950</string>
+    <string name="dictator_style">Psycho Power</string>
+
+    <string name="necalli_title">Feral Brute</string>
+    <string name="necalli_health">1000</string>
+    <string name="necalli_stun">1000</string>
+    <string name="necalli_style">Ancient Instincts</string>
+
+    <string name="laura_title">Brazilian Beauty</string>
+    <string name="laura_health">1000</string>
+    <string name="laura_stun">1000</string>
+    <string name="laura_style">Brazilian Jiu-Jitsu</string>
+
+    <string name="fang_title">Sadistic Lieutenant</string>
+    <string name="fang_health">\???</string>
+    <string name="fang_stun">\???</string>
+    <string name="fang_style">Deadly Concoctions</string>
+
+    <string name="zangief_title">Red Cyclone</string>
+    <string name="zangief_health">1050</string>
+    <string name="zangief_stun">1050</string>
+    <string name="zangief_style">Russian Wrestling</string>
+
+    <string name="rashid_title">Turbulent Wind</string>
+    <string name="rashid_health">950</string>
+    <string name="rashid_stun">1000</string>
+    <string name="rashid_style">High-flying Parkour</string>
+
+    <string name="karin_title">Type-A Socialite</string>
+    <string name="karin_health">900</string>
+    <string name="karin_stun">950</string>
+    <string name="karin_style">Kanzuki-Ryu</string>
+
+    <string name="ken_title">Blazing Fist</string>
+    <string name="ken_health">1000</string>
+    <string name="ken_stun">1000</string>
+    <string name="ken_style">Ansatsuken</string>
+
     <!-- Non-translatable Strings -->
     <string name="character_select_transition">character_select_transition</string>
 

@@ -5,27 +5,27 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/banner_character_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Brazilian Beauty"/>
+        android:textSize="25sp" />
 
     <TextView
+        android:id="@+id/banner_character_health"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Health: 900"/>
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/banner_character_stun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Stun: 850"/>
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/banner_character_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Style: Brazilian Jiu-Jitsu"/>
+        android:textSize="18sp" />
 
 </LinearLayout>

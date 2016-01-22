@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.angarron.vframes.BuildConfig;
@@ -77,6 +78,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
 
         //Load the toolbar based on the target character
         setupToolbar();
+        setCharacterDetails();
         setupViewPager();
     }
 
@@ -387,6 +389,126 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                 return R.string.fang_name;
             default:
                 throw new RuntimeException("unable to resolve character name: " + targetCharacter);
+        }
+    }
+
+    private void setCharacterDetails() {
+        int titleStringId = 0;
+        int styleStringId = 0;
+        int healthStringId = 0;
+        int stunStringId = 0;
+        switch (targetCharacter) {
+            case RYU:
+                titleStringId = R.string.ryu_title;
+                styleStringId = R.string.ryu_style;
+                healthStringId = R.string.ryu_health;
+                stunStringId = R.string.ryu_stun;
+                break;
+            case CHUN:
+                titleStringId = R.string.chun_title;
+                styleStringId = R.string.chun_style;
+                healthStringId = R.string.chun_health;
+                stunStringId = R.string.chun_stun;
+                break;
+            case DICTATOR:
+                titleStringId = R.string.dictator_title;
+                styleStringId = R.string.dictator_style;
+                healthStringId = R.string.dictator_health;
+                stunStringId = R.string.dictator_stun;
+                break;
+            case BIRDIE:
+                titleStringId = R.string.birdie_title;
+                styleStringId = R.string.birdie_style;
+                healthStringId = R.string.birdie_health;
+                stunStringId = R.string.birdie_stun;
+                break;
+            case NASH:
+                titleStringId = R.string.nash_title;
+                styleStringId = R.string.nash_style;
+                healthStringId = R.string.nash_health;
+                stunStringId = R.string.nash_stun;
+                break;
+            case CAMMY:
+                titleStringId = R.string.cammy_title;
+                styleStringId = R.string.cammy_style;
+                healthStringId = R.string.cammy_health;
+                stunStringId = R.string.cammy_stun;
+                break;
+            case CLAW:
+                titleStringId = R.string.claw_title;
+                styleStringId = R.string.claw_style;
+                healthStringId = R.string.claw_health;
+                stunStringId = R.string.claw_stun;
+                break;
+            case LAURA:
+                titleStringId = R.string.laura_title;
+                styleStringId = R.string.laura_style;
+                healthStringId = R.string.laura_health;
+                stunStringId = R.string.laura_stun;
+                break;
+            case KEN:
+                titleStringId = R.string.ken_title;
+                styleStringId = R.string.ken_style;
+                healthStringId = R.string.ken_health;
+                stunStringId = R.string.ken_stun;
+                break;
+            case NECALLI:
+                titleStringId = R.string.necalli_title;
+                styleStringId = R.string.necalli_style;
+                healthStringId = R.string.necalli_health;
+                stunStringId = R.string.necalli_stun;
+                break;
+            case RASHID:
+                titleStringId = R.string.rashid_title;
+                styleStringId = R.string.rashid_style;
+                healthStringId = R.string.rashid_health;
+                stunStringId = R.string.rashid_stun;
+                break;
+            case MIKA:
+                titleStringId = R.string.mika_title;
+                styleStringId = R.string.mika_style;
+                healthStringId = R.string.mika_health;
+                stunStringId = R.string.mika_stun;
+                break;
+            case ZANGIEF:
+                titleStringId = R.string.zangief_title;
+                styleStringId = R.string.zangief_style;
+                healthStringId = R.string.zangief_health;
+                stunStringId = R.string.zangief_stun;
+                break;
+            case FANG:
+                titleStringId = R.string.fang_title;
+                styleStringId = R.string.fang_style;
+                healthStringId = R.string.fang_health;
+                stunStringId = R.string.fang_stun;
+                break;
+            case DHALSIM:
+                titleStringId = R.string.dhalsim_title;
+                styleStringId = R.string.dhalsim_style;
+                healthStringId = R.string.dhalsim_health;
+                stunStringId = R.string.dhalsim_stun;
+                break;
+            case KARIN:
+                titleStringId = R.string.karin_title;
+                styleStringId = R.string.karin_style;
+                healthStringId = R.string.karin_health;
+                stunStringId = R.string.karin_stun;
+                break;
+            default:
+                throw new IllegalArgumentException("could not find character: " + targetCharacter.toString());
+        }
+
+        if (viewExists(R.id.banner_character_details)) {
+            ((TextView) findViewById(R.id.banner_character_title)).setText(titleStringId);
+
+            String styleText = String.format(getString(R.string.style_format), getString(styleStringId));
+            ((TextView) findViewById(R.id.banner_character_style)).setText(styleText);
+
+            String healthText = String.format(getString(R.string.health_format), getString(healthStringId));
+            ((TextView) findViewById(R.id.banner_character_health)).setText(healthText);
+
+            String stunText = String.format(getString(R.string.stun_format), getString(stunStringId));
+            ((TextView) findViewById(R.id.banner_character_stun)).setText(stunText);
         }
     }
 }
