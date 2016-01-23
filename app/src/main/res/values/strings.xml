@@ -258,17 +258,17 @@
     <string name="cammy_title">Killer Bee</string>
     <string name="cammy_health">900</string>
     <string name="cammy_stun">900</string>
-    <string name="cammy_style">Special Forces Training</string>
+    <string name="cammy_style">Special Forces</string>
 
     <string name="birdie_title">Punk Glutton</string>
     <string name="birdie_health">1050</string>
     <string name="birdie_stun">1000</string>
-    <string name="birdie_style">Brawling and Wrestling</string>
+    <string name="birdie_style">Bar Room Brawling</string>
 
     <string name="nash_title">Returned Avenger</string>
     <string name="nash_health">950</string>
     <string name="nash_stun">950</string>
-    <string name="nash_style">Special Forces Training</string>
+    <string name="nash_style">Special Forces</string>
 
     <string name="mika_title">Rainbow Bomber</string>
     <string name="mika_health">950</string>
@@ -318,7 +318,7 @@
     <string name="karin_title">Smug Perfectionist</string>
     <string name="karin_health">900</string>
     <string name="karin_stun">950</string>
-    <string name="karin_style">Kanzuki-Ryu Kakutojutsu</string>
+    <string name="karin_style">Kanzuki-Ryu</string>
 
     <string name="ken_title">Flaming Fist</string>
     <string name="ken_health">1000</string>
