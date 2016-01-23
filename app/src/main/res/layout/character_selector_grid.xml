@@ -5,6 +5,7 @@
     android:id="@+id/container_scroll_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/character_selector_grid"
     android:fillViewport="true">
 
         <android.support.v7.widget.GridLayout
