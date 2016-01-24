@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/frame_data_header_layout"/>
+    <include layout="@layout/frame_data_header_layout"
+        android:id="@+id/frame_data_header_layout"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/frames_recycler_view"

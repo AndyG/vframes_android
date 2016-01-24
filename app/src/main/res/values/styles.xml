@@ -8,11 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowContentTransitions">true</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="CharacterCard" parent="CardView">
@@ -62,13 +65,16 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="ToolbarStyle" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:textColorPrimary">@color/off_white</item>
+    <style name="toolbar_text" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="toolbar_text" parent="Base.TextAppearance.AppCompat.Title">
-        <item name="android:textColor">@color/off_white</item>
-        <item name="android:textSize">20sp</item>
+    <style name="summary_toolbar_style">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/toolbar_text</item>
+        <item name="android:elevation">4dp</item>
     </style>
 
     <style name="frame_data_header_text_style">

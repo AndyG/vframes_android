@@ -15,6 +15,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewTreeObserver;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -160,6 +162,11 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     }
 
     @Override
+    public ColorDrawable getTargetCharacterColor() {
+        return getCharacterPrimaryColorDrawable();
+    }
+
+    @Override
     public void onBackPressed() {
         supportFinishAfterTransition();
     }
@@ -185,13 +192,21 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         viewPager.setAdapter(pagerAdapter);
 
         PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_tab_strip);
-        pagerTabStrip.setTabIndicatorColor(ContextCompat.getColor(this, R.color.tab_indicator_color));
+        pagerTabStrip.setBackgroundColor(getCharacterAccentColor());
+        pagerTabStrip.setTabIndicatorColorResource(R.color.tab_indicator_color);
     }
 
     private void setupToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.summary_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getCharacterAccentColor());
+        }
+
         if (actionBar != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
@@ -200,7 +215,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             String toolbarTitleFormat = getString(R.string.summary_toolbar_title);
             String characterName = getString(getNameResource());
             actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
-            actionBar.setBackgroundDrawable(getCharacterAccentColorDrawable());
+            actionBar.setBackgroundDrawable(getCharacterPrimaryColorDrawable());
 
             if (viewExists(R.id.summary_character_image)) {
                 final ImageView summaryCharacterImage = (ImageView) findViewById(R.id.summary_character_image);
@@ -312,40 +327,80 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         }
     }
 
-    private ColorDrawable getCharacterAccentColorDrawable() {
+    private ColorDrawable getCharacterPrimaryColorDrawable() {
         switch(targetCharacter) {
             case RYU:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.ryu_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.ryu_primary));
             case CHUN:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.chun_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.chun_primary));
             case DICTATOR:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.dictator_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.dictator_primary));
             case BIRDIE:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.birdie_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.birdie_primary));
             case NASH:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.nash_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.nash_primary));
             case CAMMY:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.cammy_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.cammy_primary));
             case KEN:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.ken_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.ken_primary));
             case MIKA:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.mika_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.mika_primary));
             case NECALLI:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.necalli_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.necalli_primary));
             case CLAW:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.claw_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.claw_primary));
             case RASHID:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.rashid_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.rashid_primary));
             case KARIN:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.karin_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.karin_primary));
             case LAURA:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.laura_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.laura_primary));
             case DHALSIM:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.dhalsim_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.dhalsim_primary));
             case ZANGIEF:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.zangief_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.zangief_primary));
             case FANG:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.fang_accent));
+                return new ColorDrawable(ContextCompat.getColor(this, R.color.fang_primary));
+            default:
+                throw new RuntimeException("unable to resolve character accent color drawable: " + targetCharacter);
+        }
+    }
+
+
+    private int getCharacterAccentColor() {
+        switch(targetCharacter) {
+            case RYU:
+                return ContextCompat.getColor(this, R.color.ryu_accent);
+            case CHUN:
+                return ContextCompat.getColor(this, R.color.chun_accent);
+            case DICTATOR:
+                return ContextCompat.getColor(this, R.color.dictator_accent);
+            case BIRDIE:
+                return ContextCompat.getColor(this, R.color.birdie_accent);
+            case NASH:
+                return ContextCompat.getColor(this, R.color.nash_accent);
+            case CAMMY:
+                return ContextCompat.getColor(this, R.color.cammy_accent);
+            case KEN:
+                return ContextCompat.getColor(this, R.color.ken_accent);
+            case MIKA:
+                return ContextCompat.getColor(this, R.color.mika_accent);
+            case NECALLI:
+                return ContextCompat.getColor(this, R.color.necalli_accent);
+            case CLAW:
+                return ContextCompat.getColor(this, R.color.claw_accent);
+            case RASHID:
+                return ContextCompat.getColor(this, R.color.rashid_accent);
+            case KARIN:
+                return ContextCompat.getColor(this, R.color.karin_accent);
+            case LAURA:
+                return ContextCompat.getColor(this, R.color.laura_accent);
+            case DHALSIM:
+                return ContextCompat.getColor(this, R.color.dhalsim_accent);
+            case ZANGIEF:
+                return ContextCompat.getColor(this, R.color.zangief_accent);
+            case FANG:
+                return ContextCompat.getColor(this, R.color.fang_accent);
             default:
                 throw new RuntimeException("unable to resolve character accent color drawable: " + targetCharacter);
         }
@@ -391,10 +446,11 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     }
 
     private void setCharacterDetails() {
-        int titleStringId = 0;
-        int styleStringId = 0;
-        int healthStringId = 0;
-        int stunStringId = 0;
+        int titleStringId;
+        int styleStringId;
+        int healthStringId;
+        int stunStringId;
+
         switch (targetCharacter) {
             case RYU:
                 titleStringId = R.string.ryu_title;

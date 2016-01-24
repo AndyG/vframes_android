@@ -33,7 +33,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/birdie_name"
-                        android:background="@color/birdie_accent" />
+                        android:background="@color/birdie_primary" />
 
                 </LinearLayout>
 
@@ -58,7 +58,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/cammy_name"
-                        android:background="@color/cammy_accent" />
+                        android:background="@color/cammy_primary" />
 
                 </LinearLayout>
 
@@ -83,7 +83,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/chun_name"
-                        android:background="@color/chun_accent" />
+                        android:background="@color/chun_primary" />
 
                 </LinearLayout>
 
@@ -108,7 +108,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/dhalsim_name"
-                        android:background="@color/dhalsim_accent" />
+                        android:background="@color/dhalsim_primary" />
 
                 </LinearLayout>
 
@@ -133,7 +133,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/fang_name"
-                        android:background="@color/fang_accent" />
+                        android:background="@color/fang_primary" />
 
                 </LinearLayout>
 
@@ -158,7 +158,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/karin_name"
-                        android:background="@color/karin_accent" />
+                        android:background="@color/karin_primary" />
 
                 </LinearLayout>
 
@@ -183,7 +183,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/ken_name"
-                        android:background="@color/ken_accent" />
+                        android:background="@color/ken_primary" />
 
                 </LinearLayout>
 
@@ -208,7 +208,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/laura_name"
-                        android:background="@color/laura_accent" />
+                        android:background="@color/laura_primary" />
 
                 </LinearLayout>
 
@@ -233,7 +233,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/dictator_name"
-                        android:background="@color/dictator_accent" />
+                        android:background="@color/dictator_primary" />
 
                 </LinearLayout>
 
@@ -258,7 +258,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/nash_name"
-                        android:background="@color/nash_accent" />
+                        android:background="@color/nash_primary" />
 
                 </LinearLayout>
 
@@ -283,7 +283,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/necalli_name"
-                        android:background="@color/necalli_accent" />
+                        android:background="@color/necalli_primary" />
 
                 </LinearLayout>
 
@@ -308,7 +308,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/mika_name"
-                        android:background="@color/mika_accent" />
+                        android:background="@color/mika_primary" />
 
                 </LinearLayout>
 
@@ -333,7 +333,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/rashid_name"
-                        android:background="@color/rashid_accent" />
+                        android:background="@color/rashid_primary" />
 
                 </LinearLayout>
 
@@ -358,7 +358,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/ryu_name"
-                        android:background="@color/ryu_accent" />
+                        android:background="@color/ryu_primary" />
 
                 </LinearLayout>
 
@@ -383,7 +383,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/claw_name"
-                        android:background="@color/claw_accent" />
+                        android:background="@color/claw_primary" />
 
                 </LinearLayout>
 
@@ -408,7 +408,7 @@
                     <TextView
                         style="@style/CharacterCardTextStyle"
                         android:text="@string/zangief_name"
-                        android:background="@color/zangief_accent" />
+                        android:background="@color/zangief_primary" />
 
                 </LinearLayout>
 

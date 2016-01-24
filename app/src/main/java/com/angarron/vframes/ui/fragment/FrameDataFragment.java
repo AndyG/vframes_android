@@ -2,6 +2,7 @@ package com.angarron.vframes.ui.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -48,6 +49,9 @@ public class FrameDataFragment extends Fragment {
         if (frameData != null) {
             LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.frame_data_layout, container, false);
 
+            ColorDrawable color = frameDataFragmentHost.getTargetCharacterColor();
+            linearLayout.findViewById(R.id.frame_data_header_layout).setBackgroundColor(color.getColor());
+
             frameDataRecyclerView = (RecyclerView) linearLayout.findViewById(R.id.frames_recycler_view);
             frameDataRecyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
             frameDataRecyclerView.setAdapter(new FrameDataRecyclerViewAdapter(getContext(), frameData));
@@ -81,6 +85,8 @@ public class FrameDataFragment extends Fragment {
     public interface IFrameDataFragmentHost {
         void registerFrameDataFragment(FrameDataFragment frameDataFragment);
         void unregisterFrameDataFragment();
+
         FrameData getFrameData();
+        ColorDrawable getTargetCharacterColor();
     }
 }

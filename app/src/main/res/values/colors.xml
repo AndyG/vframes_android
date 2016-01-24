@@ -2,38 +2,60 @@
 <resources>
 
     <!-- Overall App Theme -->
-    <color name="colorPrimary">#808080</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimary">#9E9E9E</color>
+    <color name="colorPrimaryDark">#616161</color>
     <color name="colorAccent">#FF4081</color>
     <color name="off_white">#f5f5f5</color>
 
-    <color name="character_selector_grid">#c4c4c4</color>
+    <!-- Character Select -->
+    <color name="character_selector_grid_background">#EEEEEE</color>
 
-    <!-- Character Accents -->
-    <color name="ryu_accent">#355547</color>
-    <color name="cammy_accent">#1a540a</color>
-    <color name="chun_accent">#5b58c7</color>
-    <color name="dictator_accent">#4e2494</color>
-    <color name="nash_accent">#2f4419</color>
-    <color name="birdie_accent">#33261f</color>
-    <color name="mika_accent">#0e7a82</color>
-    <color name="ken_accent">#c11e10</color>
-    <color name="necalli_accent">#56284b</color>
-    <color name="rashid_accent">#63291a</color>
-    <color name="karin_accent">#0c81b1</color>
-    <color name="claw_accent">#600100</color>
-    <color name="laura_accent">#205e1f</color>
-    <color name="dhalsim_accent">#a1141c</color>
-    <color name="zangief_accent">#515b53</color>
-    <color name="fang_accent">#260793</color>
+    <!-- Character Summary -->
+    <color name="character_summary_toolbar_text_color">#f5f5f5</color>
+
+    <!-- Character Primary Colors -->
+    <color name="ryu_primary">#355547</color>
+    <color name="cammy_primary">#1a540a</color>
+    <color name="chun_primary">#5b58c7</color>
+    <color name="dictator_primary">#4e2494</color>
+    <color name="nash_primary">#2f4419</color>
+    <color name="birdie_primary">#33261f</color>
+    <color name="mika_primary">#0e7a82</color>
+    <color name="ken_primary">#c11e10</color>
+    <color name="necalli_primary">#56284b</color>
+    <color name="rashid_primary">#63291a</color>
+    <color name="karin_primary">#0c81b1</color>
+    <color name="claw_primary">#600100</color>
+    <color name="laura_primary">#205e1f</color>
+    <color name="dhalsim_primary">#a1141c</color>
+    <color name="zangief_primary">#515b53</color>
+    <color name="fang_primary">#260793</color>
+
+    <!-- Character Accent Colors -->
+    <color name="ryu_accent">#1e3028</color>
+    <color name="cammy_accent">#133d07</color>
+    <color name="chun_accent">#37357b</color>
+    <color name="dictator_accent">#3e1c76</color>
+    <color name="nash_accent">#233313</color>
+    <color name="birdie_accent">#211914</color>
+    <color name="mika_accent">#0a585e</color>
+    <color name="ken_accent">#83150b</color>
+    <color name="necalli_accent">#391a32</color>
+    <color name="rashid_accent">#461d13</color>
+    <color name="karin_accent">#085f83</color>
+    <color name="claw_accent">#410100</color>
+    <color name="laura_accent">#184617</color>
+    <color name="dhalsim_accent">#6b0c11</color>
+    <color name="zangief_accent">#343b36</color>
+    <color name="fang_accent">#170459</color>
 
     <color name="card_text_color">#ccFFFFFF</color>
     <color name="summary_text_color">#ccFFFFFF</color>
     <color name="move_name_background">#c4c4c4</color>
     <color name="divider_color">#b7b7b7</color>
-    <color name="description_background">#545454</color>
+    <color name="description_background">#435066</color>
     <color name="pager_tab_strip_background">#303030</color>
-    <color name="tab_indicator_color">#0fa5de</color>
+    <color name="tab_indicator_color">#FFFFFF</color>
 
     <!-- Frame Data Row Background-->
     <color name="frame_data_row_background_shaded">#e1e1e1</color>
