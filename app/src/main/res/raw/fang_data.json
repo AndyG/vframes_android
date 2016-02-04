@@ -1,5 +1,37 @@
 {
   "move_list": {
+        "critical_arts": [
+          {
+            "nameID": "Shishiruirui",
+            "input": "QCF|QCF|PLUS|PUNCH",
+            "descriptionID":"id_fang_critical_art_description"
+          }
+        ],
+        "specials": [
+          {
+            "nameID": "Nishikyu",
+            "input": "CHARGE_DOWN|RELEASE_UP|PLUS|PUNCH"
+          },
+          {
+            "nameID": "Sotoja",
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH"
+          },
+          {
+            "nameID": "Ryobenda",
+            "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|KICK"
+          },
+          {
+            "nameID": "Nikankyaku",
+            "input": "SRK|PLUS|KICK"
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Nikaiho",
+            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "pretextID":"id_during_guard"
+          }
+        ],
         "vskill": [
           {
             "nameID": "Nishodoku",
@@ -7,18 +39,33 @@
             "descriptionID":"id_fang_vskill_description"
           }
         ],
+        "throws": [
+          {
+            "nameID": "Shimonshu",
+            "input": "LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          },
+          {
+            "nameID": "Kyoshitsugeki",
+            "input": "BACK|PLUS|LP|PLUS|LK",
+            "pretextID":"id_close_to_opponent"
+          }
+        ],
+        "unique_attacks": [
+          {
+            "nameID": "Senpukuga",
+            "input": "DOWN|PLUS|ALL_PUNCHES|ARROW|KICK"
+          },
+          {
+            "nameID": "Nirenko",
+            "input": "DOWN_FORWARD|PLUS|HP"
+          }
+        ],
         "vtrigger": [
           {
             "nameID":"Dokunomu",
             "input": "HP|PLUS|HK",
             "descriptionID": "id_fang_vtrigger_description"
-          }
-        ],
-        "critical_arts": [
-          {
-            "nameID": "Flappy Bird?",
-            "input": "NO_INPUT",
-            "descriptionID":"id_fang_critical_art_description"
           }
         ]
       }
