@@ -56,7 +56,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         View v;
         switch (viewType) {
             case VIEW_TYPE_HEADER:
-                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_header, parent, false);
+                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_header, parent, false);
                 return new HeaderItemViewHolder(v);
             case VIEW_TYPE_MOVE:
                 v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_item, parent, false);

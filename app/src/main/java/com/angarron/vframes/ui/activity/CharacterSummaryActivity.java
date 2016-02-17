@@ -27,6 +27,7 @@ import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
+import com.angarron.vframes.ui.fragment.NotesFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
 
@@ -40,7 +41,7 @@ import data.model.character.SFCharacter;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
-public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost, FrameDataFragment.IFrameDataFragmentHost {
+public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost, FrameDataFragment.IFrameDataFragmentHost, NotesFragment.INotesFragmentHost {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
     private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
@@ -169,6 +170,11 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     @Override
     public void onBackPressed() {
         supportFinishAfterTransition();
+    }
+
+    @Override
+    public CharacterID getTargetCharacter() {
+        return targetCharacter;
     }
 
     private void verifyDataAvailable() {
