@@ -10,7 +10,7 @@
           {
             "nameID": "Flying Barcelona Attack",
             "input": "SRK|OR|SRK_BACK|PLUS|KICK",
-            "descriptionID": "id_claw_flying_barcelona_attack_description"
+            "description": "id_claw_flying_barcelona_attack_description"
           },
           {
             "nameID": "Izuna Drop",
@@ -21,7 +21,7 @@
             "nameID": "Grand Izuna Drop",
             "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
-            "descriptionID": "id_command_grab",
+            "description": "id_command_grab",
             "posttextID":"id_claw_claw_off_only"
           },
           {
@@ -43,18 +43,18 @@
           {
             "nameID": "Bloody Kiss - Torero",
             "input": "HP|PLUS|HK",
-            "descriptionID": "id_claw_vtrigger_torero_description"
+            "description": "id_claw_vtrigger_torero_description"
           },
           {
             "nameID": "Bloody Kiss - Rojo",
             "input": "DOWN|PLUS|HP|PLUS|HK",
-            "descriptionID": "id_claw_vtrigger_rojo_description"
+            "description": "id_claw_vtrigger_rojo_description"
           },
           {
             "nameID": "Bloody Kiss - Azul",
             "input": "HP|PLUS|HK",
             "pretextID":"id_during_forward_jump",
-            "descriptionID": "id_claw_vtrigger_azul_description"
+            "description": "id_claw_vtrigger_azul_description"
           }
         ],
         "vreversal": [
@@ -74,7 +74,7 @@
             "nameID": "Matador Turn",
             "input": "MP|PLUS|MK",
             "pretextID":"id_hold_buttons_to_attack",
-            "descriptionID": "id_claw_vskill_description"
+            "description": "id_claw_vskill_description"
           }
         ],        
         "throws": [
@@ -97,7 +97,7 @@
           {
             "nameID": "Mercury Shard",
             "input": "FORWARD|PLUS|MK",
-            "descriptionID":"id_hits_overhead"
+            "description":"id_hits_overhead"
           },
           {
             "nameID": "Buster Claw",

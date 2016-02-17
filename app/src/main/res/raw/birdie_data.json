@@ -10,37 +10,37 @@
           {
             "nameID": "Bull Head",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_birdie_bull_head_description"
+            "description": "id_birdie_bull_head_description"
           },
           {
             "nameID": "Bull Horn",
             "input": "PUNCH|OR|KICK",
-            "descriptionID": "id_birdie_bull_horn_description",
+            "description": "id_birdie_bull_horn_description",
             "posttextID":"id_hold_and_release"
           },
           {
             "nameID": "Hanging Chain",
             "input": "QCF|PLUS|KICK",
-            "descriptionID": "id_birdie_hanging_chain_description",
+            "description": "id_birdie_hanging_chain_description",
             "posttextID":"id_birdie_hanging_chain_posttext"
           },
           {
             "nameID": "Killing Head",
             "input": "HCB|PLUS|PUNCH",
-            "descriptionID": "id_birdie_killing_head_description",
+            "description": "id_birdie_killing_head_description",
             "pretextID":"id_close_to_opponent"
           },
           {
             "nameID": "Bull Revenger",
             "input": "HCB|PLUS|KICK",
-            "descriptionID": "id_birdie_bull_revenger_description"
+            "description": "id_birdie_bull_revenger_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Enjoy Time",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_birdie_vtrigger_description"
+            "description":"id_birdie_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -80,7 +80,7 @@
           {
             "nameID": "Bull Drop",
             "input": "FORWARD|PLUS|HK",
-            "descriptionID":"id_hits_overhead"
+            "description":"id_hits_overhead"
           },
           {
             "nameID": "Bull Charge",

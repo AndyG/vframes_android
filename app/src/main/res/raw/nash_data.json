@@ -10,13 +10,13 @@
           {
             "nameID": "Sonic Boom",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_nash_sonic_boom_description",
+            "description": "id_nash_sonic_boom_description",
             "posttextID":"id_nash_press_for_second_boom"
           },
           {
             "nameID": "Sonic Scythe",
             "input": "QCB|PLUS|KICK",
-            "descriptionID": "id_nash_sonic_scythe_description"
+            "description": "id_nash_sonic_scythe_description"
           },
           {
             "nameID": "Moonsault Slash",
@@ -25,24 +25,24 @@
           {
             "nameID": "Tragedy Assault",
             "input": "SRK|PLUS|PUNCH",
-            "descriptionID": "id_nash_tragedy_assault_description"
+            "description": "id_nash_tragedy_assault_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Sonic Move - Hide",
             "input": "HP|PLUS|HK",
-            "descriptionID": "id_nash_sonic_move_hide_description"
+            "description": "id_nash_sonic_move_hide_description"
           },
           {
             "nameID": "Sonic Move - Blitz Air",
             "input": "BACK|PLUS|HP|PLUS|HK",
-            "descriptionID": "id_nash_sonic_move_blitz_air_description"
+            "description": "id_nash_sonic_move_blitz_air_description"
           },
           {
             "nameID": "Sonic Move - Steel Air",
             "input": "FORWARD|PLUS|HP|PLUS|HK",
-            "descriptionID": "id_nash_sonic_move_steel_air_description"
+            "description": "id_nash_sonic_move_steel_air_description"
           }
         ],
         "vreversal": [
@@ -56,7 +56,7 @@
           {
             "nameID": "Bullet Clear",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_nash_vskill_description"
+            "description":"id_nash_vskill_description"
           }
         ],       
         "throws": [
@@ -88,7 +88,7 @@
           {
             "nameID": "Chopping Assault",
             "input": "FORWARD|PLUS|MP",
-            "descriptionID":"id_hits_overhead"
+            "description":"id_hits_overhead"
           },
           {
             "nameID": "Step Kick",

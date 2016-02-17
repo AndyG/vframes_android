@@ -15,17 +15,17 @@
           {
             "nameID": "Hadoken",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_ryu_hadoken_description"
+            "description": "id_ryu_hadoken_description"
           },
           {
             "nameID": "Shoryuken",
             "input": "SRK|PLUS|PUNCH",
-            "descriptionID": "id_ryu_shoryuken_description"
+            "description": "id_ryu_shoryuken_description"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
             "input": "QCB|PLUS|KICK",
-            "descriptionID": "id_ryu_tatsu_description"
+            "description": "id_ryu_tatsu_description"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
@@ -37,7 +37,7 @@
           {
             "nameID": "Denjin Renki",
             "input": "HP|PLUS|HK",
-            "descriptionID": "id_ryu_vtrigger_description"
+            "description": "id_ryu_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -51,7 +51,7 @@
           {
             "nameID": "Mind's Eye",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_ryu_vskill_description"
+            "description":"id_ryu_vskill_description"
           }
         ],       
         "throws": [
@@ -70,7 +70,7 @@
           {
             "nameID": "Collarbone Breaker",
             "input": "FORWARD|PLUS|MP",
-            "descriptionID": "id_hits_overhead"
+            "description": "id_hits_overhead"
           },
           {
             "nameID": "Solar Plexus Strike",

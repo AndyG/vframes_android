@@ -11,7 +11,7 @@
           {
             "nameID": "Psycho Blast",
             "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
-            "descriptionID": "id_dictator_psycho_blast_description"
+            "description": "id_dictator_psycho_blast_description"
           },
           {
             "nameID": "Double Knee Press",
@@ -40,7 +40,7 @@
           {
             "nameID": "Psycho Power",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_dictator_vtrigger_description"
+            "description":"id_dictator_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -54,7 +54,7 @@
           {
             "nameID": "Psycho Reflect",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_dictator_vskill_description"
+            "description":"id_dictator_vskill_description"
           }
         ],      
         "throws": [

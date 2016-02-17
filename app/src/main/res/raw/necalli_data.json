@@ -15,18 +15,18 @@
           {
             "nameID": "The Disc's Guidance",
             "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
-            "descriptionID":"id_necalli_disc_guidance_description"
+            "description":"id_necalli_disc_guidance_description"
           },
           {
             "nameID": "Raging Light",
             "input": "SRK|PLUS|PUNCH",
-            "descriptionID":"id_necalli_raging_light_description"
+            "description":"id_necalli_raging_light_description"
           },
           {
             "nameID": "Mask of Tlalli",
             "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
-            "descriptionID": "id_necalli_mask_of_tlalli_description"
+            "description": "id_necalli_mask_of_tlalli_description"
           },
           {
             "nameID": "Valiant Rebellion",
@@ -37,7 +37,7 @@
           {
             "nameID": "Torrent of Power",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_necalli_vtrigger_description"
+            "description":"id_necalli_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -52,7 +52,7 @@
             "nameID": "Culminated Power",
             "input": "MP|PLUS|MK",
             "posttextID":"id_necalli_vskill_control_distance",
-            "descriptionID":"id_necalli_vskill_description"
+            "description":"id_necalli_vskill_description"
           }
         ],       
         "throws": [
@@ -71,7 +71,7 @@
           {
             "nameID": "Opening Dagger",
             "input": "DOWN_FORWARD|PLUS|HP",
-            "descriptionID":"id_necalli_opening_dagger_description"
+            "description":"id_necalli_opening_dagger_description"
           },
           {
             "nameID": "Road of the Sun",

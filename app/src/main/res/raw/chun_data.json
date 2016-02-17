@@ -10,7 +10,7 @@
           {
             "nameID": "Kikoken",
             "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH",
-            "descriptionID": "id_chun_kikoken_description"
+            "description": "id_chun_kikoken_description"
           },
           {
             "nameID": "Lightning Legs",
@@ -20,19 +20,19 @@
             "nameID": "Airborne Lightning Legs",
             "input": "QCF|PLUS|KICK",
             "pretextID":"id_during_forward_jump",
-            "descriptionID": "id_chun_airborne_lightning_legs_description"
+            "description": "id_chun_airborne_lightning_legs_description"
           },
           {
             "nameID": "Spinning Bird Kick",
             "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK",
-            "descriptionID": "id_chun_spinning_bird_kick_description"
+            "description": "id_chun_spinning_bird_kick_description"
           }          
         ],
         "vtrigger": [
           {
             "nameID": "Renkiko",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_chun_vtrigger_description"
+            "description":"id_chun_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -46,7 +46,7 @@
           {
             "nameID": "Rankyaku",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_chun_vskill_description"
+            "description":"id_chun_vskill_description"
           }
         ],        
         "throws": [
@@ -78,7 +78,7 @@
           {
             "nameID": "Senenshu",
             "input": "DOWN_FORWARD|PLUS|MK",
-            "descriptionID":"id_chun_senenshu_description"
+            "description":"id_chun_senenshu_description"
           },
           {
             "nameID": "Tenkukyaku",

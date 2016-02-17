@@ -10,23 +10,23 @@
           {
             "nameID": "Spiral Arrow",
             "input": "QCF|PLUS|KICK",
-            "descriptionID": "id_cammy_spiral_arrow_description"
+            "description": "id_cammy_spiral_arrow_description"
           },
           {
             "nameID": "Cannon Spike",
             "input": "SRK|PLUS|KICK",
-            "descriptionID": "id_cammy_cannon_spike_description"
+            "description": "id_cammy_cannon_spike_description"
           },
           {
             "nameID": "Cannon Strike",
             "input": "QCB|PLUS|KICK",
             "pretextID":"id_during_forward_jump",
-            "descriptionID": "id_cammy_cannon_strike_description"
+            "description": "id_cammy_cannon_strike_description"
           },
           {
             "nameID": "Hooligan Combination",
             "input": "HCF|PLUS|PUNCH",
-            "descriptionID": "id_cammy_hooligan_combination_description"
+            "description": "id_cammy_hooligan_combination_description"
           },
           {
             "nameID": "Lazer Edge Slicer",
@@ -53,7 +53,7 @@
           {
             "nameID": "Delta Drive",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_cammy_vtrigger_description"
+            "description":"id_cammy_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -67,7 +67,7 @@
           {
             "nameID": "Axel Spin Knuckle",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_cammy_vskill_description"
+            "description":"id_cammy_vskill_description"
           }
         ],        
         "throws": [

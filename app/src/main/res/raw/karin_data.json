@@ -10,45 +10,45 @@
           {
             "nameID": "Kanzuki-Ryu Hokojutsu Sappo",
             "input": "QCF|PLUS|KICK",
-            "descriptionID": "id_karin_kanzuki_ryu_hokojutsu_sappo_description"
+            "description": "id_karin_kanzuki_ryu_hokojutsu_sappo_description"
           },
           {
             "nameID": "Tenko",
             "input": "QCF|PLUS|KICK|ARROW|PUNCH",
-            "descriptionID": "id_karin_tenko_description",
+            "description": "id_karin_tenko_description",
             "posttextID":"id_karin_tenko_posttext"
           },
           {
             "nameID": "Orochi",
             "input": "QCF|PLUS|KICK|ARROW|DOWN|PLUS|PUNCH",
-            "descriptionID": "id_karin_orochi_description"
+            "description": "id_karin_orochi_description"
           },
           {
             "nameID": "Mujinkyaku",
             "input": "QCB|PLUS|KICK",
-            "descriptionID":"id_karin_mujinkyaku_description"
+            "description":"id_karin_mujinkyaku_description"
           },
           {
             "nameID": "Ressenha",
             "input": "QCB|PLUS|PUNCH",
-            "descriptionID": "id_hits_overhead"
+            "description": "id_hits_overhead"
           },
           {
             "nameID": "Senha Kusabi",
             "input": "QCB|PLUS|PUNCH|ARROW|DOWN|PLUS|KICK",
-            "descriptionID": "id_hits_low"
+            "description": "id_hits_low"
           },
           {
             "nameID": "Senha Resshu",
             "input": "QCB|PLUS|PUNCH|ARROW|UP|PLUS|KICK",
-            "descriptionID": "id_karin_senha_resshu_description"
+            "description": "id_karin_senha_resshu_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Kanzuki-Ryu Guren No Kata",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_karin_vtrigger_description"
+            "description":"id_karin_vtrigger_description"
           },
           {
             "nameID": "Guren Ken",
@@ -95,7 +95,7 @@
             "nameID": "Meioken",
             "input": "MP|PLUS|MK",
             "posttextID":"id_karin_meioken_posttext",
-            "descriptionID":"id_karin_vskill_description"
+            "description":"id_karin_vskill_description"
           }
         ],
         "throws": [
@@ -114,7 +114,7 @@
           {
             "nameID": "Tsumujigari",
             "input": "FORWARD|PLUS|MK",
-            "descriptionID":"id_hits_overhead"
+            "description":"id_hits_overhead"
           }
         ]
       },

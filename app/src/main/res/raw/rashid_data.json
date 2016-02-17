@@ -10,7 +10,7 @@
           {
             "nameID": "Spinning Mixer",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_rashid_spinning_mixer_description",
+            "description": "id_rashid_spinning_mixer_description",
             "posttextID":"id_rashid_repeat_buttons_to_extend"
           },
           {
@@ -25,14 +25,14 @@
           {
             "nameID": "Whirlwind Shot",
             "input": "QCF|PLUS|KICK",
-            "descriptionID":"id_rashid_whirlwind_shot_description"
+            "description":"id_rashid_whirlwind_shot_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Ysaar",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_rashid_vtrigger_description"
+            "description":"id_rashid_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -337,7 +337,7 @@
         {
           "nameID": "Airborne Eagle Spike",
           "type": "type_0",
-          "descriptionID": "id_rashid_eagle_spike_on_block_description",
+          "description": "id_rashid_eagle_spike_on_block_description",
           "data": {
             "startupFrames": 20,
             "blockAdvantage": -24,

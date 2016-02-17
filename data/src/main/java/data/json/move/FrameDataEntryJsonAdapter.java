@@ -144,8 +144,8 @@ public class FrameDataEntryJsonAdapter {
 
     private static String parseDescription(JsonObject moveJson) {
         String description = null;
-        if (moveJson.has("descriptionID")) {
-            description = moveJson.get("descriptionID").getAsString();
+        if (moveJson.has("description")) {
+            description = moveJson.get("description").getAsString();
         }
         return description;
     }

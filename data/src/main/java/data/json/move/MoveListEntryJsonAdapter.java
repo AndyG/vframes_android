@@ -30,7 +30,7 @@ public class MoveListEntryJsonAdapter {
         String input = getJsonStringValue(moveJson, "input");
         String pretextId = getJsonStringValue(moveJson, "pretextID");
         String posttextId = getJsonStringValue(moveJson, "posttextID");
-        String descriptionId = getJsonStringValue(moveJson, "descriptionID");
+        String descriptionId = getJsonStringValue(moveJson, "description");
         List<InputElement> inputElementList = inputParser.parseInputString(input);
 
         return new MoveListEntry(nameId, pretextId, posttextId, descriptionId, inputElementList);

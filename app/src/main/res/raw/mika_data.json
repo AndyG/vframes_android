@@ -10,24 +10,24 @@
           {
             "nameID": "Shooting Peach",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_mika_shooting_peach_description"
+            "description": "id_mika_shooting_peach_description"
           },
           {
             "nameID": "Wingless Airplane",
             "input": "QCF|PLUS|KICK",
-            "descriptionID": "id_mika_wingless_airplane_description"
+            "description": "id_mika_wingless_airplane_description"
           },
           {
             "nameID": "Rainbow Typhoon",
             "input": "HCB|PLUS|PUNCH",
             "pretextID":"id_close_to_opponent",
-            "descriptionID":"id_mika_typhoon_description"
+            "description":"id_mika_typhoon_description"
           },
           {
             "nameID": "Brimstone",
             "input": "HCB|PLUS|KICK",
             "pretextID":"id_close_to_opponent",
-            "descriptionID":"id_mika_brimstone_description"
+            "description":"id_mika_brimstone_description"
           }
         ],
         "vtrigger": [
@@ -59,7 +59,7 @@
             "nameID": "Mic Performance",
             "input": "MP|PLUS|MK",
             "posttextID":"id_mika_vskill_posttext",
-            "descriptionID":"id_mika_vskill_description"
+            "description":"id_mika_vskill_description"
           }
         ],
         "throws": [

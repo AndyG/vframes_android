@@ -11,12 +11,12 @@
           {
             "nameID": "Yoga Fire",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_dhalsim_yoga_fire_description"
+            "description": "id_dhalsim_yoga_fire_description"
           },
           {
             "nameID": "Yoga Flame",
             "input": "HCB|PLUS|PUNCH",
-            "descriptionID": "id_dhalsim_yoga_flame_description"
+            "description": "id_dhalsim_yoga_flame_description"
           },
           {
             "nameID": "Yoga Gale",
@@ -26,7 +26,7 @@
           {
             "nameID": "Yoga Teleport",
             "input": "SRK|OR|SRK_BACK|PLUS|ALL_PUNCHES|OR|ALL_KICKS",
-            "descriptionID": "id_dhalsim_yoga_teleport_description",
+            "description": "id_dhalsim_yoga_teleport_description",
             "posttextID":"id_can_be_done_in_air"
           }          
         ],
@@ -34,7 +34,7 @@
           {
             "nameID": "Yoga Burner",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_dhalsim_vtrigger_description"
+            "description":"id_dhalsim_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -48,7 +48,7 @@
           {
             "nameID": "Yoga Float",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_dhalsim_vskill_description"
+            "description":"id_dhalsim_vskill_description"
           },
           {
             "nameID": "Yoga Float (Airborne)",

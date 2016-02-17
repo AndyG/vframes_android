@@ -10,37 +10,37 @@
           {
             "nameID": "Bolt Charge",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID":"id_laura_bolt_charge_description"
+            "description":"id_laura_bolt_charge_description"
           },
           {
             "nameID": "Split River",
             "pretextID":"id_laura_after_mp_or_ex_bolt_charge",
             "input": "PUNCH",
-            "descriptionID":"id_laura_split_river_description"
+            "description":"id_laura_split_river_description"
           },
           {
             "nameID": "Rodeo Break",
             "pretextID":"id_laura_after_mp_or_ex_bolt_charge",
             "input": "KICK",
-            "descriptionID":"id_laura_rodeo_break_description"
+            "description":"id_laura_rodeo_break_description"
           },
           {
             "nameID": "Thunder Clap",
             "input": "QCB|PLUS|PUNCH",
-            "descriptionID": "id_laura_thunder_clap_description",
+            "description": "id_laura_thunder_clap_description",
             "posttextID":"id_laura_hold_buttons_to_power_up"
           },
           {
             "nameID": "Sunset Wheel",
             "input": "HCB|PLUS|KICK",
-            "descriptionID": "id_command_grab"
+            "description": "id_command_grab"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Spark Show",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_laura_vtrigger_description"
+            "description":"id_laura_vtrigger_description"
           }       
         ],
         "vreversal": [
@@ -54,18 +54,18 @@
           {
             "nameID": "Volty Line",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_laura_vskill_overhead_description"
+            "description":"id_laura_vskill_overhead_description"
           },
           {
             "nameID": "Linear Movement - Avante",
             "input": "FORWARD|PLUS|MP|PLUS|MK",
-            "descriptionID":"id_laura_vskill_avante_description",
+            "description":"id_laura_vskill_avante_description",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {
             "nameID": "Linear Movement - Esquiva",
             "input": "BACK|PLUS|MP|PLUS|MK",
-            "descriptionID":"id_laura_vskill_esquiva_description",
+            "description":"id_laura_vskill_esquiva_description",
             "posttextID":"id_hold_buttons_to_attack"
           },
           {

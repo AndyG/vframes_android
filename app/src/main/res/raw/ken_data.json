@@ -10,30 +10,30 @@
           {
             "nameID": "Hadoken",
             "input": "QCF|PLUS|PUNCH",
-            "descriptionID": "id_ken_hadoken_description"
+            "description": "id_ken_hadoken_description"
           },
           {
             "nameID": "Shoryuken",
             "input": "SRK|PLUS|PUNCH",
-            "descriptionID": "id_ken_shoryuken_description"
+            "description": "id_ken_shoryuken_description"
           },
           {
             "nameID": "Tatsumaki Senpukyaku",
             "input": "QCB|PLUS|KICK",
-            "descriptionID": "id_ken_tatsu_description"
+            "description": "id_ken_tatsu_description"
           },
           {
             "nameID": "Airborne Tatsumaki Senpukyaku",
             "input": "QCB|PLUS|KICK",
             "pretextID":"id_during_forward_jump",
-            "descriptionID": "id_ken_airborne_tatsu_description"
+            "description": "id_ken_airborne_tatsu_description"
           }
         ],
         "vtrigger": [
           {
             "nameID": "Heat Rush",
             "input": "HP|PLUS|HK",
-            "descriptionID":"id_ken_vtrigger_description"
+            "description":"id_ken_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -47,7 +47,7 @@
           {
             "nameID": "Quick Step",
             "input": "MP|PLUS|MK",
-            "descriptionID":"id_ken_vskill_description"
+            "description":"id_ken_vskill_description"
           }
         ],        
         "throws": [
@@ -66,7 +66,7 @@
           {
             "nameID": "Thunder Kick",
             "input": "FORWARD|PLUS|HK",
-            "descriptionID":"id_ken_thunder_kick_description",
+            "description":"id_ken_thunder_kick_description",
             "posttextID":"id_ken_thunder_kick_posttext"
           },
           {

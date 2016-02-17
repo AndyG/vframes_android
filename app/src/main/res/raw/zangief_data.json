@@ -20,7 +20,7 @@
           {
             "nameID": "Siberian Express",
             "input": "HCB|PLUS|KICK",
-            "descriptionID": "id_zangief_siberian_express_description"
+            "description": "id_zangief_siberian_express_description"
           },
           {
             "nameID": "Borscht Dynamite",
@@ -33,7 +33,7 @@
             "nameID": "Cyclone Lariat",
             "input": "HP|PLUS|HK",
             "posttextID":"id_hold_buttons_for_special_lariat",
-            "descriptionID":"id_zangief_vtrigger_description"
+            "description":"id_zangief_vtrigger_description"
           }
         ],
         "vreversal": [
@@ -48,7 +48,7 @@
             "nameID": "Iron Muscle",
             "input": "MP|PLUS|MK",
             "posttextID":"id_can_move_forward_while_holding_buttons",
-            "descriptionID":"id_zangief_vskill_description"
+            "description":"id_zangief_vskill_description"
           }
         ],       
         "throws": [

@@ -20,9 +20,9 @@ public class HardCodedFrameDataEntry implements IFrameDataEntry {
     private int damageValue;
     private int stunValue;
 
-    private String descriptionId;
+    private String description;
 
-    public HardCodedFrameDataEntry(String displayName, MoveType type, int startupFrames, int activeFrames, int recoveryFrames, int blockAdvantage, int hitAdvantage, int damageValue, int stunValue, String descriptionId) {
+    public HardCodedFrameDataEntry(String displayName, MoveType type, int startupFrames, int activeFrames, int recoveryFrames, int blockAdvantage, int hitAdvantage, int damageValue, int stunValue, String description) {
         this.displayName = displayName;
         this.type = type;
 
@@ -35,7 +35,7 @@ public class HardCodedFrameDataEntry implements IFrameDataEntry {
         this.damageValue = damageValue;
         this.stunValue = stunValue;
 
-        this.descriptionId = descriptionId;
+        this.description = description;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class HardCodedFrameDataEntry implements IFrameDataEntry {
     }
 
     @Override
-    public String getDescriptionId() {
-        return descriptionId;
+    public String getDescription() {
+        return description;
     }
 }

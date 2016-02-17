@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -249,8 +248,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
                 stunValue.setText(getDisplayValue(frameDataEntry.getStunValue()));
             }
 
-            if (!TextUtils.isEmpty(frameDataEntry.getDescriptionId())) {
-                description.setText(StringResolver.getStringId(frameDataEntry.getDescriptionId()));
+            if (!TextUtils.isEmpty(frameDataEntry.getDescription())) {
+                description.setText(frameDataEntry.getDescription());
                 description.setVisibility(View.VISIBLE);
             } else {
                 description.setVisibility(View.GONE);

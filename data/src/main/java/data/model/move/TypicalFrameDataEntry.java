@@ -83,7 +83,7 @@ public class TypicalFrameDataEntry implements IFrameDataEntry {
     }
 
     @Override
-    public String getDescriptionId() {
+    public String getDescription() {
         return descriptionId;
     }
 
