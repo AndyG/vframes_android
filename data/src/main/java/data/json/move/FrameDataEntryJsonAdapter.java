@@ -116,6 +116,11 @@ public class FrameDataEntryJsonAdapter {
             stunValue = moveDataJson.get("stunValue").getAsInt();
         }
 
+        //Override move description if one is set on the "whole move"
+        if (moveDataJson.has("description")) {
+            description = moveDataJson.get("description").getAsString();
+        }
+
         return new HardCodedFrameDataEntry(name, type, startupFrames, activeFrames, recoveryFrames, blockAdvantage, hitAdvantage, damageValue, stunValue, description);
     }
 

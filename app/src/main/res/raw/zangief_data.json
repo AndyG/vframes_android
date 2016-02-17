@@ -85,9 +85,13 @@
           "nameID": "s.LP",
           "type": "type_0",
           "data": {
-            "startupFrames": 7,
+            "startupFrames": 5,
+            "activeFrames": 4,
+            "recoveryFrames": 7,
             "hitAdvantage": 5,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
@@ -95,23 +99,40 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
+            "activeFrames": 2,
+            "recoveryFrames": 12,
             "hitAdvantage": 3,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
           "nameID": "s.HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 16,
+            "startupFrames": 13,
+            "activeFrames": 4,
+            "recoveryFrames": 23,
             "hitAdvantage": 1,
-            "blockAdvantage": -3
+            "blockAdvantage": -4,
+            "damageValue": 100,
+            "stunValue": 150,
+            "description": "Gains upper body armor on frame 3"
           }
         },
        {
           "nameID": "s.HP (Full Charge)",
           "type": "type_0",
           "data": {
+            "startupFrames": 37,
+            "activeFrames": 4,
+            "recoveryFrames": 23,
+            "hitAdvantage": 1003,
+            "blockAdvantage": 2,
+            "damageValue": 130,
+            "stunValue": 200,
+            "description": "Upper body armor frames 3-33"
           }
         },
         {
@@ -119,8 +140,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 12,
             "hitAdvantage": 2,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -128,8 +153,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 3,
+            "recoveryFrames": 17,
             "hitAdvantage": 0,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -137,8 +166,13 @@
           "type": "type_0",
           "data": {
             "startupFrames": 11,
+            "activeFrames": 4,
+            "recoveryFrames": 22,
             "hitAdvantage": 1,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 90,
+            "stunValue": 150,
+            "description": "Whiffs against crouching"
           }
         },
         {
@@ -146,8 +180,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 3,
+            "recoveryFrames": 6,
             "hitAdvantage": 5,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -155,8 +193,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 3,
+            "recoveryFrames": 12,
             "hitAdvantage": 5,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -164,8 +206,13 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 6,
+            "recoveryFrames": 20,
             "hitAdvantage": 1,
-            "blockAdvantage": -4
+            "blockAdvantage": -4,
+            "damageValue": 100,
+            "stunValue": 150,
+            "description":"Airborne frames 10-21"
           }
         },
         {
@@ -173,8 +220,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 8,
             "hitAdvantage": 4,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -182,8 +233,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 2,
+            "recoveryFrames": 16,
             "hitAdvantage": 0,
-            "blockAdvantage": -4
+            "blockAdvantage": -4,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -191,50 +246,72 @@
           "type": "type_0",
           "data": {
             "startupFrames": 10,
+            "activeFrames": 3,
+            "recoveryFrames": 26,
             "hitAdvantage": 1003,
-            "blockAdvantage": -10
+            "blockAdvantage": -10,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LP",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 5,
+            "activeFrames": 5,
+            "damageValue": 50,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MP",
           "type": "type_0",
           "data": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "activeFrames": 4,
+            "damageValue": 80,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 6,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "activeFrames": 5,
+            "damageValue": 50,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 3,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 9
+            "startupFrames": 9,
+            "activeFrames": 5,
+            "damageValue": 100,
+            "stunValue": 150
           }
         }
       ],
@@ -244,8 +321,13 @@
           "type": "type_0",
           "data": {
             "startupFrames": 12,
+            "activeFrames": 4,
+            "recoveryFrames": 14,
             "hitAdvantage": 7,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 100,
+            "stunValue": 200,
+            "description": "Counts as a projectile"
           }
         },
         {
@@ -253,15 +335,23 @@
           "type": "type_0",
           "data": {
             "startupFrames": 12,
+            "activeFrames": 4,
+            "recoveryFrames": 12,
             "hitAdvantage": 3,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 70,
+            "stunValue": 100,
+            "description": "Airborne frames 7-20"
           }
         },
         {
           "nameID": "j.d+HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 7,            
+            "damageValue": 100,
+            "stunValue": 150
           }
         }
       ],
@@ -271,7 +361,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 170            
           }
         },
         {
@@ -279,25 +373,69 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 170  
           }
         }
       ],
       "vskill": [
         {
-          "nameID": "Iron Muscle (Attack)",
+          "nameID": "Iron Muscle",
           "type": "type_0",
           "data": {
-            "blockAdvantage": -2
+            "startupFrames": 31,
+            "activeFrames": 5,
+            "recoveryFrames": 15,  
+            "hitAdvantage": 2,
+            "blockAdvantage": -2,
+            "damageValue": 50,
+            "stun": 100,
+            "description": "Gains 2 hits of armor on frame 1"            
+          }
+        }
+      ],
+      "vreversal": [
+        {
+          "nameID": "Muscle Explosion",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 10,
+            "activeFrames": 2,
+            "recoveryFrames": 17,  
+            "hitAdvantage": 3,
+            "blockAdvantage": -2,
+            "damageValue": 60,
+            "stun": 0            
           }
         }
       ],
       "vtrigger": [
         {
-          "nameID": "Cyclone Lariat",
+          "nameID": "Cyclone Lariat (Suction)",
           "type": "type_0",
           "data": {
-              "blockAdvantage": -3
+            "startupFrames": 19,
+            "activeFrames": 19,
+            "recoveryFrames": 16,  
+            "hitAdvantage": 3,
+            "blockAdvantage": -6,
+            "description": "Fully invincible on on frame 1, projectile invincible during spin"
+          }
+        },
+        {
+          "nameID": "Cyclone Lariat (Short Attack)",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 9,
+            "recoveryFrames": 27,  
+            "hitAdvantage": 1003,
+            "blockAdvantage": -3,
+            "damageValue": 120,
+            "stunValue": 200,
+            "description": "Projectile invincible during spin"
           }
         }
       ],
@@ -307,7 +445,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 180,
+            "stunValue": 250
           }
         },
         {
@@ -315,7 +457,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 200,
+            "stunValue": 250
           }
         },
         {
@@ -323,7 +469,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 240,
+            "stunValue": 250
           }
         },
         {
@@ -331,7 +481,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 240,
+            "stunValue": 300,
+            "description": "Throw invincible frames 1-6"
           }
         },
         {
@@ -339,8 +494,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "recoveryFrames": 31,            
             "hitAdvantage": 1003,
-            "blockAdvantage": -34
+            "blockAdvantage": -32,
+            "damageValue": 100,
+            "stunValue": 200,
+            "description": "Short upper body invulnerability from frame 1.\nProjectile invincible."
           }
         },
         {
@@ -348,7 +507,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 17,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 170,
+            "stunValue": 200
           }
         },
         {
@@ -356,7 +519,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 23,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 200,
+            "stunValue": 200
           }
         },
         {
@@ -364,7 +531,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 30,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 220,
+            "stunValue": 200
           }
         },
         {
@@ -372,7 +543,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 15,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 52,            
+            "hitAdvantage": 1003,
+            "damageValue": 200,
+            "stunValue": 200,
+            "description": "Gains armor on frame 3"
           }
         },
         {
@@ -380,7 +556,10 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
-            "hitAdvantage": 1003
+            "activeFrames": 4,            
+            "hitAdvantage": 1003,
+            "damageValue": 180,
+            "stunValue": 250
           }
         },
         {
@@ -388,7 +567,10 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
-            "hitAdvantage": 1003
+            "activeFrames": 4,            
+            "hitAdvantage": 1003,
+            "damageValue": 200,
+            "stunValue": 250
           }
         },
         {
@@ -396,7 +578,10 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
-            "hitAdvantage": 1003
+            "activeFrames": 4,            
+            "hitAdvantage": 1003,
+            "damageValue": 220,
+            "stunValue": 250
           }
         },
         {
@@ -404,7 +589,10 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
-            "hitAdvantage": 1003
+            "activeFrames": 4,            
+            "hitAdvantage": 1003,
+            "damageValue": 200,
+            "stunValue": 200
           }
         }
       ],
@@ -413,7 +601,13 @@
           "nameID": "Bolshoi Russian Suplex",
           "type": "type_0",
           "data": {
-            "hitAdvantage":1003
+            "startupFrames": 1,
+            "activeFrames": 2,
+            "recoveryFrames": 65,            
+            "hitAdvantage": 1003,
+            "damageValue": 400,
+            "stunValue": 0,
+            "description": "Invincible until recovery"
           }
         }
       ]
