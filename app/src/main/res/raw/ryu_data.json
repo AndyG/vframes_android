@@ -97,8 +97,21 @@
             "type": "type_0",
             "data": {
               "startupFrames": 3,
+              "activeFrames": 2,
+              "recoveryFrames": 7,
               "hitAdvantage": 4,
-              "blockAdvantage": 2
+              "blockAdvantage": 2,
+              "damageValue": 30,
+              "stunValue": 70
+            },
+            "alternateData": {
+              "startupFrames": 3,
+              "activeFrames": 2,
+              "recoveryFrames": 7,
+              "hitAdvantage": 4,
+              "blockAdvantage": 2,
+              "damageValue": 30,
+              "stunValue": 100
             }
           },
           {
@@ -106,8 +119,21 @@
             "type": "type_0",
             "data": {
               "startupFrames": 5,
+              "activeFrames": 3,
+              "recoveryFrames": 10,
               "hitAdvantage": 6,
-              "blockAdvantage": 1
+              "blockAdvantage": 1,
+              "damageValue": 60,
+              "stunValue": 100
+            },
+            "alternateData": {
+              "startupFrames": 5,
+              "activeFrames": 3,
+              "recoveryFrames": 10,
+              "hitAdvantage": 6,
+              "blockAdvantage": 1,
+              "damageValue": 60,
+              "stunValue": 130
             }
           },
           {
@@ -115,8 +141,21 @@
             "type": "type_0",
             "data": {
               "startupFrames": 7,
+              "activeFrames": 3,
+              "recoveryFrames": 20,
               "hitAdvantage": 3,
-              "blockAdvantage": -2
+              "blockAdvantage": -1,
+              "damageValue": 90,
+              "stunValue": 150
+            },
+            "alternateData": {
+              "startupFrames": 7,
+              "activeFrames": 3,
+              "recoveryFrames": 20,
+              "hitAdvantage": 3,
+              "blockAdvantage": -1,
+              "damageValue": 90,
+              "stunValue": 180
             }
           },
           {
@@ -124,8 +163,12 @@
             "type": "type_0",
             "data": {
               "startupFrames": 4,
+              "activeFrames": 3,
+              "recoveryFrames": 11,
               "hitAdvantage": -1,
-              "blockAdvantage": -2
+              "blockAdvantage": -2,
+              "damageValue": 30,
+              "stunValue": 70
             }
           },
           {
@@ -133,8 +176,12 @@
             "type": "type_0",
             "data": {
               "startupFrames": 8,
+              "activeFrames": 3,
+              "recoveryFrames": 16,
               "hitAdvantage": 2,
-              "blockAdvantage": -2
+              "blockAdvantage": -2,
+              "damageValue": 60,
+              "stunValue": 100
             }
           },
           {
@@ -142,8 +189,12 @@
             "type": "type_0",
             "data": {
               "startupFrames": 10,
+              "activeFrames": 2,
+              "recoveryFrames": 18,
               "hitAdvantage": 4,
-              "blockAdvantage": -1
+              "blockAdvantage": -1,
+              "damageValue": 90,
+              "stunValue": 150
             }
           },
           {
@@ -151,8 +202,21 @@
             "type": "type_0",
             "data": {
               "startupFrames": 4,
+              "activeFrames": 2,
+              "recoveryFrames": 6,
               "hitAdvantage": 3,
-              "blockAdvantage": 2
+              "blockAdvantage": 2,
+              "damageValue": 30,
+              "stunValue": 70
+            },
+            "alternateData": {
+              "startupFrames": 4,
+              "activeFrames": 2,
+              "recoveryFrames": 6,
+              "hitAdvantage": 3,
+              "blockAdvantage": 2,
+              "damageValue": 30,
+              "stunValue": 100
             }
           },
           {
@@ -160,8 +224,21 @@
             "type": "type_0",
             "data": {
               "startupFrames": 5,
+              "activeFrames": 3,
+              "recoveryFrames": 12,
               "hitAdvantage": 4,
-              "blockAdvantage": 2
+              "blockAdvantage": 2,
+              "damageValue": 60,
+              "stunValue": 100
+            },
+            "alternateData": {
+              "startupFrames": 5,
+              "activeFrames": 3,
+              "recoveryFrames": 12,
+              "hitAdvantage": 4,
+              "blockAdvantage": 2,
+              "damageValue": 60,
+              "stunValue": 130
             }
           },
           {
@@ -169,8 +246,21 @@
             "type": "type_0",
             "data": {
               "startupFrames": 6,
+              "activeFrames": 4,
+              "recoveryFrames": 24,
               "hitAdvantage": -7,
-              "blockAdvantage": -10
+              "blockAdvantage": -10,
+              "damageValue": 90,
+              "stunValue": 150
+            },
+            "alternateData": {
+              "startupFrames": 6,
+              "activeFrames": 4,
+              "recoveryFrames": 24,
+              "hitAdvantage": -7,
+              "blockAdvantage": -10,
+              "damageValue": 90,
+              "stunValue": 180
             }
           },
           {
@@ -178,8 +268,12 @@
             "type": "type_0",
             "data": {
               "startupFrames": 4,
+              "activeFrames": 2,
+              "recoveryFrames": 7,
               "hitAdvantage": 2,
-              "blockAdvantage": 1
+              "blockAdvantage": 1,
+              "damageValue": 20,
+              "stunValue": 70
             }
           },
           {
@@ -187,8 +281,12 @@
             "type": "type_0",
             "data": {
               "startupFrames": 6,
-              "hitAdvantage": 0,
-              "blockAdvantage": -4
+              "activeFrames": 2,
+              "recoveryFrames": 15,
+              "hitAdvantage": 1,
+              "blockAdvantage": -3,
+              "damageValue": 50,
+              "stunValue": 100
             }
           },
           {
@@ -196,50 +294,87 @@
             "type": "type_0",
             "data": {
               "startupFrames": 7,
+              "activeFrames": 2,
+              "recoveryFrames": 22,
               "hitAdvantage": 1003,
-              "blockAdvantage": -11
+              "blockAdvantage": -11,
+              "damageValue": 100,
+              "stunValue": 150
             }
           },
           {
             "nameID": "j.LP",
             "type": "type_0",
             "data": {
-              "startupFrames": 3
+              "startupFrames": 3,
+              "activeFrames": 6,
+              "damageValue": 40,
+              "stunValue": 70
+            },
+            "alternateData": {
+              "startupFrames": 3,
+              "activeFrames": 6,
+              "damageValue": 40,
+              "stunValue": 100
             }
           },
           {
             "nameID": "j.MP",
             "type": "type_0",
+            "description": "Juggles opponent.",
             "data": {
-              "startupFrames": 7
+              "startupFrames": 7,
+              "stunValue": 100
+            },
+            "alternateData": {
+              "startupFrames": 7,
+              "stunValue": 130
             }
           },
           {
             "nameID": "j.HP",
             "type": "type_0",
             "data": {
-              "startupFrames": 7
+              "startupFrames": 7,
+              "activeFrames": 5,
+              "damageValue": 90,
+              "stunValue": 150
+            },
+            "alternateData": {
+              "startupFrames": 7,
+              "activeFrames": 5,
+              "damageValue": 90,
+              "stunValue": 180
             }
           },
           {
             "nameID": "j.LK",
             "type": "type_0",
             "data": {
-              "startupFrames": 4
+              "startupFrames": 4,
+              "activeFrames": 6,
+              "damageValue": 40,
+              "stunValue": 70
             }
           },
           {
             "nameID": "j.MK",
             "type": "type_0",
             "data": {
-              "startupFrames": 6
+              "startupFrames": 6,
+              "activeFrames": 7,
+              "damageValue": 60,
+              "stunValue": 100
             }
           },
           {
             "nameID": "j.HK",
             "type": "type_0",
             "data": {
-              "startupFrames": 9
+              "startupFrames": 9,
+              "activeFrames": 5,
+              "damageValue": 90,
+              "stunValue": 150
             }
           }
         ],
@@ -249,8 +384,17 @@
             "type": "type_0",
             "data": {
               "startupFrames": 20,
+              "recoveryFrames": 17,
               "hitAdvantage": 0,
-              "blockAdvantage": -6
+              "blockAdvantage": -4,
+              "stunValue": 100
+            },
+            "alternateData": {
+              "startupFrames": 20,
+              "recoveryFrames": 17,
+              "hitAdvantage": 0,
+              "blockAdvantage": -4,
+              "stunValue": 130
             }
           },
           {
@@ -258,8 +402,17 @@
             "type": "type_0",
             "data": {
               "startupFrames": 17,
-              "hitAdvantage": 5,
-              "blockAdvantage": -2
+              "recoveryFrames": 18,
+              "hitAdvantage": 6,
+              "blockAdvantage": -2,
+              "stunValue": 100
+            },
+            "data": {
+              "startupFrames": 17,
+              "recoveryFrames": 18,
+              "hitAdvantage": 6,
+              "blockAdvantage": -2,
+              "stunValue": 130
             }
           },
           {
@@ -267,6 +420,7 @@
             "type": "type_0",
             "data": {
               "startupFrames": 8,
+              "recoveryFrames": 16,
               "hitAdvantage": 4,
               "blockAdvantage": 0
             }
@@ -277,6 +431,14 @@
             "data": {
               "hitAdvantage": 1003,
               "blockAdvantage": -7
+            }
+          },
+          {
+            "nameID": "MP > HP",
+            "type": "type_0",
+            "data": {
+              "hitAdvantage": -9,
+              "blockAdvantage": -16
             }
           },
           {
@@ -294,7 +456,11 @@
             "type": "type_0",
             "data": {
               "startupFrames":5,
-              "hitAdvantage": 1003
+              "activeFrames": 2,
+              "recoveryFrames": 18,
+              "hitAdvantage": 1003,
+              "damageValue": 110,
+              "stunValue": 170
             }
           },
           {
@@ -302,7 +468,11 @@
             "type": "type_0",
             "data": {
               "startupFrames":5,
-              "hitAdvantage": 1003
+              "activeFrames": 2,
+              "recoveryFrames": 18,
+              "hitAdvantage": 1003,
+              "damageValue": 130,
+              "stunValue": 200
             }
           }
         ],
@@ -311,7 +481,31 @@
             "nameID": "Denjin Renki",
             "type": "type_0",
             "data": {
-              "recoveryFrames":56
+              "recoveryFrames":5
+            }
+          }
+        ],
+        "vreversal": [
+          {
+            "nameID": "Hashogeki",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 15,
+              "activeFrames": 2,
+              "recoveryFrames":24,
+              "hitAdvantage": 1003,
+              "blockAdvantage": -2
+            }
+          }
+        ],
+        "vskill": [
+          {
+            "nameID": "Mind's Eye",
+            "type": "type_0",
+            "data": {
+              "startupFrames": 3,
+              "activeFrames": 7,
+              "recoveryFrames":29
             }
           }
         ],
@@ -320,14 +514,21 @@
             "nameID": "Hadoken LP",
             "type": "type_0",
             "data": {
-              "startupFrames":14,
+              "startupFrames":13,
+              "recoveryFrames": 32,
               "hitAdvantage":-1,
-              "blockAdvantage":-7
+              "blockAdvantage":-7,
+              "damageValue": 60,
+              "stunValue": 100
             },
             "alternateData": {
-              "startupFrames":14,
+              "startupFrames":13,
+              "recoveryFrames":31,
               "hitAdvantage":1003,
-              "blockAdvantage":-6
+              "blockAdvantage":-6,
+              "damageValue": 70,
+              "stunValue": 150,
+              "description": "Fully charges in 59 frames."
             }
           },
           {
@@ -335,27 +536,41 @@
             "type": "type_0",
             "data": {
               "startupFrames":13,
-              "hitAdvantage":-2,
-              "blockAdvantage":-8
+              "recoveryFrames": 34,
+              "hitAdvantage":-1,
+              "blockAdvantage":-7,
+              "damageValue": 60,
+              "stunValue": 100
             },
             "alternateData": {
               "startupFrames":13,
+              "recoveryFrames":33,
               "hitAdvantage":1003,
-              "blockAdvantage":-7
+              "blockAdvantage":-6,
+              "damageValue": 70,
+              "stunValue": 150,
+              "description": "Fully charges in 59 frames."
             }
           },
           {
             "nameID": "Hadoken HP",
             "type": "type_0",
             "data": {
-              "startupFrames":12,
-              "hitAdvantage":-3,
-              "blockAdvantage":-9
+              "startupFrames":13,
+              "recoveryFrames":35,
+              "hitAdvantage":-1,
+              "blockAdvantage":-7,
+              "damageValue":60,
+              "stunValue":100
             },
             "alternateData": {
-              "startupFrames":12,
+              "startupFrames":13,
+              "recoveryFrames":35,
               "hitAdvantage":1003,
-              "blockAdvantage":-8
+              "blockAdvantage":-6,
+              "damageValue": 70,
+              "stunValue": 150,
+              "description": "Fully charges in 59 frames."
             }
           },
           {
@@ -363,49 +578,112 @@
             "type": "type_0",
             "data": {
               "startupFrames":11,
+              "recoveryFrames": 33,
               "hitAdvantage":1003,
-              "blockAdvantage":-2
+              "blockAdvantage":-2,
+              "damageValue": 100,
+              "stunValue": 150
             },
             "alternateData": {
               "startupFrames":11,
+              "recoveryFrames":32,              
               "hitAdvantage":1003,
-              "blockAdvantage":-1
+              "blockAdvantage":-1,
+              "damageValue":120,
+              "stunValue":200,
+              "description": "Fully charges in 40 frames."
             }
           },
           {
             "nameID": "Shoryuken LP",
             "type": "type_0",
+            "description": "Lower body and throw invincible frames 1-3.",
             "data": {
               "startupFrames":3,
+              "activeFrames": 12,
+              "recoveryFrames": 30,
               "hitAdvantage":1003,
-              "blockAdvantage":-24
+              "blockAdvantage":-24,
+              "damageValue": 100,
+              "stunValue": 150
+            },
+            "alternateData": {
+              "startupFrames":3,
+              "activeFrames": 12,
+              "recoveryFrames": 30,
+              "hitAdvantage":1003,
+              "blockAdvantage":-24,
+              "damageValue": 120,
+              "stunValue": 200
             }
           },
           {
             "nameID": "Shoryuken MP",
             "type": "type_0",
+            "description": "Invincible frames 1-6.",
             "data": {
               "startupFrames":4,
+              "activeFrames": 11,
+              "recoveryFrames": 39,
               "hitAdvantage":1003,
-              "blockAdvantage":-32
+              "blockAdvantage":-32,
+              "damageValue": 120,
+              "stunValue": 150
+            },
+            "alternateData": {
+              "startupFrames":4,
+              "activeFrames": 11,
+              "recoveryFrames": 39,
+              "hitAdvantage":1003,
+              "blockAdvantage":-32,
+              "damageValue": 140,
+              "stunValue": 200
             }
           },
           {
             "nameID": "Shoryuken HP",
             "type": "type_0",
+            "description": "Invincible frames 1-3, lower body and throw invincible frames 4-7.",
             "data": {
               "startupFrames":5,
+              "activeFrames": 10,
+              "recoveryFrames": 44,
               "hitAdvantage":1003,
-              "blockAdvantage":-36
+              "blockAdvantage":-36,
+              "damageValue": 140,
+              "stunValue": 200
+            },
+            "alternateData": {
+              "startupFrames":5,
+              "activeFrames": 10,
+              "recoveryFrames": 44,
+              "hitAdvantage":1003,
+              "blockAdvantage":-36,
+              "damageValue": 160,
+              "stunValue": 250
             }
           },
           {
             "nameID": "Shoryuken EX",
             "type": "type_0",
+            "description": "Invincible frames 1-15.",
             "data": {
               "startupFrames":3,
+              "activeFrames": 12,
+              "recoveryFrames": 44,
               "hitAdvantage":1003,
-              "blockAdvantage":-37
+              "blockAdvantage":-37,
+              "damageValue": 160,
+              "stunValue": 200
+            },
+            "alternateData": {
+              "startupFrames":3,
+              "activeFrames": 12,
+              "recoveryFrames": 44,
+              "hitAdvantage":1003,
+              "blockAdvantage":-37,
+              "damageValue": 180,
+              "stunValue": 250
             }
           },
           {
@@ -413,8 +691,11 @@
             "type": "type_0",
             "data": {
               "startupFrames":10,
+              "recoveryFrames": 21,
               "hitAdvantage":1003,
-              "blockAdvantage":-10
+              "blockAdvantage":-10,
+              "damageValue": 80,
+              "stunValue": 200
             }
           },
           {
@@ -422,17 +703,25 @@
             "type": "type_0",
             "data": {
               "startupFrames":12,
+              "recoveryFrames": 21,
               "hitAdvantage":1003,
-              "blockAdvantage":-10
+              "blockAdvantage":-10,
+              "damageValue": 100,
+              "stunValue": 200,
+              "description": "Projectile invincible after frame 6."
             }
           },
           {
             "nameID": "Tatsu HK",
             "type": "type_0",
             "data": {
-              "startupFrames":13,
+              "startupFrames":14,
+              "recoveryFrames": 27,
               "hitAdvantage":1003,
-              "blockAdvantage":-10
+              "blockAdvantage":-9,
+              "damageValue": 120,
+              "stunValue": 200,
+              "description": "Projectile invincible after frame 9."
             }
           },
           {
@@ -440,40 +729,32 @@
             "type": "type_0",
             "data": {
               "startupFrames":10,
+              "recoveryFrames": 26,
               "hitAdvantage":1003,
-              "blockAdvantage":-19
+              "blockAdvantage":-19,
+              "damageValue": 140,
+              "stunValue": 200,
+              "description": "Projectile invincible after frame 7."
             }
           },
           {
-            "nameID": "Air Tatsu LK",
+            "nameID": "Air Tatsu",
             "type": "type_0",
             "data": {
               "startupFrames":9,
-              "hitAdvantage":1003
+              "hitAdvantage":1003,
+              "damageValue": 100,
+              "stunValue": 200
             }
-          },
-          {
-            "nameID": "Air Tatsu MP",
-            "type": "type_0",
-            "data": {
-              "startupFrames":9,
-              "hitAdvantage":1003
-            }
-          },
-          {
-            "nameID": "Air Tatsu HP",
-            "type": "type_0",
-            "data": {
-              "startupFrames":9,
-              "hitAdvantage":1003
-            }
-          },
+          },          
           {
             "nameID": "Air Tatsu EX",
             "type": "type_0",
             "data": {
               "startupFrames":8,
-              "hitAdvantage":1003
+              "hitAdvantage":1003,
+              "damageValue": 160,
+              "stunValue": 200
             }
           }
         ],
@@ -482,14 +763,23 @@
             "nameID": "Shinku Hadoken",
             "type": "type_0",
             "data": {
-              "hitAdvantage":1003
+              "startupFrames":4,
+              "recoveryFrames": 61,
+              "hitAdvantage": 1003,
+              "damageValue": 300,
+              "description": "Totally invincible during startup."
             }
           },
           {
             "nameID": "Denjin Hadoken",
             "type": "type_0",
             "data": {
-              "hitAdvantage":1003
+              "startupFrames":4,
+              "recoveryFrames": 61,
+              "hitAdvantage": 1003,
+              "blockAdvantage": 1004,
+              "damageValue": 300,
+              "description": "Totally invincible during startup."
             }
           }
         ]
