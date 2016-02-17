@@ -104,8 +104,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 6,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -113,8 +117,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
+            "activeFrames": 3,
+            "recoveryFrames": 9,
             "hitAdvantage": 7,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -122,8 +130,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
-            "hitAdvantage": 2,
-            "blockAdvantage": -3
+            "activeFrames": 2,
+            "recoveryFrames": 20,
+            "hitAdvantage": 1,
+            "blockAdvantage": -3,
+            "damageValue": 80,
+            "stunValue": 150
           }
         },
         {
@@ -131,8 +143,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 7,
             "hitAdvantage": 2,
-            "blockAdvantage": 0
+            "blockAdvantage": 1,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
@@ -140,8 +156,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 3,
+            "recoveryFrames": 13,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -149,8 +169,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 4,
+            "recoveryFrames": 17,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
@@ -158,8 +182,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
+            "activeFrames": 2,
+            "recoveryFrames": 7,
             "hitAdvantage": 4,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 20,
+            "stunValue": 70
           }
         },
         {
@@ -167,8 +195,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "activeFrames": 3,
+            "recoveryFrames": 10,
             "hitAdvantage": 5,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -176,8 +208,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 3,
+            "recoveryFrames": 20,
             "hitAdvantage": 0,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
@@ -185,8 +221,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 9,
             "hitAdvantage": 1,
-            "blockAdvantage": -1
+            "blockAdvantage": -1,
+            "damageValue": 20,
+            "stunValue": 70
           }
         },
         {
@@ -194,8 +234,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 2,
+            "recoveryFrames": 14,
             "hitAdvantage": 0,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 50,
+            "stunValue": 100
           }
         },
         {
@@ -203,50 +247,72 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 2,
+            "recoveryFrames": 20,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LP",
           "type": "type_0",
           "data": {
-            "startupFrames": 3
+            "startupFrames": 3,
+            "activeFrames": 5,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MP",
           "type": "type_0",
           "data": {
-            "startupFrames": 4
+            "startupFrames": 5,
+            "activeFrames": 5,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 5,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 3
+            "startupFrames": 3,
+            "activeFrames": 5,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 6,
+            "activeFrames": 5,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 5,
+            "damageValue": 90,
+            "stunValue": 150
           }
         }
       ],
@@ -256,8 +322,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 12,
+            "recoveryFrames": 17,
             "hitAdvantage": 5,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 80,
+            "stunValue": 100
           }
         },
         {
@@ -265,8 +334,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 4,
+            "recoveryFrames": 14,
             "hitAdvantage": 0,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -274,8 +347,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 4,
+            "recoveryFrames": 27,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 80,
+            "stunValue": 100
           }
         }
       ],
@@ -284,16 +361,24 @@
           "nameID": "Gyro Clipper",
           "type": "type_0",
           "data": {
-            "startupFrames":5,
-            "hitAdvantage": 1003
+            "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         },
         {
           "nameID": "Delta Through",
           "type": "type_0",
           "data": {
-            "startupFrames":5,
-            "hitAdvantage": 1003
+            "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 140,
+            "stunValue": 200
           }
         }
       ],
@@ -302,9 +387,28 @@
           "nameID": "Axel Spin Knuckle",
           "type": "type_0",
           "data": {
-            "startupFrames": 36,
-            "hitAdvantage": 5,
-            "blockAdvantage": 2
+            "startupFrames": 35,
+            "activeFrames": 2,
+            "recoveryFrames": 13,
+            "hitAdvantage": 6,
+            "blockAdvantage": 2,
+            "damageValue": 60,
+            "stunValue": 100
+          }
+        }
+      ],
+      "vreversal": [
+        {
+          "nameID": "Strike Back",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 17,
+            "activeFrames": 2,
+            "recoveryFrames": 29,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -8,
+            "damageValue": 60,
+            "stunValue": 0
           }
         }
       ],
@@ -313,7 +417,8 @@
           "nameID": "Delta Drive",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 44
+            "startupFrames": 1,
+            "recoveryFrames": 8
           }
         }
       ],
@@ -323,13 +428,22 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 11,
+            "recoveryFrames": 21,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 80,
+            "stunValue": 150
           },
           "alternateData": {
-            "startupFrames":7,
-            "hitAdvantage":1003,
-            "blockAdvantage":-13
+            "startupFrames": 7,
+            "activeFrames": 12,
+            "recoveryFrames": 23,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -13,
+            "damageValue": 120,
+            "stunValue": 150,
+            "description": "Projectile invulnerability frames 5-15."
           }
         },
         {
@@ -337,27 +451,44 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 13,
+            "recoveryFrames": 23,
             "hitAdvantage": 1003,
-            "blockAdvantage": -15
+            "blockAdvantage": -15,
+            "damageValue": 90,
+            "stunValue": 150
           },
           "alternateData": {
-            "startupFrames":7,
-            "hitAdvantage":1003,
-            "blockAdvantage":-13
+            "startupFrames": 7,
+            "activeFrames": 12,
+            "recoveryFrames": 23,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -13,
+            "damageValue": 120,
+            "stunValue": 150,
+            "description": "Projectile invulnerability frames 5-15."
           }
         },
         {
           "nameID": "Spiral Arrow HK",
           "type": "type_0",
           "data": {
-            "startupFrames":7,
-            "hitAdvantage":1003,
-            "blockAdvantage":-13
+            "startupFrames": 7,
+            "recoveryFrames": 26,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -11,
+            "damageValue": 100,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 7,
+            "activeFrames": 12,
+            "recoveryFrames": 23,
             "hitAdvantage": 1003,
-            "blockAdvantage": -11
+            "blockAdvantage": -13,
+            "damageValue": 120,
+            "stunValue": 150,
+            "description": "Projectile invulnerability frames 5-15."
           }
         },
         {
@@ -365,8 +496,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "recoveryFrames": 23,
             "hitAdvantage": 1003,
-            "blockAdvantage": -11
+            "blockAdvantage": -11,
+            "damageValue": 120,
+            "stunValue": 200,
+            "description": "Projectile invulnerability frames 5-15."
           },
           "alternateData": {
 
@@ -376,14 +511,23 @@
           "nameID": "Cannon Spike LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 3,
+            "startupFrames": 4,
+            "activeFrames": 11,
+            "recoveryFrames": 37,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 120,
+            "stunValue": 150,
+            "description": "Invulnerability frames 1-5."
           },
           "alternateData": {
             "startupFrames": 3,
+            "recoveryFrames": 41,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 160,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-7."
           }
         },
         {
@@ -391,13 +535,22 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "activeFrames": 11,
+            "recoveryFrames": 39,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 120,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-6."
           },
           "alternateData": {
             "startupFrames": 3,
+            "recoveryFrames": 41,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 160,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-7."
           }
         },
         {
@@ -405,13 +558,22 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
+            "activeFrames": 11,
+            "recoveryFrames": 39,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 120,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-7."
           },
           "alternateData": {
             "startupFrames": 3,
+            "recoveryFrames": 41,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 160,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-7."
           }
         },
         {
@@ -419,8 +581,13 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
+            "activeFrames": 11,
+            "recoveryFrames": 28,
             "hitAdvantage": 1003,
-            "blockAdvantage": -37
+            "blockAdvantage": -37,
+            "damageValue": 160,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-10."
           },
           "alternateData": {
 
@@ -430,30 +597,63 @@
           "nameID": "Cannon Strike LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 13
+            "startupFrames": 13,
+            "activeFrames": 11,
+            "recoveryFrames": 9,
+            "hitAdvantage": 7,
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
-
+            "startupFrames": 13,
+            "recoveryFrames": 11,
+            "hitAdvantage": 6,
+            "blockAdvantage": 4,
+            "damageValue": 80,
+            "stunValue": 100
           }
         },
         {
           "nameID": "Cannon Strike MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 13
+            "startupFrames": 13,
+            "activeFrames": 11,
+            "recoveryFrames": 9,
+            "hitAdvantage": 7,
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
-
+            "startupFrames": 13,
+            "recoveryFrames": 11,
+            "hitAdvantage": 6,
+            "blockAdvantage": 4,
+            "damageValue": 80,
+            "stunValue": 100
           }
         },
         {
           "nameID": "Cannon Strike HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 13
+            "startupFrames": 13,
+            "activeFrames": 11,
+            "recoveryFrames": 9,
+            "hitAdvantage": 7,
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
-
+            "startupFrames": 13,
+            "recoveryFrames": 11,
+            "hitAdvantage": 6,
+            "blockAdvantage": 4,
+            "damageValue": 80,
+            "stunValue": 100
           }
         },
         {
@@ -461,7 +661,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 13,
-            "hitAdvantage": 1003
+            "activeFrames": 11,
+            "recoveryFrames": 9,
+            "hitAdvantage": 1003,
+            "blockAdvantage": 0,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
 
@@ -471,58 +676,80 @@
           "nameID": "Hooligan Combination LP",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 39
+            "recoveryFrames": 39,
+            "description": "Airborne after frame 6."
           }
         },
         {
           "nameID": "Hooligan Combination MP",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 39
+            "recoveryFrames": 39,
+            "description": "Airborne after frame 6."
           }
         },
         {
           "nameID": "Hooligan Combination HP",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 39
+            "recoveryFrames": 39,
+            "description": "Airborne after frame 6."
           }
         },
         {
           "nameID": "Hooligan Combination EX",
           "type": "type_0",
           "data": {
-            "recoveryFrames": 39
+            "recoveryFrames": 39,
+            "description": "Throw and projectile invulnerability frames 1-13. Airborne after frame 6."
           }
         },
         {
           "nameID": "Razor Edge Slicer",
           "type": "type_0",
           "data": {
+            "activeFrames": 49,
+            "recoveryFrames": 13,
             "hitAdvantage": 1003,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
           "nameID": "Razor Edge Slicer EX",
           "type": "type_0",
           "data": {
+            "activeFrames": 49,
+            "recoveryFrames": 13,
             "hitAdvantage": 1003,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 150,
+            "stunValue": 200
           }
         },
         {
           "nameID": "Fatal Leg Twister",
           "type": "type_0",
           "data": {
-            "hitAdvantage": 1003
+            "startupFrames": 4,
+            "activeFrames": 4,
+            "recoveryFrames": 10,
+            "hitAdvantage": 1003,
+            "damageValue": 150,
+            "stunValue": 200
           }
         },
         {
           "nameID": "Cross Scissors Pressure",
           "type": "type_0",
           "data": {
-            "hitAdvantage": 1003
+            "startupFrames": 4,
+            "activeFrames": 4,
+            "recoveryFrames": 10,
+            "hitAdvantage": 1003,
+            "damageValue": 150,
+            "stunValue": 200
           }
         },
         {
@@ -530,7 +757,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 15,
-            "hitAdvantage": 1003
+            "activeFrames": 11,
+            "recoveryFrames": 9,
+            "hitAdvantage": 2,
+            "blockAdvantage": -4,
+            "damageValue": 70,
+            "stunValue": 100
           },
           "alternateData": {
 
@@ -541,7 +773,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 13,
-            "hitAdvantage": 1003
+            "activeFrames": 11,
+            "recoveryFrames": 9,
+            "hitAdvantage": 1003,
+            "blockAdvantage": 2,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
 
@@ -553,7 +790,11 @@
           "nameID": "Cross Stinger Assault",
           "type": "type_0",
           "data": {
-
+            "startupFrames": 5,
+            "hitAdvantage": 1003,
+            "damageValue": 330,
+            "stunValue": 0,
+            "description": "Invulnerability frames 1-2, projectile invulnerability frames 3-11."
           }
         }
       ]

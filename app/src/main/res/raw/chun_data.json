@@ -112,13 +112,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 8,
             "hitAdvantage": 5,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70
           },
           "alternateData": {
             "startupFrames": 4,
+            "activeFrames": 5,
+            "recoveryFrames": 5,
             "hitAdvantage": 6,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
@@ -126,13 +134,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 10,
             "hitAdvantage": 6,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
             "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 10,
             "hitAdvantage": 8,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
@@ -140,13 +156,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 11,
+            "activeFrames": 2,
+            "recoveryFrames": 16,
             "hitAdvantage": 0,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 80,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 11,
+            "activeFrames": 4,
+            "recoveryFrames": 14,
             "hitAdvantage": 2,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
@@ -154,13 +178,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 3,
+            "recoveryFrames": 7,
             "hitAdvantage": 1,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 40,
+            "stunValue": 70
           },
           "alternateData": {
             "startupFrames": 4,
+            "activeFrames": 4,
+            "recoveryFrames": 6,
             "hitAdvantage": 1,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 50,
+            "stunValue": 70
           }
         },
         {
@@ -168,13 +200,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 3,
+            "recoveryFrames": 15,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
             "startupFrames": 8,
+            "activeFrames": 4,
+            "recoveryFrames": 14,
             "hitAdvantage": 4,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
@@ -182,13 +222,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 12,
+            "activeFrames": 3,
+            "recoveryFrames": 16,
             "hitAdvantage": 1,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 90,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 12,
+            "activeFrames": 3,
+            "recoveryFrames": 16,
             "hitAdvantage": 1,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
@@ -196,13 +244,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
+            "activeFrames": 2,
+            "recoveryFrames": 6,
             "hitAdvantage": 5,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 20,
+            "stunValue": 70
           },
           "alternateData": {
             "startupFrames": 3,
+            "activeFrames": 4,
+            "recoveryFrames": 4,
             "hitAdvantage": 6,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -210,13 +266,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 10,
+            "activeFrames": 9,
+            "recoveryFrames": 18,
             "hitAdvantage": -2,
-            "blockAdvantage": -8
+            "blockAdvantage": -8,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
             "startupFrames": 10,
+            "activeFrames": 9,
+            "recoveryFrames": 18,
             "hitAdvantage": -2,
-            "blockAdvantage": -8
+            "blockAdvantage": -8,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
@@ -224,13 +288,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
-            "hitAdvantage": -2,
-            "blockAdvantage": -5
+            "recoveryFrames": 14,
+            "hitAdvantage": 4,
+            "blockAdvantage": -5,
+            "damageValue": 100,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 7,
+            "recoveryFrames": 14,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 110,
+            "stunValue": 150
           }
         },
         {
@@ -238,13 +308,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
+            "activeFrames": 2,
+            "recoveryFrames": 8,
             "hitAdvantage": 1,
-            "blockAdvantage": -1
+            "blockAdvantage": -1,
+            "damageValue": 20,
+            "stunValue": 70
           },
           "alternateData": {
             "startupFrames": 3,
+            "activeFrames": 3,
+            "recoveryFrames": 7,
             "hitAdvantage": 3,
-            "blockAdvantage": -1
+            "blockAdvantage": -1,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -252,13 +330,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
+            "activeFrames": 2,
+            "recoveryFrames": 15,
             "hitAdvantage": 0,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 50,
+            "stunValue": 100
           },
           "alternateData": {
             "startupFrames": 6,
+            "activeFrames": 2,
+            "recoveryFrames": 13,
             "hitAdvantage": 4,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -266,73 +352,131 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 3,
+            "recoveryFrames": 24,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 100,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 7,
+            "activeFrames": 4,
+            "recoveryFrames": 23,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 110,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LP",
           "type": "type_0",
           "data": {
-            "startupFrames": 3
+            "startupFrames": 3,
+            "activeFrames": 5,
+            "damageValue": 40,
+            "stunValue": 70
           },
           "alternateData": {
-            "startupFrames": 4
+            "startupFrames": 3,
+            "activeFrames": 5,
+            "damageValue": 50,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MP",
           "type": "type_0",
           "data": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "activeFrames": 4,
+            "damageValue": 60,
+            "stunValue": 70
           },
           "alternateData": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "activeFrames": 4,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "damageValue": 100,
+            "stunValue": 150
           },
           "alternateData": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "damageValue": 110,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 4
+            "startupFrames": 4,
+            "activeFrames": 7,
+            "damageValue": 40,
+            "stunValue": 70
           },
           "alternateData": {
-            "startupFrames": 4
+            "startupFrames": 4,
+            "activeFrames": 7,
+            "damageValue": 50,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "activeFrames": 5,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
-            "startupFrames": 6
+            "startupFrames": 6,
+            "activeFrames": 5,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 9,
+            "activeFrames": 6,
+            "damageValue": 90,
+            "stunValue": 150
           },
           "alternateData": {
-            "startupFrames": 5
+            "startupFrames": 9,
+            "activeFrames": 6,
+            "damageValue": 100,
+            "stunValue": 150
+          }
+        },
+        {
+          "nameID": "nj.HK",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 5,
+            "activeFrames": 5,
+            "damageValue": 90,
+            "stunValue": 150
+          },
+          "alternateData": {
+            "startupFrames": 5,
+            "activeFrames": 5,
+            "damageValue": 100,
+            "stunValue": 150
           }
         }
       ],
@@ -342,13 +486,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 2,
+            "recoveryFrames": 12,
             "hitAdvantage": 3,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
-            "startupFrames": 8,
+            "startupFrames": 7,
+            "activeFrames": 3,
+            "recoveryFrames": 11,
             "hitAdvantage": 4,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
@@ -356,13 +508,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 5,
+            "recoveryFrames": 13,
             "hitAdvantage": 3,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 90,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 7,
+            "activeFrames": 7,
+            "recoveryFrames": 11,
             "hitAdvantage": 6,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
@@ -370,13 +530,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 26,
+            "activeFrames": 2,
+            "recoveryFrames": 16,
             "hitAdvantage": 0,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 70,
+            "stunValue": 100
           },
           "alternateData": {
             "startupFrames": 26,
+            "activeFrames": 2,
+            "recoveryFrames": 16,
             "hitAdvantage": 3,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 80,
+            "stunValue": 100
           }
         },
         {
@@ -384,13 +552,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 5,
+            "recoveryFrames": 13,
             "hitAdvantage": 2,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 70,
+            "stunValue": 150
           },
           "alternateData": {
             "startupFrames": 8,
+            "activeFrames": 5,
+            "recoveryFrames": 13,
             "hitAdvantage": 2,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 80,
+            "stunValue": 150
           }
         },
         {
@@ -398,27 +574,44 @@
           "type": "type_0",
           "data": {
             "startupFrames": 18,
+            "activeFrames": 5,
+            "recoveryFrames": 13,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 80,
+            "stunValue": 150,
+            "description": "Lower-body invulnerability frames 6-21."
           },
           "alternateData": {
             "startupFrames": 18,
+            "activeFrames": 5,
+            "recoveryFrames": 13,
             "hitAdvantage": 3,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
           "nameID": "df+HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 39,
-            "hitAdvantage": 11,
-            "blockAdvantage": 7
+            "startupFrames": 34,
+            "activeFrames": 6,
+            "recoveryFrames": 11,
+            "hitAdvantage": 7,
+            "blockAdvantage": 3,
+            "damageValue": 80,
+            "stunValue": 150
           },
           "alternateData": {
-            "startupFrames": 39,
-            "hitAdvantage": 11,
-            "blockAdvantage": 7
+            "startupFrames": 34,
+            "activeFrames": 6,
+            "recoveryFrames": 11,
+            "hitAdvantage": 7,
+            "blockAdvantage": 3,
+            "damageValue": 90,
+            "stunValue": 150
           }
         }
       ],
@@ -427,24 +620,36 @@
           "nameID": "Koshuto",
           "type": "type_0",
           "data": {
-            "startupFrames":5,
-            "hitAdvantage": 1003
+            "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 170
           }
         },
         {
           "nameID": "Tenshin Shushu",
           "type": "type_0",
           "data": {
-            "startupFrames":5,
-            "hitAdvantage": 1003
+            "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         },
         {
           "nameID": "Ryuseiraku (air)",
           "type": "type_0",
           "data": {
-            "startupFrames":5,
-            "hitAdvantage": 1003
+            "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 6,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         }
       ],
@@ -454,28 +659,61 @@
           "type": "type_0",
           "data": {
             "startupFrames": 11,
+            "activeFrames": 4,
+            "recoveryFrames": 44,
             "hitAdvantage": 1003,
-            "blockAdvantage": -24
+            "blockAdvantage": -24,
+            "damageValue": 40,
+            "stunValue": 50
+          }
+        }
+      ],
+      "vreversal": [
+        {
+          "nameID": "Sohakkei",
+          "type": "type_0",
+          "data": {
+            "startupFrames": 10,
+            "activeFrames": 2,
+            "recoveryFrames": 20,
+            "hitAdvantage": 1,
+            "blockAdvantage": 0,
+            "damageValue": 40
           }
         }
       ],
       "vtrigger": [
         {
-          "nameID": "Denjin Renki",
+          "nameID": "Renkiko",
           "type": "type_0",
           "data": {
-            "recoveryFrames":56
+            "startupFrames": 1,
+            "recoveryFrames": 4
           }
         }
       ],
       "specials": [
         {
           "nameID": "Kikoken LP",
+          "description": "50 frames of charge time.",
           "type": "type_0",
           "data": {
             "startupFrames": 13,
+            "activeFrames": 70,
+            "recoveryFrames": 32,
             "hitAdvantage": 0,
-            "blockAdvantage": -6
+            "blockAdvantage": -6,
+            "damageValue": 60,
+            "stunValue": 100
+          },
+          "alternateData": {
+            "startupFrames": 13,
+            "activeFrames": 140,
+            "recoveryFrames": 32,
+            "hitAdvantage": 0,
+            "blockAdvantage": -6,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -483,8 +721,22 @@
           "type": "type_0",
           "data": {
             "startupFrames": 11,
+            "activeFrames": 50,
+            "recoveryFrames": 32,
             "hitAdvantage": -1,
-            "blockAdvantage": -5
+            "blockAdvantage": -5,
+            "damageValue": 60,
+            "stunValue": 100,
+            "description": "50 frames of charge time."
+          },
+          "alternateData": {
+            "startupFrames": 11,
+            "activeFrames": 100,
+            "recoveryFrames": 32,
+            "hitAdvantage": -1,
+            "blockAdvantage": -5,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -492,8 +744,22 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 30,
+            "recoveryFrames": 32,
             "hitAdvantage": -2,
-            "blockAdvantage": -4
+            "blockAdvantage": -4,
+            "damageValue": 60,
+            "stunValue": 100,
+            "description": "50 frames of charge time."
+          },
+          "alternateData": {
+            "startupFrames": 9,
+            "activeFrames": 60,
+            "recoveryFrames": 32,
+            "hitAdvantage": -2,
+            "blockAdvantage": -4,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -501,17 +767,41 @@
           "type": "type_0",
           "data": {
             "startupFrames": 11,
-            "hitAdvantage": 3,
-            "blockAdvantage": 1
+            "activeFrames": 61,
+            "recoveryFrames": 27,
+            "hitAdvantage": 4,
+            "blockAdvantage": 1,
+            "damageValue": 100,
+            "stunValue": 100,
+            "description": "50 frames of charge time."
+          },
+          "alternateData": {
+            "startupFrames": 11,
+            "recoveryFrames": 27,
+            "hitAdvantage": 4,
+            "blockAdvantage": 1,
+            "damageValue": 120,
+            "stunValue": 100
           }
         },
         {
           "nameID": "Lightning Legs LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 4,
+            "startupFrames": 5,
+            "recoveryFrames": 20,
             "hitAdvantage": 3,
-            "blockAdvantage": -8
+            "blockAdvantage": -8,
+            "damageValue": 80,
+            "stunValue": 80
+          },
+          "alternateData": {
+            "startupFrames": 5,
+            "recoveryFrames": 20,
+            "hitAdvantage": 3,
+            "blockAdvantage": -8,
+            "damageValue": 90,
+            "stunValue": 80
           }
         },
         {
@@ -519,8 +809,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 10,
+            "recoveryFrames": 20,
             "hitAdvantage": 2,
-            "blockAdvantage": -9
+            "blockAdvantage": -9,
+            "damageValue": 100,
+            "stunValue": 100
+          },
+          "alternateData": {
+            "startupFrames": 10,
+            "recoveryFrames": 20,
+            "hitAdvantage": 2,
+            "blockAdvantage": -9,
+            "damageValue": 110,
+            "stunValue": 100
           }
         },
         {
@@ -528,8 +829,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 14,
+            "recoveryFrames": 20,
             "hitAdvantage": 1,
-            "blockAdvantage": -10
+            "blockAdvantage": -10,
+            "damageValue": 120,
+            "stunValue": 120
+          },
+          "alternateData": {
+            "startupFrames": 14,
+            "recoveryFrames": 20,
+            "hitAdvantage": 1,
+            "blockAdvantage": -10,
+            "damageValue": 130,
+            "stunValue": 120
           }
         },
         {
@@ -537,8 +849,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "recoveryFrames": 19,
             "hitAdvantage": 1003,
-            "blockAdvantage": -3
+            "blockAdvantage": -2,
+            "damageValue": 140,
+            "stunValue": 150
+          },
+          "alternateData": {
+            "startupFrames": 5,
+            "recoveryFrames": 19,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -2,
+            "damageValue": 150,
+            "stunValue": 150
           }
         },
         {
@@ -546,15 +869,40 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
-            "hitAdvantage": 1003
+            "recoveryFrames": 12,
+            "hitAdvantage": 3,
+            "blockAdvantage": -1,
+            "damageValue": 80,
+            "stunValue": 80
+          },
+          "alternateData": {
+            "startupFrames": 7,
+            "recoveryFrames": 12,
+            "hitAdvantage": 3,
+            "blockAdvantage": -1,
+            "damageValue": 90,
+            "stunValue": 80
           }
         },
         {
           "nameID": "Airborne Lightning Legs MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 7,
-            "hitAdvantage": 1003
+            "startupFrames": 8,
+            "recoveryFrames": 12,
+            "hitAdvantage": 4,
+            "blockAdvantage": 1,
+            "damageValue": 100,
+            "stunValue": 100
+          },
+          "alternateData": {
+            "startupFrames": 8,
+            "activeFrames": 12,
+            "recoveryFrames": 12,
+            "hitAdvantage": 3,
+            "blockAdvantage": -2,
+            "damageValue": 110,
+            "stunValue": 100
           }
         },
         {
@@ -562,7 +910,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
-            "hitAdvantage": 1003
+            "recoveryFrames": 12,
+            "hitAdvantage": -4,
+            "blockAdvantage": -7,
+            "damageValue": 120,
+            "stunValue": 120
+          },
+          "alternateData": {
+            "startupFrames": 7,
+            "recoveryFrames": 12,
+            "hitAdvantage": -4,
+            "blockAdvantage": -7,
+            "damageValue": 130,
+            "stunValue": 120
           }
         },
         {
@@ -570,7 +930,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
-            "hitAdvantage": 1003
+            "recoveryFrames": 12,
+            "hitAdvantage": -7,
+            "blockAdvantage": -10,
+            "damageValue": 175,
+            "stunValue": 210
+          },
+          "alternateData": {
+            "startupFrames": 6,
+            "recoveryFrames": 12,
+            "hitAdvantage": -7,
+            "blockAdvantage": -10,
+            "damageValue": 185,
+            "stunValue": 210
           }
         },
         {
@@ -578,8 +950,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "recoveryFrames": 24,
             "hitAdvantage": 1003,
-            "blockAdvantage": -6
+            "blockAdvantage": -6,
+            "damageValue": 120,
+            "stunValue": 200
+          },
+          "alternateData": {
+            "startupFrames": 9,
+            "recoveryFrames": 24,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -6,
+            "damageValue": 130,
+            "stunValue": 200
           }
         },
         {
@@ -587,8 +970,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 15,
+            "recoveryFrames": 24,
             "hitAdvantage": 1003,
-            "blockAdvantage": -8
+            "blockAdvantage": -8,
+            "damageValue": 140,
+            "stunValue": 200
+          },
+          "alternateData": {
+            "startupFrames": 15,
+            "recoveryFrames": 24,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -8,
+            "damageValue": 150,
+            "stunValue": 200
           }
         },
         {
@@ -596,8 +990,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 22,
+            "recoveryFrames": 26,
             "hitAdvantage": 1003,
-            "blockAdvantage": -10
+            "blockAdvantage": -10,
+            "damageValue": 160,
+            "stunValue": 200
+          },
+          "alternateData": {
+            "startupFrames": 22,
+            "recoveryFrames": 26,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -10,
+            "damageValue": 170,
+            "stunValue": 200
           }
         },
         {
@@ -605,8 +1010,20 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "recoveryFrames": 27,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 170,
+            "stunValue": 200,
+            "description": "Invulnerability frames 1-8. 45 frames of charge time."
+          },
+          "alternateData": {
+            "startupFrames": 5,
+            "recoveryFrames": 27,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -12,
+            "damageValue": 180,
+            "stunValue": 200
           }
         }
 
@@ -616,9 +1033,14 @@
           "nameID": "Houyokusen",
           "type": "type_0",
           "data": {
-            "startupFrames": 9,
+            "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 35,
             "hitAdvantage": 1003,
-            "blockAdvantage": -20
+            "blockAdvantage": -20,
+            "damageValue": 340,
+            "stunValue": 0,
+            "description": "Invulnerability frames 1-6."
           }
         }
       ]
