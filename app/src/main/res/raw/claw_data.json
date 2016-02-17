@@ -128,13 +128,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 9,
             "hitAdvantage": 5,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 30,
+            "stunValue": 70
           },
           "alternateData": {
             "startupFrames": 3,
-            "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "activeFrames": 2,
+            "recoveryFrames": 6,
+            "hitAdvantage": 5,
+            "blockAdvantage": 3,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -142,13 +150,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 2,
+            "recoveryFrames": 14,
             "hitAdvantage": 6,
-            "blockAdvantage": 0
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           },
           "alternateData": {
             "startupFrames": 6,
+            "activeFrames": 3,
+            "recoveryFrames": 13,
             "hitAdvantage": 3,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -156,13 +172,23 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 2,
+            "recoveryFrames": 21,
             "hitAdvantage": 5,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 80,
+            "stunValue": 150,
+            "description": "-3/+5 when cancelled into stance change."
           },
           "alternateData": {
             "startupFrames": 9,
+            "activeFrames": 2,
+            "recoveryFrames": 21,
             "hitAdvantage": 4,
-            "blockAdvantage": -4
+            "blockAdvantage": -1,
+            "damageValue": 80,
+            "stunValue": 150,
+            "description": "-1/+4 when cancelled into stance change."
           }
         },
         {
@@ -170,8 +196,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
+            "activeFrames": 2,
+            "recoveryFrames": 9,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70            
           }
         },
         {
@@ -179,8 +209,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 3,
+            "recoveryFrames": 12,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 60,
+            "stunValue": 100            
           }
         },
         {
@@ -188,8 +222,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 11,
+            "activeFrames": 3,
+            "recoveryFrames": 17,
             "hitAdvantage": 4,
-            "blockAdvantage": -1
+            "blockAdvantage": -1,
+            "damageValue": 90,
+            "stunValue": 150          
           }
         },
         {
@@ -197,13 +235,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 7,
             "hitAdvantage": 5,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70            
           },
           "alternateData": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 7,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -211,13 +257,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
+            "activeFrames": 2,
+            "recoveryFrames": 15,
             "hitAdvantage": 3,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 60,
+            "stunValue": 100            
           },
           "alternateData": {
             "startupFrames": 5,
+            "activeFrames": 3,
+            "recoveryFrames": 12,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -225,13 +279,21 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 2,
+            "recoveryFrames": 19,
             "hitAdvantage": -2,
-            "blockAdvantage": -5
+            "blockAdvantage": -5,
+            "damageValue": 90,
+            "stunValue": 150            
           },
           "alternateData": {
             "startupFrames": 9,
+            "activeFrames": 4,
+            "recoveryFrames": 15,
             "hitAdvantage": 0,
-            "blockAdvantage": -3
+            "blockAdvantage": -2,
+            "damageValue": 80,
+            "stunValue": 150
           }
         },
         {
@@ -239,8 +301,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 9,
             "hitAdvantage": 4,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 20,
+            "stunValue": 70
           }
         },
         {
@@ -248,8 +314,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 2,
+            "recoveryFrames": 16,
             "hitAdvantage": 6,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 50,
+            "stunValue": 100
           }
         },
         {
@@ -257,59 +327,90 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "activeFrames": 9,
+            "recoveryFrames": 15,
             "hitAdvantage": 1003,
-            "blockAdvantage": -13
+            "blockAdvantage": -13,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LP",
           "type": "type_0",
           "data": {
-            "startupFrames": 4
+            "startupFrames": 4,
+            "activeFrames": 5,
+            "damageValue":40,
+            "stunValue":70
           },
           "alternateData": {
-            "startupFrames": 4
+            "startupFrames": 3,
+            "activeFrames": 5,
+            "damageValue":40,
+            "stunValue":70
           }
         },
         {
           "nameID": "j.MP",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 5,
+            "activeFrames": 5,
+            "damageValue":70,
+            "stunValue":100
           },
           "alternateData": {
-            "startupFrames": 5
+            "startupFrames": 4,
+            "activeFrames": 5,
+            "damageValue":70,
+            "stunValue":100
           }
         },
         {
           "nameID": "j.HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 4,
+            "damageValue":90,
+            "stunValue":150
           },
           "alternateData": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 4,
+            "damageValue":90,
+            "stunValue":150
           }
         },
         {
           "nameID": "j.LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 4
+            "startupFrames": 4,
+            "activeFrames": 6,
+            "damageValue":40,
+            "stunValue":70
           }
         },
         {
           "nameID": "j.MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 5,
+            "activeFrames": 7,
+            "damageValue":70,
+            "stunValue":100
           }
         },
         {
           "nameID": "j.HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 9
+            "startupFrames": 9,
+            "activeFrames": 5,
+            "damageValue":90,
+            "stunValue":150
           }
         }
       ],
@@ -319,8 +420,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 22,
+            "activeFrames": 3,
+            "recoveryFrames": 13,
             "hitAdvantage": 0,
-            "blockAdvantage": -6
+            "blockAdvantage": -4,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -328,26 +433,32 @@
           "type": "type_0",
           "data": {
             "startupFrames": 13,
+            "activeFrames": 4,
+            "recoveryFrames": 20,
             "hitAdvantage": -5,
-            "blockAdvantage": -14
+            "blockAdvantage": -14,
+            "damageValue": 80,
+            "stunValue": 150
           }
         },
         {
-          "nameID": "HP > HP > MP+MK (claw on)",
+          "nameID": "HP > HP (claw on)",
           "type": "type_0",
           "data": {
-            "startupFrames": 8,
+            "recoveryFrames": 22,
             "hitAdvantage": 1003,
-            "blockAdvantage": -21
+            "blockAdvantage": -13,
+            "description": "Can cancel into V-Skill on hit."
           }
         },
         {
-          "nameID": "MP > HK > MP+MK (claw off)",
+          "nameID": "MP > HK (claw off)",
           "type": "type_0",
           "data": {
-            "startupFrames": 6,
+            "recoveryFrames": 18,
             "hitAdvantage": 1003,
-            "blockAdvantage": -17
+            "blockAdvantage": -3,
+            "description": "Can cancel into V-Skill."
           }
         }
       ],
@@ -357,7 +468,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         },
         {
@@ -365,7 +480,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         },
         {
@@ -373,7 +492,10 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         }
       ],
@@ -382,8 +504,30 @@
           "nameID": "Matador Turn",
           "type": "type_0",
           "data": {
+            "recoveryFrames": 36,
+            "description": "Upper body invincible frames 7-32.\nProjectile invincible frames 7-36."
+          },
+          "nameID": "Matador Turn (Attack)",
+          "type": "type_0",
+          "data": {
             "startupFrames": 22,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 31,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -13          }
+        }
+      ],
+      "vreversal": [
+        {
+          "nameID": "Short Backslash (KKK)",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 31
+          },
+          "nameID": "Backslash (PPP)",
+          "type": "type_0",
+          "data": {
+            "recoveryFrames": 41
           }
         }
       ],
@@ -392,56 +536,68 @@
           "nameID": "Bloody Kiss - Torero",
           "type": "type_0",
           "data": {
-            "startupFrames": 25,
+            "startupFrames": 10,
             "hitAdvantage": 1003,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "description": "Startup refers to projectile, advantages refer to attack."
           }
         },
         {
           "nameID": "Bloody Kiss - Rojo",
           "type": "type_0",
           "data": {
-            "startupFrames": 22,
+            "startupFrames": 10,
             "hitAdvantage": 1003,
-            "blockAdvantage": -22
+            "blockAdvantage": -23,
+            "description": "Startup refers to projectile, advantages refer to attack."
           }
         },
         {
           "nameID": "Bloody Kiss - Azul",
           "type": "type_0",
           "data": {
+            "startupFrames": 10,
+            "recoveryFrames": 23,
             "hitAdvantage": 1003,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "description": "Startup refers to projectile, advantages refer to attack."
           }
         }
       ],
       "specials": [
         {
-          "nameID": "Flying Barcelona Attack LK",
+          "nameID": "Flying Barcelona Attack",
           "type": "type_0",
+          "description": "Plus on block if attack hits low.",
           "data": {
-
-          }
-        },
-        {
-          "nameID": "Flying Barcelona Attack MK",
-          "type": "type_0",
-          "data": {
-
-          }
-        },
-        {
-          "nameID": "Flying Barcelona Attack HK",
-          "type": "type_0",
-          "data": {
-
+              "activeFrames": 6,
+              "hitAdvantage": 1003,
+              "damageValue": 90,
+              "stunValue": 150              
+          },
+          "alternateData": {
+              "activeFrames": 6,
+              "damageValue": 60,
+              "stunValue": 100,
+              "hitAdvantage": 7,
+              "blockAdvantage": 1 
           }
         },
         {
           "nameID": "Flying Barcelona Attack EX",
           "type": "type_0",
+          "description": "Plus on block if attack hits low.",
           "data": {
-            "startupFrames": 9
+              "startupFrames": 3,
+              "activeFrames": 6,
+              "damageValue": 120,
+              "stunValue": 200              
+          },
+          "alternateData": {
+              "startupFrames": 3,
+              "activeFrames": 6,
+              "damageValue": 120,
+              "stunValue": 200
           }
         },
         {
@@ -449,15 +605,30 @@
           "type": "type_0",
           "data": {
             "startupFrames":4,
-            "hitAdvantage":1003
-          }
+            "activeFrames": 5,
+            "hitAdvantage":1003,
+            "damageValue": 150,
+            "stunValue": 150
+          }        
+        },
+        {
+          "nameID": "Izuna Drop EX",
+          "type": "type_0",
+          "data": {
+            "startupFrames":4,
+            "activeFrames": 5,
+            "hitAdvantage":1003,
+            "damageValue": 160,
+            "stunValue": 200
+          }        
         },
         {
           "nameID": "Crimson Terror LK",
           "type": "type_0",
           "data": {
             "startupFrames":8,
-            "hitAdvantage":2,
+            "recoveryFrames": 10,
+            "hitAdvantage":0,
             "blockAdvantage":-6
           }
         },
@@ -466,7 +637,8 @@
           "type": "type_0",
           "data": {
             "startupFrames":17,
-            "hitAdvantage":0,
+            "recoveryFrames": 12,
+            "hitAdvantage":2,
             "blockAdvantage":-7
           }
         },
@@ -475,17 +647,20 @@
           "type": "type_0",
           "data": {
             "startupFrames":19,
+            "recoveryFrames": 14,
             "hitAdvantage":1003,
             "blockAdvantage":-8
           }
         },
         {
           "nameID": "Crimson Terror EX",
-          "type": "type_0",
+          "type": "type_0",          
           "data": {
             "startupFrames":16,
+            "recoveryFrames": 10,
             "hitAdvantage":1003,
-            "blockAdvantage":-2
+            "blockAdvantage":-2,
+            "description": "Projectile invincible."            
           }
         },
         {
@@ -501,7 +676,11 @@
           "type": "type_0",
           "data": {
             "startupFrames":6,
-            "hitAdvantage":1003
+            "activeFrames": 2,
+            "recoveryFrames": 44,
+            "hitAdvantage":1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         },
         {
@@ -509,7 +688,11 @@
           "type": "type_0",
           "data": {
             "startupFrames":6,
-            "hitAdvantage":1003
+            "activeFrames": 2,
+            "recoveryFrames": 44,
+            "hitAdvantage":1003,
+            "damageValue": 150,
+            "stunValue": 200
           }
         },
         {
@@ -517,7 +700,11 @@
           "type": "type_0",
           "data": {
             "startupFrames":6,
-            "hitAdvantage":1003
+            "activeFrames": 2,
+            "recoveryFrames": 44,
+            "hitAdvantage":1003,
+            "damageValue": 180,
+            "stunValue": 250
           }
         },
         {
@@ -525,8 +712,12 @@
           "type": "type_0",
           "data": {
             "startupFrames":12,
+            "activeFrames": 6,
+            "recoveryFrames": 20,
             "hitAdvantage":1003,
-            "blockAdvantage":-7
+            "blockAdvantage": -7,
+            "damageValue": 100,
+            "stunValue": 200
           }
         },
         {
@@ -534,8 +725,12 @@
           "type": "type_0",
           "data": {
             "startupFrames":15,
+            "activeFrames": 6,
+            "recoveryFrames": 18,
             "hitAdvantage":1003,
-            "blockAdvantage":-6
+            "blockAdvantage": -6,
+            "damageValue": 100,
+            "stunValue": 200
           }
         },
         {
@@ -543,7 +738,12 @@
           "type": "type_0",
           "data": {
             "startupFrames":12,
-            "hitAdvantage":1003
+            "activeFrames": 7,
+            "recoveryFrames": 15,
+            "hitAdvantage":1003,
+            "blockAdvantage": -4,
+            "damageValue": 100,
+            "stunValue": 200
           }
         },
         {
@@ -551,26 +751,16 @@
           "type": "type_0",
           "data": {
             "startupFrames":12,
+            "recoveryFrames": 21,
             "hitAdvantage":1003,
-            "blockAdvantage":-3
+            "blockAdvantage": -3,
+            "damageValue": 160,
+            "stunValue": 200,
+            "description": "Throw invincible."
           }
         },
         {
-          "nameID": "Switch Claw LP",
-          "type": "type_0",
-          "data": {
-            "recoveryFrames": 23
-          }
-        },
-        {
-          "nameID": "Switch Claw MP",
-          "type": "type_0",
-          "data": {
-            "recoveryFrames": 23
-          }
-        },
-        {
-          "nameID": "Switch Claw HP",
+          "nameID": "Switch Claw",
           "type": "type_0",
           "data": {
             "recoveryFrames": 23
@@ -582,8 +772,12 @@
           "nameID": "Bloody Rain",
           "type": "type_0",
           "data": {
-            "startupFrames": 9,
-            "hitAdvantage":1003
+            "startupFrames":9,
+            "activeFrames": 8,
+            "hitAdvantage":1003,
+            "blockAdvantage": -14,
+            "damageValue": 330,
+            "stunValue": 0
           }
         }
       ]
