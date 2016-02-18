@@ -580,7 +580,7 @@
             "blockAdvantage": -2,
             "damageValue": 80,
             "stunValue": 150,
-            "description": "Lower-body invulnerability frames 6-21."
+            "description": "Lower-body invincible frames 6-21."
           },
           "alternateData": {
             "startupFrames": 18,
@@ -1015,7 +1015,7 @@
             "blockAdvantage": -12,
             "damageValue": 170,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-8. 45 frames of charge time."
+            "description": "Invincible frames 1-8. 45 frames of charge time."
           },
           "alternateData": {
             "startupFrames": 5,
@@ -1040,7 +1040,7 @@
             "blockAdvantage": -20,
             "damageValue": 340,
             "stunValue": 0,
-            "description": "Invulnerability frames 1-6."
+            "description": "Invincible frames 1-6."
           }
         }
       ]

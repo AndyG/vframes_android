@@ -341,7 +341,7 @@
           "blockAdvantage": -5,
           "damageValue": 100,
           "stunValue": 150,
-          "description": "Airborne frames 11-14. Upper-body projectile invulnerability frames 15-36."
+          "description": "Airborne frames 11-14. Upper-body projectile invincible frames 15-36."
         }
       },
       {
@@ -723,7 +723,7 @@
           "blockAdvantage": -30,
           "damageValue": 350,
           "stunValue": 0,
-          "description": "Invulnerability frames 1-10"
+          "description": "Invincible frames 1-10"
         }
       }
     ]
