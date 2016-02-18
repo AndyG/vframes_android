@@ -555,7 +555,7 @@
             "type": "type_0",
             "data": {
               "recoveryFrames": 29,
-              "description": "Projectile invincible frames 6-28. Frames 10-28 pass through. Frames 27-28 cancellable into Senpukuga."
+              "description": "Projectile invincible frames 6-28."
             }
           },
           {
@@ -563,7 +563,7 @@
             "type": "type_0",
             "data": {
               "recoveryFrames": 30,
-              "description": "Projectile invincible frames 6-28. Frames 10-28 pass through. Frames 27-28 cancellable into Senpukuga."
+              "description": "Projectile invincible frames 6-28. Cancellable into Senpukuga frames 27-28."
             }
           },
           {
@@ -571,7 +571,7 @@
             "type": "type_0",
             "data": {
               "recoveryFrames": 31,
-              "description": "Projectile invincible frames 6-28. Frames 10-28 pass through. Frames 27-28 cancellable into Senpukuga."
+              "description": "Projectile invincible frames 6-28. Cancellable into Senpukuga frames 27-28."
             }
           },
           {
@@ -579,7 +579,7 @@
             "type": "type_0",
             "data": {
               "recoveryFrames": 33,
-              "description": "Strike and projectile invincible frames 1-24. Projectile invincible 25-30. Pass through 12-30. 31-32 cancellable into Senpukuga."
+              "description": "Strike and projectile invincible frames 1-24. Projectile invincible 25-30. Cancellable into Senpukuga frames 31-32."
             }
           }
         ],
