@@ -114,12 +114,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                     case RASHID:
                     case NASH:
                         throw new RuntimeException("toggled vtrigger for invalid character");
-                    case KEN:
-                        Toast.makeText(this, R.string.ken_vtrigger_framedata_not_ready, Toast.LENGTH_SHORT).show();
-                        return true;
-                    case LAURA:
-                        Toast.makeText(this, R.string.laura_vtrigger_framedata_not_ready, Toast.LENGTH_SHORT).show();
-                        return true;
                     default:
                         toggleFrameData();
                         return true;
