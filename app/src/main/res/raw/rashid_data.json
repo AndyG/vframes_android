@@ -108,8 +108,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 7,
             "hitAdvantage": 4,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -117,8 +121,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "activeFrames": 2,
+            "recoveryFrames": 14,
             "hitAdvantage": 6,
-            "blockAdvantage": 3
+            "blockAdvantage": 3,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -126,8 +134,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 2,
+            "recoveryFrames": 19,
             "hitAdvantage": 2,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 80,
+            "stunValue": 150
           }
         },
         {
@@ -135,8 +147,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 3,
+            "activeFrames": 3,
+            "recoveryFrames": 9,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -144,8 +160,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "activeFrames": 3,
+            "recoveryFrames": 15,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -153,8 +173,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 16,
+            "activeFrames": 2,
+            "recoveryFrames": 22,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
@@ -162,8 +186,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 6,
             "hitAdvantage": 4,
-            "blockAdvantage": 2
+            "blockAdvantage": 2,
+            "damageValue": 30,
+            "stunValue": 70
           }
         },
         {
@@ -171,8 +199,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 3,
+            "recoveryFrames": 15,
             "hitAdvantage": 3,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -180,8 +212,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 9,
+            "recoveryFrames": 18,
             "hitAdvantage": 6,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 80,
+            "stunValue": 150
           }
         },
         {
@@ -189,8 +224,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 4,
+            "activeFrames": 2,
+            "recoveryFrames": 8,
             "hitAdvantage": 2,
-            "blockAdvantage": 0
+            "blockAdvantage": 0,
+            "damageValue": 20,
+            "stunValue": 70
           }
         },
         {
@@ -198,8 +237,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 6,
+            "activeFrames": 2,
+            "recoveryFrames": 15,
             "hitAdvantage": 0,
-            "blockAdvantage": -3
+            "blockAdvantage": -3,
+            "damageValue": 50,
+            "stunValue": 100
           }
         },
         {
@@ -207,50 +250,72 @@
           "type": "type_0",
           "data": {
             "startupFrames": 7,
+            "activeFrames": 2,
+            "recoveryFrames": 25,
             "hitAdvantage": 1003,
-            "blockAdvantage": -12
+            "blockAdvantage": -12,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LP",
           "type": "type_0",
           "data": {
-            "startupFrames": 4
+            "startupFrames": 4,
+            "activeFrames": 4,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MP",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 5,
+            "activeFrames": 6,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HP",
           "type": "type_0",
           "data": {
-            "startupFrames": 7
+            "startupFrames": 7,
+            "activeFrames": 3,
+            "damageValue": 90,
+            "stunValue": 150
           }
         },
         {
           "nameID": "j.LK",
           "type": "type_0",
           "data": {
-            "startupFrames": 4
+            "startupFrames": 4,
+            "activeFrames": 4,
+            "damageValue": 40,
+            "stunValue": 70
           }
         },
         {
           "nameID": "j.MK",
           "type": "type_0",
           "data": {
-            "startupFrames": 5
+            "startupFrames": 5,
+            "activeFrames": 5,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
           "nameID": "j.HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 8
+            "startupFrames": 8,
+            "activeFrames": 3,
+            "damageValue": 90,
+            "stunValue": 150
           }
         }
       ],
@@ -260,8 +325,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "recoveryFrames": 14,
             "hitAdvantage": 2,
-            "blockAdvantage": -2
+            "blockAdvantage": -2,
+            "damageValue": 70,
+            "stunValue": 100
           }
         },
         {
@@ -269,8 +337,13 @@
           "type": "type_0",
           "data": {
             "startupFrames": 23,
+            "activeFrames": 2,
+            "recoveryFrames": 18,
             "hitAdvantage": 0,
-            "blockAdvantage": -6
+            "blockAdvantage": -4,
+            "damageValue": 80,
+            "stunValue": 150,
+            "description": "Airborne frames 7-20"
           }
         },
         {
@@ -278,14 +351,19 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
-            "hitAdvantage": 1
+            "recoveryFrames": 22,
+            "hitAdvantage": 1,
+            "blockAdvantage": -2
           }
         },
         {
           "nameID": "Dash Spinning Mixer (Mash level 1)",
           "type": "type_0",
           "data": {
-            "startupFrames": 8
+            "startupFrames": 8,
+            "recoveryFrames": 26,
+            "hitAdvantage": -1,
+            "blockAdvantage": -4
           }
         },
         {
@@ -293,7 +371,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
-            "hitAdvantage": -1
+            "recoveryFrames": 28,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -11
           }
         },
         {
@@ -301,7 +381,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 13,
-            "hitAdvantage": 1003
+            "activeFrames": 8,
+            "recoveryFrames": 23,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -21,
+            "damageValue": 140,
+            "stunValue": 200
           }
         }
       ],
@@ -311,7 +396,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 170
           }
         },
         {
@@ -319,7 +408,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "activeFrames": 2,
+            "recoveryFrames": 18,
+            "hitAdvantage": 1003,
+            "damageValue": 130,
+            "stunValue": 200
           }
         }
       ],
@@ -328,7 +421,7 @@
           "nameID": "Ysaar",
           "type": "type_0",
           "data": {
-            "startupFrames": 15,
+            "startupFrames": 16,
             "hitAdvantage": 1003
           }
         }
@@ -339,18 +432,34 @@
           "type": "type_0",
           "description": "id_rashid_eagle_spike_on_block_description",
           "data": {
-            "startupFrames": 20,
-            "blockAdvantage": -24,
-            "hitAdvantage": 1003
+            "startupFrames": 18,
+            "blockAdvantage": -31,
+            "hitAdvantage": 1003,
+            "damageValue": 100,
+            "stunValue": 200,
+            "description": "Block advantage based on hit at opponent's feet."
+          }
+        },
+        {
+          "nameID": "Rolling Assault",
+          "type": "type_0",
+          "description": "id_rashid_eagle_spike_on_block_description",
+          "data": {
+            "recoveryFrames": 32,
+            "description": "Projectile invincible on frames 5-15."
           }
         },
         {
           "nameID": "Nail Assault",
           "type": "type_0",
           "data": {
-            "startupFrames": 7,
+            "startupFrames": 6,
+            "activeFrames": 4,
+            "recoveryFrames": 21,
             "blockAdvantage": -5,
-            "hitAdvantage": 1003
+            "hitAdvantage": 1003,
+            "damageValue": 80,
+            "stunValue": 100
           }
         }
       ],
@@ -360,6 +469,7 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "recoveryFrames": 21,
             "hitAdvantage": 0,
             "blockAdvantage": -2
           }
@@ -368,7 +478,10 @@
           "nameID": "Spinning Mixer LP (Mash level 1)",
           "type": "type_0",
           "data": {
-            "startupFrames": 8
+            "startupFrames": 8,
+            "recoveryFrames": 21,
+            "hitAdvantage": 1,
+            "blockAdvantage": -5
           }
         },
         {
@@ -376,6 +489,7 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "recoveryFrames": 24,
             "hitAdvantage": 1003,
             "blockAdvantage": -10
           }
@@ -385,8 +499,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "recoveryFrames": 33,
             "hitAdvantage": 1003,
-            "blockAdvantage": -31
+            "blockAdvantage": -26
           }
         },
         {
@@ -394,7 +509,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
-            "hitAdvantage": 1003
+            "recoveryFrames": 41,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -43
           }
         },
         {
@@ -402,7 +519,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
-            "hitAdvantage": 1003
+            "recoveryFrames": 44,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -56
           }
         },
         {
@@ -410,8 +529,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
+            "recoveryFrames": 42,
             "hitAdvantage": 1003,
-            "blockAdvantage": -36
+            "blockAdvantage": -34
           }
         },
         {
@@ -419,7 +539,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "recoveryFrames": 47,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -48
           }
         },
         {
@@ -427,7 +549,9 @@
           "type": "type_0",
           "data": {
             "startupFrames": 5,
-            "hitAdvantage": 1003
+            "recoveryFrames": 52,
+            "hitAdvantage": 1003,
+            "blockAdvantage": -62
           }
         },
         {
@@ -435,16 +559,10 @@
           "type": "type_0",
           "data": {
             "startupFrames": 8,
+            "recoveryFrames": 44,
             "hitAdvantage": 1003,
-            "blockAdvantage": -39
-          }
-        },
-        {
-          "nameID": "Spinning Mixer EX (Mash)",
-          "type": "type_0",
-          "data": {
-            "startupFrames": 8,
-            "hitAdvantage": 1003
+            "blockAdvantage": -34,
+            "description": "Invincible until active frames"
           }
         },
         {
@@ -452,8 +570,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 15,
+            "activeFrames": 8,
+            "recoveryFrames": 15,
             "hitAdvantage": 1003,
-            "blockAdvantage": -20
+            "blockAdvantage": -20,
+            "damageValue": 100,
+            "stunValue": 200
           }
         },
         {
@@ -461,8 +583,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 21,
+            "activeFrames": 9,
+            "recoveryFrames": 18,
             "hitAdvantage": 1003,
-            "blockAdvantage": -20
+            "blockAdvantage": -20,
+            "damageValue": 120,
+            "stunValue": 200
           }
         },
         {
@@ -470,8 +596,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 22,
+            "activeFrames": 16,
+            "recoveryFrames": 25,
             "hitAdvantage": 1003,
-            "blockAdvantage": -20
+            "blockAdvantage": -20,
+            "damageValue": 140,
+            "stunValue": 200
           }
         },
         {
@@ -479,8 +609,12 @@
           "type": "type_0",
           "data": {
             "startupFrames": 19,
+            "activeFrames": 6,
+            "recoveryFrames": 22,
             "hitAdvantage": 1003,
-            "blockAdvantage": -9
+            "blockAdvantage": -9,
+            "damageValue": 100,
+            "stunValue": 150
           }
         },
         {
@@ -488,7 +622,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 18,
-            "hitAdvantage": 1003
+            "hitAdvantage": 1003,
+            "blockAdvantage": -35,
+            "damageValue": 130,
+            "stunValue": 200,
+            "description": "Block advantage based on hit at opponent's feet"
           }
         },
         {
@@ -496,7 +634,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 20,
-            "hitAdvantage": 1003
+            "hitAdvantage": 1003,
+            "blockAdvantage": -35,
+            "damageValue": 130,
+            "stunValue": 200,
+            "description": "Block advantage based on hit at opponent's feet"
           }
         },
         {
@@ -504,7 +646,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 22,
-            "hitAdvantage": 1003
+            "hitAdvantage": 1003,
+            "blockAdvantage": -35,
+            "damageValue": 130,
+            "stunValue": 200,
+            "description": "Block advantage based on hit at opponent's feet"
           }
         },
         {
@@ -512,7 +658,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 15,
-            "hitAdvantage": 1003
+            "hitAdvantage": 1003,
+            "blockAdvantage": -35,
+            "damageValue": 160,
+            "stunValue": 200,
+            "description": "Has projectile invincibility."
           }
         },
         {
@@ -520,8 +670,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 17,
+            "recoveryFrames": 38,
             "hitAdvantage": -4,
-            "blockAdvantage": -7
+            "blockAdvantage": -7,
+            "damageValue": 60,
+            "stunValue": 100
           }
         },
         {
@@ -529,17 +682,23 @@
           "type": "type_0",
           "data": {
             "startupFrames": 23,
+            "recoveryFrames": 42,
             "hitAdvantage": 0,
-            "blockAdvantage": -4
+            "blockAdvantage": -4,
+            "damageValue": 70,
+            "stunValue": 140
           }
         },
         {
           "nameID": "Whirlwind Shot HK",
           "type": "type_0",
           "data": {
-            "startupFrames": 34,
+            "startupFrames": 33,
+            "recoveryFrames": 37,
             "hitAdvantage": 4,
-            "blockAdvantage": 1
+            "blockAdvantage": 1,
+            "damageValue": 70,
+            "stunValue": 140
           }
         },
         {
@@ -547,8 +706,11 @@
           "type": "type_0",
           "data": {
             "startupFrames": 23,
+            "recoveryFrames": 38,
             "hitAdvantage": 9,
-            "blockAdvantage": 6
+            "blockAdvantage": 6,
+            "damageValue": 90,
+            "stunValue": 180
           }
         }
       ],
@@ -557,8 +719,14 @@
           "nameID": "Altair",
           "type": "type_0",
           "data": {
+            "startupFrames": 8,
+            "activeFrames": 30,
+            "recoveryFrames": 43,
             "hitAdvantage": 1003,
-            "blockAdvantage": -51
+            "blockAdvantage": -51,
+            "damageValue": 340,
+            "stunValue": 0,
+            "description": "Invincible until recovery frames."
           }
         }
       ]
