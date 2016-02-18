@@ -443,7 +443,7 @@
             "blockAdvantage": -13,
             "damageValue": 120,
             "stunValue": 150,
-            "description": "Projectile invulnerability frames 5-15."
+            "description": "Projectile invincible frames 5-15."
           }
         },
         {
@@ -466,7 +466,7 @@
             "blockAdvantage": -13,
             "damageValue": 120,
             "stunValue": 150,
-            "description": "Projectile invulnerability frames 5-15."
+            "description": "Projectile invincible frames 5-15."
           }
         },
         {
@@ -488,7 +488,7 @@
             "blockAdvantage": -13,
             "damageValue": 120,
             "stunValue": 150,
-            "description": "Projectile invulnerability frames 5-15."
+            "description": "Projectile invincible frames 5-15."
           }
         },
         {
@@ -501,7 +501,7 @@
             "blockAdvantage": -11,
             "damageValue": 120,
             "stunValue": 200,
-            "description": "Projectile invulnerability frames 5-15."
+            "description": "Projectile invincible frames 5-15."
           },
           "alternateData": {
 
@@ -518,7 +518,7 @@
             "blockAdvantage": -37,
             "damageValue": 120,
             "stunValue": 150,
-            "description": "Invulnerability frames 1-5."
+            "description": "Invincible frames 1-5."
           },
           "alternateData": {
             "startupFrames": 3,
@@ -527,7 +527,7 @@
             "blockAdvantage": -37,
             "damageValue": 160,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-7."
+            "description": "Invincible frames 1-7."
           }
         },
         {
@@ -541,7 +541,7 @@
             "blockAdvantage": -37,
             "damageValue": 120,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-6."
+            "description": "Invincible frames 1-6."
           },
           "alternateData": {
             "startupFrames": 3,
@@ -550,7 +550,7 @@
             "blockAdvantage": -37,
             "damageValue": 160,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-7."
+            "description": "Invincible frames 1-7."
           }
         },
         {
@@ -564,7 +564,7 @@
             "blockAdvantage": -37,
             "damageValue": 120,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-7."
+            "description": "Invincible frames 1-7."
           },
           "alternateData": {
             "startupFrames": 3,
@@ -573,7 +573,7 @@
             "blockAdvantage": -37,
             "damageValue": 160,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-7."
+            "description": "Invincible frames 1-7."
           }
         },
         {
@@ -587,7 +587,7 @@
             "blockAdvantage": -37,
             "damageValue": 160,
             "stunValue": 200,
-            "description": "Invulnerability frames 1-10."
+            "description": "Invincible frames 1-10."
           },
           "alternateData": {
 
@@ -701,7 +701,7 @@
           "type": "type_0",
           "data": {
             "recoveryFrames": 39,
-            "description": "Throw and projectile invulnerability frames 1-13. Airborne after frame 6."
+            "description": "Throw and projectile invincible frames 1-13. Airborne after frame 6."
           }
         },
         {
@@ -794,7 +794,7 @@
             "hitAdvantage": 1003,
             "damageValue": 330,
             "stunValue": 0,
-            "description": "Invulnerability frames 1-2, projectile invulnerability frames 3-11."
+            "description": "Invincible frames 1-2, projectile invincible frames 3-11."
           }
         }
       ]

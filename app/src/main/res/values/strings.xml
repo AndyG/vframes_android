@@ -76,8 +76,8 @@
 
     <!-- Ryu Movelist -->
     <string name="ryu_hadoken_description">Punch strength determines projectile speed.</string>
-    <string name="ryu_shoryuken_description">Startup invulnerability on MP and EX versions.</string>
-    <string name="ryu_tatsu_description">Has projectile invulnerability after startup.</string>
+    <string name="ryu_shoryuken_description">Startup invincibility on MP and EX versions.</string>
+    <string name="ryu_tatsu_description">Has projectile invincibility after startup.</string>
     <string name="ryu_vtrigger_description">Powers up specials and gains ability to charge fireballs. Fully charged fireballs are unblockable.</string>
     <string name="ryu_vskill_description">Parries an attack and builds some V-meter.</string>
 
@@ -97,7 +97,7 @@
     <string name="claw_claw_on_only">(Claw On Only)</string>
     <string name="claw_switch">Switch to Claw On/Off</string>
     <string name="claw_flying_barcelona_attack_description">EX version launches opponent airborne on the way up.</string>
-    <string name="claw_vskill_description">Has upper-body invulnerability.</string>
+    <string name="claw_vskill_description">Has upper-body invincibility.</string>
     <string name="claw_vtrigger_torero_description">Throws a rose straight forward. On hit or block, performs a follow-up attack.</string>
     <string name="claw_vtrigger_rojo_description">Throws a rose at an upward angle. On hit or block, performs a follow-up attack.</string>
     <string name="claw_vtrigger_azul_description">Throws a rose at a downward angle. On hit or block, performs a follow-up attack.</string>
@@ -110,12 +110,12 @@
     <string name="chun_senenshu_description">Hits overhead. Leads to combo in V-Trigger.</string>
     <string name="chun_kikoken_description">Punch strength determines speed and distance.</string>
     <string name="chun_airborne_lightning_legs_description">Changes momentum in air.</string>
-    <string name="chun_spinning_bird_kick_description">EX version has startup invulnerability.</string>
-    <string name="chun_critical_art_description">Projectile invulnerable.</string>
+    <string name="chun_spinning_bird_kick_description">EX version has startup invincibility.</string>
+    <string name="chun_critical_art_description">Projectile invincible.</string>
 
     <!-- Ken Movelist -->
     <string name="ken_hadoken_description">Punch strength determines projectile speed.</string>
-    <string name="ken_shoryuken_description">Startup invulnerability.</string>
+    <string name="ken_shoryuken_description">Startup invincible.</string>
     <string name="ken_tatsu_description">LK version launches opponent. HK and EX versions rise off the ground.</string>
     <string name="ken_airborne_tatsu_description">EX version attacks diagonally downward.</string>
     <string name="ken_vtrigger_description">Moves Ken forward, maintaining pressure or extending a combo. Afterward, Ken\'s special moves are faster and gain better hitboxes.</string>
@@ -141,15 +141,15 @@
     <!-- Birdie Movelist -->
     <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Kick\nCancel: Press Punch</string>
     <string name="birdie_bull_head_description">EX version gains armor.</string>
-    <string name="birdie_bull_horn_description">Has projectile invulnerability. EX version gains armor.</string>
+    <string name="birdie_bull_horn_description">Has projectile invincibility. EX version gains armor.</string>
     <string name="birdie_hanging_chain_description">Chain goes through projectiles.\nLK version: opponent lands close.\nMK version: opponent lands far.\nHK version anti-airs.</string>
     <string name="birdie_killing_head_description">Punch strength determines number of hits.</string>
-    <string name="birdie_bull_revenger_description">Has projectile invulnerability.</string>
+    <string name="birdie_bull_revenger_description">Has projectile invincibility.</string>
     <string name="birdie_vtrigger_description">Birdie deals more damage. Special moves become faster, multi-hitting, or gain armor.</string>
 
     <!-- Mika Movelist -->
     <string name="mika_shooting_peach_description">EX version has one hit of armor.</string>
-    <string name="mika_wingless_airplane_description">EX version has invulnerability.</string>
+    <string name="mika_wingless_airplane_description">EX version has invincibility.</string>
     <string name="mika_typhoon_description">Leaves Mika behind the opponent.</string>
     <string name="mika_brimstone_description">Leaves Mika in front of the opponent.</string>
     <string name="mika_vtrigger_posttext">Hold buttons to delay Nadeshiko</string>
@@ -163,7 +163,7 @@
     <string name="rashid_vtrigger_description">Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.</string>
     <string name="rashid_vskill_divekick_pretext">(During Front Flip)</string>
     <string name="rashid_vskill_rollkick_pretext">(During Rolling Assault)</string>
-    <string name="rashid_spinning_mixer_description">EX version has startup invulnerability.</string>
+    <string name="rashid_spinning_mixer_description">EX version has startup invincibility.</string>
     <string name="rashid_whirlwind_shot_description">HP and EX versions cancel into V-Skill and affect Rashid\'s trajectory.</string>
 
     <!-- Rashid Frame Data -->
@@ -172,20 +172,20 @@
     <!-- Nash Movelist -->
     <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second Projectile</string>
     <string name="nash_sonic_boom_description">Punch strength determines projectile speed.</string>
-    <string name="nash_sonic_scythe_description">EX version has upper-body invulnerability.</string>
+    <string name="nash_sonic_scythe_description">EX version has upper-body invincibility.</string>
     <string name="nash_tragedy_assault_description">HP version hits overhead. \nEX version drains health and meter.</string>
     <string name="nash_sonic_move_hide_description">Teleports behind opponent.</string>
     <string name="nash_sonic_move_blitz_air_description">Teleports above and behind opponent.</string>
     <string name="nash_sonic_move_steel_air_description">Teleports in front of opponent.</string>
-    <string name="nash_critical_art_description">Projectile invulnerable.</string>
+    <string name="nash_critical_art_description">Projectile invincible.</string>
     <string name="nash_vskill_description">A chop attack which can absorb a projectile, building V-Meter.</string>
 
     <!-- Necalli Movelist -->
     <string name="necalli_vskill_control_distance">Control Distance Using Direction</string>
     <string name="necalli_disc_guidance_description">Has one hit of armor against projectiles.</string>
-    <string name="necalli_raging_light_description">Invulnerability on HP and EX versions.</string>
+    <string name="necalli_raging_light_description">Invincibility on HP and EX versions.</string>
     <string name="necalli_mask_of_tlalli_description">EX version wall-bounces, allowing a followup attack.</string>
-    <string name="necalli_vtrigger_description">Necalli gains improved frame advantage, more range on Raging Light, and no longer requires charge to cancel into Disc\'s Guidance.</string>
+    <string name="necalli_vtrigger_description">Necalli gains improved damage, frame advantage, range on Raging Light, walk speed +10%, dash distance +30% and no longer requires charge to cancel into Disc\'s Guidance.</string>
     <string name="necalli_vskill_description">Builds V-Meter on hit.</string>
     <string name="necalli_opening_dagger_description">Hits overhead. Crush counters.</string>
 
@@ -204,11 +204,11 @@
     <!-- Cammy Movelist -->
     <string name="cammy_during_hooligan">(During Hooligan)</string>
     <string name="cammy_spiral_arrow_description">Kick strength determines distance.</string>
-    <string name="cammy_cannon_spike_description">Startup invulnerability.</string>
+    <string name="cammy_cannon_spike_description">Startup invincibility.</string>
     <string name="cammy_cannon_strike_description">Kick strength determines angle.</string>
     <string name="cammy_hooligan_combination_description">Can travel through opponent. Followups attack towards opponent.</string>
     <string name="cammy_vtrigger_description">Makes specials faster and safer.</string>
-    <string name="cammy_vskill_description">Moves Cammy forward with projectile invulnerability. Can combo on hit.</string>
+    <string name="cammy_vskill_description">Moves Cammy forward with projectile invincibility. Can combo on hit.</string>
     <string name="hooligan_close_to_grounded_opponent">(During Hooligan, close to grounded opponent)</string>
     <string name="hooligan_close_to_airborne_opponent">(During Hooligan, close to airborne opponent)</string>
 
