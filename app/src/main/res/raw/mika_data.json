@@ -243,7 +243,7 @@
             "nameID": "c.LK",
             "type": "type_0",
             "data": {
-              "startupFrames": 34,
+              "startupFrames": 4,
               "activeFrames": 2,
               "recoveryFrames": 8,
               "hitAdvantage": 3,
