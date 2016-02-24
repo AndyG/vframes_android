@@ -20,7 +20,11 @@
     <string name="summary_toolbar_title">%1$s Moves</string>
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>
+    <string name="notes_title">Notes</string>
     <string name="frame_data_not_available">Detailed frame data for this character will become available as Street Fighter V nears release. Thank you for your patience.</string>
+
+    <!-- Notes Fragment-->
+    <string name="notes_coming_soon">Notes (and much more) is on the way to VFrames! Sorry for the wait, and thank you for your patience!</string>
 
     <!--Character Names -->
     <string name="ryu_name">Ryu</string>
@@ -237,8 +241,6 @@
     <string name="showing_non_trigger_data">Showing V-Trigger Inactive frame data</string>
     <string name="showing_claw_off_data">Showing Claw Off frame data</string>
     <string name="showing_claw_on_data">Showing Claw On frame data</string>
-    <string name="ken_vtrigger_framedata_not_ready">Sorry, Ken\'s V-Trigger frame data is not yet available.</string>
-    <string name="laura_vtrigger_framedata_not_ready">Sorry, Laura\'s V-Trigger frame data is not yet available.</string>
 
     <!-- Character Banners -->
     <string name="health_format">Health: %s</string>
