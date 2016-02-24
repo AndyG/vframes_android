@@ -619,7 +619,7 @@
         "nameID": "Killing Head EX",
         "type": "type_0",
         "data": {
-          "startupFrames": 4,
+          "startupFrames": 5,
           "activeFrames": 2,
           "recoveryFrames": 51,
           "hitAdvantage": 1003,

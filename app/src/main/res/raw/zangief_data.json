@@ -39,7 +39,7 @@
         "vreversal": [
           {
             "nameID": "Muscle Explosion",
-            "input": "FORWARD|PLUS|ALL_PUNCHES",
+            "input": "FORWARD|PLUS|ALL_KICKS",
             "pretextID":"id_during_guard"
           }
         ],

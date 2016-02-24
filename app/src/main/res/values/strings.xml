@@ -177,7 +177,7 @@
     <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second Projectile</string>
     <string name="nash_sonic_boom_description">Punch strength determines projectile speed.</string>
     <string name="nash_sonic_scythe_description">EX version has upper-body invincibility.</string>
-    <string name="nash_tragedy_assault_description">HP version hits overhead. \nEX version drains health and meter.</string>
+    <string name="nash_tragedy_assault_description">LP version steals 50 meter.\nMP version steals 100 meter.\nHP version steals 150 meter.\nEX version steals 30 health.</string>
     <string name="nash_sonic_move_hide_description">Teleports behind opponent.</string>
     <string name="nash_sonic_move_blitz_air_description">Teleports above and behind opponent.</string>
     <string name="nash_sonic_move_steel_air_description">Teleports in front of opponent.</string>

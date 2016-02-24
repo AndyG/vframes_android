@@ -78,6 +78,10 @@
           {
             "nameID": "Psycho Axe",
             "input": "DOWN_FORWARD|PLUS|HP"
+          },
+          {
+            "nameID": "Shadow Axe",
+            "input": "MP|ARROW|DOWN_FORWARD|PLUS|HP"
           }
         ]
       },
