@@ -14,6 +14,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Display;
@@ -25,6 +26,7 @@ import android.view.WindowManager;
 
 import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
+import com.angarron.vframes.adapter.NavigationRecyclerViewAdapter;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.util.FeedbackUtil;
 
@@ -137,9 +139,11 @@ public class CharacterSelectActivity extends AppCompatActivity {
     }
 
     private void setupNavigationDrawer() {
+        RecyclerView drawerRecycler = (RecyclerView) findViewById(R.id.drawer_recyclerview);
+        drawerRecycler.setAdapter(new NavigationRecyclerViewAdapter());
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        drawerToggle = new ActionBarDrawerToggle(this,drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer){
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer){
 
             @Override
             public void onDrawerOpened(View drawerView) {

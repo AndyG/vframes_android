@@ -61,5 +61,6 @@
     <color name="frame_data_row_background_shaded">#e1e1e1</color>
     <color name="frame_data_row_alternate_background_shaded">#ffe1e1</color>
     <color name="frame_data_row_alternate_background_unshaded">#ffebeb</color>
+    <color name="navigation_drawer_background">#9f3636</color>
 
 </resources>
