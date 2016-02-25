@@ -71,24 +71,31 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         }
 
         //Verify the data is still available. If not, send to splash screen.
-        verifyDataAvailable();
+        if (dataIsAvailable()) {
 
-        if (savedInstanceState != null && savedInstanceState.containsKey(ALTERNATE_FRAME_DATA_SELECTED)) {
-            alternateFrameDataSelected = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED);
+            if (savedInstanceState != null && savedInstanceState.containsKey(ALTERNATE_FRAME_DATA_SELECTED)) {
+                alternateFrameDataSelected = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED);
+            }
+
+            //Load the toolbar based on the target character
+            setupToolbar();
+            setCharacterDetails();
+            setupViewPager();
+        } else {
+            sendToSplashScreen();
         }
-
-        //Load the toolbar based on the target character
-        setupToolbar();
-        setCharacterDetails();
-        setupViewPager();
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        verifyDataAvailable();
-        alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
-        setAlternateFrameDataMenuState();
-        return super.onPrepareOptionsMenu(menu);
+        if (dataIsAvailable()) {
+            alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
+            setAlternateFrameDataMenuState();
+            return super.onPrepareOptionsMenu(menu);
+        } else {
+            sendToSplashScreen();
+            return false;
+        }
     }
 
     @Override
@@ -165,19 +172,9 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         supportFinishAfterTransition();
     }
 
-    private void verifyDataAvailable() {
+    private boolean dataIsAvailable() {
         VFramesApplication application = (VFramesApplication) getApplication();
-        if (application.getDataModel() == null) {
-
-            //If this is a release build, log this issue to Crashlytics.
-            if (!BuildConfig.DEBUG) {
-                Crashlytics.logException(new Throwable("Sending user to splash screen because data was unavailable"));
-            }
-
-            Intent startSplashIntent = new Intent(this, SplashActivity.class);
-            startActivity(startSplashIntent);
-            finish();
-        }
+        return (application.getDataModel() != null);
     }
 
     private void setupViewPager() {
@@ -276,6 +273,18 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         } else {
             return alternateFrameDataSelected ? R.drawable.fire_logo : R.drawable.logo;
         }
+    }
+
+
+    private void sendToSplashScreen() {
+        //If this is a release build, log this issue to Crashlytics.
+        if (!BuildConfig.DEBUG) {
+            Crashlytics.logException(new Throwable("Sending user to splash screen because data was unavailable"));
+        }
+
+        Intent startSplashIntent = new Intent(this, SplashActivity.class);
+        startActivity(startSplashIntent);
+        finish();
     }
 
     private boolean viewExists(int viewId) {
