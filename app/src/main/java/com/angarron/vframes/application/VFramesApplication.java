@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.angarron.vframes.BuildConfig;
+import com.angarron.vframes.data.BackupDataSource;
 import com.angarron.vframes.data.IDataSource;
-import com.angarron.vframes.data.TestDataSource;
 import com.crashlytics.android.Crashlytics;
 
 import data.model.IDataModel;
@@ -41,7 +41,9 @@ public class VFramesApplication extends Application {
     }
 
     private void init() {
-        dataSource = new TestDataSource(getResources(), getPackageName());
+        //When starting app, use backup data source
+        //When we add network updates to startup, this will change
+        dataSource = new BackupDataSource(this);
     }
 
     public IDataSource getDataSource() {

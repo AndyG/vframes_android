@@ -330,4 +330,23 @@
     <!-- Non-translatable Strings -->
     <string name="character_select_transition">character_select_transition</string>
 
+    <!-- Frame data updated dialog -->
+    <string name="data_updated_message">"VFrames has downloaded the latest moves list and frame data. We recommend periodically checking for new versions of VFrames in the Google Play Store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!"</string>
+    <string name="data_updated_title">New Data Downloaded</string>
+    <string name="ok_thanks">OK</string>
+
+    <!-- Unsupported client version dialog -->
+    <string name="unsupported_client_version_message">This version of VFrames is no longer supported. Please check for an update in the Google Play Store.</string>
+    <string name="unsupported_client_version_title">Unsupported VFrames Version</string>
+    <string name="visit_play_store">Get Update</string>
+    <string name="no_thanks">No thanks</string>
+
+    <!-- Already up to date dialog -->
+    <string name="already_up_to_date_title">Already Up to Date</string>
+    <string name="already_up_to_date_message">You already have the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!</string>
+
+    <!-- Network error dialog-->
+    <string name="network_error_title">Network Error</string>
+    <string name="network_error_message">There was an error fetching updated data. Please check your network connection and try again.</string>
+
 </resources>

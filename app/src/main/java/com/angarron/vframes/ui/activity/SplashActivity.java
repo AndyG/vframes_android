@@ -32,19 +32,25 @@ public class SplashActivity extends Activity {
     private class DataSourceListener implements IDataSource.Listener {
 
         @Override
-        public void onDataReceived(IDataModel data) {
+        public void onDataReceived(IDataModel data, boolean wasUpdated) {
             //Store the data in the application model and launch the HomeScreenActivity.
             application.setDataModel(data);
-            launchHomeScreenActivity();
+            launchHomeScreenActivity(wasUpdated);
         }
 
         @Override
         public void onDataFetchFailed(IDataSource.FetchFailureReason failureReason) {
-            throw new RuntimeException("failed to fetch data: " + failureReason);
+            switch (failureReason) {
+                case UNSUPPORTED_CLIENT_VERSION:
+                case UNKNOWN_ERROR:
+                case READ_FROM_FILE_FAILED:
+                default:
+                    throw new RuntimeException("failed to fetch data: " + failureReason);
+            }
         }
     }
 
-    private void launchHomeScreenActivity() {
+    private void launchHomeScreenActivity(boolean wasUpdated) {
         Intent launchHomeScreenIntent = new Intent(this, CharacterSelectActivity.class);
         launchHomeScreenIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(launchHomeScreenIntent);
