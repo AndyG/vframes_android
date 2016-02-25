@@ -8,7 +8,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
@@ -35,6 +37,9 @@ public class CharacterSelectActivity extends AppCompatActivity {
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
     private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
 
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +50,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
         }
 
         verifyDataAvailable();
+        setupNavigationDrawer();
         setupToolbar();
         setupClickListeners();
     }
@@ -66,7 +72,8 @@ public class CharacterSelectActivity extends AppCompatActivity {
                 FeedbackUtil.sendFeedback(this);
                 return true;
             default:
-                return super.onOptionsItemSelected(item);
+                Log.d("findme", "clicked navigation");
+                return drawerToggle.onOptionsItemSelected(item);
         }
     }
 
@@ -127,6 +134,29 @@ public class CharacterSelectActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Select A Character");
         }
+    }
+
+    private void setupNavigationDrawer() {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        drawerToggle = new ActionBarDrawerToggle(this,drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer){
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                // code here will execute once the drawer is opened( As I dont want anything happened whe drawer is
+                // open I am not going to put anything here)
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                // Code here will execute once drawer is closed
+            }
+        };
+
+        drawerLayout.setDrawerListener(drawerToggle);
+        drawerToggle.syncState();
     }
 
     private class CharacterCardClickListener implements View.OnClickListener {

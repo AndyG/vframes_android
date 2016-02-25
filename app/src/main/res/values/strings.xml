@@ -329,5 +329,7 @@
 
     <!-- Non-translatable Strings -->
     <string name="character_select_transition">character_select_transition</string>
+    <string name="openDrawer">Open drawer</string>
+    <string name="closeDrawer">Close drawer</string>
 
 </resources>
