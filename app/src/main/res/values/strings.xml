@@ -352,6 +352,10 @@
     <string name="network_error_title">Network Error</string>
     <string name="network_error_message">There was an error fetching updated data. Please check your network connection and try again.</string>
     <string name="loading_title">Fetching Data</string>
-    <string name="loading_message">Checking for updates to VFrames data...</string>
+    <string name="loading_message">Checking for updates to VFrames data…</string>
+    <string name="error_loading_streams">Sorry, but there was an error loading live streams. Please check your network connection and try again.</string>
+
+    <!-- Live Streams-->
+    <string name="viewers_format">%1$s viewers</string>
 
 </resources>
