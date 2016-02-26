@@ -1,5 +1,6 @@
 package com.angarron.vframes.ui.activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,10 +15,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Surface;
@@ -44,14 +46,16 @@ public class CharacterSelectActivity extends AppCompatActivity {
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
     private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
 
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle drawerToggle;
-
     //Fabric Answers Events
     private static final String LOAD_NETWORK_DATA_EVENT = "Load Custom Data";
     private static final String WAS_UPDATED_KEY = "Was Updated";
     private static final String LOAD_SUCCESS_KEY = "Load Successful";
     private static final String LOAD_FAILURE_REASON_KEY = "Failure Reason";
+
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,9 +90,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_character_select, menu);
-        MenuItem versionItem = menu.findItem(R.id.version_item);
-        String version = String.format(getString(R.string.version_format), BuildConfig.VERSION_NAME);
-        versionItem.setTitle(version);
         return true;
     }
 
@@ -97,6 +98,9 @@ public class CharacterSelectActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_feedback:
                 FeedbackUtil.sendFeedback(this);
+                return true;
+            case R.id.action_refresh:
+                loadNetworkData();
                 return true;
             default:
                 Log.d("findme", "clicked navigation");
@@ -165,6 +169,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
 
     private void setupNavigationDrawer() {
         RecyclerView drawerRecycler = (RecyclerView) findViewById(R.id.drawer_recyclerview);
+        drawerRecycler.setLayoutManager(new LinearLayoutManager(this));
         drawerRecycler.setAdapter(new NavigationRecyclerViewAdapter());
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -348,12 +353,16 @@ public class CharacterSelectActivity extends AppCompatActivity {
     }
 
     private void loadNetworkData() {
+        showProgressDialog();
         final CustomEvent loadNetworkDataEvent = new CustomEvent(LOAD_NETWORK_DATA_EVENT);
 
         IDataSource dataSource = new NetworkFallbackDataSource(BuildConfig.VERSION_CODE, this);
         dataSource.fetchData(new IDataSource.Listener() {
             @Override
             public void onDataReceived(IDataModel data, boolean wasUpdated) {
+
+                dismissProgressDialog();
+
                 //Store the data in the application model for future reference.
                 VFramesApplication application = (VFramesApplication) getApplication();
                 application.setDataModel(data);
@@ -374,6 +383,9 @@ public class CharacterSelectActivity extends AppCompatActivity {
 
             @Override
             public void onDataFetchFailed(IDataSource.FetchFailureReason failureReason) {
+
+                dismissProgressDialog();
+
                 if (!BuildConfig.DEBUG) {
                     loadNetworkDataEvent.putCustomAttribute(LOAD_SUCCESS_KEY, String.valueOf(false));
                     loadNetworkDataEvent.putCustomAttribute(LOAD_FAILURE_REASON_KEY, failureReason.name());
@@ -394,6 +406,21 @@ public class CharacterSelectActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void showProgressDialog() {
+        dismissProgressDialog();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle(R.string.loading_title);
+        progressDialog.setMessage(getString(R.string.loading_message));
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
+    }
+
+    private void dismissProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
     }
 
     private void showNetworkErrorDialog() {
@@ -422,15 +449,5 @@ public class CharacterSelectActivity extends AppCompatActivity {
         });
 
         builder.create().show();
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            loadNetworkData();
-            return true;
-        } else {
-            return super.onKeyDown(keyCode, event);
-        }
     }
 }

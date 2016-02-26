@@ -3,6 +3,7 @@
 
     <!-- Menu -->
     <string name="version_format">Version: %1$s</string>
+    <string name="refresh_data">Refresh Data</string>
 
     <!-- Feedback -->
     <string name="send_feedback">Send Feedback</string>
@@ -350,5 +351,7 @@
     <!-- Network error dialog-->
     <string name="network_error_title">Network Error</string>
     <string name="network_error_message">There was an error fetching updated data. Please check your network connection and try again.</string>
+    <string name="loading_title">Fetching Data</string>
+    <string name="loading_message">Checking for updates to VFrames data...</string>
 
 </resources>
