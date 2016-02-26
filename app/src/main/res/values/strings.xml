@@ -359,4 +359,10 @@
     <string name="viewers_format">%1$s viewers</string>
     <string name="no_current_streams">There is no one currently streaming Street Fighter V.</string>
 
+    <!-- Navigation Drawer -->
+    <string name="character_data">Character Data</string>
+    <string name="live_streams">Live Streams</string>
+    <string name="references">References</string>
+    <string name="community">Community</string>
+
 </resources>

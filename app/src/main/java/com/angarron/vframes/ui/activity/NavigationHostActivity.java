@@ -43,7 +43,7 @@ public class NavigationHostActivity extends AppCompatActivity implements Navigat
 
         RecyclerView drawerRecycler = (RecyclerView) findViewById(R.id.drawer_recyclerview);
         drawerRecycler.setLayoutManager(new LinearLayoutManager(this));
-        drawerRecycler.setAdapter(new NavigationRecyclerViewAdapter(this));
+        drawerRecycler.setAdapter(new NavigationRecyclerViewAdapter(this, this));
 
         TextView versionText = (TextView) drawerLayout.findViewById(R.id.version_textview);
         versionText.setText(String.format(getString(R.string.version_format), BuildConfig.VERSION_NAME));

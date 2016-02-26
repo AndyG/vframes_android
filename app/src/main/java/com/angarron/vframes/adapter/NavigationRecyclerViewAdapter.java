@@ -1,5 +1,6 @@
 package com.angarron.vframes.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +16,11 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
     private static final int TYPE_ITEM = 1;
 
     private IMenuClickListener listener;
+    private Context context;
 
-    public NavigationRecyclerViewAdapter(IMenuClickListener listener) {
+    public NavigationRecyclerViewAdapter(IMenuClickListener listener, Context context) {
         this.listener = listener;
+        this.context = context;
     }
 
     @Override
@@ -46,10 +49,10 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private void setupMenuItem(ItemViewHolder holder, int position) {
         if (position == 1) {
-            holder.label.setText("Character Data");
+            holder.label.setText(context.getString(R.string.character_data));
             holder.icon.setImageResource(R.drawable.ic_action_group);
         } else if (position == 3) {
-            holder.label.setText("Currently Streaming");
+            holder.label.setText(context.getString(R.string.live_streams));
             holder.icon.setImageResource(R.drawable.ic_action_play);
         }
         holder.itemView.setOnClickListener(new ItemClickListener(position));
@@ -57,9 +60,9 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private void setupHeader(HeaderViewHolder holder, int position) {
         if (position == 0) {
-            holder.label.setText("References");
+            holder.label.setText(context.getString(R.string.references));
         } else if (position == 2) {
-            holder.label.setText("Community");
+            holder.label.setText(context.getString(R.string.community));
         }
     }
 
