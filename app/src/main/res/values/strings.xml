@@ -304,8 +304,8 @@
     <string name="laura_style">Brazilian Jiu-Jitsu</string>
 
     <string name="fang_title">Cunning Trickster</string>
-    <string name="fang_health">\???</string>
-    <string name="fang_stun">\???</string>
+    <string name="fang_health">950</string>
+    <string name="fang_stun">950</string>
     <string name="fang_style">Chinese Kempo</string>
 
     <string name="zangief_title">Iron Cyclone</string>

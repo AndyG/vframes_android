@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
@@ -46,8 +47,10 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
     private void setupMenuItem(ItemViewHolder holder, int position) {
         if (position == 1) {
             holder.label.setText("Character Data");
+            holder.icon.setImageResource(R.drawable.ic_action_group);
         } else if (position == 3) {
             holder.label.setText("Currently Streaming");
+            holder.icon.setImageResource(R.drawable.ic_action_play);
         }
         holder.itemView.setOnClickListener(new ItemClickListener(position));
     }
@@ -77,10 +80,12 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
     private class ItemViewHolder extends RecyclerView.ViewHolder {
 
         private TextView label;
+        private ImageView icon;
 
         public ItemViewHolder(View v) {
             super(v);
             label = (TextView) v.findViewById(R.id.label);
+            icon = (ImageView) v.findViewById(R.id.navigation_icon);
         }
     }
 

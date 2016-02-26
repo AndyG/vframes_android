@@ -7,8 +7,9 @@
     android:clickable="true">
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/navigation_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:paddingLeft="16dp"
         android:src="@drawable/ic_action_refresh"/>
 
