@@ -35,6 +35,7 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
     ProgressBar progressBar;
     RecyclerView streamsRecyclerView;
     View failedToLoadContent;
+    View noStreamsLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
         streamsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         failedToLoadContent = findViewById(R.id.failed_to_load_layout);
+        noStreamsLayout = findViewById(R.id.no_streams_layout);
 
         setupToolbar();
         loadStreams();
@@ -83,20 +85,28 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
     }
 
     public void loadStreams() {
-        streamsRecyclerView.setAdapter(null);
         showProgressBar();
-        TwitchRESTApi twitchRESTApi = createTwitchApi();
 
+        streamsRecyclerView.setAdapter(null);
+
+        TwitchRESTApi twitchRESTApi = createTwitchApi();
         Call<JsonObject> call = twitchRESTApi.searchForGame(STREET_FIGHTER_SEARCH_STRING);
+
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                hideProgressBar();
                 if (response.isSuccess()) {
                     TwitchJsonParser twitchJsonParser = new TwitchJsonParser();
                     List<TwitchStream> twitchStreams = twitchJsonParser.parse(response.body());
-                    streamsRecyclerView.setAdapter(
-                            new StreamsRecyclerViewAdapter(twitchStreams, CurrentStreamsActivity.this, CurrentStreamsActivity.this));
+                    if (!twitchStreams.isEmpty()) {
+                        streamsRecyclerView.setAdapter(
+                                new StreamsRecyclerViewAdapter(twitchStreams,
+                                        CurrentStreamsActivity.this,
+                                        CurrentStreamsActivity.this));
+                        showRecyclerView();
+                    } else {
+                        showNoStreamsView();
+                    }
                 } else {
                     showFailureUI();
                 }
@@ -109,15 +119,36 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
         });
     }
 
+    private void showNoStreamsView() {
+        failedToLoadContent.setVisibility(View.INVISIBLE);
+        streamsRecyclerView.setVisibility(View.INVISIBLE);
+        progressBar.setVisibility(View.INVISIBLE);
+
+        noStreamsLayout.setVisibility(View.VISIBLE);
+    }
+
     private void showFailureUI() {
-        streamsRecyclerView.setVisibility(View.GONE);
-        progressBar.setVisibility(View.GONE);
+        streamsRecyclerView.setVisibility(View.INVISIBLE);
+        progressBar.setVisibility(View.INVISIBLE);
+        noStreamsLayout.setVisibility(View.INVISIBLE);
+
         failedToLoadContent.setVisibility(View.VISIBLE);
     }
 
     private void showProgressBar() {
-        streamsRecyclerView.setVisibility(View.GONE);
+        streamsRecyclerView.setVisibility(View.INVISIBLE);
+        noStreamsLayout.setVisibility(View.INVISIBLE);
+        failedToLoadContent.setVisibility(View.INVISIBLE);
+
         progressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void showRecyclerView() {
+        progressBar.setVisibility(View.INVISIBLE);
+        noStreamsLayout.setVisibility(View.INVISIBLE);
+        failedToLoadContent.setVisibility(View.INVISIBLE);
+
+        streamsRecyclerView.setVisibility(View.VISIBLE);
     }
 
     private TwitchRESTApi createTwitchApi() {
@@ -127,11 +158,6 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
                 .build();
 
         return retrofit.create(TwitchRESTApi.class);
-    }
-
-    private void hideProgressBar() {
-        streamsRecyclerView.setVisibility(View.VISIBLE);
-        progressBar.setVisibility(View.GONE);
     }
 
     @Override

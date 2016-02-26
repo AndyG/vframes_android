@@ -357,5 +357,6 @@
 
     <!-- Live Streams-->
     <string name="viewers_format">%1$s viewers</string>
+    <string name="no_current_streams">There is no one currently streaming Street Fighter V.</string>
 
 </resources>
