@@ -9,16 +9,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,7 +22,6 @@ import android.view.WindowManager;
 
 import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
-import com.angarron.vframes.adapter.NavigationRecyclerViewAdapter;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.data.IDataSource;
 import com.angarron.vframes.data.NetworkFallbackDataSource;
@@ -40,7 +33,7 @@ import data.model.CharacterID;
 import data.model.IDataModel;
 
 
-public class CharacterSelectActivity extends AppCompatActivity {
+public class CharacterSelectActivity extends NavigationHostActivity {
 
     private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
@@ -51,9 +44,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
     private static final String WAS_UPDATED_KEY = "Was Updated";
     private static final String LOAD_SUCCESS_KEY = "Load Successful";
     private static final String LOAD_FAILURE_REASON_KEY = "Failure Reason";
-
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle drawerToggle;
 
     private ProgressDialog progressDialog;
 
@@ -67,7 +57,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
         }
 
         verifyDataAvailable();
-        setupNavigationDrawer();
         setupToolbar();
         setupClickListeners();
     }
@@ -103,8 +92,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
                 loadNetworkData();
                 return true;
             default:
-                Log.d("findme", "clicked navigation");
-                return drawerToggle.onOptionsItemSelected(item);
+                return super.onOptionsItemSelected(item);
         }
     }
 
@@ -165,32 +153,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Select A Character");
         }
-    }
-
-    private void setupNavigationDrawer() {
-        RecyclerView drawerRecycler = (RecyclerView) findViewById(R.id.drawer_recyclerview);
-        drawerRecycler.setLayoutManager(new LinearLayoutManager(this));
-        drawerRecycler.setAdapter(new NavigationRecyclerViewAdapter());
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer){
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                // code here will execute once the drawer is opened( As I dont want anything happened whe drawer is
-                // open I am not going to put anything here)
-            }
-
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                // Code here will execute once drawer is closed
-            }
-        };
-
-        drawerLayout.setDrawerListener(drawerToggle);
-        drawerToggle.syncState();
     }
 
     private class CharacterCardClickListener implements View.OnClickListener {
