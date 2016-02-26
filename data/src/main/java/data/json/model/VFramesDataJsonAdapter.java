@@ -12,16 +12,7 @@ public class VFramesDataJsonAdapter {
         JsonObject charactersJson = jsonObject.getAsJsonObject("characters");
         ICharactersModel charactersModel = CharactersModelJsonAdapter.jsonToCharactersModel(charactersJson);
 
-        return new DataModel(charactersModel);
-    }
-
-    public static JsonObject dataModelToJson(IDataModel dataModel) {
-
-        JsonObject charactersJson = CharactersModelJsonAdapter.CharactersModelToJson(dataModel.getCharactersModel());
-
-        JsonObject dataJson = new JsonObject();
-        dataJson.add("characters", charactersJson);
-
-        return dataJson;
+        Integer version = jsonObject.get("version").getAsInt();
+        return new DataModel(version, charactersModel);
     }
 }

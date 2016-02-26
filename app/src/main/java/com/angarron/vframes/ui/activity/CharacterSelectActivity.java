@@ -16,8 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Surface;
@@ -28,9 +28,14 @@ import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.NavigationRecyclerViewAdapter;
 import com.angarron.vframes.application.VFramesApplication;
+import com.angarron.vframes.data.IDataSource;
+import com.angarron.vframes.data.NetworkFallbackDataSource;
 import com.angarron.vframes.util.FeedbackUtil;
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.CustomEvent;
 
 import data.model.CharacterID;
+import data.model.IDataModel;
 
 
 public class CharacterSelectActivity extends AppCompatActivity {
@@ -41,6 +46,12 @@ public class CharacterSelectActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
+
+    //Fabric Answers Events
+    private static final String LOAD_NETWORK_DATA_EVENT = "Load Custom Data";
+    private static final String WAS_UPDATED_KEY = "Was Updated";
+    private static final String LOAD_SUCCESS_KEY = "Load Successful";
+    private static final String LOAD_FAILURE_REASON_KEY = "Failure Reason";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +66,20 @@ public class CharacterSelectActivity extends AppCompatActivity {
         setupNavigationDrawer();
         setupToolbar();
         setupClickListeners();
+    }
+
+    private void showDataUpdatedDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.data_updated_message)
+                .setTitle(R.string.data_updated_title);
+
+        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //no-op
+            }
+        });
+
+        builder.create().show();
     }
 
     @Override
@@ -242,6 +267,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
             return false;
         }
 
+        //We don't animate the transition on landscape since there is no target image in landscape.
         Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         int rotation = display.getRotation();
         if (rotation != Surface.ROTATION_0 && rotation != Surface.ROTATION_180) {
@@ -300,4 +326,111 @@ public class CharacterSelectActivity extends AppCompatActivity {
         }
     }
 
+    private void showUnsupportedVersionDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.unsupported_client_version_message)
+                .setTitle(R.string.unsupported_client_version_title);
+
+        builder.setPositiveButton(R.string.visit_play_store, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+            }
+        });
+
+        builder.setNegativeButton(R.string.no_thanks, null);
+
+        AlertDialog dialog = builder.create();
+
+        //Users often immediately touch the screen when they enter the CharacterSelectActivity,
+        //which would result in accidentally dismissing the dialog without reading it.
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+    }
+
+    private void loadNetworkData() {
+        final CustomEvent loadNetworkDataEvent = new CustomEvent(LOAD_NETWORK_DATA_EVENT);
+
+        IDataSource dataSource = new NetworkFallbackDataSource(BuildConfig.VERSION_CODE, this);
+        dataSource.fetchData(new IDataSource.Listener() {
+            @Override
+            public void onDataReceived(IDataModel data, boolean wasUpdated) {
+                //Store the data in the application model for future reference.
+                VFramesApplication application = (VFramesApplication) getApplication();
+                application.setDataModel(data);
+
+                if (wasUpdated) {
+                    showDataUpdatedDialog();
+                } else {
+                    showAlreadyUpToDateDialog();
+                }
+
+                loadNetworkDataEvent.putCustomAttribute(LOAD_SUCCESS_KEY, String.valueOf(true));
+                loadNetworkDataEvent.putCustomAttribute(WAS_UPDATED_KEY, String.valueOf(wasUpdated));
+
+                if (!BuildConfig.DEBUG) {
+                    Answers.getInstance().logCustom(loadNetworkDataEvent);
+                }
+            }
+
+            @Override
+            public void onDataFetchFailed(IDataSource.FetchFailureReason failureReason) {
+                if (!BuildConfig.DEBUG) {
+                    loadNetworkDataEvent.putCustomAttribute(LOAD_SUCCESS_KEY, String.valueOf(false));
+                    loadNetworkDataEvent.putCustomAttribute(LOAD_FAILURE_REASON_KEY, failureReason.name());
+                    Answers.getInstance().logCustom(loadNetworkDataEvent);
+                }
+
+                switch (failureReason) {
+                    case UNSUPPORTED_CLIENT_VERSION:
+                        showUnsupportedVersionDialog();
+                        break;
+                    case NETWORK_ERROR:
+                        showNetworkErrorDialog();
+                        break;
+                    case UNKNOWN_ERROR:
+                    case READ_FROM_FILE_FAILED:
+                    default:
+                        throw new RuntimeException("error loading data from network: " + failureReason.name());
+                }
+            }
+        });
+    }
+
+    private void showNetworkErrorDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.network_error_message)
+                .setTitle(R.string.network_error_title);
+
+        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //no-op
+            }
+        });
+
+        builder.create().show();
+    }
+
+    private void showAlreadyUpToDateDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.already_up_to_date_message)
+                .setTitle(R.string.already_up_to_date_title);
+
+        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //no-op
+            }
+        });
+
+        builder.create().show();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            loadNetworkData();
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
+    }
 }

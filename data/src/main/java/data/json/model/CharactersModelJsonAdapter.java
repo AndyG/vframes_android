@@ -21,16 +21,4 @@ public class CharactersModelJsonAdapter {
         }
         return new CharactersModel(characterMap);
     }
-
-    public static JsonObject CharactersModelToJson(ICharactersModel charactersModel) {
-        JsonObject jsonObject = new JsonObject();
-
-        for (Map.Entry<CharacterID, SFCharacter> characterEntry : charactersModel.getCharacters().entrySet()) {
-            JsonObject characterJson = SFCharacterJsonAdapter.CharacterToJson(characterEntry.getValue());
-            jsonObject.add(characterEntry.getKey().toString(), characterJson);
-        }
-
-        return jsonObject;
-    }
-
 }
