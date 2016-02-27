@@ -12,8 +12,8 @@ import com.angarron.vframes.ui.fragment.NotesFragment;
 
 public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
 
-    private static final int MOVE_LIST_POSITION = 0;
-    private static final int FRAME_DATA_POSITION = 1;
+    private static final int FRAME_DATA_POSITION = 0;
+    private static final int MOVE_LIST_POSITION = 1;
     private static final int NOTES_POSITION = 2;
 
     private Context context;
