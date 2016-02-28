@@ -23,7 +23,7 @@
     <string name="frame_data_title">Frame Data</string>
     <string name="bnb_page_title">BnB Combos</string>
     <string name="notes_title">Notes</string>
-    <string name="quick_navigate">Quick Navigate:</string>
+    <string name="quick_navigate">Quick Nav:</string>
 
     <string name="frame_data_not_available">Detailed frame data for this character will become available soon. Thank you for your patience.</string>
 
