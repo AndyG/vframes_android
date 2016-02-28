@@ -2073,7 +2073,7 @@
                         }
                     }
                 ]
-            }, 
+            },
             "move_list": {
                 "vreversal": [
                     {
@@ -7631,7 +7631,10 @@
                     {
                         "type": "type_0", 
                         "nameID": "Psycho Power", 
-                        "data": {}
+                        "data": {
+                            "recoveryFrames": 10, 
+                            "startupFrames": 1
+                        }
                     }
                 ], 
                 "critical_arts": [

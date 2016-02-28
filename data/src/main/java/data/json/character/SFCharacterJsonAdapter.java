@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,34 +14,34 @@ import data.json.move.FrameDataEntryJsonAdapter;
 import data.json.move.MoveListEntryJsonAdapter;
 import data.model.character.FrameData;
 import data.model.character.SFCharacter;
+import data.model.character.bnb.BreadAndButterCombo;
+import data.model.character.bnb.BreadAndButterModel;
 import data.model.move.IFrameDataEntryHolder;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class SFCharacterJsonAdapter {
 
-    public static JsonObject CharacterToJson(SFCharacter character) {
-        JsonObject movesObject = new JsonObject();
-
-        for (MoveCategory categoryKey : character.getMoveList().keySet()) {
-            List<IMoveListEntry> category = character.getMoveList().get(categoryKey);
-            JsonArray categoryArray = moveListToJsonArray(category);
-            movesObject.add(categoryKey.toString(), categoryArray);
+    public static SFCharacter JsonToCharacter(JsonObject characterJson) {
+        Map<MoveCategory, List<IMoveListEntry>> moveList = null;
+        if (characterJson.has("move_list")) {
+            JsonObject moveListJson = characterJson.getAsJsonObject("move_list");
+            moveList = jsonToMoveList(moveListJson);
         }
 
-        JsonObject characterJson = new JsonObject();
-        characterJson.add("move_list", movesObject);
-        return characterJson;
-    }
-
-    public static SFCharacter JsonToCharacter(JsonObject characterJson) {
-        JsonObject moveListJson = characterJson.getAsJsonObject("move_list");
+        FrameData frameData = null;
         if (characterJson.has("frame_data")) {
             JsonObject frameDataJson = characterJson.getAsJsonObject("frame_data");
-            return new SFCharacter(jsonToMoveList(moveListJson), jsonToFrameData(frameDataJson));
-        } else {
-            return new SFCharacter(jsonToMoveList(moveListJson), null);
+            frameData = jsonToFrameData(frameDataJson);
         }
+
+        BreadAndButterModel breadAndButterModel = null;
+        if (characterJson.has("bnb_combos")) {
+            JsonArray bnbsJson = characterJson.getAsJsonArray("bnb_combos");
+            breadAndButterModel = jsonToBreadAndButterModel(bnbsJson);
+        }
+
+        return new SFCharacter(moveList, frameData, breadAndButterModel);
     }
 
     private static Map<MoveCategory, List<IMoveListEntry>> jsonToMoveList(JsonObject moveListJson) {
@@ -86,13 +87,39 @@ public class SFCharacterJsonAdapter {
         return new FrameData(frameDataSet);
     }
 
-    private static JsonArray moveListToJsonArray(List<IMoveListEntry> moves) {
-        JsonArray movesJson = new JsonArray();
 
-        for (IMoveListEntry move : moves) {
-            movesJson.add(MoveListEntryJsonAdapter.MoveToJson(move));
+    private static BreadAndButterModel jsonToBreadAndButterModel(JsonArray bnbsJson) {
+        LinkedHashMap<String, List<BreadAndButterCombo>> breadAndButterModel = new LinkedHashMap<>();
+
+        for (JsonElement categoryElement : bnbsJson) {
+
+            JsonObject categoryJson = categoryElement.getAsJsonObject();
+
+            for (Map.Entry<String, JsonElement> entry : categoryJson.getAsJsonObject().entrySet()) {
+
+                String categoryString = entry.getKey();
+                System.out.println(categoryString);
+
+
+                List<BreadAndButterCombo> breadAndButterCombos = new ArrayList<>();
+
+                for (JsonElement comboJson : categoryJson.get(categoryString).getAsJsonArray()) {
+                    breadAndButterCombos.add(parseBreadAndButterCombo(comboJson.getAsJsonObject()));
+                }
+
+                breadAndButterModel.put(categoryString, breadAndButterCombos);
+            }
         }
 
-        return movesJson;
+        return new BreadAndButterModel(breadAndButterModel);
     }
+
+    private static BreadAndButterCombo parseBreadAndButterCombo(JsonObject comboJson) {
+        String label = comboJson.get("label").getAsString();
+        String inputs = comboJson.get("inputs").getAsString();
+        String description = comboJson.get("description").getAsString();
+
+        return new BreadAndButterCombo(label, inputs, description);
+    }
+
 }

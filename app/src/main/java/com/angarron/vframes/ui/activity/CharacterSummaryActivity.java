@@ -25,6 +25,7 @@ import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
+import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.util.FeedbackUtil;
@@ -37,10 +38,14 @@ import data.model.CharacterID;
 import data.model.IDataModel;
 import data.model.character.FrameData;
 import data.model.character.SFCharacter;
+import data.model.character.bnb.BreadAndButterModel;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
-public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost, FrameDataFragment.IFrameDataFragmentHost {
+public class CharacterSummaryActivity extends AppCompatActivity implements
+        MoveListFragment.IMoveListFragmentHost,
+        FrameDataFragment.IFrameDataFragmentHost,
+        BreadAndButterFragment.IBreadAndButterFragmentHost {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
     private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
@@ -136,6 +141,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         outState.putBoolean(ALTERNATE_FRAME_DATA_SELECTED, alternateFrameDataSelected);
     }
 
+    //Move List Fragment Host
     @Override
     public Map<MoveCategory, List<IMoveListEntry>> getMoveList() {
         VFramesApplication application = (VFramesApplication) getApplication();
@@ -144,6 +150,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         return targetCharacterModel.getMoveList();
     }
 
+    //Frame Data Fragment Host
     @Override
     public void registerFrameDataFragment(FrameDataFragment frameDataFragment) {
         this.frameDataFragment = frameDataFragment;
@@ -160,6 +167,20 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
         return targetCharacterModel.getFrameData();
+    }
+
+    //BnB Fragment Host
+    @Override
+    public BreadAndButterModel getBreadAndButterModel() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        return targetCharacterModel.getBreadAndButters();
+    }
+
+    @Override
+    public String getCharacterDisplayName() {
+        return getString(getNameResource());
     }
 
     @Override
