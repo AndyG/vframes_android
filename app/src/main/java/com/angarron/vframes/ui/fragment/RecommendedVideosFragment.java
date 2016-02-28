@@ -1,8 +1,6 @@
 package com.angarron.vframes.ui.fragment;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,18 +16,15 @@ import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.RecommendedVideosRecyclerViewAdapter;
 import com.angarron.vframes.data.videos.RecommendedVideosJsonParser;
 import com.angarron.vframes.data.videos.RecommendedVideosModel;
+import com.angarron.vframes.network.VFramesRESTApi;
 import com.angarron.vframes.network.YoutubeDataApi;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
-import org.apache.commons.io.IOUtils;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
 
 import data.model.CharacterID;
+import retrofit.Call;
+import retrofit.Callback;
 import retrofit.GsonConverterFactory;
+import retrofit.Response;
 import retrofit.Retrofit;
 
 public class RecommendedVideosFragment extends Fragment implements RecommendedVideosRecyclerViewAdapter.IVideoSelectedListener {
@@ -65,27 +60,24 @@ public class RecommendedVideosFragment extends Fragment implements RecommendedVi
     private void loadRecommendedVideos(CharacterID characterId) {
         showProgressBar();
         videosRecyclerView.setAdapter(null);
-        JsonObject videosJson = loadBundledData();
-        processSuccessfulResponse(videosJson);
 
-//
-//        VFramesRESTApi restApi = createRESTApi();
-//        Call<JsonObject> call = restApi.getVideosForCharacter(characterId.toString());
-//        call.enqueue(new Callback<JsonObject>() {
-//            @Override
-//            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-//                if (response.isSuccess()) {
-//                    processSuccessfulResponse(response.body());
-//                } else {
-//                    showFailureUI();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Throwable t) {
-//                showFailureUI();
-//            }
-//        });
+        VFramesRESTApi restApi = createVFramesApi();
+        Call<JsonObject> call = restApi.getVideosForCharacter(characterId.toString());
+        call.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
+                if (response.isSuccess()) {
+                    processSuccessfulResponse(response.body());
+                } else {
+                    showFailureUI();
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                showFailureUI();
+            }
+        });
     }
 
     private void processSuccessfulResponse(JsonObject body) {
@@ -96,6 +88,15 @@ public class RecommendedVideosFragment extends Fragment implements RecommendedVi
         } else {
             showNoVideosView();
         }
+    }
+
+    private VFramesRESTApi createVFramesApi() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://agarron.com/res/vframes/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        return retrofit.create(VFramesRESTApi.class);
     }
 
     private YoutubeDataApi createYoutubeApi() {
@@ -141,24 +142,6 @@ public class RecommendedVideosFragment extends Fragment implements RecommendedVi
         failedToLoadLayout.setVisibility(View.INVISIBLE);
 
         videosRecyclerView.setVisibility(View.VISIBLE);
-    }
-
-    private JsonObject loadBundledData() {
-        Context context = getContext();
-        Resources resources = getActivity().getResources();
-        int identifier = resources.getIdentifier("test_videos", "raw", context.getPackageName());
-        InputStream inputStream = resources.openRawResource(identifier);
-
-        StringWriter writer = new StringWriter();
-        try {
-            IOUtils.copy(inputStream, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String dataString = writer.toString();
-        JsonParser jsonParser = new JsonParser();
-        return jsonParser.parse(dataString).getAsJsonObject();
     }
 
     public interface IRecommendedVideosFragmentHost {
