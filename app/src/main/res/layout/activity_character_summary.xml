@@ -28,15 +28,11 @@
         <include layout="@layout/banner_character_details"
             android:id="@+id/banner_character_details"
             android:layout_margin="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="match_parent" />
 
     </LinearLayout>
-
-    <include
-        layout="@layout/page_control_spinner"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
 
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"

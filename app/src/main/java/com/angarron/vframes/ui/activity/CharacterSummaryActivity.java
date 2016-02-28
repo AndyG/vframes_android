@@ -49,15 +49,10 @@ import data.model.move.MoveCategory;
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
         FrameDataFragment.IFrameDataFragmentHost,
-        BreadAndButterFragment.IBreadAndButterFragmentHost, AdapterView.OnItemSelectedListener {
+        BreadAndButterFragment.IBreadAndButterFragmentHost, AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
     private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
-
-    private static final int FRAME_DATA_INDEX = 0;
-    private static final int MOVES_LIST_INDEX = 1;
-    private static final int COMBOS_INDEX = 2;
-    private static final int NOTES_INDEX = 3;
 
     private CharacterID targetCharacter;
     private boolean alternateFrameDataSelected = false;
@@ -225,6 +220,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         viewPager = (ViewPager) findViewById(R.id.pager);
         PagerAdapter pagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+        viewPager.addOnPageChangeListener(this);
 
         PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_tab_strip);
         pagerTabStrip.setBackgroundColor(getCharacterAccentColor());
@@ -602,9 +598,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         if (viewExists(R.id.banner_character_details)) {
             ((TextView) findViewById(R.id.banner_character_title)).setText(titleStringId);
 
-            String styleText = String.format(getString(R.string.style_format), getString(styleStringId));
-            ((TextView) findViewById(R.id.banner_character_style)).setText(styleText);
-
             String healthText = String.format(getString(R.string.health_format), getString(healthStringId));
             ((TextView) findViewById(R.id.banner_character_health)).setText(healthText);
 
@@ -620,6 +613,21 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+        //no-op
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        //no-op
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        spinner.setSelection(position, true);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
         //no-op
     }
 }

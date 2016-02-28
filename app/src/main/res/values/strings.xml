@@ -23,7 +23,9 @@
     <string name="frame_data_title">Frame Data</string>
     <string name="bnb_page_title">BnB Combos</string>
     <string name="notes_title">Notes</string>
-    <string name="frame_data_not_available">Detailed frame data for this character will become available as Street Fighter V nears release. Thank you for your patience.</string>
+    <string name="quick_navigate">Quick Navigate:</string>
+
+    <string name="frame_data_not_available">Detailed frame data for this character will become available soon. Thank you for your patience.</string>
 
     <!-- Notes Fragment-->
     <string name="notes_coming_soon">Notes (and much more) is on the way to VFrames! Sorry for the wait, and thank you for your patience!</string>
