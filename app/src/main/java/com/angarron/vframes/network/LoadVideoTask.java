@@ -1,9 +1,9 @@
 package com.angarron.vframes.network;
 
-import android.util.Log;
-
+import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.data.videos.YoutubeVideo;
 import com.angarron.vframes.data.videos.YoutubeVideoJsonParser;
+import com.crashlytics.android.Crashlytics;
 import com.google.gson.JsonObject;
 
 import java.io.IOException;
@@ -34,9 +34,13 @@ public class LoadVideoTask {
                     listener.onVideoLoaded(video);
                 } else {
                     try {
-                        Log.d("findme", "onResponse failure: " + response.errorBody().string());
+                        if (!BuildConfig.DEBUG) {
+                            Crashlytics.logException(new Throwable("failure getting video: " + response.errorBody().string()));
+                        }
                     } catch (IOException e) {
-                        Log.d("findme", "onResponse double failure");
+                        if (!BuildConfig.DEBUG) {
+                            Crashlytics.logException(e);
+                        }
                     }
 
                     listener.onFailure();
@@ -45,7 +49,10 @@ public class LoadVideoTask {
 
             @Override
             public void onFailure(Throwable t) {
-                Log.d("findme", "onFailure: " + t.getMessage());
+                if (!BuildConfig.DEBUG) {
+                    Crashlytics.logException(t);
+                }
+
                 listener.onFailure();
             }
         });
