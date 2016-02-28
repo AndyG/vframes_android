@@ -28,10 +28,17 @@ public class LoadVideoTask {
             @Override
             public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
                 if (response.isSuccess()) {
-                    //This is a request that should only return one response so grab the "first" item
-                    JsonObject youtubeJson = response.body().get("items").getAsJsonArray().get(0).getAsJsonObject();
-                    YoutubeVideo video = YoutubeVideoJsonParser.parseYoutubeVideoJson(videoId, youtubeJson);
-                    listener.onVideoLoaded(video);
+                    try {
+                        //This is a request that should only return one response so grab the "first" item
+                        JsonObject youtubeJson = response.body().get("items").getAsJsonArray().get(0).getAsJsonObject();
+                        YoutubeVideo video = YoutubeVideoJsonParser.parseYoutubeVideoJson(videoId, youtubeJson);
+                        listener.onVideoLoaded(video);
+                    } catch (Exception e) {
+                        listener.onFailure();
+                        if (!BuildConfig.DEBUG) {
+                            Crashlytics.logException(e);
+                        }
+                    }
                 } else {
                     try {
                         if (!BuildConfig.DEBUG) {
