@@ -2,6 +2,7 @@ package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -32,6 +33,7 @@ import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
+import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
 
@@ -49,7 +51,9 @@ import data.model.move.MoveCategory;
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
         FrameDataFragment.IFrameDataFragmentHost,
-        BreadAndButterFragment.IBreadAndButterFragmentHost, AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
+        BreadAndButterFragment.IBreadAndButterFragmentHost,
+        RecommendedVideosFragment.IRecommendedVideosFragmentHost,
+        AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
     private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
@@ -199,6 +203,13 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     @Override
     public String getCharacterDisplayName() {
         return getString(getNameResource());
+    }
+
+    @Override
+    public void onVideoSelected(String videoUrl) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(videoUrl));
+        startActivity(i);
     }
 
     @Override
@@ -629,5 +640,10 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     @Override
     public void onPageScrollStateChanged(int state) {
         //no-op
+    }
+
+    @Override
+    public CharacterID getTargetCharacterId() {
+        return targetCharacter;
     }
 }

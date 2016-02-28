@@ -162,8 +162,6 @@ public class NetworkFallbackDataSource implements IDataSource {
         return dataString.getBytes();
     }
 
-
-
     private VFramesRESTApi createRESTApi() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://agarron.com/res/vframes/")
