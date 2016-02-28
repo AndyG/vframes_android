@@ -14,10 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,14 +49,21 @@ import data.model.move.MoveCategory;
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
         FrameDataFragment.IFrameDataFragmentHost,
-        BreadAndButterFragment.IBreadAndButterFragmentHost {
+        BreadAndButterFragment.IBreadAndButterFragmentHost, AdapterView.OnItemSelectedListener {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
     private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
 
+    private static final int FRAME_DATA_INDEX = 0;
+    private static final int MOVES_LIST_INDEX = 1;
+    private static final int COMBOS_INDEX = 2;
+    private static final int NOTES_INDEX = 3;
+
     private CharacterID targetCharacter;
     private boolean alternateFrameDataSelected = false;
 
+    private ViewPager viewPager;
+    private Spinner spinner;
     private MenuItem alternateFrameDataItem;
 
     private FrameDataFragment frameDataFragment;
@@ -86,9 +97,21 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
             setupToolbar();
             setCharacterDetails();
             setupViewPager();
+            setupSpinner();
         } else {
             sendToSplashScreen();
         }
+    }
+
+    private void setupSpinner() {
+        spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.planets_array, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -199,7 +222,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     }
 
     private void setupViewPager() {
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = (ViewPager) findViewById(R.id.pager);
         PagerAdapter pagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
 
@@ -588,5 +611,15 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
             String stunText = String.format(getString(R.string.stun_format), getString(stunStringId));
             ((TextView) findViewById(R.id.banner_character_stun)).setText(stunText);
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        viewPager.setCurrentItem(i, true);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        //no-op
     }
 }

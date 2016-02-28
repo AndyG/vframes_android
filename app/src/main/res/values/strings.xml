@@ -369,4 +369,11 @@
     <string name="references">References</string>
     <string name="community">Community</string>
 
+    <string-array name="planets_array">
+        <item>Frame Data</item>
+        <item>Move List</item>
+        <item>BnB Combos</item>
+        <item>Notes</item>
+    </string-array>
+
 </resources>
