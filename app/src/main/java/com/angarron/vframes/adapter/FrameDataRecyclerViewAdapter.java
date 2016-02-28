@@ -58,7 +58,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         View v;
         switch (viewType) {
             case VIEW_TYPE_HEADER:
-                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_header, parent, false);
+                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_header, parent, false);
                 return new HeaderItemViewHolder(v);
             case VIEW_TYPE_FRAME_DATA_ENTRY:
                 v = LayoutInflater.from(parent.getContext()).inflate(R.layout.frame_data_row_layout, parent, false);
@@ -76,6 +76,11 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
             HeaderItemViewHolder headerItemViewHolder = (HeaderItemViewHolder) holder;
             MoveCategory moveCategory = (MoveCategory) displayList.get(position);
             headerItemViewHolder.setupHeader(getHeaderString(moveCategory));
+            if (position == 0) {
+                headerItemViewHolder.setTopMargin(15);
+            } else {
+                headerItemViewHolder.setTopMargin(50);
+            }
         }
     }
 
@@ -195,6 +200,12 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         private void setupHeader(String headerText) {
             label.setText(headerText);
             rowContainer.setBackgroundColor(Color.TRANSPARENT);
+        }
+
+        private void setTopMargin(int topMarginPx) {
+            RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) rowContainer.getLayoutParams();
+            params.setMargins(0, topMarginPx, 0, 0);
+            rowContainer.setLayoutParams(params);
         }
     }
 
