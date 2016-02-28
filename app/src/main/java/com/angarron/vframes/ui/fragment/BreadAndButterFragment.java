@@ -18,7 +18,6 @@ import data.model.character.bnb.BreadAndButterModel;
 
 public class BreadAndButterFragment extends Fragment {
 
-    private RecyclerView breadAndButtersRecyclerView;
 
     public interface IBreadAndButterFragmentHost {
         BreadAndButterModel getBreadAndButterModel();
@@ -35,7 +34,7 @@ public class BreadAndButterFragment extends Fragment {
         if (breadAndButterModel != null) {
             View view = inflater.inflate(R.layout.fragment_bread_and_butters, container, false);
 
-            breadAndButtersRecyclerView = (RecyclerView) view.findViewById(R.id.bnbs_recycler_view);
+            RecyclerView breadAndButtersRecyclerView = (RecyclerView) view.findViewById(R.id.bnbs_recycler_view);
             breadAndButtersRecyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
             breadAndButtersRecyclerView.setAdapter(new BreadAndButtersRecyclerViewAdapter(breadAndButterModel));
 
