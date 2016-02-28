@@ -15,7 +15,6 @@
             android:layout_weight="2"
             android:layout_height="match_parent"
             android:textSize="15sp"
-            android:textAllCaps="true"
             android:padding="3dp"
             android:gravity="center"/>
 
