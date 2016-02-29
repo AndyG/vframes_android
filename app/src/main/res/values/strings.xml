@@ -186,8 +186,8 @@
     <string name="nash_sonic_scythe_description">EX version has upper-body invincibility.</string>
     <string name="nash_tragedy_assault_description">LP version steals 50 meter.\nMP version steals 100 meter.\nHP version steals 150 meter.\nEX version steals 30 health.</string>
     <string name="nash_sonic_move_hide_description">Teleports behind opponent.</string>
-    <string name="nash_sonic_move_blitz_air_description">Teleports above and behind opponent.</string>
-    <string name="nash_sonic_move_steel_air_description">Teleports in front of opponent.</string>
+    <string name="nash_sonic_move_blitz_air_description">Teleports above and in front of opponent.</string>
+    <string name="nash_sonic_move_steel_air_description">Teleports above and behind of opponent.</string>
     <string name="nash_critical_art_description">Projectile invincible.</string>
     <string name="nash_vskill_description">A chop attack which can absorb a projectile, building V-Meter.</string>
 
