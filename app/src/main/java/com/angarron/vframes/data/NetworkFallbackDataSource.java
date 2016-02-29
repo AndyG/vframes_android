@@ -80,6 +80,11 @@ public class NetworkFallbackDataSource implements IDataSource {
         });
     }
 
+    @Override
+    public void clearLocalData() {
+        initializeLocalFile();
+    }
+
     private void processSuccessfulResponse(JsonObject body, IDataModel backupDataModel, Listener listener) {
         if (body.has("error")) {
             listener.onDataFetchFailed(FetchFailureReason.UNSUPPORTED_CLIENT_VERSION);

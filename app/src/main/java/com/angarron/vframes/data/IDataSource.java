@@ -8,10 +8,11 @@ public interface IDataSource {
         READ_FROM_FILE_FAILED,
         UNSUPPORTED_CLIENT_VERSION,
         NETWORK_ERROR,
-        UNKNOWN_ERROR
+        UNKNOWN_ERROR;
     }
 
     void fetchData(Listener listener);
+    void clearLocalData();
 
     interface Listener {
         void onDataReceived(IDataModel data, boolean wasUpdated);

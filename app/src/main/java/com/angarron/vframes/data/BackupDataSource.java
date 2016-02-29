@@ -37,6 +37,11 @@ public class BackupDataSource implements IDataSource {
         new GetDataTask().execute(listener);
     }
 
+    @Override
+    public void clearLocalData() {
+        initializeLocalFile();
+    }
+
     private class GetDataTask extends AsyncTask<Object, Void, Void> {
 
         @Override
