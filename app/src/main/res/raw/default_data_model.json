@@ -704,6 +704,55 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "s.MK > HK xx HP Shoryuken", 
+                            "description": "Basic poke/whiff punish combo.", 
+                            "label": "Basic Confirm Punish"
+                        }, 
+                        {
+                            "inputs": "c.LK > c.LP xx HP Shoryuken", 
+                            "description": "Basic confirm, useful after an empty jump.", 
+                            "label": "Light Confirm"
+                        }, 
+                        {
+                            "inputs": "c.MP, b+MP > HP xx Special", 
+                            "description": "Cancel into HK tatsu for corner carry. Cancel into EX Hadoken on block to maintain advantage.", 
+                            "label": "Standard Hit Confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "... xx LK Tatsu, HP Shoryuken xx Critical Art", 
+                            "description": "LK Tatsu can be followed up with Critical Art.", 
+                            "label": "Combo ender into super"
+                        }, 
+                        {
+                            "inputs": "CH c.MP, c.HK", 
+                            "description": "Basic counterhit confirm.", 
+                            "label": "Counterhit Confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "CC s.HP xx V-Skill, b+MP > HP xx HK Tatsu", 
+                            "description": "Basic punish combo for corner carry.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "s.HP CC xx V-Skill, b+MP xx HP Hadoken xx V-Trigger, s.HP xx V-Skill, LK Tatsu, HP Shoryuken", 
+                            "description": "Maximize your damage with this extended punish combo.", 
+                            "label": "Extended Punish"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -1341,6 +1390,82 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "s.MP xx MP Peach Bomber", 
+                            "description": "Footsies range poke combo.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "s.MP, s.HP xx HP Peach Bomber", 
+                            "description": "Confirmable link into good meterless damage.", 
+                            "label": "Simple link"
+                        }, 
+                        {
+                            "inputs": "c.LK, c.LP xx LP Peach Bomber", 
+                            "description": "Low-hitting move into peach bomber.", 
+                            "label": "Light confirm"
+                        }, 
+                        {
+                            "inputs": "s.MP, Passion Rope Throw, back dash, HP Peach Bomber", 
+                            "description": "Back dash after f+MP or b+MP to wall bounce the opponent.", 
+                            "label": "Basic Passion Press"
+                        }
+                    ], 
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "s.MP, Passion Rope Throw, back dash, s.HK (charged), EX Peach Bomber", 
+                            "description": "Can also end with EX Wingless Airplane instead of bomber.", 
+                            "label": "EX Bomber juggle"
+                        }, 
+                        {
+                            "inputs": "s.MP, Passion Rope Throw, f+HP, HK Wingless Airplane", 
+                            "description": "Good meterless corner damage. Leaves Mika in the corner.", 
+                            "label": "Wingless Airplane combo (corner only)"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "f+HP, HP Peach Bomber", 
+                            "description": "Can also end with HK Wingless Airplane to switch sides.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "s.HK, MP Peach Bomber", 
+                            "description": "Can also end with HK Wingless Airplane to switch sides.", 
+                            "label": "DP Punish #2"
+                        }, 
+                        {
+                            "inputs": "s.HK (charged), dash, s.MP, s.HP xx HP Peach Bomber", 
+                            "description": "A fully-charged s.HK gives you time to dash for a more damaging combo.", 
+                            "label": "Fully-charged HK"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "s.MP, s.HP xx V-Trigger, s.HP xx HP Peach Bomber", 
+                            "description": "Uses 1 meter.", 
+                            "label": "Midscreen #1"
+                        }, 
+                        {
+                            "inputs": "s.MP, Passion Rope Throw, V-Trigger (forward), s.HK (charged), EX Wingless Airplane", 
+                            "description": "Uses 1 meter.", 
+                            "label": "Midscreen #2"
+                        }, 
+                        {
+                            "inputs": "s.MP, s.HP xx V-Trigger, s.HP, s.HP xx EX Peach Bomber", 
+                            "description": "Uses 1 meter.", 
+                            "label": "Corner #1"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -2073,7 +2198,61 @@
                         }
                     }
                 ]
-            },
+            }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "s.MP xx MP Bull Head", 
+                            "description": "Basic combo from a poke during footsies.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "c.HP xx HK Hanging Chain", 
+                            "description": "Damaging punish combo.", 
+                            "label": "Punish combo"
+                        }, 
+                        {
+                            "inputs": "c.LP, s.LP xx LP Bull Head", 
+                            "description": "Basic combo off of a crouching jab.", 
+                            "label": "Light confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HK, c.HP xx HK Hanging Chain", 
+                            "description": "Damaging combo that can be used as a DP punish.", 
+                            "label": "DP punish"
+                        }, 
+                        {
+                            "inputs": "s.HK, dash, HP Killing Head", 
+                            "description": "Guaranteed command grab off of a crush counter.", 
+                            "label": "Command grab confirm"
+                        }, 
+                        {
+                            "inputs": "s.HK, s.MP xx MP Bull head", 
+                            "description": "Simple combo for easy crush counter damage. Can end with critical art.", 
+                            "label": "Simple damage"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "s.MP xx EX Bull Head xx V-Trigger, c.HP xx LP Bull Head", 
+                            "description": "Uses 1 meter.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "Bull Horn xx V-Trigger, LP Bull Head xx Critical Art", 
+                            "description": "Big damage off of bull horn.", 
+                            "label": "Bull Horn into V-Trigger"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -2703,6 +2882,67 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MP xx LP Sotoja", 
+                            "description": "Footsies poke into special.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "s.HP xx HP Sotoja", 
+                            "description": "Decent damage from 1 fierce.", 
+                            "label": "Simple Punish"
+                        }, 
+                        {
+                            "inputs": "c.HP xx LK Ryobenda", 
+                            "description": "Combo from anti-air at close ranges.", 
+                            "label": "Anti-air combo"
+                        }, 
+                        {
+                            "inputs": "s.HK, c.MP xx LP Sotoja", 
+                            "description": "Confirmable link into decent damage.", 
+                            "label": "Simple link"
+                        }
+                    ], 
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "s.HP xx EX Ryobenda, EX Sotoja", 
+                            "description": "Juggle off of poison cloud in the corner.", 
+                            "label": "2 meters (corner only)"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HP, s.HP xx MP Sotoja", 
+                            "description": "Can cancel into super. Works midscreen.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "s.HP, Critical Art", 
+                            "description": "Easy combo into super.", 
+                            "label": "Simple Super"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "s.HP xx V-Trigger, s.HK, c.MP xx LP Sotoja", 
+                            "description": "Good meterless damage. Can cancel into super.", 
+                            "label": "Double Knees"
+                        }, 
+                        {
+                            "inputs": "s.HP xx V-Trigger, s.HP xx EX Ryobenda, EX Sotoja", 
+                            "description": "Damaging corner-only juggle.", 
+                            "label": "Double Fierce (corner only)"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -3405,6 +3645,27 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "s.MP, c.MK xx Eagle Spike/Spinning Mixer", 
+                            "description": "Basic hitconfirm into easy damage.", 
+                            "label": "Basic Confirm"
+                        }, 
+                        {
+                            "inputs": "c.HP, s.MP xx Eagle Spike/Spinning Mixer", 
+                            "description": "Another basic hitconfirm into easy damage.", 
+                            "label": "Basic Confirm #2"
+                        }, 
+                        {
+                            "inputs": "EX Eagle Spike, HP Spinning Mixer", 
+                            "description": "Tack on additional damage after an EX Eagle Spike.", 
+                            "label": "EX Eagle Spike Followup"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -4448,6 +4709,72 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "b+HP xx HK Lightning Legs", 
+                            "description": "Simple fierce into special.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "c.LP, s.MP, c.MK xx HK Lightning Legs", 
+                            "description": "Confirmable link into good damage.", 
+                            "label": "Simple links"
+                        }, 
+                        {
+                            "inputs": "c.LK, c.LP, s.LP xx HK Lightning Legs", 
+                            "description": "Low-hitting move into legs.", 
+                            "label": "Low confirm"
+                        }
+                    ], 
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "c.LP, s.MP, c.MK xx MK Spinning Bird Kick", 
+                            "description": "Difficult charge input combo.", 
+                            "label": "Charge SBK"
+                        }, 
+                        {
+                            "inputs": "V-Skill, ()d+MK)x3 xx EX Lightning Legs", 
+                            "description": "Juggle combo off of V-Skill.", 
+                            "label": "Stomp juggles"
+                        }, 
+                        {
+                            "inputs": "cr.HP xx LK Lightning Legs, c.LP xx LK Spinning Bird Kick", 
+                            "description": "1 hit on the cr.HP. Link c.LP after the last hit of Legs.", 
+                            "label": "Double special"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "b+HP, c.HK", 
+                            "description": "Sweep on reaction off of a CC b+HP.", 
+                            "label": "Reaction sweep"
+                        }, 
+                        {
+                            "inputs": "s.HK, dash, s.MP, c.MK xx HK Lightning Legs", 
+                            "description": "Good damage with a dash in between.", 
+                            "label": "Dash confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "f+HK, c.LP, s.MP, c.MK xx HK Lightning Legs", 
+                            "description": "The multi-hitting moves allow this combo to work.", 
+                            "label": "f+HK followup"
+                        }, 
+                        {
+                            "inputs": "df+MK, c.LP, c.MK xx MK Spinning Bird Kick", 
+                            "description": "Confirm overhead into damage.", 
+                            "label": "Overhead followup"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -5248,6 +5575,67 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MK xx HK Spiral Arrow", 
+                            "description": "Footsies range poke combo.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "s.MP, c.MP xx HK Spiral Arrow", 
+                            "description": "Confirmable link into good damage.", 
+                            "label": "Simple link"
+                        }, 
+                        {
+                            "inputs": "f+HK, c.MP xx HK Spiral Arrow", 
+                            "description": "Confirmable link into good damage.", 
+                            "label": "Simple link"
+                        }, 
+                        {
+                            "inputs": "c.LK, c.LP xx HK Spiral Arrow", 
+                            "description": "Low-hitting move into spiral arrow.", 
+                            "label": "Low confirm"
+                        }, 
+                        {
+                            "inputs": "s.MP, s.HP xx HK Cannon Spike", 
+                            "description": "Damaging combo into DP.", 
+                            "label": "Cannon Spike Knockdown"
+                        }
+                    ], 
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "b+MP -> HK xx EX Hooligan Combination -> Cannon Strike, HK Cannon Spike", 
+                            "description": "Footsies range poke combo.", 
+                            "label": "1-meter combo"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HK, (walk forward) s.MP, s.HP xx HK Cannon Spike", 
+                            "description": "Meterless damaging combo. Can end with Critical Art.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "s.HK, f+HK, c.MP xx HK Cannon Spike", 
+                            "description": "Guaranteed command grab off of a crush counter. Can end with Critical Art.", 
+                            "label": "The knees"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "s.MP, s.HP xx V-Trigger, s.HP xx Spiral Arrow, Cannon Spike", 
+                            "description": "Uses 1 meter.", 
+                            "label": "Basic poke"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -6260,6 +6648,60 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MK xx Stomp", 
+                            "description": "LK stomp combos but is unsafe, MK stomp does not combo but is safe and may counterhit opponent.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "c.HP xx MK Stomp, c.MP xx LP Disc's Guidance", 
+                            "description": "Basic punish combo.", 
+                            "label": "Standard Punish"
+                        }, 
+                        {
+                            "inputs": "c.LK > c.LP xx EX Stomp", 
+                            "description": "Basic confirm, useful after an empty jump.", 
+                            "label": "Light Confirm"
+                        }, 
+                        {
+                            "inputs": "EX Mask of Tlalli, HP Raging Light", 
+                            "description": "Tack on easy damage after an EX command grab.", 
+                            "label": "EX Command Grab Ender"
+                        }
+                    ]
+                }, 
+                {
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "CH s.MK, c.MP xx LP Disc's Guidance", 
+                            "description": "Basic counterhit confirm.", 
+                            "label": "Counterhit Confirm"
+                        }, 
+                        {
+                            "inputs": "s.HP xx HP Disc's Guidance", 
+                            "description": "Basic whiff punish during V-Trigger since no charge is required.", 
+                            "label": "Whiff Punish Combo"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HK, s.HK xx V-Trigger, c.HP xx MK Stomp, c.MP xx MP Disc's Guidance", 
+                            "description": "Massive damage, but you may have to walk forward between moves to adjust your spacing.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "CC df+HP, LP Disc's Guidance", 
+                            "description": "Fish for damage and V-Trigger bar with df+HP, end with lunge punch.", 
+                            "label": "CC Overhead"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -6898,6 +7340,74 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MK xx LP Bolt Charge", 
+                            "description": "Safe poke for footsies range.", 
+                            "label": "Basic Poke"
+                        }, 
+                        {
+                            "inputs": "c.MP xx MP Bolt Charge", 
+                            "description": "Basic punish combo that allows for a side switch.", 
+                            "label": "Standard Punish"
+                        }, 
+                        {
+                            "inputs": "s.LK, s.LP xx LP Bolt Charge", 
+                            "description": "Basic, safe confirm that leaves Laura at advantage on hit.", 
+                            "label": "Light Confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "c.HP xx MP Bolt Charge", 
+                            "description": "It is possible to cancel into Bolt Charge on reaction to a hit.", 
+                            "label": "Self-confirm Poke"
+                        }, 
+                        {
+                            "inputs": "s.MP, c.MP xx MP Bolt Charge", 
+                            "description": "s.MP only combos to c.MP when meaty or counterhit.", 
+                            "label": "Meaty/CH Pressure"
+                        }, 
+                        {
+                            "inputs": "CH s.MK, s.LK xx LP/EX Bolt Charge", 
+                            "description": "Basic counterhit confirm.", 
+                            "label": "Counterhit Confirm"
+                        }, 
+                        {
+                            "inputs": "s.MP > s.MK xx V-Trigger, s.HP...", 
+                            "description": "Combo into V-Trigger that can be continued for more damage.", 
+                            "label": "V-Trigger Confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HP xx MP Thunder Clap, s.HP xx EX Thunder Clap, s.HP xx V-Skill Forward", 
+                            "description": "Damaging combo into a reset situation. May have to replace MP thunder clap with HP on some characters.", 
+                            "label": "DP Punish into reset"
+                        }, 
+                        {
+                            "inputs": "CC s.HK, MP Bolt Charge", 
+                            "description": "Basic Crush Counter combo for footsies range.", 
+                            "label": "CC Poke Combo"
+                        }
+                    ]
+                }, 
+                {
+                    "Stun Combos": [
+                        {
+                            "inputs": "Fully Charged HP Thunder Clap, f+HP xx HP xx HP Bolt Charge", 
+                            "description": "Raw damage!", 
+                            "label": "Basic Stun Combo"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -7654,6 +8164,46 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "s.MP, c.MP xx MP Psycho Inferno", 
+                            "description": "Confirm into Psycho Blast or grab if blocked.", 
+                            "label": "Basic Hit Confirm"
+                        }, 
+                        {
+                            "inputs": "c.LK > c.LP > s.LK xx LK Knee Press", 
+                            "description": "Basic confirm, useful after an empty jump.", 
+                            "label": "Light Confirm"
+                        }, 
+                        {
+                            "inputs": "df+HP, c.MP xx Psycho Inferno", 
+                            "description": "Basic confirm after a safe poke.", 
+                            "label": "Psycho Axe Confirm"
+                        }, 
+                        {
+                            "inputs": "j.MP > j.MP Target Combo, MK Knee Press", 
+                            "description": "Basic air-to-air.", 
+                            "label": "Air-to-air confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "CC s.HK, df+HP, c.MP xx Psycho Inferno", 
+                            "description": "Simple damage for a DP punish.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "CC df+HP, s.HP xx HK Knee Press", 
+                            "description": "Can cancel into V-Trigger to get more damage.", 
+                            "label": "CC Psycho Axe"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -8396,6 +8946,87 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MK xx HK Mujinkyaku", 
+                            "description": "Simple footsies poke into special.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "c.MP, s.MP xx Tenko, LK Mujinkyaku", 
+                            "description": "Basic link and juggle.", 
+                            "label": "Link Juggle"
+                        }, 
+                        {
+                            "inputs": "c.LP, c.LP xx EX Mujinkyaku", 
+                            "description": "Quick confirm for 1 bar.", 
+                            "label": "Light confirm"
+                        }, 
+                        {
+                            "inputs": "EX Tenko, V-Skill", 
+                            "description": "EX Tenko passes through fireballs. V-Skill gives good corner carry.", 
+                            "label": "Fireball counter"
+                        }, 
+                        {
+                            "inputs": "s.HP xx MP Ressenha, Senha Kusabi (d+kick)", 
+                            "description": "Add EX Ressenha in the corner for 1 bar and extra damage.", 
+                            "label": "Ressenha combo"
+                        }
+                    ], 
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "c.MP, c.MK xx Tenko, LK Mujinkyaku, EX Tenko", 
+                            "description": "Extra Tenko to spend 1 bar for more damage and stun.", 
+                            "label": "Ranged juggle"
+                        }, 
+                        {
+                            "inputs": "c.MP, s.MP xx Tenko, Tenko, EX Ressenha", 
+                            "description": "Add EX Ressenha in the corner for 1 bar and extra damage.", 
+                            "label": "EX DP juggle (corner only)"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HK, (walk forward) s.HP xx Tenko, LK Mujinkyaku", 
+                            "description": "Can link into super after Mujinkyaku recovers.", 
+                            "label": "DP Punish"
+                        }, 
+                        {
+                            "inputs": "s.HK, (walk forward) s.HP xx EX Orochi, HK Mujinkyaku", 
+                            "description": "1 bar for decent damage and corner carry.", 
+                            "label": "EX Orochi (1 bar)"
+                        }, 
+                        {
+                            "inputs": "s.HK, (walk forward) s.HP xx V-Trigger, s.HP xx Tenko, Guren Kusabi", 
+                            "description": "Damaging V-Trigger activation combo with rekkas.", 
+                            "label": "Triple Heavy into Rekkas"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "c.MK xx Guren Hosho", 
+                            "description": "Simple poke into rekkas.", 
+                            "label": "Basic poke (during V-Trigger)"
+                        }, 
+                        {
+                            "inputs": "c.MP, c.MK xx Tenko, Guren Kusabi", 
+                            "description": "Link into rekka juggle. Can end with super.", 
+                            "label": "Tenko juggle"
+                        }, 
+                        {
+                            "inputs": "c.MP, c.MK xx Tenko, Guren Hochu", 
+                            "description": "End with d+punch followups to switch sides. Can end with super.", 
+                            "label": "Tenko juggle (side switch)"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -9090,6 +9721,22 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.HP, b+MK xx MP Yoga Flame", 
+                            "description": "Simple combo into a safe ending.", 
+                            "label": "Basic Hit Confirm"
+                        }, 
+                        {
+                            "inputs": "s.LP > s.LP xx EX Yoga Flame", 
+                            "description": "Basic confirm that can be used after a Yoga Drill.", 
+                            "label": "Light Confirm"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -9832,6 +10479,72 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.LP, c.LP xx LK Crimson Terror", 
+                            "description": "Jab confirm into special. Works with both claw on and off.", 
+                            "label": "Basic poke"
+                        }, 
+                        {
+                            "inputs": "c.MK, c.LP xx LK Crimson Terror", 
+                            "description": "Confirmable link into decent damage.", 
+                            "label": "Simple link (claw on)"
+                        }, 
+                        {
+                            "inputs": "c.LK, c.LP xx LK Crimson Terror", 
+                            "description": "Low-hitting move into special.", 
+                            "label": "Low confirm"
+                        }
+                    ], 
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "s.HP xx Switch Claw, c.MP xx MK Crimson Terror", 
+                            "description": "Difficult charge input combo.", 
+                            "label": "Claw switch (claw on))"
+                        }, 
+                        {
+                            "inputs": "s.HP xx Switch Claw, c.LP xx LK Crimson Terror", 
+                            "description": "Juggle combo off of V-Skill.", 
+                            "label": "Claw switch (claw off)"
+                        }, 
+                        {
+                            "inputs": "c.MK, s.MP xx EX Flying Barcelona Attack, Izuna Drop (LP+LK)", 
+                            "description": "1 hit on the cr.HP. Link c.LP after the last hit of Legs.", 
+                            "label": "Wall Dive (claw off)"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HK, s.MP s.HK xx EX Flying Barcelona Attack, Izuna Drop (LP+LK)", 
+                            "description": "Good damage with 1 bar.", 
+                            "label": "Target combo wall dive (claw off)"
+                        }, 
+                        {
+                            "inputs": "s.HK, s.HP xx HK Crimson Terror", 
+                            "description": "Good damage for no meter.", 
+                            "label": "Meterless damage"
+                        }
+                    ]
+                }, 
+                {
+                    "V-Trigger Combos": [
+                        {
+                            "inputs": "c.MK, s.MP xx EX Flying Barcelona Attack, Claw Attack (punch), V-Trigger", 
+                            "description": "Juggle with V-Trigger or d+V-Trigger after Claw Attack.", 
+                            "label": "Wall Dive, Rose (claw off)"
+                        }, 
+                        {
+                            "inputs": "s.HP xx Switch Claw, c.MP xx V-Trigger, Critical Art", 
+                            "description": "Juggle after rose with super.", 
+                            "label": "Claw Switch, Rose, Super (claw on)"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -10632,6 +11345,65 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MP, s.MP xx Sonic Scythe", 
+                            "description": "Basic hit confirm into easy damage.", 
+                            "label": "Basic Hit Confirm"
+                        }, 
+                        {
+                            "inputs": "Moonsault Slash, s.LP > s.MP xx Sonic Scythe", 
+                            "description": "Easy combo if you land a Moonsault Slash.", 
+                            "label": "Confirm from Moonsault"
+                        }, 
+                        {
+                            "inputs": "c.LK > c.LP xx LP Sonic Scythe", 
+                            "description": "Basic confirm, useful after an empty jump.", 
+                            "label": "Light Confirm"
+                        }, 
+                        {
+                            "inputs": "c.HP, s.MP, xx Special", 
+                            "description": "Optimization over c.MP in a punish situation.", 
+                            "label": "Punish Combo"
+                        }
+                    ]
+                }, 
+                {
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "... xx MK Sonic Scythe, Critical Art", 
+                            "description": "MK Sonic Scythe can be followed up with Critical Art.", 
+                            "label": "Combo ender into super"
+                        }, 
+                        {
+                            "inputs": "CH c.MP, c.HK", 
+                            "description": "Basic counterhit confirm.", 
+                            "label": "Counterhit Confirm"
+                        }, 
+                        {
+                            "inputs": "s.MP, c.HP xx V-Trigger, s.HK, s.LK xx HP Shoryuken", 
+                            "description": "Raw damage.", 
+                            "label": "V-Trigger Combo"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "CC s.HP xx HP Sonic Boom, c.HP xx neutral VT, c.HP, s.MP xx HK Sonic Scythe", 
+                            "description": "Maximize your damage with this V-Trigger combo.", 
+                            "label": "Extended DP Punish"
+                        }, 
+                        {
+                            "inputs": "CC f+HP, HP Tragedy Assault", 
+                            "description": "Get damage and steal meter if you land a Crush Counter s.HP.", 
+                            "label": "Backfist CC Fishing"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -11446,6 +12218,60 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "c.MK xx Hadoken", 
+                            "description": "Safe poke if used at max range.", 
+                            "label": "Basic Poke"
+                        }, 
+                        {
+                            "inputs": "c.HP xx HP Shoryuken", 
+                            "description": "Basic punish combo.", 
+                            "label": "Standard Punish"
+                        }, 
+                        {
+                            "inputs": "c.LK > c.LP xx HP Shoryuken", 
+                            "description": "Basic confirm, useful after an empty jump.", 
+                            "label": "Light Confirm"
+                        }, 
+                        {
+                            "inputs": "s.MP, s.HP xx Special", 
+                            "description": "Cancel into tatsu for corner carry, HP Shoryuken for damage.", 
+                            "label": "Standard Hit Confirm"
+                        }
+                    ]
+                }, 
+                {
+                    "Intermediate Combos": [
+                        {
+                            "inputs": "... xx LK Tatsu, Critical Art", 
+                            "description": "LK Tatsu can be followed up with Critical Art.", 
+                            "label": "Combo ender into super"
+                        }, 
+                        {
+                            "inputs": "CH s.MP, c.HK", 
+                            "description": "Basic counterhit confirm.", 
+                            "label": "Counterhit Confirm"
+                        }, 
+                        {
+                            "inputs": "s.MP, c.HP xx V-Trigger, s.HK, s.LK xx HP Shoryuken", 
+                            "description": "Raw damage.", 
+                            "label": "V-Trigger Combo"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "s.HK, s.HK, s.LK xx HP Shoryuken", 
+                            "description": "Simple damage for a DP punish.", 
+                            "label": "DP Punish"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {
@@ -11969,7 +12795,7 @@
                         "nameID": "f+HP", 
                         "data": {
                             "recoveryFrames": 14, 
-                            "description": "Counts as a projectile", 
+                            "description": "Nullifies a projectile.", 
                             "stunValue": 200, 
                             "damageValue": 100, 
                             "hitAdvantage": 7, 
@@ -12072,6 +12898,36 @@
                     }
                 ]
             }, 
+            "bnb_combos": [
+                {
+                    "Basic Combos": [
+                        {
+                            "inputs": "f+HP, s.LK xx Lariat", 
+                            "description": "Decent damage, scary enough to make people want to block.", 
+                            "label": "Headbutt Confirm"
+                        }, 
+                        {
+                            "inputs": "c.LK, c.LP, c.LP", 
+                            "description": "Use this string to keep your opponent grounded and eventually SPD them.", 
+                            "label": "Standard Light String"
+                        }, 
+                        {
+                            "inputs": "Full V-Trigger Lariat, jump > air EX SPD", 
+                            "description": "Tack on additional damage after a V-Trigger.", 
+                            "label": "V-Trigger Ender"
+                        }
+                    ]
+                }, 
+                {
+                    "Crush Counter Combos": [
+                        {
+                            "inputs": "CC s.HP, f+HP xx Critical Art", 
+                            "description": "Simple damage for a DP punish. Can replace f+HP with s.HP xx V-Trigger.", 
+                            "label": "Crush Counter s.HP"
+                        }
+                    ]
+                }
+            ], 
             "move_list": {
                 "vreversal": [
                     {

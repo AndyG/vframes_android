@@ -2,7 +2,6 @@ package com.angarron.vframes.data.twitch;
 
 import com.angarron.vframes.BuildConfig;
 import com.crashlytics.android.Crashlytics;
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -15,7 +14,6 @@ public class TwitchJsonParser {
     private static final String STREAMS_KEY = "streams";
 
     public List<TwitchStream> parse(JsonObject body) {
-        Gson gson = new Gson();
         JsonArray streamsArray = body.getAsJsonArray(STREAMS_KEY);
 
         List<TwitchStream> twitchStreams = new ArrayList<>();
