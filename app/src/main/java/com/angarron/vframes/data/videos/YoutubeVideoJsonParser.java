@@ -4,14 +4,14 @@ import com.google.gson.JsonObject;
 
 public class YoutubeVideoJsonParser {
 
-    public static YoutubeVideo parseYoutubeVideoJson(String videoId, JsonObject jsonObject) {
+    public static YoutubeVideo parseYoutubeVideoJson(JsonObject jsonObject, String description, String id) {
         JsonObject snippet = jsonObject.getAsJsonObject("snippet");
 
         String title = snippet.get("title").getAsString();
         String thumbnailUrl = getThumbnailUrl(snippet);
         String channelTitle = snippet.get("channelTitle").getAsString();
 
-        return new YoutubeVideo(title, channelTitle, thumbnailUrl);
+        return new YoutubeVideo(title, channelTitle, thumbnailUrl, description, id);
     }
 
     private static String getThumbnailUrl(JsonObject snippet) {

@@ -13,29 +13,24 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.data.videos.RecommendedVideo;
-import com.angarron.vframes.data.videos.RecommendedVideosModel;
 import com.angarron.vframes.data.videos.YoutubeVideo;
-import com.angarron.vframes.network.LoadVideoTask;
-import com.angarron.vframes.network.YoutubeDataApi;
+import com.angarron.vframes.data.videos.YoutubeVideosModel;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
+public class YoutubeVideosRecyclerAdapter extends RecyclerView.Adapter {
 
     private static final int VIEW_TYPE_HEADER = 0;
     private static final int VIEW_TYPE_VIDEO = 1;
 
-    private YoutubeDataApi youtubeDataApi;
 
     private List<Object> displayList;
     private IVideoSelectedListener videoSelectedListener;
 
-    public RecommendedVideosRecyclerViewAdapter(RecommendedVideosModel videosModel, YoutubeDataApi youtubeDataApi, IVideoSelectedListener listener) {
-        this.youtubeDataApi = youtubeDataApi;
+    public YoutubeVideosRecyclerAdapter(YoutubeVideosModel videosModel, IVideoSelectedListener listener) {
         this.videoSelectedListener = listener;
         setupDisplayList(videosModel);
     }
@@ -72,7 +67,7 @@ public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
     }
 
     private void setupVideoItemViewHolder(VideoItemViewHolder holder, int position) {
-        RecommendedVideo video = (RecommendedVideo) displayList.get(position);
+        YoutubeVideo video = (YoutubeVideo) displayList.get(position);
         holder.setupView(video);
     }
 
@@ -90,14 +85,16 @@ public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private void setupDisplayList(RecommendedVideosModel recommendedVideosModel) {
+    private void setupDisplayList(YoutubeVideosModel youtubeVideosModel) {
         displayList = new ArrayList<>();
-        for (Map.Entry<String, List<RecommendedVideo>> videoCategory : recommendedVideosModel.getVideos().entrySet()) {
+        if (youtubeVideosModel != null) {
+            for (Map.Entry<String, List<YoutubeVideo>> videoCategory : youtubeVideosModel.getVideos().entrySet()) {
 
-            displayList.add(videoCategory.getKey());
+                displayList.add(videoCategory.getKey());
 
-            for (RecommendedVideo video : videoCategory.getValue()) {
-                displayList.add(video);
+                for (YoutubeVideo video : videoCategory.getValue()) {
+                    displayList.add(video);
+                }
             }
         }
     }
@@ -120,10 +117,7 @@ public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private class VideoItemViewHolder extends RecyclerView.ViewHolder implements LoadVideoTask.ILoadVideoTaskListener {
-
-        private ProgressBar contentLoadingProgressBar;
-        private View content;
+    private class VideoItemViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView videoPreview;
         private ProgressBar videoPreviewProgressBar;
@@ -135,9 +129,6 @@ public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
         private VideoItemViewHolder(View v) {
             super(v);
 
-            contentLoadingProgressBar = (ProgressBar) v.findViewById(R.id.video_content_progress_bar);
-            content = v.findViewById(R.id.video_content);
-
             videoPreview = (ImageView) v.findViewById(R.id.video_preview);
             videoPreviewProgressBar = (ProgressBar) v.findViewById(R.id.video_preview_progress_bar);
 
@@ -146,34 +137,13 @@ public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
             description = (TextView) v.findViewById(R.id.video_description_textview);
         }
 
-        private void setupView(RecommendedVideo video) {
-
-            videoPreview.setOnClickListener(null);
-
-            contentLoadingProgressBar.setVisibility(View.VISIBLE);
-            content.setVisibility(View.INVISIBLE);
+        private void setupView(YoutubeVideo video) {
             description.setText(video.getDescription());
-
-            String videoId = video.getVideoId();
-            LoadVideoTask loadVideoTask = new LoadVideoTask(this);
-            loadVideoTask.getVideoWithId(videoId, youtubeDataApi);
-        }
-
-        @Override
-        public void onVideoLoaded(YoutubeVideo video) {
-            label.setText(video.getTitle());
             author.setText(video.getAuthor());
-
-            contentLoadingProgressBar.setVisibility(View.INVISIBLE);
-            content.setVisibility(View.VISIBLE);
+            label.setText(video.getTitle());
 
             DownloadImageTask downloadImageTask = new DownloadImageTask(videoPreview, videoPreviewProgressBar);
             downloadImageTask.execute(video.getThumbnailUrl());
-        }
-
-        @Override
-        public void onFailure() {
-            //no-op
         }
     }
 
@@ -187,8 +157,8 @@ public class RecommendedVideosRecyclerViewAdapter extends RecyclerView.Adapter {
 
         @Override
         public void onClick(View view) {
-            RecommendedVideo clickedStream = (RecommendedVideo) displayList.get(position);
-            String videoUrl = "https://youtube.com/watch?v=" + clickedStream.getVideoId();
+            YoutubeVideo clickedVideo = (YoutubeVideo) displayList.get(position);
+            String videoUrl = "https://youtube.com/watch?v=" + clickedVideo.getId();
             videoSelectedListener.onVideoSelected(videoUrl);
         }
     }

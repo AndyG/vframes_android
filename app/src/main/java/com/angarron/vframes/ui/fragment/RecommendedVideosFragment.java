@@ -13,11 +13,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.adapter.RecommendedVideosRecyclerViewAdapter;
+import com.angarron.vframes.adapter.YoutubeVideosRecyclerAdapter;
 import com.angarron.vframes.data.videos.RecommendedVideosJsonParser;
 import com.angarron.vframes.data.videos.RecommendedVideosModel;
+import com.angarron.vframes.data.videos.YoutubeVideosModel;
 import com.angarron.vframes.network.VFramesRESTApi;
-import com.angarron.vframes.network.YoutubeDataApi;
+import com.angarron.vframes.network.YoutubeVideosLoader;
 import com.google.gson.JsonObject;
 
 import data.model.CharacterID;
@@ -27,7 +28,7 @@ import retrofit.GsonConverterFactory;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class RecommendedVideosFragment extends Fragment implements RecommendedVideosRecyclerViewAdapter.IVideoSelectedListener {
+public class RecommendedVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
 
     RecyclerView videosRecyclerView;
     View failedToLoadLayout;
@@ -81,13 +82,17 @@ public class RecommendedVideosFragment extends Fragment implements RecommendedVi
     }
 
     private void processSuccessfulResponse(JsonObject body) {
-        RecommendedVideosModel videosModel = RecommendedVideosJsonParser.parseVideos(body.getAsJsonArray("videos"));
-        if (!videosModel.isEmpty()) {
-            videosRecyclerView.setAdapter(new RecommendedVideosRecyclerViewAdapter(videosModel, createYoutubeApi(), this));
-            showRecyclerView();
+        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body.getAsJsonArray("videos"));
+        if (!recommendedVideosModel.isEmpty()) {
+            loadYoutubeVideosModel(recommendedVideosModel);
         } else {
             showNoVideosView();
         }
+    }
+
+    private void loadYoutubeVideosModel(RecommendedVideosModel recommendedVideosModel) {
+        YoutubeVideosLoader youtubeVideosLoader = new YoutubeVideosLoader(new LoadVideosListener());
+        youtubeVideosLoader.loadVideos(recommendedVideosModel);
     }
 
     private VFramesRESTApi createVFramesApi() {
@@ -97,15 +102,6 @@ public class RecommendedVideosFragment extends Fragment implements RecommendedVi
                 .build();
 
         return retrofit.create(VFramesRESTApi.class);
-    }
-
-    private YoutubeDataApi createYoutubeApi() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://www.googleapis.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        return retrofit.create(YoutubeDataApi.class);
     }
 
     private void showNoVideosView() {
@@ -150,4 +146,16 @@ public class RecommendedVideosFragment extends Fragment implements RecommendedVi
         void onVideoSelected(String videoUrl);
     }
 
+    private class LoadVideosListener implements YoutubeVideosLoader.Listener {
+        @Override
+        public void onVideosLoaded(YoutubeVideosModel youtubeVideosModel) {
+            videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideosModel, RecommendedVideosFragment.this));
+            showRecyclerView();
+        }
+
+        @Override
+        public void onFailure() {
+            showFailureUI();
+        }
+    }
 }

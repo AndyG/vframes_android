@@ -19,4 +19,26 @@ public class RecommendedVideosModel {
     public boolean isEmpty() {
         return videos.isEmpty();
     }
+
+    public String getCategoryForVideo(String videoId) {
+        for (String category : videos.keySet()) {
+            for (RecommendedVideo video : videos.get(category)) {
+                if (video.getVideoId().equals(videoId)) {
+                    return category;
+                }
+            }
+        }
+        throw new RuntimeException("could not find category for video: " + videoId);
+    }
+
+    public String getDescriptionForVideo(String videoId) {
+        for (String category : videos.keySet()) {
+            for (RecommendedVideo video : videos.get(category)) {
+                if (video.getVideoId().equals(videoId)) {
+                    return video.getDescription();
+                }
+            }
+        }
+        throw new RuntimeException("could not find description for video: " + videoId);
+    }
 }
