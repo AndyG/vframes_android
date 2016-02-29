@@ -370,7 +370,7 @@
     <string name="error_loading_videos">Sorry, but there was an error loading recommended videos. Please check your network connection and try again.</string>
 
     <!-- Navigation Drawer -->
-    <string name="character_data">Character Data</string>
+    <string name="character_data">Character Info</string>
     <string name="live_streams">Live Streams</string>
     <string name="references">References</string>
     <string name="community">Community</string>
