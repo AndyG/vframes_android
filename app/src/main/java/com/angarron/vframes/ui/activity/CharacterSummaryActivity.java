@@ -254,9 +254,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-            String toolbarTitleFormat = getString(R.string.summary_toolbar_title);
-            String characterName = getString(getNameResource());
-            actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
+            actionBar.setTitle(getNameResource());
             actionBar.setBackgroundDrawable(getCharacterPrimaryColorDrawable());
 
             if (viewExists(R.id.summary_character_image)) {
