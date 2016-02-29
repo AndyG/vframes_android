@@ -110,9 +110,11 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         progressBar.setVisibility(View.INVISIBLE);
 
         Activity hostActivity = getActivity();
-        IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
-        String noVideosText = hostActivity.getString(R.string.videos_not_available, host.getCharacterDisplayName());
-        noVideosLayout.setText(noVideosText);
+        if (hostActivity != null) {
+            IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
+            String noVideosText = hostActivity.getString(R.string.videos_not_available, host.getCharacterDisplayName());
+            noVideosLayout.setText(noVideosText);
+        }
         noVideosLayout.setVisibility(View.VISIBLE);
     }
 
