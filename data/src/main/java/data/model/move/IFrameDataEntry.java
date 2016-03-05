@@ -17,5 +17,5 @@ public interface IFrameDataEntry {
     int getDamageValue();
     int getStunValue();
 
-    String getDescriptionId();
+    String getDescription();
 }

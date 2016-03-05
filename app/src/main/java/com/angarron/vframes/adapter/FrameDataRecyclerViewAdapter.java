@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +58,7 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
         View v;
         switch (viewType) {
             case VIEW_TYPE_HEADER:
-                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_header, parent, false);
+                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_header, parent, false);
                 return new HeaderItemViewHolder(v);
             case VIEW_TYPE_FRAME_DATA_ENTRY:
                 v = LayoutInflater.from(parent.getContext()).inflate(R.layout.frame_data_row_layout, parent, false);
@@ -77,6 +76,11 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
             HeaderItemViewHolder headerItemViewHolder = (HeaderItemViewHolder) holder;
             MoveCategory moveCategory = (MoveCategory) displayList.get(position);
             headerItemViewHolder.setupHeader(getHeaderString(moveCategory));
+            if (position == 0) {
+                headerItemViewHolder.setTopMargin(15);
+            } else {
+                headerItemViewHolder.setTopMargin(50);
+            }
         }
     }
 
@@ -197,6 +201,12 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
             label.setText(headerText);
             rowContainer.setBackgroundColor(Color.TRANSPARENT);
         }
+
+        private void setTopMargin(int topMarginPx) {
+            RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) rowContainer.getLayoutParams();
+            params.setMargins(0, topMarginPx, 0, 0);
+            rowContainer.setLayoutParams(params);
+        }
     }
 
     private class FrameDataItemViewHolder extends RecyclerView.ViewHolder {
@@ -249,8 +259,8 @@ public class FrameDataRecyclerViewAdapter extends RecyclerView.Adapter {
                 stunValue.setText(getDisplayValue(frameDataEntry.getStunValue()));
             }
 
-            if (!TextUtils.isEmpty(frameDataEntry.getDescriptionId())) {
-                description.setText(StringResolver.getStringId(frameDataEntry.getDescriptionId()));
+            if (!TextUtils.isEmpty(frameDataEntry.getDescription())) {
+                description.setText(frameDataEntry.getDescription());
                 description.setVisibility(View.VISIBLE);
             } else {
                 description.setVisibility(View.GONE);

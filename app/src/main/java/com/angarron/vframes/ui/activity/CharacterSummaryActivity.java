@@ -2,6 +2,7 @@ package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -14,10 +15,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,8 +30,10 @@ import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
+import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
+import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
 
@@ -37,10 +44,16 @@ import data.model.CharacterID;
 import data.model.IDataModel;
 import data.model.character.FrameData;
 import data.model.character.SFCharacter;
+import data.model.character.bnb.BreadAndButterModel;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
-public class CharacterSummaryActivity extends AppCompatActivity implements MoveListFragment.IMoveListFragmentHost, FrameDataFragment.IFrameDataFragmentHost {
+public class CharacterSummaryActivity extends AppCompatActivity implements
+        MoveListFragment.IMoveListFragmentHost,
+        FrameDataFragment.IFrameDataFragmentHost,
+        BreadAndButterFragment.IBreadAndButterFragmentHost,
+        RecommendedVideosFragment.IRecommendedVideosFragmentHost,
+        AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
     private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
@@ -48,6 +61,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
     private CharacterID targetCharacter;
     private boolean alternateFrameDataSelected = false;
 
+    private ViewPager viewPager;
+    private Spinner spinner;
     private MenuItem alternateFrameDataItem;
 
     private FrameDataFragment frameDataFragment;
@@ -71,24 +86,43 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         }
 
         //Verify the data is still available. If not, send to splash screen.
-        verifyDataAvailable();
+        if (dataIsAvailable()) {
 
-        if (savedInstanceState != null && savedInstanceState.containsKey(ALTERNATE_FRAME_DATA_SELECTED)) {
-            alternateFrameDataSelected = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED);
+            if (savedInstanceState != null && savedInstanceState.containsKey(ALTERNATE_FRAME_DATA_SELECTED)) {
+                alternateFrameDataSelected = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED);
+            }
+
+            //Load the toolbar based on the target character
+            setupToolbar();
+            setCharacterDetails();
+            setupViewPager();
+            setupSpinner();
+        } else {
+            sendToSplashScreen();
         }
+    }
 
-        //Load the toolbar based on the target character
-        setupToolbar();
-        setCharacterDetails();
-        setupViewPager();
+    private void setupSpinner() {
+        spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.planets_array, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        verifyDataAvailable();
-        alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
-        setAlternateFrameDataMenuState();
-        return super.onPrepareOptionsMenu(menu);
+        if (dataIsAvailable()) {
+            alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
+            setAlternateFrameDataMenuState();
+            return super.onPrepareOptionsMenu(menu);
+        } else {
+            sendToSplashScreen();
+            return false;
+        }
     }
 
     @Override
@@ -114,12 +148,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
                     case RASHID:
                     case NASH:
                         throw new RuntimeException("toggled vtrigger for invalid character");
-                    case KEN:
-                        Toast.makeText(this, R.string.ken_vtrigger_framedata_not_ready, Toast.LENGTH_SHORT).show();
-                        return true;
-                    case LAURA:
-                        Toast.makeText(this, R.string.laura_vtrigger_framedata_not_ready, Toast.LENGTH_SHORT).show();
-                        return true;
                     default:
                         toggleFrameData();
                         return true;
@@ -135,6 +163,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         outState.putBoolean(ALTERNATE_FRAME_DATA_SELECTED, alternateFrameDataSelected);
     }
 
+    //Move List Fragment Host
     @Override
     public Map<MoveCategory, List<IMoveListEntry>> getMoveList() {
         VFramesApplication application = (VFramesApplication) getApplication();
@@ -143,6 +172,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         return targetCharacterModel.getMoveList();
     }
 
+    //Frame Data Fragment Host
     @Override
     public void registerFrameDataFragment(FrameDataFragment frameDataFragment) {
         this.frameDataFragment = frameDataFragment;
@@ -161,6 +191,27 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         return targetCharacterModel.getFrameData();
     }
 
+    //BnB Fragment Host
+    @Override
+    public BreadAndButterModel getBreadAndButterModel() {
+        VFramesApplication application = (VFramesApplication) getApplication();
+        IDataModel dataModel = application.getDataModel();
+        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
+        return targetCharacterModel.getBreadAndButters();
+    }
+
+    @Override
+    public String getCharacterDisplayName() {
+        return getString(getNameResource());
+    }
+
+    @Override
+    public void onVideoSelected(String videoUrl) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(videoUrl));
+        startActivity(i);
+    }
+
     @Override
     public ColorDrawable getTargetCharacterColor() {
         return getCharacterPrimaryColorDrawable();
@@ -171,25 +222,16 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         supportFinishAfterTransition();
     }
 
-    private void verifyDataAvailable() {
+    private boolean dataIsAvailable() {
         VFramesApplication application = (VFramesApplication) getApplication();
-        if (application.getDataModel() == null) {
-
-            //If this is a release build, log this issue to Crashlytics.
-            if (!BuildConfig.DEBUG) {
-                Crashlytics.logException(new Throwable("Sending user to splash screen because data was unavailable"));
-            }
-
-            Intent startSplashIntent = new Intent(this, SplashActivity.class);
-            startActivity(startSplashIntent);
-            finish();
-        }
+        return (application.getDataModel() != null);
     }
 
     private void setupViewPager() {
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = (ViewPager) findViewById(R.id.pager);
         PagerAdapter pagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+        viewPager.addOnPageChangeListener(this);
 
         PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_tab_strip);
         pagerTabStrip.setBackgroundColor(getCharacterAccentColor());
@@ -212,9 +254,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-            String toolbarTitleFormat = getString(R.string.summary_toolbar_title);
-            String characterName = getString(getNameResource());
-            actionBar.setTitle(String.format(toolbarTitleFormat, characterName));
+            actionBar.setTitle(getNameResource());
             actionBar.setBackgroundDrawable(getCharacterPrimaryColorDrawable());
 
             if (viewExists(R.id.summary_character_image)) {
@@ -282,6 +322,18 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         } else {
             return alternateFrameDataSelected ? R.drawable.fire_logo : R.drawable.logo;
         }
+    }
+
+
+    private void sendToSplashScreen() {
+        //If this is a release build, log this issue to Crashlytics.
+        if (!BuildConfig.DEBUG) {
+            Crashlytics.logException(new Throwable("Sending user to splash screen because data was unavailable"));
+        }
+
+        Intent startSplashIntent = new Intent(this, SplashActivity.class);
+        startActivity(startSplashIntent);
+        finish();
     }
 
     private boolean viewExists(int viewId) {
@@ -555,14 +607,41 @@ public class CharacterSummaryActivity extends AppCompatActivity implements MoveL
         if (viewExists(R.id.banner_character_details)) {
             ((TextView) findViewById(R.id.banner_character_title)).setText(titleStringId);
 
-            String styleText = String.format(getString(R.string.style_format), getString(styleStringId));
-            ((TextView) findViewById(R.id.banner_character_style)).setText(styleText);
-
             String healthText = String.format(getString(R.string.health_format), getString(healthStringId));
             ((TextView) findViewById(R.id.banner_character_health)).setText(healthText);
 
             String stunText = String.format(getString(R.string.stun_format), getString(stunStringId));
             ((TextView) findViewById(R.id.banner_character_stun)).setText(stunText);
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        viewPager.setCurrentItem(i, true);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        //no-op
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        //no-op
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        spinner.setSelection(position, true);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+        //no-op
+    }
+
+    @Override
+    public CharacterID getTargetCharacterId() {
+        return targetCharacter;
     }
 }

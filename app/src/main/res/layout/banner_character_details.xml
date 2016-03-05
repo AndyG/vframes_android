@@ -8,7 +8,7 @@
         android:id="@+id/banner_character_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/banner_character_health"
@@ -22,10 +22,9 @@
         android:layout_height="wrap_content"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/banner_character_style"
-        android:layout_width="match_parent"
+    <include
+        layout="@layout/page_control_spinner"
         android:layout_height="wrap_content"
-        android:textSize="18sp" />
+        android:layout_width="match_parent"/>
 
 </LinearLayout>

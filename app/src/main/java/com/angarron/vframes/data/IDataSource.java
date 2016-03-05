@@ -6,13 +6,16 @@ public interface IDataSource {
 
     enum FetchFailureReason {
         READ_FROM_FILE_FAILED,
-        UNKNOWN_ERROR
+        UNSUPPORTED_CLIENT_VERSION,
+        NETWORK_ERROR,
+        UNKNOWN_ERROR;
     }
 
     void fetchData(Listener listener);
+    void clearLocalData();
 
     interface Listener {
-        void onDataReceived(IDataModel data);
+        void onDataReceived(IDataModel data, boolean wasUpdated);
         void onDataFetchFailed(FetchFailureReason failureReason);
     }
 }

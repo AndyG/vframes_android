@@ -56,7 +56,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         View v;
         switch (viewType) {
             case VIEW_TYPE_HEADER:
-                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_header, parent, false);
+                v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_header, parent, false);
                 return new HeaderItemViewHolder(v);
             case VIEW_TYPE_MOVE:
                 v = LayoutInflater.from(parent.getContext()).inflate(R.layout.moves_list_item, parent, false);
@@ -74,6 +74,11 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             HeaderItemViewHolder headerItemViewHolder = (HeaderItemViewHolder) holder;
             MoveCategory moveCategory = (MoveCategory) displayList.get(position);
             headerItemViewHolder.label.setText(getHeaderString(moveCategory));
+            if (position == 0) {
+                headerItemViewHolder.setTopMargin(15);
+            } else {
+                headerItemViewHolder.setTopMargin(50);
+            }
         }
     }
 
@@ -313,11 +318,19 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     private class HeaderItemViewHolder extends RecyclerView.ViewHolder {
 
+        private View rowContainer;
         private TextView label;
 
-        public HeaderItemViewHolder(View v) {
+        private HeaderItemViewHolder(View v) {
             super(v);
+            rowContainer = v;
             label = (TextView) v.findViewById(R.id.label);
+        }
+
+        private void setTopMargin(int topMarginPx) {
+            RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) rowContainer.getLayoutParams();
+            params.setMargins(0, topMarginPx, 0, 0);
+            rowContainer.setLayoutParams(params);
         }
     }
 

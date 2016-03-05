@@ -4,8 +4,12 @@ import com.google.gson.JsonObject;
 
 import retrofit.Call;
 import retrofit.http.GET;
+import retrofit.http.Path;
 
 public interface VFramesRESTApi {
-    @GET("/res/vframes/vframes_data.json")
-    Call<JsonObject> getData();
+    @GET("/res/vframes/android/v{version}/characters_model.json")
+    Call<JsonObject> getData(@Path("version") Integer version);
+
+    @GET("/res/vframes/recommendedVideos/{character}/videos.json")
+    Call<JsonObject> getVideosForCharacter(@Path("character") String character);
 }
