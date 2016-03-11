@@ -1,10 +1,8 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
@@ -36,6 +34,7 @@ import data.model.CharacterID;
 
 public class CharacterComparisonActivity extends AppCompatActivity implements
         ViewPager.OnPageChangeListener, AdapterView.OnItemSelectedListener {
+
     public static final String INTENT_EXTRA_FIRST_CHARACTER = "INTENT_EXTRA_FIRST_CHARACTER";
     public static final String INTENT_EXTRA_SECOND_CHARACTER = "INTENT_EXTRA_SECOND_CHARACTER";
 
@@ -299,46 +298,6 @@ public class CharacterComparisonActivity extends AppCompatActivity implements
                 throw new RuntimeException("unable to resolve character name: " + characterID);
         }
     }
-
-    private ColorDrawable getCharacterPrimaryColorDrawable(CharacterID characterID) {
-        switch(characterID) {
-            case RYU:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.ryu_primary));
-            case CHUN:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.chun_primary));
-            case DICTATOR:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.dictator_primary));
-            case BIRDIE:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.birdie_primary));
-            case NASH:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.nash_primary));
-            case CAMMY:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.cammy_primary));
-            case KEN:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.ken_primary));
-            case MIKA:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.mika_primary));
-            case NECALLI:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.necalli_primary));
-            case CLAW:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.claw_primary));
-            case RASHID:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.rashid_primary));
-            case KARIN:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.karin_primary));
-            case LAURA:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.laura_primary));
-            case DHALSIM:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.dhalsim_primary));
-            case ZANGIEF:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.zangief_primary));
-            case FANG:
-                return new ColorDrawable(ContextCompat.getColor(this, R.color.fang_primary));
-            default:
-                throw new RuntimeException("unable to resolve character accent color drawable: " + characterID);
-        }
-    }
-
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
