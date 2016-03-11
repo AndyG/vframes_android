@@ -8,7 +8,7 @@
         android:id="@+id/comparison_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        style="@style/summary_toolbar_style" />
+        style="@style/comparison_toolbar_style" />
 
     <include
         layout="@layout/page_control_spinner"

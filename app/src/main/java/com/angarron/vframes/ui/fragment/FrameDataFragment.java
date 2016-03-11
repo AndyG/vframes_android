@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 
@@ -21,7 +22,7 @@ import data.model.IDataModel;
 import data.model.character.FrameData;
 import data.model.character.SFCharacter;
 
-public class FrameDataFragment extends Fragment {
+public class FrameDataFragment extends Fragment implements CompoundButton.OnCheckedChangeListener {
 
     public static final String CHARACTER_ID = "CHARACTER_ID";
 
@@ -52,7 +53,8 @@ public class FrameDataFragment extends Fragment {
         LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.frame_data_layout, container, false);
 
         alternateFrameDataSwitch = (Switch) linearLayout.findViewById(R.id.alternate_frame_data_switch);
-        setupSwitch();
+        alternateFrameDataSwitch.setOnCheckedChangeListener(this);
+        setSwitchState();
 
         ColorDrawable color = getCharacterColor(characterId);
         linearLayout.findViewById(R.id.frame_data_header_layout).setBackgroundColor(color.getColor());
@@ -121,10 +123,26 @@ public class FrameDataFragment extends Fragment {
         this.showingAlternateFrameData = showAlternateFrameData;
         FrameDataRecyclerViewAdapter frameDataRecyclerViewAdapter = (FrameDataRecyclerViewAdapter) frameDataRecyclerView.getAdapter();
         frameDataRecyclerViewAdapter.setShowAlternate(showAlternateFrameData);
+        setSwitchState();
     }
 
-    private void setupSwitch() {
+    private void setSwitchState() {
         if (frameData.hasAlternateFrameData()) {
+            if (showingAlternateFrameData) {
+                alternateFrameDataSwitch.setChecked(true);
+                if (characterId == CharacterID.CLAW) {
+                    alternateFrameDataSwitch.setText("Claw Off Frame Data");
+                } else {
+                    alternateFrameDataSwitch.setText("V-Trigger Frame Data");
+                }
+            } else {
+                alternateFrameDataSwitch.setChecked(false);
+                if (characterId == CharacterID.CLAW) {
+                    alternateFrameDataSwitch.setText("Claw On Frame Data");
+                } else {
+                    alternateFrameDataSwitch.setText("Standard Frame Data");
+                }
+            }
             alternateFrameDataSwitch.setVisibility(View.VISIBLE);
         } else {
             alternateFrameDataSwitch.setVisibility(View.GONE);
@@ -136,5 +154,10 @@ public class FrameDataFragment extends Fragment {
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(characterId);
         return targetCharacterModel.getFrameData();
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        setShowAlternateFrameData(b);
     }
 }

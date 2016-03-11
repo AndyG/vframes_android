@@ -78,6 +78,12 @@
         <item name="android:elevation">4dp</item>
     </style>
 
+    <style name="comparison_toolbar_style">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextAppearance">@style/toolbar_text</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
     <style name="frame_data_header_text_style">
         <item name="android:textColor">@color/off_white</item>
         <item name="android:textSize">@dimen/frame_data_header_text_size</item>
