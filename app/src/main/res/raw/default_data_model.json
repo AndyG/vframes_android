@@ -466,7 +466,7 @@
                             "damageValue": 60, 
                             "hitAdvantage": 4, 
                             "activeFrames": 3, 
-                            "blockAdvantage": 2, 
+                            "blockAdvantage": 1, 
                             "startupFrames": 5
                         }
                     }, 
@@ -1413,7 +1413,9 @@
                             "description": "Back dash after f+MP or b+MP to wall bounce the opponent.", 
                             "label": "Basic Passion Press"
                         }
-                    ], 
+                    ]
+                }, 
+                {
                     "Intermediate Combos": [
                         {
                             "inputs": "s.MP, Passion Rope Throw, back dash, s.HK (charged), EX Peach Bomber", 
@@ -2905,7 +2907,9 @@
                             "description": "Confirmable link into decent damage.", 
                             "label": "Simple link"
                         }
-                    ], 
+                    ]
+                }, 
+                {
                     "Intermediate Combos": [
                         {
                             "inputs": "s.HP xx EX Ryobenda, EX Sotoja", 
@@ -4727,7 +4731,9 @@
                             "description": "Low-hitting move into legs.", 
                             "label": "Low confirm"
                         }
-                    ], 
+                    ]
+                }, 
+                {
                     "Intermediate Combos": [
                         {
                             "inputs": "c.LP, s.MP, c.MK xx MK Spinning Bird Kick", 
@@ -5603,7 +5609,9 @@
                             "description": "Damaging combo into DP.", 
                             "label": "Cannon Spike Knockdown"
                         }
-                    ], 
+                    ]
+                }, 
+                {
                     "Intermediate Combos": [
                         {
                             "inputs": "b+MP -> HK xx EX Hooligan Combination -> Cannon Strike, HK Cannon Spike", 
@@ -8974,7 +8982,9 @@
                             "description": "Add EX Ressenha in the corner for 1 bar and extra damage.", 
                             "label": "Ressenha combo"
                         }
-                    ], 
+                    ]
+                }, 
+                {
                     "Intermediate Combos": [
                         {
                             "inputs": "c.MP, c.MK xx Tenko, LK Mujinkyaku, EX Tenko", 
@@ -10497,7 +10507,9 @@
                             "description": "Low-hitting move into special.", 
                             "label": "Low confirm"
                         }
-                    ], 
+                    ]
+                }, 
+                {
                     "Intermediate Combos": [
                         {
                             "inputs": "s.HP xx Switch Claw, c.MP xx MK Crimson Terror", 
@@ -11381,11 +11393,6 @@
                             "inputs": "CH c.MP, c.HK", 
                             "description": "Basic counterhit confirm.", 
                             "label": "Counterhit Confirm"
-                        }, 
-                        {
-                            "inputs": "s.MP, c.HP xx V-Trigger, s.HK, s.LK xx HP Shoryuken", 
-                            "description": "Raw damage.", 
-                            "label": "V-Trigger Combo"
                         }
                     ]
                 }, 
