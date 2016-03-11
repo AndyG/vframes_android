@@ -11,8 +11,8 @@
     <string name="feedback_email_subject">VFrames Feedback</string>
 
     <!-- Rating Request -->
-    <string name="rating_request_message">"Your feedback helps us improve VFrames. Let us know what you think on the Google Play Store! \n\nYou won\'t see this message again."</string>
-    <string name="rating_request_title">"We want your feedback!"</string>
+    <string name="rating_request_message">Your feedback helps us improve VFrames. Let us know what you think on the Google Play Store! \n\nYou won\'t see this message again.</string>
+    <string name="rating_request_title">We want your feedback!</string>
     <string name="rating_request_positive_button">Give Feedback</string>
     <string name="rating_request_negative_button">No Thanks</string>
 
@@ -375,15 +375,21 @@
     <string name="references">References</string>
     <string name="community">Community</string>
 
-    <!-- Network-->
-    <string name="loading">Loading…</string>
+    <!-- Character Comparison Page -->
+    <string name="comparison_first_character_transition">comparison_first_character_transition</string>
+    <string name="comparison_second_character_transition">comparison_second_character_transition</string>
+    <string name="comparison_title_format">%1$s vs. %2$s</string>
+    <string name="comparison_frame_data_format">%1$s Frame Data</string>
+    <string name="move_punisher">Move Punisher</string>
+    <string name="move_punisher_coming_soon">Move Punisher and other advanced features are on the way to VFrames! Sorry for the wait, and thank you for your patience!</string>
 
-    <string-array name="planets_array">
+    <string-array name="summary_spinner_options">
         <item>Frame Data</item>
         <item>Move List</item>
         <item>BnB Combos</item>
         <item>Recommended Videos</item>
         <item>Notes</item>
     </string-array>
+
 
 </resources>

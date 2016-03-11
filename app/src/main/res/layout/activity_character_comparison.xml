@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/summary_toolbar"
+        android:id="@+id/comparison_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         style="@style/summary_toolbar_style" />
@@ -14,25 +14,33 @@
         android:orientation="horizontal"
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/summary_image_container_height">
+        android:layout_height="@dimen/summary_image_container_height"
+        android:weightSum="2">
 
         <ImageView
-            android:id="@+id/summary_character_image"
-            android:transitionName="@string/character_select_transition"
+            android:id="@+id/first_character_image"
+            android:transitionName="@string/comparison_first_character_transition"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:scaleType="fitCenter"/>
 
-        <include layout="@layout/banner_character_details"
-            android:id="@+id/banner_character_details"
-            android:layout_margin="10dp"
+        <ImageView
+            android:id="@+id/second_character_image"
+            android:transitionName="@string/comparison_second_character_transition"
             android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="match_parent" />
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:scaleType="fitCenter"/>
 
     </LinearLayout>
+
+    <include
+        layout="@layout/page_control_spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
 
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -46,5 +54,6 @@
             android:layout_gravity="top" />
 
     </android.support.v4.view.ViewPager>
+
 
 </LinearLayout>

@@ -31,7 +31,6 @@ import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
-import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
 import com.angarron.vframes.util.FeedbackUtil;
@@ -42,7 +41,6 @@ import java.util.Map;
 
 import data.model.CharacterID;
 import data.model.IDataModel;
-import data.model.character.FrameData;
 import data.model.character.SFCharacter;
 import data.model.character.bnb.BreadAndButterModel;
 import data.model.move.IMoveListEntry;
@@ -50,7 +48,6 @@ import data.model.move.MoveCategory;
 
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
-        FrameDataFragment.IFrameDataFragmentHost,
         BreadAndButterFragment.IBreadAndButterFragmentHost,
         RecommendedVideosFragment.IRecommendedVideosFragmentHost,
         AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
@@ -63,9 +60,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
 
     private ViewPager viewPager;
     private Spinner spinner;
-    private MenuItem alternateFrameDataItem;
-
-    private FrameDataFragment frameDataFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +100,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         spinner = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.planets_array, android.R.layout.simple_spinner_item);
+                R.array.summary_spinner_options, android.R.layout.simple_spinner_item);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -116,8 +110,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if (dataIsAvailable()) {
-            alternateFrameDataItem = menu.findItem(R.id.action_alternate_frame_data_toggle);
-            setAlternateFrameDataMenuState();
             return super.onPrepareOptionsMenu(menu);
         } else {
             sendToSplashScreen();
@@ -141,17 +133,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
             case android.R.id.home:
                 supportFinishAfterTransition();
                 return true;
-            case R.id.action_alternate_frame_data_toggle:
-                switch (targetCharacter) {
-                    case MIKA:
-                    case DHALSIM:
-                    case RASHID:
-                    case NASH:
-                        throw new RuntimeException("toggled vtrigger for invalid character");
-                    default:
-                        toggleFrameData();
-                        return true;
-                }
             default:
                 throw new RuntimeException("invalid menu item clicked");
         }
@@ -170,25 +151,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         IDataModel dataModel = application.getDataModel();
         SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
         return targetCharacterModel.getMoveList();
-    }
-
-    //Frame Data Fragment Host
-    @Override
-    public void registerFrameDataFragment(FrameDataFragment frameDataFragment) {
-        this.frameDataFragment = frameDataFragment;
-    }
-
-    @Override
-    public void unregisterFrameDataFragment() {
-        frameDataFragment = null;
-    }
-
-    @Override
-    public FrameData getFrameData() {
-        VFramesApplication application = (VFramesApplication) getApplication();
-        IDataModel dataModel = application.getDataModel();
-        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        return targetCharacterModel.getFrameData();
     }
 
     //BnB Fragment Host
@@ -213,11 +175,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     }
 
     @Override
-    public ColorDrawable getTargetCharacterColor() {
-        return getCharacterPrimaryColorDrawable();
-    }
-
-    @Override
     public void onBackPressed() {
         supportFinishAfterTransition();
     }
@@ -229,7 +186,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
 
     private void setupViewPager() {
         viewPager = (ViewPager) findViewById(R.id.pager);
-        PagerAdapter pagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager());
+        PagerAdapter pagerAdapter = new SummaryPagerAdapter(this, getSupportFragmentManager(), targetCharacter);
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(this);
 
@@ -283,16 +240,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         }
     }
 
-    private void toggleFrameData() {
-        alternateFrameDataSelected = !alternateFrameDataSelected;
-        showAlternateFrameDataToast();
-        setAlternateFrameDataMenuState();
-        //get reference to frame data fragment and update it with new frame data
-        if (frameDataFragment != null) {
-            frameDataFragment.setShowAlternateFrameData(alternateFrameDataSelected);
-        }
-    }
-
     private void showAlternateFrameDataToast() {
         int stringRes;
         if (targetCharacter != CharacterID.CLAW) {
@@ -302,28 +249,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         }
         Toast.makeText(this, stringRes, Toast.LENGTH_SHORT).show();
     }
-
-    private void setAlternateFrameDataMenuState() {
-        VFramesApplication application = (VFramesApplication) getApplication();
-        IDataModel dataModel = application.getDataModel();
-        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        FrameData characterFrameData = targetCharacterModel.getFrameData();
-
-        if (characterFrameData != null && characterFrameData.hasAlternateFrameData()) {
-            alternateFrameDataItem.setIcon(resolveAlternateFrameDataMenuDrawable());
-        } else {
-            alternateFrameDataItem.setVisible(false);
-        }
-    }
-
-    private int resolveAlternateFrameDataMenuDrawable() {
-        if(targetCharacter == CharacterID.CLAW) {
-            return alternateFrameDataSelected ? R.drawable.claw_off : R.drawable.claw_on;
-        } else {
-            return alternateFrameDataSelected ? R.drawable.fire_logo : R.drawable.logo;
-        }
-    }
-
 
     private void sendToSplashScreen() {
         //If this is a release build, log this issue to Crashlytics.

@@ -32,6 +32,7 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/selected_image_background</item>
     </style>
 
     <style name="CharacterCardTextStyle">
@@ -57,7 +58,7 @@
         <item name="android:gravity">end</item>
     </style>
 
-    <style name="CharacterSummaryPageTabStrip">
+    <style name="CharacterPagerTabStrip">
         <item name="android:background">@color/pager_tab_strip_background</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

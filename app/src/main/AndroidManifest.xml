@@ -40,6 +40,12 @@
             android:launchMode="singleTask">
         </activity>
 
+        <activity
+            android:name="com.angarron.vframes.ui.activity.CharacterComparisonActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
+        </activity>
+
         <!-- Crashlytics Integration -->
         <meta-data
             android:name="io.fabric.ApiKey"
