@@ -41,6 +41,7 @@ public class CharacterSelectActivity extends NavigationHostActivity {
     private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
     private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
+    private static final String CAN_COMPARE_CHARACTERS_SEEN = "CAN_COMPARE_CHARACTERS_SEEN";
 
     //Fabric Answers Events
     private static final String LOAD_NETWORK_DATA_EVENT = "Load Custom Data";
@@ -56,13 +57,55 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_select);
 
-        if(shouldShowReviewRequestDialog()) {
-            showReviewRequestDialog();
-        }
+        showWelcomeDialog();
 
         verifyDataAvailable();
         setupToolbar();
         setupClickListeners();
+    }
+
+    private void showWelcomeDialog() {
+        if (shouldShowReviewRequestDialog()) {
+            showReviewRequestDialog();
+        } else if (shouldShowCanCompareDialog()) {
+            showCanCompareDialog();
+        }
+    }
+
+    private void showCanCompareDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.can_compare_message)
+                .setTitle(R.string.can_compare_title);
+
+        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //no-op
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+
+        //Users often immediately touch the screen when they enter the CharacterSelectActivity,
+        //which would result in accidentally dismissing the dialog without reading it.
+        dialog.setCanceledOnTouchOutside(false);
+
+        dialog.show();
+    }
+
+    private boolean shouldShowCanCompareDialog() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+        boolean reviewRequestSeen = sharedPreferences.getBoolean(CAN_COMPARE_CHARACTERS_SEEN, false);
+
+        if(appLaunchCount >= 2 && !reviewRequestSeen) {
+            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+            sharedPreferencesEditor.putBoolean(CAN_COMPARE_CHARACTERS_SEEN, true);
+            sharedPreferencesEditor.apply();
+            return true;
+        }
+
+        return false;
     }
 
     private void showDataUpdatedDialog() {

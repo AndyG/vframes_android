@@ -10,6 +10,10 @@
     <string name="feedback_email_address" translatable="false">vframesapp@gmail.com</string>
     <string name="feedback_email_subject">VFrames Feedback</string>
 
+    <!-- Feature Notifications -->
+    <string name="can_compare_message">You can take advantage of features involving multiple characters by long-pressing on one character, then selecting another character!</string>
+    <string name="can_compare_title">Compare two characters!</string>
+
     <!-- Rating Request -->
     <string name="rating_request_message">Your feedback helps us improve VFrames. Let us know what you think on the Google Play Store! \n\nYou won\'t see this message again.</string>
     <string name="rating_request_title">We want your feedback!</string>
