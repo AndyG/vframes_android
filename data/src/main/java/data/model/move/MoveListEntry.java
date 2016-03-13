@@ -6,23 +6,23 @@ import data.model.input.InputElement;
 
 public class MoveListEntry implements IMoveListEntry {
 
-    private String nameId;
-    private String pretextId;
-    private String posttextId;
+    private String name;
+    private String pretext;
+    private String posttext;
     private String description;
     private List<InputElement> inputElementList;
 
-    public MoveListEntry(String nameId, String pretextId, String posttextId, String description, List<InputElement> inputElementList) {
-        this.nameId = nameId;
-        this.pretextId = pretextId;
-        this.posttextId = posttextId;
+    public MoveListEntry(String name, String pretext, String posttext, String description, List<InputElement> inputElementList) {
+        this.name = name;
+        this.pretext = pretext;
+        this.posttext = posttext;
         this.description = description;
         this.inputElementList = inputElementList;
     }
 
     @Override
-    public String getNameId() {
-        return nameId;
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -31,17 +31,17 @@ public class MoveListEntry implements IMoveListEntry {
     }
 
     @Override
-    public String getPretextId() {
-        return pretextId;
+    public String getPretext() {
+        return pretext;
     }
 
     @Override
-    public String getPosttextId() {
-        return posttextId;
+    public String getPosttext() {
+        return posttext;
     }
 
     @Override
-    public String getDescriptionId() {
+    public String getDescription() {
         return description;
     }
 }
