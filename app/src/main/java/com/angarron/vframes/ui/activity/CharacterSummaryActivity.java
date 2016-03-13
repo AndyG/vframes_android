@@ -30,9 +30,9 @@ import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
-import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
+import com.angarron.vframes.util.CharacterResourceUtil;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
 
@@ -42,13 +42,11 @@ import java.util.Map;
 import data.model.CharacterID;
 import data.model.IDataModel;
 import data.model.character.SFCharacter;
-import data.model.character.bnb.BreadAndButterModel;
 import data.model.move.IMoveListEntry;
 import data.model.move.MoveCategory;
 
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
-        BreadAndButterFragment.IBreadAndButterFragmentHost,
         RecommendedVideosFragment.IRecommendedVideosFragmentHost,
         AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
 
@@ -153,20 +151,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         return targetCharacterModel.getMoveList();
     }
 
-    //BnB Fragment Host
-    @Override
-    public BreadAndButterModel getBreadAndButterModel() {
-        VFramesApplication application = (VFramesApplication) getApplication();
-        IDataModel dataModel = application.getDataModel();
-        SFCharacter targetCharacterModel = dataModel.getCharactersModel().getCharacter(targetCharacter);
-        return targetCharacterModel.getBreadAndButters();
-    }
-
-    @Override
-    public String getCharacterDisplayName() {
-        return getString(getNameResource());
-    }
-
     @Override
     public void onVideoSelected(String videoUrl) {
         Intent i = new Intent(Intent.ACTION_VIEW);
@@ -211,7 +195,7 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-            actionBar.setTitle(getNameResource());
+            actionBar.setTitle(CharacterResourceUtil.getCharacterDisplayName(this, targetCharacter));
             actionBar.setBackgroundDrawable(getCharacterPrimaryColorDrawable());
 
             if (viewExists(R.id.summary_character_image)) {
@@ -383,45 +367,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         }
     }
 
-    private int getNameResource() {
-        switch(targetCharacter) {
-            case RYU:
-                return R.string.ryu_name;
-            case CHUN:
-                return R.string.chun_name;
-            case DICTATOR:
-                return R.string.dictator_name;
-            case BIRDIE:
-                return R.string.birdie_name;
-            case NASH:
-                return R.string.nash_name;
-            case CAMMY:
-                return R.string.cammy_name;
-            case KEN:
-                return R.string.ken_name;
-            case MIKA:
-                return R.string.mika_name;
-            case NECALLI:
-                return R.string.necalli_name;
-            case CLAW:
-                return R.string.claw_name;
-            case RASHID:
-                return R.string.rashid_name;
-            case KARIN:
-                return R.string.karin_name;
-            case LAURA:
-                return R.string.laura_name;
-            case DHALSIM:
-                return R.string.dhalsim_name;
-            case ZANGIEF:
-                return R.string.zangief_name;
-            case FANG:
-                return R.string.fang_name;
-            default:
-                throw new RuntimeException("unable to resolve character name: " + targetCharacter);
-        }
-    }
-
     private void setCharacterDetails() {
         int titleStringId;
         int styleStringId;
@@ -563,10 +508,5 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     @Override
     public void onPageScrollStateChanged(int state) {
         //no-op
-    }
-
-    @Override
-    public CharacterID getTargetCharacterId() {
-        return targetCharacter;
     }
 }

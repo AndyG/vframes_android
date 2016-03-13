@@ -9,36 +9,34 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.application.VFramesApplication;
-import com.crashlytics.android.Crashlytics;
+import com.angarron.vframes.util.CharacterResourceUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
 
 import data.model.CharacterID;
-import data.model.move.IMoveListEntry;
-import data.model.move.MoveCategory;
 
 /**
  * Created by Lennon on 2/8/2016.
  */
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
-
     private static final int VIEW_TYPE_HEADER = 1;
     private static final int VIEW_TYPE_NOTE = 2;
+
     private final Context context;
     private CharacterID targetCharacter;
-    private ArrayList<CharacterID> characterList;
+    private INotesSelectionListener listener;
 
-    public NotesRecyclerViewAdapter(Context context, CharacterID targetCharacter) {
+    private List<CharacterID> characterList;
+
+
+    public NotesRecyclerViewAdapter(Context context, CharacterID targetCharacter, INotesSelectionListener listener) {
         this.context = context;
         this.targetCharacter = targetCharacter;
+        this.listener = listener;
     }
 
     @Override
@@ -55,87 +53,80 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             default:
                 throw new RuntimeException("unable to find ViewHolder for view type: " + viewType);
         }
-
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
         if (holder instanceof NoteItemViewHolder) {
             setupNoteItemViewHolder((NoteItemViewHolder) holder, position);
         } else if (holder instanceof HeaderItemViewHolder) {
-            if (position == 0) {
-                ((HeaderItemViewHolder) holder).label.setText("General");
-            }
-            else if (position == 3) {
-                ((HeaderItemViewHolder) holder).label.setText(context.getString(getNameResource(targetCharacter)) + " matchups");
-            }
+            setupHeader((HeaderItemViewHolder)holder, position);
+        }
+    }
+
+    private void setupHeader(HeaderItemViewHolder holder, int position) {
+        if (position == 0) {
+            holder.label.setText(R.string.notes_general);
+        } else if (position == 2) {
+            holder.label.setText(R.string.matchups);
         }
     }
 
     private void setupNoteItemViewHolder(NoteItemViewHolder holder, int position) {
-        if(position > 3) {
-            holder.label.setText(String.valueOf(context.getString(getNameResource(targetCharacter)) + " vs. " + context.getString(getNameResource(characterList.get(position - 4)))));
-        } else if (position == 1) {
-            holder.label.setText("As " + context.getString(getNameResource(targetCharacter)));
-        } else if (position == 2) {
-            holder.label.setText("vs " + context.getString(getNameResource(targetCharacter)));
+        if (position == 1) {
+            //General Notes Item
+
+            holder.itemView.setOnClickListener(new GeneralNotesClickListener());
+
+            String characterDisplayName = getCharacterDisplayName();
+            String noteTitle = context.getString(R.string.general_notes_format, characterDisplayName);
+            holder.label.setText(noteTitle);
         } else {
-            holder.label.setText(String.valueOf(position));
+            //Matchup Notes Item
+            CharacterID opponentCharactedId = characterList.get(position - 3);
+
+            holder.itemView.setOnClickListener(new MatchupNotesClickListener(opponentCharactedId));
+
+            String opponentDisplayName = CharacterResourceUtil.getCharacterDisplayName(context, opponentCharactedId);
+            String noteTitle = context.getString(R.string.matchup_notes_format, opponentDisplayName);
+            holder.label.setText(noteTitle);
         }
     }
 
     private void setupCharacterList() {
-        this.characterList = new ArrayList<CharacterID>();
+        this.characterList = new ArrayList<>();
         // Add all characters
-        for (CharacterID c : CharacterID.values()) {
-            characterList.add(c);
-        }
+        Collections.addAll(characterList, CharacterID.values());
+
         // Sort alphabetically
         Collections.sort(characterList, new Comparator<CharacterID>() {
             @Override
             public int compare(CharacterID lhs, CharacterID rhs) {
-                return context.getString(getNameResource(lhs)).compareTo(context.getString(getNameResource(rhs)));
+                String firstCharacterName = CharacterResourceUtil.getCharacterDisplayName(context, lhs);
+                String secondCharacterName = CharacterResourceUtil.getCharacterDisplayName(context, rhs);
+                return firstCharacterName.compareTo(secondCharacterName);
             }
         });
     }
 
     @Override
     public int getItemViewType(int position) {
-        if(position == 0 || position == 3) {
+        if(position == 0 || position == 2) {
             return VIEW_TYPE_HEADER;
         } else {
             return VIEW_TYPE_NOTE;
         }
-
-        /*
-        if (displayList.get(position) instanceof MoveCategory) {
-            return VIEW_TYPE_HEADER;
-        } else if (displayList.get(position) instanceof IMoveListEntry) {
-            return VIEW_TYPE_MOVE;
-        } else {
-            throw new RuntimeException("could not resolve Object to category: " + displayList.get(position).getClass().getSimpleName());
-        }
-        */
     }
 
     @Override
     public int getItemCount() {
-        return 20;
-        //displayList.size();
+        return 3 + CharacterID.values().length;
     }
-/*
-    private void setupDisplayList(Map<MoveCategory, List<IMoveListEntry>> moves) {
-        for (MoveCategory category : categoriesOrder) {
-            if (moves.containsKey(category) && !moves.get(category).isEmpty()) {
-                displayList.add(category);
-                for (IMoveListEntry move : moves.get(category)) {
-                    displayList.add(move);
-                }
-            }
-        }
+
+    private String getCharacterDisplayName() {
+        return CharacterResourceUtil.getCharacterDisplayName(context, targetCharacter);
     }
-*/
+
     private class HeaderItemViewHolder extends RecyclerView.ViewHolder {
 
         private TextView label;
@@ -155,44 +146,33 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         }
     }
 
-    private int getNameResource(CharacterID characterID) {
-        switch(characterID) {
-            case RYU:
-                return R.string.ryu_name;
-            case CHUN:
-                return R.string.chun_name;
-            case DICTATOR:
-                return R.string.dictator_name;
-            case BIRDIE:
-                return R.string.birdie_name;
-            case NASH:
-                return R.string.nash_name;
-            case CAMMY:
-                return R.string.cammy_name;
-            case KEN:
-                return R.string.ken_name;
-            case MIKA:
-                return R.string.mika_name;
-            case NECALLI:
-                return R.string.necalli_name;
-            case CLAW:
-                return R.string.claw_name;
-            case RASHID:
-                return R.string.rashid_name;
-            case KARIN:
-                return R.string.karin_name;
-            case LAURA:
-                return R.string.laura_name;
-            case DHALSIM:
-                return R.string.dhalsim_name;
-            case ZANGIEF:
-                return R.string.zangief_name;
-            case FANG:
-                return R.string.fang_name;
-            default:
-                throw new RuntimeException("unable to resolve character name: " + targetCharacter);
+    private class GeneralNotesClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            //general notes clicked
+            Log.d("findme", "clicked general notes for : " + targetCharacter.toString());
+            listener.onGeneralNoteSelected(targetCharacter);
         }
     }
 
+    private class MatchupNotesClickListener implements View.OnClickListener {
 
+        private CharacterID opponentCharacterId;
+
+        public MatchupNotesClickListener(CharacterID opponentCharactedId) {
+            this.opponentCharacterId = opponentCharactedId;
+        }
+
+        @Override
+        public void onClick(View view) {
+            //matchup clicked
+            Log.d("findme", "clicked matchup notes for : " + targetCharacter.toString() + " vs " + opponentCharacterId.toString());
+            listener.onMatchupNoteSelected(targetCharacter, opponentCharacterId);
+        }
+    }
+
+    public interface INotesSelectionListener {
+        void onGeneralNoteSelected(CharacterID characterID);
+        void onMatchupNoteSelected(CharacterID firstCharacter, CharacterID secondCharacter);
+    }
 }

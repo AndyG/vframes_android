@@ -43,20 +43,48 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
             case MOVE_LIST_POSITION:
                 return new MoveListFragment();
             case FRAME_DATA_POSITION:
-                FrameDataFragment frameDataFragment = new FrameDataFragment();
-                Bundle bundle = new Bundle();
-                bundle.putSerializable(FrameDataFragment.CHARACTER_ID, characterId);
-                frameDataFragment.setArguments(bundle);
-                return frameDataFragment;
+                return createFrameDataFragment();
             case BNBS_POSITION:
-                return new BreadAndButterFragment();
+                return createBreadAndButterFragment();
             case RECOMMENDED_VIDEOS_POSITION:
-                return new RecommendedVideosFragment();
+                return createRecommendedVideosFragment();
             case NOTES_POSITION:
-                return new NotesFragment();
+                return createNotesFragment();
             default:
                 throw new RuntimeException("invalid position: " + position);
         }
+    }
+
+    private Fragment createRecommendedVideosFragment() {
+        RecommendedVideosFragment recommendedVideosFragment = new RecommendedVideosFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(RecommendedVideosFragment.CHARACTER_ID, characterId);
+        recommendedVideosFragment.setArguments(bundle);
+        return recommendedVideosFragment;
+    }
+
+    private Fragment createBreadAndButterFragment() {
+        BreadAndButterFragment breadAndButterFragment= new BreadAndButterFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(BreadAndButterFragment.CHARACTER_ID, characterId);
+        breadAndButterFragment.setArguments(bundle);
+        return breadAndButterFragment;
+    }
+
+    private Fragment createFrameDataFragment() {
+        FrameDataFragment frameDataFragment = new FrameDataFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(FrameDataFragment.CHARACTER_ID, characterId);
+        frameDataFragment.setArguments(bundle);
+        return frameDataFragment;
+    }
+
+    private Fragment createNotesFragment() {
+        NotesFragment notesFragment = new NotesFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(NotesFragment.CHARACTER_ID, characterId);
+        notesFragment.setArguments(bundle);
+        return notesFragment;
     }
 
     @Override
