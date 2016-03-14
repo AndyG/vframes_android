@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/notes_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/summary_toolbar_style" />
+
+    <LinearLayout
+        android:id="@+id/text_controls"
+        android:background="@color/description_background"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/bold_button"
+            style="@style/text_control_style"
+            android:src="@drawable/logo" />
+
+        <ImageButton
+            android:id="@+id/italics_button"
+            style="@style/text_control_style"
+            android:src="@drawable/fire_logo"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/notes_edit_text"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
