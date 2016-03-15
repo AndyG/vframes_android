@@ -49,7 +49,14 @@ public class FrameDataFragment extends Fragment implements CompoundButton.OnChec
         }
 
         frameData = getFrameData();
+        if(frameData != null) {
+            return setupRecyclerView(inflater, container);
+        } else {
+            return inflater.inflate(R.layout.frame_data_upcoming, container, false);
+        }
+    }
 
+    private View setupRecyclerView(LayoutInflater inflater, ViewGroup container) {
         LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.frame_data_layout, container, false);
 
         alternateFrameDataSwitch = (Switch) linearLayout.findViewById(R.id.alternate_frame_data_switch);
@@ -113,10 +120,13 @@ public class FrameDataFragment extends Fragment implements CompoundButton.OnChec
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (savedInstanceState != null) {
-            showingAlternateFrameData = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED, false);
-            setShowAlternateFrameData(showingAlternateFrameData);
+        if (frameData != null) {
+            if (savedInstanceState != null) {
+                showingAlternateFrameData = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED, false);
+                setShowAlternateFrameData(showingAlternateFrameData);
+            }
         }
+
     }
 
     public void setShowAlternateFrameData(boolean showAlternateFrameData) {
