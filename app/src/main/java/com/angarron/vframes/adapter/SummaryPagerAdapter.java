@@ -1,6 +1,7 @@
 package com.angarron.vframes.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -12,6 +13,8 @@ import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.ui.fragment.NotesFragment;
 import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
 
+import data.model.CharacterID;
+
 public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
 
     private static final int FRAME_DATA_POSITION = 0;
@@ -21,10 +24,12 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
     private static final int NOTES_POSITION = 4;
 
     private Context context;
+    private CharacterID characterId;
 
-    public SummaryPagerAdapter(Context context, FragmentManager fm) {
+    public SummaryPagerAdapter(Context context, FragmentManager fm, CharacterID characterId) {
         super(fm);
         this.context = context;
+        this.characterId = characterId;
     }
 
     @Override
@@ -38,7 +43,11 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
             case MOVE_LIST_POSITION:
                 return new MoveListFragment();
             case FRAME_DATA_POSITION:
-                return new FrameDataFragment();
+                FrameDataFragment frameDataFragment = new FrameDataFragment();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(FrameDataFragment.CHARACTER_ID, characterId);
+                frameDataFragment.setArguments(bundle);
+                return frameDataFragment;
             case BNBS_POSITION:
                 return new BreadAndButterFragment();
             case RECOMMENDED_VIDEOS_POSITION:

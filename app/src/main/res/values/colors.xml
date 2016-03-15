@@ -9,6 +9,7 @@
 
     <!-- Character Select -->
     <color name="character_selector_grid_background">#EEEEEE</color>
+    <color name="highlighted_character_card">#19000000</color>
 
     <!-- Character Summary -->
     <color name="character_summary_toolbar_text_color">#f5f5f5</color>
@@ -63,4 +64,6 @@
     <color name="frame_data_row_alternate_background_unshaded">#ffebeb</color>
     <color name="navigation_drawer_background">#9f3636</color>
 
+    <drawable name="selected_color">#1a000000</drawable>
+    <drawable name="transparent">#00ffffff</drawable>
 </resources>

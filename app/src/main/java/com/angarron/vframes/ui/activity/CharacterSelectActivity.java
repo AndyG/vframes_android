@@ -9,16 +9,19 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
@@ -38,6 +41,7 @@ public class CharacterSelectActivity extends NavigationHostActivity {
     private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
     private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
+    private static final String CAN_COMPARE_CHARACTERS_SEEN = "CAN_COMPARE_CHARACTERS_SEEN";
 
     //Fabric Answers Events
     private static final String LOAD_NETWORK_DATA_EVENT = "Load Custom Data";
@@ -46,19 +50,62 @@ public class CharacterSelectActivity extends NavigationHostActivity {
     private static final String LOAD_FAILURE_REASON_KEY = "Failure Reason";
 
     private ProgressDialog progressDialog;
+    private CharacterID highlightedCharacter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_select);
 
-        if(shouldShowReviewRequestDialog()) {
-            showReviewRequestDialog();
-        }
+        showWelcomeDialog();
 
         verifyDataAvailable();
         setupToolbar();
         setupClickListeners();
+    }
+
+    private void showWelcomeDialog() {
+        if (shouldShowReviewRequestDialog()) {
+            showReviewRequestDialog();
+        } else if (shouldShowCanCompareDialog()) {
+            showCanCompareDialog();
+        }
+    }
+
+    private void showCanCompareDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.can_compare_message)
+                .setTitle(R.string.can_compare_title);
+
+        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //no-op
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+
+        //Users often immediately touch the screen when they enter the CharacterSelectActivity,
+        //which would result in accidentally dismissing the dialog without reading it.
+        dialog.setCanceledOnTouchOutside(false);
+
+        dialog.show();
+    }
+
+    private boolean shouldShowCanCompareDialog() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+        boolean reviewRequestSeen = sharedPreferences.getBoolean(CAN_COMPARE_CHARACTERS_SEEN, false);
+
+        if(appLaunchCount >= 2 && !reviewRequestSeen) {
+            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+            sharedPreferencesEditor.putBoolean(CAN_COMPARE_CHARACTERS_SEEN, true);
+            sharedPreferencesEditor.apply();
+            return true;
+        }
+
+        return false;
     }
 
     private void showDataUpdatedDialog() {
@@ -143,6 +190,7 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         GridLayout charactersGrid = (GridLayout) findViewById(R.id.character_select_gridlayout);
         for (int i = 0; i < charactersGrid.getChildCount(); i++) {
             charactersGrid.getChildAt(i).setOnClickListener(characterCardClickListener);
+            charactersGrid.getChildAt(i).setOnLongClickListener(characterCardClickListener);
         }
     }
 
@@ -155,77 +203,122 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         }
     }
 
-    private class CharacterCardClickListener implements View.OnClickListener {
+    private class CharacterCardClickListener implements View.OnClickListener, View.OnLongClickListener {
 
         @Override
         public void onClick(View view) {
-            CharacterID clickedCharacter;
+            CharacterID clickedCharacter = getClickedCharacter(view.getId());
 
-            switch (view.getId()) {
-                case R.id.birdie_card:
-                    clickedCharacter = CharacterID.BIRDIE;
-                    break;
-                case R.id.cammy_card:
-                    clickedCharacter = CharacterID.CAMMY;
-                    break;
-                case R.id.ryu_card:
-                    clickedCharacter = CharacterID.RYU;
-                    break;
-                case R.id.chun_card:
-                    clickedCharacter = CharacterID.CHUN;
-                    break;
-                case R.id.dictator_card:
-                    clickedCharacter = CharacterID.DICTATOR;
-                    break;
-                case R.id.nash_card:
-                    clickedCharacter = CharacterID.NASH;
-                    break;
-                case R.id.fang_card:
-                    clickedCharacter = CharacterID.FANG;
-                    break;
-                case R.id.laura_card:
-                    clickedCharacter = CharacterID.LAURA;
-                    break;
-                case R.id.karin_card:
-                    clickedCharacter = CharacterID.KARIN;
-                    break;
-                case R.id.mika_card:
-                    clickedCharacter = CharacterID.MIKA;
-                    break;
-                case R.id.zangief_card:
-                    clickedCharacter = CharacterID.ZANGIEF;
-                    break;
-                case R.id.necalli_card:
-                    clickedCharacter = CharacterID.NECALLI;
-                    break;
-                case R.id.claw_card:
-                    clickedCharacter = CharacterID.CLAW;
-                    break;
-                case R.id.dhalsim_card:
-                    clickedCharacter = CharacterID.DHALSIM;
-                    break;
-                case R.id.ken_card:
-                    clickedCharacter = CharacterID.KEN;
-                    break;
-                case R.id.rashid_card:
-                    clickedCharacter = CharacterID.RASHID;
-                    break;
-                default:
-                    throw new RuntimeException("clicked invalid character card");
-            }
-
-            Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
-            intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
-
-            if (shouldAnimateTransition()) {
-                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(CharacterSelectActivity.this,
-                        getImageViewForCharacter(view, clickedCharacter),
-                        getString(R.string.character_select_transition));
-
-                startActivity(intent, options.toBundle());
+            if (highlightedCharacter == null) {
+                startCharacterActivity(clickedCharacter, (ImageView) getImageViewForCharacter(clickedCharacter));
             } else {
-                startActivity(intent);
+                startCharacterComparisonActivity(highlightedCharacter, clickedCharacter);
             }
+        }
+
+        @Override
+        public boolean onLongClick(View view) {
+            //If no character is selected, select this character
+            CharacterID clickedCharacter = getClickedCharacter(view.getId());
+
+            if (highlightedCharacter == null) {
+                highlightCharacter(clickedCharacter);
+            } else if (highlightedCharacter != clickedCharacter) {
+                unhighlightCharacter();
+                highlightCharacter(clickedCharacter);
+            } else {
+                unhighlightCharacter();
+            }
+
+            return true;
+        }
+    }
+
+    private void highlightCharacter(CharacterID characterId) {
+        highlightedCharacter = characterId;
+        ImageView imageView = (ImageView) getImageViewForCharacter(highlightedCharacter);
+        imageView.setSelected(true);
+    }
+
+    private void startCharacterComparisonActivity(CharacterID firstCharacter, CharacterID secondCharacter) {
+        unhighlightCharacter();
+
+        Intent intent = new Intent(this, CharacterComparisonActivity.class);
+        intent.putExtra(CharacterComparisonActivity.INTENT_EXTRA_FIRST_CHARACTER, firstCharacter);
+        intent.putExtra(CharacterComparisonActivity.INTENT_EXTRA_SECOND_CHARACTER, secondCharacter);
+
+        if (shouldAnimateTransition()) {
+
+            Pair<View, String> first = new Pair<>(getImageViewForCharacter(firstCharacter), getString(R.string.comparison_first_character_transition));
+            Pair<View, String> second = new Pair<>(getImageViewForCharacter(secondCharacter), getString(R.string.comparison_second_character_transition));
+
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this,
+                    first, second);
+
+            startActivity(intent, options.toBundle());
+        } else {
+            startActivity(intent);
+        }
+    }
+
+    private void unhighlightCharacter() {
+        Log.d("findme", "unselected character");
+        ImageView imageView = (ImageView) getImageViewForCharacter(highlightedCharacter);
+        imageView.setSelected(false);
+        highlightedCharacter = null;
+    }
+
+    private void startCharacterActivity(CharacterID clickedCharacter, ImageView imageViewForCharacter) {
+        Intent intent = new Intent(CharacterSelectActivity.this, CharacterSummaryActivity.class);
+        intent.putExtra(CharacterSummaryActivity.INTENT_EXTRA_TARGET_CHARACTER, clickedCharacter);
+
+        if (shouldAnimateTransition()) {
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(CharacterSelectActivity.this,
+                    imageViewForCharacter,
+                    getString(R.string.character_select_transition));
+
+            startActivity(intent, options.toBundle());
+        } else {
+            startActivity(intent);
+        }
+    }
+
+    private CharacterID getClickedCharacter(int viewId) {
+        switch (viewId) {
+            case R.id.birdie_card:
+                return CharacterID.BIRDIE;
+            case R.id.cammy_card:
+                return CharacterID.CAMMY;
+            case R.id.ryu_card:
+                return CharacterID.RYU;
+            case R.id.chun_card:
+                return CharacterID.CHUN;
+            case R.id.dictator_card:
+                return CharacterID.DICTATOR;
+            case R.id.nash_card:
+                return CharacterID.NASH;
+            case R.id.fang_card:
+                return CharacterID.FANG;
+            case R.id.laura_card:
+                return CharacterID.LAURA;
+            case R.id.karin_card:
+                return CharacterID.KARIN;
+            case R.id.mika_card:
+                return CharacterID.MIKA;
+            case R.id.zangief_card:
+                return CharacterID.ZANGIEF;
+            case R.id.necalli_card:
+                return CharacterID.NECALLI;
+            case R.id.claw_card:
+                return CharacterID.CLAW;
+            case R.id.dhalsim_card:
+                return CharacterID.DHALSIM;
+            case R.id.ken_card:
+                return CharacterID.KEN;
+            case R.id.rashid_card:
+                return CharacterID.RASHID;
+            default:
+                throw new RuntimeException("clicked invalid character card");
         }
     }
 
@@ -244,41 +337,80 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         return true;
     }
 
-
-    private View getImageViewForCharacter(View view, CharacterID characterID) {
+    private View getCardViewForCharacter(CharacterID characterID) {
         switch (characterID) {
             case RYU:
-                return view.findViewById(R.id.ryu_image_view);
+                return findViewById(R.id.ryu_card);
             case CHUN:
-                return view.findViewById(R.id.chun_image_view);
+                return findViewById(R.id.chun_card);
             case DICTATOR:
-                return view.findViewById(R.id.dictator_image_view);
+                return findViewById(R.id.dictator_card);
             case BIRDIE:
-                return view.findViewById(R.id.birdie_image_view);
+                return findViewById(R.id.birdie_card);
             case NASH:
-                return view.findViewById(R.id.nash_image_view);
+                return findViewById(R.id.nash_card);
             case CAMMY:
-                return view.findViewById(R.id.cammy_image_view);
+                return findViewById(R.id.cammy_card);
             case CLAW:
-                return view.findViewById(R.id.claw_image_view);
+                return findViewById(R.id.claw_card);
             case LAURA:
-                return view.findViewById(R.id.laura_image_view);
+                return findViewById(R.id.laura_card);
             case KEN:
-                return view.findViewById(R.id.ken_image_view);
+                return findViewById(R.id.ken_card);
             case NECALLI:
-                return view.findViewById(R.id.necalli_image_view);
+                return findViewById(R.id.necalli_card);
             case RASHID:
-                return view.findViewById(R.id.rashid_image_view);
+                return findViewById(R.id.rashid_card);
             case MIKA:
-                return view.findViewById(R.id.mika_image_view);
+                return findViewById(R.id.mika_card);
             case ZANGIEF:
-                return view.findViewById(R.id.zangief_image_view);
+                return findViewById(R.id.zangief_card);
             case FANG:
-                return view.findViewById(R.id.fang_image_view);
+                return findViewById(R.id.fang_card);
             case DHALSIM:
-                return view.findViewById(R.id.dhalsim_image_view);
+                return findViewById(R.id.dhalsim_card);
             case KARIN:
-                return view.findViewById(R.id.karin_image_view);
+                return findViewById(R.id.karin_card);
+            default:
+                throw new IllegalArgumentException("invalid character clicked: " + characterID.toString());
+        }
+    }
+
+
+    private View getImageViewForCharacter(CharacterID characterID) {
+        switch (characterID) {
+            case RYU:
+                return findViewById(R.id.ryu_image_view);
+            case CHUN:
+                return findViewById(R.id.chun_image_view);
+            case DICTATOR:
+                return findViewById(R.id.dictator_image_view);
+            case BIRDIE:
+                return findViewById(R.id.birdie_image_view);
+            case NASH:
+                return findViewById(R.id.nash_image_view);
+            case CAMMY:
+                return findViewById(R.id.cammy_image_view);
+            case CLAW:
+                return findViewById(R.id.claw_image_view);
+            case LAURA:
+                return findViewById(R.id.laura_image_view);
+            case KEN:
+                return findViewById(R.id.ken_image_view);
+            case NECALLI:
+                return findViewById(R.id.necalli_image_view);
+            case RASHID:
+                return findViewById(R.id.rashid_image_view);
+            case MIKA:
+                return findViewById(R.id.mika_image_view);
+            case ZANGIEF:
+                return findViewById(R.id.zangief_image_view);
+            case FANG:
+                return findViewById(R.id.fang_image_view);
+            case DHALSIM:
+                return findViewById(R.id.dhalsim_image_view);
+            case KARIN:
+                return findViewById(R.id.karin_image_view);
             default:
                 throw new IllegalArgumentException("invalid character clicked: " + characterID.toString());
         }
