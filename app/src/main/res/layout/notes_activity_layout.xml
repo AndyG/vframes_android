@@ -9,25 +9,44 @@
         android:layout_height="?attr/actionBarSize"
         style="@style/summary_toolbar_style" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/text_controls"
-        android:background="@color/description_background"
-        android:orientation="horizontal"
-        android:layout_gravity="right"
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
-        <ImageButton
-            android:id="@+id/bold_button"
-            style="@style/text_control_style"
-            android:src="@drawable/logo" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
 
-        <ImageButton
-            android:id="@+id/italics_button"
-            style="@style/text_control_style"
-            android:src="@drawable/fire_logo"/>
+            <ImageButton
+                android:id="@+id/bold_button"
+                style="@style/text_control_style"
+                android:src="@drawable/bold_icon" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/italics_button"
+                style="@style/text_control_style"
+                android:src="@drawable/italic_icon"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/black"/>
+
+            <ImageButton
+                android:id="@+id/save_button"
+                style="@style/text_control_style"
+                android:src="@drawable/save_icon"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/notes_edit_text"

@@ -94,7 +94,6 @@
     </style>
 
     <style name="text_control_style">
-        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:scaleType">fitCenter</item>

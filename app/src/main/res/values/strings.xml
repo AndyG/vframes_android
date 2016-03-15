@@ -390,8 +390,12 @@
     <!-- Notes -->
     <string name="notes_general">General</string>
     <string name="matchups">Matchups</string>
-    <string name="general_notes_format">General %1$s Notes</string>
+    <string name="general_notes_format">%1$s General Notes</string>
     <string name="matchup_notes_format">vs. %1$s</string>
+    <string name="save_changes">Save your changes?</string>
+    <string name="ok">OK</string>
+    <string name="Nevermind">Nevermind</string>
+    <string name="saved_your_changes">Changes saved successfully.</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>
