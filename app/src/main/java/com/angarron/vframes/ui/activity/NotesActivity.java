@@ -197,7 +197,7 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
                         //no-op
                     }
                 })
-                .setNegativeButton(R.string.ignore_changes,
+                .setNegativeButton(R.string.discard_changes,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 finish();

@@ -394,7 +394,7 @@
     <string name="matchup_notes_format">vs. %1$s</string>
     <string name="save_changes">Save your changes?</string>
     <string name="ok">OK</string>
-    <string name="ignore_changes">Ignore</string>
+    <string name="discard_changes">Discard</string>
     <string name="saved_your_changes">Changes saved successfully.</string>
     <string name="keep_writing">Keep Writing</string>
     <string name="general_notes_text_format">Take General %1$s Notes</string>
