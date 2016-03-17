@@ -11,7 +11,6 @@ import android.text.TextWatcher;
 import android.text.style.CharacterStyle;
 import android.text.style.StyleSpan;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Checkable;
@@ -55,8 +54,6 @@ public class RichEditor extends EditText {
      */
     private void toggleStyle(int style) {
 
-        Log.d("findme", "toggle style called with style: " + style);
-
         int selectionStart = this.getSelectionStart();
         int selectionEnd = this.getSelectionEnd();
 
@@ -84,13 +81,8 @@ public class RichEditor extends EditText {
                     int styleStart = text.getSpanStart(styleSpan);
                     int styleEnd = text.getSpanEnd(styleSpan);
 
-                    Log.d("findme", "applying style to selection: " + selectionStart + ", " + selectionEnd);
-
                     Range preSelectionRange = new Range(styleStart, selectionStart);
                     Range postSelectionRange = new Range(selectionEnd, styleEnd);
-
-                    Log.d("findme", "preSelectionRange: " + preSelectionRange);
-                    Log.d("findme", "postSelectionRange: " + postSelectionRange);
 
                     if (preSelectionRange.isValid()) {
                         text.setSpan(new StyleSpan(style), preSelectionRange.start, preSelectionRange.end,
@@ -111,11 +103,8 @@ public class RichEditor extends EditText {
                 }
             }
 
-            Log.d("findme", "style exists: " + exists);
-
             // Else we set style on it
             if (!exists) {
-                Log.d("findme", "style did not exist, setting it on: " + new Range(selectionStart, selectionEnd));
                 text.setSpan(new StyleSpan(style), selectionStart, selectionEnd, SPAN_TYPE);
                 checkButton(style);
             }
@@ -211,7 +200,6 @@ public class RichEditor extends EditText {
         if (boldToggle != null) {
             if (boldExists) {
                 setChecked(boldToggle, true);
-                Log.d("findme", "setting bold checked");
             } else {
                 setChecked(boldToggle, false);
             }
@@ -220,7 +208,6 @@ public class RichEditor extends EditText {
         if (italicsToggle != null) {
             if (italicsExists) {
                 setChecked(italicsToggle, true);
-                Log.d("findme", "setting italics checked");
             }
             else {
                 setChecked(italicsToggle, false);
