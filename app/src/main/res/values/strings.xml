@@ -398,6 +398,7 @@
     <string name="saved_your_changes">Changes saved successfully.</string>
     <string name="keep_writing">Keep Writing</string>
     <string name="general_notes_text_format">Take General %1$s Notes</string>
+    <string name="pick_a_matchup">Or pick a matchup:</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>

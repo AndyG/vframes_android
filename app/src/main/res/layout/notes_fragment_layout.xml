@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Or pick a matchup: "
+            android:text="@string/pick_a_matchup"
             android:layout_gravity="center_horizontal"
             android:textSize="25sp"/>
 
