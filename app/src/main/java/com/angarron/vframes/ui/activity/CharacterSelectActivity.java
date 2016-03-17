@@ -40,8 +40,10 @@ public class CharacterSelectActivity extends NavigationHostActivity {
 
     private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
+
     private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
     private static final String CAN_COMPARE_CHARACTERS_SEEN = "CAN_COMPARE_CHARACTERS_SEEN";
+    private static final String CAN_TAKE_NOTES_SEEN = "CAN_TAKE_NOTES_SEEN";
 
     //Fabric Answers Events
     private static final String LOAD_NETWORK_DATA_EVENT = "Load Custom Data";
@@ -69,7 +71,45 @@ public class CharacterSelectActivity extends NavigationHostActivity {
             showReviewRequestDialog();
         } else if (shouldShowCanCompareDialog()) {
             showCanCompareDialog();
+        } else if (shouldShowCanTakeNotesDialog()) {
+            //TODO: remove this in the next version
+            showCanTakeNotesDialog();
         }
+    }
+
+    private void showCanTakeNotesDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.can_take_notes_message)
+                .setTitle(R.string.can_take_notes_title);
+
+        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //no-op
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+
+        //Users often immediately touch the screen when they enter the CharacterSelectActivity,
+        //which would result in accidentally dismissing the dialog without reading it.
+        dialog.setCanceledOnTouchOutside(false);
+
+        dialog.show();
+    }
+
+    private boolean shouldShowCanTakeNotesDialog() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+        boolean canTakeNotesSeen = sharedPreferences.getBoolean(CAN_TAKE_NOTES_SEEN, false);
+
+        if(appLaunchCount >= 2 && !canTakeNotesSeen) {
+            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+            sharedPreferencesEditor.putBoolean(CAN_TAKE_NOTES_SEEN, true);
+            sharedPreferencesEditor.apply();
+            return true;
+        }
+
+        return false;
     }
 
     private void showCanCompareDialog() {

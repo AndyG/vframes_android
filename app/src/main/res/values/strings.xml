@@ -400,6 +400,9 @@
     <string name="general_notes_text_format">Take General %1$s Notes</string>
     <string name="pick_a_matchup">Or pick a matchup:</string>
 
+    <string name="can_take_notes_message">We\'ve added basic notes-taking capabilities to VFrames! Try it out for your favorite character and let us know if there are any issues. More text-editing functionality will be added over time.</string>
+    <string name="can_take_notes_title">Take Notes!</string>
+
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>
         <item>Move List</item>
