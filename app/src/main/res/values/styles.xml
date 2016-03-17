@@ -26,8 +26,13 @@
         <item name="cardElevation">@dimen/character_card_elevation</item>
     </style>
 
+    <style name="CharacterCardMini" parent="CharacterCard">
+        <item name="android:layout_height">@dimen/character_card_height_mini</item>
+    </style>
+
     <style name="CharacterCardImageStyle">
         <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">5dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">match_parent</item>

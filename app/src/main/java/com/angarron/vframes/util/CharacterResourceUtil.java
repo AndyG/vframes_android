@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
 
 import com.angarron.vframes.R;
+import com.angarron.vframes.ui.activity.CharacterSummaryActivity;
 
 import data.model.CharacterID;
 
@@ -89,6 +90,45 @@ public class CharacterResourceUtil {
                 return R.string.fang_name;
             default:
                 throw new RuntimeException("unable to resolve character name: " + characterID);
+        }
+    }
+
+    public static int getCharacterBannerResource(CharacterID targetCharacter) {
+        switch(targetCharacter) {
+            case RYU:
+                return R.drawable.ryu_card;
+            case CHUN:
+                return R.drawable.chun_card;
+            case DICTATOR:
+                return R.drawable.dictator_card;
+            case BIRDIE:
+                return R.drawable.birdie_card;
+            case NASH:
+                return R.drawable.nash_card;
+            case CAMMY:
+                return R.drawable.cammy_card;
+            case KEN:
+                return R.drawable.ken_card;
+            case MIKA:
+                return R.drawable.mika_card;
+            case NECALLI:
+                return R.drawable.necalli_card;
+            case CLAW:
+                return R.drawable.claw_card;
+            case RASHID:
+                return R.drawable.rashid_card;
+            case KARIN:
+                return R.drawable.karin_card;
+            case LAURA:
+                return R.drawable.laura_card;
+            case DHALSIM:
+                return R.drawable.dhalsim_card;
+            case ZANGIEF:
+                return R.drawable.zangief_card;
+            case FANG:
+                return R.drawable.fang_card;
+            default:
+                throw new RuntimeException("unable to resolve character drawable: " + targetCharacter);
         }
     }
 }

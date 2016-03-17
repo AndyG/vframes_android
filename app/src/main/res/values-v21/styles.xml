@@ -8,6 +8,7 @@
 
     <style name="CharacterCardImageStyle">
         <item name="android:transitionName">@string/character_select_transition</item>
+        <item name="android:layout_margin">5dp</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
