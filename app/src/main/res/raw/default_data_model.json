@@ -8602,9 +8602,9 @@
                             "recoveryFrames": 20, 
                             "stunValue": 150, 
                             "damageValue": 80, 
-                            "hitAdvantage": 1, 
-                            "activeFrames": 3, 
-                            "blockAdvantage": -4, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 4, 
+                            "blockAdvantage": -2, 
                             "startupFrames": 8
                         }
                     }, 
@@ -10112,7 +10112,7 @@
                     {
                         "type": "type_0", 
                         "alternateData": {
-                            "recoveryFrames": 21, 
+                            "recoveryFrames": 20, 
                             "description": "-1/+4 when cancelled into stance change.", 
                             "stunValue": 150, 
                             "damageValue": 80, 
@@ -10129,7 +10129,7 @@
                             "damageValue": 80, 
                             "hitAdvantage": 5, 
                             "activeFrames": 2, 
-                            "blockAdvantage": -3, 
+                            "blockAdvantage": -2, 
                             "startupFrames": 8
                         }
                     }, 
@@ -10819,7 +10819,7 @@
                             "damageValue": 70, 
                             "hitAdvantage": 4, 
                             "activeFrames": 3, 
-                            "blockAdvantage": 0, 
+                            "blockAdvantage": 1, 
                             "startupFrames": 37
                         }
                     }, 
@@ -10832,7 +10832,7 @@
                             "damageValue": 70, 
                             "hitAdvantage": 4, 
                             "activeFrames": 3, 
-                            "blockAdvantage": 1, 
+                            "blockAdvantage": 2, 
                             "startupFrames": 37
                         }
                     }, 
@@ -10845,7 +10845,7 @@
                             "damageValue": 70, 
                             "hitAdvantage": 4, 
                             "activeFrames": 3, 
-                            "blockAdvantage": 2, 
+                            "blockAdvantage": 3, 
                             "startupFrames": 37
                         }
                     }, 
@@ -10856,7 +10856,7 @@
                             "recoveryFrames": 11, 
                             "stunValue": 150, 
                             "damageValue": 130, 
-                            "hitAdvantage": 5, 
+                            "hitAdvantage": 6, 
                             "blockAdvantage": 1, 
                             "startupFrames": 30
                         }
