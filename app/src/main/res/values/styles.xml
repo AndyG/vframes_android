@@ -97,7 +97,7 @@
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:scaleType">fitCenter</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

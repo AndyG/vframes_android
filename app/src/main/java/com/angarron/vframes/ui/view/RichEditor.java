@@ -14,18 +14,17 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Checkable;
 import android.widget.EditText;
 import android.widget.ToggleButton;
-
-import java.lang.reflect.Type;
 
 public class RichEditor extends EditText {
     
     private static final int SPAN_TYPE = Spannable.SPAN_EXCLUSIVE_INCLUSIVE;
 
     // Optional styling button references
-    private ToggleButton boldToggle;
-    private ToggleButton italicsToggle;
+    private Checkable boldToggle;
+    private Checkable italicsToggle;
 
     public RichEditor(Context context) {
         super(context);
@@ -136,15 +135,8 @@ public class RichEditor extends EditText {
         }
     }
 
-    private void setChecked(ToggleButton toggleButton, boolean b) {
+    private void setChecked(Checkable toggleButton, boolean b) {
         toggleButton.setChecked(b);
-        if (toggleButton == boldToggle && b) {
-            toggleButton.setTypeface(null, Typeface.BOLD);
-        } else if (toggleButton == italicsToggle && b) {
-            toggleButton.setTypeface(null, Typeface.ITALIC);
-        } else {
-            toggleButton.setTypeface(null, Typeface.NORMAL);
-        }
     }
 
     private void uncheckButton(int style) {
@@ -200,16 +192,16 @@ public class RichEditor extends EditText {
         else {
             CharacterStyle[] styleSpans = this.getText().getSpans(selStart, selEnd, CharacterStyle.class);
 
-            for (int i = 0; i < styleSpans.length; i++) {
-                if (styleSpans[i] instanceof StyleSpan) {
-                    if (((StyleSpan) styleSpans[i]).getStyle() == android.graphics.Typeface.BOLD) {
-                        if (this.getText().getSpanStart(styleSpans[i]) <= selStart
-                                && this.getText().getSpanEnd(styleSpans[i]) >= selEnd) {
+            for (CharacterStyle styleSpan : styleSpans) {
+                if (styleSpan instanceof StyleSpan) {
+                    if (((StyleSpan) styleSpan).getStyle() == Typeface.BOLD) {
+                        if (this.getText().getSpanStart(styleSpan) <= selStart
+                                && this.getText().getSpanEnd(styleSpan) >= selEnd) {
                             boldExists = true;
                         }
-                    } else if (((StyleSpan) styleSpans[i]).getStyle() == android.graphics.Typeface.ITALIC) {
-                        if (this.getText().getSpanStart(styleSpans[i]) <= selStart
-                                && this.getText().getSpanEnd(styleSpans[i]) >= selEnd) {
+                    } else if (((StyleSpan) styleSpan).getStyle() == Typeface.ITALIC) {
+                        if (this.getText().getSpanStart(styleSpan) <= selStart
+                                && this.getText().getSpanEnd(styleSpan) >= selEnd) {
                             italicsExists = true;
                         }
                     }
@@ -239,10 +231,10 @@ public class RichEditor extends EditText {
     }
 
     // Style toggle button setters
-    public void setBoldToggleButton(ToggleButton button) {
+    public void setBoldToggleButton(Checkable button) {
         boldToggle = button;
 
-        boldToggle.setOnClickListener(new Button.OnClickListener() {
+        ((View)boldToggle).setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 toggleStyle(Typeface.BOLD);
             }
@@ -252,7 +244,7 @@ public class RichEditor extends EditText {
     public void setItalicsToggleButton(ToggleButton button) {
         italicsToggle = button;
 
-        italicsToggle.setOnClickListener(new Button.OnClickListener() {
+        ((View)italicsToggle).setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 toggleStyle(Typeface.ITALIC);
             }
