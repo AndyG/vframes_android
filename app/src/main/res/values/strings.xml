@@ -394,8 +394,9 @@
     <string name="matchup_notes_format">vs. %1$s</string>
     <string name="save_changes">Save your changes?</string>
     <string name="ok">OK</string>
-    <string name="Nevermind">Nevermind</string>
+    <string name="ignore_changes">Ignore</string>
     <string name="saved_your_changes">Changes saved successfully.</string>
+    <string name="keep_writing">Keep Writing</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>

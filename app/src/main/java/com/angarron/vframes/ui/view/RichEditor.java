@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ToggleButton;
 
+import java.lang.reflect.Type;
+
 public class RichEditor extends EditText {
     
     private static final int SPAN_TYPE = Spannable.SPAN_EXCLUSIVE_INCLUSIVE;
@@ -126,21 +128,32 @@ public class RichEditor extends EditText {
     private void checkButton(int style) {
         switch(style) {
             case Typeface.BOLD:
-                boldToggle.setChecked(true);
+                setChecked(boldToggle, true);
                 break;
             case Typeface.ITALIC:
-                italicsToggle.setChecked(true);
+                setChecked(italicsToggle, true);
                 break;
+        }
+    }
+
+    private void setChecked(ToggleButton toggleButton, boolean b) {
+        toggleButton.setChecked(b);
+        if (toggleButton == boldToggle && b) {
+            toggleButton.setTypeface(null, Typeface.BOLD);
+        } else if (toggleButton == italicsToggle && b) {
+            toggleButton.setTypeface(null, Typeface.ITALIC);
+        } else {
+            toggleButton.setTypeface(null, Typeface.NORMAL);
         }
     }
 
     private void uncheckButton(int style) {
         switch(style) {
             case Typeface.BOLD:
-                boldToggle.setChecked(false);
+                setChecked(boldToggle, false);
                 break;
             case Typeface.ITALIC:
-                italicsToggle.setChecked(false);
+                setChecked(italicsToggle, false);
                 break;
         }
     }
@@ -207,20 +220,20 @@ public class RichEditor extends EditText {
         // Display the format settings
         if (boldToggle != null) {
             if (boldExists) {
-                boldToggle.setChecked(true);
+                setChecked(boldToggle, true);
                 Log.d("findme", "setting bold checked");
             } else {
-                boldToggle.setChecked(false);
+                setChecked(boldToggle, false);
             }
         }
 
         if (italicsToggle != null) {
             if (italicsExists) {
-                italicsToggle.setChecked(true);
+                setChecked(italicsToggle, true);
                 Log.d("findme", "setting italics checked");
             }
             else {
-                italicsToggle.setChecked(false);
+                setChecked(italicsToggle, false);
             }
         }
     }
@@ -357,11 +370,11 @@ public class RichEditor extends EditText {
         }
 
         if (boldToggle != null) {
-            boldToggle.setChecked(false);
+            setChecked(boldToggle, false);
         }
 
         if (italicsToggle != null) {
-            italicsToggle.setChecked(false);
+            setChecked(italicsToggle, false);
         }
 
     }

@@ -21,12 +21,15 @@
             android:layout_alignParentRight="true">
 
             <ToggleButton
+                android:textOff="B"
+                android:textOn="B"
                 android:id="@+id/bold_button"
-                android:text="Bold"
                 style="@style/text_control_style"
                 android:src="@drawable/bold_icon" />
 
             <ToggleButton
+                android:textOff="i"
+                android:textOn="i"
                 android:id="@+id/italics_button"
                 style="@style/text_control_style"
                 android:src="@drawable/italic_icon"/>
@@ -52,7 +55,7 @@
     <com.angarron.vframes.ui.view.RichEditor
         android:id="@+id/notes_edit_text"
         android:gravity="top"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

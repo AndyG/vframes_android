@@ -48,6 +48,7 @@ public class NotesFragment extends Fragment implements NotesRecyclerViewAdapter.
         intent.putExtra(NotesActivity.INTENT_EXTRA_NOTES_TYPE, NotesActivity.NOTES_TYPE_CHARACTER_GENERAL);
         intent.putExtra(NotesActivity.INTENT_EXTRA_CHARACTER, characterID);
         getActivity().startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.slide_in_up, R.anim.stay_still);
     }
 
     @Override
@@ -57,6 +58,7 @@ public class NotesFragment extends Fragment implements NotesRecyclerViewAdapter.
         intent.putExtra(NotesActivity.INTENT_EXTRA_CHARACTER, firstCharacter);
         intent.putExtra(NotesActivity.INTENT_EXTRA_SECOND_CHARACTER, secondCharacter);
         getActivity().startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.slide_in_up, R.anim.stay_still);
     }
 
 }

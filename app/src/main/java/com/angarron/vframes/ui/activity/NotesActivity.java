@@ -2,16 +2,13 @@ package com.angarron.vframes.ui.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.text.Spannable;
 import android.text.Spanned;
-import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -167,6 +164,12 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
         processBackPressed();
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.stay_still, R.anim.slide_out_down);
+    }
+
     private void processBackPressed() {
         String editTextContents = Html.toHtml(editText.getText());
         if (!editTextContents.equals(initialFileContents)) {
@@ -188,7 +191,13 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
                             }
                         }
                 )
-                .setNegativeButton(R.string.Nevermind,
+                .setNeutralButton(R.string.keep_writing, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //no-op
+                    }
+                })
+                .setNegativeButton(R.string.ignore_changes,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 finish();
