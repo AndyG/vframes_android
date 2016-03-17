@@ -16,10 +16,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.angarron.vframes.R;
+import com.angarron.vframes.ui.view.RichEditor;
 import com.angarron.vframes.util.CharacterResourceUtil;
 
 import org.apache.commons.io.FileUtils;
@@ -45,7 +46,7 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
 
     private static final String VFRAMES_NOTES_DIR = "VFramesNotes";
 
-    EditText editText;
+    RichEditor editText;
 
     File fileToEdit;
 
@@ -56,15 +57,15 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notes_activity_layout);
 
-        View boldButton = findViewById(R.id.bold_button);
-        View italicsButton = findViewById(R.id.italics_button);
+        ToggleButton boldButton = (ToggleButton) findViewById(R.id.bold_button);
+        ToggleButton italicsButton = (ToggleButton) findViewById(R.id.italics_button);
         View saveButton = findViewById(R.id.save_button);
 
-        boldButton.setOnClickListener(this);
-        italicsButton.setOnClickListener(this);
         saveButton.setOnClickListener(this);
 
-        editText = (EditText) findViewById(R.id.notes_edit_text);
+        editText = (RichEditor) findViewById(R.id.notes_edit_text);
+        editText.setBoldToggleButton(boldButton);
+        editText.setItalicsToggleButton(italicsButton);
 
         Intent intent = getIntent();
         if (intent.hasExtra(INTENT_EXTRA_NOTES_TYPE)) {
@@ -243,62 +244,9 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.bold_button:
-                boldText();
-                break;
-            case R.id.italics_button:
-                italicizeText();
-                break;
             case R.id.save_button:
                 saveFile();
                 break;
-        }
-    }
-
-    private void boldText() {
-        StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
-        applyStyleSpanToSelection(boldSpan);
-    }
-
-    private void italicizeText() {
-        StyleSpan italicsSpan = new StyleSpan(Typeface.ITALIC);
-        applyStyleSpanToSelection(italicsSpan);
-    }
-
-    private void applyStyleSpanToSelection(StyleSpan styleSpan) {
-        int selectionStart = editText.getSelectionStart();
-        int selectionEnd = editText.getSelectionEnd();
-
-        if (selectionStart > selectionEnd) {
-            int temp = selectionEnd;
-            selectionEnd = selectionStart;
-            selectionStart = temp;
-        }
-
-        if (selectionEnd > selectionStart) {
-
-            Spannable str = editText.getText();
-
-            StyleSpan[] spansInSelection = str.getSpans(selectionStart, selectionEnd, StyleSpan.class);
-
-            // If the selected text-part already has this style on it, then
-            // we need to remove it
-
-            boolean removed = false;
-            for (StyleSpan spanInSelection : spansInSelection) {
-                Log.d("findme", "inspecting span with style: " + spanInSelection.getStyle());
-                if (spanInSelection.getStyle() == styleSpan.getStyle()) {
-                    str.removeSpan(spanInSelection);
-                    removed = true;
-                } else {
-                    Log.d("findme", "span with style: " + spanInSelection.getStyle() + " did not match style: " + styleSpan.getStyle());
-                }
-            }
-
-            //Otherwise, add the style
-            if (!removed) {
-                str.setSpan(styleSpan, selectionStart, selectionEnd, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-            }
         }
     }
 
@@ -309,6 +257,10 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
             BufferedWriter bufferWritter = new BufferedWriter(fileWriter);
             Spanned text = editText.getText();
             String htmlText = Html.toHtml(text);
+
+            //Update the known data to the text being saved.
+            initialFileContents = htmlText;
+
             bufferWritter.write(htmlText);
             bufferWritter.close();
             Toast.makeText(this, R.string.saved_your_changes, Toast.LENGTH_SHORT).show();

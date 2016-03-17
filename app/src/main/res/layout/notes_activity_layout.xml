@@ -20,12 +20,13 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true">
 
-            <ImageButton
+            <ToggleButton
                 android:id="@+id/bold_button"
+                android:text="Bold"
                 style="@style/text_control_style"
                 android:src="@drawable/bold_icon" />
 
-            <ImageButton
+            <ToggleButton
                 android:id="@+id/italics_button"
                 style="@style/text_control_style"
                 android:src="@drawable/italic_icon"/>
@@ -48,9 +49,10 @@
 
     </RelativeLayout>
 
-    <EditText
+    <com.angarron.vframes.ui.view.RichEditor
         android:id="@+id/notes_edit_text"
         android:gravity="top"
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
