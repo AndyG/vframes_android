@@ -61,8 +61,7 @@
 
         <activity
             android:name="com.angarron.vframes.ui.activity.NotesActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTask">
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <!-- Crashlytics Integration -->

@@ -1,6 +1,6 @@
 package com.angarron.vframes.ui.fragment;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.ui.activity.NotesActivity;
 import com.angarron.vframes.util.CharacterResourceUtil;
 
 import data.model.CharacterID;
@@ -21,6 +20,14 @@ public class NotesFragment extends Fragment implements View.OnClickListener {
     public static final String CHARACTER_ID = "CHARACTER_ID";
 
     private CharacterID characterId;
+
+    private INotesFragmentHost host;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        host = (INotesFragmentHost) context;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,28 +65,11 @@ public class NotesFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-   private void onGeneralNoteSelected() {
-        Intent intent = new Intent(getActivity(), NotesActivity.class);
-        intent.putExtra(NotesActivity.INTENT_EXTRA_NOTES_TYPE, NotesActivity.NOTES_TYPE_CHARACTER_GENERAL);
-        intent.putExtra(NotesActivity.INTENT_EXTRA_CHARACTER, characterId);
-        getActivity().startActivity(intent);
-        getActivity().overridePendingTransition(R.anim.slide_in_up, R.anim.stay_still);
-    }
-
-    private void onMatchupNoteSelected(CharacterID secondCharacter) {
-        Intent intent = new Intent(getActivity(), NotesActivity.class);
-        intent.putExtra(NotesActivity.INTENT_EXTRA_NOTES_TYPE, NotesActivity.NOTES_TYPE_MATCHUP);
-        intent.putExtra(NotesActivity.INTENT_EXTRA_CHARACTER, characterId);
-        intent.putExtra(NotesActivity.INTENT_EXTRA_SECOND_CHARACTER, secondCharacter);
-        getActivity().startActivity(intent);
-        getActivity().overridePendingTransition(R.anim.slide_in_up, R.anim.stay_still);
-    }
-
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.general_notes_card:
-                onGeneralNoteSelected();
+                host.onGeneralNotesSelected();
         }
     }
 
@@ -87,7 +77,7 @@ public class NotesFragment extends Fragment implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             CharacterID clickedCharacter = getClickedCharacter(v.getId());
-            onMatchupNoteSelected(clickedCharacter);
+            host.onMatchupNotesSelected(clickedCharacter);
         }
     }
 
@@ -128,5 +118,10 @@ public class NotesFragment extends Fragment implements View.OnClickListener {
             default:
                 throw new RuntimeException("clicked invalid character card");
         }
+    }
+
+    public interface INotesFragmentHost {
+        void onGeneralNotesSelected();
+        void onMatchupNotesSelected(CharacterID matchupCharacter);
     }
 }

@@ -23,15 +23,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.SummaryPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
+import com.angarron.vframes.ui.fragment.NotesFragment;
 import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
 import com.angarron.vframes.util.CharacterResourceUtil;
+import com.angarron.vframes.util.CrashlyticsUtil;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
 
@@ -47,13 +48,14 @@ import data.model.move.MoveCategory;
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
         RecommendedVideosFragment.IRecommendedVideosFragmentHost,
+        NotesFragment.INotesFragmentHost,
         AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
 
     public static final String INTENT_EXTRA_TARGET_CHARACTER = "INTENT_EXTRA_TARGET_CHARACTER";
-    private static final String ALTERNATE_FRAME_DATA_SELECTED = "ALTERNATE_FRAME_DATA_SELECTED";
+
+    private static final int NOTES_ACTIVITY_REQUEST_CODE = 1;
 
     private CharacterID targetCharacter;
-    private boolean alternateFrameDataSelected = false;
 
     private ViewPager viewPager;
     private Spinner spinner;
@@ -78,11 +80,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
 
         //Verify the data is still available. If not, send to splash screen.
         if (dataIsAvailable()) {
-
-            if (savedInstanceState != null && savedInstanceState.containsKey(ALTERNATE_FRAME_DATA_SELECTED)) {
-                alternateFrameDataSelected = savedInstanceState.getBoolean(ALTERNATE_FRAME_DATA_SELECTED);
-            }
-
             //Load the toolbar based on the target character
             setupToolbar();
             setCharacterDetails();
@@ -133,12 +130,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
             default:
                 throw new RuntimeException("invalid menu item clicked");
         }
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putBoolean(ALTERNATE_FRAME_DATA_SELECTED, alternateFrameDataSelected);
     }
 
     //Move List Fragment Host
@@ -221,16 +212,6 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             startPostponedEnterTransition();
         }
-    }
-
-    private void showAlternateFrameDataToast() {
-        int stringRes;
-        if (targetCharacter != CharacterID.CLAW) {
-            stringRes = alternateFrameDataSelected ? R.string.showing_trigger_data : R.string.showing_non_trigger_data;
-        } else {
-            stringRes = alternateFrameDataSelected ? R.string.showing_claw_off_data : R.string.showing_claw_on_data;
-        }
-        Toast.makeText(this, stringRes, Toast.LENGTH_SHORT).show();
     }
 
     private void sendToSplashScreen() {
@@ -428,5 +409,33 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
     @Override
     public void onPageScrollStateChanged(int state) {
         //no-op
+    }
+
+    @Override
+    public void onGeneralNotesSelected() {
+        Intent intent = new Intent(this, NotesActivity.class);
+        intent.putExtra(NotesActivity.INTENT_EXTRA_NOTES_TYPE, NotesActivity.NOTES_TYPE_CHARACTER_GENERAL);
+        intent.putExtra(NotesActivity.INTENT_EXTRA_CHARACTER, targetCharacter);
+        startActivityForResult(intent, NOTES_ACTIVITY_REQUEST_CODE);
+        overridePendingTransition(R.anim.slide_in_up, R.anim.stay_still);
+    }
+
+    @Override
+    public void onMatchupNotesSelected(CharacterID secondCharacter) {
+        Intent intent = new Intent(this, NotesActivity.class);
+        intent.putExtra(NotesActivity.INTENT_EXTRA_NOTES_TYPE, NotesActivity.NOTES_TYPE_MATCHUP);
+        intent.putExtra(NotesActivity.INTENT_EXTRA_CHARACTER, targetCharacter);
+        intent.putExtra(NotesActivity.INTENT_EXTRA_SECOND_CHARACTER, secondCharacter);
+        startActivityForResult(intent, NOTES_ACTIVITY_REQUEST_CODE);
+        overridePendingTransition(R.anim.slide_in_up, R.anim.stay_still);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == NOTES_ACTIVITY_REQUEST_CODE) {
+            boolean didSaveNotes = data.getBooleanExtra(NotesActivity.DID_SAVE_NOTES, false);
+            CrashlyticsUtil.sendViewedNotesEvent(didSaveNotes);
+        }
     }
 }

@@ -3,9 +3,9 @@ package com.angarron.vframes.ui.view;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Editable;
-import android.text.Html;
 import android.text.Selection;
 import android.text.Spannable;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.CharacterStyle;
@@ -28,23 +28,21 @@ public class RichEditor extends EditText {
 
     public RichEditor(Context context) {
         super(context);
-        initialize();
     }
 
     public RichEditor(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initialize();
     }
 
     public RichEditor(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        initialize();
     }
 
-    private void initialize() {
+    public void initialize(Spanned htmlText) {
         // Add TextWatcher that reacts to text changes and applies the selected
         // styles
-        this.addTextChangedListener(new RichEditTextWatcher());
+        setText(htmlText);
+        addTextChangedListener(new RichEditTextWatcher());
     }
 
     /**

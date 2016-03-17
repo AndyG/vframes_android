@@ -1,5 +1,6 @@
 package com.angarron.vframes.ui.activity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,9 +30,6 @@ import java.io.IOException;
 
 import data.model.CharacterID;
 
-/**
- * Created by andy on 3/13/16
- */
 public class NotesActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String INTENT_EXTRA_NOTES_TYPE = "INTENT_EXTRA_NOTES_TYPE";
@@ -40,14 +38,15 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
 
     public static final String INTENT_EXTRA_CHARACTER = "INTENT_EXTRA_CHARACTER";
     public static final String INTENT_EXTRA_SECOND_CHARACTER ="INTENT_EXTRA_SECOND_CHARACTER";
+    public static final String DID_SAVE_NOTES = "DID_SAVE_NOTES";
 
     private static final String VFRAMES_NOTES_DIR = "VFramesNotes";
 
     RichEditor editText;
-
     File fileToEdit;
-
     String initialFileContents;
+
+    boolean didSaveNotes = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -166,6 +165,9 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void finish() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(DID_SAVE_NOTES, didSaveNotes);
+        setResult(Activity.RESULT_OK, resultIntent);
         super.finish();
         overridePendingTransition(R.anim.stay_still, R.anim.slide_out_down);
     }
@@ -225,7 +227,7 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
         try {
             initialFileContents = FileUtils.readFileToString(fileToEdit);
             Spanned displayText = Html.fromHtml(initialFileContents);
-            editText.setText(displayText);
+            editText.initialize(displayText);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -272,6 +274,7 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
 
             bufferWritter.write(htmlText);
             bufferWritter.close();
+            didSaveNotes = true;
             Toast.makeText(this, R.string.saved_your_changes, Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
