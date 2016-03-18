@@ -98,7 +98,7 @@
 
     <!-- Karin Movelist -->
     <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
-    <string name="karin_meioken_posttext">Hold buttons to change properties</string>
+    <string name="karin_meioken_posttext">Hold buttons to change properties.</string>
     <string name="karin_kanzuki_ryu_hokojutsu_sappo_description">Kick strength determines dash length.</string>
     <string name="karin_tenko_description">Enhanced version has faster startup and recovery, more damage, and higher launch height.</string>
     <string name="karin_orochi_description">EX version crumples opponent.</string>
@@ -119,7 +119,7 @@
     <string name="claw_during_flying_barcelona_attack">(During Flying Barcelona Attack)</string>
 
     <!-- Chun Movelist -->
-    <string name="chun_up_to_three_times">Up to 3 Times</string>
+    <string name="chun_up_to_three_times">Up to 3 times</string>
     <string name="chun_vtrigger_description">Adds additional hits to most normals, which extends blockstun and hitstun and introduces new combo possibilities.</string>
     <string name="chun_vskill_description">A diagonal jump which launches opponents on hit.</string>
     <string name="chun_senenshu_description">Hits overhead. Leads to combo in V-Trigger.</string>
@@ -135,17 +135,17 @@
     <string name="ken_airborne_tatsu_description">EX version attacks diagonally downward.</string>
     <string name="ken_vtrigger_description">Moves Ken forward, maintaining pressure or extending a combo. Afterward, Ken\'s special moves are faster and gain better hitboxes.</string>
     <string name="ken_vskill_description">Moves Ken forward. Holding the buttons performs a step kick.</string>
-    <string name="ken_thunder_kick_posttext">Tap to feint, hold to attack</string>
+    <string name="ken_thunder_kick_posttext">Tap to feint, hold to attack.</string>
 
     <!-- Zangief Movelist -->
     <string name="zangief_hold_buttons_for_special_lariat">Hold Buttons to Perform Special Lariat</string>
-    <string name="zangief_can_move_forward_while_holding_buttons">Can Move Forward While Holding Buttons</string>
+    <string name="zangief_can_move_forward_while_holding_buttons">Can move forward while holding buttons.</string>
     <string name="zangief_siberian_express_description">EX version is armored.</string>
     <string name="zangief_vtrigger_description">Vacuums opponent toward Zangief. By holding the buttons, Zangief will continue attacking and the lariat will gain hitboxes. V-Skill gains infinite armor.</string>
     <string name="zangief_vskill_description">Zangief gains one hit of armor (infinite hits in V-Trigger). Zangief attacks when the buttons are released.</string>
 
     <!--Dictator Movelist -->
-    <string name="dictator_psycho_reflect_hold_buttons">Hold Buttons to Throw Back a Projectile</string>
+    <string name="dictator_psycho_reflect_hold_buttons">Hold buttons to throw back a projectile</string>
     <string name="dictator_after_head_press">(After Head Press Hits)</string>
     <string name="dictator_before_head_press">(Before Head Press Hits)</string>
     <string name="dictator_psycho_blast_description">EX version launches a projectile.</string>
@@ -174,7 +174,7 @@
     <string name="mika_passion_rope_throw_posttext">Input direction determines throw direction</string>
 
     <!-- Rashid Movelist -->
-    <string name="rashid_repeat_buttons_to_extend">Repeat Button Presses to Extend</string>
+    <string name="rashid_repeat_buttons_to_extend">Repeat button presses to extend</string>
     <string name="rashid_vtrigger_description">Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.</string>
     <string name="rashid_vskill_divekick_pretext">(During Front Flip)</string>
     <string name="rashid_vskill_rollkick_pretext">(During Rolling Assault)</string>
@@ -206,7 +206,7 @@
 
     <!-- Laura Movelist -->
     <string name="laura_after_mp_or_ex_bolt_charge">(After MP or EX Bolt Charge)</string>
-    <string name="laura_hold_buttons_to_power_up">Hold Buttons to Power Up</string>
+    <string name="laura_hold_buttons_to_power_up">Hold buttons to power up</string>
     <string name="laura_bolt_charge_description">MP and EX versions can be followed up.\nHP version anti-airs.</string>
     <string name="laura_split_river_description">Leaves Laura behind opponent.</string>
     <string name="laura_rodeo_break_description">Leaves Laura in front of opponent.</string>
