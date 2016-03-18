@@ -1,7 +1,6 @@
 package data.json.move;
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
 
 import java.util.List;
 
@@ -11,18 +10,6 @@ import data.model.move.IMoveListEntry;
 import data.model.move.MoveListEntry;
 
 public class MoveListEntryJsonAdapter {
-
-    public static JsonObject MoveToJson(IMoveListEntry move) {
-        JsonObject jsonObject = new JsonObject();
-
-        jsonObject.add("name", new JsonPrimitive(move.getName()));
-        //jsonObject.add("input", new JsonPrimitive(move.getInputString()));
-        jsonObject.add("pretext", new JsonPrimitive(move.getPretext()));
-        jsonObject.add("posttext", new JsonPrimitive(move.getPosttext()));
-        jsonObject.add("description", new JsonPrimitive(move.getDescription()));
-
-        return jsonObject;
-    }
 
     public static IMoveListEntry JsonToMove(JsonObject moveJson) {
         InputParser inputParser = new InputParser();
