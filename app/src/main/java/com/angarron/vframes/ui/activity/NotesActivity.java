@@ -20,6 +20,7 @@ import android.widget.ToggleButton;
 import com.angarron.vframes.R;
 import com.angarron.vframes.ui.view.RichEditor;
 import com.angarron.vframes.util.CharacterResourceUtil;
+import com.angarron.vframes.util.FeedbackUtil;
 
 import org.apache.commons.io.FileUtils;
 
@@ -152,6 +153,9 @@ public class NotesActivity extends AppCompatActivity implements View.OnClickList
         switch(item.getItemId()) {
             case android.R.id.home:
                 processBackPressed();
+                return true;
+            case R.id.action_feedback:
+                FeedbackUtil.sendFeedback(this);
                 return true;
             default:
                 throw new RuntimeException("invalid menu item clicked");
