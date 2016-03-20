@@ -64,193 +64,12 @@
     <string name="vtrigger_header">V-Trigger</string>
     <string name="vreversal_header">V-Reversal</string>
 
-    <!-- Move List General Strings -->
-    <string name="close_to_opponent">(Close To Opponent)</string>
-    <string name="can_be_done_in_air">Can be done in air</string>
-    <string name="during_jump">(During Jump)</string>
-    <string name="during_forward_jump">(During Forward Jump)</string>
-    <string name="during_vertical_or_forward_jump">(During Vertical or Forward Jump)</string>
-    <string name="during_guard">(During Guard)</string>
-    <string name="hold_buttons_to_attack">Hold Buttons to Attack</string>
-    <string name="close_to_grounded_opponent">(Close to Grounded Opponent)</string>
-    <string name="close_to_airborne_opponent">(Close to Airborne Opponent)</string>
-    <string name="no_input">No Input</string>
-    <string name="or">Or</string>
-    <string name="hold_button">Hold Button</string>
-    <string name="during_jump_near_wall">(During Jump Near Wall)</string>
-    <string name="during_vtrigger">(During VTrigger)</string>
-    <string name="hold_and_release">Hold And Release</string>
-    <string name="close_to_crouching_opponent">(Close to Crouching Opponent)</string>
-    <string name="during_run">(During Run)</string>
-
-    <!-- Move Descriptions -->
-    <string name="hits_overhead">Hits overhead.</string>
-    <string name="hits_low">Hits low.</string>
-    <string name="command_grab">Command grab.</string>
-
-    <!-- Ryu Movelist -->
-    <string name="ryu_hadoken_description">Punch strength determines projectile speed.</string>
-    <string name="ryu_shoryuken_description">Startup invincibility on MP and EX versions.</string>
-    <string name="ryu_tatsu_description">Has projectile invincibility after startup.</string>
-    <string name="ryu_vtrigger_description">Powers up specials and gains ability to charge fireballs. Fully charged fireballs are unblockable.</string>
-    <string name="ryu_vskill_description">Parries an attack and builds some V-meter.</string>
-
-    <!-- Karin Movelist -->
-    <string name="karin_tenko_posttext">Press Punch immediately to perform enhanced version.</string>
-    <string name="karin_meioken_posttext">Hold buttons to change properties.</string>
-    <string name="karin_kanzuki_ryu_hokojutsu_sappo_description">Kick strength determines dash length.</string>
-    <string name="karin_tenko_description">Enhanced version has faster startup and recovery, more damage, and higher launch height.</string>
-    <string name="karin_orochi_description">EX version crumples opponent.</string>
-    <string name="karin_senha_resshu_description">Command grab that misses on crouching opponents.</string>
-    <string name="karin_vskill_description">Destroys projectiles with a palm strike.</string>
-    <string name="karin_vtrigger_description">Karin gains access to Guren Ken, a new special move with a number of followups.</string>
-    <string name="karin_mujinkyaku_description">LK version: safe on block.\nMK version: does an overhead.\nHK version: frame traps.</string>
-
-    <!-- Claw Movelist -->
-    <string name="claw_claw_off_only">(Claw Off Only)</string>
-    <string name="claw_claw_on_only">(Claw On Only)</string>
-    <string name="claw_switch">Switch to Claw On/Off</string>
-    <string name="claw_flying_barcelona_attack_description">EX version launches opponent airborne on the way up.</string>
-    <string name="claw_vskill_description">Has upper-body invincibility.</string>
-    <string name="claw_vtrigger_torero_description">Throws a rose straight forward. On hit or block, performs a follow-up attack.</string>
-    <string name="claw_vtrigger_rojo_description">Throws a rose at an upward angle. On hit or block, performs a follow-up attack.</string>
-    <string name="claw_vtrigger_azul_description">Throws a rose at a downward angle. On hit or block, performs a follow-up attack.</string>
-    <string name="claw_during_flying_barcelona_attack">(During Flying Barcelona Attack)</string>
-
-    <!-- Chun Movelist -->
-    <string name="chun_up_to_three_times">Up to 3 times</string>
-    <string name="chun_vtrigger_description">Adds additional hits to most normals, which extends blockstun and hitstun and introduces new combo possibilities.</string>
-    <string name="chun_vskill_description">A diagonal jump which launches opponents on hit.</string>
-    <string name="chun_senenshu_description">Hits overhead. Leads to combo in V-Trigger.</string>
-    <string name="chun_kikoken_description">Punch strength determines speed and distance.</string>
-    <string name="chun_airborne_lightning_legs_description">Changes momentum in air.</string>
-    <string name="chun_spinning_bird_kick_description">EX version has startup invincibility.</string>
-    <string name="chun_critical_art_description">Projectile invincible.</string>
-
-    <!-- Ken Movelist -->
-    <string name="ken_hadoken_description">Punch strength determines projectile speed.</string>
-    <string name="ken_shoryuken_description">Startup invincibility.</string>
-    <string name="ken_tatsu_description">LK version launches opponent. HK and EX versions rise off the ground.</string>
-    <string name="ken_airborne_tatsu_description">EX version attacks diagonally downward.</string>
-    <string name="ken_vtrigger_description">Moves Ken forward, maintaining pressure or extending a combo. Afterward, Ken\'s special moves are faster and gain better hitboxes.</string>
-    <string name="ken_vskill_description">Moves Ken forward. Holding the buttons performs a step kick.</string>
-    <string name="ken_thunder_kick_posttext">Tap to feint, hold to attack.</string>
-
-    <!-- Zangief Movelist -->
-    <string name="zangief_hold_buttons_for_special_lariat">Hold Buttons to Perform Special Lariat</string>
-    <string name="zangief_can_move_forward_while_holding_buttons">Can move forward while holding buttons.</string>
-    <string name="zangief_siberian_express_description">EX version is armored.</string>
-    <string name="zangief_vtrigger_description">Vacuums opponent toward Zangief. By holding the buttons, Zangief will continue attacking and the lariat will gain hitboxes. V-Skill gains infinite armor.</string>
-    <string name="zangief_vskill_description">Zangief gains one hit of armor (infinite hits in V-Trigger). Zangief attacks when the buttons are released.</string>
-
-    <!--Dictator Movelist -->
-    <string name="dictator_psycho_reflect_hold_buttons">Hold buttons to throw back a projectile</string>
-    <string name="dictator_after_head_press">(After Head Press Hits)</string>
-    <string name="dictator_before_head_press">(Before Head Press Hits)</string>
-    <string name="dictator_psycho_blast_description">EX version launches a projectile.</string>
-    <string name="dictator_devil_reverse_description">Crosses up while in V-Trigger</string>
-    <string name="dictator_vskill_description">Press buttons to absorb a projectile. Hold buttons to throw a projectile back.</string>
-    <string name="dictator_vtrigger_description">Special moves become cancellable into EX moves. Various special move properties change. Dashes gain ability to cross up.</string>
-
-    <!-- Birdie Movelist -->
-    <string name="birdie_hanging_chain_posttext">Chain Twirl: Hold Kick\nCancel: Press Punch</string>
-    <string name="birdie_bull_head_description">EX version gains armor.</string>
-    <string name="birdie_bull_horn_description">Has projectile invincibility. EX version gains armor.</string>
-    <string name="birdie_hanging_chain_description">Chain goes through projectiles.\nLK version: opponent lands close.\nMK version: opponent lands far.\nHK version anti-airs.</string>
-    <string name="birdie_killing_head_description">Punch strength determines number of hits.</string>
-    <string name="birdie_bull_revenger_description">Has projectile invincibility.</string>
-    <string name="birdie_vtrigger_description">Birdie deals more damage. Special moves become faster, multi-hitting, or gain armor.</string>
-
-    <!-- Mika Movelist -->
-    <string name="mika_shooting_peach_description">EX version has one hit of armor.</string>
-    <string name="mika_wingless_airplane_description">EX version has invincibility.</string>
-    <string name="mika_typhoon_description">Leaves Mika behind the opponent.</string>
-    <string name="mika_brimstone_description">Leaves Mika in front of the opponent.</string>
-    <string name="mika_vtrigger_posttext">Hold buttons to delay Nadeshiko</string>
-    <string name="mika_vskill_posttext">Hold buttons to extend speech</string>
-    <string name="mika_vskill_description">Mika delivers a speech, ending with a mic spike which has a projectile hitbox. The speech powers up command throws more the longer it goes on.</string>
-    <string name="mika_passion_rope_throw_pretext">(After Passion Press)</string>
-    <string name="mika_passion_rope_throw_posttext">Input direction determines throw direction</string>
-
-    <!-- Rashid Movelist -->
-    <string name="rashid_repeat_buttons_to_extend">Repeat button presses to extend</string>
-    <string name="rashid_vtrigger_description">Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.</string>
-    <string name="rashid_vskill_divekick_pretext">(During Front Flip)</string>
-    <string name="rashid_vskill_rollkick_pretext">(During Rolling Assault)</string>
-    <string name="rashid_spinning_mixer_description">EX version has startup invincibility.</string>
-    <string name="rashid_whirlwind_shot_description">HP and EX versions cancel into V-Skill and affect Rashid\'s trajectory.</string>
-
-    <!-- Rashid Frame Data -->
-    <string name="rashid_eagle_spike_on_block_description">Advantage on block based on a hit at opponent\'s feet.</string>
-
-    <!-- Nash Movelist -->
-    <string name="nash_press_for_second_boom">Press Punch During EX Version For A Second Projectile</string>
-    <string name="nash_sonic_boom_description">Punch strength determines projectile speed.</string>
-    <string name="nash_sonic_scythe_description">EX version has upper-body invincibility.</string>
-    <string name="nash_tragedy_assault_description">LP version steals 50 meter.\nMP version steals 100 meter.\nHP version steals 150 meter.\nEX version steals 30 health.</string>
-    <string name="nash_sonic_move_hide_description">Teleports behind opponent.</string>
-    <string name="nash_sonic_move_blitz_air_description">Teleports above and in front of opponent.</string>
-    <string name="nash_sonic_move_steel_air_description">Teleports above and behind of opponent.</string>
-    <string name="nash_critical_art_description">Projectile invincible.</string>
-    <string name="nash_vskill_description">A chop attack which can absorb a projectile, building V-Meter.</string>
-
-    <!-- Necalli Movelist -->
-    <string name="necalli_vskill_control_distance">Control Distance Using Direction</string>
-    <string name="necalli_disc_guidance_description">Has one hit of armor against projectiles.</string>
-    <string name="necalli_raging_light_description">Invincibility on HP and EX versions.</string>
-    <string name="necalli_mask_of_tlalli_description">EX version wall-bounces, allowing a followup attack.</string>
-    <string name="necalli_vtrigger_description">Necalli gains improved frame advantage, more range on Raging Light, and no longer requires charge to cancel into Disc\'s Guidance.</string>
-    <string name="necalli_vskill_description">Builds V-Meter on hit.</string>
-    <string name="necalli_opening_dagger_description">Hits overhead. Crush counters.</string>
-
-    <!-- Laura Movelist -->
-    <string name="laura_after_mp_or_ex_bolt_charge">(After MP or EX Bolt Charge)</string>
-    <string name="laura_hold_buttons_to_power_up">Hold buttons to power up</string>
-    <string name="laura_bolt_charge_description">MP and EX versions can be followed up.\nHP version anti-airs.</string>
-    <string name="laura_split_river_description">Leaves Laura behind opponent.</string>
-    <string name="laura_rodeo_break_description">Leaves Laura in front of opponent.</string>
-    <string name="laura_thunder_clap_description">Punch strength determines projectile speed and duration.</string>
-    <string name="laura_vtrigger_description">Adds stun and damage to Laura\'s attacks. Adds distance to V-Skill dash and increases hitstun and blockstun on V-Skill overhead.</string>
-    <string name="laura_vskill_overhead_description">Hits overhead.</string>
-    <string name="vskill_avante_description">Moves Laura forward.</string>
-    <string name="vskill_esquiva_description">Moves Laura backward. Can be cancelled into forward V-Skill.</string>
-
-    <!-- Cammy Movelist -->
-    <string name="cammy_during_hooligan">(During Hooligan)</string>
-    <string name="cammy_spiral_arrow_description">Kick strength determines distance.</string>
-    <string name="cammy_cannon_spike_description">Startup invincibility.</string>
-    <string name="cammy_cannon_strike_description">Kick strength determines angle.</string>
-    <string name="cammy_hooligan_combination_description">Can travel through opponent. Followups attack towards opponent.</string>
-    <string name="cammy_vtrigger_description">Makes specials faster and safer.</string>
-    <string name="cammy_vskill_description">Moves Cammy forward with projectile invincibility. Can combo on hit.</string>
-    <string name="hooligan_close_to_grounded_opponent">(During Hooligan, close to grounded opponent)</string>
-    <string name="hooligan_close_to_airborne_opponent">(During Hooligan, close to airborne opponent)</string>
-
-    <!-- Dhalsim Movelist -->
-    <string name="dhalsim_critical_art_posttext">Hold button to charge</string>
-    <string name="dhalsim_yoga_fire_description">Punch strength determines fire angle. EX version travels straight forward.</string>
-    <string name="dhalsim_yoga_flame_description">EX version launches opponent airborne.</string>
-    <string name="dhalsim_yoga_teleport_description">Input direction and type determines teleport location.</string>
-    <string name="dhalsim_vtrigger_description">Places fire on the ground that deals damage over time to opponents.</string>
-    <string name="dhalsim_vskill_description">Dhalsim floats. Duration can be shortened by performing an attack.</string>
-
-    <!-- Fang Movelist -->
-    <string name="fang_vskill_description">Shoots a projectile forward that applies poison if it touches the opponent. This attack causes no hitstun or blockstun.</string>
-    <string name="fang_vtrigger_description">A poisonous cloud surrounds F.A.N.G. Opponents in the cloud take damage over time.</string>
-    <string name="fang_critical_art_description">He turns into a bird.</string>
-
     <!-- Frame Data Cell Entries-->
     <string name="frame_data_knockdown">K/D</string>
     <string name="frame_data_not_applicable">-</string>
     <string name="frame_data_missing_value">\?</string>
     <string name="frame_data_guard_break">Guard Break</string>
     <string name="frame_data_crumple">Crumple</string>
-
-    <!-- Alternate Frame Data Messages -->
-    <string name="showing_trigger_data">Showing V-Trigger Active frame data</string>
-    <string name="showing_non_trigger_data">Showing V-Trigger Inactive frame data</string>
-    <string name="showing_claw_off_data">Showing Claw Off frame data</string>
-    <string name="showing_claw_on_data">Showing Claw On frame data</string>
 
     <!-- Character Banners -->
     <string name="health_format">Health: %s</string>
@@ -265,82 +84,66 @@
     <string name="ryu_title">Eternal Wanderer</string>
     <string name="ryu_health">1000</string>
     <string name="ryu_stun">1000</string>
-    <string name="ryu_style">Ansatsuken</string>
 
     <string name="chun_title">Blue Jade</string>
     <string name="chun_health">950</string>
     <string name="chun_stun">1000</string>
-    <string name="chun_style">Chinese Martial Arts</string>
 
     <string name="cammy_title">Killer Bee</string>
     <string name="cammy_health">900</string>
     <string name="cammy_stun">900</string>
-    <string name="cammy_style">Special Forces</string>
 
     <string name="birdie_title">Punk Glutton</string>
     <string name="birdie_health">1050</string>
     <string name="birdie_stun">1000</string>
-    <string name="birdie_style">Bar Room Brawling</string>
 
     <string name="nash_title">Returned Avenger</string>
     <string name="nash_health">950</string>
     <string name="nash_stun">950</string>
-    <string name="nash_style">Special Forces</string>
 
     <string name="mika_title">Rainbow Bomber</string>
     <string name="mika_health">950</string>
     <string name="mika_stun">1000</string>
-    <string name="mika_style">Pro Wrestling</string>
 
     <string name="dhalsim_title">Enlightened Flame</string>
     <string name="dhalsim_health">900</string>
     <string name="dhalsim_stun">950</string>
-    <string name="dhalsim_style">Esoteric Yoga</string>
 
     <string name="claw_title">Crimson Ninja</string>
     <string name="claw_health">1000</string>
     <string name="claw_stun">950</string>
-    <string name="claw_style">Spanish Ninjutsu</string>
 
     <string name="dictator_title">Psycho Emperor</string>
     <string name="dictator_health">1000</string>
     <string name="dictator_stun">950</string>
-    <string name="dictator_style">Psycho Power</string>
 
     <string name="necalli_title">Ancient Emissary</string>
     <string name="necalli_health">1000</string>
     <string name="necalli_stun">1000</string>
-    <string name="necalli_style">Violent Instincts</string>
 
     <string name="laura_title">Electric Judoka</string>
     <string name="laura_health">1000</string>
     <string name="laura_stun">1000</string>
-    <string name="laura_style">Brazilian Jiu-Jitsu</string>
 
     <string name="fang_title">Cunning Trickster</string>
     <string name="fang_health">950</string>
     <string name="fang_stun">950</string>
-    <string name="fang_style">Chinese Kempo</string>
 
     <string name="zangief_title">Iron Cyclone</string>
     <string name="zangief_health">1050</string>
     <string name="zangief_stun">1050</string>
-    <string name="zangief_style">Russian Wrestling</string>
 
     <string name="rashid_title">Turbulent Wind</string>
     <string name="rashid_health">950</string>
     <string name="rashid_stun">1000</string>
-    <string name="rashid_style">High-flying Parkour</string>
 
     <string name="karin_title">Smug Perfectionist</string>
     <string name="karin_health">900</string>
     <string name="karin_stun">950</string>
-    <string name="karin_style">Kanzuki-Ryu</string>
 
     <string name="ken_title">Flaming Fist</string>
     <string name="ken_health">1000</string>
     <string name="ken_stun">1000</string>
-    <string name="ken_style">Ansatsuken</string>
 
     <!-- Non-translatable Strings -->
     <string name="character_select_transition">character_select_transition</string>
@@ -348,7 +151,7 @@
     <string name="closeDrawer">Close drawer</string>
 
     <!-- Frame data updated dialog -->
-    <string name="data_updated_message">"VFrames has downloaded the latest moves list and frame data. We recommend periodically checking for new versions of VFrames in the Google Play Store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!"</string>
+    <string name="data_updated_message">VFrames has downloaded the latest moves list and frame data. We recommend periodically checking for new versions of VFrames in the Google Play Store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!</string>
     <string name="data_updated_title">New Data Downloaded</string>
     <string name="ok_thanks">OK</string>
 
