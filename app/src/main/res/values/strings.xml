@@ -63,6 +63,8 @@
     <string name="vskill_header">V-Skill</string>
     <string name="vtrigger_header">V-Trigger</string>
     <string name="vreversal_header">V-Reversal</string>
+    <string name="or">Or</string>
+    <string name="no_input">No Input</string>
 
     <!-- Frame Data Cell Entries-->
     <string name="frame_data_knockdown">K/D</string>
