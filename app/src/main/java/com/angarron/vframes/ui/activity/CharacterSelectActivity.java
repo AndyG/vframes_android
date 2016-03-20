@@ -325,6 +325,8 @@ public class CharacterSelectActivity extends NavigationHostActivity {
 
     private CharacterID getClickedCharacter(int viewId) {
         switch (viewId) {
+            case R.id.alex_card:
+                return CharacterID.ALEX;
             case R.id.birdie_card:
                 return CharacterID.BIRDIE;
             case R.id.cammy_card:
@@ -377,48 +379,10 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         return true;
     }
 
-    private View getCardViewForCharacter(CharacterID characterID) {
-        switch (characterID) {
-            case RYU:
-                return findViewById(R.id.ryu_card);
-            case CHUN:
-                return findViewById(R.id.chun_card);
-            case DICTATOR:
-                return findViewById(R.id.dictator_card);
-            case BIRDIE:
-                return findViewById(R.id.birdie_card);
-            case NASH:
-                return findViewById(R.id.nash_card);
-            case CAMMY:
-                return findViewById(R.id.cammy_card);
-            case CLAW:
-                return findViewById(R.id.claw_card);
-            case LAURA:
-                return findViewById(R.id.laura_card);
-            case KEN:
-                return findViewById(R.id.ken_card);
-            case NECALLI:
-                return findViewById(R.id.necalli_card);
-            case RASHID:
-                return findViewById(R.id.rashid_card);
-            case MIKA:
-                return findViewById(R.id.mika_card);
-            case ZANGIEF:
-                return findViewById(R.id.zangief_card);
-            case FANG:
-                return findViewById(R.id.fang_card);
-            case DHALSIM:
-                return findViewById(R.id.dhalsim_card);
-            case KARIN:
-                return findViewById(R.id.karin_card);
-            default:
-                throw new IllegalArgumentException("invalid character clicked: " + characterID.toString());
-        }
-    }
-
-
     private View getImageViewForCharacter(CharacterID characterID) {
         switch (characterID) {
+            case ALEX:
+                return findViewById(R.id.alex_image_view);
             case RYU:
                 return findViewById(R.id.ryu_image_view);
             case CHUN:

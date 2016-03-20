@@ -31,7 +31,7 @@ public class MoveListFragment extends Fragment {
             setupRecyclerView(moveListRecyclerView, moveList);
             return moveListRecyclerView;
         } else {
-            return inflater.inflate(R.layout.notes_upcoming, container, false);
+            return inflater.inflate(R.layout.moves_upcoming, container, false);
         }
 
     }

@@ -23,6 +23,7 @@ import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.ComparisonPagerAdapter;
 import com.angarron.vframes.application.VFramesApplication;
+import com.angarron.vframes.util.CharacterResourceUtil;
 import com.angarron.vframes.util.FeedbackUtil;
 import com.crashlytics.android.Crashlytics;
 
@@ -130,8 +131,8 @@ public class CharacterComparisonActivity extends AppCompatActivity implements
 
     private ArrayAdapter<String> createSpinnerArrayAdapter() {
         List<String> spinnerArray =  new ArrayList<>();
-        String firstCharacterName = getString(getNameResource(firstCharacter));
-        String secondCharacterName = getString(getNameResource(secondCharacter));
+        String firstCharacterName = CharacterResourceUtil.getCharacterDisplayName(this, firstCharacter);
+        String secondCharacterName = CharacterResourceUtil.getCharacterDisplayName(this, secondCharacter);
         spinnerArray.add(getString(R.string.comparison_frame_data_format, firstCharacterName));
         spinnerArray.add(getString(R.string.comparison_frame_data_format, secondCharacterName));
         spinnerArray.add("Move Punisher");
@@ -202,6 +203,8 @@ public class CharacterComparisonActivity extends AppCompatActivity implements
 
     private int getCharacterImage(CharacterID characterID) {
         switch(characterID) {
+            case ALEX:
+                return R.drawable.alex_card;
             case RYU:
                 return R.drawable.ryu_card;
             case CHUN:
@@ -250,8 +253,8 @@ public class CharacterComparisonActivity extends AppCompatActivity implements
     }
 
     private String getTitleForCharacters() {
-        String firstCharacterName = getString(getNameResource(firstCharacter));
-        String secondCharacterName = getString(getNameResource(secondCharacter));
+        String firstCharacterName = CharacterResourceUtil.getCharacterDisplayName(this, firstCharacter);
+        String secondCharacterName = CharacterResourceUtil.getCharacterDisplayName(this, secondCharacter);
         return getString(R.string.comparison_title_format, firstCharacterName, secondCharacterName);
     }
 
@@ -260,44 +263,6 @@ public class CharacterComparisonActivity extends AppCompatActivity implements
         return (application.getDataModel() != null);
     }
 
-    private int getNameResource(CharacterID characterID) {
-        switch(characterID) {
-            case RYU:
-                return R.string.ryu_name;
-            case CHUN:
-                return R.string.chun_name;
-            case DICTATOR:
-                return R.string.dictator_name;
-            case BIRDIE:
-                return R.string.birdie_name;
-            case NASH:
-                return R.string.nash_name;
-            case CAMMY:
-                return R.string.cammy_name;
-            case KEN:
-                return R.string.ken_name;
-            case MIKA:
-                return R.string.mika_name;
-            case NECALLI:
-                return R.string.necalli_name;
-            case CLAW:
-                return R.string.claw_name;
-            case RASHID:
-                return R.string.rashid_name;
-            case KARIN:
-                return R.string.karin_name;
-            case LAURA:
-                return R.string.laura_name;
-            case DHALSIM:
-                return R.string.dhalsim_name;
-            case ZANGIEF:
-                return R.string.zangief_name;
-            case FANG:
-                return R.string.fang_name;
-            default:
-                throw new RuntimeException("unable to resolve character name: " + characterID);
-        }
-    }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

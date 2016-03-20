@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.angarron.vframes.R;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MovePunisherFragment;
+import com.angarron.vframes.util.CharacterResourceUtil;
 
 import data.model.CharacterID;
 
@@ -60,53 +61,14 @@ public class ComparisonPagerAdapter extends FragmentStatePagerAdapter {
         return bundle;
     }
 
-    private int getNameResource(CharacterID characterID) {
-        switch(characterID) {
-            case RYU:
-                return R.string.ryu_name;
-            case CHUN:
-                return R.string.chun_name;
-            case DICTATOR:
-                return R.string.dictator_name;
-            case BIRDIE:
-                return R.string.birdie_name;
-            case NASH:
-                return R.string.nash_name;
-            case CAMMY:
-                return R.string.cammy_name;
-            case KEN:
-                return R.string.ken_name;
-            case MIKA:
-                return R.string.mika_name;
-            case NECALLI:
-                return R.string.necalli_name;
-            case CLAW:
-                return R.string.claw_name;
-            case RASHID:
-                return R.string.rashid_name;
-            case KARIN:
-                return R.string.karin_name;
-            case LAURA:
-                return R.string.laura_name;
-            case DHALSIM:
-                return R.string.dhalsim_name;
-            case ZANGIEF:
-                return R.string.zangief_name;
-            case FANG:
-                return R.string.fang_name;
-            default:
-                throw new RuntimeException("unable to resolve character name: " + characterID);
-        }
-    }
-
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case FIRST_FRAME_DATA_POSITION:
-                String firstCharacterDisplayName = context.getString(getNameResource(firstCharacter));
+                String firstCharacterDisplayName = CharacterResourceUtil.getCharacterDisplayName(context, firstCharacter);
                 return context.getString(R.string.comparison_frame_data_format, firstCharacterDisplayName);
             case SECOND_FRAME_DATA_POSITION:
-                String secondCharacterDisplayName = context.getString(getNameResource(secondCharacter));
+                String secondCharacterDisplayName = CharacterResourceUtil.getCharacterDisplayName(context, secondCharacter);
                 return context.getString(R.string.comparison_frame_data_format, secondCharacterDisplayName);
             case MOVE_PUNISHER_POSITION:
                 return context.getString(R.string.move_punisher);

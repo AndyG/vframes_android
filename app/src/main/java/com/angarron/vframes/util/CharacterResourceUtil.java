@@ -5,7 +5,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.ui.activity.CharacterSummaryActivity;
 
 import data.model.CharacterID;
 
@@ -17,6 +16,8 @@ public class CharacterResourceUtil {
 
     public static ColorDrawable getCharacterPrimaryColorDrawable(Context context, CharacterID characterID) {
         switch(characterID) {
+            case ALEX:
+                return new ColorDrawable(ContextCompat.getColor(context, R.color.alex_primary));
             case RYU:
                 return new ColorDrawable(ContextCompat.getColor(context, R.color.ryu_primary));
             case CHUN:
@@ -56,6 +57,8 @@ public class CharacterResourceUtil {
 
     private static int getNameResource(CharacterID characterID) {
         switch(characterID) {
+            case ALEX:
+                return R.string.alex_name;
             case RYU:
                 return R.string.ryu_name;
             case CHUN:
@@ -95,6 +98,8 @@ public class CharacterResourceUtil {
 
     public static int getCharacterBannerResource(CharacterID targetCharacter) {
         switch(targetCharacter) {
+            case ALEX:
+                return R.drawable.alex_card;
             case RYU:
                 return R.drawable.ryu_card;
             case CHUN:

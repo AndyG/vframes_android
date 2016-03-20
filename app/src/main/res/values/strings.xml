@@ -30,6 +30,8 @@
     <string name="quick_navigate">Quick Nav:</string>
 
     <string name="frame_data_not_available">Detailed frame data for this character will become available soon. Thank you for your patience.</string>
+    <string name="try_getting_new_data">Try the refresh button on the character select screen to see if we have added this data!</string>
+    <string name="moves_not_available">The move list for this character will become available soon. Thank you for your patience.</string>
 
     <!-- Notes Fragment-->
     <string name="notes_coming_soon">Notes (and much more) is on the way to VFrames! Sorry for the wait, and thank you for your patience!</string>
@@ -257,6 +259,11 @@
     <string name="health_format">Health: %s</string>
     <string name="stun_format">Stun: %s</string>
     <string name="style_format">Style: %s</string>
+
+    <string name="alex_name">Alex</string>
+    <string name="alex_title">Frylock Cosplayer</string>
+    <string name="alex_health">\?\?\?</string>
+    <string name="alex_stun">\?\?\?</string>
 
     <string name="ryu_title">Eternal Wanderer</string>
     <string name="ryu_health">1000</string>
