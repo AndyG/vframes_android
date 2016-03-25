@@ -21,11 +21,11 @@ import java.io.StringWriter;
 
 import data.json.model.VFramesDataJsonAdapter;
 import data.model.IDataModel;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkFallbackDataSource implements IDataSource {
 
@@ -46,6 +46,7 @@ public class NetworkFallbackDataSource implements IDataSource {
     }
 
     @Override
+
     public void fetchData(final Listener listener) {
         final IDataModel backupDataModel;
         try {
@@ -58,8 +59,8 @@ public class NetworkFallbackDataSource implements IDataSource {
         Call<JsonObject> call = restApi.getData(versionCode);
         call.enqueue(new Callback<JsonObject>() {
             @Override
-            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                if (response.isSuccessful()) {
                     processSuccessfulResponse(response.body(), backupDataModel, listener);
                 } else {
                     try {
@@ -72,7 +73,7 @@ public class NetworkFallbackDataSource implements IDataSource {
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<JsonObject> call, Throwable t) {
                 Log.d("findme", "error loading data: " + t.getMessage());
                 //On failure, use data from the backup file.
                 listener.onDataFetchFailed(FetchFailureReason.NETWORK_ERROR);

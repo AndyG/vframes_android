@@ -16,11 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class YoutubeVideosLoader {
 
@@ -63,8 +63,8 @@ public class YoutubeVideosLoader {
         Call<JsonObject> call = youtubeDataApi.getVideosWithIds(commaSeparatedIds);
         call.enqueue(new Callback<JsonObject>() {
             @Override
-            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                if (response.isSuccessful()) {
                     try {
                         YoutubeVideosModel youtubeVideosModel = new YoutubeVideosModel();
                         JsonArray videosJson = response.body().get("items").getAsJsonArray();
@@ -103,7 +103,7 @@ public class YoutubeVideosLoader {
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<JsonObject> call, Throwable t) {
                 if (!BuildConfig.DEBUG) {
                     Crashlytics.logException(t);
                 }

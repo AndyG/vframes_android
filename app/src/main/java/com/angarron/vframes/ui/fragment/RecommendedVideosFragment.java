@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +15,22 @@ import android.widget.TextView;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.YoutubeVideosRecyclerAdapter;
-import com.angarron.vframes.data.videos.RecommendedVideosJsonParser;
 import com.angarron.vframes.data.videos.RecommendedVideosModel;
 import com.angarron.vframes.data.videos.YoutubeVideosModel;
 import com.angarron.vframes.network.VFramesRESTApi;
 import com.angarron.vframes.network.YoutubeVideosLoader;
 import com.angarron.vframes.util.CharacterResourceUtil;
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import data.model.CharacterID;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RecommendedVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
 
@@ -69,31 +72,36 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         videosRecyclerView.setAdapter(null);
 
         VFramesRESTApi restApi = createVFramesApi();
-        Call<JsonObject> call = restApi.getVideosForCharacter(characterId.toString());
+        Call<JsonObject> call = restApi.getGuideVideosForCharacter(characterId.toString());
         call.enqueue(new Callback<JsonObject>() {
             @Override
-            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                if (response.isSuccessful()) {
                     processSuccessfulResponse(response.body());
                 } else {
+                    Log.d("findme", response.message());
                     showFailureUI();
                 }
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                Log.d("findme", "call failed: " + call.request().toString() + " " + call.isExecuted());
+                Log.d("findme", "got failure throwable", t);
                 showFailureUI();
             }
         });
     }
 
     private void processSuccessfulResponse(JsonObject body) {
-        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body.getAsJsonArray("videos"));
-        if (!recommendedVideosModel.isEmpty()) {
-            loadYoutubeVideosModel(recommendedVideosModel);
-        } else {
-            showNoVideosView();
-        }
+        Log.d("findme", "got videos: " + new Gson().toJson(body));
+
+//        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body.getAsJsonArray());
+//        if (!recommendedVideosModel.isEmpty()) {
+//            loadYoutubeVideosModel(recommendedVideosModel);
+//        } else {
+//            showNoVideosView();
+//        }
     }
 
     private void loadYoutubeVideosModel(RecommendedVideosModel recommendedVideosModel) {
@@ -102,8 +110,15 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
     }
 
     private VFramesRESTApi createVFramesApi() {
+
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://agarron.com/res/vframes/")
+                .client(client)
+                .baseUrl("http://still-hollows-20653.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
