@@ -98,10 +98,11 @@ public class NetworkFallbackDataSource implements IDataSource {
 
         Integer newDataVersion = body.get("version").getAsInt();
         if (newDataVersion > backupDataModel.getVersion()) {
+            //Load the data first to make sure it works
+            IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(body);
             //Overwrite the local file for use next time
             writeToBackupFile(body);
             //Provide the rest of the app with the new data
-            IDataModel dataModel = VFramesDataJsonAdapter.jsonToDataModel(body);
             listener.onDataReceived(dataModel, true);
         } else {
             listener.onDataReceived(backupDataModel, false);
