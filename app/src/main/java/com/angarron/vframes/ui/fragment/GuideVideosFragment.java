@@ -77,7 +77,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
         String characterQueryParameter;
         if (characterID == null) {
             //If no character is specified, we want the "general" guides (not character-specific).
-            characterQueryParameter = "all";
+            characterQueryParameter = "general";
         } else {
             characterQueryParameter = characterID.toString();
         }
