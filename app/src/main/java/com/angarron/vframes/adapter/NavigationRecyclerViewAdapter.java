@@ -15,6 +15,11 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
 
+    private static final int CHARACTERS_POSITION = 1;
+    private static final int STREAMS_POSITION = 3;
+    private static final int GUIDES_POSITION = 4;
+    private static final int TOURNAMENT_MATCHES_POSITION = 5;
+
     private IMenuClickListener listener;
     private Context context;
 
@@ -48,11 +53,17 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
     }
 
     private void setupMenuItem(ItemViewHolder holder, int position) {
-        if (position == 1) {
+        if (position == CHARACTERS_POSITION) {
             holder.label.setText(context.getString(R.string.character_data));
             holder.icon.setImageResource(R.drawable.ic_action_group);
-        } else if (position == 3) {
+        } else if (position == STREAMS_POSITION) {
             holder.label.setText(context.getString(R.string.live_streams));
+            holder.icon.setImageResource(R.drawable.ic_action_play);
+        } else if (position == GUIDES_POSITION) {
+            holder.label.setText(context.getString(R.string.street_fighter_v_guides));
+            holder.icon.setImageResource(R.drawable.ic_action_play);
+        } else if (position == TOURNAMENT_MATCHES_POSITION) {
+            holder.label.setText(context.getString(R.string.recent_tournament_matches));
             holder.icon.setImageResource(R.drawable.ic_action_play);
         }
         holder.itemView.setOnClickListener(new ItemClickListener(position));
@@ -62,7 +73,7 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
         if (position == 0) {
             holder.label.setText(context.getString(R.string.references));
         } else if (position == 2) {
-            holder.label.setText(context.getString(R.string.community));
+            holder.label.setText(context.getString(R.string.content));
         }
     }
 
@@ -77,7 +88,7 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 6;
     }
 
     private class ItemViewHolder extends RecyclerView.ViewHolder {
@@ -112,10 +123,16 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
 
         @Override
         public void onClick(View view) {
-            if (position == 1) {
-                listener.onCharacterDataClicked();
-            } else {
-                listener.onStreamersClicked();
+            switch (position) {
+                case CHARACTERS_POSITION:
+                    listener.onCharacterDataClicked();
+                    break;
+                case STREAMS_POSITION:
+                    listener.onStreamersClicked();
+                    break;
+                case GUIDES_POSITION:
+                case TOURNAMENT_MATCHES_POSITION:
+                    break;
             }
         }
     }

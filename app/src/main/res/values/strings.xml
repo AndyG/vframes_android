@@ -187,7 +187,7 @@
     <string name="character_data">Character Info</string>
     <string name="live_streams">Live Streams</string>
     <string name="references">References</string>
-    <string name="community">Community</string>
+    <string name="content">Content</string>
 
     <!-- Character Comparison Page -->
     <string name="comparison_first_character_transition">comparison_first_character_transition</string>
@@ -214,6 +214,8 @@
     <string name="can_take_notes_title">Take Notes!</string>
     <string name="filter_matchup_spinner_label">Filter Matchup:</string>
     <string name="filtered_videos_not_available">There are no videos for this matchup… yet!</string>
+    <string name="street_fighter_v_guides">Street Fighter V Guides</string>
+    <string name="recent_tournament_matches">Recent Tournament Matches</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>
