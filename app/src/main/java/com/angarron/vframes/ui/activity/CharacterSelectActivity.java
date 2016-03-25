@@ -454,7 +454,7 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         showProgressDialog();
         final CustomEvent loadNetworkDataEvent = new CustomEvent(LOAD_NETWORK_DATA_EVENT);
 
-        IDataSource dataSource = new NetworkFallbackDataSource(BuildConfig.VERSION_CODE, this);
+        IDataSource dataSource = new NetworkFallbackDataSource(this);
         dataSource.fetchData(new IDataSource.Listener() {
             @Override
             public void onDataReceived(IDataModel data, boolean wasUpdated) {

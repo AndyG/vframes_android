@@ -3,9 +3,10 @@ package com.angarron.vframes.data;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Handler;
-import android.util.Log;
 
+import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.network.VFramesRESTApi;
+import com.angarron.vframes.util.CrashlyticsUtil;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -21,6 +22,8 @@ import java.io.StringWriter;
 
 import data.json.model.VFramesDataJsonAdapter;
 import data.model.IDataModel;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,12 +35,10 @@ public class NetworkFallbackDataSource implements IDataSource {
     private static final String LOCAL_DATA_FILE_NAME = "vframes_local_data.json";
 
     private VFramesRESTApi restApi;
-    private Integer versionCode;
     private Context context;
 
-    public NetworkFallbackDataSource(Integer versionCode, Context context) {
+    public NetworkFallbackDataSource(Context context) {
         restApi = createRESTApi();
-        this.versionCode = versionCode;
         this.context = context;
 
         if (!localDataFileExists()) {
@@ -56,25 +57,27 @@ public class NetworkFallbackDataSource implements IDataSource {
             return;
         }
 
-        Call<JsonObject> call = restApi.getData(versionCode);
+        Call<JsonObject> call = restApi.getData("android");
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                 if (response.isSuccessful()) {
                     processSuccessfulResponse(response.body(), backupDataModel, listener);
                 } else {
+                    String errorMessage;
                     try {
-                        Log.d("findme", "error response: " + response.errorBody().string());
+                         errorMessage = response.errorBody().string();
                     } catch (IOException e) {
-                        Log.d("findme", "error parsing error response");
-
+                        errorMessage = e.getMessage();
                     }
+                    CrashlyticsUtil.logException(new Throwable("failed to load data model, unsuccessful response: " + errorMessage));
+                    listener.onDataFetchFailed(FetchFailureReason.NETWORK_ERROR);
                 }
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-                Log.d("findme", "error loading data: " + t.getMessage());
+                CrashlyticsUtil.logException(t);
                 //On failure, use data from the backup file.
                 listener.onDataFetchFailed(FetchFailureReason.NETWORK_ERROR);
             }
@@ -87,7 +90,8 @@ public class NetworkFallbackDataSource implements IDataSource {
     }
 
     private void processSuccessfulResponse(JsonObject body, IDataModel backupDataModel, Listener listener) {
-        if (body.has("error")) {
+        if (!body.has("minSupportedAndroidVersion") ||
+                body.get("minSupportedAndroidVersion").getAsInt() > BuildConfig.VERSION_CODE) {
             listener.onDataFetchFailed(FetchFailureReason.UNSUPPORTED_CLIENT_VERSION);
             return;
         }
@@ -169,11 +173,18 @@ public class NetworkFallbackDataSource implements IDataSource {
     }
 
     private VFramesRESTApi createRESTApi() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://agarron.com/res/vframes/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
+                .baseUrl("http://still-hollows-20653.herokuapp.com/")
+                .addConverterFactory(GsonConverterFactory.create());
 
+        if (BuildConfig.DEBUG) {
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+            OkHttpClient client = new OkHttpClient.Builder().addInterceptor(loggingInterceptor).build();
+            retrofitBuilder.client(client);
+        }
+
+        Retrofit retrofit = retrofitBuilder.build();
         return retrofit.create(VFramesRESTApi.class);
     }
 

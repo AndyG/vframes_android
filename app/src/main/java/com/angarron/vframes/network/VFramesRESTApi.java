@@ -5,12 +5,11 @@ import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface VFramesRESTApi {
-    @GET("/res/vframes/android/v{version}/characters_model.json")
-    Call<JsonObject> getData(@Path("version") Integer version);
+    @GET("/dataModel")
+    Call<JsonObject> getData(@Query("endpoint") String endpoint);
 
     @GET("/guideVideos")
     Call<JsonArray> getAllGuideVideos();
