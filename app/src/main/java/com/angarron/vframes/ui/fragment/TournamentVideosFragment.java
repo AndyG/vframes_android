@@ -136,8 +136,10 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
     private void processSuccessfulResponse(JsonArray body) {
         tournamentVideos = VideosJsonParser.parseTournamentVideos(body);
         if (!tournamentVideos.isEmpty()) {
+            Log.d("findme", "tournamentVideosSize: " + tournamentVideos.size());
             loadVideos();
         } else {
+            Log.d("findme", "tournamentVideosSize: " + tournamentVideos.size());
             showNoVideosView();
         }
     }
@@ -206,7 +208,7 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
             matchupFilterCharacter = getSortedCharacters().get(position - 1);
         }
 
-        if (tournamentVideos != null) {
+        if (tournamentVideos != null && !tournamentVideos.isEmpty()) {
             loadVideos();
         }
     }
@@ -264,7 +266,7 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
         public void onVideosLoaded(List<YoutubeVideo> youtubeVideos) {
             videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideos, TournamentVideosFragment.this));
             showRecyclerView();
-            if (youtubeVideos.isEmpty()) {
+            if (youtubeVideos.isEmpty() && matchupFilterCharacter != null) {
                 Toast.makeText(getContext(), R.string.filtered_videos_not_available, Toast.LENGTH_SHORT).show();
             }
         }

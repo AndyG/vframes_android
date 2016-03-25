@@ -3,7 +3,6 @@ package com.angarron.vframes.data;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -65,24 +64,19 @@ public class BackupDataSource implements IDataSource {
     }
 
     private IDataModel readFromBackupFile() throws IOException {
-        Log.d("findme", "reading from backup file");
         File file = context.getFileStreamPath(LOCAL_DATA_FILE_NAME);
         String dataString = FileUtils.readFileToString(file);
         JsonParser parser = new JsonParser();
-        Log.d("findme", "converting to json");
         JsonObject jsonData = parser.parse(dataString).getAsJsonObject();
-        Log.d("findme", "parsing json");
         return VFramesDataJsonAdapter.jsonToDataModel(jsonData);
     }
 
     private boolean localDataFileExists() {
         File file = context.getFileStreamPath(LOCAL_DATA_FILE_NAME);
-        Log.d("findme", "local file exists: " + file.exists());
         return file.exists();
     }
 
     private void initializeLocalFile() {
-        Log.d("findme", "initializing local file");
         byte[] bundledData = loadBundledData();
 
         try {

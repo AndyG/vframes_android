@@ -61,10 +61,10 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
             holder.icon.setImageResource(R.drawable.ic_action_play);
         } else if (position == GUIDES_POSITION) {
             holder.label.setText(context.getString(R.string.street_fighter_v_guides));
-            holder.icon.setImageResource(R.drawable.ic_action_play);
+            holder.icon.setImageResource(R.drawable.ic_action_view_as_list);
         } else if (position == TOURNAMENT_MATCHES_POSITION) {
             holder.label.setText(context.getString(R.string.recent_tournament_matches));
-            holder.icon.setImageResource(R.drawable.ic_action_play);
+            holder.icon.setImageResource(R.drawable.ic_action_gamepad);
         }
         holder.itemView.setOnClickListener(new ItemClickListener(position));
     }
