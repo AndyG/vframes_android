@@ -131,7 +131,10 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
                     listener.onStreamersClicked();
                     break;
                 case GUIDES_POSITION:
+                    listener.onGuideVideosClicked();
+                    break;
                 case TOURNAMENT_MATCHES_POSITION:
+                    listener.onTournamentVideosClicked();
                     break;
             }
         }
@@ -140,5 +143,7 @@ public class NavigationRecyclerViewAdapter extends RecyclerView.Adapter {
     public interface IMenuClickListener {
         void onCharacterDataClicked();
         void onStreamersClicked();
+        void onTournamentVideosClicked();
+        void onGuideVideosClicked();
     }
 }

@@ -11,6 +11,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/matchup_filter_container"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"

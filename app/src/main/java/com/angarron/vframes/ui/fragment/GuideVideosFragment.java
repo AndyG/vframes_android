@@ -64,16 +64,25 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         noVideosLayout = (TextView) view.findViewById(R.id.no_videos_layout);
         failedToLoadLayout = view.findViewById(R.id.failed_to_load_layout);
-        loadGuideVideos(characterID);
+        loadGuideVideos();
         return view;
     }
 
-    private void loadGuideVideos(CharacterID characterId) {
+    private void loadGuideVideos() {
         showProgressBar();
         videosRecyclerView.setAdapter(null);
 
         VFramesRESTApi restApi = createVFramesApi();
-        Call<JsonArray> call = restApi.getGuideVideosForCharacter(characterId.toString());
+
+        String characterQueryParameter;
+        if (characterID == null) {
+            //If no character is specified, we want the "general" guides (not character-specific).
+            characterQueryParameter = "all";
+        } else {
+            characterQueryParameter = characterID.toString();
+        }
+
+        Call<JsonArray> call = restApi.getGuideVideosForCharacter(characterQueryParameter);
         call.enqueue(new Callback<JsonArray>() {
             @Override
             public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
@@ -128,7 +137,12 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
 
         Activity hostActivity = getActivity();
         if (hostActivity != null) {
-            String noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getActivity(), characterID));
+            String noVideosText;
+            if (characterID != null) {
+                noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getActivity(), characterID));
+            } else {
+                noVideosText = hostActivity.getString(R.string.general_guides_not_available);
+            }
             noVideosLayout.setText(noVideosText);
         }
         noVideosLayout.setVisibility(View.VISIBLE);
@@ -158,6 +172,10 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
         videosRecyclerView.setVisibility(View.VISIBLE);
     }
 
+    public void refreshVideos() {
+        loadGuideVideos();
+    }
+
     public interface IGuideVideosFragmentHost {
         void onVideoSelected(String videoUrl);
     }
@@ -180,7 +198,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
         if (bundle != null && bundle.containsKey(CHARACTER_ID)) {
             return (CharacterID) bundle.getSerializable(CHARACTER_ID);
         } else {
-            throw new RuntimeException("no character id for GuideVideosFragment");
+            return null;
         }
     }
 }

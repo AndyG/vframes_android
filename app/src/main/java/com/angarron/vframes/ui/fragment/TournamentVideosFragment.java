@@ -73,6 +73,16 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
         firstCharacter = getCharacterIdFromArguments();
 
         View view = inflater.inflate(R.layout.fragment_tournament_videos, container, false);
+
+        //If the fragment is not targeted at a particular character, we don't need to
+        //show the matchup filter.
+        View matchupFilterContainer = view.findViewById(R.id.matchup_filter_container);
+        if (firstCharacter == null) {
+            matchupFilterContainer.setVisibility(View.GONE);
+        } else {
+            matchupFilterContainer.setVisibility(View.VISIBLE);
+        }
+
         videosContainer = view.findViewById(R.id.videos_container);
         videosRecyclerView = (RecyclerView) view.findViewById(R.id.videos_recycler_view);
         videosRecyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
@@ -239,6 +249,10 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
         List<CharacterID> characterIDs = Arrays.asList(CharacterID.values());
         Collections.sort(characterIDs, characterIDComparator);
         return characterIDs;
+    }
+
+    public void refreshVideos() {
+        loadTournamentVideos();
     }
 
     public interface ITournamentVideosFragmentHost {
