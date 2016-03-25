@@ -1,5 +1,6 @@
 package com.angarron.vframes.network;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import retrofit2.Call;
@@ -17,5 +18,5 @@ public interface VFramesRESTApi {
 
     //send "all" to get non-character-specific videos.
     @GET("/guideVideos")
-    Call<JsonObject> getGuideVideosForCharacter(@Query("character") String character);
+    Call<JsonArray> getGuideVideosForCharacter(@Query("character") String character);
 }

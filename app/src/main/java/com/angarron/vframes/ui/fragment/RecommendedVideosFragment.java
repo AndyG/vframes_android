@@ -15,12 +15,14 @@ import android.widget.TextView;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.YoutubeVideosRecyclerAdapter;
+import com.angarron.vframes.data.videos.RecommendedVideosJsonParser;
 import com.angarron.vframes.data.videos.RecommendedVideosModel;
 import com.angarron.vframes.data.videos.YoutubeVideosModel;
 import com.angarron.vframes.network.VFramesRESTApi;
 import com.angarron.vframes.network.YoutubeVideosLoader;
 import com.angarron.vframes.util.CharacterResourceUtil;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import data.model.CharacterID;
@@ -72,10 +74,10 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         videosRecyclerView.setAdapter(null);
 
         VFramesRESTApi restApi = createVFramesApi();
-        Call<JsonObject> call = restApi.getGuideVideosForCharacter(characterId.toString());
-        call.enqueue(new Callback<JsonObject>() {
+        Call<JsonArray> call = restApi.getGuideVideosForCharacter(characterId.toString());
+        call.enqueue(new Callback<JsonArray>() {
             @Override
-            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+            public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
                 if (response.isSuccessful()) {
                     processSuccessfulResponse(response.body());
                 } else {
@@ -85,7 +87,7 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
             }
 
             @Override
-            public void onFailure(Call<JsonObject> call, Throwable t) {
+            public void onFailure(Call<JsonArray> call, Throwable t) {
                 Log.d("findme", "call failed: " + call.request().toString() + " " + call.isExecuted());
                 Log.d("findme", "got failure throwable", t);
                 showFailureUI();
@@ -93,10 +95,9 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         });
     }
 
-    private void processSuccessfulResponse(JsonObject body) {
+    private void processSuccessfulResponse(JsonArray body) {
         Log.d("findme", "got videos: " + new Gson().toJson(body));
-
-//        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body.getAsJsonArray());
+//        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body);
 //        if (!recommendedVideosModel.isEmpty()) {
 //            loadYoutubeVideosModel(recommendedVideosModel);
 //        } else {
