@@ -11,7 +11,8 @@ import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.ui.fragment.NotesFragment;
-import com.angarron.vframes.ui.fragment.RecommendedVideosFragment;
+import com.angarron.vframes.ui.fragment.GuideVideosFragment;
+import com.angarron.vframes.ui.fragment.TournamentVideosFragment;
 
 import data.model.CharacterID;
 
@@ -19,9 +20,10 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
 
     private static final int FRAME_DATA_POSITION = 0;
     private static final int MOVE_LIST_POSITION = 1;
-    private static final int BNBS_POSITION = 2;
-    private static final int RECOMMENDED_VIDEOS_POSITION = 3;
-    private static final int NOTES_POSITION = 4;
+    private static final int NOTES_POSITION = 2;
+    private static final int TOURNAMENT_VIDEOS_POSITION = 3;
+    private static final int GUIDE_VIDEOS_POSITION = 4;
+    private static final int BNBS_POSITION = 5;
 
     private Context context;
     private CharacterID characterId;
@@ -46,8 +48,10 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
                 return createFrameDataFragment();
             case BNBS_POSITION:
                 return createBreadAndButterFragment();
-            case RECOMMENDED_VIDEOS_POSITION:
-                return createRecommendedVideosFragment();
+            case TOURNAMENT_VIDEOS_POSITION:
+                return createTournamentVideosFragment();
+            case GUIDE_VIDEOS_POSITION:
+                return createGuideVideosFragment();
             case NOTES_POSITION:
                 return createNotesFragment();
             default:
@@ -55,12 +59,20 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
         }
     }
 
-    private Fragment createRecommendedVideosFragment() {
-        RecommendedVideosFragment recommendedVideosFragment = new RecommendedVideosFragment();
+    private Fragment createTournamentVideosFragment() {
+        TournamentVideosFragment tournamentVideosFragment = new TournamentVideosFragment();
         Bundle bundle = new Bundle();
-        bundle.putSerializable(RecommendedVideosFragment.CHARACTER_ID, characterId);
-        recommendedVideosFragment.setArguments(bundle);
-        return recommendedVideosFragment;
+        bundle.putSerializable(GuideVideosFragment.CHARACTER_ID, characterId);
+        tournamentVideosFragment.setArguments(bundle);
+        return tournamentVideosFragment;
+    }
+
+    private Fragment createGuideVideosFragment() {
+        GuideVideosFragment guideVideosFragment = new GuideVideosFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(GuideVideosFragment.CHARACTER_ID, characterId);
+        guideVideosFragment.setArguments(bundle);
+        return guideVideosFragment;
     }
 
     private Fragment createBreadAndButterFragment() {
@@ -96,8 +108,10 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
                 return context.getString(R.string.frame_data_title);
             case NOTES_POSITION:
                 return context.getString(R.string.notes_title);
-            case RECOMMENDED_VIDEOS_POSITION:
-                return context.getString(R.string.recommended_videos_title);
+            case TOURNAMENT_VIDEOS_POSITION:
+                return context.getString(R.string.tournament_videos_title);
+            case GUIDE_VIDEOS_POSITION:
+                return context.getString(R.string.guide_videos_title);
             case BNBS_POSITION:
                 return context.getString(R.string.bnb_page_title);
             default:

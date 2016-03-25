@@ -25,7 +25,8 @@
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>
     <string name="bnb_page_title">BnB Combos</string>
-    <string name="recommended_videos_title">Recommended Videos</string>
+    <string name="guide_videos_title">Guide Videos</string>
+    <string name="tournament_videos_title">Tournament Videos</string>
     <string name="notes_title">Notes</string>
     <string name="quick_navigate">Quick Nav:</string>
 
@@ -178,9 +179,9 @@
     <string name="viewers_format">%1$s viewers</string>
     <string name="no_current_streams">There is no one currently streaming Street Fighter V.</string>
 
-    <!-- Recommended Videos -->
-    <string name="videos_not_available">Recommended videos are on the way for %1$s!</string>
-    <string name="error_loading_videos">Sorry, but there was an error loading recommended videos. Please check your network connection and try again.</string>
+    <!-- Videos -->
+    <string name="videos_not_available">Videos are on the way for %1$s!</string>
+    <string name="error_loading_videos">Sorry, but there was an error loading videos. Please check your network connection and try again.</string>
 
     <!-- Navigation Drawer -->
     <string name="character_data">Character Info</string>
@@ -211,13 +212,16 @@
 
     <string name="can_take_notes_message">We\'ve added basic notes-taking capabilities to VFrames! Try it out for your favorite character and let us know if there are any issues. More text-editing functionality will be added over time.</string>
     <string name="can_take_notes_title">Take Notes!</string>
+    <string name="filter_matchup_spinner_label">Filter Matchup:</string>
+    <string name="filtered_videos_not_available">There are no videos for this matchup… yet!</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>
         <item>Move List</item>
-        <item>BnB Combos</item>
-        <item>Recommended Videos</item>
         <item>Notes</item>
+        <item>Tournament Videos</item>
+        <item>Guide Videos</item>
+        <item>BnB Combos</item>
     </string-array>
 
 

@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,15 @@ import android.widget.TextView;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.YoutubeVideosRecyclerAdapter;
-import com.angarron.vframes.data.videos.RecommendedVideosJsonParser;
-import com.angarron.vframes.data.videos.RecommendedVideosModel;
-import com.angarron.vframes.data.videos.YoutubeVideosModel;
+import com.angarron.vframes.data.videos.VideosJsonParser;
+import com.angarron.vframes.data.videos.IGuideVideo;
+import com.angarron.vframes.data.videos.YoutubeVideo;
 import com.angarron.vframes.network.VFramesRESTApi;
 import com.angarron.vframes.network.YoutubeVideosLoader;
 import com.angarron.vframes.util.CharacterResourceUtil;
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+
+import java.util.List;
 
 import data.model.CharacterID;
 import okhttp3.OkHttpClient;
@@ -34,7 +33,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RecommendedVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
+public class GuideVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
 
     public static final String CHARACTER_ID = "CHARACTER_ID";
 
@@ -65,11 +64,11 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         noVideosLayout = (TextView) view.findViewById(R.id.no_videos_layout);
         failedToLoadLayout = view.findViewById(R.id.failed_to_load_layout);
-        loadRecommendedVideos(characterID);
+        loadGuideVideos(characterID);
         return view;
     }
 
-    private void loadRecommendedVideos(CharacterID characterId) {
+    private void loadGuideVideos(CharacterID characterId) {
         showProgressBar();
         videosRecyclerView.setAdapter(null);
 
@@ -81,33 +80,29 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
                 if (response.isSuccessful()) {
                     processSuccessfulResponse(response.body());
                 } else {
-                    Log.d("findme", response.message());
                     showFailureUI();
                 }
             }
 
             @Override
             public void onFailure(Call<JsonArray> call, Throwable t) {
-                Log.d("findme", "call failed: " + call.request().toString() + " " + call.isExecuted());
-                Log.d("findme", "got failure throwable", t);
                 showFailureUI();
             }
         });
     }
 
     private void processSuccessfulResponse(JsonArray body) {
-        Log.d("findme", "got videos: " + new Gson().toJson(body));
-//        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body);
-//        if (!recommendedVideosModel.isEmpty()) {
-//            loadYoutubeVideosModel(recommendedVideosModel);
-//        } else {
-//            showNoVideosView();
-//        }
+        List<IGuideVideo> guideVideos = VideosJsonParser.parseGuideVideos(body);
+        if (!guideVideos.isEmpty()) {
+            loadYoutubeVideosModel(guideVideos);
+        } else {
+            showNoVideosView();
+        }
     }
 
-    private void loadYoutubeVideosModel(RecommendedVideosModel recommendedVideosModel) {
+    private void loadYoutubeVideosModel(List<IGuideVideo> guideVideos) {
         YoutubeVideosLoader youtubeVideosLoader = new YoutubeVideosLoader(new LoadVideosListener());
-        youtubeVideosLoader.loadVideos(recommendedVideosModel);
+        youtubeVideosLoader.loadVideos(guideVideos);
     }
 
     private VFramesRESTApi createVFramesApi() {
@@ -169,8 +164,8 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
 
     private class LoadVideosListener implements YoutubeVideosLoader.Listener {
         @Override
-        public void onVideosLoaded(YoutubeVideosModel youtubeVideosModel) {
-            videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideosModel, RecommendedVideosFragment.this));
+        public void onVideosLoaded(List<YoutubeVideo> youtubeVideos) {
+            videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideos, GuideVideosFragment.this));
             showRecyclerView();
         }
 
@@ -185,7 +180,7 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         if (bundle != null && bundle.containsKey(CHARACTER_ID)) {
             return (CharacterID) bundle.getSerializable(CHARACTER_ID);
         } else {
-            throw new RuntimeException("no character id for FrameDataFragment");
+            throw new RuntimeException("no character id for GuideVideosFragment");
         }
     }
 }

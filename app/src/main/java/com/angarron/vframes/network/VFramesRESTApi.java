@@ -12,11 +12,15 @@ public interface VFramesRESTApi {
     @GET("/res/vframes/android/v{version}/characters_model.json")
     Call<JsonObject> getData(@Path("version") Integer version);
 
-    //send "all" to get non-character-specific videos.
     @GET("/guideVideos")
-    Call<JsonObject> getAllGuideVideos();
+    Call<JsonArray> getAllGuideVideos();
 
-    //send "all" to get non-character-specific videos.
     @GET("/guideVideos")
     Call<JsonArray> getGuideVideosForCharacter(@Query("character") String character);
+
+    @GET("/tournamentVideos")
+    Call<JsonArray> getAllTournamentVideos();
+
+    @GET("/tournamentVideos")
+    Call<JsonArray> getTournamentVideosForCharacter(@Query("character") String character);
 }
