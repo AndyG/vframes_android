@@ -47,7 +47,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
     @Override
     public void onVideoSelected(String videoUrl) {
         Activity hostActivity = getActivity();
-        IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
+        IGuideVideosFragmentHost host = (IGuideVideosFragmentHost) hostActivity;
         host.onVideoSelected(videoUrl);
     }
 
@@ -158,7 +158,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
         videosRecyclerView.setVisibility(View.VISIBLE);
     }
 
-    public interface IRecommendedVideosFragmentHost {
+    public interface IGuideVideosFragmentHost {
         void onVideoSelected(String videoUrl);
     }
 

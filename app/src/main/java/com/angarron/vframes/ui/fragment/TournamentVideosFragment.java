@@ -61,7 +61,7 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
     @Override
     public void onVideoSelected(String videoUrl) {
         Activity hostActivity = getActivity();
-        IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
+        ITournamentVideosFragmentHost host = (ITournamentVideosFragmentHost) hostActivity;
         host.onVideoSelected(videoUrl);
     }
 
@@ -241,8 +241,7 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
         return characterIDs;
     }
 
-
-    public interface IRecommendedVideosFragmentHost {
+    public interface ITournamentVideosFragmentHost {
         void onVideoSelected(String videoUrl);
     }
 

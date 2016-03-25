@@ -31,6 +31,7 @@ import com.angarron.vframes.application.VFramesApplication;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
 import com.angarron.vframes.ui.fragment.NotesFragment;
 import com.angarron.vframes.ui.fragment.GuideVideosFragment;
+import com.angarron.vframes.ui.fragment.TournamentVideosFragment;
 import com.angarron.vframes.util.CharacterResourceUtil;
 import com.angarron.vframes.util.CrashlyticsUtil;
 import com.angarron.vframes.util.FeedbackUtil;
@@ -47,7 +48,8 @@ import data.model.move.MoveCategory;
 
 public class CharacterSummaryActivity extends AppCompatActivity implements
         MoveListFragment.IMoveListFragmentHost,
-        GuideVideosFragment.IRecommendedVideosFragmentHost,
+        GuideVideosFragment.IGuideVideosFragmentHost,
+        TournamentVideosFragment.ITournamentVideosFragmentHost,
         NotesFragment.INotesFragmentHost,
         AdapterView.OnItemSelectedListener, ViewPager.OnPageChangeListener {
 
