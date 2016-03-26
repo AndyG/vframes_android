@@ -18,7 +18,6 @@ import com.angarron.vframes.data.videos.YoutubeVideo;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class YoutubeVideosRecyclerAdapter extends RecyclerView.Adapter {
 

@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.data.videos.TournamentVideo;
 import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
