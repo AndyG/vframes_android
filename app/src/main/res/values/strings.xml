@@ -25,7 +25,8 @@
     <string name="moves_list_title">Move List</string>
     <string name="frame_data_title">Frame Data</string>
     <string name="bnb_page_title">BnB Combos</string>
-    <string name="recommended_videos_title">Recommended Videos</string>
+    <string name="guide_videos_title">Guide Videos</string>
+    <string name="tournament_videos_title">Tournament Videos</string>
     <string name="notes_title">Notes</string>
     <string name="quick_navigate">Quick Nav:</string>
 
@@ -153,7 +154,7 @@
     <string name="closeDrawer">Close drawer</string>
 
     <!-- Frame data updated dialog -->
-    <string name="data_updated_message">VFrames has downloaded the latest moves list and frame data. We recommend periodically checking for new versions of VFrames in the Google Play Store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!</string>
+    <string name="data_updated_message">VFrames has downloaded the latest moves list and frame data! Thank you for using VFrames!</string>
     <string name="data_updated_title">New Data Downloaded</string>
     <string name="ok_thanks">OK</string>
 
@@ -178,15 +179,15 @@
     <string name="viewers_format">%1$s viewers</string>
     <string name="no_current_streams">There is no one currently streaming Street Fighter V.</string>
 
-    <!-- Recommended Videos -->
-    <string name="videos_not_available">Recommended videos are on the way for %1$s!</string>
-    <string name="error_loading_videos">Sorry, but there was an error loading recommended videos. Please check your network connection and try again.</string>
+    <!-- Videos -->
+    <string name="videos_not_available">Videos are on the way for %1$s!</string>
+    <string name="error_loading_videos">Sorry, but there was an error loading videos. Please check your network connection and try again.</string>
 
     <!-- Navigation Drawer -->
     <string name="character_data">Character Info</string>
     <string name="live_streams">Live Streams</string>
     <string name="references">References</string>
-    <string name="community">Community</string>
+    <string name="content">Content</string>
 
     <!-- Character Comparison Page -->
     <string name="comparison_first_character_transition">comparison_first_character_transition</string>
@@ -209,15 +210,24 @@
     <string name="general_notes_text_format">Take General %1$s Notes</string>
     <string name="pick_a_matchup">Or pick a matchup:</string>
 
-    <string name="can_take_notes_message">We\'ve added basic notes-taking capabilities to VFrames! Try it out for your favorite character and let us know if there are any issues. More text-editing functionality will be added over time.</string>
-    <string name="can_take_notes_title">Take Notes!</string>
+    <string name="enhanced_tournament_matches_message">We\'ve made Tournament Matches filterable by matchup! We\'ve also added new navigation tabs for non-character-specific matches and guides.\n\nWe\'ll start adding videos at a much faster rate now. We hope to be your go-to source for research, whether you\'re a beginner or a veteran!</string>
+    <string name="enhanced_tournament_matches_title">Multiple new features!</string>
+    <string name="filter_matchup_spinner_label">Filter Matchup:</string>
+    <string name="filtered_videos_not_available">There are no videos for this matchup… yet!</string>
+    <string name="street_fighter_v_guides">Guides &amp; Tech</string>
+    <string name="recent_tournament_matches">Recent Tournament Matches</string>
+    <string name="general_guides_not_available">Sorry, there are no general guides available.</string>
+    <string name="tournament_videos_not_available">There are no tournament videos available.</string>
+    <string name="new_data_available_message">New data is available for VFrames. Would you like to download it?</string>
+    <string name="new_data_available_title">New Data Available!</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>
         <item>Move List</item>
-        <item>BnB Combos</item>
-        <item>Recommended Videos</item>
         <item>Notes</item>
+        <item>Tournament Videos</item>
+        <item>Guide Videos</item>
+        <item>BnB Combos</item>
     </string-array>
 
 

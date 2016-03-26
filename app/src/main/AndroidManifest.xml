@@ -63,6 +63,12 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
+        <activity android:name=".ui.activity.TournamentVideosActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ui.activity.GuideVideosActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <!-- Crashlytics Integration -->
         <meta-data
             android:name="io.fabric.ApiKey"

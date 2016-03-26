@@ -14,12 +14,10 @@ import android.widget.TextView;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.data.videos.YoutubeVideo;
-import com.angarron.vframes.data.videos.YoutubeVideosModel;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class YoutubeVideosRecyclerAdapter extends RecyclerView.Adapter {
 
@@ -30,9 +28,9 @@ public class YoutubeVideosRecyclerAdapter extends RecyclerView.Adapter {
     private List<Object> displayList;
     private IVideoSelectedListener videoSelectedListener;
 
-    public YoutubeVideosRecyclerAdapter(YoutubeVideosModel videosModel, IVideoSelectedListener listener) {
+    public YoutubeVideosRecyclerAdapter(List<YoutubeVideo> youtubeVideos, IVideoSelectedListener listener) {
         this.videoSelectedListener = listener;
-        setupDisplayList(videosModel);
+        setupDisplayList(youtubeVideos);
     }
 
     @Override
@@ -85,16 +83,11 @@ public class YoutubeVideosRecyclerAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private void setupDisplayList(YoutubeVideosModel youtubeVideosModel) {
+    private void setupDisplayList(List<YoutubeVideo> youtubeVideos) {
         displayList = new ArrayList<>();
-        if (youtubeVideosModel != null) {
-            for (Map.Entry<String, List<YoutubeVideo>> videoCategory : youtubeVideosModel.getVideos().entrySet()) {
-
-                displayList.add(videoCategory.getKey());
-
-                for (YoutubeVideo video : videoCategory.getValue()) {
-                    displayList.add(video);
-                }
+        if (youtubeVideos != null) {
+            for (YoutubeVideo video : youtubeVideos) {
+                displayList.add(video);
             }
         }
     }

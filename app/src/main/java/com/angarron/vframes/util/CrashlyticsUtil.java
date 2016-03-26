@@ -1,6 +1,9 @@
 package com.angarron.vframes.util;
 
+import android.util.Log;
+
 import com.angarron.vframes.BuildConfig;
+import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.CustomEvent;
 
@@ -15,6 +18,13 @@ public class CrashlyticsUtil {
 
         if (!BuildConfig.DEBUG) {
             Answers.getInstance().logCustom(viewedNotesEvent);
+        }
+    }
+
+    public static void logException(Throwable throwable) {
+        Log.d("CrashlyticsUtil", "exception", throwable);
+        if (!BuildConfig.DEBUG) {
+            Crashlytics.logException(throwable);
         }
     }
 }

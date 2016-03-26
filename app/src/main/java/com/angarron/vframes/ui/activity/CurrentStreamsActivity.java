@@ -22,11 +22,11 @@ import com.google.gson.JsonObject;
 
 import java.util.List;
 
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CurrentStreamsActivity extends NavigationHostActivity implements StreamsRecyclerViewAdapter.IStreamClickListener {
 
@@ -94,8 +94,8 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
 
         call.enqueue(new Callback<JsonObject>() {
             @Override
-            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                if (response.isSuccessful()) {
                     TwitchJsonParser twitchJsonParser = new TwitchJsonParser();
                     List<TwitchStream> twitchStreams = twitchJsonParser.parse(response.body());
                     if (!twitchStreams.isEmpty()) {
@@ -113,7 +113,7 @@ public class CurrentStreamsActivity extends NavigationHostActivity implements St
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<JsonObject> call, Throwable t) {
                 showFailureUI();
             }
         });

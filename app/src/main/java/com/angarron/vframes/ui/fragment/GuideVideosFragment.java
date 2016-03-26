@@ -14,22 +14,26 @@ import android.widget.TextView;
 
 import com.angarron.vframes.R;
 import com.angarron.vframes.adapter.YoutubeVideosRecyclerAdapter;
-import com.angarron.vframes.data.videos.RecommendedVideosJsonParser;
-import com.angarron.vframes.data.videos.RecommendedVideosModel;
-import com.angarron.vframes.data.videos.YoutubeVideosModel;
+import com.angarron.vframes.data.videos.VideosJsonParser;
+import com.angarron.vframes.data.videos.IGuideVideo;
+import com.angarron.vframes.data.videos.YoutubeVideo;
 import com.angarron.vframes.network.VFramesRESTApi;
 import com.angarron.vframes.network.YoutubeVideosLoader;
 import com.angarron.vframes.util.CharacterResourceUtil;
-import com.google.gson.JsonObject;
+import com.google.gson.JsonArray;
+
+import java.util.List;
 
 import data.model.CharacterID;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RecommendedVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
+public class GuideVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
 
     public static final String CHARACTER_ID = "CHARACTER_ID";
 
@@ -43,7 +47,7 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
     @Override
     public void onVideoSelected(String videoUrl) {
         Activity hostActivity = getActivity();
-        IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
+        IGuideVideosFragmentHost host = (IGuideVideosFragmentHost) hostActivity;
         host.onVideoSelected(videoUrl);
     }
 
@@ -60,20 +64,29 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         noVideosLayout = (TextView) view.findViewById(R.id.no_videos_layout);
         failedToLoadLayout = view.findViewById(R.id.failed_to_load_layout);
-        loadRecommendedVideos(characterID);
+        loadGuideVideos();
         return view;
     }
 
-    private void loadRecommendedVideos(CharacterID characterId) {
+    private void loadGuideVideos() {
         showProgressBar();
         videosRecyclerView.setAdapter(null);
 
         VFramesRESTApi restApi = createVFramesApi();
-        Call<JsonObject> call = restApi.getVideosForCharacter(characterId.toString());
-        call.enqueue(new Callback<JsonObject>() {
+
+        String characterQueryParameter;
+        if (characterID == null) {
+            //If no character is specified, we want the "general" guides (not character-specific).
+            characterQueryParameter = "general";
+        } else {
+            characterQueryParameter = characterID.toString();
+        }
+
+        Call<JsonArray> call = restApi.getGuideVideosForCharacter(characterQueryParameter);
+        call.enqueue(new Callback<JsonArray>() {
             @Override
-            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
+                if (response.isSuccessful()) {
                     processSuccessfulResponse(response.body());
                 } else {
                     showFailureUI();
@@ -81,29 +94,36 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<JsonArray> call, Throwable t) {
                 showFailureUI();
             }
         });
     }
 
-    private void processSuccessfulResponse(JsonObject body) {
-        RecommendedVideosModel recommendedVideosModel = RecommendedVideosJsonParser.parseVideos(body.getAsJsonArray("videos"));
-        if (!recommendedVideosModel.isEmpty()) {
-            loadYoutubeVideosModel(recommendedVideosModel);
+    private void processSuccessfulResponse(JsonArray body) {
+        List<IGuideVideo> guideVideos = VideosJsonParser.parseGuideVideos(body);
+        if (!guideVideos.isEmpty()) {
+            loadYoutubeVideosModel(guideVideos);
         } else {
             showNoVideosView();
         }
     }
 
-    private void loadYoutubeVideosModel(RecommendedVideosModel recommendedVideosModel) {
+    private void loadYoutubeVideosModel(List<IGuideVideo> guideVideos) {
         YoutubeVideosLoader youtubeVideosLoader = new YoutubeVideosLoader(new LoadVideosListener());
-        youtubeVideosLoader.loadVideos(recommendedVideosModel);
+        youtubeVideosLoader.loadVideos(guideVideos);
     }
 
     private VFramesRESTApi createVFramesApi() {
+
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://agarron.com/res/vframes/")
+                .client(client)
+                .baseUrl("http://still-hollows-20653.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -117,7 +137,12 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
 
         Activity hostActivity = getActivity();
         if (hostActivity != null) {
-            String noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getActivity(), characterID));
+            String noVideosText;
+            if (characterID != null) {
+                noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getActivity(), characterID));
+            } else {
+                noVideosText = hostActivity.getString(R.string.general_guides_not_available);
+            }
             noVideosLayout.setText(noVideosText);
         }
         noVideosLayout.setVisibility(View.VISIBLE);
@@ -147,14 +172,18 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         videosRecyclerView.setVisibility(View.VISIBLE);
     }
 
-    public interface IRecommendedVideosFragmentHost {
+    public void refreshVideos() {
+        loadGuideVideos();
+    }
+
+    public interface IGuideVideosFragmentHost {
         void onVideoSelected(String videoUrl);
     }
 
     private class LoadVideosListener implements YoutubeVideosLoader.Listener {
         @Override
-        public void onVideosLoaded(YoutubeVideosModel youtubeVideosModel) {
-            videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideosModel, RecommendedVideosFragment.this));
+        public void onVideosLoaded(List<YoutubeVideo> youtubeVideos) {
+            videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideos, GuideVideosFragment.this));
             showRecyclerView();
         }
 
@@ -169,7 +198,7 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         if (bundle != null && bundle.containsKey(CHARACTER_ID)) {
             return (CharacterID) bundle.getSerializable(CHARACTER_ID);
         } else {
-            throw new RuntimeException("no character id for FrameDataFragment");
+            return null;
         }
     }
 }

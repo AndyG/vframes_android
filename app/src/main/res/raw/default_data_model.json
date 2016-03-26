@@ -1,5 +1,9 @@
 {
-    "version": "1", 
+    "versioning": {
+        "dataVersion": 1,
+        "minSupportedAndroidVersion": 21
+    },
+    "dataVersion": "1",
     "characters": {
         "ken": {
             "frame_data": {

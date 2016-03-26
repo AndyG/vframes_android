@@ -1,11 +1,9 @@
 package com.angarron.vframes.network;
 
 import com.angarron.vframes.BuildConfig;
-import com.angarron.vframes.data.videos.RecommendedVideo;
-import com.angarron.vframes.data.videos.RecommendedVideosModel;
+import com.angarron.vframes.data.videos.IVideo;
 import com.angarron.vframes.data.videos.YoutubeVideo;
 import com.angarron.vframes.data.videos.YoutubeVideoJsonParser;
-import com.angarron.vframes.data.videos.YoutubeVideosModel;
 import com.crashlytics.android.Crashlytics;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -13,41 +11,34 @@ import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class YoutubeVideosLoader {
 
     private Listener listener;
-    private RecommendedVideosModel recommendedVideosModel;
+    private Map<String, String> idSubtextMap = new HashMap<>();
 
     public YoutubeVideosLoader(Listener listener) {
         this.listener = listener;
     }
 
-    public void loadVideos(RecommendedVideosModel recommendedVideosModel) {
-        this.recommendedVideosModel = recommendedVideosModel;
-
-        //Consolidate list of recommended video IDs so we don't have to make multiple calls.
-        List<String> recommendedVideoIds = new ArrayList<>();
-        Map<String, List<RecommendedVideo>> recommendedVideos = recommendedVideosModel.getVideos();
-        for (String category : recommendedVideos.keySet()) {
-            for (RecommendedVideo recommendedVideo : recommendedVideos.get(category)) {
-                recommendedVideoIds.add(recommendedVideo.getVideoId());
-            }
-        }
+    public void loadVideos(List<? extends IVideo> videos) {
 
         //Create a comma-separated list of the IDs.
         StringBuilder commaSeparatedIdsBuilder = new StringBuilder();
-        for (int i = 0; i < recommendedVideoIds.size(); i++) {
-            commaSeparatedIdsBuilder.append(recommendedVideoIds.get(i));
-            if (i != recommendedVideoIds.size() - 1) {
+        for (int i = 0; i < videos.size(); i++) {
+            IVideo video = videos.get(i);
+            idSubtextMap.put(video.getVideoID(), video.getSubtext());
+            commaSeparatedIdsBuilder.append(videos.get(i).getVideoID());
+            if (i != videos.size() - 1) {
                 commaSeparatedIdsBuilder.append(",");
             }
         }
@@ -59,28 +50,27 @@ public class YoutubeVideosLoader {
         makeYoutubeRESTCall(commaSeparatedIds, youtubeDataApi);
     }
 
-    private void makeYoutubeRESTCall(String commaSeparatedIds, YoutubeDataApi youtubeDataApi) {
+    private void makeYoutubeRESTCall(String commaSeparatedIds, final YoutubeDataApi youtubeDataApi) {
         Call<JsonObject> call = youtubeDataApi.getVideosWithIds(commaSeparatedIds);
         call.enqueue(new Callback<JsonObject>() {
             @Override
-            public void onResponse(Response<JsonObject> response, Retrofit retrofit) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                if (response.isSuccessful()) {
                     try {
-                        YoutubeVideosModel youtubeVideosModel = new YoutubeVideosModel();
+                        List<YoutubeVideo> youtubeVideos = new ArrayList<>();
                         JsonArray videosJson = response.body().get("items").getAsJsonArray();
 
                         for (JsonElement videoJsonElement : videosJson) {
                             JsonObject videoJsonObject = videoJsonElement.getAsJsonObject();
 
                             String videoId = videoJsonObject.get("id").getAsString();
-                            String category = recommendedVideosModel.getCategoryForVideo(videoId);
-                            String description = recommendedVideosModel.getDescriptionForVideo(videoId);
+                            String subtext = idSubtextMap.get(videoId);
 
-                            YoutubeVideo video = YoutubeVideoJsonParser.parseYoutubeVideoJson(videoJsonObject, description, videoId);
-                            youtubeVideosModel.addVideo(category, video);
+                            YoutubeVideo video = YoutubeVideoJsonParser.parseYoutubeVideoJson(videoJsonObject, subtext, videoId);
+                            youtubeVideos.add(video);
                         }
 
-                        listener.onVideosLoaded(youtubeVideosModel);
+                        listener.onVideosLoaded(youtubeVideos);
                     } catch (Exception e) {
                         listener.onFailure();
                         if (!BuildConfig.DEBUG) {
@@ -103,7 +93,7 @@ public class YoutubeVideosLoader {
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<JsonObject> call, Throwable t) {
                 if (!BuildConfig.DEBUG) {
                     Crashlytics.logException(t);
                 }
@@ -123,7 +113,7 @@ public class YoutubeVideosLoader {
     }
 
     public interface Listener {
-        void onVideosLoaded(YoutubeVideosModel youtubeVideosModel);
+        void onVideosLoaded(List<YoutubeVideo> youtubeVideos);
         void onFailure();
     }
 }

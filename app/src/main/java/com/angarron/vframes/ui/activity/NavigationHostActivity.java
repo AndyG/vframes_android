@@ -1,7 +1,6 @@
 package com.angarron.vframes.ui.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,11 +20,6 @@ public class NavigationHostActivity extends AppCompatActivity implements Navigat
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     public void setContentView(int layoutResID) {
@@ -89,6 +83,26 @@ public class NavigationHostActivity extends AppCompatActivity implements Navigat
             Intent launchStreamsActivityIntent = new Intent(this, CurrentStreamsActivity.class);
             launchStreamsActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(launchStreamsActivityIntent);
+            finish();
+        }
+    }
+
+    @Override
+    public void onTournamentVideosClicked() {
+        if (!(this instanceof TournamentVideosActivity)) {
+            Intent launchTournamentVideosActivityIntent = new Intent(this, TournamentVideosActivity.class);
+            launchTournamentVideosActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(launchTournamentVideosActivityIntent);
+            finish();
+        }
+    }
+
+    @Override
+    public void onGuideVideosClicked() {
+        if (!(this instanceof GuideVideosActivity)) {
+            Intent launchGuideVideosActivityIntent = new Intent(this, GuideVideosActivity.class);
+            launchGuideVideosActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(launchGuideVideosActivityIntent);
             finish();
         }
     }
