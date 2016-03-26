@@ -38,7 +38,7 @@ public class CharacterSelectActivity extends NavigationHostActivity {
 
     private static final String REVIEW_REQUEST_SEEN = "REVIEW_REQUEST_SEEN";
     private static final String CAN_COMPARE_CHARACTERS_SEEN = "CAN_COMPARE_CHARACTERS_SEEN";
-    private static final String CAN_TAKE_NOTES_SEEN = "CAN_TAKE_NOTES_SEEN";
+    private static final String ENHANCED_TOURNAMENT_MATCHES_SEEN = "ENHANCED_TOURNAMENT_MATCHES_SEEN";
 
     private CharacterID highlightedCharacter;
 
@@ -66,16 +66,16 @@ public class CharacterSelectActivity extends NavigationHostActivity {
             showReviewRequestDialog();
         } else if (shouldShowCanCompareDialog()) {
             showCanCompareDialog();
-        } else if (shouldShowCanTakeNotesDialog()) {
+        } else if (shouldShowTournamentMatchesDialog()) {
             //TODO: remove this in the next version
-            showCanTakeNotesDialog();
+            showTournamentMatchesDialog();
         }
     }
 
-    private void showCanTakeNotesDialog() {
+    private void showTournamentMatchesDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.can_take_notes_message)
-                .setTitle(R.string.can_take_notes_title);
+        builder.setMessage(R.string.enhanced_tournament_matches_message)
+                .setTitle(R.string.enhanced_tournament_matches_title);
 
         builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -92,19 +92,20 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         dialog.show();
     }
 
-    private boolean shouldShowCanTakeNotesDialog() {
-        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
-        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
-        boolean canTakeNotesSeen = sharedPreferences.getBoolean(CAN_TAKE_NOTES_SEEN, false);
-
-        if(appLaunchCount >= 2 && !canTakeNotesSeen) {
-            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-            sharedPreferencesEditor.putBoolean(CAN_TAKE_NOTES_SEEN, true);
-            sharedPreferencesEditor.apply();
-            return true;
-        }
-
-        return false;
+    private boolean shouldShowTournamentMatchesDialog() {
+        return true;
+//        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+//        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+//        boolean canTakeNotesSeen = sharedPreferences.getBoolean(ENHANCED_TOURNAMENT_MATCHES_SEEN, false);
+//
+//        if(appLaunchCount >= 2 && !canTakeNotesSeen) {
+//            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+//            sharedPreferencesEditor.putBoolean(ENHANCED_TOURNAMENT_MATCHES_SEEN, true);
+//            sharedPreferencesEditor.apply();
+//            return true;
+//        }
+//
+//        return false;
     }
 
     private void showCanCompareDialog() {

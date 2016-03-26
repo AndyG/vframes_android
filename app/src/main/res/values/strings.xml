@@ -210,8 +210,8 @@
     <string name="general_notes_text_format">Take General %1$s Notes</string>
     <string name="pick_a_matchup">Or pick a matchup:</string>
 
-    <string name="can_take_notes_message">We\'ve added basic notes-taking capabilities to VFrames! Try it out for your favorite character and let us know if there are any issues. More text-editing functionality will be added over time.</string>
-    <string name="can_take_notes_title">Take Notes!</string>
+    <string name="enhanced_tournament_matches_message">We\'ve made Tournament Matches filterable by matchup! We\'ve also added new navigation tabs for non-character-specific matches and guides.\n\nWe\'ll start adding videos at a much faster rate now. We hope to be your go-to source for research, whether you\'re a beginner or a veteran!</string>
+    <string name="enhanced_tournament_matches_title">Multiple new features!</string>
     <string name="filter_matchup_spinner_label">Filter Matchup:</string>
     <string name="filtered_videos_not_available">There are no videos for this matchup… yet!</string>
     <string name="street_fighter_v_guides">Guides &amp; Tech</string>
