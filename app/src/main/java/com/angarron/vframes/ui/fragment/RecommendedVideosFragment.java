@@ -19,6 +19,7 @@ import com.angarron.vframes.data.videos.RecommendedVideosModel;
 import com.angarron.vframes.data.videos.YoutubeVideosModel;
 import com.angarron.vframes.network.VFramesRESTApi;
 import com.angarron.vframes.network.YoutubeVideosLoader;
+import com.angarron.vframes.util.CharacterResourceUtil;
 import com.google.gson.JsonObject;
 
 import data.model.CharacterID;
@@ -29,6 +30,10 @@ import retrofit.Response;
 import retrofit.Retrofit;
 
 public class RecommendedVideosFragment extends Fragment implements YoutubeVideosRecyclerAdapter.IVideoSelectedListener {
+
+    public static final String CHARACTER_ID = "CHARACTER_ID";
+
+    private CharacterID characterID;
 
     RecyclerView videosRecyclerView;
     View failedToLoadLayout;
@@ -46,7 +51,8 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Activity hostActivity = getActivity();
-        IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
+
+        characterID = getCharacterIdFromArguments();
 
         View view = inflater.inflate(R.layout.fragment_recommended_videos, container, false);
         videosRecyclerView = (RecyclerView) view.findViewById(R.id.videos_recycler_view);
@@ -54,7 +60,7 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         noVideosLayout = (TextView) view.findViewById(R.id.no_videos_layout);
         failedToLoadLayout = view.findViewById(R.id.failed_to_load_layout);
-        loadRecommendedVideos(host.getTargetCharacterId());
+        loadRecommendedVideos(characterID);
         return view;
     }
 
@@ -111,8 +117,7 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
 
         Activity hostActivity = getActivity();
         if (hostActivity != null) {
-            IRecommendedVideosFragmentHost host = (IRecommendedVideosFragmentHost) hostActivity;
-            String noVideosText = hostActivity.getString(R.string.videos_not_available, host.getCharacterDisplayName());
+            String noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getActivity(), characterID));
             noVideosLayout.setText(noVideosText);
         }
         noVideosLayout.setVisibility(View.VISIBLE);
@@ -143,8 +148,6 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
     }
 
     public interface IRecommendedVideosFragmentHost {
-        CharacterID getTargetCharacterId();
-        String getCharacterDisplayName();
         void onVideoSelected(String videoUrl);
     }
 
@@ -158,6 +161,15 @@ public class RecommendedVideosFragment extends Fragment implements YoutubeVideos
         @Override
         public void onFailure() {
             showFailureUI();
+        }
+    }
+
+    private CharacterID getCharacterIdFromArguments() {
+        Bundle bundle = getArguments();
+        if (bundle != null && bundle.containsKey(CHARACTER_ID)) {
+            return (CharacterID) bundle.getSerializable(CHARACTER_ID);
+        } else {
+            throw new RuntimeException("no character id for FrameDataFragment");
         }
     }
 }

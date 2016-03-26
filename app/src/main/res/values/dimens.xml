@@ -9,6 +9,7 @@
     <integer name="num_character_card_columns">2</integer>
 
     <dimen name="character_card_height">100dp</dimen>
+    <dimen name="character_card_height_mini">50dp</dimen>
     <dimen name="character_card_margin">10dp</dimen>
     <dimen name="character_card_elevation">5dp</dimen>
     <dimen name="character_card_text_padding">10dp</dimen>

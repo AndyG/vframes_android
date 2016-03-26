@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/notes_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/summary_toolbar_style" />
+
+    <RelativeLayout
+        android:id="@+id/text_controls"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ToggleButton
+                android:textOff="B"
+                android:textOn="B"
+                android:id="@+id/bold_button"
+                style="@style/text_control_style"
+                android:src="@drawable/bold_icon" />
+
+            <ToggleButton
+                android:textOff="i"
+                android:textOn="i"
+                android:id="@+id/italics_button"
+                style="@style/text_control_style"
+                android:src="@drawable/italic_icon"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/black"/>
+
+            <ImageButton
+                android:id="@+id/save_button"
+                style="@style/text_control_style"
+                android:src="@drawable/save_icon"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.angarron.vframes.ui.view.RichEditor
+        android:id="@+id/notes_edit_text"
+        android:gravity="top"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

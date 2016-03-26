@@ -63,7 +63,7 @@ public class FrameDataEntryJsonAdapter {
     }
 
     private static IFrameDataEntryHolder constructHardCodedFrameDataEntry(JsonObject moveJson) {
-        String name = moveJson.get("nameID").getAsString();
+        String name = moveJson.get("name").getAsString();
         MoveType type = MoveType.TYPE_0;
         String description = parseDescription(moveJson);
 

@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Switch
+        android:id="@+id/alternate_frame_data_switch"
+        android:text="Standard Frame Data"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+
     <include layout="@layout/frame_data_header_layout"
         android:id="@+id/frame_data_header_layout"/>
 

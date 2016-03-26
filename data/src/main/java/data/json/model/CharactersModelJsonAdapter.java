@@ -15,9 +15,14 @@ public class CharactersModelJsonAdapter {
         Map<CharacterID, SFCharacter> characterMap = new HashMap<>();
         for (CharacterID characterID : CharacterID.values()) {
             System.out.println("Parsing character : " + characterID.toString());
-            JsonObject characterJson = jsonObject.getAsJsonObject(characterID.toString());
-            SFCharacter sfCharacter = SFCharacterJsonAdapter.JsonToCharacter(characterJson);
-            characterMap.put(characterID, sfCharacter);
+            String characterKey = characterID.toString();
+            if (jsonObject.has(characterKey)) {
+                JsonObject characterJson = jsonObject.getAsJsonObject(characterID.toString());
+                SFCharacter sfCharacter = SFCharacterJsonAdapter.JsonToCharacter(characterJson);
+                characterMap.put(characterID, sfCharacter);
+            } else {
+                characterMap.put(characterID, new SFCharacter(null, null, null));
+            }
         }
         return new CharactersModel(characterMap);
     }

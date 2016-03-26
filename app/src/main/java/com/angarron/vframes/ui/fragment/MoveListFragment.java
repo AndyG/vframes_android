@@ -23,17 +23,25 @@ public class MoveListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        RecyclerView moveListRecyclerView = (RecyclerView) inflater.inflate(R.layout.moves_list_recycler, container, false);
-        setupRecyclerView(moveListRecyclerView);
-        return moveListRecyclerView;
+        IMoveListFragmentHost hostActivity = (IMoveListFragmentHost) getActivity();
+        Map<MoveCategory, List<IMoveListEntry>> moveList = hostActivity.getMoveList();
+
+        if (moveList != null) {
+            RecyclerView moveListRecyclerView = (RecyclerView) inflater.inflate(R.layout.moves_list_recycler, container, false);
+            setupRecyclerView(moveListRecyclerView, moveList);
+            return moveListRecyclerView;
+        } else {
+            return inflater.inflate(R.layout.moves_upcoming, container, false);
+        }
+
     }
 
-    private void setupRecyclerView(RecyclerView recyclerView) {
+    private void setupRecyclerView(RecyclerView recyclerView, Map<MoveCategory, List<IMoveListEntry>> moveList) {
         Activity hostActivity = getActivity();
         recyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
 
         IMoveListFragmentHost host = (IMoveListFragmentHost) hostActivity;
-        recyclerView.setAdapter(new MovesRecyclerViewAdapter(getContext(), host.getMoveList()));
+        recyclerView.setAdapter(new MovesRecyclerViewAdapter(getContext(), moveList));
     }
 
     public interface IMoveListFragmentHost {

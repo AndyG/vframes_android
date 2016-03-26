@@ -10,17 +10,7 @@
         android:gravity="center"
         android:layout_margin="15dp"
         android:textSize="25sp"
-        android:text="@string/frame_data_not_available"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:layout_margin="15dp"
-        android:textSize="25sp"
-        android:text="@string/try_getting_new_data"
+        android:text="@string/moves_not_available"
         />
 
 </LinearLayout>

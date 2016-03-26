@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/character_select_gridlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:columnCount="3">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/alex_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/alex_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/alex_card" />
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/alex_name"
+                android:background="@color/alex_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/birdie_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/birdie_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/birdie_card" />
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/birdie_name"
+                android:background="@color/birdie_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cammy_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cammy_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/cammy_card" />
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/cammy_name"
+                android:background="@color/cammy_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chun_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/chun_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/chun_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/chun_name"
+                android:background="@color/chun_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/dhalsim_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dhalsim_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/dhalsim_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/dhalsim_name"
+                android:background="@color/dhalsim_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/fang_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/fang_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/fang_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/fang_name"
+                android:background="@color/fang_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/karin_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/karin_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/karin_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/karin_name"
+                android:background="@color/karin_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ken_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ken_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/ken_card" />
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/ken_name"
+                android:background="@color/ken_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/laura_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/laura_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/laura_card" />
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/laura_name"
+                android:background="@color/laura_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/dictator_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dictator_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/dictator_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/dictator_name"
+                android:background="@color/dictator_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/nash_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/nash_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/nash_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/nash_name"
+                android:background="@color/nash_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/necalli_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/necalli_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/necalli_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/necalli_name"
+                android:background="@color/necalli_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/mika_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mika_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/mika_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/mika_name"
+                android:background="@color/mika_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rashid_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/rashid_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/rashid_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/rashid_name"
+                android:background="@color/rashid_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ryu_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ryu_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/ryu_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/ryu_name"
+                android:background="@color/ryu_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/claw_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/claw_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/claw_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/claw_name"
+                android:background="@color/claw_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/zangief_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/zangief_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/zangief_card"/>
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/zangief_name"
+                android:background="@color/zangief_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.v7.widget.GridLayout>
+

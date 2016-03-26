@@ -13,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.angarron.vframes.R;
-import com.angarron.vframes.resource_resolution.StringResolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,7 +110,7 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     private void setupMoveItemViewHolder(MoveItemViewHolder moveItemViewHolder, int position) {
         IMoveListEntry move = (IMoveListEntry) displayList.get(position);
-        moveItemViewHolder.label.setText(move.getNameId());
+        moveItemViewHolder.label.setText(move.getName());
 
         List<InputElement> input = move.getInput();
         moveItemViewHolder.input.removeAllViews();
@@ -120,22 +119,22 @@ public class MovesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
             moveItemViewHolder.input.addView(getViewForInputElement(inputElement));
         }
 
-        if (!TextUtils.isEmpty(move.getPretextId())) {
-            moveItemViewHolder.pretext.setText(StringResolver.getStringId(move.getPretextId()));
+        if (!TextUtils.isEmpty(move.getPretext())) {
+            moveItemViewHolder.pretext.setText(move.getPretext());
             moveItemViewHolder.pretext.setVisibility(View.VISIBLE);
         } else {
             moveItemViewHolder.pretext.setVisibility(View.GONE);
         }
 
-        if (!TextUtils.isEmpty(move.getPosttextId())) {
-            moveItemViewHolder.posttext.setText(StringResolver.getStringId(move.getPosttextId()));
+        if (!TextUtils.isEmpty(move.getPosttext())) {
+            moveItemViewHolder.posttext.setText(move.getPosttext());
             moveItemViewHolder.posttext.setVisibility(View.VISIBLE);
         } else {
             moveItemViewHolder.posttext.setVisibility(View.GONE);
         }
 
-        if (!TextUtils.isEmpty(move.getDescriptionId())) {
-            moveItemViewHolder.description.setText(StringResolver.getStringId(move.getDescriptionId()));
+        if (!TextUtils.isEmpty(move.getDescription())) {
+            moveItemViewHolder.description.setText(move.getDescription());
             moveItemViewHolder.description.setVisibility(View.VISIBLE);
         } else {
             moveItemViewHolder.description.setVisibility(View.GONE);

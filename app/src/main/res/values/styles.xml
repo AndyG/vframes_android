@@ -26,12 +26,18 @@
         <item name="cardElevation">@dimen/character_card_elevation</item>
     </style>
 
+    <style name="CharacterCardMini" parent="CharacterCard">
+        <item name="android:layout_height">@dimen/character_card_height_mini</item>
+    </style>
+
     <style name="CharacterCardImageStyle">
         <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">5dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/selected_image_background</item>
     </style>
 
     <style name="CharacterCardTextStyle">
@@ -57,7 +63,7 @@
         <item name="android:gravity">end</item>
     </style>
 
-    <style name="CharacterSummaryPageTabStrip">
+    <style name="CharacterPagerTabStrip">
         <item name="android:background">@color/pager_tab_strip_background</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -77,6 +83,12 @@
         <item name="android:elevation">4dp</item>
     </style>
 
+    <style name="comparison_toolbar_style">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextAppearance">@style/toolbar_text</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
     <style name="frame_data_header_text_style">
         <item name="android:textColor">@color/off_white</item>
         <item name="android:textSize">@dimen/frame_data_header_text_size</item>
@@ -84,6 +96,13 @@
 
     <style name="frame_data_row_text_style">
         <item name="android:textSize">@dimen/frame_data_row_text_size</item>
+    </style>
+
+    <style name="text_control_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>
