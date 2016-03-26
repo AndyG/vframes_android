@@ -1,5 +1,7 @@
 package com.angarron.vframes.ui.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,7 +14,7 @@ import com.angarron.vframes.R;
 import com.angarron.vframes.ui.fragment.TournamentVideosFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 
-public class TournamentVideosActivity extends NavigationHostActivity {
+public class TournamentVideosActivity extends NavigationHostActivity implements TournamentVideosFragment.ITournamentVideosFragmentHost {
 
     private static final String TAG_TOURNAMENT_VIDEOS_FRAGMENT = "TAG_TOURNAMENT_VIDEOS_FRAGMENT";
 
@@ -29,7 +31,6 @@ public class TournamentVideosActivity extends NavigationHostActivity {
             ft.add(R.id.videos_fragment_container, tournamentVideosFragment, TAG_TOURNAMENT_VIDEOS_FRAGMENT).commit();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -63,4 +64,12 @@ public class TournamentVideosActivity extends NavigationHostActivity {
             actionBar.setTitle("Recent Tournament Matches");
         }
     }
+
+    @Override
+    public void onVideoSelected(String videoUrl) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(videoUrl));
+        startActivity(i);
+    }
+
 }

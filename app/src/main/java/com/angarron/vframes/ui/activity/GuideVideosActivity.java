@@ -1,5 +1,7 @@
 package com.angarron.vframes.ui.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,7 +14,7 @@ import com.angarron.vframes.R;
 import com.angarron.vframes.ui.fragment.GuideVideosFragment;
 import com.angarron.vframes.util.FeedbackUtil;
 
-public class GuideVideosActivity extends NavigationHostActivity {
+public class GuideVideosActivity extends NavigationHostActivity implements GuideVideosFragment.IGuideVideosFragmentHost {
 
     private static final String TAG_GUIDE_VIDEOS_FRAGMENT = "TAG_GUIDE_VIDEOS_FRAGMENT";
 
@@ -62,4 +64,12 @@ public class GuideVideosActivity extends NavigationHostActivity {
             actionBar.setTitle("Guide Videos");
         }
     }
+
+    @Override
+    public void onVideoSelected(String videoUrl) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(videoUrl));
+        startActivity(i);
+    }
+
 }

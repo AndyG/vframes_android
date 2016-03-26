@@ -1,6 +1,7 @@
 package com.angarron.vframes.ui.fragment;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -172,8 +173,9 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
         progressBar.setVisibility(View.INVISIBLE);
 
         String noVideosText;
-        if (firstCharacter != null) {
-            noVideosText = getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getContext(), firstCharacter));
+        Context context = getContext();
+        if (firstCharacter != null && context != null) {
+            noVideosText = getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(context, firstCharacter));
         } else {
             noVideosText = getString(R.string.tournament_videos_not_available);
         }
@@ -272,7 +274,10 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
             videosRecyclerView.setAdapter(new YoutubeVideosRecyclerAdapter(youtubeVideos, TournamentVideosFragment.this));
             showRecyclerView();
             if (youtubeVideos.isEmpty() && matchupFilterCharacter != null) {
-                Toast.makeText(getContext(), R.string.filtered_videos_not_available, Toast.LENGTH_SHORT).show();
+                Context context = getContext();
+                if (context != null) {
+                    Toast.makeText(context, R.string.filtered_videos_not_available, Toast.LENGTH_SHORT).show();
+                }
             }
         }
 

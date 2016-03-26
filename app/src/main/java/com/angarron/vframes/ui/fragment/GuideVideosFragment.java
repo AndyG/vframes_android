@@ -139,7 +139,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
         if (hostActivity != null) {
             String noVideosText;
             if (characterID != null) {
-                noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(getActivity(), characterID));
+                noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(hostActivity, characterID));
             } else {
                 noVideosText = hostActivity.getString(R.string.general_guides_not_available);
             }
