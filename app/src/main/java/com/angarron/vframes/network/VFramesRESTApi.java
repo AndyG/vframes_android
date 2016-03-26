@@ -11,6 +11,9 @@ public interface VFramesRESTApi {
     @GET("/dataModel")
     Call<JsonObject> getData(@Query("endpoint") String endpoint);
 
+    @GET("/dataVersion")
+    Call<JsonObject> getDataVersion(@Query("endpoint") String endpoint);
+
     @GET("/guideVideos")
     Call<JsonArray> getAllGuideVideos();
 

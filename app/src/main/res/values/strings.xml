@@ -154,7 +154,7 @@
     <string name="closeDrawer">Close drawer</string>
 
     <!-- Frame data updated dialog -->
-    <string name="data_updated_message">VFrames has downloaded the latest moves list and frame data. We recommend periodically checking for new versions of VFrames in the Google Play Store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!</string>
+    <string name="data_updated_message">VFrames has downloaded the latest moves list and frame data! Thank you for using VFrames!</string>
     <string name="data_updated_title">New Data Downloaded</string>
     <string name="ok_thanks">OK</string>
 
@@ -218,6 +218,8 @@
     <string name="recent_tournament_matches">Recent Tournament Matches</string>
     <string name="general_guides_not_available">Sorry, there are no general guides available.</string>
     <string name="tournament_videos_not_available">There are no tournament videos available.</string>
+    <string name="new_data_available_message">New data is available for VFrames. Would you like to download it?</string>
+    <string name="new_data_available_title">New Data Available!</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>

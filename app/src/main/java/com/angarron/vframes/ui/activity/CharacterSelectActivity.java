@@ -1,6 +1,5 @@
 package com.angarron.vframes.ui.activity;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,20 +22,16 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.angarron.vframes.BuildConfig;
 import com.angarron.vframes.R;
 import com.angarron.vframes.application.VFramesApplication;
-import com.angarron.vframes.data.IDataSource;
-import com.angarron.vframes.data.NetworkFallbackDataSource;
 import com.angarron.vframes.util.FeedbackUtil;
-import com.crashlytics.android.answers.Answers;
-import com.crashlytics.android.answers.CustomEvent;
 
 import data.model.CharacterID;
-import data.model.IDataModel;
 
 
 public class CharacterSelectActivity extends NavigationHostActivity {
+
+    public static final String INTENT_EXTRA_WAS_UPDATED = "WAS_UPDATED";
 
     private static final String PREFERENCE_FILE_KEY = "com.agarron.vframes.PREFERENCE_FILE_KEY";
     private static final String APP_LAUNCH_COUNT_KEY = "APP_LAUNCH_COUNT_KEY";
@@ -45,13 +40,6 @@ public class CharacterSelectActivity extends NavigationHostActivity {
     private static final String CAN_COMPARE_CHARACTERS_SEEN = "CAN_COMPARE_CHARACTERS_SEEN";
     private static final String CAN_TAKE_NOTES_SEEN = "CAN_TAKE_NOTES_SEEN";
 
-    //Fabric Answers Events
-    private static final String LOAD_NETWORK_DATA_EVENT = "Load Custom Data";
-    private static final String WAS_UPDATED_KEY = "Was Updated";
-    private static final String LOAD_SUCCESS_KEY = "Load Successful";
-    private static final String LOAD_FAILURE_REASON_KEY = "Failure Reason";
-
-    private ProgressDialog progressDialog;
     private CharacterID highlightedCharacter;
 
     @Override
@@ -59,7 +47,14 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_select);
 
-        showWelcomeDialog();
+        if (savedInstanceState == null) {
+            boolean wasUpdated = getIntent().getBooleanExtra(INTENT_EXTRA_WAS_UPDATED, false);
+            if (wasUpdated) {
+                showDataUpdatedDialog();
+            } else {
+                showWelcomeDialog();
+            }
+        }
 
         verifyDataAvailable();
         setupToolbar();
@@ -174,9 +169,6 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         switch (item.getItemId()) {
             case R.id.action_feedback:
                 FeedbackUtil.sendFeedback(this);
-                return true;
-            case R.id.action_refresh:
-                loadNetworkData();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -429,123 +421,4 @@ public class CharacterSelectActivity extends NavigationHostActivity {
         }
     }
 
-    private void showUnsupportedVersionDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.unsupported_client_version_message)
-                .setTitle(R.string.unsupported_client_version_title);
-
-        builder.setPositiveButton(R.string.visit_play_store, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
-            }
-        });
-
-        builder.setNegativeButton(R.string.no_thanks, null);
-
-        AlertDialog dialog = builder.create();
-
-        //Users often immediately touch the screen when they enter the CharacterSelectActivity,
-        //which would result in accidentally dismissing the dialog without reading it.
-        dialog.setCanceledOnTouchOutside(false);
-        dialog.show();
-    }
-
-    private void loadNetworkData() {
-        showProgressDialog();
-        final CustomEvent loadNetworkDataEvent = new CustomEvent(LOAD_NETWORK_DATA_EVENT);
-
-        IDataSource dataSource = new NetworkFallbackDataSource(this);
-        dataSource.fetchData(new IDataSource.Listener() {
-            @Override
-            public void onDataReceived(IDataModel data, boolean wasUpdated) {
-
-                dismissProgressDialog();
-
-                //Store the data in the application model for future reference.
-                VFramesApplication application = (VFramesApplication) getApplication();
-                application.setDataModel(data);
-
-                if (wasUpdated) {
-                    showDataUpdatedDialog();
-                } else {
-                    showAlreadyUpToDateDialog();
-                }
-
-                loadNetworkDataEvent.putCustomAttribute(LOAD_SUCCESS_KEY, String.valueOf(true));
-                loadNetworkDataEvent.putCustomAttribute(WAS_UPDATED_KEY, String.valueOf(wasUpdated));
-
-                if (!BuildConfig.DEBUG) {
-                    Answers.getInstance().logCustom(loadNetworkDataEvent);
-                }
-            }
-
-            @Override
-            public void onDataFetchFailed(IDataSource.FetchFailureReason failureReason) {
-
-                dismissProgressDialog();
-
-                if (!BuildConfig.DEBUG) {
-                    loadNetworkDataEvent.putCustomAttribute(LOAD_SUCCESS_KEY, String.valueOf(false));
-                    loadNetworkDataEvent.putCustomAttribute(LOAD_FAILURE_REASON_KEY, failureReason.name());
-                    Answers.getInstance().logCustom(loadNetworkDataEvent);
-                }
-
-                switch (failureReason) {
-                    case UNSUPPORTED_CLIENT_VERSION:
-                        showUnsupportedVersionDialog();
-                        break;
-                    case NETWORK_ERROR:
-                        showNetworkErrorDialog();
-                        break;
-                    case UNKNOWN_ERROR:
-                    case READ_FROM_FILE_FAILED:
-                    default:
-                        throw new RuntimeException("error loading data from network: " + failureReason.name());
-                }
-            }
-        });
-    }
-
-    private void showProgressDialog() {
-        dismissProgressDialog();
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle(R.string.loading_title);
-        progressDialog.setMessage(getString(R.string.loading_message));
-        progressDialog.setIndeterminate(true);
-        progressDialog.show();
-    }
-
-    private void dismissProgressDialog() {
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
-    }
-
-    private void showNetworkErrorDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.network_error_message)
-                .setTitle(R.string.network_error_title);
-
-        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                //no-op
-            }
-        });
-
-        builder.create().show();
-    }
-
-    private void showAlreadyUpToDateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.already_up_to_date_message)
-                .setTitle(R.string.already_up_to_date_title);
-
-        builder.setPositiveButton(R.string.ok_thanks, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                //no-op
-            }
-        });
-
-        builder.create().show();
-    }
 }
