@@ -174,12 +174,14 @@ public class TournamentVideosFragment extends Fragment implements YoutubeVideosR
 
         String noVideosText;
         Context context = getContext();
-        if (firstCharacter != null && context != null) {
-            noVideosText = getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(context, firstCharacter));
-        } else {
-            noVideosText = getString(R.string.tournament_videos_not_available);
+        if (context != null) {
+            if (firstCharacter != null) {
+                noVideosText = getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(context, firstCharacter));
+            } else {
+                noVideosText = getString(R.string.tournament_videos_not_available);
+            }
+            noVideosLayout.setText(noVideosText);
         }
-        noVideosLayout.setText(noVideosText);
         noVideosLayout.setVisibility(View.VISIBLE);
     }
 

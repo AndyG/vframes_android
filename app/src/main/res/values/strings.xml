@@ -216,7 +216,7 @@
     <string name="filtered_videos_not_available">There are no videos for this matchup… yet!</string>
     <string name="street_fighter_v_guides">Guides &amp; Tech</string>
     <string name="recent_tournament_matches">Recent Tournament Matches</string>
-    <string name="general_guides_not_available">Sorry, there are no general guides available.</string>
+    <string name="guides_not_available">Sorry, there are no guides available.</string>
     <string name="tournament_videos_not_available">There are no tournament videos available.</string>
     <string name="new_data_available_message">New data is available for VFrames. Would you like to download it?</string>
     <string name="new_data_available_title">New Data Available!</string>

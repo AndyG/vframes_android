@@ -69,6 +69,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:layout_margin="15dp"
+        android:text="@string/tournament_videos_not_available"
         android:textSize="25sp"/>
 
     <ProgressBar

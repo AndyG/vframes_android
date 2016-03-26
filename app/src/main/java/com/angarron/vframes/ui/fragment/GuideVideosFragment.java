@@ -58,7 +58,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
 
         characterID = getCharacterIdFromArguments();
 
-        View view = inflater.inflate(R.layout.fragment_recommended_videos, container, false);
+        View view = inflater.inflate(R.layout.fragment_guide_videos, container, false);
         videosRecyclerView = (RecyclerView) view.findViewById(R.id.videos_recycler_view);
         videosRecyclerView.setLayoutManager(new LinearLayoutManager(hostActivity));
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
@@ -141,7 +141,7 @@ public class GuideVideosFragment extends Fragment implements YoutubeVideosRecycl
             if (characterID != null) {
                 noVideosText = hostActivity.getString(R.string.videos_not_available, CharacterResourceUtil.getCharacterDisplayName(hostActivity, characterID));
             } else {
-                noVideosText = hostActivity.getString(R.string.general_guides_not_available);
+                noVideosText = hostActivity.getString(R.string.guides_not_available);
             }
             noVideosLayout.setText(noVideosText);
         }
