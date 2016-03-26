@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.angarron.vframes.R;
+import com.angarron.vframes.data.videos.TournamentVideo;
 import com.angarron.vframes.ui.fragment.BreadAndButterFragment;
 import com.angarron.vframes.ui.fragment.FrameDataFragment;
 import com.angarron.vframes.ui.fragment.MoveListFragment;
@@ -62,7 +63,7 @@ public class SummaryPagerAdapter extends FragmentStatePagerAdapter {
     private Fragment createTournamentVideosFragment() {
         TournamentVideosFragment tournamentVideosFragment = new TournamentVideosFragment();
         Bundle bundle = new Bundle();
-        bundle.putSerializable(GuideVideosFragment.CHARACTER_ID, characterId);
+        bundle.putSerializable(TournamentVideosFragment.CHARACTER_ID, characterId);
         tournamentVideosFragment.setArguments(bundle);
         return tournamentVideosFragment;
     }
