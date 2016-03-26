@@ -5,6 +5,7 @@ import com.angarron.vframes.util.CrashlyticsUtil;
 import com.google.gson.JsonObject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -16,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GetNewestDataVersionTask {
 
-    public void fetchData(final IGetDataVersionListener listener) {
+    public void getNewestVersion(final IGetDataVersionListener listener) {
 
         VFramesRESTApi restApi = createRESTApi();
         Call<JsonObject> call = restApi.getDataVersion("android");
@@ -62,12 +63,17 @@ public class GetNewestDataVersionTask {
                 .baseUrl("http://still-hollows-20653.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create());
 
+        OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
+        clientBuilder.connectTimeout(3, TimeUnit.SECONDS);
+        clientBuilder.readTimeout(3, TimeUnit.SECONDS);
+
         if (BuildConfig.DEBUG) {
             HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
-            OkHttpClient client = new OkHttpClient.Builder().addInterceptor(loggingInterceptor).build();
-            retrofitBuilder.client(client);
+            clientBuilder.addInterceptor(loggingInterceptor);
         }
+
+        retrofitBuilder.client(clientBuilder.build());
 
         Retrofit retrofit = retrofitBuilder.build();
         return retrofit.create(VFramesRESTApi.class);

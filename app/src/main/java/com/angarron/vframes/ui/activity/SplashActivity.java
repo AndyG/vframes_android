@@ -31,7 +31,7 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         GetNewestDataVersionTask getDataVersionTask = new GetNewestDataVersionTask();
-        getDataVersionTask.fetchData(new GetDataVersionListener());
+        getDataVersionTask.getNewestVersion(new GetDataVersionListener());
         loadData();
     }
 
@@ -138,6 +138,7 @@ public class SplashActivity extends Activity {
         @Override
         public void onFailure() {
             availableDataVersion = AVAILABLE_DATA_VERSION_FAILED;
+            launchCharacterSelectIfReady();
         }
     }
 }
