@@ -93,19 +93,18 @@ public class CharacterSelectActivity extends NavigationHostActivity {
     }
 
     private boolean shouldShowTournamentMatchesDialog() {
-        return true;
-//        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
-//        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
-//        boolean canTakeNotesSeen = sharedPreferences.getBoolean(ENHANCED_TOURNAMENT_MATCHES_SEEN, false);
-//
-//        if(appLaunchCount >= 2 && !canTakeNotesSeen) {
-//            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-//            sharedPreferencesEditor.putBoolean(ENHANCED_TOURNAMENT_MATCHES_SEEN, true);
-//            sharedPreferencesEditor.apply();
-//            return true;
-//        }
-//
-//        return false;
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_FILE_KEY, Context.MODE_PRIVATE);
+        int appLaunchCount = sharedPreferences.getInt(APP_LAUNCH_COUNT_KEY, 0);
+        boolean canTakeNotesSeen = sharedPreferences.getBoolean(ENHANCED_TOURNAMENT_MATCHES_SEEN, false);
+
+        if(appLaunchCount >= 2 && !canTakeNotesSeen) {
+            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+            sharedPreferencesEditor.putBoolean(ENHANCED_TOURNAMENT_MATCHES_SEEN, true);
+            sharedPreferencesEditor.apply();
+            return true;
+        }
+
+        return false;
     }
 
     private void showCanCompareDialog() {
