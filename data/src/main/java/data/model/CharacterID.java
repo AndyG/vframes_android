@@ -1,8 +1,5 @@
 package data.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public enum CharacterID {
     ALEX("alex"),
     RYU("ryu"),
