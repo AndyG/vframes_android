@@ -1,10 +1,426 @@
 {
-    "versioning": {
-        "dataVersion": 1,
-        "minSupportedAndroidVersion": 21
-    },
-    "dataVersion": "1",
+	"versioning": {
+	    "dataVersion": 3,
+	    "minSupportedAndroidVersion": 21
+	},
     "characters": {
+        "alex": {
+            "frame_data": {  
+                "specials": [
+                    {
+                        "data": {
+                            "recoveryFrames": 20, 
+                            "hitAdvantage": 2, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 3,
+                            "startupFrames": 13
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop LP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 3, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 3,
+                            "startupFrames": 19
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop MP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 21, 
+                            "hitAdvantage": 2, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 3,
+                            "startupFrames": 25
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop HP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 1, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 5,
+                            "startupFrames": 11
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop EX"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 3, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 5,
+                            "startupFrames": 14
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow LK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 2, 
+                            "blockAdvantage": -6,
+                            "activeFrames": 5,
+                            "startupFrames": 19
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow MK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 14, 
+                            "blockAdvantage": -7,
+                            "activeFrames": 5,
+                            "startupFrames": 24
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow HK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 29, 
+                            "blockAdvantage": -11,
+                            "activeFrames": 3,
+                            "startupFrames": 22
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow EX"
+                    }
+                ], 
+                "normals": [
+                    {
+                        "data": {
+                            "recoveryFrames": 7, 
+                            "stunValue": 70, 
+                            "damageValue": 30, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": 2, 
+                            "startupFrames": 4
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.LP",
+                        "description": "All of this data is preliminary and untested, so use carefully and let us know where we have to make changes."
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 12, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 5, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": 2, 
+                            "startupFrames": 6
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.MP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 22, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": -1, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -3, 
+                            "startupFrames": 10
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.HP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 8, 
+                            "stunValue": 70, 
+                            "damageValue": 40, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.LK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 15, 
+                            "stunValue": 100, 
+                            "damageValue": 80, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -2, 
+                            "startupFrames": 8
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.MK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 25, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": -1, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -4, 
+                            "startupFrames": 17
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.HK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 7, 
+                            "stunValue": 70, 
+                            "damageValue": 30, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": 2, 
+                            "startupFrames": 4
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.LP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 15, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 7
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.MP"
+                    }, 
+                    {
+                        "data": {
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.HP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 6, 
+                            "stunValue": 70, 
+                            "damageValue": 20, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": 0, 
+                            "startupFrames": 4
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.LK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 0, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -3, 
+                            "startupFrames": 8
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.MK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 24, 
+                            "stunValue": 150, 
+                            "damageValue": 100, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -12, 
+                            "startupFrames": 11
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.HK"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 5, 
+                            "stunValue": 70, 
+                            "startupFrames": 4, 
+                            "damageValue": 40
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.LP"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 7, 
+                            "stunValue": 100, 
+                            "startupFrames": 6, 
+                            "damageValue": 70
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.MP"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 3, 
+                            "stunValue": 150, 
+                            "startupFrames": 8, 
+                            "damageValue": 90
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.HP"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 5, 
+                            "stunValue": 70, 
+                            "startupFrames": 4, 
+                            "damageValue": 40
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.LK"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 6, 
+                            "stunValue": 100, 
+                            "startupFrames": 6, 
+                            "damageValue": 70
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.MK"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 5, 
+                            "stunValue": 150, 
+                            "startupFrames": 9, 
+                            "damageValue": 90
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.HK"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "Face-Crush Chop"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "Leg Tomahawk"
+                    }
+                ]
+            },
+            "move_list": {
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Face-Crush Chop", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Leg Tomahawk", 
+                        "pretext": "(Close To Opponent)"
+                    }
+                ],
+                "unique_attacks": [
+                    {
+                        "input": "FORWARD|PLUS|MP", 
+                        "name": "Chop",
+                        "posttext": "Hits overhead."                        
+                    },
+                    {
+                        "input": "FORWARD|PLUS|HP", 
+                        "name": "Lariat"                        
+                    },
+                    {
+                        "pretext": "(During Forward Jump)",
+                        "input": "DOWN|PLUS|HP", 
+                        "name": "Flying Cross Chop"                        
+                    }
+                ],
+                "vreversal": [
+                    {
+                        "pretext": "(During Guard)",
+                        "input": "FORWARD|PLUS|ALL_KICKS", 
+                        "name": "Big Boot"
+                    }
+                ],
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "Overhaul", 
+                        "description": "The next hit that connects gains counterhit properties."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "QCF|PLUS|PUNCH", 
+                        "name": "Flash Chop"
+                    }, 
+                    {
+                        "pretext": "(Near Opponent)",
+                        "input": "HCB|PLUS|PUNCH", 
+                        "name": "Power Bomb"
+                    }, 
+                    {
+                        "input": "SRK|PLUS|KICK", 
+                        "name": "Air Knee Smash"
+                    }, 
+                    {
+                        "input": "CHARGE_BACK|FORWARD|PLUS|KICK", 
+                        "name": "Slash Elbow"
+                    },
+                    {
+                       "input": "CHARGE_DOWN|UP|PLUS|KICK", 
+                        "name": "Air Stampede" 
+                    },
+                    {
+                       "input": "CHARGE_DOWN|UP|PLUS|PUNCH", 
+                        "name": "Head Crush" 
+                    },
+                    {
+                        "pretext": "(During V-Trigger)",
+                        "input": "HP|PLUS|HK",
+                        "name": "Sledge Hammer",
+                        "description": "Can be held to charge. Level 2 can parry an attack, level 3 breaks guard."
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|PUNCH", 
+                        "name": "Heavy Hammer"
+                    }
+                ],
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Rage Shift", 
+                        "description": "Gains access to Sledge Hammer."
+                    }
+                ]
+            }
+        },
         "ken": {
             "frame_data": {
                 "vreversal": [
@@ -1762,7 +2178,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 160, 
-                            "damageValue": 140, 
+                            "damageValue": 180, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
@@ -1774,7 +2190,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 140, 
-                            "damageValue": 130, 
+                            "damageValue": 190, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
@@ -1786,7 +2202,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 120, 
-                            "damageValue": 120, 
+                            "damageValue": 200, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
@@ -1798,7 +2214,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 90, 
-                            "damageValue": 140, 
+                            "damageValue": 220, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
