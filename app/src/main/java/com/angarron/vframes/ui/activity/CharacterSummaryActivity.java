@@ -233,6 +233,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
 
     private int getCharacterAccentColor() {
         switch(targetCharacter) {
+            case GUILE:
+                return ContextCompat.getColor(this, R.color.guile_accent);
             case ALEX:
                 return ContextCompat.getColor(this, R.color.alex_accent);
             case RYU:
@@ -278,10 +280,15 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         int stunStringId;
 
         switch (targetCharacter) {
+            case GUILE:
+                titleStringId = R.string.guile_title;
+                healthStringId = R.string.unknown_health;
+                stunStringId = R.string.unknown_stun;
+                break;
             case ALEX:
                 titleStringId = R.string.alex_title;
-                healthStringId = R.string.alex_health;
-                stunStringId = R.string.alex_stun;
+                healthStringId = R.string.unknown_health;
+                stunStringId = R.string.unknown_stun;
                 break;
             case RYU:
                 titleStringId = R.string.ryu_title;

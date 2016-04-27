@@ -38,6 +38,8 @@
     <string name="bnbs_not_available">Bread and butter combos are on the way for %1$s!</string>
 
     <!--Character Names -->
+    <string name="guile_name">Guile</string>
+    <string name="alex_name">Alex</string>
     <string name="ryu_name">Ryu</string>
     <string name="chun_name">Chun-Li</string>
     <string name="cammy_name">Cammy</string>
@@ -79,10 +81,14 @@
     <string name="stun_format">Stun: %s</string>
     <string name="style_format">Style: %s</string>
 
-    <string name="alex_name">Alex</string>
+    <string name="unknown_health">\?\?\?</string>
+    <string name="unknown_stun">\?\?\?</string>
+
+    <string name="guile_title">Air Slasher</string>
+
     <string name="alex_title">Frylock Cosplayer</string>
-    <string name="alex_health">\?\?\?</string>
-    <string name="alex_stun">\?\?\?</string>
+    <string name="alex_health">1000</string>
+    <string name="alex_stun">1050</string>
 
     <string name="ryu_title">Eternal Wanderer</string>
     <string name="ryu_health">1000</string>

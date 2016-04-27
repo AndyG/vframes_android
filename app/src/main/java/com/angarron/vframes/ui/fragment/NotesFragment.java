@@ -83,6 +83,8 @@ public class NotesFragment extends Fragment implements View.OnClickListener {
 
     private CharacterID getClickedCharacter(int viewId) {
         switch (viewId) {
+            case R.id.guile_card:
+                return CharacterID.GUILE;
             case R.id.alex_card:
                 return CharacterID.ALEX;
             case R.id.birdie_card:

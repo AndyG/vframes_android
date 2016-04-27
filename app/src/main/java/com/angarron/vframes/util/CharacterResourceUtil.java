@@ -16,6 +16,8 @@ public class CharacterResourceUtil {
 
     public static ColorDrawable getCharacterPrimaryColorDrawable(Context context, CharacterID characterID) {
         switch(characterID) {
+            case GUILE:
+                return new ColorDrawable(ContextCompat.getColor(context, R.color.guile_primary));
             case ALEX:
                 return new ColorDrawable(ContextCompat.getColor(context, R.color.alex_primary));
             case RYU:
@@ -57,6 +59,8 @@ public class CharacterResourceUtil {
 
     private static int getNameResource(CharacterID characterID) {
         switch(characterID) {
+            case GUILE:
+                return R.string.guile_name;
             case ALEX:
                 return R.string.alex_name;
             case RYU:
@@ -98,6 +102,8 @@ public class CharacterResourceUtil {
 
     public static int getCharacterBannerResource(CharacterID targetCharacter) {
         switch(targetCharacter) {
+            case GUILE:
+                return R.drawable.guile_card;
             case ALEX:
                 return R.drawable.alex_card;
             case RYU:

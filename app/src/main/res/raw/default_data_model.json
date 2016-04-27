@@ -1,11 +1,40 @@
 {
 	"versioning": {
-	    "dataVersion": 3,
+	    "dataVersion": 4,
 	    "minSupportedAndroidVersion": 21
 	},
     "characters": {
         "alex": {
             "frame_data": {  
+                "unique_attacks": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 1, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -4, 
+                            "startupFrames": 22
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 17, 
+                            "stunValue": 150, 
+                            "damageValue": 80, 
+                            "hitAdvantage": 5, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": 3, 
+                            "startupFrames": 10
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+HP",
+                        "description": "Crush counters (spinning)"
+                    }
+                ],
                 "specials": [
                     {
                         "data": {
@@ -13,7 +42,9 @@
                             "hitAdvantage": 2, 
                             "blockAdvantage": -4,
                             "activeFrames": 3,
-                            "startupFrames": 13
+                            "startupFrames": 13,
+                            "damageValue": 70,
+                            "stunValue": 150
                         }, 
                         "type": "type_0", 
                         "name": "Flash Chop LP"
@@ -24,7 +55,9 @@
                             "hitAdvantage": 3, 
                             "blockAdvantage": -4,
                             "activeFrames": 3,
-                            "startupFrames": 19
+                            "startupFrames": 19,
+                            "damageValue": 80,
+                            "stunValue": 150
                         }, 
                         "type": "type_0", 
                         "name": "Flash Chop MP"
@@ -35,7 +68,9 @@
                             "hitAdvantage": 2, 
                             "blockAdvantage": -4,
                             "activeFrames": 3,
-                            "startupFrames": 25
+                            "startupFrames": 25,
+                            "damageValue": 90,
+                            "stunValue": 150
                         }, 
                         "type": "type_0", 
                         "name": "Flash Chop HP"
@@ -43,10 +78,12 @@
                     {
                         "data": {
                             "recoveryFrames": 19, 
-                            "hitAdvantage": 1, 
+                            "hitAdvantage": 1003, 
                             "blockAdvantage": -4,
                             "activeFrames": 5,
-                            "startupFrames": 11
+                            "startupFrames": 11,
+                            "damageValue": 150,
+                            "stunValue": 200
                         }, 
                         "type": "type_0", 
                         "name": "Flash Chop EX"
@@ -55,9 +92,11 @@
                         "data": {
                             "recoveryFrames": 18, 
                             "hitAdvantage": 3, 
-                            "blockAdvantage": -4,
+                            "blockAdvantage": -3,
                             "activeFrames": 5,
-                            "startupFrames": 14
+                            "startupFrames": 14,
+                            "damageValue": 80,
+                            "stunValue": 200
                         }, 
                         "type": "type_0", 
                         "name": "Slash Elbow LK"
@@ -65,21 +104,25 @@
                     {
                         "data": {
                             "recoveryFrames": 19, 
-                            "hitAdvantage": 2, 
+                            "hitAdvantage": 1003, 
                             "blockAdvantage": -6,
                             "activeFrames": 5,
-                            "startupFrames": 19
+                            "startupFrames": 19,
+                            "damageValue": 90,
+                            "stunValue": 200
                         }, 
                         "type": "type_0", 
                         "name": "Slash Elbow MK"
                     }, 
                     {
                         "data": {
-                            "recoveryFrames": 19, 
-                            "hitAdvantage": 14, 
+                            "recoveryFrames": 20, 
+                            "hitAdvantage": 1003, 
                             "blockAdvantage": -7,
                             "activeFrames": 5,
-                            "startupFrames": 24
+                            "startupFrames": 24,
+                            "damageValue": 100,
+                            "stunValue": 200
                         }, 
                         "type": "type_0", 
                         "name": "Slash Elbow HK"
@@ -87,14 +130,166 @@
                     {
                         "data": {
                             "recoveryFrames": 29, 
-                            "blockAdvantage": -11,
+                            "blockAdvantage": -10,
+                            "hitAdvantage": 1003,
                             "activeFrames": 3,
-                            "startupFrames": 22
+                            "startupFrames": 14,
+                            "damageValue": 150,
+                            "stunValue": 200
                         }, 
                         "type": "type_0", 
                         "name": "Slash Elbow EX"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 27,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede LK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 22, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 30,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede MK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 23, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 33,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede HK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 29,
+                            "damageValue": 140,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede EX",
+                        "description": "Projectile invincible frames 3-30."
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 44, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 36,
+                            "damageValue": 160,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush LP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 50, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 40,
+                            "damageValue": 160,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 56, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 44,
+                            "damageValue": 160,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush HP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 50, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 30,
+                            "damageValue": 180,
+                            "stunValue": 350
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush EX"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 160,
+                            "stunValue": 220
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb LP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 170,
+                            "stunValue": 220
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 180,
+                            "stunValue": 220
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb HP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 220,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb EX"
                     }
-                ], 
+                ],
                 "normals": [
                     {
                         "data": {
@@ -167,13 +362,14 @@
                             "recoveryFrames": 25, 
                             "stunValue": 150, 
                             "damageValue": 90, 
-                            "hitAdvantage": -1, 
+                            "hitAdvantage": -4, 
                             "activeFrames": 3, 
                             "blockAdvantage": -4, 
                             "startupFrames": 17
                         }, 
                         "type": "type_0", 
-                        "name": "s.HK"
+                        "name": "s.HK",
+                        "description": "Crumples on counter hit."
                     }, 
                     {
                         "data": {
@@ -203,6 +399,12 @@
                     }, 
                     {
                         "data": {
+                            "recoveryFrames": 23, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": 1003,  
+                            "blockAdvantage": -8, 
+                            "startupFrames": 12
                         }, 
                         "type": "type_0", 
                         "name": "c.HP"
@@ -327,6 +529,33 @@
                         }, 
                         "type": "type_0", 
                         "name": "Leg Tomahawk"
+                    }
+                ],
+                "critical_arts": [
+                    {
+                        "data": {                             
+                            "stunValue": 0, 
+                            "damageValue": 350, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "Heavy Hammer 1st",
+                        "description": "Invincible frames 1-6."
+                    },
+                    {
+                        "data": { 
+                            "recoveryFrames": 46,
+                            "blockAdvantage": -25,
+                            "hitAdvantage": 1003,
+                            "stunValue": 0, 
+                            "damageValue": 230, 
+                            "hitAdvantage": 1003
+                        }, 
+                        "type": "type_0", 
+                        "name": "Heavy Hammer Followup",
+                        "description": "Performed if the first hit whiffs."
                     }
                 ]
             },

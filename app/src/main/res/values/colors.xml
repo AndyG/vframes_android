@@ -15,6 +15,7 @@
     <color name="character_summary_toolbar_text_color">#f5f5f5</color>
 
     <!-- Character Primary Colors -->
+    <color name="guile_primary">#112804</color>
     <color name="alex_primary">#b41515</color>
     <color name="ryu_primary">#355547</color>
     <color name="cammy_primary">#1a540a</color>
@@ -34,6 +35,7 @@
     <color name="fang_primary">#260793</color>
 
     <!-- Character Accent Colors -->
+    <color name="guile_accent">#d4b424</color>
     <color name="alex_accent">#710d0d</color>
     <color name="ryu_accent">#1e3028</color>
     <color name="cammy_accent">#133d07</color>
