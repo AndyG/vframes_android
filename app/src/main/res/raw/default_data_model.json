@@ -1,6 +1,6 @@
 {
 	"versioning": {
-	    "dataVersion": 4,
+	    "dataVersion": 11,
 	    "minSupportedAndroidVersion": 21
 	},
     "characters": {
@@ -79,7 +79,7 @@
                         "data": {
                             "recoveryFrames": 19, 
                             "hitAdvantage": 1003, 
-                            "blockAdvantage": -4,
+                            "blockAdvantage": -2,
                             "activeFrames": 5,
                             "startupFrames": 11,
                             "damageValue": 150,
@@ -92,7 +92,7 @@
                         "data": {
                             "recoveryFrames": 18, 
                             "hitAdvantage": 3, 
-                            "blockAdvantage": -3,
+                            "blockAdvantage": -4,
                             "activeFrames": 5,
                             "startupFrames": 14,
                             "damageValue": 80,
@@ -183,7 +183,7 @@
                         "data": {
                             "recoveryFrames": 19, 
                             "hitAdvantage": 1003, 
-                            "blockAdvantage": -5,
+                            "blockAdvantage": 2,
                             "activeFrames": 2,
                             "startupFrames": 29,
                             "damageValue": 140,
@@ -302,8 +302,7 @@
                             "startupFrames": 4
                         }, 
                         "type": "type_0", 
-                        "name": "s.LP",
-                        "description": "All of this data is preliminary and untested, so use carefully and let us know where we have to make changes."
+                        "name": "s.LP"
                     }, 
                     {
                         "data": {
@@ -599,7 +598,7 @@
                     {
                         "input": "MP|PLUS|MK", 
                         "name": "Overhaul", 
-                        "description": "The next hit that connects gains counterhit properties."
+                        "description": "The next hit that connects gains counterhit properties. The buff is lost if the opponent hits Alex."
                     }
                 ], 
                 "specials": [
@@ -6222,7 +6221,7 @@
                         "data": {
                             "damageValue": 330, 
                             "hitAdvantage": 1003, 
-                            "startupFrames": 5, 
+                            "startupFrames": 3, 
                             "stunValue": 0, 
                             "description": "Invincible frames 1-2, projectile invincible frames 3-11."
                         }, 
@@ -6908,7 +6907,7 @@
                             "damageValue": 90, 
                             "hitAdvantage": 3, 
                             "activeFrames": 4, 
-                            "blockAdvantage": -2, 
+                            "blockAdvantage": -4, 
                             "startupFrames": 12
                         }
                     }, 
@@ -8548,7 +8547,7 @@
                             "stunValue": 100, 
                             "damageValue": 60, 
                             "hitAdvantage": 6, 
-                            "activeFrames": 2, 
+                            "activeFrames": 3, 
                             "blockAdvantage": 2, 
                             "startupFrames": 7
                         }, 
