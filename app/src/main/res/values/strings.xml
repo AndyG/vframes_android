@@ -85,6 +85,8 @@
     <string name="unknown_stun">\?\?\?</string>
 
     <string name="guile_title">Air Slasher</string>
+    <string name="guile_health">950</string>
+    <string name="guile_stun">950</string>
 
     <string name="alex_title">Frylock Cosplayer</string>
     <string name="alex_health">1000</string>

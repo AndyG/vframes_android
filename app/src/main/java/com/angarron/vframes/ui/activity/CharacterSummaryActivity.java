@@ -282,8 +282,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         switch (targetCharacter) {
             case GUILE:
                 titleStringId = R.string.guile_title;
-                healthStringId = R.string.unknown_health;
-                stunStringId = R.string.unknown_stun;
+                healthStringId = R.string.guile_health;
+                stunStringId = R.string.guile_stun;
                 break;
             case ALEX:
                 titleStringId = R.string.alex_title;
