@@ -287,8 +287,8 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
                 break;
             case ALEX:
                 titleStringId = R.string.alex_title;
-                healthStringId = R.string.unknown_health;
-                stunStringId = R.string.unknown_stun;
+                healthStringId = R.string.alex_health;
+                stunStringId = R.string.alex_stun;
                 break;
             case RYU:
                 titleStringId = R.string.ryu_title;
