@@ -1,7 +1,7 @@
 {
 	"versioning": {
-	    "dataVersion": 17,
-	    "minSupportedAndroidVersion": 22
+	    "dataVersion": 18,
+	    "minSupportedAndroidVersion": 25
 	},
     "characters": {
         "guile": {
@@ -3080,7 +3080,8 @@
                             "startupFrames": 5
                         }, 
                         "type": "type_0", 
-                        "name": "Killing Head EX"
+                        "name": "Killing Head EX",
+                        "description": "Throw invincible frames 1-6."
                     }, 
                     {
                         "data": {

@@ -16,6 +16,10 @@ public class CharacterResourceUtil {
 
     public static ColorDrawable getCharacterPrimaryColorDrawable(Context context, CharacterID characterID) {
         switch(characterID) {
+            case BOXER:
+                return new ColorDrawable(ContextCompat.getColor(context, R.color.boxer_primary));
+            case IBUKI:
+                return new ColorDrawable(ContextCompat.getColor(context, R.color.ibuki_primary));
             case GUILE:
                 return new ColorDrawable(ContextCompat.getColor(context, R.color.guile_primary));
             case ALEX:
@@ -59,6 +63,10 @@ public class CharacterResourceUtil {
 
     private static int getNameResource(CharacterID characterID) {
         switch(characterID) {
+            case BOXER:
+                return R.string.boxer_name;
+            case IBUKI:
+                return R.string.ibuki_name;
             case GUILE:
                 return R.string.guile_name;
             case ALEX:
@@ -102,6 +110,10 @@ public class CharacterResourceUtil {
 
     public static int getCharacterBannerResource(CharacterID targetCharacter) {
         switch(targetCharacter) {
+            case BOXER:
+                return R.drawable.boxer_card;
+            case IBUKI:
+                return R.drawable.ibuki_card;
             case GUILE:
                 return R.drawable.guile_card;
             case ALEX:

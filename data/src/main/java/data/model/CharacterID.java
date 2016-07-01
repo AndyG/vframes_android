@@ -1,6 +1,8 @@
 package data.model;
 
 public enum CharacterID {
+    BOXER("boxer"),
+    IBUKI("ibuki"),
     GUILE("guile"),
     ALEX("alex"),
     RYU("ryu"),

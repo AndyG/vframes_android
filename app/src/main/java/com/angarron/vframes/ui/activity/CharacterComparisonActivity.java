@@ -203,6 +203,10 @@ public class CharacterComparisonActivity extends AppCompatActivity implements
 
     private int getCharacterImage(CharacterID characterID) {
         switch(characterID) {
+            case BOXER:
+                return R.drawable.boxer_card;
+            case IBUKI:
+                return R.drawable.ibuki_card;
             case GUILE:
                 return R.drawable.guile_card;
             case ALEX:

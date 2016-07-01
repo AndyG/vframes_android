@@ -233,6 +233,10 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
 
     private int getCharacterAccentColor() {
         switch(targetCharacter) {
+            case BOXER:
+                return ContextCompat.getColor(this, R.color.boxer_accent);
+            case IBUKI:
+                return ContextCompat.getColor(this, R.color.ibuki_accent);
             case GUILE:
                 return ContextCompat.getColor(this, R.color.guile_accent);
             case ALEX:
@@ -280,6 +284,16 @@ public class CharacterSummaryActivity extends AppCompatActivity implements
         int stunStringId;
 
         switch (targetCharacter) {
+            case IBUKI:
+                titleStringId = R.string.ibuki_title;
+                healthStringId = R.string.ibuki_health;
+                stunStringId = R.string.ibuki_stun;
+                break;
+            case BOXER:
+                titleStringId = R.string.boxer_title;
+                healthStringId = R.string.boxer_health;
+                stunStringId = R.string.boxer_stun;
+                break;
             case GUILE:
                 titleStringId = R.string.guile_title;
                 healthStringId = R.string.guile_health;
