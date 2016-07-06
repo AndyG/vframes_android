@@ -1,9 +1,256 @@
 {
 	"versioning": {
-	    "dataVersion": 18,
-	    "minSupportedAndroidVersion": 25
+	    "dataVersion": 23,
+	    "minSupportedAndroidVersion": 27
 	},
     "characters": {
+        "boxer": {
+            "move_list": {
+                "vreversal": [
+                    {
+                        "input": "FORWARD|PLUS|ALL_PUNCHES", 
+                        "name": "Buffalo Headbutt", 
+                        "pretext": "(During Guard)"
+                    }
+                ], 
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "KKB",
+                        "description": "Projectile invulnerable."
+                    },
+                    {
+                        "pretext": "(During KKB)",
+                        "input": "PUNCH", 
+                        "name": "Buffalo Swing"
+                    },
+                    {
+                        "pretext": "(During KKB)",
+                        "input": "KICK", 
+                        "name": "Buffalo Pressure",
+                        "description": "Hits overhead."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|KICK", 
+                        "name": "Dash Grand Blow",
+                        "description": "Hits low. Can be cancelled into KKB before connecting."
+                    },
+                    {
+                        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH", 
+                        "name": "Dash Straight",
+                        "description": "Can be cancelled into KKB before connecting."
+                    },
+                    {
+                        "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK", 
+                        "name": "Screw Smash",
+                        "description": "Can be cancelled into KKB before connecting."
+                    },
+                    {
+                        "pretext": "(Hold and release any two punches or kicks)",
+                        "input": "PUNCH|OR|KICK", 
+                        "name": "Turn Punch",
+                        "description": "Can be cancelled into KKB before connecting."
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|PUNCH", 
+                        "name": "Gigaton Blow"
+                    }
+                ], 
+                "unique_attacks": [
+                    {
+                        "input": "MK|ARROW|MP|ARROW|MK|PLUS|MP|ARROW|PUNCH", 
+                        "name": "Hard Smasher"
+                    },
+                    {
+                        "input": "MK|ARROW|MP|ARROW|MK|PLUS|MP|ARROW|KICK", 
+                        "name": "Hard Pressure"
+                    },
+                    {
+                        "input": "LK|ARROW|MK|ARROW|HK", 
+                        "name": "Under Impact"
+                    }, 
+                    {
+                        "input": "DOWN|PLUS|MK|ARROW|DOWN|PLUS|MK", 
+                        "name": "Stomping Combo",
+                        "description": "Stomp the yard!"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Dirty Bomber", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Dirty Shot", 
+                        "pretext": "(Close To Opponent)"
+                    }
+                ], 
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Crazy Rush", 
+                        "description": "Balrog gains the ability to cancel special moves into Charging Buffalo or Bursting Buffalo."
+                    },
+                    {
+                        "input": "FORWARD|PLUS|PUNCH", 
+                        "name": "Charging Buffalo",
+                        "pretext": "(During V-Trigger, during a special move)"
+                    },
+                    {
+                        "input": "FORWARD|PLUS|KICK", 
+                        "name": "Bursting Buffalo",
+                        "pretext": "(During V-Trigger, during a special move)"
+                    }
+                ]
+            }
+        },
+        "ibuki": {
+            "move_list": {
+                "vreversal": [
+                    {
+                        "input": "FORWARD|PLUS|ALL_PUNCHES", 
+                        "name": "Hanagasumi", 
+                        "pretext": "(During Guard)"
+                    }
+                ], 
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "Tenrai", 
+                        "description": "Can be charged."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "QCF|PLUS|KICK", 
+                        "name": "Kasumigake", 
+                        "description": "MK version crosses up, HK version jumps forward."
+                    }, 
+                    {
+                        "input": "SRK|PLUS|KICK", 
+                        "name": "Kazegiri"
+                    }, 
+                    {
+                        "input": "HCB|PLUS|PUNCH", 
+                        "name": "Raida"
+                    }, 
+                    {
+                        "input": "QCF|PLUS|PUNCH", 
+                        "name": "Kunai",
+                        "description": "Can be done in air."
+                    }, 
+                    {
+                        "pretext":"(Hold, then release)",
+                        "input": "PUNCH", 
+                        "name": "Kunai Ikkinage"
+                    }, 
+                    {
+                        "pretext":"(Hold, then release)",
+                        "input": "KICK", 
+                        "name": "Airborne Kunai Ikkinage"
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|PUNCH", 
+                        "name": "Kachofugetsu"
+                    }
+                ], 
+                "unique_attacks": [
+                    {
+                        "input": "BACK|PLUS|MP", 
+                        "name": "Agemen"
+                    },
+                    {
+                        "input": "FORWARD|PLUS|MP", 
+                        "name": "Kobekudaki"
+                    },
+                    {
+                        "input": "DOWN_FORWARD|PLUS|MK", 
+                        "name": "Sazan"
+                    }, 
+                    {
+                        "input": "FORWARD|PLUS|HK", 
+                        "name": "Bonshogeri"
+                    },
+                    {
+                        "input": "KICK|KICK",
+                        "pretext":"(During neutral or forward jump)", 
+                        "name": "Nobusuma"
+                    },
+                    {
+                        "input": "LP|ARROW|MP|ARROW|HP", 
+                        "name": "Shinten"
+                    },
+                    {
+                        "input": "LP|ARROW|MP|ARROW|LK",  
+                        "name": "Yagurakuzushi"
+                    },
+                    {
+                        "input": "MK|ARROW|DOWN|PLUS|MK|ARROW|HK", 
+                        "name": "Gogasha"
+                    },
+                    {
+                        "input": "DOWN|PLUS|MP|ARROW|FORWARD|PLUS|HK", 
+                        "name": "Shakunage"
+                    },
+                    {
+                        "input": "MP|ARROW|FORWARD|PLUS|MK", 
+                        "name": "Sasanaki"
+                    },
+                    {
+                        "pretext":"During jump",
+                        "input": "LP|ARROW|MK", 
+                        "name": "Tobikura"
+                    },
+                    {
+                        "pretext":"During jump",
+                        "input": "HP|ARROW|HK", 
+                        "name": "Aoji"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Yamikazura", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Kubiori", 
+                        "pretext": "(Close To Opponent)"
+                    },
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Tobizaru", 
+                        "pretext": "(In Air)"
+                    }
+                ], 
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Rokushaku Horokudama (Akebono)",
+                        "description": "Throws a bomb which explodes after about a second. Drains remaining V-meter if already in V-trigger."
+                    },
+                    {
+                        "input": "BACK|PLUS|HP|PLUS|HK", 
+                        "name": "Rokushaku Horokudama (Hizakari)", 
+                        "description": "Throws a bomb which explodes after about 4 seconds. Drains remaining V-meter if already in V-trigger."
+                    },
+                    {
+                        "input": "FORWARD|PLUS|HP|PLUS|HK", 
+                        "name": "Rokushaku Horokudama (Tasogare)", 
+                        "description": "Throws a bomb which explodes after about 6 seconds. Drains remaining V-meter if already in V-trigger."
+                    }
+                ]
+            }
+        },
         "guile": {
                 "frame_data": {  
                     "normals": [
@@ -17,7 +264,6 @@
                                 "blockAdvantage": 3, 
                                 "startupFrames": 4
                             },
-                            "description": "This data is preliminary, and some values are missing. Let us know where you spot mistakes!",
                             "type": "type_0", 
                             "name": "s.LP"
                         }, 
@@ -2152,7 +2398,7 @@
                     }, 
                     {
                         "data": {
-                            "recoveryFrames": 10, 
+                            "recoveryFrames": 12, 
                             "stunValue": 100, 
                             "damageValue": 60, 
                             "hitAdvantage": 7, 
@@ -2258,7 +2504,7 @@
                     }, 
                     {
                         "data": {
-                            "recoveryFrames": 17, 
+                            "recoveryFrames": 18, 
                             "stunValue": 150, 
                             "damageValue": 80, 
                             "hitAdvantage": -2, 
