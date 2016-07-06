@@ -5,6 +5,642 @@
 	},
     "characters": {
         "boxer": {
+            "frame_data": {
+                    "normals": [
+                        {
+                            "data": {
+                                "recoveryFrames": 7,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 5,
+                                "activeFrames": 2,
+                                "blockAdvantage": 2,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "s.LP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 13,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 2,
+                                "activeFrames": 4,
+                                "blockAdvantage": 0,
+                                "startupFrames": 5
+                            },
+                            "type": "type_0",
+                            "name": "s.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 19,
+                                "stunValue": 150,
+                                "damageValue": 80,
+                                "hitAdvantage": 0,
+                                "activeFrames": 2,
+                                "blockAdvantage": -3,
+                                "startupFrames": 11
+                            },
+                            "type": "type_0",
+                            "name": "s.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 2,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 3
+                            },
+                            "type": "type_0",
+                            "name": "s.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 12,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 5,
+                                "activeFrames": 3,
+                                "blockAdvantage": 2,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "s.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 19,
+                                "stunValue": 150,
+                                "damageValue": 80,
+                                "hitAdvantage": 7,
+                                "activeFrames": 2,
+                                "blockAdvantage": 3,
+                                "startupFrames": 9
+                            },
+                            "type": "type_0",
+                            "name": "s.HK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 4,
+                                "activeFrames": 2,
+                                "blockAdvantage": 2,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 14,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 1,
+                                "activeFrames": 3,
+                                "blockAdvantage": 0,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "c.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 22,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": -1,
+                                "blockAdvantage": -5,
+                                "activeFrames": 5,
+                                "startupFrames": 8
+                            },
+                            "type": "type_0",
+                            "name": "c.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 9,
+                                "stunValue": 70,
+                                "damageValue": 20,
+                                "hitAdvantage": 4,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 17,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 2,
+                                "activeFrames": 2,
+                                "blockAdvantage": -2,
+                                "startupFrames": 7
+                            },
+                            "type": "type_0",
+                            "name": "c.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 26,
+                                "activeFrames": 2,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": 1003,
+                                "startupFrames": 8,
+                                "blockAdvantage": -14
+                            },
+                            "type": "type_0",
+                            "name": "c.HK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 70,
+                                "startupFrames": 4,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 3,
+                                "stunValue": 100,
+                                "startupFrames": 5,
+                                "damageValue": 70
+                            },
+                            "type": "type_0",
+                            "name": "j.MP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 4,
+                                "stunValue": 150,
+                                "startupFrames": 7,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 8,
+                                "stunValue": 70,
+                                "startupFrames": 3,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 5,
+                                "stunValue": 100,
+                                "startupFrames": 6,
+                                "damageValue": 70
+                            },
+                            "type": "type_0",
+                            "name": "j.MK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 4,
+                                "stunValue": 150,
+                                "startupFrames": 8,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HK"
+                        }
+                    ],
+                    "unique_attacks": [
+                    {
+                        "data": {
+                            "stunValue": 172,
+                            "damageValue": 96,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "MK > MP"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 268,
+                            "damageValue": 144,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "MK > MP > V-Skill P"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 268,
+                            "damageValue": 144,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "MK > MP > V-Skill K"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 133,
+                            "damageValue": 66,
+                            "hitAdvantage": 1,
+                            "blockAdvantage": -7,
+                            "startupFrames": 4
+                        },
+                        "type": "type_0",
+                        "name": "LK > MK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 213,
+                            "damageValue": 122,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 4
+                        },
+                        "type": "type_0",
+                        "name": "LK > MK > HK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 172,
+                            "damageValue": 96,
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -6,
+                            "startupFrames": 7
+                        },
+                        "type": "type_0",
+                        "name": "d+MK > d+MK"
+                    }
+                ],
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5,
+                            "damageValue": 120,
+                            "stunValue": 170
+                        },
+                        "type": "type_0",
+                        "name": "Dirty Bomber"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5,
+                            "damageValue": 130,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Dirty Shot"
+                    }
+                ],
+                "vreversal": [
+                    {
+                        "data": {
+                            "recoveryFrames": 23,
+                            "damageValue": 60,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 3,
+                            "blockAdvantage": -2,
+                            "startupFrames": 15
+                        },
+                        "type": "type_0",
+                        "name": "Buffalo Headbutt"
+                    }
+                ],
+                "vskill": [
+                    {
+                        "data": {
+                            "recoveryFrames": 29
+                        },
+                        "type": "type_0",
+                        "name": "KKB",
+                        "description": "Frames 4-22 projectile invincible."
+                    },
+                    {
+                        "data": {
+                            "startupFrames": 19,
+                            "activeFrames": 2,
+                            "recoveryFrames": 21,
+                            "blockAdvantage": -4,
+                            "hitAdvantage": 2,
+                            "damageValue": 60,
+                            "stunValue": 100
+                        },
+                        "type": "type_0",
+                        "name": "KKB > P"
+                    },
+                    {
+                        "data": {
+                            "startupFrames": 29,
+                            "activeFrames": 2,
+                            "recoveryFrames": 20,
+                            "blockAdvantage": -8,
+                            "hitAdvantage": 5,
+                            "damageValue": 50,
+                            "stunValue": 100
+                        },
+                        "type": "type_0",
+                        "name": "KKB > K"
+                    }
+                ],
+                "specials": [
+                    {
+                        "data": {
+                            "hitAdvantage": 1,
+                            "blockAdvantage": -4,
+                            "activeFrames": 4,
+                            "recoveryFrames": 22,
+                            "startupFrames": 10,
+                            "damageValue": 80,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight LP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -6,
+                            "activeFrames": 4,
+                            "recoveryFrames": 22,
+                            "startupFrames": 12,
+                            "damageValue": 90,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight MP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 3,
+                            "blockAdvantage": -7,
+                            "activeFrames": 4,
+                            "recoveryFrames": 22,
+                            "startupFrames": 19,
+                            "damageValue": 100,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight HP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": 1,
+                            "activeFrames": 6,
+                            "recoveryFrames": 29,
+                            "startupFrames": 9,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -7,
+                            "activeFrames": 2,
+                            "startupFrames": 17,
+                            "recoveryFrames": 26,
+                            "damageValue": 70,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow LK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -7,
+                            "activeFrames": 2,
+                            "startupFrames": 18,
+                            "recoveryFrames": 26,
+                            "damageValue": 80,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow MK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -7,
+                            "activeFrames": 2,
+                            "startupFrames": 19,
+                            "recoveryFrames": 26,
+                            "damageValue": 90,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 11,
+                            "recoveryFrames": 23,
+                            "damageValue": 140,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -10,
+                            "activeFrames": 5,
+                            "startupFrames": 13,
+                            "recoveryFrames": 25,
+                            "damageValue": 100,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash LK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -10,
+                            "activeFrames": 5,
+                            "startupFrames": 16,
+                            "recoveryFrames": 26,
+                            "damageValue": 110,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash MK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -10,
+                            "activeFrames": 5,
+                            "startupFrames": 24,
+                            "recoveryFrames": 23,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -14,
+                            "activeFrames": 5,
+                            "startupFrames": 12,
+                            "recoveryFrames": 29,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash EX",
+                        "description": "Has armor frames 3-16."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Charging Buffalo"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -13
+                        },
+                        "type": "type_0",
+                        "name": "Charging Buffalo End"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Charging Buffalo EX"
+                    },{
+                        "data": {
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Bursting Buffalo"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -21
+                        },
+                        "type": "type_0",
+                        "name": "Bursting Buffalo End"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Bursting Buffalo EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22
+                        },
+                        "type": "type_0",
+                        "name": "TAP 1-3",
+                        "description": "Upper body and projectile invulnerability frames 3-18. 1: 0.5 sec charge. 2: 2 sec charge. 3: 4 sec charge."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22
+                        },
+                        "type": "type_0",
+                        "name": "TAP 4-6",
+                        "description": "Projectile and strike invulnerability frames 3-18. 4: 8 sec charge. 5: 16 sec charge. 6: 24 sec charge."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22
+                        },
+                        "type": "type_0",
+                        "name": "TAP 7-9",
+                        "description": "Projectile and strike invulnerability frames 1-18. 7: 32 sec charge. 8: 40 sec charge. 9: 48 sec charge."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22,
+                            "damageValue": 500,
+                            "stunValue": 400
+                        },
+                        "type": "type_0",
+                        "name": "TAP Final",
+                        "description": "Invulnerability frames 1-18. 56 sec charge."
+                    }
+                ],
+                "critical_arts": [
+                    {
+                        "data": {
+                            "stunValue": 0,
+                            "damageValue": 330,
+                            "hitAdvantage": 1003,
+                            "recoveryFrames": 60,
+                            "blockAdvantage": -45,
+                            "activeFrames": 10,
+                            "startupFrames": 8
+                        },
+                        "type": "type_0",
+                        "name": "Gigaton Blow",
+                        "description": "Invincible frames 1-10, projectile invincible frames 11-17."
+                    }
+                ]
+            },
             "move_list": {
                 "vreversal": [
                     {
