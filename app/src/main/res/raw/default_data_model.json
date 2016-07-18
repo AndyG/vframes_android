@@ -1,6 +1,6 @@
 {
 	"versioning": {
-	    "dataVersion": 24,
+	    "dataVersion": 25,
 	    "minSupportedAndroidVersion": 27
 	},
     "characters": {
@@ -747,6 +747,410 @@
             }
         },
         "ibuki": {
+            "frame_data": {
+                    "normals": [
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 3,
+                                "activeFrames": 2,
+                                "blockAdvantage": 2,
+                                "startupFrames": 3
+                            },
+                            "type": "type_0",
+                            "name": "s.LP",
+                            "description": "This data is incomplete. The rest will be added ASAP!"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 10,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 4,
+                                "activeFrames": 3,
+                                "blockAdvantage": 2,
+                                "startupFrames": 5
+                            },
+                            "type": "type_0",
+                            "name": "s.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 19,
+                                "stunValue": 150,
+                                "damageValue": 80,
+                                "hitAdvantage": 0,
+                                "activeFrames": 2,
+                                "blockAdvantage": -5,
+                                "startupFrames": 12
+                            },
+                            "type": "type_0",
+                            "name": "s.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 9,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 0,
+                                "activeFrames": 3,
+                                "blockAdvantage": -2,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "s.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 15,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 0,
+                                "activeFrames": 2,
+                                "blockAdvantage": -1,
+                                "startupFrames": 5
+                            },
+                            "type": "type_0",
+                            "name": "s.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 16,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": 1,
+                                "activeFrames": 3,
+                                "blockAdvantage": -2,
+                                "startupFrames": 10
+                            },
+                            "type": "type_0",
+                            "name": "s.HK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 3,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 12,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 3,
+                                "activeFrames": 3,
+                                "blockAdvantage": -1,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "c.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 16,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": 2,
+                                "blockAdvantage": -3,
+                                "activeFrames": 4,
+                                "startupFrames": 9
+                            },
+                            "type": "type_0",
+                            "name": "c.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 20,
+                                "hitAdvantage": 3,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 16,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 0,
+                                "activeFrames": -3,
+                                "blockAdvantage": -2,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "c.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 24,
+                                "activeFrames": 2,
+                                "stunValue": 150,
+                                "damageValue": 100,
+                                "hitAdvantage": 1003,
+                                "startupFrames": 8,
+                                "blockAdvantage": -12
+                            },
+                            "type": "type_0",
+                            "name": "c.HK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 5,
+                                "stunValue": 70,
+                                "startupFrames": 3,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 100,
+                                "startupFrames": 5,
+                                "damageValue": 60
+                            },
+                            "type": "type_0",
+                            "name": "j.MP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 5,
+                                "stunValue": 150,
+                                "startupFrames": 9,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 70,
+                                "startupFrames": 3,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 100,
+                                "startupFrames": 6,
+                                "damageValue": 70
+                            },
+                            "type": "type_0",
+                            "name": "j.MK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 4,
+                                "stunValue": 150,
+                                "startupFrames": 9,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HK"
+                        }
+                    ],
+                    "unique_attacks": [
+                    {
+                        "data": {
+                            "stunValue": 100,
+                            "damageValue": 70,
+                            "hitAdvantage": 3,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "recoveryFrames": 16,
+                            "startupFrames": 28
+                        },
+                        "type": "type_0",
+                        "name": "f+MK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 150,
+                            "damageValue": 90,
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -3,
+                            "activeFrames": 4,
+                            "recoveryFrames": 16,
+                            "startupFrames": 14
+                        },
+                        "type": "type_0",
+                        "name": "f+HK",
+                        "description": "Launches on crush counter."
+                    },
+                    {
+                        "data": {
+                            "stunValue": 100,
+                            "damageValue": 50,
+                            "hitAdvantage": -6,
+                            "blockAdvantage": -10,
+                            "activeFrames": 11,
+                            "recoveryFrames": 14,
+                            "startupFrames": 7
+                        },
+                        "type": "type_0",
+                        "name": "df+MK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 70,
+                            "damageValue": 40,
+                            "hitAdvantage": 4,
+                            "blockAdvantage": -1,
+                            "recoveryFrames": 11,
+                            "startupFrames": 7
+                        },
+                        "type": "type_0",
+                        "name": "b+MP"
+                    },
+                    {
+                        "data": {
+                            "blockAdvantage": -8,
+                            "hitAdvantage": -5,
+                            "startupFrames": 3
+                        },
+                        "type": "type_0",
+                        "name": "LP > MP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 0,
+                            "blockAdvantage": -5,
+                            "startupFrames": 3
+                        },
+                        "type": "type_0",
+                        "name": "LP > MP > HP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -12,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "MK > d+HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 0,
+                            "blockAdvantage": -5,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "d+MP > f+HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 5,
+                            "blockAdvantage": -2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "MP > f+MK"
+                    }
+                ],
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Yamikazura"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Kubiori"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Tobizaru"
+                    }
+                ],
+                "vreversal": [
+                    {
+                        "data": {
+                            "recoveryFrames": 23,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 3,
+                            "blockAdvantage": -2,
+                            "startupFrames": 15
+                        },
+                        "type": "type_0",
+                        "name": "Hanagasumi"
+                    }
+                ],
+                "vskill": [
+                    {
+                        "data": {
+                            "startupFrames": 15,
+                            "activeFrames": 5,
+                            "recoveryFrames": 20,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -5
+                        },
+                        "type": "type_0",
+                        "name": "Tenrai"
+                    },
+                    {
+                        "data": {
+                            "startupFrames": 25,
+                            "activeFrames": 7,
+                            "recoveryFrames": 20,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Tenrai (charged)"
+                    }
+                ],
+                "critical_arts": [
+                    {
+                        "data": {
+                            "damageValue": 356,
+                            "hitAdvantage": 1003,
+                            "recoveryFrames": 17,
+                            "blockAdvantage": -20,
+                            "activeFrames": 17,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Kachofugetsu",
+                        "description": "Invincible frames 1-6."
+                    }
+                ]
+            },
             "move_list": {
                 "vreversal": [
                     {
@@ -2773,10 +3177,10 @@
                             "damageValue": 60, 
                             "hitAdvantage": 0, 
                             "activeFrames": 3, 
-                            "blockAdvantage": -4, 
+                            "blockAdvantage": -4,
                             "startupFrames": 21
-                        }, 
-                        "type": "type_0", 
+                        },
+                        "type": "type_0",
                         "name": "b+MK"
                     }, 
                     {
