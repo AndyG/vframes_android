@@ -35,6 +35,7 @@
     <color name="dhalsim_primary">#a1141c</color>
     <color name="zangief_primary">#515b53</color>
     <color name="fang_primary">#260793</color>
+    <color name="juri_primary">#790a4c</color>
 
     <!-- Character Accent Colors -->
     <color name="ibuki_accent">#502e00</color>
@@ -57,6 +58,7 @@
     <color name="dhalsim_accent">#6b0c11</color>
     <color name="zangief_accent">#343b36</color>
     <color name="fang_accent">#170459</color>
+    <color name="juri_accent">#231715</color>
 
     <color name="card_text_color">#ccFFFFFF</color>
     <color name="summary_text_color">#ccFFFFFF</color>

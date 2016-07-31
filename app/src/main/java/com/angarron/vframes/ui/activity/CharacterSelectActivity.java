@@ -317,6 +317,8 @@ public class CharacterSelectActivity extends NavigationHostActivity {
 
     private CharacterID getClickedCharacter(int viewId) {
         switch (viewId) {
+            case R.id.juri_card:
+                return CharacterID.JURI;
             case R.id.boxer_card:
                 return CharacterID.BOXER;
             case R.id.ibuki_card:
@@ -379,6 +381,8 @@ public class CharacterSelectActivity extends NavigationHostActivity {
 
     private View getImageViewForCharacter(CharacterID characterID) {
         switch (characterID) {
+            case JURI:
+                return findViewById(R.id.juri_image_view);
             case BOXER:
                 return findViewById(R.id.boxer_image_view);
             case IBUKI:

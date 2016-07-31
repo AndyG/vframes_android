@@ -87,6 +87,8 @@ public class NotesFragment extends Fragment implements View.OnClickListener {
                 return CharacterID.IBUKI;
             case R.id.boxer_card:
                 return CharacterID.BOXER;
+            case R.id.juri_card:
+                return CharacterID.JURI;
             case R.id.guile_card:
                 return CharacterID.GUILE;
             case R.id.alex_card:

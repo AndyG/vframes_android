@@ -56,6 +56,9 @@
     <string name="zangief_name">Zangief</string>
     <string name="dhalsim_name">Dhalsim</string>
     <string name="fang_name">F.A.N.G</string>
+    <string name="boxer_name">Balrog</string>
+    <string name="ibuki_name">Ibuki</string>
+    <string name="juri_name">Juri</string>
 
     <!-- Headers for Move List -->
     <string name="normals_header">Normal Attacks</string>
@@ -228,14 +231,15 @@
     <string name="tournament_videos_not_available">There are no tournament videos available.</string>
     <string name="new_data_available_message">New data is available for VFrames. Would you like to download it?</string>
     <string name="new_data_available_title">New Data Available!</string>
-    <string name="boxer_name">Balrog</string>
-    <string name="ibuki_name">Ibuki</string>
     <string name="ibuki_title">Reluctant Kunoichi</string>
     <string name="ibuki_health">900</string>
     <string name="ibuki_stun">900</string>
     <string name="boxer_title">Raging Bull</string>
     <string name="boxer_health">1000</string>
     <string name="boxer_stun">1000</string>
+    <string name="juri_title">Seductive Sadist</string>
+    <string name="juri_health">950</string>
+    <string name="juri_stun">950</string>
 
     <string-array name="summary_spinner_options">
         <item>Frame Data</item>

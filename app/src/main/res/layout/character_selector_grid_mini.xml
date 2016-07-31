@@ -233,6 +233,31 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/juri_card"
+        style="@style/CharacterCard"
+        android:layout_width="0dp"
+        app:layout_columnWeight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/juri_image_view"
+                style="@style/CharacterCardImageStyle"
+                android:src="@drawable/juri_card" />
+
+            <TextView
+                style="@style/CharacterCardTextStyle"
+                android:text="@string/juri_name"
+                android:background="@color/juri_primary" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
         android:id="@+id/karin_card"
         style="@style/CharacterCard"
         android:layout_width="0dp"
